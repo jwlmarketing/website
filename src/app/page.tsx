@@ -397,9 +397,51 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Analyse — section complète manquante, ajoutée après comparaison directe */}
-      <section className="bg-neutral-50 px-6 py-16">
-        <div className="mx-auto grid max-w-[1100px] items-center gap-10 md:grid-cols-2">
+      {/* Analyse — section complète manquante, ajoutée après comparaison directe. Boîte encadrée avec gras doré + divider, comme le pattern "positionnement" */}
+      <section className="bg-neutral-50 px-6 py-16 text-center">
+        <SectionHeading
+          kicker="Analyse"
+          title="J'identifie les intentions de recherches sur"
+          accent="Google"
+        />
+        <div className="mx-auto grid max-w-[1100px] items-center gap-10 text-left md:grid-cols-2">
+          <div className="rounded border-[1.5px] border-gold bg-white p-10">
+            <p className="mb-[22px] text-[15px] leading-[1.7] text-[#1a1a1a]">
+              <strong className="text-gold">
+                Voici une projection réelle basée sur les données d&apos;un
+                site.
+              </strong>{" "}
+              Ce type de suivi permet de comprendre ce qui fonctionne,
+              d&apos;ajuster et d&apos;améliorer les résultats dans le temps.
+            </p>
+            <p className="mb-[22px] text-[15px] leading-[1.7] text-[#1a1a1a]">
+              <strong className="text-gold">
+                L&apos;objectif est de générer des leads, puis de les
+                transformer en clients.
+              </strong>{" "}
+              Pour cela, je m&apos;appuie sur un système Google complet : ton
+              site web, ta visibilité sur Google, ta fiche Google Business
+              Profile et des outils d&apos;analyse comme Google Analytics et
+              Google Search Console.
+            </p>
+            <div className="mb-[22px] h-px bg-[#e6ddd2]" />
+            <p className="mb-[22px] text-[15px] leading-[1.7] text-[#1a1a1a]">
+              <strong className="text-gold">
+                Ces outils permettent de comprendre ce qui fonctionne,
+                d&apos;identifier les points de blocage et d&apos;ajuster ta
+                stratégie dans le temps.
+              </strong>{" "}
+              Car un site performant ne se devine pas, il se mesure.
+            </p>
+            <p className="text-[15px] leading-[1.7] text-[#1a1a1a]">
+              <strong className="text-gold">
+                C&apos;est grâce à ce suivi régulier que l&apos;on peut
+                améliorer tes résultats, renforcer ta visibilité et faire
+                évoluer ton site
+              </strong>{" "}
+              pour qu&apos;il devienne un véritable levier de développement.
+            </p>
+          </div>
           <Image
             src="/images/resultat-google-site-internet.webp"
             alt="Résultat Google — site internet JWL Marketing"
@@ -407,48 +449,22 @@ export default function Home() {
             height={800}
             className="h-auto w-full rounded-2xl object-cover"
           />
-          <div>
-            <SectionHeading
-              kicker="Analyse"
-              title="J'identifie les intentions de recherches sur"
-              accent="Google"
-            />
-            <div className="space-y-5 text-left text-[15px] leading-[25.5px] text-[#1a1a1a]">
-              <p>
-                Voici une projection réelle basée sur les données d&apos;un
-                site. Ce type de suivi permet de comprendre ce qui
-                fonctionne, d&apos;ajuster et d&apos;améliorer les résultats
-                dans le temps.
-              </p>
-              <p>
-                L&apos;objectif est de générer des leads, puis de les
-                transformer en clients. Pour cela, je m&apos;appuie sur un
-                système Google complet : ton site web, ta visibilité sur
-                Google, ta fiche Google Business Profile et des outils
-                d&apos;analyse comme Google Analytics et Google Search
-                Console.
-              </p>
-              <p>
-                Ces outils permettent de comprendre ce qui fonctionne,
-                d&apos;identifier les points de blocage et d&apos;ajuster ta
-                stratégie dans le temps. Car un site performant ne se devine
-                pas, il se mesure.
-              </p>
-              <p>
-                C&apos;est grâce à ce suivi régulier que l&apos;on peut
-                améliorer tes résultats, renforcer ta visibilité et faire
-                évoluer ton site pour qu&apos;il devienne un véritable levier
-                de développement.
-              </p>
-            </div>
-            <a
-              href="https://www.jwl-marketing.fr/consultant-seo-aix-en-provence"
-              className="mt-6 inline-block rounded-[5px] border-2 border-gold bg-gold px-10 py-[15px] font-medium text-white transition-colors hover:border-[#b8952f] hover:bg-[#b8952f]"
-            >
-              Découvre mon univers
-            </a>
-          </div>
         </div>
+
+        <Image
+          src="/images/site-web-referencement-seo.png"
+          alt="Projection intervention JWL Marketing — visibilité et clics"
+          width={1024}
+          height={768}
+          className="mx-auto mt-10 h-auto w-full max-w-[700px]"
+        />
+
+        <a
+          href="https://www.jwl-marketing.fr/consultant-seo-aix-en-provence"
+          className="mt-10 inline-block rounded-[5px] border-2 border-gold bg-gold px-10 py-[15px] font-medium text-white transition-colors hover:border-[#b8952f] hover:bg-[#b8952f]"
+        >
+          Découvre mon univers
+        </a>
       </section>
 
       {/* Résultats clients — cartes .jwl-proof-card exactes */}
