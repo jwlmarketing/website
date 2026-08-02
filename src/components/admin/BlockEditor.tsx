@@ -10,6 +10,12 @@ import {
   type GalleryImage,
   type TestimonialItem,
   type StatItem,
+  type IconBoxItem,
+  type TabItem,
+  type AccordionItem,
+  type ProgressItem,
+  type PriceListItem,
+  type SocialItem,
 } from "@/lib/blocks/types";
 
 export default function BlockEditor({
@@ -518,6 +524,244 @@ function BlockFields({
           <option value="medium">Moyen</option>
           <option value="large">Grand</option>
         </select>
+      </div>
+    );
+  }
+
+  if (block.type === "divider") {
+    return <p className="text-xs text-[#888]">Aucun réglage — une simple ligne de séparation.</p>;
+  }
+
+  if (block.type === "iconBox") {
+    const iconBlock = block;
+    const items = iconBlock.items;
+    const updateItem = (i: number, item: IconBoxItem) => {
+      onChange({ ...iconBlock, items: items.map((it, idx) => (idx === i ? item : it)) });
+    };
+    return (
+      <div className="space-y-3">
+        {items.map((it, i) => (
+          <div key={i} className="rounded border border-neutral-100 p-3">
+            <input className={inputCls} placeholder="Emoji / icône (ex: ✓)" value={it.icon ?? ""} onChange={(e) => updateItem(i, { ...it, icon: e.target.value })} />
+            <input className={inputCls} placeholder="Titre" value={it.title} onChange={(e) => updateItem(i, { ...it, title: e.target.value })} />
+            <textarea className={inputCls} placeholder="Texte" rows={2} value={it.text} onChange={(e) => updateItem(i, { ...it, text: e.target.value })} />
+            <button type="button" onClick={() => onChange({ ...iconBlock, items: items.filter((_, idx) => idx !== i) })} className="mt-1 text-xs text-red-500 hover:underline">
+              Supprimer
+            </button>
+          </div>
+        ))}
+        <button type="button" onClick={() => onChange({ ...iconBlock, items: [...items, { title: "", text: "" }] })} className="text-xs font-semibold text-gold hover:underline">
+          + Ajouter un bloc icône
+        </button>
+      </div>
+    );
+  }
+
+  if (block.type === "rating") {
+    return (
+      <div className="space-y-3">
+        <div>
+          <label className={labelCls}>Note (1 à 5)</label>
+          <input type="number" min={1} max={5} className={inputCls} value={block.value} onChange={(e) => onChange({ ...block, value: Number(e.target.value) })} />
+        </div>
+        <div>
+          <label className={labelCls}>Légende (optionnel)</label>
+          <input className={inputCls} value={block.label ?? ""} onChange={(e) => onChange({ ...block, label: e.target.value })} />
+        </div>
+      </div>
+    );
+  }
+
+  if (block.type === "tabs") {
+    const tabsBlock = block;
+    const items = tabsBlock.items;
+    const updateItem = (i: number, item: TabItem) => {
+      onChange({ ...tabsBlock, items: items.map((it, idx) => (idx === i ? item : it)) });
+    };
+    return (
+      <div className="space-y-3">
+        {items.map((it, i) => (
+          <div key={i} className="rounded border border-neutral-100 p-3">
+            <input className={inputCls} placeholder="Nom de l'onglet" value={it.label} onChange={(e) => updateItem(i, { ...it, label: e.target.value })} />
+            <textarea className={inputCls} placeholder="Contenu" rows={2} value={it.content} onChange={(e) => updateItem(i, { ...it, content: e.target.value })} />
+            <button type="button" onClick={() => onChange({ ...tabsBlock, items: items.filter((_, idx) => idx !== i) })} className="mt-1 text-xs text-red-500 hover:underline">
+              Supprimer
+            </button>
+          </div>
+        ))}
+        <button type="button" onClick={() => onChange({ ...tabsBlock, items: [...items, { label: "", content: "" }] })} className="text-xs font-semibold text-gold hover:underline">
+          + Ajouter un onglet
+        </button>
+      </div>
+    );
+  }
+
+  if (block.type === "accordion") {
+    const accBlock = block;
+    const items = accBlock.items;
+    const updateItem = (i: number, item: AccordionItem) => {
+      onChange({ ...accBlock, items: items.map((it, idx) => (idx === i ? item : it)) });
+    };
+    return (
+      <div className="space-y-3">
+        {items.map((it, i) => (
+          <div key={i} className="rounded border border-neutral-100 p-3">
+            <input className={inputCls} placeholder="Titre" value={it.title} onChange={(e) => updateItem(i, { ...it, title: e.target.value })} />
+            <textarea className={inputCls} placeholder="Contenu" rows={2} value={it.content} onChange={(e) => updateItem(i, { ...it, content: e.target.value })} />
+            <button type="button" onClick={() => onChange({ ...accBlock, items: items.filter((_, idx) => idx !== i) })} className="mt-1 text-xs text-red-500 hover:underline">
+              Supprimer
+            </button>
+          </div>
+        ))}
+        <button type="button" onClick={() => onChange({ ...accBlock, items: [...items, { title: "", content: "" }] })} className="text-xs font-semibold text-gold hover:underline">
+          + Ajouter un élément
+        </button>
+      </div>
+    );
+  }
+
+  if (block.type === "blockquote") {
+    return (
+      <div className="space-y-3">
+        <div>
+          <label className={labelCls}>Citation</label>
+          <textarea className={inputCls} rows={3} value={block.quote} onChange={(e) => onChange({ ...block, quote: e.target.value })} />
+        </div>
+        <div>
+          <label className={labelCls}>Auteur (optionnel)</label>
+          <input className={inputCls} value={block.author ?? ""} onChange={(e) => onChange({ ...block, author: e.target.value })} />
+        </div>
+      </div>
+    );
+  }
+
+  if (block.type === "alert") {
+    return (
+      <div className="space-y-3">
+        <div>
+          <label className={labelCls}>Style</label>
+          <select className={inputCls} value={block.style} onChange={(e) => onChange({ ...block, style: e.target.value as "info" | "success" | "warning" })}>
+            <option value="info">Info (bleu)</option>
+            <option value="success">Succès (vert)</option>
+            <option value="warning">Attention (orange)</option>
+          </select>
+        </div>
+        <div>
+          <label className={labelCls}>Texte</label>
+          <textarea className={inputCls} rows={2} value={block.text} onChange={(e) => onChange({ ...block, text: e.target.value })} />
+        </div>
+      </div>
+    );
+  }
+
+  if (block.type === "progress") {
+    const progBlock = block;
+    const items = progBlock.items;
+    const updateItem = (i: number, item: ProgressItem) => {
+      onChange({ ...progBlock, items: items.map((it, idx) => (idx === i ? item : it)) });
+    };
+    return (
+      <div className="space-y-3">
+        {items.map((it, i) => (
+          <div key={i} className="flex gap-2">
+            <input className={inputCls} placeholder="Libellé" value={it.label} onChange={(e) => updateItem(i, { ...it, label: e.target.value })} />
+            <input type="number" min={0} max={100} className={inputCls} placeholder="%" value={it.percent} onChange={(e) => updateItem(i, { ...it, percent: Number(e.target.value) })} />
+            <button type="button" onClick={() => onChange({ ...progBlock, items: items.filter((_, idx) => idx !== i) })} className="shrink-0 text-xs text-red-500 hover:underline">
+              Suppr.
+            </button>
+          </div>
+        ))}
+        <button type="button" onClick={() => onChange({ ...progBlock, items: [...items, { label: "", percent: 50 }] })} className="text-xs font-semibold text-gold hover:underline">
+          + Ajouter une barre
+        </button>
+      </div>
+    );
+  }
+
+  if (block.type === "priceList") {
+    const plBlock = block;
+    const items = plBlock.items;
+    const updateItem = (i: number, item: PriceListItem) => {
+      onChange({ ...plBlock, items: items.map((it, idx) => (idx === i ? item : it)) });
+    };
+    return (
+      <div className="space-y-3">
+        <div>
+          <label className={labelCls}>Titre (optionnel)</label>
+          <input className={inputCls} value={plBlock.title ?? ""} onChange={(e) => onChange({ ...plBlock, title: e.target.value })} />
+        </div>
+        {items.map((it, i) => (
+          <div key={i} className="rounded border border-neutral-100 p-3">
+            <input className={inputCls} placeholder="Nom" value={it.name} onChange={(e) => updateItem(i, { ...it, name: e.target.value })} />
+            <input className={inputCls} placeholder="Prix" value={it.price} onChange={(e) => updateItem(i, { ...it, price: e.target.value })} />
+            <input className={inputCls} placeholder="Description (optionnel)" value={it.description ?? ""} onChange={(e) => updateItem(i, { ...it, description: e.target.value })} />
+            <button type="button" onClick={() => onChange({ ...plBlock, items: items.filter((_, idx) => idx !== i) })} className="mt-1 text-xs text-red-500 hover:underline">
+              Supprimer
+            </button>
+          </div>
+        ))}
+        <button type="button" onClick={() => onChange({ ...plBlock, items: [...items, { name: "", price: "" }] })} className="text-xs font-semibold text-gold hover:underline">
+          + Ajouter une ligne
+        </button>
+      </div>
+    );
+  }
+
+  if (block.type === "googleMap") {
+    return (
+      <div>
+        <label className={labelCls}>URL d&apos;intégration Google Maps (Embed)</label>
+        <input className={inputCls} value={block.embedUrl} onChange={(e) => onChange({ ...block, embedUrl: e.target.value })} />
+        <p className="mt-1 text-xs text-[#999]">
+          Sur Google Maps : Partager → Intégrer une carte → copie l&apos;URL du champ src.
+        </p>
+      </div>
+    );
+  }
+
+  if (block.type === "socialIcons") {
+    const socBlock = block;
+    const items = socBlock.items;
+    const updateItem = (i: number, item: SocialItem) => {
+      onChange({ ...socBlock, items: items.map((it, idx) => (idx === i ? item : it)) });
+    };
+    return (
+      <div className="space-y-3">
+        {items.map((it, i) => (
+          <div key={i} className="flex gap-2">
+            <input className={inputCls} placeholder="Nom (ex: Instagram)" value={it.platform} onChange={(e) => updateItem(i, { ...it, platform: e.target.value })} />
+            <input className={inputCls} placeholder="URL" value={it.url} onChange={(e) => updateItem(i, { ...it, url: e.target.value })} />
+            <button type="button" onClick={() => onChange({ ...socBlock, items: items.filter((_, idx) => idx !== i) })} className="shrink-0 text-xs text-red-500 hover:underline">
+              Suppr.
+            </button>
+          </div>
+        ))}
+        <button type="button" onClick={() => onChange({ ...socBlock, items: [...items, { platform: "", url: "" }] })} className="text-xs font-semibold text-gold hover:underline">
+          + Ajouter un réseau
+        </button>
+      </div>
+    );
+  }
+
+  if (block.type === "button") {
+    return (
+      <div className="space-y-3">
+        <div>
+          <label className={labelCls}>Texte du bouton</label>
+          <input className={inputCls} value={block.text} onChange={(e) => onChange({ ...block, text: e.target.value })} />
+        </div>
+        <div>
+          <label className={labelCls}>Lien</label>
+          <input className={inputCls} value={block.link} onChange={(e) => onChange({ ...block, link: e.target.value })} />
+        </div>
+        <div>
+          <label className={labelCls}>Alignement</label>
+          <select className={inputCls} value={block.align} onChange={(e) => onChange({ ...block, align: e.target.value as "left" | "center" | "right" })}>
+            <option value="left">Gauche</option>
+            <option value="center">Centre</option>
+            <option value="right">Droite</option>
+          </select>
+        </div>
       </div>
     );
   }

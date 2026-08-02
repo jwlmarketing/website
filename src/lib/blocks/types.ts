@@ -89,6 +89,77 @@ export type SpacerBlock = {
   height: "small" | "medium" | "large";
 };
 
+export type DividerBlock = {
+  type: "divider";
+};
+
+export type IconBoxItem = { icon?: string; title: string; text: string };
+export type IconBoxBlock = {
+  type: "iconBox";
+  items: IconBoxItem[];
+};
+
+export type RatingBlock = {
+  type: "rating";
+  value: number; // 1-5
+  label?: string;
+};
+
+export type TabItem = { label: string; content: string };
+export type TabsBlock = {
+  type: "tabs";
+  items: TabItem[];
+};
+
+export type AccordionItem = { title: string; content: string };
+export type AccordionBlock = {
+  type: "accordion";
+  items: AccordionItem[];
+};
+
+export type BlockquoteBlock = {
+  type: "blockquote";
+  quote: string;
+  author?: string;
+};
+
+export type AlertBlock = {
+  type: "alert";
+  style: "info" | "success" | "warning";
+  text: string;
+};
+
+export type ProgressItem = { label: string; percent: number };
+export type ProgressBlock = {
+  type: "progress";
+  items: ProgressItem[];
+};
+
+export type PriceListItem = { name: string; price: string; description?: string };
+export type PriceListBlock = {
+  type: "priceList";
+  title?: string;
+  items: PriceListItem[];
+};
+
+export type GoogleMapBlock = {
+  type: "googleMap";
+  embedUrl: string;
+};
+
+export type SocialItem = { platform: string; url: string };
+export type SocialIconsBlock = {
+  type: "socialIcons";
+  items: SocialItem[];
+};
+
+export type ButtonBlock = {
+  type: "button";
+  text: string;
+  link: string;
+  align: "left" | "center" | "right";
+};
+
 export type Block =
   | HeroBlock
   | HeadingBlock
@@ -103,7 +174,19 @@ export type Block =
   | TestimonialsBlock
   | IconListBlock
   | StatsBlock
-  | SpacerBlock;
+  | SpacerBlock
+  | DividerBlock
+  | IconBoxBlock
+  | RatingBlock
+  | TabsBlock
+  | AccordionBlock
+  | BlockquoteBlock
+  | AlertBlock
+  | ProgressBlock
+  | PriceListBlock
+  | GoogleMapBlock
+  | SocialIconsBlock
+  | ButtonBlock;
 
 export const BLOCK_LABELS: Record<Block["type"], string> = {
   hero: "En-tête (Hero)",
@@ -120,6 +203,18 @@ export const BLOCK_LABELS: Record<Block["type"], string> = {
   iconList: "Liste à coche",
   stats: "Chiffres clés",
   spacer: "Espacement",
+  divider: "Séparateur",
+  iconBox: "Bloc icône + texte",
+  rating: "Note en étoiles",
+  tabs: "Onglets",
+  accordion: "Accordéon générique",
+  blockquote: "Citation",
+  alert: "Message d'alerte",
+  progress: "Barres de progression",
+  priceList: "Liste de prix",
+  googleMap: "Carte Google Maps",
+  socialIcons: "Icônes réseaux sociaux",
+  button: "Bouton simple",
 };
 
 export function emptyBlock(type: Block["type"]): Block {
@@ -152,5 +247,29 @@ export function emptyBlock(type: Block["type"]): Block {
       return { type: "stats", items: [{ value: "", label: "" }] };
     case "spacer":
       return { type: "spacer", height: "medium" };
+    case "divider":
+      return { type: "divider" };
+    case "iconBox":
+      return { type: "iconBox", items: [{ title: "", text: "" }] };
+    case "rating":
+      return { type: "rating", value: 5 };
+    case "tabs":
+      return { type: "tabs", items: [{ label: "", content: "" }] };
+    case "accordion":
+      return { type: "accordion", items: [{ title: "", content: "" }] };
+    case "blockquote":
+      return { type: "blockquote", quote: "" };
+    case "alert":
+      return { type: "alert", style: "info", text: "" };
+    case "progress":
+      return { type: "progress", items: [{ label: "", percent: 50 }] };
+    case "priceList":
+      return { type: "priceList", items: [{ name: "", price: "" }] };
+    case "googleMap":
+      return { type: "googleMap", embedUrl: "" };
+    case "socialIcons":
+      return { type: "socialIcons", items: [{ platform: "Instagram", url: "" }] };
+    case "button":
+      return { type: "button", text: "En savoir plus", link: "/contact-jwl-marketing-aix-en-provence", align: "center" };
   }
 }
