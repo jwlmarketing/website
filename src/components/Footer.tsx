@@ -2,11 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 
 const ZONES = [
-  { href: "https://www.jwl-marketing.fr/consultant-freelance-seo-marseille/", label: "Consultant SEO Marseille" },
-  { href: "https://www.jwl-marketing.fr/consultant-freelance-seo-nice/", label: "Consultant SEO Nice" },
-  { href: "https://www.jwl-marketing.fr/consultant-freelance-seo-montpellier/", label: "Consultant SEO Montpellier" },
-  { href: "https://www.jwl-marketing.fr/consultant-freelance-seo-toulouse-jwl-marketing/", label: "Consultant SEO Toulouse" },
-  { href: "https://www.jwl-marketing.fr/consultant-freelance-seo-bordeaux-jwl-marketing/", label: "Consultant SEO Bordeaux" },
+  { href: "https://www.jwl-marketing.fr/consultant-freelance-seo-marseille/", label: "Consultant SEO Marseille", external: true },
+  { href: "/consultant-freelance-seo-nice", label: "Consultant SEO Nice", external: false },
+  { href: "https://www.jwl-marketing.fr/consultant-freelance-seo-montpellier/", label: "Consultant SEO Montpellier", external: true },
+  { href: "https://www.jwl-marketing.fr/consultant-freelance-seo-toulouse-jwl-marketing/", label: "Consultant SEO Toulouse", external: true },
+  { href: "https://www.jwl-marketing.fr/consultant-freelance-seo-bordeaux-jwl-marketing/", label: "Consultant SEO Bordeaux", external: true },
 ];
 const ZONES_STATIC = [
   "Consultant SEO Paris",
@@ -39,28 +39,34 @@ export default function Footer() {
             <Link href="/site-internet-aix-en-provence" className="mb-2 block text-[13px] text-white hover:text-[#C26A4B]">Création site web</Link>
 
             <div className="mb-[18px] mt-6 text-[15px] font-semibold text-[#D4AF37]">Navigation</div>
-            <Link href="/consultant-seo-aix-en-provence" className="mb-2 block text-[13px] text-white hover:text-[#C26A4B]">À propos</Link>
+            <Link href="/consultant-freelance-seo-aix-en-provence" className="mb-2 block text-[13px] text-white hover:text-[#C26A4B]">À propos</Link>
             <Link href="/blog" className="mb-2 block text-[13px] text-white hover:text-[#C26A4B]">Blog</Link>
             <Link href="/contact-jwl-marketing-aix-en-provence" className="mb-2 block text-[13px] text-white hover:text-[#C26A4B]">Contact</Link>
 
             <div className="mb-[18px] mt-6 text-[15px] font-semibold text-[#D4AF37]">Business</div>
             <Link href="/entrepreneur-aix-en-provence" className="mb-2 block text-[13px] text-white hover:text-[#C26A4B]">Indépendants</Link>
-            <Link href="/liberal-aix-en-provence" className="mb-2 block text-[13px] text-white hover:text-[#C26A4B]">Professions libérales</Link>
+            <span className="mb-2 block text-[13px] text-[#777]">Professions libérales</span>
           </div>
 
           <div>
             <div className="mb-[18px] text-[15px] font-semibold text-[#D4AF37]">Autres pages</div>
             <Link href="/trouver-client-aix-en-provence" className="mb-2 block text-[13px] text-white hover:text-[#C26A4B]">Acquisition client</Link>
-            <Link href="/formation-seo-aix-en-provence" className="mb-2 block text-[13px] text-white hover:text-[#C26A4B]">Formation SEO</Link>
+            <span className="mb-2 block text-[13px] text-[#777]">Formation SEO</span>
           </div>
 
           <div>
             <div className="mb-[18px] text-[15px] font-semibold text-[#D4AF37]">Zones d&apos;intervention</div>
-            {ZONES.map((z) => (
-              <a key={z.href} href={z.href} className="mb-2 block text-[13px] text-white hover:text-[#C26A4B]">
-                {z.label}
-              </a>
-            ))}
+            {ZONES.map((z) =>
+              z.external ? (
+                <a key={z.href} href={z.href} className="mb-2 block text-[13px] text-white hover:text-[#C26A4B]">
+                  {z.label}
+                </a>
+              ) : (
+                <Link key={z.href} href={z.href} className="mb-2 block text-[13px] text-white hover:text-[#C26A4B]">
+                  {z.label}
+                </Link>
+              )
+            )}
             {ZONES_STATIC.map((z) => (
               <span key={z} className="mb-2 block text-[13px] text-white">
                 {z}
