@@ -84,6 +84,17 @@ model Post {
   updatedAt   DateTime @updatedAt
 }
 
+model ContactSubmission {
+  id        String   @id @default(cuid())
+  name      String
+  activity  String?
+  phone     String?
+  email     String
+  website   String?
+  message   String
+  createdAt DateTime @default(now())
+}
+
 model Media {
   id        String   @id @default(cuid())
   url       String
