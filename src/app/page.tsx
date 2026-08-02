@@ -1,6 +1,110 @@
 import Image from "next/image";
 import Link from "next/link";
 import HeroBadge from "@/components/HeroBadge";
+import ProofCard, { type ProofCardData } from "@/components/ProofCard";
+import SectionHeading from "@/components/SectionHeading";
+import FaqAccordion from "@/components/FaqAccordion";
+import { HOME_FAQ } from "@/data/homeFaq";
+
+const PROOF_CARDS: ProofCardData[] = [
+  {
+    badge: "Assistance informatique",
+    siteUrl: "https://www.proxiclic-provence.fr/",
+    thumbUrl: "https://image.thum.io/get/width/800/https://www.proxiclic-provence.fr/",
+    stat: "3 468",
+    statLabel: "vues de la fiche Google en 6 mois",
+    statSub: "63 appels en 6 mois.",
+    name: ["Proxiclic Provence", "Informaticien à Digne-les-Bains (04)"],
+    strategy: "Faible concurrence · Stratégie locale",
+    strategyLevel: "low",
+    gmbShot: {
+      src: "/images/gbp-capture-proxiclic.png",
+      alt: "Capture Google Business Profile — 63 appels générés depuis la fiche Proxiclic Provence entre février et juillet 2026",
+      caption:
+        "Voir la preuve : capture de la fiche Google Business de Proxiclic Provence, montrant les 63 appels générés entre février et juillet 2026 grâce à la stratégie locale mise en place.",
+    },
+    metrics: ["63 appels générés en 6 mois", "80+ avis Google depuis la stratégie locale"],
+    detailSections: [
+      {
+        title: "Mission réalisée",
+        items: [
+          "Création du site web (landing page)",
+          "Stratégie SEO-GEO du site",
+          "Stratégie locale et régionale en cours de déploiement",
+        ],
+      },
+      {
+        title: "Abonnement en place",
+        items: [
+          "Stratégie SEO-GEO du site web",
+          "Gestion de la fiche Google Business et des avis",
+        ],
+      },
+    ],
+  },
+  {
+    badge: "Gestion de patrimoine",
+    siteUrl: "https://gestiondepatrimoine-aix-en-provence.fr/",
+    thumbUrl:
+      "https://image.thum.io/get/width/800/https://gestiondepatrimoine-aix-en-provence.fr/",
+    stat: "1 350",
+    statLabel: "vues de la fiche Google en 4 mois",
+    statSub: "7 appels clients en 4 mois",
+    name: ["Groupe INOVEA", "Gestion de patrimoine à Aix-en-Provence (13)"],
+    strategy: "Concurrence moyenne · Stratégie locale",
+    strategyLevel: "medium",
+    metrics: [
+      "1 350 vues de la fiche Google",
+      "71 clics vers le site en 4 mois",
+      "7 appels clients en 4 mois",
+    ],
+    detailSections: [
+      {
+        title: "Mission réalisée",
+        items: [
+          "Création d'un site vitrine sur-mesure, à l'image du groupe",
+          "Rédaction SEO des contenus du site",
+          "Stratégie SEO-GEO, budget d'entrée maîtrisé",
+        ],
+      },
+      {
+        title: "Abonnement en place",
+        items: ["Aucun suivi mensuel actif à ce jour"],
+      },
+    ],
+  },
+  {
+    badge: "Refonte stratégie de marque",
+    siteUrl: "https://bout-de-poils.vercel.app/",
+    thumbUrl: "https://image.thum.io/get/width/800/https://bout-de-poils.vercel.app/",
+    stat: "En cours",
+    statLabel: "Site récemment lancé, indicateurs pas encore assez complets",
+    name: ["Bout de Poils", "anciennement Green Beam Craft", "Sèvres (91)"],
+    strategy: "Concurrence moyenne · Stratégie nationale",
+    strategyLevel: "medium",
+    detailSections: [
+      {
+        title: "Mission réalisée",
+        items: [
+          "Refonte du positionnement de marque (ex-Green Beam Craft)",
+          "Choix de la niche et de la cible",
+          "Création du produit phare (porte-clés en poils d'animaux)",
+          "Stratégie de contenu SEO national (5 pages piliers)",
+          "Rédaction des fiches produits SEO, avec noms de produits différenciés pour couvrir plusieurs intentions de recherche",
+          "Setup de la fiche Google Business Profile",
+        ],
+      },
+      {
+        title: "Abonnement en place",
+        items: [
+          "Gestion et rédaction SEO du blog",
+          "Stratégie SEO-GEO du site web et des produits",
+          "Gestion de la fiche Google Business et des avis",
+        ],
+      },
+    ],
+  },
+];
 
 const GUARANTEES = [
   {
@@ -35,14 +139,6 @@ const GUARANTEES = [
       "Aucune étape laissée dans le flou",
     ],
   },
-];
-
-const FAQS = [
-  "Comment trouver des clients ?",
-  "Comment attirer des clients sur le long terme ?",
-  "Pourquoi je n'ai pas de clients malgré mon site web ?",
-  "Comment générer des leads facilement ?",
-  "Peut-on trouver des clients sans commercial ?",
 ];
 
 export default function Home() {
@@ -119,146 +215,127 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Intro */}
-      <section className="mx-auto max-w-3xl px-6 py-20">
-        <h2 className="text-center text-3xl font-semibold">
+      {/* Intro — valeurs exactes: h2 38px Playfair 600 noir, sous-titre 18px #555, corps 15px/25.5px #1a1a1a Georgia, max-width 640px */}
+      <section className="mx-auto max-w-[640px] px-6 py-20 text-center">
+        <h2 className="font-heading text-[38px] font-semibold leading-tight text-black">
           Et si ton prochain client te trouvait sur Google ?
         </h2>
-        <p className="mt-4 text-center text-lg text-neutral-600">
+        <p className="mt-4 text-lg text-[#555]">
           Un site web qui travaille pour ton entreprise 24h/24 afin de
           générer de nouveaux clients
         </p>
-        <div className="mt-8 space-y-5 text-neutral-700">
+        <div className="mt-8 space-y-5 text-left text-[15px] leading-[25.5px] text-[#1a1a1a]">
           <p>
             Beaucoup d&apos;entreprises suivent leurs visites, leurs clics ou
             leurs impressions. Moi, je regarde une seule chose : combien de
             prospects deviennent tes clients. Un bon référencement ne se
             mesure pas uniquement au trafic, mais aux résultats qu&apos;il
-            génère.
+            génère. C&apos;est pourquoi chaque stratégie est suivie, analysée
+            et ajustée mois après mois afin de développer durablement ta
+            visibilité et ton chiffre d&apos;affaires.
           </p>
           <p>
             Aujourd&apos;hui, ton premier rendez-vous avec un prospect
             commence sur Google. Avant de te contacter, il recherche ton
             entreprise, consulte ton site internet et compare plusieurs
-            professionnels.
+            professionnels. En quelques secondes, il décide si tu inspires
+            confiance ou s&apos;il préfère poursuivre ses recherches.
+          </p>
+          <p>
+            Ton site internet est bien plus qu&apos;une simple vitrine. Il
+            représente ton entreprise, valorise ton savoir-faire et montre
+            pourquoi un prospect devrait te choisir plutôt qu&apos;un
+            concurrent. Il doit rassurer, convaincre et donner envie de
+            passer à l&apos;action.
           </p>
           <p>
             Chez JWL Marketing, je crée des sites internet pensés pour être
             visibles sur Google, offrir une expérience fluide à tes visiteurs
             et transformer cette visibilité en demandes de devis, appels et
-            nouveaux clients.
+            nouveaux clients. Je conçois des sites web pensés pour développer
+            ton activité. Chaque page est construite avec une stratégie SEO
+            et une logique commerciale afin d&apos;attirer des visiteurs
+            qualifiés et de les transformer en prospects.
+          </p>
+          <p>
+            Résultat : ton site devient un véritable levier de visibilité,
+            d&apos;acquisition et de croissance pour ton entreprise.
           </p>
         </div>
       </section>
 
-      {/* Résultats clients */}
-      <section className="bg-neutral-50 py-20">
-        <div className="mx-auto max-w-6xl px-6">
-          <h2 className="text-center text-3xl font-semibold">
-            Des résultats concrets
-          </h2>
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
-            {[
-              {
-                cat: "Assistance informatique",
-                stat: "3 468",
-                label: "vues de la fiche Google en 6 mois",
-                sub: "63 appels en 6 mois",
-                client: "Proxiclic Provence — Digne-les-Bains (04)",
-              },
-              {
-                cat: "Gestion de patrimoine",
-                stat: "1 350",
-                label: "vues de la fiche Google en 4 mois",
-                sub: "7 appels clients en 4 mois",
-                client: "Groupe INOVEA — Aix-en-Provence (13)",
-              },
-              {
-                cat: "Refonte stratégie de marque",
-                stat: "En cours",
-                label: "Site récemment lancé",
-                sub: "Indicateurs pas encore assez complets",
-                client: "Bout de Poils — Sèvres (91)",
-              },
-            ].map((r) => (
+      {/* Résultats clients — cartes .jwl-proof-card exactes */}
+      <section className="bg-transparent px-5 py-[50px]" style={{ fontFamily: '"DM Sans", Arial, sans-serif' }}>
+        <div className="mx-auto flex max-w-[1200px] flex-wrap items-start justify-center gap-6">
+          {PROOF_CARDS.map((card) => (
+            <ProofCard key={card.badge} data={card} />
+          ))}
+        </div>
+        <p className="mx-auto mt-[30px] max-w-[640px] text-center text-xs leading-relaxed text-[#999]">
+          Chiffres issus de Google Search Console et Google Business Profile,
+          données juillet 2026.
+        </p>
+      </section>
+
+      {/* Garanties — .guarantees-section: kicker + h2 encadré, photo 40% + grille 2x2 de cartes sombres */}
+      <section className="box-border bg-transparent px-[5%] py-20" style={{ fontFamily: "Poppins, sans-serif" }}>
+        <SectionHeading kicker="Une collaboration" title="Et un partenariat" accent="gagnant-gagnant" />
+        <div className="mx-auto flex max-w-[1200px] flex-col items-stretch gap-10 md:flex-row">
+          <div className="flex items-center md:basis-[40%]">
+            <Image
+              src="/images/jodie-marketing-digital-seo.png"
+              alt="Jodie Lapaillerie - JWL Marketing"
+              width={642}
+              height={862}
+              className="h-full w-full rounded-2xl object-cover"
+            />
+          </div>
+          <div className="grid flex-1 grid-cols-1 gap-[22px] sm:grid-cols-2">
+            {GUARANTEES.map((g, i) => (
               <div
-                key={r.client}
-                className="rounded-2xl border border-neutral-100 bg-white p-6"
+                key={g.title}
+                className="rounded-2xl border border-[#2a2a2a] bg-[#141414] p-7 transition-all hover:-translate-y-1.5 hover:border-gold"
               >
-                <p className="text-xs uppercase tracking-wide text-gold">
-                  {r.cat}
-                </p>
-                <p className="mt-3 text-3xl font-semibold">{r.stat}</p>
-                <p className="text-sm text-neutral-500">{r.label}</p>
-                <p className="mt-1 text-sm font-medium">{r.sub}</p>
-                <p className="mt-4 text-sm text-neutral-600">{r.client}</p>
+                <span className="relative mb-3.5 inline-block pl-[18px] text-xs font-semibold uppercase tracking-wide text-gold before:absolute before:left-0 before:top-1/2 before:h-0.5 before:w-3 before:-translate-y-1/2 before:bg-gold before:content-['']">
+                  Garantie {i + 1}
+                </span>
+                <h3 className="mb-3.5 font-heading text-[19px] font-semibold text-white">
+                  {g.title}
+                </h3>
+                <p className="mb-4 text-sm leading-relaxed text-[#bbb]">{g.text}</p>
+                <ul className="space-y-2">
+                  {g.points.map((p) => (
+                    <li key={p} className="flex items-start gap-2.5 text-[13px] leading-relaxed text-[#ddd]">
+                      <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-gold/[0.18] text-[11px] font-bold text-gold">
+                        ✓
+                      </span>
+                      <span>{p}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             ))}
           </div>
-          <p className="mt-6 text-center text-xs text-neutral-400">
-            Chiffres issus de Google Search Console et Google Business
-            Profile, données juillet 2026.
-          </p>
-        </div>
-      </section>
-
-      {/* Garanties */}
-      <section className="mx-auto max-w-6xl px-6 py-20">
-        <h2 className="text-center text-3xl font-semibold">
-          Une collaboration, un partenariat gagnant-gagnant
-        </h2>
-        <div className="mt-12 grid gap-8 md:grid-cols-2">
-          {GUARANTEES.map((g, i) => (
-            <div key={g.title} className="rounded-2xl border border-neutral-100 p-8">
-              <p className="text-xs uppercase tracking-wide text-gold">
-                Garantie {i + 1}
-              </p>
-              <h3 className="mt-2 text-xl font-semibold">{g.title}</h3>
-              <p className="mt-3 text-sm text-neutral-600">{g.text}</p>
-              <ul className="mt-4 space-y-2 text-sm">
-                {g.points.map((p) => (
-                  <li key={p} className="flex gap-2">
-                    <span className="text-gold">✓</span>
-                    <span>{p}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
         </div>
         <div className="mt-10 text-center">
           <Link
             href="/contact-jwl-marketing-aix-en-provence"
-            className="inline-block rounded-full bg-black px-8 py-3.5 text-sm font-semibold text-white"
+            className="inline-block rounded-[5px] border-2 border-gold bg-gold px-10 py-[15px] font-medium text-white transition-colors hover:border-[#b8952f] hover:bg-[#b8952f]"
           >
             Demande ton offre
           </Link>
         </div>
       </section>
 
-      {/* FAQ */}
-      <section className="bg-neutral-50 py-20">
-        <div className="mx-auto max-w-3xl px-6">
-          <p className="text-center text-xs uppercase tracking-wide text-gold">
-            Questions
-          </p>
-          <h2 className="mt-2 text-center text-3xl font-semibold">
-            FAQ : Foire Aux Questions
-          </h2>
-          <p className="mt-3 text-center text-sm text-neutral-500">
-            Retrouve les réponses aux questions les plus fréquentes sur le
-            Marketing Digital
-          </p>
-          <div className="mt-10 divide-y divide-neutral-200 rounded-2xl border border-neutral-200 bg-white">
-            {FAQS.map((q) => (
-              <details key={q} className="group p-5">
-                <summary className="cursor-pointer list-none font-medium">
-                  {q}
-                </summary>
-              </details>
-            ))}
-          </div>
-        </div>
+      {/* FAQ — vraies réponses complètes récupérées du site (accordéon Elementor natif) */}
+      <section className="px-6 py-20">
+        <SectionHeading
+          kicker="Questions"
+          title="FAQ :"
+          accent="Foire Aux Questions"
+          subtext="Retrouve les réponses aux questions les plus fréquentes sur le Marketing Digital"
+        />
+        <FaqAccordion items={HOME_FAQ} />
       </section>
     </div>
   );
