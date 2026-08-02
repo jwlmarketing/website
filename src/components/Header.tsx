@@ -86,6 +86,14 @@ export default function Header() {
         <Link href="/blog" className="px-2.5 py-1.5 text-black hover:text-[#c9a227]">
           Blog
         </Link>
+        <span className="mx-0.5 text-[#ccc]">|</span>
+
+        <a
+          href="https://plugins.jwl-marketing.fr/"
+          className="px-2.5 py-1.5 text-black hover:text-[#c9a227]"
+        >
+          Plugins
+        </a>
       </nav>
 
       <div className="ml-auto hidden shrink-0 items-center gap-3 whitespace-nowrap min-[961px]:flex">
@@ -94,6 +102,15 @@ export default function Header() {
           className="rounded bg-[#c9a227] px-4.5 py-2.5 font-semibold text-black hover:bg-[#e0b52c]"
         >
           Appelle-moi
+        </a>
+        <a href="https://intranet.jwlmarketing.fr/" aria-label="Connexion espace client">
+          <Image
+            src="/images/seco.png"
+            alt="Connexion espace client"
+            width={28}
+            height={28}
+            className="h-7 w-7"
+          />
         </a>
       </div>
 
@@ -127,8 +144,14 @@ export default function Header() {
           <Link href="/blog" onClick={() => setOpen(false)} className="block border-b border-[#f0f0f0] px-5 py-3.5 font-heading text-[15px] text-black hover:text-[#c9a227]">
             Blog
           </Link>
-          <a href="tel:+33783792814" onClick={() => setOpen(false)} className="block px-5 py-3.5 font-heading text-[15px] text-black hover:text-[#c9a227]">
+          <a href="https://plugins.jwl-marketing.fr/" onClick={() => setOpen(false)} className="block border-b border-[#f0f0f0] px-5 py-3.5 font-heading text-[15px] text-black hover:text-[#c9a227]">
+            Plugins
+          </a>
+          <a href="tel:+33783792814" onClick={() => setOpen(false)} className="block border-b border-[#f0f0f0] px-5 py-3.5 font-heading text-[15px] text-black hover:text-[#c9a227]">
             Appelle-moi — 07 83 79 28 14
+          </a>
+          <a href="https://intranet.jwlmarketing.fr/" onClick={() => setOpen(false)} className="block px-5 py-3.5 font-heading text-[15px] text-black hover:text-[#c9a227]">
+            Connexion espace client
           </a>
         </div>
       )}

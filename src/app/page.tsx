@@ -3,8 +3,11 @@ import Link from "next/link";
 import HeroBadge from "@/components/HeroBadge";
 import ProofCard, { type ProofCardData } from "@/components/ProofCard";
 import SectionHeading from "@/components/SectionHeading";
+import GoogleColors from "@/components/GoogleColors";
 import FaqAccordion from "@/components/FaqAccordion";
 import { HOME_FAQ } from "@/data/homeFaq";
+import { REVIEWS } from "@/data/reviews";
+import ReviewCard from "@/components/ReviewCard";
 
 const PROOF_CARDS: ProofCardData[] = [
   {
@@ -198,10 +201,10 @@ export default function Home() {
       <div className="border-y border-neutral-100 bg-black py-8">
         <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-center gap-10 px-6">
           {[
+            { src: "/images/logo-inovea.png", alt: "Groupe INOVEA" },
             { src: "/images/logo-webdifference.png", alt: "Web Difference - Tristan" },
             { src: "/images/logo-entrepreneurielles.png", alt: "Entrepreneuri'elles" },
             { src: "/images/logo-dynamitz.png", alt: "Nathan Dynamitz" },
-            { src: "/images/logo-inovea.png", alt: "Groupe INOVEA" },
           ].map((logo) => (
             <Image
               key={logo.src}
@@ -225,6 +228,14 @@ export default function Home() {
           générer de nouveaux clients
         </p>
         <div className="mt-8 space-y-5 text-left text-[15px] leading-[25.5px] text-[#1a1a1a]">
+          <p className="font-heading text-xl font-semibold text-black">
+            Le plus difficile, ce n&apos;est pas d&apos;être trouvé. C&apos;est
+            d&apos;être choisi.
+          </p>
+          <p className="italic text-[#555]">
+            Le trafic flatte l&apos;égo, le chiffre d&apos;affaires paie les
+            factures.
+          </p>
           <p>
             Beaucoup d&apos;entreprises suivent leurs visites, leurs clics ou
             leurs impressions. Moi, je regarde une seule chose : combien de
@@ -264,8 +275,194 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Attire de nouveaux clients — section entièrement manquante dans la 1re passe, ajoutée après comparaison directe */}
+      <section className="px-6 py-10 text-center">
+        <a
+          href="/referencement-google-aix-en-provence"
+          className="inline-block rounded-sm bg-gold px-[22px] py-3 text-base text-white"
+        >
+          Attire de nouveaux clients.
+        </a>
+
+        <SectionHeading
+          title="Chaque jour"
+          subtext="Ensemble, créons un positionnement que tes clients retiendront."
+        >
+          <span className="text-gold"> sans stratégie.</span> Ce sont{" "}
+          <span className="text-gold">des clients </span> que tu perds.
+        </SectionHeading>
+
+        <div className="mx-auto grid max-w-[900px] items-center gap-8 md:grid-cols-[1fr_260px]">
+          <div className="rounded border-[1.5px] border-gold bg-white p-10 text-left">
+            <p className="mb-[22px] text-[15px] leading-[1.7] text-[#1a1a1a]">
+              <strong className="text-gold">
+                Boulangerie, cabinet comptable, agence immobilière, profession
+                libérale
+              </strong>
+              … Peu importe ton secteur, la concurrence est là. Et souvent,
+              elle propose exactement la même chose que toi. Ce qui fait la
+              différence, ce n&apos;est pas ton service. C&apos;est la
+              manière dont tu es perçu. Un positionnement flou, une offre
+              trop large, un message qui ne parle pas à la bonne personne, et
+              le visiteur part chez un concurrent.
+            </p>
+            <p className="mb-[22px] text-[15px] leading-[1.7] text-[#1a1a1a]">
+              À l&apos;inverse,{" "}
+              <strong className="text-gold">
+                un message clair et une image cohérente attire naturellement
+                les bons clients.
+              </strong>{" "}
+              C&apos;est ce déclic que je construis avec toi.
+            </p>
+            <div className="mb-[22px] h-px bg-[#e6ddd2]" />
+            <p className="text-[15px] leading-[1.7] text-[#1a1a1a]">
+              <strong className="text-gold">
+                J&apos;interviens auprès des TPE et PME en région PACA et à
+                distance partout en France
+              </strong>
+              : Paris, Lyon, Bordeaux, Lille et au-delà.{" "}
+              <strong className="text-gold">
+                Je t&apos;aide à clarifier ton positionnement, à identifier ce
+                qui te différencie vraiment
+              </strong>{" "}
+              et à construire une présence digitale qui parle à tes clients,
+              pas seulement à toi.
+            </p>
+          </div>
+          <Image
+            src="/images/positionnement-marketing-digital.png"
+            alt="Positionnement marketing digital JWL Marketing"
+            width={682}
+            height={1024}
+            className="mx-auto h-auto w-full max-w-[260px] rounded"
+          />
+        </div>
+      </section>
+
+      {/* Ma promesse — section complète manquante, ajoutée après comparaison directe avec le fichier HTML fourni */}
+      <section className="px-6 py-16">
+        <div className="mx-auto grid max-w-[1100px] items-center gap-10 md:grid-cols-2">
+          <div className="order-2 md:order-1">
+            <SectionHeading
+              kicker="Ma promesse"
+              title="Je fais de ton site web un outil qui vend pour toi."
+              subtext="Sans stratégie, ton site reste invisible. Transforme ta visibilité en véritable levier de clients."
+            />
+            <div className="space-y-5 text-left text-[15px] leading-[25.5px] text-[#1a1a1a]">
+              <p>
+                Le problème peut venir de ton positionnement, mais aussi de la
+                manière dont tu communiques dessus. En effet, ton offre peut
+                être pertinente, tes tarifs cohérents, tes services de
+                qualité, et pourtant, tes clients ne te trouvent pas.
+                Aujourd&apos;hui, tout passe par Google. Quand un prospect a
+                un besoin, il cherche, compare et choisit rapidement. Si tu
+                n&apos;apparais pas au bon moment, tu laisses la place à tes
+                concurrents. Et même avec un site existant, sans les bons
+                outils, tu navigues à l&apos;aveugle. Tu ne sais pas combien
+                de personnes visitent ton site, ce qu&apos;elles regardent ni
+                pourquoi elles ne te contactent pas.
+              </p>
+              <p>
+                C&apos;est exactement là que j&apos;interviens.{" "}
+                <strong>
+                  Un consultant SEO, c&apos;est faire appel à une personne qui
+                  parle Google, qui comprend sa technique et qui, à travers le
+                  code et les règles de Google, adapte ton site pour
+                  qu&apos;il soit compris.
+                </strong>{" "}
+                Mais ne t&apos;y trompe pas : les développeurs développent un
+                site web avec leur langage.{" "}
+                <span className="text-gold">
+                  Le consultant SEO crée, pilote ou revoit l&apos;architecture
+                  et l&apos;écriture du site avec le langage de Google.
+                </span>{" "}
+                Ce sont deux langues différentes.
+              </p>
+              <p>
+                Selon ta situation, je te propose soit la création
+                d&apos;un site web optimisé dès le départ, soit une refonte
+                complète de ton site existant, en revoyant toute
+                l&apos;ossature pour que Google comprenne ton activité et te
+                positionne face à tes prospects.
+              </p>
+            </div>
+          </div>
+          <Image
+            src="/images/consultant-marketing-digital.webp"
+            alt="strategie-marketing-digital-aix"
+            width={1200}
+            height={1400}
+            className="order-1 h-auto w-full rounded-2xl object-cover md:order-2"
+          />
+        </div>
+      </section>
+
+      {/* Analyse — section complète manquante, ajoutée après comparaison directe */}
+      <section className="bg-neutral-50 px-6 py-16">
+        <div className="mx-auto grid max-w-[1100px] items-center gap-10 md:grid-cols-2">
+          <Image
+            src="/images/resultat-google-site-internet.webp"
+            alt="Résultat Google — site internet JWL Marketing"
+            width={1200}
+            height={800}
+            className="h-auto w-full rounded-2xl object-cover"
+          />
+          <div>
+            <SectionHeading
+              kicker="Analyse"
+              title="J'identifie les intentions de recherches sur"
+              accent="Google"
+            />
+            <div className="space-y-5 text-left text-[15px] leading-[25.5px] text-[#1a1a1a]">
+              <p>
+                Voici une projection réelle basée sur les données d&apos;un
+                site. Ce type de suivi permet de comprendre ce qui
+                fonctionne, d&apos;ajuster et d&apos;améliorer les résultats
+                dans le temps.
+              </p>
+              <p>
+                L&apos;objectif est de générer des leads, puis de les
+                transformer en clients. Pour cela, je m&apos;appuie sur un
+                système Google complet : ton site web, ta visibilité sur
+                Google, ta fiche Google Business Profile et des outils
+                d&apos;analyse comme Google Analytics et Google Search
+                Console.
+              </p>
+              <p>
+                Ces outils permettent de comprendre ce qui fonctionne,
+                d&apos;identifier les points de blocage et d&apos;ajuster ta
+                stratégie dans le temps. Car un site performant ne se devine
+                pas, il se mesure.
+              </p>
+              <p>
+                C&apos;est grâce à ce suivi régulier que l&apos;on peut
+                améliorer tes résultats, renforcer ta visibilité et faire
+                évoluer ton site pour qu&apos;il devienne un véritable levier
+                de développement.
+              </p>
+            </div>
+            <a
+              href="https://www.jwl-marketing.fr/consultant-seo-aix-en-provence"
+              className="mt-6 inline-block rounded-[5px] border-2 border-gold bg-gold px-10 py-[15px] font-medium text-white transition-colors hover:border-[#b8952f] hover:bg-[#b8952f]"
+            >
+              Découvre mon univers
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Résultats clients — cartes .jwl-proof-card exactes */}
       <section className="bg-transparent px-5 py-[50px]" style={{ fontFamily: '"DM Sans", Arial, sans-serif' }}>
+        <SectionHeading
+          title="La preuve par les"
+          accent="chiffres."
+          subtext={
+            <>
+              Des résultats concrets, mesurés avec <GoogleColors /> Analytics
+              et <GoogleColors /> Search Console.
+            </>
+          }
+        />
         <div className="mx-auto flex max-w-[1200px] flex-wrap items-start justify-center gap-6">
           {PROOF_CARDS.map((card) => (
             <ProofCard key={card.badge} data={card} />
@@ -279,7 +476,11 @@ export default function Home() {
 
       {/* Garanties — .guarantees-section: kicker + h2 encadré, photo 40% + grille 2x2 de cartes sombres */}
       <section className="box-border bg-transparent px-[5%] py-20" style={{ fontFamily: "Poppins, sans-serif" }}>
-        <SectionHeading kicker="Une collaboration" title="Et un partenariat" accent="gagnant-gagnant" />
+        <SectionHeading
+          kicker="Mes garanties"
+          title="Je te propose"
+          accent="une stratégie marketing personnalisée"
+        />
         <div className="mx-auto flex max-w-[1200px] flex-col items-stretch gap-10 md:flex-row">
           <div className="flex items-center md:basis-[40%]">
             <Image
@@ -317,14 +518,27 @@ export default function Home() {
             ))}
           </div>
         </div>
-        <div className="mt-10 text-center">
-          <Link
-            href="/contact-jwl-marketing-aix-en-provence"
-            className="inline-block rounded-[5px] border-2 border-gold bg-gold px-10 py-[15px] font-medium text-white transition-colors hover:border-[#b8952f] hover:bg-[#b8952f]"
-          >
-            Demande ton offre
-          </Link>
+      </section>
+
+      {/* Témoignages — 8 vrais avis Google récupérés (widget Trustindex reconstruit en composant statique) */}
+      <section className="bg-neutral-50 px-6 py-16">
+        <SectionHeading title="Ils" accent="encaissent du cash avec JWL Marketing" />
+        <div className="mx-auto flex max-w-[1200px] gap-6 overflow-x-auto px-2 pb-4">
+          {REVIEWS.map((r) => (
+            <ReviewCard key={r.name} {...r} />
+          ))}
         </div>
+      </section>
+
+      {/* CTA de clôture — kicker + h2 encadré + bouton, section distincte des garanties (erreur corrigée) */}
+      <section className="px-6 py-16 text-center">
+        <SectionHeading kicker="Une collaboration" title="Et un partenariat" accent="gagnant-gagnant" />
+        <Link
+          href="/contact-jwl-marketing-aix-en-provence"
+          className="inline-block rounded-[5px] border-2 border-gold bg-gold px-10 py-[15px] font-medium text-white transition-colors hover:border-[#b8952f] hover:bg-[#b8952f]"
+        >
+          Demande ton offre
+        </Link>
       </section>
 
       {/* FAQ — vraies réponses complètes récupérées du site (accordéon Elementor natif) */}
