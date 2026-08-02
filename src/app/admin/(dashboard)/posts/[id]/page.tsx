@@ -9,7 +9,10 @@ export default async function EditPost({
   params: Promise<{ id: string }>;
 }) {
   const { id } = await params;
-  const post = await prisma.post.findUnique({ where: { id } });
+  const [post, categories] = await Promise.all([
+    prisma.post.findUnique({ where: { id }, include: { tags: true } }),
+    prisma.category.findMany({ orderBy: { order: "asc" } }),
+  ]);
   if (!post) notFound();
 
   return (
@@ -33,6 +36,7 @@ export default async function EditPost({
             ...post,
             content: post.content as { html?: string },
           }}
+          categories={categories}
           action={savePost}
         />
       </div>
