@@ -1,4 +1,6 @@
+import Image from "next/image";
 import Link from "next/link";
+import HeroBadge from "@/components/HeroBadge";
 
 const GUARANTEES = [
   {
@@ -46,39 +48,75 @@ const FAQS = [
 export default function Home() {
   return (
     <div>
-      {/* Hero */}
-      <section className="mx-auto max-w-6xl px-6 py-20">
-        <div className="grid items-center gap-12 md:grid-cols-2">
-          <div>
-            <p className="text-gold">✦</p>
-            <h1 className="mt-4 text-4xl font-semibold leading-tight md:text-5xl">
-              Je transforme <span className="text-gold">ton site web</span> en
-              outil qui attire des clients.
-            </h1>
-            <p className="mt-6 max-w-md text-neutral-600">
-              Résultats mesurables, Aix-en-Provence. Transforme ta présence
-              digitale en commercial terrain 24h/24, sur{" "}
-              <span className="font-semibold">Google</span>.
-            </p>
+      {/* Hero — reconstruit à l'identique (padding, tailles, couleurs exactes du site actuel) */}
+      <div className="flex w-full flex-col items-center justify-between gap-10 bg-white px-[5%] py-[60px] md:flex-row">
+        <div className="max-w-[600px] flex-1">
+          <h1 className="m-0 mb-1 mt-2.5 font-heading text-[48px] font-semibold leading-[1.25] text-black">
+            Je transforme{" "}
+            <span className="text-gold">ton site web</span> en outil qui
+            attire des clients.
+          </h1>
+
+          <div className="my-4 mb-6 flex items-center gap-2">
+            <div className="h-0.5 w-[46px] bg-gold" />
+            <span className="text-base text-gold">✦</span>
+          </div>
+
+          <p className="text-base leading-[1.6] text-[#333]">
+            Résultats mesurables, Aix-en-Provence. Transforme ta présence
+            digitale en commercial terrain 24h/24, sur{" "}
+            <span className="font-semibold">
+              <span className="text-[#4285F4]">G</span>
+              <span className="text-[#EA4335]">o</span>
+              <span className="text-[#FBBC05]">o</span>
+              <span className="text-[#4285F4]">g</span>
+              <span className="text-[#34A853]">l</span>
+              <span className="text-[#EA4335]">e</span>
+            </span>
+            .
+          </p>
+
+          <div className="mt-5 flex flex-wrap gap-[15px]">
             <Link
               href="/contact-jwl-marketing-aix-en-provence"
-              className="mt-8 inline-block rounded-full bg-gold px-8 py-3.5 text-sm font-semibold tracking-wide text-black"
+              className="inline-block rounded-[5px] border-2 border-gold bg-gold px-10 py-[15px] font-medium text-white transition-colors hover:border-[#b8952f] hover:bg-[#b8952f]"
             >
               AUDIT GRATUIT
             </Link>
           </div>
-          <div className="flex justify-center">
-            <div className="flex h-72 w-72 items-center justify-center rounded-full bg-gradient-to-br from-amber-100 via-sky-100 to-rose-100 text-center text-sm text-neutral-500">
-              Photo Jodie — JWL Marketing
-            </div>
-          </div>
         </div>
-      </section>
 
-      <div className="border-y border-neutral-100 bg-neutral-50 py-6">
-        <p className="text-center text-xs uppercase tracking-wide text-neutral-400">
-          Web Différence · Entrepreneuri&apos;elles · Dynamitz · Inovea
-        </p>
+        <div className="relative flex flex-[1.2_1_0%] items-center justify-end">
+          <Image
+            src="/images/hero-jwl-marketing.webp"
+            alt="JWL Marketing Aix-en-Provence"
+            width={1536}
+            height={1024}
+            priority
+            className="h-auto w-[90%] scale-105 object-contain"
+          />
+          <HeroBadge />
+        </div>
+      </div>
+
+      <div className="border-y border-neutral-100 bg-black py-8">
+        <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-center gap-10 px-6">
+          {[
+            { src: "/images/logo-webdifference.png", alt: "Web Difference - Tristan" },
+            { src: "/images/logo-entrepreneurielles.png", alt: "Entrepreneuri'elles" },
+            { src: "/images/logo-dynamitz.png", alt: "Nathan Dynamitz" },
+            { src: "/images/logo-inovea.png", alt: "Groupe INOVEA" },
+          ].map((logo) => (
+            <Image
+              key={logo.src}
+              src={logo.src}
+              alt={logo.alt}
+              width={140}
+              height={65}
+              className="h-12 w-auto object-contain opacity-90"
+            />
+          ))}
+        </div>
       </div>
 
       {/* Intro */}
