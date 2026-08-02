@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import BlockRenderer from "@/components/BlockRenderer";
 import {
   BLOCK_LABELS,
   emptyBlock,
@@ -27,6 +28,7 @@ export default function BlockEditor({
 }) {
   const [blocks, setBlocks] = useState<Block[]>(initialBlocks);
   const [adding, setAdding] = useState(false);
+  const [view, setView] = useState<"edit" | "preview">("edit");
 
   function update(i: number, next: Block) {
     setBlocks((bs) => bs.map((b, idx) => (idx === i ? next : b)));
@@ -55,7 +57,41 @@ export default function BlockEditor({
     <div>
       <input type="hidden" name={name} value={JSON.stringify(blocks)} />
 
-      <div className="space-y-4">
+      <div className="mb-4 inline-flex rounded-full border border-neutral-200 bg-white p-1">
+        <button
+          type="button"
+          onClick={() => setView("edit")}
+          className={`rounded-full px-4 py-1.5 text-sm font-medium ${view === "edit" ? "bg-gold text-white" : "text-[#555]"}`}
+        >
+          Éditer
+        </button>
+        <button
+          type="button"
+          onClick={() => setView("preview")}
+          className={`rounded-full px-4 py-1.5 text-sm font-medium ${view === "preview" ? "bg-gold text-white" : "text-[#555]"}`}
+        >
+          Aperçu en direct
+        </button>
+      </div>
+
+      {view === "preview" && (
+        <div className="mb-6 overflow-hidden rounded-2xl border border-gold">
+          <div className="border-b border-gold bg-[#fdfaf3] px-4 py-2 text-xs text-[#888]">
+            Aperçu en direct — reflète tes modifications non enregistrées, pas encore visible publiquement.
+          </div>
+          <div className="max-h-[70vh] overflow-y-auto bg-white">
+            {blocks.length === 0 ? (
+              <p className="p-8 text-center text-sm text-[#888]">
+                Ajoute un bloc pour voir l&apos;aperçu.
+              </p>
+            ) : (
+              <BlockRenderer blocks={blocks} />
+            )}
+          </div>
+        </div>
+      )}
+
+      <div className={view === "preview" ? "hidden" : "space-y-4"}>
         {blocks.map((block, i) => (
           <div key={i} className="rounded-2xl border border-neutral-200 bg-white p-5">
             <div className="mb-3 flex items-center justify-between">
@@ -79,7 +115,7 @@ export default function BlockEditor({
         ))}
       </div>
 
-      <div className="mt-4">
+      <div className={view === "preview" ? "hidden" : "mt-4"}>
         {adding ? (
           <div className="flex flex-wrap gap-2 rounded-2xl border border-gold bg-[#fdfaf3] p-4">
             {(Object.keys(BLOCK_LABELS) as Block["type"][]).map((t) => (

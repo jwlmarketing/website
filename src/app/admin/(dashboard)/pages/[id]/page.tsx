@@ -17,9 +17,19 @@ export default async function EditPage({
 
   return (
     <div>
-      <h1 className="font-heading text-2xl font-semibold text-black">
-        Modifier : {page.title}
-      </h1>
+      <div className="flex items-center justify-between">
+        <h1 className="font-heading text-2xl font-semibold text-black">
+          Modifier : {page.title}
+        </h1>
+        <a
+          href={`/${page.slug}`}
+          target="_blank"
+          rel="noopener"
+          className="rounded-[5px] border-2 border-black px-5 py-2 text-sm font-medium text-black hover:bg-black hover:text-white"
+        >
+          Voir la page ↗
+        </a>
+      </div>
       <div className="mt-6 max-w-2xl">
         <PageForm
           page={{

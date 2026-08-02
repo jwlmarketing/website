@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Image from "next/image";
 import { prisma } from "@/lib/prisma";
+import { auth } from "@/lib/auth";
 
 export const dynamic = "force-dynamic";
 
@@ -27,12 +28,22 @@ export default async function BlogPostPage({
   const { slug } = await params;
   const post = await prisma.post.findUnique({ where: { slug } });
 
-  if (!post || !post.published) notFound();
+  if (!post) notFound();
+
+  if (!post.published) {
+    const session = await auth();
+    if (!session) notFound();
+  }
 
   const content = post.content as { html?: string };
 
   return (
     <div className="mx-auto max-w-[800px] px-6 py-16">
+      {!post.published && (
+        <div className="mb-6 rounded bg-amber-100 px-4 py-2 text-center text-xs font-semibold text-amber-800">
+          Aperçu — cet article n&apos;est pas encore publié.
+        </div>
+      )}
       {post.publishedAt && (
         <p className="text-xs uppercase tracking-wide text-gold">
           {new Date(post.publishedAt).toLocaleDateString("fr-FR", {
