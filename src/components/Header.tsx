@@ -43,7 +43,7 @@ export default function Header() {
         </Link>
         <span className="mx-0.5 text-[#ccc]">|</span>
 
-        <Link href="/qui-suis-je" className="px-2.5 py-1.5 text-black hover:text-[#c9a227]">
+        <Link href="/consultant-freelance-seo-aix-en-provence" className="px-2.5 py-1.5 text-black hover:text-[#c9a227]">
           Qui suis-je
         </Link>
         <span className="mx-0.5 text-[#ccc]">|</span>
@@ -120,7 +120,7 @@ export default function Header() {
           <Link href="/" onClick={() => setOpen(false)} className="block border-b border-[#f0f0f0] px-5 py-3.5 font-heading text-[15px] text-black hover:text-[#c9a227]">
             Accueil
           </Link>
-          <Link href="/qui-suis-je" onClick={() => setOpen(false)} className="block border-b border-[#f0f0f0] px-5 py-3.5 font-heading text-[15px] text-black hover:text-[#c9a227]">
+          <Link href="/consultant-freelance-seo-aix-en-provence" onClick={() => setOpen(false)} className="block border-b border-[#f0f0f0] px-5 py-3.5 font-heading text-[15px] text-black hover:text-[#c9a227]">
             Qui suis-je
           </Link>
           <span className="block border-b border-[#f0f0f0] px-5 pb-1.5 pt-3.5 font-sans text-[11px] tracking-[2px] text-[#c9a227] uppercase">

@@ -39,7 +39,7 @@ export default function Footer() {
             <Link href="/site-internet-aix-en-provence" className="mb-2 block text-[13px] text-white hover:text-[#C26A4B]">Création site web</Link>
 
             <div className="mb-[18px] mt-6 text-[15px] font-semibold text-[#D4AF37]">Navigation</div>
-            <Link href="/qui-suis-je" className="mb-2 block text-[13px] text-white hover:text-[#C26A4B]">À propos</Link>
+            <Link href="/consultant-seo-aix-en-provence" className="mb-2 block text-[13px] text-white hover:text-[#C26A4B]">À propos</Link>
             <Link href="/blog" className="mb-2 block text-[13px] text-white hover:text-[#C26A4B]">Blog</Link>
             <Link href="/contact-jwl-marketing-aix-en-provence" className="mb-2 block text-[13px] text-white hover:text-[#C26A4B]">Contact</Link>
 
@@ -51,7 +51,7 @@ export default function Footer() {
           <div>
             <div className="mb-[18px] text-[15px] font-semibold text-[#D4AF37]">Autres pages</div>
             <Link href="/trouver-client-aix-en-provence" className="mb-2 block text-[13px] text-white hover:text-[#C26A4B]">Acquisition client</Link>
-            <Link href="/formation-seo-a-aix-en-provence" className="mb-2 block text-[13px] text-white hover:text-[#C26A4B]">Formation SEO</Link>
+            <Link href="/formation-seo-aix-en-provence" className="mb-2 block text-[13px] text-white hover:text-[#C26A4B]">Formation SEO</Link>
           </div>
 
           <div>
