@@ -1,5 +1,5 @@
-import Link from "next/link";
 import { signIn } from "@/lib/auth";
+import AutoSubmitForm from "@/components/admin/AutoSubmitForm";
 
 export default async function AdminLogin({
   searchParams,
@@ -8,7 +8,8 @@ export default async function AdminLogin({
 }) {
   const { error } = await searchParams;
 
-  if (!error) {
+  async function googleSignIn() {
+    "use server";
     await signIn("google", { redirectTo: "/admin" });
   }
 
@@ -17,15 +18,24 @@ export default async function AdminLogin({
       <p className="font-heading text-2xl font-semibold text-black">
         JWL <span className="text-gold">Marketing</span> — Admin
       </p>
-      <p className="mt-4 text-sm text-red-600">
-        Accès refusé — ce compte Google n&apos;est pas autorisé.
-      </p>
-      <Link
-        href="/admin/login"
-        className="mt-6 inline-block rounded-[5px] border-2 border-gold bg-gold px-8 py-3 text-sm font-medium text-white hover:border-[#b8952f] hover:bg-[#b8952f]"
-      >
-        Réessayer avec un autre compte
-      </Link>
+
+      {error ? (
+        <>
+          <p className="mt-4 text-sm text-red-600">
+            Accès refusé — ce compte Google n&apos;est pas autorisé.
+          </p>
+          <form action={googleSignIn}>
+            <button
+              type="submit"
+              className="mt-6 inline-block rounded-[5px] border-2 border-gold bg-gold px-8 py-3 text-sm font-medium text-white hover:border-[#b8952f] hover:bg-[#b8952f]"
+            >
+              Réessayer avec un autre compte
+            </button>
+          </form>
+        </>
+      ) : (
+        <AutoSubmitForm action={googleSignIn} />
+      )}
     </div>
   );
 }
