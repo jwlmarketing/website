@@ -122,6 +122,125 @@ function BlockItem({ block }: { block: Block }) {
         </div>
       );
 
+    case "html":
+      return (
+        <div
+          className="mx-auto max-w-[1000px] px-6 py-8"
+          dangerouslySetInnerHTML={{ __html: block.html }}
+        />
+      );
+
+    case "gallery":
+      return (
+        <div className="mx-auto max-w-[1100px] px-6 py-10">
+          {block.title && (
+            <h2 className="mb-6 text-center font-heading text-2xl font-semibold text-black">
+              {block.title}
+            </h2>
+          )}
+          <div
+            className="grid gap-4"
+            style={{ gridTemplateColumns: `repeat(${block.columns}, minmax(0, 1fr))` }}
+          >
+            {block.images.map((img, i) => (
+              <Image
+                key={i}
+                src={img.url}
+                alt={img.alt || ""}
+                width={600}
+                height={600}
+                className="h-auto w-full rounded-2xl object-cover"
+              />
+            ))}
+          </div>
+        </div>
+      );
+
+    case "video":
+      return (
+        <div className="mx-auto max-w-[850px] px-6 py-10">
+          {block.title && (
+            <h2 className="mb-4 text-center font-heading text-2xl font-semibold text-black">
+              {block.title}
+            </h2>
+          )}
+          <div className="relative aspect-video w-full overflow-hidden rounded-lg">
+            <iframe
+              src={`https://www.youtube.com/embed/${block.youtubeId}`}
+              title={block.title || "Vidéo"}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="absolute inset-0 h-full w-full"
+            />
+          </div>
+        </div>
+      );
+
+    case "testimonials":
+      return (
+        <div className="mx-auto max-w-[1100px] px-6 py-10">
+          {block.title && (
+            <h2 className="mb-6 text-center font-heading text-2xl font-semibold text-black">
+              {block.title}
+            </h2>
+          )}
+          <div className="grid gap-5 sm:grid-cols-2 md:grid-cols-3">
+            {block.items.map((t, i) => (
+              <div key={i} className="rounded-2xl border border-[#ece7df] bg-white p-6 shadow-[0_8px_24px_rgba(0,0,0,0.05)]">
+                <div className="flex items-center gap-3">
+                  {t.avatarUrl && (
+                    <Image src={t.avatarUrl} alt={t.name} width={40} height={40} className="h-10 w-10 rounded-full" />
+                  )}
+                  <div>
+                    <p className="text-sm font-semibold text-black">{t.name}</p>
+                    {t.role && <p className="text-xs text-[#888]">{t.role}</p>}
+                  </div>
+                </div>
+                <p className="mt-3 text-[13px] leading-relaxed text-[#444]">{t.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      );
+
+    case "iconList":
+      return (
+        <div className="mx-auto max-w-[700px] px-6 py-8">
+          {block.title && (
+            <h2 className="mb-4 font-heading text-xl font-semibold text-black">
+              {block.title}
+            </h2>
+          )}
+          <ul className="space-y-2.5">
+            {block.items.map((item, i) => (
+              <li key={i} className="flex items-start gap-2.5 text-[15px] text-[#1a1a1a]">
+                <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-gold/[0.18] text-[11px] font-bold text-gold">
+                  ✓
+                </span>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      );
+
+    case "stats":
+      return (
+        <div className="mx-auto grid max-w-[1000px] gap-6 px-6 py-10 sm:grid-cols-2 md:grid-cols-4">
+          {block.items.map((s, i) => (
+            <div key={i} className="text-center">
+              <p className="font-heading text-3xl font-bold text-gold">{s.value}</p>
+              <p className="mt-1 text-xs text-[#555]">{s.label}</p>
+            </div>
+          ))}
+        </div>
+      );
+
+    case "spacer": {
+      const h = block.height === "small" ? "h-6" : block.height === "large" ? "h-24" : "h-12";
+      return <div className={h} />;
+    }
+
     default:
       return null;
   }

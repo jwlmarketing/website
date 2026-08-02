@@ -1,6 +1,8 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { prisma } from "@/lib/prisma";
+
+export const dynamic = "force-dynamic";
 import BlockRenderer from "@/components/BlockRenderer";
 import type { Block } from "@/lib/blocks/types";
 

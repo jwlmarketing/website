@@ -1,7 +1,16 @@
 "use client";
 
 import { useState } from "react";
-import { BLOCK_LABELS, emptyBlock, type Block, type FaqItem, type CardItem } from "@/lib/blocks/types";
+import {
+  BLOCK_LABELS,
+  emptyBlock,
+  type Block,
+  type FaqItem,
+  type CardItem,
+  type GalleryImage,
+  type TestimonialItem,
+  type StatItem,
+} from "@/lib/blocks/types";
 
 export default function BlockEditor({
   name,
@@ -293,6 +302,222 @@ function BlockFields({
         >
           + Ajouter une carte
         </button>
+      </div>
+    );
+  }
+
+  if (block.type === "html") {
+    return (
+      <div>
+        <label className={labelCls}>HTML personnalisé</label>
+        <textarea
+          rows={8}
+          className={inputCls + " font-mono"}
+          value={block.html}
+          onChange={(e) => onChange({ ...block, html: e.target.value })}
+        />
+        <p className="mt-1 text-xs text-[#999]">
+          Échappatoire pour insérer n&apos;importe quel code HTML/CSS (ex :
+          widget d&apos;un service tiers, mise en page spéciale).
+        </p>
+      </div>
+    );
+  }
+
+  if (block.type === "gallery") {
+    const galleryBlock = block;
+    const images = galleryBlock.images;
+    const updateImg = (i: number, img: GalleryImage) => {
+      onChange({ ...galleryBlock, images: images.map((it, idx) => (idx === i ? img : it)) });
+    };
+    return (
+      <div className="space-y-3">
+        <div>
+          <label className={labelCls}>Titre (optionnel)</label>
+          <input className={inputCls} value={galleryBlock.title ?? ""} onChange={(e) => onChange({ ...galleryBlock, title: e.target.value })} />
+        </div>
+        <div>
+          <label className={labelCls}>Colonnes</label>
+          <select
+            className={inputCls}
+            value={galleryBlock.columns}
+            onChange={(e) => onChange({ ...galleryBlock, columns: Number(e.target.value) as 2 | 3 | 4 })}
+          >
+            <option value={2}>2</option>
+            <option value={3}>3</option>
+            <option value={4}>4</option>
+          </select>
+        </div>
+        {images.map((img, i) => (
+          <div key={i} className="rounded border border-neutral-100 p-3">
+            <input
+              className={inputCls}
+              placeholder="URL de l'image"
+              value={img.url}
+              onChange={(e) => updateImg(i, { ...img, url: e.target.value })}
+            />
+            <input
+              className={inputCls}
+              placeholder="Texte alternatif"
+              value={img.alt ?? ""}
+              onChange={(e) => updateImg(i, { ...img, alt: e.target.value })}
+            />
+            <button
+              type="button"
+              onClick={() => onChange({ ...galleryBlock, images: images.filter((_, idx) => idx !== i) })}
+              className="mt-1 text-xs text-red-500 hover:underline"
+            >
+              Supprimer cette image
+            </button>
+          </div>
+        ))}
+        <button
+          type="button"
+          onClick={() => onChange({ ...galleryBlock, images: [...images, { url: "" }] })}
+          className="text-xs font-semibold text-gold hover:underline"
+        >
+          + Ajouter une image
+        </button>
+      </div>
+    );
+  }
+
+  if (block.type === "video") {
+    return (
+      <div className="space-y-3">
+        <div>
+          <label className={labelCls}>Titre (optionnel)</label>
+          <input className={inputCls} value={block.title ?? ""} onChange={(e) => onChange({ ...block, title: e.target.value })} />
+        </div>
+        <div>
+          <label className={labelCls}>ID vidéo YouTube (ex : -btM09DQ4zg)</label>
+          <input className={inputCls} value={block.youtubeId} onChange={(e) => onChange({ ...block, youtubeId: e.target.value })} />
+        </div>
+      </div>
+    );
+  }
+
+  if (block.type === "testimonials") {
+    const testiBlock = block;
+    const items = testiBlock.items;
+    const updateItem = (i: number, item: TestimonialItem) => {
+      onChange({ ...testiBlock, items: items.map((it, idx) => (idx === i ? item : it)) });
+    };
+    return (
+      <div className="space-y-3">
+        <div>
+          <label className={labelCls}>Titre (optionnel)</label>
+          <input className={inputCls} value={testiBlock.title ?? ""} onChange={(e) => onChange({ ...testiBlock, title: e.target.value })} />
+        </div>
+        {items.map((it, i) => (
+          <div key={i} className="rounded border border-neutral-100 p-3">
+            <input className={inputCls} placeholder="Nom" value={it.name} onChange={(e) => updateItem(i, { ...it, name: e.target.value })} />
+            <input className={inputCls} placeholder="Rôle / entreprise (optionnel)" value={it.role ?? ""} onChange={(e) => updateItem(i, { ...it, role: e.target.value })} />
+            <input className={inputCls} placeholder="Photo (URL, optionnel)" value={it.avatarUrl ?? ""} onChange={(e) => updateItem(i, { ...it, avatarUrl: e.target.value })} />
+            <textarea className={inputCls} placeholder="Témoignage" rows={3} value={it.text} onChange={(e) => updateItem(i, { ...it, text: e.target.value })} />
+            <button
+              type="button"
+              onClick={() => onChange({ ...testiBlock, items: items.filter((_, idx) => idx !== i) })}
+              className="mt-1 text-xs text-red-500 hover:underline"
+            >
+              Supprimer ce témoignage
+            </button>
+          </div>
+        ))}
+        <button
+          type="button"
+          onClick={() => onChange({ ...testiBlock, items: [...items, { name: "", text: "" }] })}
+          className="text-xs font-semibold text-gold hover:underline"
+        >
+          + Ajouter un témoignage
+        </button>
+      </div>
+    );
+  }
+
+  if (block.type === "iconList") {
+    const listBlock = block;
+    const items = listBlock.items;
+    return (
+      <div className="space-y-3">
+        <div>
+          <label className={labelCls}>Titre (optionnel)</label>
+          <input className={inputCls} value={listBlock.title ?? ""} onChange={(e) => onChange({ ...listBlock, title: e.target.value })} />
+        </div>
+        {items.map((it, i) => (
+          <div key={i} className="flex gap-2">
+            <input
+              className={inputCls}
+              value={it}
+              onChange={(e) =>
+                onChange({ ...listBlock, items: items.map((v, idx) => (idx === i ? e.target.value : v)) })
+              }
+            />
+            <button
+              type="button"
+              onClick={() => onChange({ ...listBlock, items: items.filter((_, idx) => idx !== i) })}
+              className="shrink-0 text-xs text-red-500 hover:underline"
+            >
+              Suppr.
+            </button>
+          </div>
+        ))}
+        <button
+          type="button"
+          onClick={() => onChange({ ...listBlock, items: [...items, ""] })}
+          className="text-xs font-semibold text-gold hover:underline"
+        >
+          + Ajouter une ligne
+        </button>
+      </div>
+    );
+  }
+
+  if (block.type === "stats") {
+    const statsBlock = block;
+    const items = statsBlock.items;
+    const updateItem = (i: number, item: StatItem) => {
+      onChange({ ...statsBlock, items: items.map((it, idx) => (idx === i ? item : it)) });
+    };
+    return (
+      <div className="space-y-3">
+        {items.map((it, i) => (
+          <div key={i} className="flex gap-2">
+            <input className={inputCls} placeholder="Valeur (ex: 3 468)" value={it.value} onChange={(e) => updateItem(i, { ...it, value: e.target.value })} />
+            <input className={inputCls} placeholder="Libellé" value={it.label} onChange={(e) => updateItem(i, { ...it, label: e.target.value })} />
+            <button
+              type="button"
+              onClick={() => onChange({ ...statsBlock, items: items.filter((_, idx) => idx !== i) })}
+              className="shrink-0 text-xs text-red-500 hover:underline"
+            >
+              Suppr.
+            </button>
+          </div>
+        ))}
+        <button
+          type="button"
+          onClick={() => onChange({ ...statsBlock, items: [...items, { value: "", label: "" }] })}
+          className="text-xs font-semibold text-gold hover:underline"
+        >
+          + Ajouter un chiffre
+        </button>
+      </div>
+    );
+  }
+
+  if (block.type === "spacer") {
+    return (
+      <div>
+        <label className={labelCls}>Hauteur</label>
+        <select
+          className={inputCls}
+          value={block.height}
+          onChange={(e) => onChange({ ...block, height: e.target.value as "small" | "medium" | "large" })}
+        >
+          <option value="small">Petit</option>
+          <option value="medium">Moyen</option>
+          <option value="large">Grand</option>
+        </select>
       </div>
     );
   }

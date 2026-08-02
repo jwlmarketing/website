@@ -46,6 +46,49 @@ export type CardsBlock = {
   items: CardItem[];
 };
 
+export type HtmlBlock = {
+  type: "html";
+  html: string;
+};
+
+export type GalleryImage = { url: string; alt?: string };
+export type GalleryBlock = {
+  type: "gallery";
+  title?: string;
+  images: GalleryImage[];
+  columns: 2 | 3 | 4;
+};
+
+export type VideoBlock = {
+  type: "video";
+  youtubeId: string;
+  title?: string;
+};
+
+export type TestimonialItem = { name: string; text: string; role?: string; avatarUrl?: string };
+export type TestimonialsBlock = {
+  type: "testimonials";
+  title?: string;
+  items: TestimonialItem[];
+};
+
+export type IconListBlock = {
+  type: "iconList";
+  title?: string;
+  items: string[];
+};
+
+export type StatItem = { value: string; label: string };
+export type StatsBlock = {
+  type: "stats";
+  items: StatItem[];
+};
+
+export type SpacerBlock = {
+  type: "spacer";
+  height: "small" | "medium" | "large";
+};
+
 export type Block =
   | HeroBlock
   | HeadingBlock
@@ -53,7 +96,14 @@ export type Block =
   | ImageBlock
   | CtaBlock
   | FaqBlock
-  | CardsBlock;
+  | CardsBlock
+  | HtmlBlock
+  | GalleryBlock
+  | VideoBlock
+  | TestimonialsBlock
+  | IconListBlock
+  | StatsBlock
+  | SpacerBlock;
 
 export const BLOCK_LABELS: Record<Block["type"], string> = {
   hero: "En-tête (Hero)",
@@ -63,6 +113,13 @@ export const BLOCK_LABELS: Record<Block["type"], string> = {
   cta: "Bouton d'appel à l'action",
   faq: "FAQ",
   cards: "Cartes / colonnes",
+  html: "HTML personnalisé",
+  gallery: "Galerie photo",
+  video: "Vidéo YouTube",
+  testimonials: "Témoignages / avis",
+  iconList: "Liste à coche",
+  stats: "Chiffres clés",
+  spacer: "Espacement",
 };
 
 export function emptyBlock(type: Block["type"]): Block {
@@ -81,5 +138,19 @@ export function emptyBlock(type: Block["type"]): Block {
       return { type: "faq", items: [{ q: "", a: "" }] };
     case "cards":
       return { type: "cards", items: [{ title: "", text: "" }] };
+    case "html":
+      return { type: "html", html: "" };
+    case "gallery":
+      return { type: "gallery", images: [{ url: "" }], columns: 3 };
+    case "video":
+      return { type: "video", youtubeId: "" };
+    case "testimonials":
+      return { type: "testimonials", items: [{ name: "", text: "" }] };
+    case "iconList":
+      return { type: "iconList", items: [""] };
+    case "stats":
+      return { type: "stats", items: [{ value: "", label: "" }] };
+    case "spacer":
+      return { type: "spacer", height: "medium" };
   }
 }

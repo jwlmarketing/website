@@ -4,6 +4,8 @@ import type { Metadata } from "next";
 import { prisma } from "@/lib/prisma";
 import SectionHeading from "@/components/SectionHeading";
 
+export const dynamic = "force-dynamic";
+
 export const metadata: Metadata = {
   title: "Blog | JWL Marketing",
   description: "Conseils marketing digital, SEO et visibilité locale par JWL Marketing.",
