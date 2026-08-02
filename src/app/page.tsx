@@ -227,6 +227,17 @@ export default function Home() {
           Un site web qui travaille pour ton entreprise 24h/24 afin de
           générer de nouveaux clients
         </p>
+
+        <div className="relative mx-auto mt-8 aspect-video w-full max-w-[846px] overflow-hidden rounded-lg">
+          <iframe
+            src="https://www.youtube.com/embed/-btM09DQ4zg"
+            title="JWL Marketing"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            className="absolute inset-0 h-full w-full"
+          />
+        </div>
+
         <div className="mt-8 space-y-5 text-left text-[15px] leading-[25.5px] text-[#1a1a1a]">
           <p className="font-heading text-xl font-semibold text-black">
             Le plus difficile, ce n&apos;est pas d&apos;être trouvé. C&apos;est
