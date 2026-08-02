@@ -340,70 +340,83 @@ export default function Home() {
       </section>
 
       {/* Ma promesse — section complète manquante, ajoutée après comparaison directe avec le fichier HTML fourni */}
-      <section className="px-6 py-16">
-        <div className="mx-auto grid max-w-[1100px] items-center gap-10 md:grid-cols-2">
-          <div className="order-2 md:order-1">
-            <SectionHeading
-              kicker="Ma promesse"
-              title="Je fais de ton site web un outil qui vend pour toi."
-              subtext="Sans stratégie, ton site reste invisible. Transforme ta visibilité en véritable levier de clients."
-            />
-            <div className="space-y-5 text-left text-[15px] leading-[25.5px] text-[#1a1a1a]">
-              <p>
-                Le problème peut venir de ton positionnement, mais aussi de la
-                manière dont tu communiques dessus. En effet, ton offre peut
-                être pertinente, tes tarifs cohérents, tes services de
-                qualité, et pourtant, tes clients ne te trouvent pas.
-                Aujourd&apos;hui, tout passe par Google. Quand un prospect a
-                un besoin, il cherche, compare et choisit rapidement. Si tu
-                n&apos;apparais pas au bon moment, tu laisses la place à tes
-                concurrents. Et même avec un site existant, sans les bons
-                outils, tu navigues à l&apos;aveugle. Tu ne sais pas combien
-                de personnes visitent ton site, ce qu&apos;elles regardent ni
-                pourquoi elles ne te contactent pas.
-              </p>
-              <p>
-                C&apos;est exactement là que j&apos;interviens.{" "}
-                <strong>
-                  Un consultant SEO, c&apos;est faire appel à une personne qui
-                  parle Google, qui comprend sa technique et qui, à travers le
-                  code et les règles de Google, adapte ton site pour
-                  qu&apos;il soit compris.
-                </strong>{" "}
-                Mais ne t&apos;y trompe pas : les développeurs développent un
-                site web avec leur langage.{" "}
-                <span className="text-gold">
-                  Le consultant SEO crée, pilote ou revoit l&apos;architecture
-                  et l&apos;écriture du site avec le langage de Google.
-                </span>{" "}
-                Ce sont deux langues différentes.
-              </p>
-              <p>
-                Selon ta situation, je te propose soit la création
-                d&apos;un site web optimisé dès le départ, soit une refonte
-                complète de ton site existant, en revoyant toute
-                l&apos;ossature pour que Google comprenne ton activité et te
-                positionne face à tes prospects.
-              </p>
-            </div>
-          </div>
+      <section className="px-6 py-16 text-center">
+        <a
+          href="/site-internet-aix-en-provence"
+          className="inline-block rounded-sm bg-gold px-[22px] py-3 text-base text-white"
+        >
+          Créer ton site Web SEO
+        </a>
+
+        <SectionHeading
+          kicker="Ma promesse"
+          title="Je fais de ton site web"
+          accent="un outil qui vend pour toi."
+          subtext="Sans stratégie, ton site reste invisible. Transforme ta visibilité en véritable levier de clients."
+        />
+
+        <div className="mx-auto grid max-w-[1100px] items-center gap-8 text-left md:grid-cols-[260px_1fr]">
           <Image
             src="/images/consultant-marketing-digital.webp"
             alt="strategie-marketing-digital-aix"
             width={1200}
             height={1400}
-            className="order-1 h-auto w-full rounded-2xl object-cover md:order-2"
+            className="mx-auto h-auto w-full max-w-[260px] rounded-2xl object-cover"
           />
+          <div className="rounded border-[1.5px] border-gold bg-white p-10">
+            <p className="mb-[22px] text-[15px] leading-[1.7] text-[#1a1a1a]">
+              Le problème peut venir de ton positionnement, mais aussi de la
+              manière dont tu communiques dessus. En effet, ton offre peut
+              être pertinente, tes tarifs cohérents, tes services de qualité,
+              et pourtant, tes clients ne te trouvent pas. Aujourd&apos;hui,
+              tout passe par Google.{" "}
+              <strong>
+                Quand un prospect a un besoin, il cherche, compare et choisit
+                rapidement.
+              </strong>{" "}
+              Si tu n&apos;apparais pas au bon moment, tu laisses la place à
+              tes concurrents. Et même avec un site existant, sans les bons
+              outils, tu navigues à l&apos;aveugle.{" "}
+              <strong className="text-gold">
+                Tu ne sais pas combien de personnes visitent ton site, ce
+                qu&apos;elles regardent ni pourquoi elles ne te contactent
+                pas.
+              </strong>
+            </p>
+            <div className="mb-[22px] h-px bg-[#e6ddd2]" />
+            <p className="mb-[22px] text-[15px] leading-[1.7] text-[#1a1a1a]">
+              C&apos;est exactement là que j&apos;interviens.{" "}
+              <strong>
+                Un consultant SEO, c&apos;est faire appel à une personne qui
+                parle Google, qui comprend sa technique et qui, à travers le
+                code et les règles de Google, adapte ton site pour qu&apos;il
+                soit compris.
+              </strong>{" "}
+              Mais ne t&apos;y trompe pas : les développeurs développent un
+              site web avec leur langage.{" "}
+              <strong className="text-gold">
+                Le consultant SEO crée, pilote ou revoit l&apos;architecture
+                et l&apos;écriture du site avec le langage de Google.
+              </strong>{" "}
+              Ce sont deux langues différentes.
+            </p>
+            <p className="text-[15px] leading-[1.7] text-[#1a1a1a]">
+              Selon ta situation, je te propose soit la création d&apos;un
+              site web optimisé dès le départ, soit une refonte complète de
+              ton site existant, en revoyant toute l&apos;ossature pour que
+              Google comprenne ton activité et te positionne face à tes
+              prospects.
+            </p>
+          </div>
         </div>
       </section>
 
       {/* Analyse — section complète manquante, ajoutée après comparaison directe. Boîte encadrée avec gras doré + divider, comme le pattern "positionnement" */}
       <section className="bg-neutral-50 px-6 py-16 text-center">
-        <SectionHeading
-          kicker="Analyse"
-          title="J'identifie les intentions de recherches sur"
-          accent="Google"
-        />
+        <SectionHeading kicker="Analyse" title="J'identifie les intentions de recherches sur">
+          {" "}
+          <GoogleColors />
+        </SectionHeading>
         <div className="mx-auto grid max-w-[1100px] items-center gap-10 text-left md:grid-cols-2">
           <div className="rounded border-[1.5px] border-gold bg-white p-10">
             <p className="mb-[22px] text-[15px] leading-[1.7] text-[#1a1a1a]">
