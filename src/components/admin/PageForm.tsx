@@ -1,6 +1,10 @@
 "use client";
 
 import { useState } from "react";
+import BlockEditor from "@/components/admin/BlockEditor";
+import type { Block } from "@/lib/blocks/types";
+
+type PageGroupOption = { id: string; name: string };
 
 type PageData = {
   id?: string;
@@ -8,15 +12,18 @@ type PageData = {
   title?: string;
   metaTitle?: string | null;
   metaDesc?: string | null;
-  content?: { html?: string };
+  content?: { blocks?: Block[] };
   published?: boolean;
+  groupId?: string | null;
 };
 
 export default function PageForm({
   page,
+  groups,
   action,
 }: {
   page?: PageData;
+  groups: PageGroupOption[];
   action: (formData: FormData) => void;
 }) {
   const [metaTitle, setMetaTitle] = useState(page?.metaTitle ?? "");
@@ -49,15 +56,26 @@ export default function PageForm({
       </div>
 
       <div>
-        <label className="block text-sm font-semibold text-black">
-          Contenu (HTML)
+        <label className="block text-sm font-semibold text-black">Groupe</label>
+        <select
+          name="groupId"
+          defaultValue={page?.groupId ?? ""}
+          className="mt-1 w-full rounded border border-[#ddd] px-4 py-2.5 text-sm outline-none focus:border-gold"
+        >
+          <option value="">Aucun groupe</option>
+          {groups.map((g) => (
+            <option key={g.id} value={g.id}>
+              {g.name}
+            </option>
+          ))}
+        </select>
+      </div>
+
+      <div>
+        <label className="mb-2 block text-sm font-semibold text-black">
+          Contenu de la page
         </label>
-        <textarea
-          name="content"
-          defaultValue={page?.content?.html}
-          rows={14}
-          className="mt-1 w-full rounded border border-[#ddd] px-4 py-2.5 font-mono text-xs outline-none focus:border-gold"
-        />
+        <BlockEditor name="blocks" initialBlocks={page?.content?.blocks ?? []} />
       </div>
 
       <div className="rounded-2xl border border-gold bg-[#fdfaf3] p-5">

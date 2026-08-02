@@ -1,6 +1,8 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { prisma } from "@/lib/prisma";
+import BlockRenderer from "@/components/BlockRenderer";
+import type { Block } from "@/lib/blocks/types";
 
 export async function generateMetadata({
   params,
@@ -26,17 +28,23 @@ export default async function DynamicPage({
 
   if (!page || !page.published) notFound();
 
-  const content = page.content as { html?: string };
+  const content = page.content as { blocks?: Block[] };
+  const blocks = content?.blocks ?? [];
 
   return (
-    <div className="mx-auto max-w-[800px] px-6 py-16">
-      <h1 className="font-heading text-3xl font-semibold text-black">
-        {page.title}
-      </h1>
-      <div
-        className="prose-legal mt-8 text-[15px] leading-[25.5px] text-[#1a1a1a] [&_h2]:mt-8 [&_h2]:font-heading [&_h2]:text-xl [&_h2]:font-semibold [&_a]:text-gold"
-        dangerouslySetInnerHTML={{ __html: content?.html || "" }}
-      />
+    <div>
+      {blocks.length === 0 ? (
+        <div className="mx-auto max-w-[800px] px-6 py-16">
+          <h1 className="font-heading text-3xl font-semibold text-black">
+            {page.title}
+          </h1>
+          <p className="mt-4 text-sm text-[#888]">
+            Cette page n&apos;a pas encore de contenu.
+          </p>
+        </div>
+      ) : (
+        <BlockRenderer blocks={blocks} />
+      )}
     </div>
   );
 }

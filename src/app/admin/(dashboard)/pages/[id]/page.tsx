@@ -9,7 +9,10 @@ export default async function EditPage({
   params: Promise<{ id: string }>;
 }) {
   const { id } = await params;
-  const page = await prisma.page.findUnique({ where: { id } });
+  const [page, groups] = await Promise.all([
+    prisma.page.findUnique({ where: { id } }),
+    prisma.pageGroup.findMany({ orderBy: { order: "asc" } }),
+  ]);
   if (!page) notFound();
 
   return (
@@ -21,8 +24,9 @@ export default async function EditPage({
         <PageForm
           page={{
             ...page,
-            content: page.content as { html?: string },
+            content: page.content as { blocks?: import("@/lib/blocks/types").Block[] },
           }}
+          groups={groups}
           action={savePage}
         />
       </div>
