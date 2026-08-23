@@ -264,7 +264,7 @@ export default function Home() {
       </div>
 
       {/* Hero */}
-      <div className="flex w-full flex-col items-center justify-between gap-10 bg-white px-[5%] py-[60px] md:flex-row">
+      <div className="flex w-full flex-col items-start justify-between gap-10 bg-white px-[5%] pb-[60px] pt-6 md:flex-row">
         <div className="max-w-[600px] flex-1">
           <h1 className="m-0 mb-1 mt-2.5 font-heading text-[48px] font-semibold leading-[1.2] text-black">
             Un site Web qui attire de{" "}
