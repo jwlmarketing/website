@@ -96,7 +96,7 @@ export default function Footer() {
             </div>
 
             <div className="mt-2.5">
-              <a href="https://g.page/r/CYYWyNlb-ewxEBM/review" target="_blank" rel="noopener">
+              <a href="http://api.jwl-marketing.fr/redirects/gmb/jwl.html" target="_blank" rel="noopener">
                 <Image src="/images/qr-avis-google.png" alt="Avis Google" width={110} height={110} className="w-[110px] rounded-md" />
               </a>
               <div className="mt-1 text-xs text-[#aaa]">Laisser un avis Google</div>
