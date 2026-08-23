@@ -247,9 +247,9 @@ export default function Home() {
           <Image
             src="/images/logo-jwl-marketing.png"
             alt="JWL Marketing Aix-en-Provence"
-            width={600}
-            height={300}
-            className="h-10 w-auto"
+            width={966}
+            height={187}
+            className="h-[41px] w-auto"
           />
         </Link>
         <a href="https://intranet.jwlmarketing.fr/" aria-label="Connexion espace client">
@@ -348,8 +348,8 @@ export default function Home() {
           <Image
             src="/images/logo-jwl-marketing.png"
             alt="JWL Marketing"
-            width={600}
-            height={300}
+            width={966}
+            height={187}
             className="mx-auto h-auto w-full max-w-[500px] rounded-xl bg-white p-8"
           />
         </div>
