@@ -249,7 +249,7 @@ export default function Home() {
             alt="JWL Marketing Aix-en-Provence"
             width={966}
             height={187}
-            className="h-[41px] w-auto"
+            className="h-[30px] w-auto"
           />
         </Link>
         <a href="https://intranet.jwlmarketing.fr/" aria-label="Connexion espace client">
