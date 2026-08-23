@@ -241,6 +241,28 @@ function OfferCard({
 export default function Home() {
   return (
     <div>
+      {/* Logo + compte, au-dessus du hero */}
+      <div className="flex w-full items-center justify-between px-[5%] pt-6">
+        <Link href="/">
+          <Image
+            src="/images/favicon-bsn.png"
+            alt="JWL Marketing Aix-en-Provence"
+            width={40}
+            height={40}
+            className="h-10 w-auto"
+          />
+        </Link>
+        <a href="https://intranet.jwlmarketing.fr/" aria-label="Connexion espace client">
+          <Image
+            src="/images/seco.png"
+            alt="Connexion espace client"
+            width={28}
+            height={28}
+            className="h-7 w-7"
+          />
+        </a>
+      </div>
+
       {/* Hero */}
       <div className="flex w-full flex-col items-center justify-between gap-10 bg-white px-[5%] py-[60px] md:flex-row">
         <div className="max-w-[600px] flex-1">
