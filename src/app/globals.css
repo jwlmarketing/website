@@ -1,15 +1,12 @@
 @import "tailwindcss";
-@import url("https://api.fontshare.com/v2/css?f[]=switzer@400,500,600,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
   --color-gold: #c9a84c;
   --font-heading-stack: "Georgia Pro", Georgia, "Times New Roman", serif;
-  /* Neue Montreal is a paid font we don't have licensed files for — Switzer
-     (Fontshare, free) is the closest geometric-grotesk substitute until the
-     real font files are provided. */
-  --font-body-stack: "Neue Montreal", Switzer, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  --font-body-stack: "Inter", -apple-system, "Helvetica Neue", Arial, sans-serif;
 }
 
 @theme inline {
