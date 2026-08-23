@@ -344,14 +344,16 @@ export default function Home() {
 
       {/* Et si ton prochain client... */}
       <section className="flex flex-col items-center justify-between gap-10 px-[5%] py-20 md:flex-row">
-        <div className="flex-1 rounded-[40px] bg-black p-10">
-          <Image
-            src="/images/logo-jwl-marketing.png"
-            alt="JWL Marketing"
-            width={966}
-            height={187}
-            className="mx-auto h-auto w-full max-w-[500px] rounded-xl bg-white p-8"
-          />
+        <div className="flex-1 overflow-hidden rounded-[40px] bg-black p-10">
+          <div className="mx-auto aspect-video w-full max-w-[500px] overflow-hidden rounded-xl">
+            <iframe
+              src="https://www.youtube.com/embed/-btM09DQ4zg"
+              title="JWL Marketing"
+              className="h-full w-full"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
         </div>
         <div className="flex-1 text-center md:text-left">
           <h2 className="font-heading text-[40px] font-medium leading-[1.15] text-black">
