@@ -245,10 +245,10 @@ export default function Home() {
       <div className="flex w-full items-center justify-between px-[5%] pt-0">
         <Link href="/">
           <Image
-            src="/images/favicon-bsn.png"
+            src="/images/logo-jwl-marketing.png"
             alt="JWL Marketing Aix-en-Provence"
-            width={40}
-            height={40}
+            width={600}
+            height={300}
             className="h-10 w-auto"
           />
         </Link>
