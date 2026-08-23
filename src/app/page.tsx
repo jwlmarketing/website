@@ -324,7 +324,7 @@ export default function Home() {
       <section className="flex flex-col items-center justify-between gap-10 px-[5%] py-20 md:flex-row">
         <div className="flex-1 rounded-[40px] bg-black p-10">
           <Image
-            src="/images/logo-jwl-marketing.webp"
+            src="/images/logo-jwl-marketing.png"
             alt="JWL Marketing"
             width={600}
             height={300}
