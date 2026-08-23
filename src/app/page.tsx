@@ -392,7 +392,7 @@ export default function Home() {
       {/* Pourquoi les entreprises choisissent JWL Marketing */}
       <section className="py-16 text-center">
         <SectionHeading kicker="Pourquoi les entreprises choisissent" title="JWL MARKETING" />
-        <div className="mx-auto flex max-w-[1200px] flex-col items-stretch gap-0 overflow-hidden rounded-3xl bg-black md:flex-row">
+        <div className="mx-auto flex max-w-[1200px] flex-col items-stretch gap-0 overflow-hidden rounded-3xl bg-black md:h-[560px] md:flex-row">
           <div className="flex flex-1 flex-col justify-center gap-8 p-10 text-left text-white">
             {WHY_US.map((item) => (
               <div key={item.title} className="border-b border-white/15 pb-8 last:border-0 last:pb-0">
