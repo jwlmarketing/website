@@ -316,14 +316,14 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="relative flex min-w-0 flex-[1.6_1_0%] items-start justify-end">
+        <div className="relative flex min-w-0 flex-[1.4_1_0%] items-start justify-end">
           <Image
             src="/images/hero-jodie-cartoon.png"
             alt="Jodie Lapaillerie - JWL Marketing"
             width={760}
             height={623}
             priority
-            className="h-auto w-full max-w-full object-contain"
+            className="h-auto max-h-[70vh] w-full max-w-full object-contain"
           />
           <HeroBadge />
         </div>
