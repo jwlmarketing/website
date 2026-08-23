@@ -323,7 +323,7 @@ export default function Home() {
             width={760}
             height={623}
             priority
-            className="h-auto w-[90%] object-contain"
+            className="h-auto w-[90%] -translate-y-[45px] object-contain"
           />
           <HeroBadge />
         </div>
