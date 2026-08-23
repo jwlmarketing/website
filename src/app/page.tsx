@@ -55,10 +55,12 @@ const WHY_US = [
   {
     title: "1 seule interlocutrice",
     text: "En tant que consultante SEO et développeuse commerciale indépendante, je pilote personnellement chaque mission afin de garantir un accompagnement réactif, cohérent et transparent.",
+    icon: "phone" as const,
   },
   {
     title: "Des échanges rapides",
     text: "Profite d'un contact direct pour poser tes questions, suivre ton projet et obtenir des réponses rapides lorsque tu en as besoin.",
+    icon: "whatsapp" as const,
   },
 ];
 
@@ -404,6 +406,15 @@ export default function Home() {
             {WHY_US.map((item) => (
               <div key={item.title} className="border-b border-white/15 pb-8 last:border-0 last:pb-0">
                 <h3 className="text-center font-heading text-2xl font-bold">{item.title}</h3>
+                {item.icon === "phone" ? (
+                  <svg viewBox="0 0 24 24" className="mx-auto mt-3 h-9 w-9 fill-gold">
+                    <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.36 11.36 0 003.57.57 1 1 0 011 1V20a1 1 0 01-1 1C10.61 21 3 13.39 3 4a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.57 1 1 0 01-.25 1.01l-2.2 2.21z" />
+                  </svg>
+                ) : (
+                  <svg viewBox="0 0 24 24" className="mx-auto mt-3 h-9 w-9 fill-[#25D366]">
+                    <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.29-1.39a9.9 9.9 0 004.75 1.21h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2zm5.8 14.02c-.24.68-1.4 1.3-1.93 1.34-.5.04-1 .25-3.34-.7-2.82-1.13-4.63-3.99-4.77-4.18-.14-.19-1.14-1.52-1.14-2.9 0-1.38.72-2.06.98-2.34.26-.28.57-.35.76-.35.19 0 .38 0 .55.01.18.01.42-.07.65.5.24.58.82 2 .89 2.15.07.15.11.32.02.51-.09.19-.14.31-.27.48-.14.17-.29.37-.41.5-.14.14-.28.29-.12.57.16.28.72 1.19 1.55 1.92 1.06.95 1.96 1.24 2.24 1.38.28.14.44.12.6-.07.16-.19.68-.79.86-1.06.18-.27.36-.22.6-.13.24.09 1.53.72 1.79.85.26.13.43.19.5.3.07.12.07.68-.17 1.36z" />
+                  </svg>
+                )}
                 <p className="mt-4 text-center text-white/85">{item.text}</p>
               </div>
             ))}
