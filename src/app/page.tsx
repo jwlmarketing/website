@@ -325,26 +325,6 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="border-y border-neutral-100 bg-black py-8">
-        <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-center gap-10 px-6">
-          {[
-            { src: "/images/logo-inovea.png", alt: "Groupe INOVEA" },
-            { src: "/images/logo-webdifference.png", alt: "Web Difference - Tristan" },
-            { src: "/images/logo-entrepreneurielles.png", alt: "Entrepreneuri'elles" },
-            { src: "/images/logo-dynamitz.png", alt: "Nathan Dynamitz" },
-          ].map((logo) => (
-            <Image
-              key={logo.src}
-              src={logo.src}
-              alt={logo.alt}
-              width={140}
-              height={65}
-              className="h-12 w-auto object-contain opacity-90"
-            />
-          ))}
-        </div>
-      </div>
-
       {/* Et si ton prochain client... */}
       <section className="flex flex-col items-center justify-between gap-10 px-[5%] py-20 md:flex-row">
         <div className="flex-1 overflow-hidden rounded-[40px] bg-black p-10">
