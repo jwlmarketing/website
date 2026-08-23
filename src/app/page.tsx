@@ -277,7 +277,7 @@ export default function Home() {
             <span className="text-[#555]">91 avis Google</span>
             <span className="text-[#999]">·</span>
             <a
-              href="https://www.google.com/search?q=jwl+marketing+avis"
+              href="http://api.jwl-marketing.fr/redirects/gmb/jwl.html"
               target="_blank"
               rel="noopener"
               className="font-semibold text-[#1a2b6b] underline"
