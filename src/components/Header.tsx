@@ -17,15 +17,17 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 z-[999] w-full transition-[padding] duration-300 ${
-        condensed ? "bg-transparent px-4 py-3" : "border-b border-[#eee] bg-white px-0 py-0"
+      className={`fixed top-0 left-0 z-[999] w-full border-b transition-[padding,background-color,border-color] duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] ${
+        condensed
+          ? "border-transparent bg-transparent px-4 py-3"
+          : "border-[#eee] bg-white px-0 py-0"
       }`}
     >
       <div
-        className={`relative mx-auto flex w-full items-center gap-4 rounded-full border border-transparent px-5 py-3 transition-all duration-300 ${
+        className={`relative mx-auto flex w-full max-w-[1180px] items-center gap-4 rounded-full border px-5 py-3 transition-[max-width,padding,background-color,border-color,box-shadow] duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] ${
           condensed
             ? "max-w-[980px] border-[#eee] bg-white/95 shadow-[0_10px_30px_rgba(0,0,0,0.12)] backdrop-blur"
-            : "max-w-none bg-transparent shadow-none"
+            : "border-transparent bg-transparent shadow-none"
         }`}
       >
       <div className="mr-5 flex shrink-0 items-center">
