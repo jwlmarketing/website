@@ -25,7 +25,7 @@ const dancingScript = Dancing_Script({
 export const metadata: Metadata = {
   title: "JWL Marketing | Marketing Digital à Aix-en-Provence",
   description:
-    "Résultats mesurables, Aix-en-Provence. Transforme ta présence digitale en commercial terrain 24h/24, sur Google.",
+    "Marre des sites invisibles ? Découvre mon univers axé sur l'acquisition client, le SEO et l'IA. À Aix-en-Provence et partout en France.",
 };
 
 export default function RootLayout({

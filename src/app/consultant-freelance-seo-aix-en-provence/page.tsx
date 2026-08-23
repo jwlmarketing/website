@@ -10,7 +10,7 @@ import { QUI_SUIS_JE_FAQ } from "@/data/quiSuisJeFaq";
 export const metadata: Metadata = {
   title: "Consultant Freelance SEO Aix-en-Provence | JWL Marketing",
   description:
-    "Jodie, consultante SEO freelance à Aix-en-Provence. Une stratégie freelance, portée par la qualité d'une agence à taille humaine.",
+    "Consultant SEO à Aix-en-Provence. 10 ans d'expertise commerciale et des méthodes américaines pour propulser ton acquisition client.",
 };
 
 const VALUES = [
