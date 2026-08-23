@@ -343,9 +343,9 @@ export default function Home() {
           </div>
         </div>
         <div className="flex-1 text-center md:text-left">
-          <h2 className="font-heading text-[40px] font-medium leading-[1.15] text-black">
-            Et si <span className="text-[#c9846f]">ton prochain client</span>{" "}
-            te trouvait grâce à <GoogleColors />
+          <strong><h2 className="font-heading text-[40px] font-medium leading-[1.15] text-black">
+            Et si <span className="text-[#c9846f]">ton</span> prochain client</span>{" "}
+            te trouvait grâce à </span> <GoogleColors /> </strong>
           </h2>
         </div>
       </section>
