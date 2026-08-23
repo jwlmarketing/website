@@ -242,7 +242,7 @@ export default function Home() {
   return (
     <div>
       {/* Logo + compte, au-dessus du hero */}
-      <div className="flex w-full items-center justify-between px-[5%] pt-6">
+      <div className="flex w-full items-center justify-between px-[5%] pt-0">
         <Link href="/">
           <Image
             src="/images/favicon-bsn.png"
