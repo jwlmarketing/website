@@ -1,14 +1,33 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const [condensed, setCondensed] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setCondensed(window.scrollY > 40);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
-    <header className="fixed top-0 left-0 z-[999] flex w-full items-center border-b border-[#eee] bg-white px-5 py-3">
+    <header
+      className={`fixed top-0 left-0 z-[999] w-full transition-[padding] duration-300 ${
+        condensed ? "bg-transparent px-4 py-3" : "border-b border-[#eee] bg-white px-0 py-0"
+      }`}
+    >
+      <div
+        className={`relative mx-auto flex w-full items-center gap-4 rounded-full border border-transparent px-5 py-3 transition-all duration-300 ${
+          condensed
+            ? "max-w-[980px] border-[#eee] bg-white/95 shadow-[0_10px_30px_rgba(0,0,0,0.12)] backdrop-blur"
+            : "max-w-none bg-transparent shadow-none"
+        }`}
+      >
       <div className="mr-5 flex shrink-0 items-center">
         <Link href="/">
           <Image
@@ -155,6 +174,7 @@ export default function Header() {
           </a>
         </div>
       )}
+      </div>
     </header>
   );
 }
