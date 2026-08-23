@@ -316,7 +316,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="relative flex flex-[1.2_1_0%] items-start justify-end">
+        <div className="relative flex flex-[1.6_1_0%] items-start justify-end">
           <Image
             src="/images/hero-jodie-cartoon.png"
             alt="Jodie Lapaillerie - JWL Marketing"
