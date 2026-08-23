@@ -215,6 +215,22 @@ export default function QuiSuisJe() {
         </div>
       </section>
 
+      {/* Zone d'intervention */}
+      <section className="mx-auto max-w-[900px] px-6 py-16">
+        <SectionHeading
+          kicker="Où j'interviens"
+          title="Sur place ou"
+          accent="à distance."
+        />
+        <Image
+          src="/images/carte-zone-intervention-paca.png"
+          alt="Zone d'intervention JWL Marketing — PACA et toute la France"
+          width={2000}
+          height={1414}
+          className="mx-auto h-auto w-full max-w-[700px]"
+        />
+      </section>
+
       {/* Valeurs */}
       <section className="bg-black px-6 py-16 text-center">
         <p className="font-heading text-lg font-semibold text-white">

@@ -458,6 +458,15 @@ export default function Home() {
           }
         />
 
+        <video
+          src="/videos/visibilite-graphique.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="mx-auto mb-4 w-full max-w-[500px]"
+        />
+
         <SectionHeading
           title="Choisis l'accompagnement"
           accent="adapté a tes objectifs"
