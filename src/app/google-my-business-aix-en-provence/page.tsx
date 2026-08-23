@@ -7,9 +7,9 @@ import GmbAuditQuiz from "@/components/GmbAuditQuiz";
 import { GMB_FAQ } from "@/data/gmbFaq";
 
 export const metadata: Metadata = {
-  title: "Fiche Google My Business Aix-en-Provence - Maps | JWL Marketing",
+  title: "Optimisation Fiche Google Business Profile | JWL MARKETING",
   description:
-    "Domine Google dans ta ville grâce à Google My Business Profile. Attire les clients qui cherchent près de chez vous.",
+    "Ta fiche Google my business est à l'abandon ? Reprends le contrôle de ta visibilité locale. Avec moi et partout en France.",
 };
 
 const STATS = [

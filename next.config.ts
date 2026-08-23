@@ -5,7 +5,7 @@ const nextConfig: NextConfig = {
     return [
       {
         source: "/seo-aix-en-provence",
-        destination: "/google-my-business-aix-en-provence",
+        destination: "/audit-seo-aix-en-provence",
         permanent: true,
       },
       {
@@ -16,6 +16,11 @@ const nextConfig: NextConfig = {
       {
         source: "/consultant-seo-aix-en-provence",
         destination: "/consultant-freelance-seo-aix-en-provence",
+        permanent: true,
+      },
+      {
+        source: "/consultant-freelance-seo-bordeaux-jwl-marketing-2",
+        destination: "/consultant-seo-bordeaux-jwl-marketing",
         permanent: true,
       },
     ];

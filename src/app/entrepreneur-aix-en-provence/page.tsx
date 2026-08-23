@@ -8,7 +8,7 @@ import { ENTREPRENEUR_FAQ } from "@/data/entrepreneurFaq";
 export const metadata: Metadata = {
   title: "Futur entrepreneur : tu anticipes tes dépenses, mais pas ton site web | JWL Marketing",
   description:
-    "Entrepreneur individuel : construis ta visibilité Google dès le lancement de ton activité.",
+    "Tu as pensé au matériel, aux charges, à l'URSSAF. Mais ta présence digitale ? Chaque mois sans site optimisé, ce sont des clients qui partent chez tes concurrents.",
 };
 
 const STAGES = [

@@ -6,9 +6,9 @@ import FaqAccordion from "@/components/FaqAccordion";
 import { AUDIT_SEO_FAQ } from "@/data/auditSeoFaq";
 
 export const metadata: Metadata = {
-  title: "Audit SEO Aix-en-Provence – Attire plus de clients | JWL Marketing",
+  title: "Audit SEO & Stratégie : Réveille ton site web | JWL MARKETING",
   description:
-    "Identifie ce qui bloque grâce à un audit de référencement naturel. Audit SEO : transforme ton site en machine à clients.",
+    "Ton site fait du surplace ? Découvre ce qui bloque ton trafic et tes ventes grâce à un audit SEO stratégique. À distance ou en région PACA.",
 };
 
 const STEPS = [

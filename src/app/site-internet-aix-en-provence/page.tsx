@@ -11,7 +11,7 @@ import { SITE_INTERNET_FAQ } from "@/data/siteInternetFaq";
 export const metadata: Metadata = {
   title: "Création site internet Aix-en-Provence | JWL Marketing",
   description:
-    "Un site web qui te fait gagner de l'argent. Vise la 1ère page Google et investis dans une vraie stratégie commerciale digitale.",
+    "Découvre la puissance d'un site web conçu par une experte commerciale. Structure saine, rédaction SEO-GEO et cité par l'IA. France entière.",
 };
 
 const WHY = [

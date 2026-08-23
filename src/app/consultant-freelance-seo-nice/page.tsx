@@ -10,7 +10,7 @@ import { NICE_FAQ } from "@/data/niceFaq";
 export const metadata: Metadata = {
   title: "Consultante Freelance SEO Nice | JWL Marketing",
   description:
-    "Une stratégie freelance, portée par la qualité d'une agence à taille humaine. Consultant Freelance SEO à Nice.",
+    "Consultante Freelance SEO à Nice. Je transforme ta visibilité Google en acquisition client. 10 ans de commerce B2B. Audit gratuit.",
 };
 
 const STEPS = [
