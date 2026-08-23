@@ -264,9 +264,9 @@ export default function Home() {
       </div>
 
       {/* Hero */}
-      <div className="flex w-full flex-col items-start justify-between gap-10 bg-white px-[5%] pb-[60px] pt-6 md:flex-row">
+      <div className="flex w-full flex-col items-start justify-between gap-10 bg-white px-[5%] pb-[60px] pt-3 md:flex-row">
         <div className="max-w-[600px] flex-1">
-          <h1 className="m-0 mb-1 mt-2.5 font-heading text-[48px] font-semibold leading-[1.2] text-black">
+          <h1 className="m-0 mb-1 mt-2.5 font-heading text-[48px] font-normal leading-[1.2] text-black">
             Un site Web qui attire de{" "}
             <span className="font-heading italic text-[#c9846f]">
               nouveaux clients
@@ -294,7 +294,7 @@ export default function Home() {
           </div>
 
           <div className="mt-6 flex flex-wrap items-center gap-2 text-sm">
-            <span className="text-lg font-bold text-[#1a2b6b]">4,9/5</span>
+            <span className="text-lg font-normal text-[#1a2b6b]">4,9/5</span>
             <span className="text-gold">★★★★★</span>
             <span className="text-[#555]">91 avis Google</span>
             <span className="text-[#999]">·</span>
@@ -302,7 +302,7 @@ export default function Home() {
               href="http://api.jwl-marketing.fr/redirects/gmb/jwl.html"
               target="_blank"
               rel="noopener"
-              className="font-semibold text-[#1a2b6b] underline"
+              className="font-normal text-[#1a2b6b] underline"
             >
               Ajouter un avis
             </a>
