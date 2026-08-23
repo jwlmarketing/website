@@ -312,12 +312,12 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="relative flex flex-[1.2_1_0%] items-center justify-end">
+        <div className="relative flex flex-[1.2_1_0%] items-start justify-end">
           <Image
             src="/images/hero-jodie-cartoon.png"
             alt="Jodie Lapaillerie - JWL Marketing"
             width={760}
-            height={630}
+            height={623}
             priority
             className="h-auto w-[90%] object-contain"
           />
