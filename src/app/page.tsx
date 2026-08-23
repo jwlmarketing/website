@@ -244,14 +244,14 @@ export default function Home() {
   return (
     <div>
       {/* Logo + compte, au-dessus du hero */}
-      <div className="flex w-full items-center justify-between px-[5%] pt-8">
+      <div className="flex w-full items-center justify-between px-[5%] pt-20">
         <Link href="/">
           <Image
             src="/images/logo-jwl-marketing.png"
             alt="JWL Marketing Aix-en-Provence"
             width={966}
             height={187}
-            className="h-[30px] w-auto"
+            className="h-[36px] w-auto"
           />
         </Link>
         <a href="https://intranet.jwlmarketing.fr/" aria-label="Connexion espace client">
@@ -266,19 +266,21 @@ export default function Home() {
       </div>
 
       {/* Hero */}
-      <div className="flex w-full flex-col items-start justify-between gap-10 bg-white px-[5%] pb-[60px] pt-8 md:flex-row">
+      <div className="flex w-full flex-col items-start justify-between gap-10 bg-white px-[5%] pb-[60px] pt-20 md:flex-row">
         <div className="max-w-[600px] flex-1">
-          <h1 className="m-0 mb-1 mt-2.5 font-heading text-[48px] font-normal leading-[1.2] text-black">
-            Un site Web
-            <br />
-            qui attire de
+          <h1 className="m-0 mb-1 mt-2.5 font-heading text-[60px] leading-[1.2] text-black">
+            <span className="font-bold">
+              Un site Web
+              <br />
+              qui attire de
+            </span>
             <br />
             <span className="font-heading italic text-[#c9846f]">
               nouveaux clients
             </span>
           </h1>
 
-          <p className="mt-4 text-base leading-[1.6] text-[#333]">
+          <p className="mt-4 text-lg leading-[1.6] text-[#333]">
             Google doit te trouver. L&apos;IA doit te comprendre. Tes futurs
             clients doivent te choisir.
           </p>
@@ -286,19 +288,19 @@ export default function Home() {
           <div className="mt-6 flex flex-wrap gap-[15px]">
             <a
               href="tel:0783792814"
-              className="inline-block rounded-full bg-[#c9846f] px-8 py-[15px] font-medium text-white transition-colors hover:bg-[#b8735f]"
+              className="inline-block rounded-full bg-[#c9846f] px-9 py-[18px] text-lg font-medium text-white transition-colors hover:bg-[#b8735f]"
             >
               07 83 79 28 14
             </a>
             <Link
               href="/contact-jwl-marketing-aix-en-provence"
-              className="inline-block rounded-full bg-[#c9846f] px-8 py-[15px] font-medium text-white transition-colors hover:bg-[#b8735f]"
+              className="inline-block rounded-full bg-[#c9846f] px-9 py-[18px] text-lg font-medium text-white transition-colors hover:bg-[#b8735f]"
             >
               Audit Marketing GRATUIT
             </Link>
           </div>
 
-          <div className="mt-6 flex flex-wrap items-center gap-2 text-sm">
+          <div className="mt-6 flex flex-wrap items-center gap-2 text-base">
             <span className="text-lg font-normal text-[#1a2b6b]">4,9/5</span>
             <span className="text-gold">★★★★★</span>
             <span className="text-[#555]">91 avis Google</span>
