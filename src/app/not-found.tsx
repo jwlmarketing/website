@@ -5,22 +5,24 @@ export default function NotFound() {
   return (
     <div className="mx-auto flex min-h-[70vh] max-w-2xl flex-col items-center justify-center px-6 text-center">
       <Image
-        src="/images/logo-jwl-marketing.webp"
+        src="/images/logo-jwl-marketing.png"
         alt="JWL Marketing"
-        width={160}
-        height={125}
-        className="mb-8 h-16 w-auto"
+        width={966}
+        height={187}
+        className="mb-8 h-10 w-auto"
       />
-      <p className="font-heading text-[120px] font-semibold leading-none text-gold">
+      <p className="text-[110px] leading-none">🚀</p>
+      <p className="mt-2 font-heading text-[110px] font-bold leading-none text-gold">
         404
       </p>
-      <h1 className="mt-4 font-heading text-3xl font-semibold text-black">
-        Cette page s&apos;est perdue en route.
+      <h1 className="mt-4 font-heading text-3xl font-bold text-black">
+        Cette page a décollé... sans nous prévenir.
       </h1>
       <p className="mt-4 max-w-md text-[#555]">
-        La page que tu cherches n&apos;existe pas, ou a été déplacée. Pas de
-        panique — comme pour ton référencement, on va te remettre sur la
-        bonne voie.
+        Même Google ne l&apos;a jamais indexée. Soit elle n&apos;existe pas,
+        soit elle a été déplacée — ou alors elle fait un tour de l&apos;espace
+        et redescend bientôt. En attendant, pas de panique : on va te
+        remettre sur une orbite qui fonctionne.
       </p>
       <div className="mt-8 flex flex-wrap justify-center gap-4">
         <Link

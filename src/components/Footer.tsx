@@ -24,11 +24,11 @@ export default function Footer() {
         <div className="grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-3 lg:grid-cols-5 lg:gap-[45px]">
           <div>
             <Image
-              src="/images/logo-jwl-marketing.webp"
+              src="/images/logo-jwl-marketing.png"
               alt="JWL Marketing"
-              width={200}
-              height={156}
-              className="h-10 w-auto"
+              width={966}
+              height={187}
+              className="h-10 w-auto brightness-0 invert"
             />
           </div>
 
