@@ -517,9 +517,9 @@ export default function Home() {
           <Image
             src="/images/cta-carriere-decollee.png"
             alt="Hâte de voir votre carrière décollée - JWL Marketing"
-            width={1366}
-            height={770}
-            className="h-auto w-full max-w-[600px] rounded-2xl object-cover"
+            width={1410}
+            height={2000}
+            className="h-auto w-full max-w-[300px] rounded-2xl object-cover"
           />
           <div className="flex-1 text-center md:text-left">
             <h2 className="font-heading text-4xl font-bold leading-tight text-black">
