@@ -466,18 +466,18 @@ export default function Home() {
         <SectionHeading
           kicker="Ta visibilité"
           title="n'est pas une question de hasard"
-          subtext={
-            <span className="mx-auto block max-w-[300px] text-left font-semibold text-black">
-              1. Être trouvée
-              <br />
-              2. Être comprise
-              <br />
-              3. Être choisie
-            </span>
-          }
         />
 
-        <VisibilityChart />
+        <div className="mx-auto flex max-w-[1200px] flex-col items-center justify-center gap-10 md:flex-row">
+          <VisibilityChart />
+          <span className="block max-w-[300px] shrink-0 text-left font-semibold text-black">
+            1. Être trouvée
+            <br />
+            2. Être comprise
+            <br />
+            3. Être choisie
+          </span>
+        </div>
 
         <SectionHeading
           title="Choisis l'accompagnement"
