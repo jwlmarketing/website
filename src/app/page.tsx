@@ -353,7 +353,7 @@ export default function Home() {
         <SectionHeading title="Ce que JWL MARKETING à mis en place">
           <br />
           pour un de{" "}
-          <span className="font-semibold italic text-gold">ces clients</span>
+          <span className="font-semibold italic text-[#c9846f]">ces clients</span>
         </SectionHeading>
         <Image
           src="/images/case-study-proxiclic.png"
