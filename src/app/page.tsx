@@ -350,8 +350,9 @@ export default function Home() {
 
       {/* Cas client */}
       <section className="px-[5%] py-16 text-center">
-        <SectionHeading title="Ce que JWL MARKETING à mis en place pour un de">
-          {" "}
+        <SectionHeading title="Ce que JWL MARKETING à mis en place">
+          <br />
+          pour un de{" "}
           <span className="font-semibold italic text-gold">ces clients</span>
         </SectionHeading>
         <Image
