@@ -510,7 +510,7 @@ export default function Home() {
       {/* Témoignages */}
       <section className="bg-neutral-50 px-6 py-16">
         <div className="mx-auto my-[60px] max-w-[700px] px-5 text-center">
-          <h2 className="font-heading text-[36px] leading-[1.35]">
+          <h2 className="font-heading text-[54px] leading-[1.35]">
             <span className="italic text-[#c9846f]">Ils encaissent du cash,</span>{" "}
             <span className="text-black">avec JWL MARKETING</span>
           </h2>
@@ -539,7 +539,7 @@ export default function Home() {
             className="h-auto w-full max-w-[300px] rounded-2xl object-cover"
           />
           <div className="flex-1 text-center md:text-left">
-            <h2 className="font-heading text-4xl font-bold leading-tight text-black">
+            <h2 className="font-heading text-[54px] font-bold leading-tight text-black">
               Hâte de voir votre carrière décollée !
             </h2>
             <p className="mt-6 text-lg text-[#555]">

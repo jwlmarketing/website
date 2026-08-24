@@ -23,7 +23,7 @@ export default function SectionHeading({
           {kicker}
         </p>
       )}
-      <h2 className="relative inline-block px-10 font-heading text-[36px] font-medium italic leading-[1.35] text-black">
+      <h2 className="relative inline-block px-10 font-heading text-[54px] font-medium italic leading-[1.35] text-black">
         {title}
         {children}
         {accent && <span className="font-semibold not-italic text-gold"> {accent}</span>}
