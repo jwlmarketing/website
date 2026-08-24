@@ -268,7 +268,7 @@ export default function Home() {
       {/* Hero */}
       <div className="flex w-full flex-col items-start justify-between gap-10 bg-white px-[5%] pb-[60px] pt-20 md:flex-row">
         <div className="max-w-[600px] flex-1">
-          <h1 className="m-0 mb-1 mt-2.5 font-heading text-[60px] leading-[1.2] text-black">
+          <h1 className="m-0 mb-1 mt-2.5 font-heading text-4xl leading-[1.15] text-black md:text-[60px] md:leading-[1.2]">
             <span className="font-bold">
               Un site Web
               <br />
@@ -337,7 +337,7 @@ export default function Home() {
           </div>
         </div>
         <div className="flex flex-1 items-center justify-center text-center">
-          <h2 className="mx-auto max-w-[560px] font-heading text-[54px] font-normal leading-[1.1] text-black">
+          <h2 className="mx-auto max-w-[560px] font-heading text-3xl font-normal leading-[1.2] text-black md:text-[54px] md:leading-[1.1]">
             Et si <span className="italic text-[#c9846f]">ton prochain</span>
             <br />
             <span className="italic text-[#c9846f]">client</span> te trouvait
@@ -479,8 +479,8 @@ export default function Home() {
           </span>
         </div>
 
-        <div className="mx-auto my-[60px] w-full max-w-[1400px] px-5 text-center">
-          <h2 className="font-heading text-[54px] leading-[1.35]">
+        <div className="mx-auto my-10 w-full max-w-[1400px] px-5 text-center md:my-[60px]">
+          <h2 className="font-heading text-3xl leading-[1.2] md:text-[54px] md:leading-[1.35]">
             <span className="italic text-[#c9846f]">Choisis l&apos;accompagnement</span>{" "}
             <span className="text-black">adapté a tes objectifs</span>
           </h2>
@@ -504,8 +504,8 @@ export default function Home() {
 
       {/* Témoignages */}
       <section className="bg-neutral-50 px-6 py-16">
-        <div className="mx-auto my-[60px] max-w-[700px] px-5 text-center">
-          <h2 className="font-heading text-[54px] leading-[1.35]">
+        <div className="mx-auto my-10 max-w-[700px] px-5 text-center md:my-[60px]">
+          <h2 className="font-heading text-3xl leading-[1.2] md:text-[54px] md:leading-[1.35]">
             <span className="italic text-[#c9846f]">Ils encaissent du cash,</span>{" "}
             <span className="text-black">avec JWL MARKETING</span>
           </h2>
@@ -528,7 +528,7 @@ export default function Home() {
             className="h-auto w-full max-w-[300px] rounded-2xl object-cover"
           />
           <div className="flex-1 text-center md:text-left">
-            <h2 className="font-heading text-[54px] font-bold leading-tight text-black">
+            <h2 className="font-heading text-3xl font-bold leading-tight text-black md:text-[54px]">
               Hâte de voir votre carrière décollée !
             </h2>
             <p className="mt-6 text-lg text-[#555]">

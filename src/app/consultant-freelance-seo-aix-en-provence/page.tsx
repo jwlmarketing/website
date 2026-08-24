@@ -50,7 +50,7 @@ export default function QuiSuisJe() {
       {/* Hero */}
       <div className="flex w-full flex-col items-center justify-between gap-10 bg-white px-[5%] py-[60px] md:flex-row">
         <div className="max-w-[600px] flex-1">
-          <h1 className="font-heading text-[54px] leading-[0.95] text-black">
+          <h1 className="font-heading text-4xl leading-[1.05] md:text-[54px] md:leading-[0.95] text-black">
             <span className="font-medium">
               Consultante SEO
               <br />
@@ -100,12 +100,12 @@ export default function QuiSuisJe() {
             className="mx-auto h-auto w-full max-w-[220px] rounded-2xl object-cover"
           />
           <div className="text-center">
-            <p className="font-heading text-[54px] leading-tight text-black">
+            <p className="font-heading text-3xl leading-tight md:text-[54px] text-black">
               Consultante en{" "}
               <span className="text-[#c9846f]">marketing digital, experte SEO</span>{" "}
               et spécialiste des systèmes
             </p>
-            <div className="mt-2 text-6xl">
+            <div className="mt-2 text-4xl md:text-6xl">
               <GoogleColors />
             </div>
             <div className="mt-6 flex flex-wrap items-center justify-center gap-4">
@@ -169,7 +169,7 @@ export default function QuiSuisJe() {
 
       {/* Ambition */}
       <section className="mx-auto max-w-[900px] px-6 py-10 text-center">
-        <h2 className="font-heading text-[54px] leading-tight text-black">
+        <h2 className="font-heading text-3xl leading-tight md:text-[54px] text-black">
           <span className="italic text-[#c9846f]">Je suis ambitieuse</span>
           <br />
           <span className="font-medium">
@@ -180,7 +180,7 @@ export default function QuiSuisJe() {
 
       {/* Je m'investis */}
       <section className="mx-auto max-w-[800px] px-6 py-6 text-center">
-        <h2 className="font-heading text-[54px] leading-tight text-black">
+        <h2 className="font-heading text-3xl leading-tight md:text-[54px] text-black">
           <span className="italic text-[#c9846f]">Je m&apos;investis</span>{" "}
           <span className="font-medium">
             dans ton projet et mes clients en parlent.
@@ -199,7 +199,7 @@ export default function QuiSuisJe() {
 
       {/* Marché local */}
       <section className="mx-auto max-w-[800px] px-6 py-10">
-        <h2 className="text-center font-heading text-[54px] leading-tight text-black">
+        <h2 className="text-center font-heading text-3xl leading-tight md:text-[54px] text-black">
           <span className="italic text-[#c9846f]">Je connais ton marché</span>{" "}
           <span className="font-medium">sur Aix-en-Provence.</span>
         </h2>
@@ -247,7 +247,7 @@ export default function QuiSuisJe() {
       {/* 1. J'analyse ton marché */}
       <section className="mx-auto max-w-[900px] px-6 py-10">
         <StepNumber n={1} />
-        <h3 className="mt-4 text-center font-heading text-[54px] leading-tight text-black">
+        <h3 className="mt-4 text-center font-heading text-3xl leading-tight md:text-[54px] text-black">
           <span className="italic text-[#c9846f]">J&apos;analyse</span>{" "}
           <span className="font-medium">
             ton marché sur Aix-en-provence, avant de créer ton site.
@@ -305,7 +305,7 @@ export default function QuiSuisJe() {
       {/* 2. J'étudie les recherches Google */}
       <section className="mx-auto max-w-[900px] px-6 py-10">
         <StepNumber n={2} />
-        <h3 className="mt-4 text-center font-heading text-[54px] leading-tight text-black">
+        <h3 className="mt-4 text-center font-heading text-3xl leading-tight md:text-[54px] text-black">
           <span className="italic text-[#c9846f]">
             J&apos;étudie les recherches <GoogleColors />
           </span>{" "}
@@ -357,7 +357,7 @@ export default function QuiSuisJe() {
         <StepNumber n={3} />
         <div className="mt-4 grid items-center gap-8 md:grid-cols-2">
           <div className="order-2 md:order-1">
-            <h3 className="font-heading text-[54px] leading-tight text-black">
+            <h3 className="font-heading text-3xl leading-tight md:text-[54px] text-black">
               <span className="italic text-[#c9846f]">J&apos;optimise</span>{" "}
               <span className="font-medium">ta fiche Google profile.</span>
             </h3>
@@ -392,7 +392,7 @@ export default function QuiSuisJe() {
       <section className="mx-auto max-w-[900px] px-6 py-10">
         <StepNumber n={4} />
         <div className="mx-auto mt-4 max-w-[600px] text-center">
-          <h3 className="font-heading text-[54px] leading-tight text-black">
+          <h3 className="font-heading text-3xl leading-tight md:text-[54px] text-black">
             <span className="italic text-[#c9846f]">Je crée</span>{" "}
             <span className="font-medium">un site web sur mesure pour toi.</span>
           </h3>
@@ -428,7 +428,7 @@ export default function QuiSuisJe() {
           className="mx-auto mt-4 h-auto w-full max-w-[500px] rounded-2xl object-cover"
         />
         <p className="mt-2 text-xs text-black">Jodie-LAPAILLERIE / IA 2026</p>
-        <h3 className="mt-6 font-heading text-[54px] leading-tight text-black">
+        <h3 className="mt-6 font-heading text-3xl leading-tight md:text-[54px] text-black">
           <span className="italic text-[#c9846f]">
             Je convaincs <GoogleColors />
           </span>{" "}
@@ -440,7 +440,7 @@ export default function QuiSuisJe() {
 
       {/* Je me déplace */}
       <section className="mx-auto max-w-[800px] px-6 py-10 text-center">
-        <h3 className="font-heading text-[54px] leading-tight text-black">
+        <h3 className="font-heading text-3xl leading-tight md:text-[54px] text-black">
           <span className="italic text-[#c9846f]">Je me déplace</span>{" "}
           <span className="font-medium">partout en France</span>
         </h3>
@@ -506,7 +506,7 @@ export default function QuiSuisJe() {
 
       {/* CTA de clôture */}
       <section className="bg-[#141414] px-6 py-16 text-center text-white">
-        <h2 className="font-heading text-[54px] leading-tight">
+        <h2 className="font-heading text-3xl leading-tight md:text-[54px]">
           Parce que tu <span className="italic text-gold">mérites le meilleur</span>
         </h2>
         <a
@@ -518,10 +518,10 @@ export default function QuiSuisJe() {
           Réserver un appel
         </a>
 
-        <h3 className="mt-14 font-heading text-[54px] leading-tight">
+        <h3 className="mt-14 font-heading text-3xl leading-tight md:text-[54px]">
           <span className="italic text-gold">Toujours pas convaincu?</span>
         </h3>
-        <p className="mt-3 font-heading text-[54px] leading-tight">
+        <p className="mt-3 font-heading text-3xl leading-tight md:text-[54px]">
           Je m&apos;engage aussi auprès de partenaire dynamique sur
           Aix-en-Provence
         </p>
