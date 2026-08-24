@@ -337,8 +337,8 @@ export default function Home() {
             <YoutubeLite videoId="-btM09DQ4zg" title="JWL Marketing" />
           </div>
         </div>
-        <div className="flex-1 text-center md:text-left">
-          <h2 className="mx-auto max-w-[300px] font-heading text-[54px] font-normal leading-[1.1] text-black md:mx-0">
+        <div className="flex flex-1 items-center justify-center text-center">
+          <h2 className="mx-auto max-w-[300px] font-heading text-[54px] font-normal leading-[1.1] text-black">
             Et si <span className="italic text-[#c9846f]">ton prochain client</span> te
             trouvait grâce à <GoogleColors />
           </h2>
