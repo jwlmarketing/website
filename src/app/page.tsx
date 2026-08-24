@@ -338,9 +338,8 @@ export default function Home() {
           </div>
         </div>
         <div className="flex-1 text-center md:text-left">
-          <h2 className="font-heading text-[54px] font-normal leading-[1.1] text-black">
+          <h2 className="mx-auto max-w-[340px] font-heading text-[54px] font-normal leading-[1.1] text-black md:mx-0">
             Et si <span className="italic text-[#c9846f]">ton prochain client</span> te
-            <br />
             trouvait grâce à <GoogleColors />
           </h2>
         </div>
