@@ -79,7 +79,7 @@ export default function ClientResultsWidget() {
           </div>
           <div className="stat-sub">vues de la fiche Google en 6 mois</div>
           <div className="ring-row">
-            <div className="ring">
+            <div className="gauge-ring">
               <svg viewBox="0 0 56 56" width="52" height="52">
                 <circle className="ring-bg" cx="28" cy="28" r="23"></circle>
                 <circle
@@ -280,21 +280,21 @@ export default function ClientResultsWidget() {
           gap: 14px;
           margin-top: 14px;
         }
-        .ring {
+        .gauge-ring {
           position: relative;
           width: 52px;
           height: 52px;
           flex: 0 0 auto;
         }
-        .ring :global(svg) {
+        .gauge-ring :global(svg) {
           transform: rotate(-90deg);
         }
-        .ring :global(.ring-bg) {
+        .gauge-ring :global(.ring-bg) {
           fill: none;
           stroke: #ece7db;
           stroke-width: 6;
         }
-        .ring :global(.ring-fg) {
+        .gauge-ring :global(.ring-fg) {
           fill: none;
           stroke: #b8892e;
           stroke-width: 6;
