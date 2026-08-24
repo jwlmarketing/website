@@ -99,19 +99,27 @@ export default function QuiSuisJe() {
             height={2000}
             className="mx-auto h-auto w-full max-w-[220px] rounded-2xl object-cover"
           />
-          <div>
-            <p className="font-heading text-2xl italic leading-snug text-black">
+          <div className="text-center">
+            <p className="font-heading text-[54px] leading-tight text-black">
               Consultante en{" "}
-              <span className="text-[#c9846f]">marketing digital, experte</span>{" "}
-              <span className="text-[#c9846f]">SEO</span> et spécialiste des
-              systèmes <span className="not-italic"><GoogleColors /></span>
+              <span className="text-[#c9846f]">marketing digital, experte SEO</span>{" "}
+              et spécialiste des systèmes
             </p>
-            <div className="mt-6">
+            <div className="mt-2 text-6xl">
+              <GoogleColors />
+            </div>
+            <div className="mt-6 flex flex-wrap items-center justify-center gap-4">
               <a
                 href="mailto:service@jwl-marketing.fr"
                 className="inline-block rounded-full border-2 border-gold bg-gold px-8 py-[15px] font-medium text-white transition-colors hover:border-[#b8952f] hover:bg-[#b8952f]"
               >
                 Parle moi de tes besoins SEO
+              </a>
+              <a
+                href="mailto:service@jwl-marketing.fr"
+                className="text-sm font-bold text-[#34A853]"
+              >
+                mail vers jwl
               </a>
             </div>
           </div>
