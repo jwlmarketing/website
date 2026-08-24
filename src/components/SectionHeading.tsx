@@ -14,7 +14,7 @@ export default function SectionHeading({
   children?: ReactNode;
 }) {
   return (
-    <div className="mx-auto my-[60px] max-w-[700px] px-5 text-center">
+    <div className="mx-auto my-[60px] max-w-[900px] px-5 text-center">
       {kicker && (
         <p
           className="mb-1 text-[26px] font-semibold italic leading-snug text-[#c97b63]"
