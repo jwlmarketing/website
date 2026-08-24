@@ -267,9 +267,9 @@ export default function Home() {
       </div>
 
       {/* Hero */}
-      <div className="flex w-full flex-col items-start justify-between gap-10 bg-white px-[5%] pb-[60px] pt-20 md:flex-row">
+      <div className="flex w-full flex-col items-start justify-between gap-10 bg-white px-[5%] pb-[60px] pt-20 lg:flex-row">
         <div className="max-w-[600px] flex-1">
-          <h1 className="m-0 mb-1 mt-2.5 font-heading text-4xl leading-[1.15] text-black md:text-[60px] md:leading-[1.2]">
+          <h1 className="m-0 mb-1 mt-2.5 font-heading text-4xl leading-[1.15] text-black lg:text-[60px] lg:leading-[1.2]">
             <span className="font-bold">
               Un site Web
               <br />

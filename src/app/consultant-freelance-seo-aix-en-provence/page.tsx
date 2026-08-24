@@ -48,9 +48,9 @@ export default function QuiSuisJe() {
   return (
     <div>
       {/* Hero */}
-      <div className="flex w-full flex-col items-center justify-between gap-10 bg-white px-[5%] py-[60px] md:flex-row">
+      <div className="flex w-full flex-col items-center justify-between gap-10 bg-white px-[5%] py-[60px] lg:flex-row">
         <div className="max-w-[600px] flex-1">
-          <h1 className="font-heading text-4xl leading-[1.05] md:text-[54px] md:leading-[0.95] text-black">
+          <h1 className="font-heading text-4xl leading-[1.05] lg:text-[54px] lg:leading-[0.95] text-black">
             <span className="font-medium">
               Consultante SEO
               <br />
