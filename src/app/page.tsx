@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import HeroBadge from "@/components/HeroBadge";
+import YoutubeLite from "@/components/YoutubeLite";
 import SectionHeading from "@/components/SectionHeading";
 import GoogleColors from "@/components/GoogleColors";
 import FaqAccordion from "@/components/FaqAccordion";
@@ -333,13 +334,7 @@ export default function Home() {
       <section className="flex flex-col items-center justify-between gap-10 px-[5%] py-20 md:flex-row">
         <div className="flex-1 overflow-hidden rounded-[40px] bg-black p-10">
           <div className="mx-auto aspect-video w-full max-w-[500px] overflow-hidden rounded-xl">
-            <iframe
-              src="https://www.youtube.com/embed/-btM09DQ4zg"
-              title="JWL Marketing"
-              className="h-full w-full"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            />
+            <YoutubeLite videoId="-btM09DQ4zg" title="JWL Marketing" />
           </div>
         </div>
         <div className="flex-1 text-center md:text-left">
