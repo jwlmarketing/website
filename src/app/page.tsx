@@ -338,8 +338,8 @@ export default function Home() {
           </div>
         </div>
         <div className="flex-1 text-center md:text-left">
-          <h2 className="font-heading text-[64px] font-bold leading-[1.1] text-black">
-            Et si <span className="text-[#c9846f]">ton prochain client</span>{" "}
+          <h2 className="font-heading text-[64px] font leading-[1.1] text-black">
+            Et si <"font-heading italic text-[#c9846f]">ton prochain client</span>{" "}
             te trouvait grâce à <GoogleColors />
           </h2>
         </div>
