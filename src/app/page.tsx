@@ -5,8 +5,6 @@ import YoutubeLite from "@/components/YoutubeLite";
 import VisibilityChart from "@/components/VisibilityChart";
 import SectionHeading from "@/components/SectionHeading";
 import GoogleColors from "@/components/GoogleColors";
-import FaqAccordion from "@/components/FaqAccordion";
-import { HOME_FAQ } from "@/data/homeFaq";
 import { REVIEWS } from "@/data/reviews";
 import ReviewCard from "@/components/ReviewCard";
 
@@ -514,12 +512,6 @@ export default function Home() {
             <ReviewCard key={r.name} {...r} />
           ))}
         </div>
-      </section>
-
-      {/* FAQ */}
-      <section className="px-6 py-20">
-        <SectionHeading title="FAQ" accent=": Foire Aux Questions" />
-        <FaqAccordion items={HOME_FAQ} />
       </section>
 
       {/* CTA de clôture */}
