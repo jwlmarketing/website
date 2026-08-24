@@ -21,7 +21,7 @@ export default function NewsletterCta() {
       fd.append("email", email);
       fd.append("source", "wp-home");
       const res = await fetch(
-        "https://www.jwl-marketing.fr/newsletter/api/public-subscribe.php",
+        "https://api.jwl-marketing.fr/newsletter/api/public-subscribe.php",
         { method: "POST", body: fd }
       );
       const data = await res.json();
