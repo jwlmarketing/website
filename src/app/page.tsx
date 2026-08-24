@@ -5,6 +5,7 @@ import YoutubeLite from "@/components/YoutubeLite";
 import VisibilityChart from "@/components/VisibilityChart";
 import SectionHeading from "@/components/SectionHeading";
 import GoogleColors from "@/components/GoogleColors";
+import ClientResultsWidget from "@/components/ClientResultsWidget";
 import { REVIEWS } from "@/data/reviews";
 import ReviewCard from "@/components/ReviewCard";
 
@@ -355,13 +356,7 @@ export default function Home() {
           pour un de{" "}
           <span className="font-semibold italic text-[#c9846f]">ces clients</span>
         </SectionHeading>
-        <Image
-          src="/images/case-study-proxiclic.png"
-          alt="Résultats obtenus pour Proxiclic-Provence grâce à JWL Marketing"
-          width={1366}
-          height={465}
-          className="mx-auto h-auto w-full max-w-[1200px]"
-        />
+        <ClientResultsWidget />
       </section>
 
       {/* La méthode */}
