@@ -509,7 +509,12 @@ export default function Home() {
 
       {/* Témoignages */}
       <section className="bg-neutral-50 px-6 py-16">
-        <SectionHeading title="Ils" accent="encaissent du cash, avec JWL MARKETING" />
+        <div className="mx-auto my-[60px] max-w-[700px] px-5 text-center">
+          <h2 className="font-heading text-[36px] leading-[1.35]">
+            <span className="italic text-[#c9846f]">Ils encaissent du cash,</span>{" "}
+            <span className="text-black">avec JWL MARKETING</span>
+          </h2>
+        </div>
         <div className="mx-auto flex max-w-[1200px] gap-6 overflow-x-auto px-2 pb-4">
           {REVIEWS.map((r) => (
             <ReviewCard key={r.name} {...r} />
