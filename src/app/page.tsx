@@ -332,8 +332,8 @@ export default function Home() {
 
       {/* Et si ton prochain client... */}
       <section className="flex flex-col items-center justify-between gap-10 px-[5%] py-20 md:flex-row">
-        <div className="flex-1 overflow-hidden rounded-[40px] bg-black p-10">
-          <div className="mx-auto aspect-video w-full max-w-[500px] overflow-hidden rounded-xl">
+        <div className="flex-[1.4_1_0%] overflow-hidden rounded-[40px] bg-black p-10">
+          <div className="mx-auto aspect-video w-full max-w-[650px] overflow-hidden rounded-xl">
             <YoutubeLite videoId="-btM09DQ4zg" title="JWL Marketing" />
           </div>
         </div>
