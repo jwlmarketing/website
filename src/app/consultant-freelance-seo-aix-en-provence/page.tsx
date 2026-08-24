@@ -115,9 +115,9 @@ export default function QuiSuisJe() {
               </Link>
               <a
                 href="mailto:service@jwl-marketing.fr"
-                className="text-sm font-semibold text-[#34A853] underline"
+                className="text-sm font-semibold text-[#555] underline"
               >
-                mail vers jwl
+                service@jwl-marketing.fr
               </a>
             </div>
           </div>
