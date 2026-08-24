@@ -106,18 +106,12 @@ export default function QuiSuisJe() {
               <span className="text-[#c9846f]">SEO</span> et spécialiste des
               systèmes <span className="not-italic"><GoogleColors /></span>
             </p>
-            <div className="mt-6 flex flex-wrap items-center gap-4">
-              <Link
-                href="/contact-jwl-marketing-aix-en-provence"
+            <div className="mt-6">
+              <a
+                href="mailto:service@jwl-marketing.fr"
                 className="inline-block rounded-full border-2 border-gold bg-gold px-8 py-[15px] font-medium text-white transition-colors hover:border-[#b8952f] hover:bg-[#b8952f]"
               >
                 Parle moi de tes besoins SEO
-              </Link>
-              <a
-                href="mailto:service@jwl-marketing.fr"
-                className="text-sm font-semibold text-[#555] underline"
-              >
-                service@jwl-marketing.fr
               </a>
             </div>
           </div>
