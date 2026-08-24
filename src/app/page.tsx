@@ -479,10 +479,12 @@ export default function Home() {
           </span>
         </div>
 
-        <SectionHeading
-          title="Choisis l'accompagnement"
-          accent="adapté a tes objectifs"
-        />
+        <div className="mx-auto my-[60px] w-full max-w-[1400px] px-5 text-center">
+          <h2 className="font-heading text-[54px] leading-[1.35]">
+            <span className="italic text-[#c9846f]">Choisis l&apos;accompagnement</span>{" "}
+            <span className="text-black">adapté a tes objectifs</span>
+          </h2>
+        </div>
         <div className="mx-auto flex max-w-[1200px] flex-col gap-8 md:flex-row">
           {OFFERS_STARTER.map((offer) => (
             <OfferCard key={offer.title} offer={offer} />
