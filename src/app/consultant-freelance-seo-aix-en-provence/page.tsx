@@ -95,12 +95,7 @@ export default function QuiSuisJe() {
 
       {/* Mission */}
       <section className="mx-auto max-w-[800px] px-6 py-10">
-        <p className="text-[15px] leading-[25.5px] text-[#1a1a1a]">
-          En tant que consultante SEO et développeuse commerciale
-          indépendante, je pilote personnellement chaque mission afin de
-          garantir un accompagnement réactif, cohérent et transparent.
-        </p>
-        <div className="mt-6 rounded-2xl bg-[#141414] p-8 text-white">
+        <div className="rounded-2xl bg-[#141414] p-8 text-white">
           <p className="text-[15px] leading-[25.5px]">
             <span className="font-bold">Ma mission : </span>
             Créer ou piloter des sites internet pensés pour générer du
@@ -156,11 +151,6 @@ export default function QuiSuisJe() {
           <span className="italic text-[#c9846f]">Je connais ton marché</span>
         </h2>
         <div className="mt-6 space-y-5 text-[15px] leading-[25.5px] text-[#1a1a1a]">
-          <p>
-            En tant que consultante SEO et développeuse commerciale
-            indépendante, je pilote personnellement chaque mission afin de
-            garantir un accompagnement réactif, cohérent et transparent.
-          </p>
           <p>
             Ville d&apos;art, de droit et d&apos;université au cœur de la
             Provence, Aix-en-Provence séduit les visiteurs chaque année sans
