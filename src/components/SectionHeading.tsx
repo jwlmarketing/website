@@ -14,7 +14,7 @@ export default function SectionHeading({
   children?: ReactNode;
 }) {
   return (
-    <div className="mx-auto my-[60px] max-w-[1050px] px-5 text-center">
+    <div className="mx-auto my-[60px] w-full max-w-[1400px] px-5 text-center">
       {kicker && (
         <p
           className="mb-1 text-[26px] font-semibold italic leading-snug text-[#c97b63]"
@@ -23,7 +23,7 @@ export default function SectionHeading({
           {kicker}
         </p>
       )}
-      <h2 className="relative inline-block px-10 font-heading text-[54px] font-medium italic leading-[1.35] text-black">
+      <h2 className="relative block w-full px-10 font-heading text-[54px] font-medium italic leading-[1.35] text-black">
         {title}
         {children}
         {accent && <span className="font-semibold not-italic text-gold"> {accent}</span>}
