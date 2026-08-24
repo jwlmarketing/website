@@ -356,7 +356,7 @@ export default function Home() {
           alt="Résultats obtenus pour Proxiclic-Provence grâce à JWL Marketing"
           width={1366}
           height={465}
-          className="mx-auto h-auto w-full max-w-[1200px] rounded-[32px]"
+          className="mx-auto h-auto w-full max-w-[1200px]"
         />
       </section>
 
