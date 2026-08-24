@@ -344,6 +344,7 @@ export default function Home() {
             <span className="italic text-[#c9846f]">client</span> te trouvait
             <br />
             grâce à <GoogleColors />
+            <span className="text-black">?</span>
           </h2>
         </div>
       </section>
