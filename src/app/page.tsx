@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import HeroBadge from "@/components/HeroBadge";
 import YoutubeLite from "@/components/YoutubeLite";
+import VisibilityChart from "@/components/VisibilityChart";
 import SectionHeading from "@/components/SectionHeading";
 import GoogleColors from "@/components/GoogleColors";
 import FaqAccordion from "@/components/FaqAccordion";
@@ -477,14 +478,7 @@ export default function Home() {
           }
         />
 
-        <video
-          src="/videos/visibilite-graphique.mp4"
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="mx-auto mb-4 w-full max-w-[500px]"
-        />
+        <VisibilityChart />
 
         <SectionHeading
           title="Choisis l'accompagnement"
