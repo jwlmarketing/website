@@ -137,18 +137,23 @@ export default function QuiSuisJe() {
           <br />
           <span className="font-medium">Et je vise la 1ère place sur Google.</span>
         </h2>
-        <p className="mt-4 text-black">
-          dans ton projet et mes clients en parlent.
-        </p>
+      </section>
+
+      {/* Je m'investis */}
+      <section className="mx-auto max-w-[800px] px-6 py-6 text-center">
+        <h2 className="font-heading text-3xl leading-tight text-black">
+          <span className="italic text-[#c9846f]">Je m&apos;investis</span>{" "}
+          <span className="font-medium">
+            dans ton projet et mes clients en parlent.
+          </span>
+        </h2>
       </section>
 
       {/* Marché local */}
       <section className="mx-auto max-w-[800px] px-6 py-10">
         <h2 className="text-center font-heading text-3xl leading-tight text-black">
-          <span className="italic text-[#c9846f]">Je m&apos;investis</span>{" "}
+          <span className="italic text-[#c9846f]">Je connais ton marché</span>{" "}
           <span className="font-medium">sur Aix-en-Provence.</span>
-          <br />
-          <span className="italic text-[#c9846f]">Je connais ton marché</span>
         </h2>
         <div className="mt-6 space-y-5 text-[15px] leading-[25.5px] text-[#1a1a1a]">
           <p>
