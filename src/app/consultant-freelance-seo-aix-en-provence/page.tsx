@@ -527,7 +527,7 @@ export default function QuiSuisJe() {
       </section>
 
       {/* CTA de clôture */}
-      <section className="bg-[#141414] px-6 py-16 text-center">
+      <section className="bg-white px-6 py-16 text-center">
         <a
           href="https://calendly.com/jwlm"
           target="_blank"
