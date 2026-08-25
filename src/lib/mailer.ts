@@ -5,7 +5,7 @@ let transporter: ReturnType<typeof nodemailer.createTransport> | null = null;
 function getTransporter() {
   if (transporter) return transporter;
   transporter = nodemailer.createTransport({
-    host: process.env.SMTP_HOST || "hotel.o2switch.net",
+    host: process.env.SMTP_HOST || "ssl0.ovh.net",
     port: Number(process.env.SMTP_PORT || 465),
     secure: true,
     auth: {
