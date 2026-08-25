@@ -111,7 +111,7 @@ export default function QuiSuisJe() {
             <div className="mt-6 flex flex-wrap items-center justify-center gap-4">
               <a
                 href="mailto:service@jwl-marketing.fr"
-                className="inline-block rounded-full border-2 border-gold bg-gold px-8 py-[15px] font-medium text-white transition-colors hover:border-[#b8952f] hover:bg-[#b8952f]"
+                className="inline-block rounded-full border-2 border-[#c9846f] bg-[#c9846f] px-8 py-[15px] font-medium text-white transition-colors hover:border-[#b8735f] hover:bg-[#b8735f]"
               >
                 Parle moi de tes besoins SEO
               </a>
