@@ -115,12 +115,6 @@ export default function QuiSuisJe() {
               >
                 Parle moi de tes besoins SEO
               </a>
-              <a
-                href="mailto:service@jwl-marketing.fr"
-                className="text-sm font-bold text-[#34A853]"
-              >
-                mail vers jwl
-              </a>
             </div>
           </div>
         </div>
@@ -168,7 +162,7 @@ export default function QuiSuisJe() {
       </section>
 
       {/* Ambition */}
-      <section className="mx-auto max-w-[900px] px-6 py-10 text-center">
+      <section className="mx-auto max-w-[1100px] px-6 py-10 text-center">
         <h2 className="font-heading text-3xl leading-tight md:text-[54px] text-black">
           <span className="italic text-[#c9846f]">Je suis ambitieuse</span>
           <br />
@@ -176,6 +170,29 @@ export default function QuiSuisJe() {
             Et je vise la 1ère place sur <GoogleColors />.
           </span>
         </h2>
+        <div className="mt-10 grid gap-6 md:grid-cols-3">
+          <Image
+            src="/images/qui-suis-je-gmb.png"
+            alt="Fiche Google Business Profile JWL Marketing"
+            width={2000}
+            height={1414}
+            className="h-auto w-full rounded-2xl border border-[#eee] object-cover"
+          />
+          <Image
+            src="/images/qui-suis-je-search-console.png"
+            alt="Évolution des impressions et clics — Google Search Console"
+            width={2000}
+            height={1414}
+            className="h-auto w-full rounded-2xl border border-[#eee] object-cover"
+          />
+          <Image
+            src="/images/qui-suis-je-serp.png"
+            alt="Résultat Google pour seo aix-en-provence — JWL Marketing"
+            width={2000}
+            height={1414}
+            className="h-auto w-full rounded-2xl border border-[#eee] object-cover"
+          />
+        </div>
       </section>
 
       {/* Je m'investis */}
@@ -198,50 +215,51 @@ export default function QuiSuisJe() {
       </section>
 
       {/* Marché local */}
-      <section className="mx-auto max-w-[800px] px-6 py-10">
+      <section className="mx-auto max-w-[900px] px-6 py-10">
         <h2 className="text-center font-heading text-3xl leading-tight md:text-[54px] text-black">
           <span className="italic text-[#c9846f]">Je connais ton marché</span>{" "}
           <span className="font-medium">sur Aix-en-Provence.</span>
         </h2>
-        <div className="mt-6 space-y-5 text-[15px] leading-[25.5px] text-[#1a1a1a]">
-          <p>
-            Ville d&apos;art, de droit et d&apos;université au cœur de la
-            Provence, Aix-en-Provence séduit les visiteurs chaque année sans
-            jamais perdre son authenticité. À Aix-en-Provence, il fait bon
-            vivre. Nous vivons au rythme des cigales, des marchés colorés et
-            des parfums de lavande. La culture s&apos;y mêle aux spectacles, à
-            la danse musicale, inspirant chaque jour restaurateurs,
-            commerçants et artisans.
-          </p>
-          <p>
-            Mais dans une ville aussi dynamique qu&apos;exigeante, cette
-            richesse appartient au monde réel. Sur Google, les règles sont
-            différentes. Le digital n&apos;a ni parfum, ni saveur, ni vitrine
-            pour attirer les passants. Aujourd&apos;hui, savoir parler le
-            langage de Google est devenu indispensable pour 100% des sites
-            entrants. Plus de 85% des consommateurs effectuent une recherche
-            en ligne avant de pousser la porte d&apos;un commerçant.
-          </p>
+        <div className="mt-8 grid items-center gap-8 md:grid-cols-2">
+          <div>
+            <div className="rounded-2xl border-2 border-black bg-white p-8">
+              <div className="flex items-center gap-2 text-2xl">
+                <GoogleColors />
+              </div>
+              <div className="mt-8 flex items-center justify-between gap-3 rounded-full border border-[#dfe1e5] px-5 py-3">
+                <span className="text-sm text-[#1a1a1a]">
+                  Tape « seo aix en provence » et tu verras ma place
+                </span>
+                <span className="text-lg text-[#4285F4]">🔍</span>
+              </div>
+            </div>
+            <p className="mx-auto mt-4 max-w-[420px] text-center text-[15px] leading-[25.5px] text-[#1a1a1a]">
+              Le SEO à Aix-en-Provence, c&apos;est un terrain de jeu à fort
+              potentiel.
+            </p>
+          </div>
+          <div className="space-y-5 text-[15px] leading-[25.5px] text-[#1a1a1a]">
+            <p>
+              Ville d&apos;art, de droit et d&apos;université au cœur de la
+              Provence, Aix-en-Provence séduit les visiteurs chaque année sans
+              jamais perdre son authenticité. À Aix-en-Provence, il fait bon
+              vivre. Nous vivons au rythme des cigales, des marchés colorés et
+              des parfums de lavande. La culture s&apos;y mêle aux spectacles,
+              à la danse musicale, inspirant chaque jour restaurateurs,
+              commerçants et artisans.
+            </p>
+            <p>
+              Mais dans une ville aussi dynamique qu&apos;exigeante, cette
+              richesse appartient au monde réel. Sur Google, les règles sont
+              différentes. Le digital n&apos;a ni parfum, ni saveur, ni
+              vitrine pour attirer les passants. Aujourd&apos;hui, savoir
+              parler le langage de Google est devenu indispensable pour 100%
+              des sites entrants. Plus de 85% des consommateurs effectuent une
+              recherche en ligne avant de pousser la porte d&apos;un
+              commerçant.
+            </p>
+          </div>
         </div>
-      </section>
-
-      {/* Test Google */}
-      <section className="mx-auto max-w-[900px] px-6 py-10">
-        <p className="text-[15px] leading-[25.5px] text-[#1a1a1a]">
-          Fait le test, tape « seo aix-en-provence » : tu verras JWL Marketing
-          entre la 1ère et la 2ème page.
-        </p>
-        <Image
-          src="/images/qui-suis-je-serp.png"
-          alt="Résultat Google pour seo aix-en-provence — JWL Marketing"
-          width={2000}
-          height={1414}
-          className="mx-auto mt-6 h-auto w-full max-w-[700px] rounded-2xl border border-[#eee]"
-        />
-        <p className="mx-auto mt-6 max-w-[700px] text-center text-[15px] leading-[25.5px] text-[#1a1a1a]">
-          Le SEO à Aix-en-Provence, c&apos;est un terrain de jeu à fort
-          potentiel.
-        </p>
       </section>
 
       {/* 1. J'analyse ton marché */}
@@ -356,7 +374,14 @@ export default function QuiSuisJe() {
       <section className="mx-auto max-w-[900px] px-6 py-10">
         <StepNumber n={3} />
         <div className="mt-4 grid items-center gap-8 md:grid-cols-2">
-          <div className="order-2 md:order-1">
+          <Image
+            src="/images/qui-suis-je-gmb.png"
+            alt="Optimisation fiche Google Business Profile JWL Marketing"
+            width={2000}
+            height={1414}
+            className="h-auto w-full rounded-2xl border border-[#eee] object-cover"
+          />
+          <div>
             <h3 className="font-heading text-3xl leading-tight md:text-[54px] text-black">
               <span className="italic text-[#c9846f]">J&apos;optimise</span>{" "}
               <span className="font-medium">ta fiche Google profile.</span>
@@ -378,13 +403,6 @@ export default function QuiSuisJe() {
               Améliorer ma visibilité locale
             </Link>
           </div>
-          <Image
-            src="/images/qui-suis-je-gmb.png"
-            alt="Optimisation fiche Google Business Profile JWL Marketing"
-            width={2000}
-            height={1414}
-            className="order-1 h-auto w-full rounded-2xl border border-[#eee] object-cover md:order-2"
-          />
         </div>
       </section>
 
@@ -418,17 +436,9 @@ export default function QuiSuisJe() {
       </section>
 
       {/* 5. Je convaincs Google */}
-      <section className="mx-auto max-w-[900px] px-6 py-10 text-center">
+      <section className="mx-auto max-w-[900px] px-6 py-10">
         <StepNumber n={5} />
-        <Image
-          src="/images/qui-suis-je-duo.png"
-          alt="Jodie Lapaillerie et son assistante IA JWL Marketing"
-          width={1410}
-          height={2000}
-          className="mx-auto mt-4 h-auto w-full max-w-[500px] rounded-2xl object-cover"
-        />
-        <p className="mt-2 text-xs text-black">Jodie-LAPAILLERIE / IA 2026</p>
-        <h3 className="mt-6 font-heading text-3xl leading-tight md:text-[54px] text-black">
+        <h3 className="mt-4 text-center font-heading text-3xl leading-tight md:text-[54px] text-black">
           <span className="italic text-[#c9846f]">
             Je convaincs <GoogleColors />
           </span>{" "}
@@ -436,31 +446,43 @@ export default function QuiSuisJe() {
             que tu es le meilleur sur Aix-en-Provence.
           </span>
         </h3>
+        <div className="mt-8 grid items-center gap-8 md:grid-cols-2">
+          <p className="text-[15px] leading-[25.5px] text-[#1a1a1a]">
+            Parce qu&apos;aucune entreprise ne ressemble à une autre,
+            j&apos;aime découvrir ton activité sur le terrain. Du centre
+            historique d&apos;Aix-en-Provence à Puyricard, des Milles à La
+            Duranne, en passant par le Jas-de-Bouffan, le Val Saint-André, le
+            Pont de l&apos;Arc, Corsy, Célony ou Beauregard, je me déplace
+            pour comprendre ton environnement, tes clients et tes objectifs.
+            Et si la distance nous sépare, la visio prend simplement le
+            relais.
+          </p>
+          <div className="text-center">
+            <Image
+              src="/images/qui-suis-je-duo.png"
+              alt="Jodie Lapaillerie et son assistante IA JWL Marketing"
+              width={1410}
+              height={2000}
+              className="mx-auto h-auto w-full max-w-[420px] rounded-2xl object-cover"
+            />
+            <p className="mt-2 text-xs text-black">
+              Jodie-LAPAILLERIE / IA 2026
+            </p>
+          </div>
+        </div>
       </section>
 
-      {/* Je me déplace */}
-      <section className="mx-auto max-w-[800px] px-6 py-10 text-center">
-        <h3 className="font-heading text-3xl leading-tight md:text-[54px] text-black">
+      {/* Je me déplace + Marché digital + zones */}
+      <section className="mx-auto max-w-[1000px] px-6 py-10">
+        <h3 className="text-center font-heading text-3xl leading-tight md:text-[54px] text-black">
           <span className="italic text-[#c9846f]">Je me déplace</span>{" "}
           <span className="font-medium">partout en France</span>
+          <br />
+          <span className="font-medium">
+            Et à Aix-en-Provence, je viens te voir sans frais de déplacement.
+          </span>
         </h3>
-        <p className="mt-4 text-[15px] leading-[25.5px] text-[#1a1a1a]">
-          Parce qu&apos;aucune entreprise ne ressemble à une autre,
-          j&apos;aime découvrir ton activité sur le terrain. Du centre
-          historique d&apos;Aix-en-Provence à Puyricard, des Milles à La
-          Duranne, en passant par le Jas-de-Bouffan, le Val Saint-André, le
-          Pont de l&apos;Arc, Corsy, Célony ou Beauregard, je me déplace pour
-          comprendre ton environnement, tes clients et tes objectifs. Et si la
-          distance nous sépare, la visio prend simplement le relais.
-        </p>
-        <p className="mt-4 font-semibold text-gold">
-          Et à Aix-en-Provence, je viens te voir sans frais de déplacement.
-        </p>
-      </section>
-
-      {/* Marché digital + zones */}
-      <section className="mx-auto max-w-[1000px] px-6 py-10">
-        <div className="grid items-center gap-8 md:grid-cols-2">
+        <div className="mt-8 grid items-center gap-8 md:grid-cols-2">
           <Image
             src="/images/qui-suis-je-carte-france.png"
             alt="Zone d'intervention JWL Marketing — PACA sur place, France entière à distance"
@@ -506,16 +528,13 @@ export default function QuiSuisJe() {
 
       {/* CTA de clôture */}
       <section className="bg-[#141414] px-6 py-16 text-center text-white">
-        <h2 className="font-heading text-3xl leading-tight md:text-[54px]">
-          Parce que tu <span className="italic text-gold">mérites le meilleur</span>
-        </h2>
         <a
           href="https://calendly.com/jwlm"
           target="_blank"
           rel="noopener"
-          className="mt-6 inline-block rounded-full border-2 border-gold bg-gold px-10 py-[15px] font-medium text-white transition-colors hover:border-[#b8952f] hover:bg-[#b8952f]"
+          className="inline-block rounded-full bg-[#c9846f] px-10 py-[15px] font-medium text-white transition-colors hover:bg-[#b8735f]"
         >
-          Réserver un appel
+          Parce que tu mérites le meilleur
         </a>
 
         <h3 className="mt-14 font-heading text-3xl leading-tight md:text-[54px]">
