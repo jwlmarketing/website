@@ -221,7 +221,7 @@ export default function QuiSuisJe() {
           <span className="italic text-[#c9846f]">Je connais ton marché</span>{" "}
           <span className="font-medium">sur Aix-en-Provence.</span>
         </h2>
-        <div className="mt-8 space-y-5 text-[15px] leading-[25.5px] text-[#1a1a1a]">
+        <div className="mt-8 space-y-5 border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
           <p>
             Ville d&apos;art, de droit et d&apos;université au cœur de la
             Provence, Aix-en-Provence séduit les visiteurs chaque année sans
@@ -256,7 +256,7 @@ export default function QuiSuisJe() {
           </span>
         </h3>
         <div className="mt-8 grid items-center gap-8 md:grid-cols-2">
-          <div className="text-[15px] leading-[25.5px] text-[#1a1a1a]">
+          <div className="border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
             <p>
               Une vision entrepreneuriale de demain. Vous avez peut-être déjà
               vécu cette situation :
@@ -370,16 +370,19 @@ export default function QuiSuisJe() {
               <span className="italic text-[#c9846f]">J&apos;optimise</span>{" "}
               <span className="font-medium">ta fiche Google profile.</span>
             </h3>
-            <p className="mt-4 text-[15px] leading-[25.5px] text-[#1a1a1a]">
-              Ta fiche Google est souvent le premier contact avec un futur
-              client. Je l&apos;optimise pour qu&apos;elle inspire confiance,
-              remonte dans les recherches locales et génère davantage
-              d&apos;appels, de visites et de demandes de devis. Je travaille
-              chaque détail : informations, catégories, services, photos et
-              mots-clés stratégiques. Tu bénéficies d&apos;une présence locale
-              plus forte pour attirer des prospects qualifiés au moment où ils
-              recherchent tes prestations.
-            </p>
+            <div className="mt-4 border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
+              <p>
+                Ta fiche Google est souvent le premier contact avec un futur
+                client. Je l&apos;optimise pour qu&apos;elle inspire
+                confiance, remonte dans les recherches locales et génère
+                davantage d&apos;appels, de visites et de demandes de devis.
+                Je travaille chaque détail : informations, catégories,
+                services, photos et mots-clés stratégiques. Tu bénéficies
+                d&apos;une présence locale plus forte pour attirer des
+                prospects qualifiés au moment où ils recherchent tes
+                prestations.
+              </p>
+            </div>
             <Link
               href="/google-my-business-aix-en-provence"
               className="mx-auto mt-4 block w-fit rounded-full bg-[#c9846f] px-8 py-3 font-medium text-white transition-colors hover:bg-[#b8735f]"
@@ -398,18 +401,20 @@ export default function QuiSuisJe() {
             <span className="italic text-[#c9846f]">Je crée</span>{" "}
             <span className="font-medium">un site web sur mesure pour toi.</span>
           </h3>
-          <p className="mt-4 text-[15px] leading-[25.5px] text-[#1a1a1a]">
-            Chaque projet est développé selon tes besoins réels, sans modèle
-            générique ni solution toute faite. Selon le contenu, les
-            fonctionnalités et la densité du site, le développement peut être
-            réalisé en HTML ou avec des technologies plus avancées comme
-            Next.js afin d&apos;offrir les meilleures performances possibles.
-            À la livraison, tu reçois une certification PDF détaillant les
-            optimisations techniques réalisées ainsi que les bonnes pratiques
-            mises en place. L&apos;objectif est de te fournir un site rapide,
-            sécurisé, évolutif et pensé dès le départ pour la visibilité sur
-            Google.
-          </p>
+          <div className="mt-4 border-2 border-gold p-8 text-left text-[17px] leading-[28px] text-[#1a1a1a]">
+            <p>
+              Chaque projet est développé selon tes besoins réels, sans
+              modèle générique ni solution toute faite. Selon le contenu, les
+              fonctionnalités et la densité du site, le développement peut
+              être réalisé en HTML ou avec des technologies plus avancées
+              comme Next.js afin d&apos;offrir les meilleures performances
+              possibles. À la livraison, tu reçois une certification PDF
+              détaillant les optimisations techniques réalisées ainsi que les
+              bonnes pratiques mises en place. L&apos;objectif est de te
+              fournir un site rapide, sécurisé, évolutif et pensé dès le
+              départ pour la visibilité sur Google.
+            </p>
+          </div>
           <Link
             href="/site-internet-aix-en-provence"
             className="mt-4 inline-block rounded-full bg-[#c9846f] px-8 py-3 font-medium text-white transition-colors hover:bg-[#b8735f]"
@@ -431,16 +436,18 @@ export default function QuiSuisJe() {
           </span>
         </h3>
         <div className="mt-8 grid items-center gap-8 md:grid-cols-2">
-          <p className="text-[15px] leading-[25.5px] text-[#1a1a1a]">
-            Parce qu&apos;aucune entreprise ne ressemble à une autre,
-            j&apos;aime découvrir ton activité sur le terrain. Du centre
-            historique d&apos;Aix-en-Provence à Puyricard, des Milles à La
-            Duranne, en passant par le Jas-de-Bouffan, le Val Saint-André, le
-            Pont de l&apos;Arc, Corsy, Célony ou Beauregard, je me déplace
-            pour comprendre ton environnement, tes clients et tes objectifs.
-            Et si la distance nous sépare, la visio prend simplement le
-            relais.
-          </p>
+          <div className="border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
+            <p>
+              Parce qu&apos;aucune entreprise ne ressemble à une autre,
+              j&apos;aime découvrir ton activité sur le terrain. Du centre
+              historique d&apos;Aix-en-Provence à Puyricard, des Milles à La
+              Duranne, en passant par le Jas-de-Bouffan, le Val Saint-André,
+              le Pont de l&apos;Arc, Corsy, Célony ou Beauregard, je me
+              déplace pour comprendre ton environnement, tes clients et tes
+              objectifs. Et si la distance nous sépare, la visio prend
+              simplement le relais.
+            </p>
+          </div>
           <div className="text-center">
             <Image
               src="/images/qui-suis-je-duo.png"
@@ -474,29 +481,34 @@ export default function QuiSuisJe() {
             height={1414}
             className="mx-auto h-auto w-full max-w-[420px]"
           />
-          <p className="text-[15px] leading-[25.5px] text-[#1a1a1a]">
-            À Aix-en-Provence, le marché digital s&apos;accélère. Les
-            indépendants, les commerçants et les PME se multiplient… et la
-            visibilité Google devient un vrai enjeu de survie. Pas seulement
-            face aux concurrents locaux. Face aussi : aux agences qui
-            proposent des prestations standardisées, aux freelances qui
-            livrent un audit PDF sans suite, aux entreprises qui investissent
-            enfin en SEO et prennent de l&apos;avance. Aix-en-Provence
-            concentre un tissu économique dense et varié : savonneries
-            traditionnelles, entreprises high-tech, calissons, restaurateurs,
-            boulangeries artisanales, professions libérales... Autant de
-            secteurs où Google est le premier point de contact.
-          </p>
+          <div className="border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
+            <p>
+              À Aix-en-Provence, le marché digital s&apos;accélère. Les
+              indépendants, les commerçants et les PME se multiplient… et la
+              visibilité Google devient un vrai enjeu de survie. Pas
+              seulement face aux concurrents locaux. Face aussi : aux
+              agences qui proposent des prestations standardisées, aux
+              freelances qui livrent un audit PDF sans suite, aux
+              entreprises qui investissent enfin en SEO et prennent de
+              l&apos;avance. Aix-en-Provence concentre un tissu économique
+              dense et varié : savonneries traditionnelles, entreprises
+              high-tech, calissons, restaurateurs, boulangeries
+              artisanales, professions libérales... Autant de secteurs où
+              Google est le premier point de contact.
+            </p>
+          </div>
         </div>
         <div className="mt-8 grid items-start gap-8 md:grid-cols-2">
-          <p className="text-[15px] leading-[25.5px] text-[#1a1a1a]">
-            Mon approche est différente. Je commence par comprendre ton
-            activité, tes marges, tes clients idéaux. On construit ensemble
-            une stratégie qui cible les mots-clés à forte intention, ceux qui
-            attirent des prospects prêts à acheter. Freelance, je suis ton
-            interlocutrice unique. Décisions rapides, exécution rigoureuse,
-            zéro turnover sur ton dossier.
-          </p>
+          <div className="border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
+            <p>
+              Mon approche est différente. Je commence par comprendre ton
+              activité, tes marges, tes clients idéaux. On construit
+              ensemble une stratégie qui cible les mots-clés à forte
+              intention, ceux qui attirent des prospects prêts à acheter.
+              Freelance, je suis ton interlocutrice unique. Décisions
+              rapides, exécution rigoureuse, zéro turnover sur ton dossier.
+            </p>
+          </div>
           <div className="flex flex-wrap gap-3">
             {ZONES.map((z) => (
               <span
