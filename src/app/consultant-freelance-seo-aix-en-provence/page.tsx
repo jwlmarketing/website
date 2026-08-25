@@ -255,8 +255,15 @@ export default function QuiSuisJe() {
             sur Aix-en-provence, avant de créer ton site.
           </span>
         </h3>
-        <div className="mt-8 grid items-stretch gap-8 md:grid-cols-2">
-          <div className="h-full border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
+        <div className="mt-8 grid items-center gap-8 md:grid-cols-2">
+          <Image
+            src="/images/qui-suis-je-terrasse.png"
+            alt="Jodie Lapaillerie en terrasse — analyse de marché SEO Aix-en-Provence"
+            width={880}
+            height={632}
+            className="h-auto w-full self-center rounded-2xl border border-[#eee] object-cover"
+          />
+          <div className="border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
             <p>
               Une vision entrepreneuriale de demain. Vous avez peut-être déjà
               vécu cette situation :
@@ -294,13 +301,6 @@ export default function QuiSuisJe() {
               Voir les audits
             </Link>
           </div>
-          <Image
-            src="/images/qui-suis-je-terrasse.png"
-            alt="Jodie Lapaillerie en terrasse — analyse de marché SEO Aix-en-Provence"
-            width={880}
-            height={632}
-            className="h-auto w-full rounded-2xl border border-[#eee] object-cover"
-          />
         </div>
       </section>
 
@@ -319,7 +319,7 @@ export default function QuiSuisJe() {
             alt="Outil de planification des mots-clés Google, sur Aix-en-Provence"
             width={2000}
             height={1414}
-            className="h-auto w-full rounded-2xl border border-[#eee] object-cover"
+            className="h-auto w-full self-center rounded-2xl border border-[#eee] object-cover"
           />
           <div className="h-full border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
             <p>
