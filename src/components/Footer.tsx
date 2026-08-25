@@ -33,9 +33,6 @@ export default function Footer() {
       <div className="mx-auto max-w-[1200px]">
         <div className="flex flex-wrap items-baseline gap-x-4 gap-y-2">
           <h2 className="font-heading text-3xl text-gold">Contactez-moi</h2>
-          <p className="text-sm text-[#c9846f]">
-            JWL MARKETING® est une marque enregistrée auprès de l&apos;INPI.
-          </p>
         </div>
 
         <div className="mt-10 grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-3">
