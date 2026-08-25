@@ -583,7 +583,7 @@ export default function QuiSuisJe() {
         </div>
         <a
           href="https://plugins.jwl-marketing.fr/"
-          className="mt-6 inline-block font-medium text-[#c9846f] underline"
+          className="mt-6 inline-block bg-[#c9846f] px-10 py-[15px] font-medium text-white transition-colors hover:bg-[#b8735f]"
         >
           En savoir plus
         </a>
