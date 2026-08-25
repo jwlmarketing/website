@@ -511,34 +511,6 @@ export default function Home() {
           ))}
         </div>
       </section>
-
-      {/* CTA de clôture */}
-      <section className="px-[5%] py-16">
-        <div className="mx-auto flex max-w-[1200px] flex-col items-center gap-10 md:flex-row">
-          <Image
-            src="/images/cta-carriere-decollee.png"
-            alt="Hâte de voir votre carrière décollée - JWL Marketing"
-            width={1410}
-            height={2000}
-            className="h-auto w-full max-w-[300px] rounded-2xl object-cover"
-          />
-          <div className="flex-1 text-center md:text-left">
-            <h2 className="font-heading text-3xl font-bold leading-tight text-black md:text-[54px]">
-              Hâte de voir votre carrière décollée !
-            </h2>
-            <p className="mt-6 text-lg text-[#555]">
-              Pour toute question concernant le programme, veuillez me
-              contacter
-            </p>
-            <Link
-              href="/contact-jwl-marketing-aix-en-provence"
-              className="mt-6 inline-block rounded-[5px] border-2 border-gold bg-gold px-10 py-[15px] font-medium text-white transition-colors hover:border-[#b8952f] hover:bg-[#b8952f]"
-            >
-              Me contacter
-            </Link>
-          </div>
-        </div>
-      </section>
     </div>
   );
 }

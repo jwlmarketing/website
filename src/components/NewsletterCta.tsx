@@ -2,8 +2,11 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 export default function NewsletterCta() {
+  const pathname = usePathname();
+  const isQuiSuisJe = pathname === "/consultant-freelance-seo-aix-en-provence";
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "sending" | "ok" | "error">("idle");
   const [message, setMessage] = useState("");
@@ -57,7 +60,9 @@ export default function NewsletterCta() {
 
       <div className="px-6 py-[60px] text-center md:px-0 md:pr-10 md:text-left">
         <h2 className="mb-6 font-heading text-[clamp(1.8rem,4vw,2.4rem)] font-bold leading-tight text-[#0D0D0D]">
-          Et toi ? Quand est-ce que tu t&apos;engages pour ton Business ?
+          {isQuiSuisJe
+            ? "Et toi ? Quand est-ce que tu t'engages pour ton Business ?"
+            : "Hâte de voir votre carrière décollée !"}
         </h2>
         <form
           onSubmit={handleSubmit}

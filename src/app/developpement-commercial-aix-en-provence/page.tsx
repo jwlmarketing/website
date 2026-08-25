@@ -9,5 +9,5 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <PlaceholderPage title="Développement Commercial : Démarque toi" />;
+  return <PlaceholderPage title="Développement Commercial" />;
 }
