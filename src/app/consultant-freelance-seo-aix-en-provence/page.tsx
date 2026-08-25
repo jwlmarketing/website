@@ -266,9 +266,9 @@ export default function QuiSuisJe() {
       <section className="mx-auto max-w-[900px] px-6 py-10">
         <StepNumber n={1} />
         <h3 className="mt-4 text-center font-heading text-3xl leading-tight md:text-[54px] text-black">
-          <span className="italic text-[#c9846f]">J&apos;analyse</span>{" "}
+          <span className="italic text-[#c9846f]">J&apos;analyse ton marché</span>{" "}
           <span className="font-medium">
-            ton marché sur Aix-en-provence, avant de créer ton site.
+            sur Aix-en-provence, avant de créer ton site.
           </span>
         </h3>
         <div className="mt-8 grid items-center gap-8 md:grid-cols-2">
