@@ -46,12 +46,11 @@ export default function NewsletterCta() {
       style={{ background: "#fdf2ef" }}
     >
       <div className="relative h-full min-h-[400px] overflow-hidden">
-        <div className="absolute inset-0 bg-[#c9846f]" />
         <Image
-          src="/images/qui-suis-je-hero.png"
+          src="/images/newsletter-jodie.png"
           alt="Jodie Lapaillerie — JWL Marketing"
-          width={1244}
-          height={1387}
+          width={525}
+          height={768}
           className="relative h-full w-full object-cover"
         />
       </div>
