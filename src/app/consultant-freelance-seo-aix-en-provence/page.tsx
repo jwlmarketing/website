@@ -527,7 +527,7 @@ export default function QuiSuisJe() {
       </section>
 
       {/* CTA de clôture */}
-      <section className="bg-[#141414] px-6 py-16 text-center text-white">
+      <section className="bg-[#141414] px-6 py-16 text-center">
         <a
           href="https://calendly.com/jwlm"
           target="_blank"
@@ -536,17 +536,20 @@ export default function QuiSuisJe() {
         >
           Parce que tu mérites le meilleur
         </a>
+      </section>
 
-        <h3 className="mt-14 font-heading text-3xl leading-tight md:text-[54px]">
-          <span className="italic text-gold">Toujours pas convaincu?</span>
+      {/* Toujours pas convaincu */}
+      <section className="bg-white px-6 py-16 text-center">
+        <h3 className="font-heading text-3xl leading-tight md:text-[54px] text-black">
+          <span className="italic text-[#c9846f]">Toujours pas convaincu?</span>
         </h3>
-        <p className="mt-3 font-heading text-3xl leading-tight md:text-[54px]">
+        <p className="mt-3 font-heading text-3xl leading-tight md:text-[54px] text-black">
           Je m&apos;engage aussi auprès de partenaire dynamique sur
           Aix-en-Provence
         </p>
 
-        <div className="mx-auto mt-8 grid max-w-[800px] items-center gap-8 text-left md:grid-cols-[1fr_220px]">
-          <div className="rounded-2xl bg-black p-6 text-sm leading-relaxed text-white/90">
+        <div className="mx-auto mt-8 grid max-w-[900px] items-center gap-8 text-left md:grid-cols-[1fr_280px]">
+          <div className="rounded-2xl bg-[#141414] p-6 text-sm leading-relaxed text-white/90">
             <p>
               J&apos;aime m&apos;entourer d&apos;entrepreneurs qui partagent
               les mêmes valeurs : engagement, proximité et volonté
@@ -574,13 +577,13 @@ export default function QuiSuisJe() {
               alt="Dynamitz — automatisez votre projet"
               width={2000}
               height={1414}
-              className="mx-auto h-auto w-full max-w-[160px]"
+              className="mx-auto h-auto w-full max-w-[280px]"
             />
           </a>
         </div>
         <a
           href="https://plugins.jwl-marketing.fr/"
-          className="mt-6 inline-block font-medium text-gold underline"
+          className="mt-6 inline-block font-medium text-[#c9846f] underline"
         >
           En savoir plus
         </a>
