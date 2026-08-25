@@ -357,20 +357,20 @@ export default function QuiSuisJe() {
       {/* 3. J'optimise ta fiche Google */}
       <section className="mx-auto max-w-[1200px] px-6 py-10">
         <StepNumber n={3} />
-        <div className="mt-4 grid items-stretch gap-8 md:grid-cols-2">
+        <div className="mt-4 grid items-center gap-8 md:grid-cols-2">
           <Image
             src="/images/qui-suis-je-gmb.png"
             alt="Optimisation fiche Google Business Profile JWL Marketing"
             width={2000}
             height={1414}
-            className="h-auto w-full rounded-2xl border border-[#eee] object-cover"
+            className="h-auto w-full self-center rounded-2xl border border-[#eee] object-cover"
           />
-          <div className="flex h-full flex-col">
+          <div>
             <h3 className="font-heading text-3xl leading-tight md:text-[54px] text-black">
               <span className="italic text-[#c9846f]">J&apos;optimise</span>{" "}
               <span className="font-medium">ta fiche Google profile.</span>
             </h3>
-            <div className="mt-4 flex-1 border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
+            <div className="mt-4 border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
               <p>
                 Ta fiche Google est souvent le premier contact avec un futur
                 client. Je l&apos;optimise pour qu&apos;elle inspire
