@@ -27,16 +27,6 @@ const ZONES = [
   "Vitrolles",
 ];
 
-const HOME_REVIEW_NAMES = [
-  "Proxiclic-Provence",
-  "Emmanuelle Clouet",
-  "Angelique Fustier",
-  "jean-michel pagano",
-];
-const HOME_REVIEWS = HOME_REVIEW_NAMES.map((name) =>
-  REVIEWS.find((r) => r.name === name)
-).filter((r): r is (typeof REVIEWS)[number] => Boolean(r));
-
 function StepNumber({ n }: { n: number }) {
   return (
     <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-gold text-2xl font-bold text-white">
@@ -209,7 +199,7 @@ export default function QuiSuisJe() {
       {/* Avis clients */}
       <section className="py-6">
         <div className="mx-auto flex max-w-[1200px] gap-6 overflow-x-auto px-6 pb-4">
-          {HOME_REVIEWS.map((r) => (
+          {REVIEWS.map((r) => (
             <ReviewCard key={r.name} {...r} />
           ))}
         </div>
