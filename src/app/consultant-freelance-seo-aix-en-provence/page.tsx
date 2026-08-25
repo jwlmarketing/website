@@ -305,7 +305,7 @@ export default function QuiSuisJe() {
             </p>
             <Link
               href="/audit-seo-aix-en-provence"
-              className="mt-4 inline-block rounded-full bg-[#c9846f] px-8 py-3 font-medium text-white transition-colors hover:bg-[#b8735f]"
+              className="mx-auto mt-4 block w-fit rounded-full bg-[#c9846f] px-8 py-3 font-medium text-white transition-colors hover:bg-[#b8735f]"
             >
               Voir les audits
             </Link>
@@ -398,7 +398,7 @@ export default function QuiSuisJe() {
             </p>
             <Link
               href="/google-my-business-aix-en-provence"
-              className="mt-4 inline-block rounded-full bg-[#c9846f] px-8 py-3 font-medium text-white transition-colors hover:bg-[#b8735f]"
+              className="mx-auto mt-4 block w-fit rounded-full bg-[#c9846f] px-8 py-3 font-medium text-white transition-colors hover:bg-[#b8735f]"
             >
               Améliorer ma visibilité locale
             </Link>
