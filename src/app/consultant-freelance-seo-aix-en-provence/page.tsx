@@ -173,25 +173,25 @@ export default function QuiSuisJe() {
         </h2>
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           <Image
-            src="/images/qui-suis-je-gmb.png"
+            src="/images/qui-suis-je-gmb-card.png"
             alt="Fiche Google Business Profile JWL Marketing"
-            width={2000}
-            height={1414}
-            className="h-auto w-full rounded-2xl border border-[#eee] object-cover"
+            width={1410}
+            height={950}
+            className="aspect-video w-full rounded-2xl border border-[#eee] object-cover"
           />
           <Image
             src="/images/qui-suis-je-search-console.png"
             alt="Évolution des impressions et clics — Google Search Console"
             width={2000}
             height={1414}
-            className="h-auto w-full rounded-2xl border border-[#eee] object-cover"
+            className="aspect-video w-full rounded-2xl border border-[#eee] object-cover"
           />
           <Image
             src="/images/qui-suis-je-serp.png"
             alt="Résultat Google pour seo aix-en-provence — JWL Marketing"
             width={2000}
             height={1414}
-            className="h-auto w-full rounded-2xl border border-[#eee] object-cover"
+            className="aspect-video w-full rounded-2xl border border-[#eee] object-cover"
           />
         </div>
       </section>
