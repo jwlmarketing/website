@@ -298,7 +298,7 @@ export default function QuiSuisJe() {
             src="/images/qui-suis-je-terrasse.png"
             alt="Jodie Lapaillerie en terrasse — analyse de marché SEO Aix-en-Provence"
             width={880}
-            height={860}
+            height={632}
             className="h-auto w-full rounded-2xl border border-[#eee] object-cover"
           />
         </div>
