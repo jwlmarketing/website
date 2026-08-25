@@ -30,7 +30,7 @@ export default function ReviewCard({
       <div className="mb-2 text-gold" aria-hidden>
         ★★★★★
       </div>
-      <p className="flex-1 text-[13px] leading-relaxed text-[#444]">{shown}</p>
+      <p className="flex-1 whitespace-pre-line text-[13px] leading-relaxed text-[#444]">{shown}</p>
       {isLong && (
         <button
           onClick={() => setExpanded((e) => !e)}
