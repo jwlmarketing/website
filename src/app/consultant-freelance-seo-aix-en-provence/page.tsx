@@ -3,6 +3,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import GoogleColors from "@/components/GoogleColors";
 import ReviewCard from "@/components/ReviewCard";
+import GmbAuditWidget from "@/components/GmbAuditWidget";
 import { REVIEWS } from "@/data/reviews";
 
 export const metadata: Metadata = {
@@ -220,47 +221,30 @@ export default function QuiSuisJe() {
           <span className="italic text-[#c9846f]">Je connais ton marché</span>{" "}
           <span className="font-medium">sur Aix-en-Provence.</span>
         </h2>
-        <div className="mt-8 grid items-center gap-8 md:grid-cols-2">
-          <div>
-            <div className="rounded-2xl border-2 border-black bg-white p-8">
-              <div className="flex items-center gap-2 text-2xl">
-                <GoogleColors />
-              </div>
-              <div className="mt-8 flex items-center justify-between gap-3 rounded-full border border-[#dfe1e5] px-5 py-3">
-                <span className="text-sm text-[#1a1a1a]">
-                  Tape « seo aix en provence » et tu verras ma place
-                </span>
-                <span className="text-lg text-[#4285F4]">🔍</span>
-              </div>
-            </div>
-            <p className="mx-auto mt-4 max-w-[420px] text-center text-[15px] leading-[25.5px] text-[#1a1a1a]">
-              Le SEO à Aix-en-Provence, c&apos;est un terrain de jeu à fort
-              potentiel.
-            </p>
-          </div>
-          <div className="space-y-5 text-[15px] leading-[25.5px] text-[#1a1a1a]">
-            <p>
-              Ville d&apos;art, de droit et d&apos;université au cœur de la
-              Provence, Aix-en-Provence séduit les visiteurs chaque année sans
-              jamais perdre son authenticité. À Aix-en-Provence, il fait bon
-              vivre. Nous vivons au rythme des cigales, des marchés colorés et
-              des parfums de lavande. La culture s&apos;y mêle aux spectacles,
-              à la danse musicale, inspirant chaque jour restaurateurs,
-              commerçants et artisans.
-            </p>
-            <p>
-              Mais dans une ville aussi dynamique qu&apos;exigeante, cette
-              richesse appartient au monde réel. Sur Google, les règles sont
-              différentes. Le digital n&apos;a ni parfum, ni saveur, ni
-              vitrine pour attirer les passants. Aujourd&apos;hui, savoir
-              parler le langage de Google est devenu indispensable pour 100%
-              des sites entrants. Plus de 85% des consommateurs effectuent une
-              recherche en ligne avant de pousser la porte d&apos;un
-              commerçant.
-            </p>
-          </div>
+        <div className="mt-8 space-y-5 text-[15px] leading-[25.5px] text-[#1a1a1a]">
+          <p>
+            Ville d&apos;art, de droit et d&apos;université au cœur de la
+            Provence, Aix-en-Provence séduit les visiteurs chaque année sans
+            jamais perdre son authenticité. À Aix-en-Provence, il fait bon
+            vivre. Nous vivons au rythme des cigales, des marchés colorés et
+            des parfums de lavande. La culture s&apos;y mêle aux spectacles,
+            à la danse musicale, inspirant chaque jour restaurateurs,
+            commerçants et artisans.
+          </p>
+          <p>
+            Mais dans une ville aussi dynamique qu&apos;exigeante, cette
+            richesse appartient au monde réel. Sur Google, les règles sont
+            différentes. Le digital n&apos;a ni parfum, ni saveur, ni
+            vitrine pour attirer les passants. Aujourd&apos;hui, savoir
+            parler le langage de Google est devenu indispensable pour 100%
+            des sites entrants. Plus de 85% des consommateurs effectuent une
+            recherche en ligne avant de pousser la porte d&apos;un
+            commerçant.
+          </p>
         </div>
       </section>
+
+      <GmbAuditWidget />
 
       {/* 1. J'analyse ton marché */}
       <section className="mx-auto max-w-[900px] px-6 py-10">
