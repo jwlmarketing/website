@@ -321,7 +321,7 @@ export default function QuiSuisJe() {
             height={1414}
             className="h-auto w-full rounded-2xl border border-[#eee] object-cover"
           />
-          <div className="border-2 border-gold p-6 text-[15px] leading-[25.5px] text-[#1a1a1a]">
+          <div className="border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
             <p>
               Faire appel à une consultante SEO à Aix-en-Provence, ce
               n&apos;est pas chercher à être premier sur Google à tout prix.
