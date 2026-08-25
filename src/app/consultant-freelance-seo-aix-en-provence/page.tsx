@@ -272,13 +272,6 @@ export default function QuiSuisJe() {
           </span>
         </h3>
         <div className="mt-8 grid items-center gap-8 md:grid-cols-2">
-          <Image
-            src="/images/qui-suis-je-terrasse.png"
-            alt="Jodie Lapaillerie en terrasse — analyse de marché SEO Aix-en-Provence"
-            width={880}
-            height={860}
-            className="h-auto w-full rounded-2xl border border-[#eee] object-cover"
-          />
           <div className="text-[15px] leading-[25.5px] text-[#1a1a1a]">
             <p>
               Une vision entrepreneuriale de demain. Vous avez peut-être déjà
@@ -317,6 +310,13 @@ export default function QuiSuisJe() {
               Voir les audits
             </Link>
           </div>
+          <Image
+            src="/images/qui-suis-je-terrasse.png"
+            alt="Jodie Lapaillerie en terrasse — analyse de marché SEO Aix-en-Provence"
+            width={880}
+            height={860}
+            className="h-auto w-full rounded-2xl border border-[#eee] object-cover"
+          />
         </div>
       </section>
 
