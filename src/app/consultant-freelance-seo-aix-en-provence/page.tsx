@@ -216,12 +216,12 @@ export default function QuiSuisJe() {
       </section>
 
       {/* Marché local */}
-      <section className="mx-auto max-w-[900px] px-6 py-10">
+      <section className="mx-auto max-w-[1200px] px-6 py-10">
         <h2 className="text-center font-heading text-3xl leading-tight md:text-[54px] text-black">
           <span className="italic text-[#c9846f]">Je connais ton marché</span>{" "}
           <span className="font-medium">sur Aix-en-Provence.</span>
         </h2>
-        <div className="mt-8 space-y-5 border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
+        <div className="mt-8 space-y-5 h-full border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
           <p>
             Ville d&apos;art, de droit et d&apos;université au cœur de la
             Provence, Aix-en-Provence séduit les visiteurs chaque année sans
@@ -247,7 +247,7 @@ export default function QuiSuisJe() {
       <GmbAuditWidget />
 
       {/* 1. J'analyse ton marché */}
-      <section className="mx-auto max-w-[900px] px-6 py-10">
+      <section className="mx-auto max-w-[1200px] px-6 py-10">
         <StepNumber n={1} />
         <h3 className="mt-4 text-center font-heading text-3xl leading-tight md:text-[54px] text-black">
           <span className="italic text-[#c9846f]">J&apos;analyse ton marché</span>{" "}
@@ -255,8 +255,8 @@ export default function QuiSuisJe() {
             sur Aix-en-provence, avant de créer ton site.
           </span>
         </h3>
-        <div className="mt-8 grid items-center gap-8 md:grid-cols-2">
-          <div className="border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
+        <div className="mt-8 grid items-stretch gap-8 md:grid-cols-2">
+          <div className="h-full border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
             <p>
               Une vision entrepreneuriale de demain. Vous avez peut-être déjà
               vécu cette situation :
@@ -305,7 +305,7 @@ export default function QuiSuisJe() {
       </section>
 
       {/* 2. J'étudie les recherches Google */}
-      <section className="mx-auto max-w-[900px] px-6 py-10">
+      <section className="mx-auto max-w-[1200px] px-6 py-10">
         <StepNumber n={2} />
         <h3 className="mt-4 text-center font-heading text-3xl leading-tight md:text-[54px] text-black">
           <span className="italic text-[#c9846f]">
@@ -313,7 +313,7 @@ export default function QuiSuisJe() {
           </span>{" "}
           <span className="font-medium">des internautes.</span>
         </h3>
-        <div className="mt-8 grid items-center gap-8 md:grid-cols-2">
+        <div className="mt-8 grid items-stretch gap-8 md:grid-cols-2">
           <Image
             src="/images/qui-suis-je-keyword-tool.png"
             alt="Outil de planification des mots-clés Google, sur Aix-en-Provence"
@@ -321,7 +321,7 @@ export default function QuiSuisJe() {
             height={1414}
             className="h-auto w-full rounded-2xl border border-[#eee] object-cover"
           />
-          <div className="border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
+          <div className="h-full border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
             <p>
               Faire appel à une consultante SEO à Aix-en-Provence, ce
               n&apos;est pas chercher à être premier sur Google à tout prix.
@@ -355,9 +355,9 @@ export default function QuiSuisJe() {
       </section>
 
       {/* 3. J'optimise ta fiche Google */}
-      <section className="mx-auto max-w-[900px] px-6 py-10">
+      <section className="mx-auto max-w-[1200px] px-6 py-10">
         <StepNumber n={3} />
-        <div className="mt-4 grid items-center gap-8 md:grid-cols-2">
+        <div className="mt-4 grid items-stretch gap-8 md:grid-cols-2">
           <Image
             src="/images/qui-suis-je-gmb.png"
             alt="Optimisation fiche Google Business Profile JWL Marketing"
@@ -365,12 +365,12 @@ export default function QuiSuisJe() {
             height={1414}
             className="h-auto w-full rounded-2xl border border-[#eee] object-cover"
           />
-          <div>
+          <div className="flex h-full flex-col">
             <h3 className="font-heading text-3xl leading-tight md:text-[54px] text-black">
               <span className="italic text-[#c9846f]">J&apos;optimise</span>{" "}
               <span className="font-medium">ta fiche Google profile.</span>
             </h3>
-            <div className="mt-4 border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
+            <div className="mt-4 flex-1 border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
               <p>
                 Ta fiche Google est souvent le premier contact avec un futur
                 client. Je l&apos;optimise pour qu&apos;elle inspire
@@ -394,14 +394,14 @@ export default function QuiSuisJe() {
       </section>
 
       {/* 4. Je crée un site web */}
-      <section className="mx-auto max-w-[900px] px-6 py-10">
+      <section className="mx-auto max-w-[1200px] px-6 py-10">
         <StepNumber n={4} />
         <div className="mx-auto mt-4 max-w-[600px] text-center">
           <h3 className="font-heading text-3xl leading-tight md:text-[54px] text-black">
             <span className="italic text-[#c9846f]">Je crée</span>{" "}
             <span className="font-medium">un site web sur mesure pour toi.</span>
           </h3>
-          <div className="mt-4 border-2 border-gold p-8 text-left text-[17px] leading-[28px] text-[#1a1a1a]">
+          <div className="mt-4 h-full border-2 border-gold p-8 text-left text-[17px] leading-[28px] text-[#1a1a1a]">
             <p>
               Chaque projet est développé selon tes besoins réels, sans
               modèle générique ni solution toute faite. Selon le contenu, les
@@ -425,7 +425,7 @@ export default function QuiSuisJe() {
       </section>
 
       {/* 5. Je convaincs Google */}
-      <section className="mx-auto max-w-[900px] px-6 py-10">
+      <section className="mx-auto max-w-[1200px] px-6 py-10">
         <StepNumber n={5} />
         <h3 className="mt-4 text-center font-heading text-3xl leading-tight md:text-[54px] text-black">
           <span className="italic text-[#c9846f]">
@@ -435,8 +435,8 @@ export default function QuiSuisJe() {
             que tu es le meilleur sur Aix-en-Provence.
           </span>
         </h3>
-        <div className="mt-8 grid items-center gap-8 md:grid-cols-2">
-          <div className="border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
+        <div className="mt-8 grid items-stretch gap-8 md:grid-cols-2">
+          <div className="h-full border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
             <p>
               Parce qu&apos;aucune entreprise ne ressemble à une autre,
               j&apos;aime découvrir ton activité sur le terrain. Du centre
@@ -464,7 +464,7 @@ export default function QuiSuisJe() {
       </section>
 
       {/* Je me déplace + Marché digital + zones */}
-      <section className="mx-auto max-w-[1000px] px-6 py-10">
+      <section className="mx-auto max-w-[1200px] px-6 py-10">
         <h3 className="text-center font-heading text-3xl leading-tight md:text-[54px] text-black">
           <span className="italic text-[#c9b896]">Je me déplace</span>{" "}
           <span className="font-medium">partout en France</span>
@@ -473,7 +473,7 @@ export default function QuiSuisJe() {
             Et à Aix-en-Provence, je viens te voir sans frais de déplacement.
           </span>
         </h3>
-        <div className="mt-8 grid items-center gap-8 md:grid-cols-2">
+        <div className="mt-8 grid items-stretch gap-8 md:grid-cols-2">
           <Image
             src="/images/qui-suis-je-carte-france.png"
             alt="Zone d'intervention JWL Marketing — PACA sur place, France entière à distance"
@@ -481,7 +481,7 @@ export default function QuiSuisJe() {
             height={1414}
             className="mx-auto h-auto w-full max-w-[420px]"
           />
-          <div className="border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
+          <div className="h-full border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
             <p>
               À Aix-en-Provence, le marché digital s&apos;accélère. Les
               indépendants, les commerçants et les PME se multiplient… et la
@@ -499,7 +499,7 @@ export default function QuiSuisJe() {
           </div>
         </div>
         <div className="mt-8 grid items-start gap-8 md:grid-cols-2">
-          <div className="border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
+          <div className="h-full border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
             <p>
               Mon approche est différente. Je commence par comprendre ton
               activité, tes marges, tes clients idéaux. On construit
