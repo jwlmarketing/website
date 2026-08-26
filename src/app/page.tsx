@@ -229,7 +229,7 @@ function OfferCard({
       )}
       <Link
         href={offer.href}
-        className="mt-6 inline-block self-start rounded-[5px] bg-[#c9846f] px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-[#b8735f]"
+        className="mt-6 inline-block self-center rounded-[5px] bg-[#c9846f] px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-[#b8735f]"
       >
         {offer.cta}
       </Link>
@@ -384,7 +384,7 @@ export default function Home() {
                   <li key={item}>{item}</li>
                 ))}
               </ul>
-              <div className="px-6 pb-8">
+              <div className="px-6 pb-8 text-center">
                 <Link
                   href={step.href}
                   className="inline-block rounded-full bg-[#c9846f] px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-[#b8735f]"
