@@ -584,10 +584,7 @@ export default function QuiSuisJe() {
               des fondations solides.
             </p>
           </div>
-          <a
-            href="https://plugins.jwl-marketing.fr/"
-            className="mx-auto inline-block"
-          >
+          <div className="mx-auto">
             <Image
               src="/images/logo-partenaire-dynamitz.png"
               alt="Dynamitz — automatisez votre projet"
@@ -595,14 +592,11 @@ export default function QuiSuisJe() {
               height={1414}
               className="mx-auto h-auto w-full max-w-[280px]"
             />
-          </a>
+          </div>
         </div>
-        <a
-          href="https://plugins.jwl-marketing.fr/"
-          className="mt-6 inline-block bg-[#c9846f] px-10 py-[15px] font-medium text-white transition-colors hover:bg-[#b8735f]"
-        >
+        <span className="mt-6 inline-block bg-[#c9846f] px-10 py-[15px] font-medium text-white">
           En savoir plus
-        </a>
+        </span>
       </section>
     </div>
   );
