@@ -6,6 +6,7 @@ const PARTNERS = [
   { src: "/images/partenaires/dynamitz.png", alt: "Dynamitz", width: 2866, height: 1342 },
   { src: "/images/partenaires/inovea.png", alt: "Inovea", width: 2866, height: 1342 },
   { src: "/images/partenaires/web-difference.png", alt: "Web Différence", width: 391, height: 183 },
+  { src: "/images/partenaires/entrepreneurielles.png", alt: "Entrepreneuri'elles", width: 510, height: 170 },
 ];
 
 const TRACK = [...PARTNERS, ...PARTNERS, ...PARTNERS, ...PARTNERS];
