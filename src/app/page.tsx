@@ -189,7 +189,7 @@ function OfferCard({
       <p className="mt-4 text-sm font-semibold uppercase tracking-wide text-gold">
         {offer.lead}
       </p>
-      <ul className="mt-2 space-y-1.5 text-sm text-white/85">
+      <ul className="mt-2 flex-1 space-y-1.5 text-sm text-white/85">
         {offer.items.map((item) => (
           <li key={item} className="flex gap-2">
             <span className="text-gold">✔</span>
