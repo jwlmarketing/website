@@ -5,6 +5,7 @@ import GoogleColors from "@/components/GoogleColors";
 import ReviewCard from "@/components/ReviewCard";
 import GmbAuditWidget from "@/components/GmbAuditWidget";
 import { REVIEWS } from "@/data/reviews";
+import TypewriterText from "@/components/TypewriterText";
 
 export const metadata: Metadata = {
   title: "Consultant Freelance SEO Aix-en-Provence | JWL Marketing",
@@ -87,8 +88,8 @@ export default function QuiSuisJe() {
             <span className="rounded-full bg-[#faf3ea] px-5 py-[15px] text-sm font-semibold text-black">
               + de 20 projets depuis 2025
             </span>
-            <p className="font-heading text-4xl italic text-[#c9846f]">
-              Bonjour, je m&apos;appelle Jodie.
+            <p className="min-h-[1.2em] font-heading text-4xl italic text-[#c9846f]">
+              <TypewriterText text="Bonjour, je m'appelle Jodie." speed={45} />
             </p>
           </div>
         </div>
