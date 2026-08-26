@@ -9,6 +9,8 @@ import ClientResultsWidget from "@/components/ClientResultsWidget";
 import { REVIEWS } from "@/data/reviews";
 import ReviewCard from "@/components/ReviewCard";
 import GuaranteesCards from "@/components/GuaranteesCards";
+import EscalierReveal from "@/components/EscalierReveal";
+import TypewriterText from "@/components/TypewriterText";
 
 const METHODE_STEPS = [
   {
@@ -176,8 +178,10 @@ function OfferCard({
         {offer.title}
       </h3>
       {hasSubtitle && (
-        <p className="mt-2 font-semibold italic text-white/90">
-          {(offer as (typeof OFFERS_STARTER)[number]).subtitle}
+        <p className="mt-2 min-h-[2.5em] font-semibold italic text-white/90">
+          <TypewriterText
+            text={(offer as (typeof OFFERS_STARTER)[number]).subtitle}
+          />
         </p>
       )}
       <p className="mt-4 text-sm font-semibold uppercase tracking-wide text-gold">
@@ -196,7 +200,7 @@ function OfferCard({
           <p className="mt-4 text-sm font-semibold uppercase tracking-wide text-gold">
             {(offer as (typeof OFFERS_STARTER)[number]).lead2}
           </p>
-          <ul className="mt-2 space-y-1.5 text-sm text-white/85">
+          <ul className="mt-2 space-y-1.5 text-sm text-[#c9846f]">
             {(offer as (typeof OFFERS_STARTER)[number]).items2!.map((item) => (
               <li key={item} className="flex gap-2">
                 <span className="text-gold">✔</span>
@@ -212,11 +216,13 @@ function OfferCard({
         </p>
       )}
       {hasObjectif && (
-        <p className="mt-4 text-sm text-white/85">
+        <p className="mt-4 min-h-[3em] text-sm text-white/85">
           <span className="font-semibold uppercase tracking-wide text-gold">
             Objectif :
           </span>{" "}
-          {(offer as (typeof OFFERS_NEXT)[number]).objectif}
+          <TypewriterText
+            text={(offer as (typeof OFFERS_NEXT)[number]).objectif}
+          />
         </p>
       )}
       <Link
@@ -412,20 +418,44 @@ export default function Home() {
             <span className="text-black">adapté a tes objectifs</span>
           </h2>
         </div>
-        <div className="mx-auto flex max-w-[1200px] flex-col gap-8 md:flex-row">
+        <EscalierReveal
+          className="mx-auto flex max-w-[1200px] flex-col gap-8 md:flex-row"
+          itemClassName="flex flex-1 flex-col"
+        >
           {OFFERS_STARTER.map((offer) => (
             <OfferCard key={offer.title} offer={offer} />
           ))}
+        </EscalierReveal>
+
+        <div className="mx-auto mt-10 flex max-w-[1200px] justify-center">
+          <Link
+            href="/contact-jwl-marketing-aix-en-provence"
+            className="inline-block rounded-full bg-[#c9846f] px-9 py-[18px] text-lg font-medium text-white transition-colors hover:bg-[#b8735f]"
+          >
+            Un doute sur ton choix ? Demande un conseil gratuit
+          </Link>
         </div>
 
         <SectionHeading
           kicker="Et après ?"
           title="on poursuit l'aventure ensemble ou en autonomie"
         />
-        <div className="mx-auto flex max-w-[820px] flex-col gap-8 md:flex-row">
+        <EscalierReveal
+          className="mx-auto flex max-w-[820px] flex-col gap-8 md:flex-row"
+          itemClassName="flex flex-1 flex-col"
+        >
           {OFFERS_NEXT.map((offer) => (
             <OfferCard key={offer.title} offer={offer} />
           ))}
+        </EscalierReveal>
+
+        <div className="mx-auto mt-10 flex max-w-[820px] justify-center">
+          <Link
+            href="/site-internet-aix-en-provence"
+            className="inline-block rounded-full bg-[#c9846f] px-9 py-[18px] text-lg font-medium text-white transition-colors hover:bg-[#b8735f]"
+          >
+            JWL Master — voir l&apos;accompagnement
+          </Link>
         </div>
       </section>
 

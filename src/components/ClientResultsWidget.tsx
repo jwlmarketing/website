@@ -1,6 +1,26 @@
 "use client";
 
+import { useEffect, useRef, useState } from "react";
+
 export default function ClientResultsWidget() {
+  const imgWrapRef = useRef<HTMLAnchorElement>(null);
+  const [inView, setInView] = useState(false);
+
+  useEffect(() => {
+    const el = imgWrapRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) setInView(true);
+        });
+      },
+      { threshold: 0.3 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div className="widget">
       <div className="stats-left">
@@ -36,12 +56,19 @@ export default function ClientResultsWidget() {
             <span className="dot green"></span>
             <div className="browser-url">www.proxiclic-provence.fr</div>
           </div>
-          <div className="browser-content">
+          <a
+            href="https://www.proxiclic-provence.fr"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="browser-content"
+            ref={imgWrapRef}
+          >
             <img
+              className={inView ? "in-view" : ""}
               src="https://api.jwl-marketing.fr/proxiclic-provence/proxiclic-site.webp"
               alt="Site Proxiclic-Provence"
             />
-          </div>
+          </a>
         </div>
       </div>
 
@@ -179,11 +206,33 @@ export default function ClientResultsWidget() {
         }
         .browser-content {
           position: relative;
+          display: block;
+          overflow: hidden;
+          cursor: pointer;
         }
         .browser-content :global(img) {
           display: block;
           width: 100%;
           height: auto;
+          transform: scale(1);
+          transition: transform 1.4s cubic-bezier(0.16, 1, 0.3, 1);
+          will-change: transform;
+        }
+        .browser-content :global(img.in-view) {
+          animation: proxiclic-breathe 6s ease-in-out 1.4s infinite;
+          transform: scale(1.06);
+        }
+        .browser-content:hover :global(img) {
+          transform: scale(1.1);
+        }
+        @keyframes proxiclic-breathe {
+          0%,
+          100% {
+            transform: scale(1.06) translateY(0);
+          }
+          50% {
+            transform: scale(1.09) translateY(-3px);
+          }
         }
 
         .promo-badge {

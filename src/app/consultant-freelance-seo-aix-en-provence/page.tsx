@@ -38,10 +38,32 @@ function StepNumber({ n }: { n: number }) {
 export default function QuiSuisJe() {
   return (
     <div>
+      {/* Logo + compte, au-dessus du hero */}
+      <div className="flex w-full items-center justify-between px-[5%] pt-20">
+        <Link href="/">
+          <Image
+            src="/images/logo-jwl-marketing.png"
+            alt="JWL Marketing Aix-en-Provence"
+            width={966}
+            height={187}
+            className="h-[36px] w-auto"
+          />
+        </Link>
+        <a href="https://intranet.jwlmarketing.fr/" aria-label="Connexion espace client">
+          <Image
+            src="/images/seco.png"
+            alt="Connexion espace client"
+            width={28}
+            height={28}
+            className="h-7 w-7"
+          />
+        </a>
+      </div>
+
       {/* Hero */}
       <div className="flex w-full flex-col items-center justify-between gap-10 bg-white px-[5%] py-[60px] lg:flex-row">
         <div className="max-w-[600px] flex-1">
-          <h1 className="font-heading text-4xl leading-[1.05] lg:text-[54px] lg:leading-[0.95] text-black">
+          <h1 className="font-heading text-4xl leading-[1.05] lg:text-[60px] lg:leading-[0.95] text-black">
             <span className="font-medium">
               Consultante SEO
               <br />
@@ -81,21 +103,19 @@ export default function QuiSuisJe() {
       </div>
 
       {/* Citation photo */}
-      <section className="mx-auto max-w-[900px] px-6 py-10">
-        <div className="mx-auto grid items-center gap-8 md:grid-cols-[220px_1fr]">
+      <section className="mx-auto max-w-[1100px] px-6 py-10">
+        <div className="mx-auto grid items-center gap-10 md:grid-cols-[320px_1fr]">
           <Image
             src="/images/qui-suis-je-portrait.png"
             alt="Jodie Lapaillerie — consultante en marketing digital"
             width={1410}
             height={2000}
-            className="mx-auto h-auto w-full max-w-[220px] rounded-2xl object-cover"
+            className="mx-auto h-auto w-full max-w-[320px] rounded-2xl object-cover"
           />
           <div className="text-center">
-            <p className="font-heading text-3xl leading-tight md:text-[54px] text-black">
-              Consultante en{" "}
-              <span className="text-[#c9846f]">marketing digital, experte SEO</span>{" "}
-              et spécialiste des systèmes
-            </p>
+            <h2 className="font-heading text-3xl leading-tight md:text-[54px] text-black">
+              Consultante SEO en stratégie digital et developpement commercial.
+            </h2>
             <div className="mt-2 text-4xl md:text-6xl">
               <GoogleColors />
             </div>
