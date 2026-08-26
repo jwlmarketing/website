@@ -89,7 +89,7 @@ export default function QuiSuisJe() {
               + de 20 projets depuis 2025
             </span>
             <p className="min-h-[1.2em] font-heading text-4xl italic text-[#c9846f]">
-              <TypewriterText text="Bonjour, je m'appelle Jodie." speed={45} />
+              <TypewriterText text="Bonjour, je m'appelle Jodie." speed={113} />
             </p>
           </div>
         </div>
