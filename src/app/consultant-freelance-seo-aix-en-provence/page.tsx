@@ -255,9 +255,7 @@ export default function QuiSuisJe() {
         </div>
       </section>
 
-      <div className="mx-6 max-w-[700px] md:mr-auto">
-        <GmbAuditWidget />
-      </div>
+      <GmbAuditWidget />
 
       {/* 1. J'analyse ton marché */}
       <section className="mx-auto max-w-[1200px] px-6 py-10">
