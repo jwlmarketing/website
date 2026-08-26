@@ -57,8 +57,32 @@ const QUI_SUIS_JE_FAQ = [
   },
 ];
 
+const NICE_FAQ = [
+  {
+    q: "Pourquoi prendre une consultante SEO à Nice plutôt qu'une agence ?",
+    a: "Parce que je ne travaille pas avec des modèles préfabriqués. Une boutique indépendante du quartier Libération n'a pas les mêmes clients ni les mêmes objectifs qu'un cabinet situé à Cimiez ou qu'une entreprise installée à Saint-Isidore. Chaque stratégie est construite autour de ton activité, pas autour d'un forfait standard. J'analyse ton activité, ton marché local et les recherches de tes futurs clients niçois. Chaque stratégie est construite autour de ton entreprise, pas autour d'un forfait.",
+  },
+  {
+    q: "Dans combien de temps le SEO m'apportera-t-il des clients à Nice ?",
+    a: "Tout dépend de ton marché, de la concurrence et de ton point de départ. Un artisan à Nice Nord, un agent immobilier ou une profession libérale ne feront pas face aux mêmes défis. En général, les premiers résultats apparaissent entre 3 et 6 mois, mais le SEO est un travail de fond. Mon objectif n'est pas de t'apporter du trafic rapidement. Mon objectif est de construire une visibilité durable capable de générer des demandes de contact sur le long terme.",
+  },
+  {
+    q: "J'ai déjà un bon emplacement à Nice, pourquoi faire du SEO ?",
+    a: "Parce qu'un bon emplacement à Nice est un avantage. Mais Google peut te rendre visible auprès de personnes qui ne connaissent pas encore ton entreprise. L'objectif n'est pas de remplacer ta vitrine. C'est de lui apporter davantage de clients.",
+  },
+  {
+    q: "Comment adapter une stratégie SEO à une entreprise implantée dans la métropole niçoise ?",
+    a: "Une stratégie SEO efficace commence par la compréhension de ton marché. Les attentes d'un artisan à Carros, d'une profession libérale à Nice ou d'une entreprise de services à Saint-Laurent-du-Var sont différentes. J'analyse ton activité, tes concurrents et les recherches de tes futurs clients pour construire une stratégie adaptée à tes objectifs. Le but n'est pas d'attirer tout le monde. Le but est d'attirer les bonnes personnes au bon moment.",
+  },
+  {
+    q: "Le GEO (Generative Engine Optimization) va-t-il remplacer le SEO local sur Nice ?",
+    a: "Non. Le GEO et le SEO local travaillent ensemble. Le SEO aide ton entreprise à être visible sur Google. Le GEO aide les intelligences artificielles comme ChatGPT, Gemini ou Perplexity à comprendre et recommander ton activité. À Nice, un restaurant, un avocat, un artisan ou une agence immobilière a toujours besoin d'une fiche Google optimisée, d'avis clients et d'un site bien référencé. La différence, c'est qu'aujourd'hui les internautes ne cherchent plus seulement sur Google. Ils demandent aussi directement à une IA : \"Quel est le meilleur artisan à Nice ?\" ou \"Quel consultant SEO choisir à Nice ?\" Mon objectif est donc de rendre ton entreprise visible à la fois sur Google et dans les réponses des IA. Parce qu'en 2026, être premier sur Google est un avantage. Être recommandé en plus par l'IA devient un véritable accélérateur de visibilité.",
+  },
+];
+
 const FAQ_BY_PATH: Record<string, typeof HOME_FAQ> = {
   "/consultant-freelance-seo-aix-en-provence": QUI_SUIS_JE_FAQ,
+  "/consultant-freelance-seo-nice": NICE_FAQ,
 };
 
 export default function Faq() {
