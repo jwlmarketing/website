@@ -12,7 +12,22 @@ export default function ScrollRevealAll() {
   const pathname = usePathname();
 
   useEffect(() => {
-    const sections = Array.from(document.querySelectorAll<HTMLElement>("section"));
+    // Cible les blocs de premier niveau de la page (section, ou a defaut les <div>
+    // directement enfants du wrapper racine de la page) : chaque page n'utilise pas
+    // systematiquement des <section>, mais chacune a un wrapper racine sous <main>.
+    const main = document.querySelector("main");
+    const pageRoot = main?.firstElementChild;
+    const explicitSections = Array.from(
+      document.querySelectorAll<HTMLElement>("main section")
+    );
+    const fallbackBlocks =
+      explicitSections.length === 0 && pageRoot
+        ? Array.from(pageRoot.children).filter(
+            (el): el is HTMLElement =>
+              el instanceof HTMLElement && el.tagName !== "SCRIPT"
+          )
+        : [];
+    const sections = explicitSections.length > 0 ? explicitSections : fallbackBlocks;
 
     const observer = new IntersectionObserver(
       (entries) => {
