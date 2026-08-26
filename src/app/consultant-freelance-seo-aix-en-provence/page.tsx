@@ -518,12 +518,15 @@ export default function QuiSuisJe() {
         <div className="mt-8 grid items-start gap-8 md:grid-cols-2">
           <div className="h-full border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
             <p>
-              Mon approche est différente. Je commence par comprendre ton
-              activité, tes marges, tes clients idéaux. On construit
-              ensemble une stratégie qui cible les mots-clés à forte
-              intention, ceux qui attirent des prospects prêts à acheter.
-              Freelance, je suis ton interlocutrice unique. Décisions
-              rapides, exécution rigoureuse, zéro turnover sur ton dossier.
+              <span className="font-bold">
+                Mon approche est différente. Je commence par comprendre ton
+                activité, tes marges, tes clients idéaux.
+              </span>{" "}
+              On construit ensemble une stratégie qui cible les mots-clés à
+              forte intention, ceux qui attirent des prospects prêts à
+              acheter. Freelance, je suis ton interlocutrice unique.
+              Décisions rapides, exécution rigoureuse, zéro turnover sur ton
+              dossier.
             </p>
           </div>
           <div className="flex flex-wrap gap-3">

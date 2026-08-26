@@ -58,7 +58,7 @@ export default function NewsletterCta() {
       <div className="px-6 py-[60px] text-center md:px-0 md:pr-10 md:text-left">
         <h2 className="mb-6 font-heading text-[clamp(1.8rem,4vw,2.4rem)] font-bold leading-tight text-[#0D0D0D]">
           {isQuiSuisJe
-            ? "Et toi ? Quand est-ce que tu t'engages pour ton Business ?"
+            ? "Et toi? Quand est ce que tu t'engages pour ton Business sur Aix?"
             : "Hâte de voir votre carrière décollée !"}
         </h2>
         <form
