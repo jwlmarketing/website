@@ -484,7 +484,7 @@ export default function QuiSuisJe() {
       {/* Je me déplace + Marché digital + zones */}
       <section className="mx-auto max-w-[1200px] px-6 py-10">
         <h3 className="text-center font-heading text-3xl leading-tight md:text-[54px] text-black">
-          <span className="italic text-[#c9b896]">Je me déplace</span>{" "}
+          <span className="italic text-[#c9846f]">Je me déplace</span>{" "}
           <span className="font-medium">partout en France</span>
           <br />
           <span className="font-medium">
