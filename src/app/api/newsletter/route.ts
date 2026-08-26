@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import crypto from "crypto";
-import { prisma } from "@/lib/prisma";
+import type { RowDataPacket } from "mysql2/promise";
+import { getO2switchPool } from "@/lib/o2switch-db";
 import { sendMail } from "@/lib/mailer";
 
 export async function POST(req: Request) {
@@ -13,7 +14,13 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "Adresse email invalide." }, { status: 400 });
   }
 
-  const existing = await prisma.newsletterSubscriber.findUnique({ where: { email } });
+  const pool = getO2switchPool();
+
+  const [rows] = await pool.query<RowDataPacket[]>(
+    "SELECT id, status FROM newsletter_subscribers WHERE email = ? LIMIT 1",
+    [email]
+  );
+  const existing = rows[0];
 
   if (existing && existing.status === "active") {
     return NextResponse.json({ success: true, message: "Vous êtes déjà inscrit(e) !" });
@@ -22,14 +29,15 @@ export async function POST(req: Request) {
   const token = crypto.randomBytes(32).toString("hex");
 
   if (existing) {
-    await prisma.newsletterSubscriber.update({
-      where: { id: existing.id },
-      data: { confirmToken: token, status: "pending" },
-    });
+    await pool.query(
+      "UPDATE newsletter_subscribers SET confirm_token = ?, status = 'pending' WHERE id = ?",
+      [token, existing.id]
+    );
   } else {
-    await prisma.newsletterSubscriber.create({
-      data: { email, name: name || null, status: "pending", confirmToken: token, source },
-    });
+    await pool.query(
+      "INSERT INTO newsletter_subscribers (email, name, status, confirm_token, source) VALUES (?, ?, 'pending', ?, ?)",
+      [email, name || null, token, source]
+    );
   }
 
   const confirmUrl = `${process.env.NEXT_PUBLIC_SITE_URL || "https://www.jwl-marketing.fr"}/api/newsletter/confirm?token=${token}`;
