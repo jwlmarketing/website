@@ -12,7 +12,7 @@ const TRACK = [...PARTNERS, ...PARTNERS, ...PARTNERS, ...PARTNERS];
 
 export default function TrustedPartners() {
   return (
-    <section className="py-14 text-center">
+    <section className="bg-white py-14 text-center">
       <p
         className="mb-8 px-[5%] font-heading text-2xl font-semibold italic text-black md:text-3xl"
         style={{ fontFamily: "var(--font-heading)" }}
@@ -39,14 +39,13 @@ export default function TrustedPartners() {
         .marquee-wrap {
           overflow: hidden;
           width: 100%;
-          background: #ece7dc;
-          padding: 22px 0;
+          background: #fff;
         }
         .marquee-track {
           display: flex;
           align-items: center;
           width: max-content;
-          gap: 70px;
+          gap: 64px;
           animation: marquee-scroll 26s linear infinite;
         }
         .marquee-wrap:hover .marquee-track {
@@ -55,8 +54,8 @@ export default function TrustedPartners() {
         .logo-box {
           flex: 0 0 auto;
           display: flex;
-          height: 60px;
-          width: 150px;
+          height: 56px;
+          width: 140px;
           align-items: center;
           justify-content: center;
         }
@@ -64,12 +63,15 @@ export default function TrustedPartners() {
           height: 100%;
           width: 100%;
           object-fit: contain;
-          filter: grayscale(1) contrast(1.05);
-          mix-blend-mode: multiply;
-          transition: filter 0.3s ease;
+          filter: grayscale(1);
+          opacity: 0.65;
+          transition:
+            filter 0.3s ease,
+            opacity 0.3s ease;
         }
         .logo-box:hover .logo-img {
-          filter: grayscale(0) contrast(1);
+          filter: grayscale(0);
+          opacity: 1;
         }
         @keyframes marquee-scroll {
           from {
