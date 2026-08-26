@@ -19,19 +19,21 @@ export default function TrustedPartners() {
       >
         Mon réseau de confiance
       </p>
-      <div className="marquee-wrap">
-        <div className="marquee-track">
-          {TRACK.map((p, i) => (
-            <div className="logo-box" key={`${p.src}-${i}`}>
-              <Image
-                src={p.src}
-                alt={p.alt}
-                width={p.width}
-                height={p.height}
-                className="h-full w-full object-contain"
-              />
-            </div>
-          ))}
+      <div className="mx-auto max-w-[820px] px-[5%] md:px-0">
+        <div className="marquee-wrap">
+          <div className="marquee-track">
+            {TRACK.map((p, i) => (
+              <div className="logo-box" key={`${p.src}-${i}`}>
+                <Image
+                  src={p.src}
+                  alt={p.alt}
+                  width={p.width}
+                  height={p.height}
+                  className="h-full w-full object-contain"
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
