@@ -29,19 +29,29 @@ export async function POST(req: Request) {
   const toName = (body?.toName || "").trim();
   const subject = body?.subject || "";
   const html = body?.html || "";
+  const text = body?.text || "";
   const fromName = body?.fromName || "JWL Marketing";
+  const replyTo = (body?.replyTo || "").trim();
   const fromEmail = process.env.SMTP_USER;
+  const attachments = Array.isArray(body?.attachments) ? body.attachments : [];
 
-  if (!to || !subject || !html) {
-    return NextResponse.json({ error: "to, subject, html requis" }, { status: 400 });
+  if (!to || !subject || (!html && !text)) {
+    return NextResponse.json({ error: "to, subject, et html ou text requis" }, { status: 400 });
   }
 
   try {
     await getTransporter().sendMail({
       from: `"${fromName}" <${fromEmail}>`,
       to: toName ? `"${toName}" <${to}>` : to,
+      replyTo: replyTo || undefined,
       subject,
-      html,
+      html: html || undefined,
+      text: text || undefined,
+      attachments: attachments.map((a: { filename?: string; content?: string; contentType?: string }) => ({
+        filename: a.filename || "piece-jointe",
+        content: Buffer.from(a.content || "", "base64"),
+        contentType: a.contentType,
+      })),
     });
     return NextResponse.json({ success: true });
   } catch (e) {
