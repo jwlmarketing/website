@@ -366,20 +366,13 @@ export default function QuiSuisJe() {
       {/* 3. J'optimise ta fiche Google */}
       <section className="mx-auto max-w-[1200px] px-6 py-10">
         <StepNumber n={3} />
-        <div className="mt-4 grid items-center gap-8 md:grid-cols-2">
-          <Image
-            src="/images/qui-suis-je-gmb-card.png"
-            alt="Optimisation fiche Google Business Profile JWL Marketing"
-            width={1410}
-            height={950}
-            className="h-auto w-full self-center rounded-2xl border border-[#eee] object-cover"
-          />
+        <h3 className="mt-4 text-center font-heading text-3xl leading-tight md:text-[54px] text-black">
+          <span className="italic text-[#c9846f]">J&apos;optimise</span>{" "}
+          <span className="font-medium">ta fiche Google profile.</span>
+        </h3>
+        <div className="mt-8 grid items-center gap-8 md:grid-cols-2">
           <div>
-            <h3 className="font-heading text-3xl leading-tight md:text-[54px] text-black">
-              <span className="italic text-[#c9846f]">J&apos;optimise</span>{" "}
-              <span className="font-medium">ta fiche Google profile.</span>
-            </h3>
-            <div className="mt-4 border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
+            <div className="border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
               <p>
                 Ta fiche Google est souvent le premier contact avec un futur
                 client. Je l&apos;optimise pour qu&apos;elle inspire
@@ -399,6 +392,13 @@ export default function QuiSuisJe() {
               Améliorer ma visibilité locale
             </Link>
           </div>
+          <Image
+            src="/images/qui-suis-je-gmb-card.png"
+            alt="Optimisation fiche Google Business Profile JWL Marketing"
+            width={1410}
+            height={950}
+            className="h-auto w-full self-center rounded-2xl border border-[#eee] object-cover"
+          />
         </div>
       </section>
 
