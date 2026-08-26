@@ -51,8 +51,15 @@ export async function POST(req: Request) {
   try {
     await sendMail(email, "Confirmez votre inscription — JWL Marketing", html);
   } catch (e) {
+    const err = e as { code?: string; message?: string };
     console.error("newsletter mail error", e);
-    return NextResponse.json({ error: "Erreur d'envoi de l'email. Réessaie dans quelques secondes." }, { status: 500 });
+    return NextResponse.json(
+      {
+        error: "Erreur d'envoi de l'email. Réessaie dans quelques secondes.",
+        debug: `${err.code || ""} ${err.message || ""}`.trim(),
+      },
+      { status: 500 }
+    );
   }
 
   return NextResponse.json({
