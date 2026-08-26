@@ -1,8 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 
-const FAQ_ITEMS = [
+const HOME_FAQ = [
   {
     q: "Dois-je refaire mon site web ou faire un audit JWL Marketing ?",
     a: "Parce qu'un nouveau site ne résout pas toujours le problème. Avant d'investir plusieurs centaines ou milliers d'euros dans une refonte, il faut comprendre ce qui bloque réellement. Ton problème vient-il de ton offre ? De ton référencement ? De ton positionnement ? De ton expérience client ? J'ai déjà rencontré des entreprises prêtes à refaire leur site alors que le vrai problème venait simplement du message transmis aux visiteurs. Avant de changer l'outil, je préfère comprendre pourquoi il ne fonctionne pas.",
@@ -29,8 +30,45 @@ const FAQ_ITEMS = [
   },
 ];
 
+const QUI_SUIS_JE_FAQ = [
+  {
+    q: "Pourquoi prendre un consultant SEO à Aix-en-Provence plutôt qu'une agence ?",
+    a: "Parce que tu n'as probablement pas besoin de quelqu'un qui te parle uniquement de mots-clés. Tu as besoin de quelqu'un qui comprenne ton activité, tes clients et les difficultés que tu rencontres au quotidien. Quand un entrepreneur me contacte, il ne me dit presque jamais : « J'ai besoin de SEO. » Il me dit : « Je manque de clients. » Ou : « Mon site ne me rapporte rien. » Chez JWL Marketing, je pars de ton problème avant de parler de référencement. Parce qu'un bon SEO commence souvent par une bonne compréhension de ton entreprise.",
+  },
+  {
+    q: "Dans combien de temps le SEO m'apportera-t-il des clients ?",
+    a: "C'est probablement la question que l'on me pose le plus souvent. Et la réponse honnête est : ça dépend. Le SEO n'est pas une publicité que l'on active aujourd'hui pour obtenir des résultats demain. Google a besoin de comprendre ton activité, d'analyser ton site et de constater que tu apportes des réponses pertinentes aux recherches de tes futurs clients. Certaines entreprises observent des premiers résultats en quelques semaines. D'autres auront besoin de plusieurs mois. Tout dépend de ton secteur, de la concurrence, de l'état actuel de ton site et du travail déjà réalisé sur le terrain avec tes clients. En revanche, une chose est sûre : plus tu attends pour commencer, plus tes concurrents prennent de l'avance. Le SEO demande du temps. Mais il peut continuer à attirer des clients longtemps après le travail réalisé.",
+  },
+  {
+    q: "J'ai une boutique sur le Cours Mirabeau, pourquoi faire du SEO ?",
+    a: "Parce que tes futurs clients ne passent pas tous devant ta vitrine. Aujourd'hui, on estime que 85% des personnes recherchent un produit, un service ou un commerce sur Google avant de se déplacer. Même avec un excellent emplacement, tu restes limité aux personnes qui passent devant ta porte sans penser à ceux qui te cherche sur internet. Avec le SEO, tu peux aussi être trouvé par les personnes qui te cherchent déjà sans te connaître. Comprend que le Cours Mirabeau te rend visible dans la rue, quant au SEO, il te rendra visible partout ailleurs.",
+  },
+  {
+    q: "Comment adapter une stratégie SEO à une zone d'activité comme le pôle d'activité de la Duranne ?",
+    a: "On ne travaille pas le SEO de la même façon dans une zone d'activité que dans un centre-ville. La Duranne regroupe des centaines d'entreprises, principalement dans les services, le tertiaire, la technologie et le B2B. L'objectif n'est donc pas seulement d'être visible sur Aix-en-Provence. Il faut comprendre comment tes futurs clients recherchent tes services : par métier, par secteur d'activité, par problématique ou par localisation. Une entreprise implantée à la Duranne n'aura pas forcément les mêmes recherches qu'une entreprise située en centre-ville ou dans une zone commerciale. C'est pour cette raison que je travaille le positionnement avant le SEO. Je cherche à comprendre qui sont tes clients, comment ils recherchent une solution et quels mots ils utilisent réellement. Le but n'est pas simplement d'être visible à la Duranne. Le but est d'être visible auprès des entreprises qui ont besoin de toi.",
+  },
+  {
+    q: "Comment être recommandé par l'IA lorsqu'un client recherche un professionnel à Aix-en-Provence ?",
+    a: "L'IA n'invente pas ses réponses. Elle s'appuie sur les informations qu'elle trouve sur Internet : ton site web, ta fiche Google, tes avis clients, tes contenus et les sources qui parlent de ton entreprise. Donc pour être recommandé, il faut déjà avoir une bonne base SEO, être visible, actif et avoir une fiche Google Business Profile. Pour cela tu dois répondre à tes avis clients, publier du contenu qui répond aux questions que se posent réellement tes futurs clients. Si Google comprend qui tu es, ce que tu fais et où tu interviens, les intelligences artificielles auront beaucoup plus de facilité à te recommander à leurs utilisateurs.",
+  },
+  {
+    q: "Le GEO (Generative Engine Optimization) va-t-il remplacer le SEO local ?",
+    a: "Non. Le GEO et le SEO local ne s'opposent pas. Ils se complètent. Le SEO local aide Google à comprendre qui tu es, ce que tu proposes et dans quelle zone géographique tu interviens. Le GEO permet d'optimiser ta présence pour les intelligences artificielles comme ChatGPT, Gemini ou les résultats enrichis de Google. Mais les IA ont besoin de sources fiables pour construire leurs réponses. Et ces sources proviennent souvent du travail réalisé en SEO local : site web optimisé, fiche Google Business Profile, avis clients, contenus de qualité et informations cohérentes sur l'entreprise. Sans SEO local, il devient plus difficile pour Google et les IA de comprendre ton activité. Le GEO ne remplace donc pas le SEO local. Il s'appuie sur lui.",
+  },
+];
+
+const FAQ_BY_PATH: Record<string, typeof HOME_FAQ> = {
+  "/consultant-freelance-seo-aix-en-provence": QUI_SUIS_JE_FAQ,
+};
+
 export default function Faq() {
+  const pathname = usePathname();
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const items = FAQ_BY_PATH[pathname ?? ""] ?? HOME_FAQ;
+
+  useEffect(() => {
+    setOpenIndex(null);
+  }, [pathname]);
 
   return (
     <div className="rounded-2xl bg-black px-6 py-14 text-center md:px-12">
@@ -38,7 +76,7 @@ export default function Faq() {
         FAQ
       </h2>
       <div className="mx-auto mt-10 flex max-w-[900px] flex-col gap-4 text-left">
-        {FAQ_ITEMS.map((item, i) => {
+        {items.map((item, i) => {
           const isOpen = openIndex === i;
           return (
             <div key={item.q} className="overflow-hidden rounded-2xl bg-white">
