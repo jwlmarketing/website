@@ -1,6 +1,26 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  async rewrites() {
+    return [
+      {
+        source: "/newsletter",
+        destination: "http://xoxlfwj.cluster121.hosting.ovh.net/newsletter/index.php",
+      },
+      {
+        source: "/newsletter/admin",
+        destination: "http://xoxlfwj.cluster121.hosting.ovh.net/newsletter/index.php",
+      },
+      {
+        source: "/newsletter/admin/:path*",
+        destination: "http://xoxlfwj.cluster121.hosting.ovh.net/newsletter/:path*",
+      },
+      {
+        source: "/newsletter/:path*",
+        destination: "http://xoxlfwj.cluster121.hosting.ovh.net/newsletter/:path*",
+      },
+    ];
+  },
   async redirects() {
     return [
       {
