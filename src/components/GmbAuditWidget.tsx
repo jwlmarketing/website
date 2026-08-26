@@ -31,7 +31,7 @@ const WIDGET_HTML = `
 /* ÉTAPE 0 — recherche */
 .step-search {
   max-width: 580px;
-  margin: 0 auto;
+  margin: 0;
   display: flex;
   flex-direction: column;
   gap: 14px;
@@ -66,7 +66,7 @@ const WIDGET_HTML = `
 .search-hint {
   font-size: 13px;
   color: #999;
-  text-align: center;
+  text-align: left;
 }
 .search-hint span { color: #C97B63; font-weight: 500; }
 
