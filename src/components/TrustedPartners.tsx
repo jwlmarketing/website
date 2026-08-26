@@ -28,7 +28,7 @@ export default function TrustedPartners() {
                 alt={p.alt}
                 width={p.width}
                 height={p.height}
-                className="logo-img"
+                className="h-full w-full object-contain grayscale transition-all duration-300 ease-out hover:grayscale-0"
               />
             </div>
           ))}
@@ -58,20 +58,6 @@ export default function TrustedPartners() {
           width: 140px;
           align-items: center;
           justify-content: center;
-        }
-        .logo-img {
-          height: 100%;
-          width: 100%;
-          object-fit: contain;
-          filter: grayscale(1);
-          opacity: 0.65;
-          transition:
-            filter 0.3s ease,
-            opacity 0.3s ease;
-        }
-        .logo-box:hover .logo-img {
-          filter: grayscale(0);
-          opacity: 1;
         }
         @keyframes marquee-scroll {
           from {
