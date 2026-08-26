@@ -3,6 +3,7 @@ import "./globals.css";
 import Footer from "@/components/Footer";
 import NewsletterCta from "@/components/NewsletterCta";
 import Faq from "@/components/Faq";
+import ScrollRevealAll from "@/components/ScrollRevealAll";
 
 export const metadata: Metadata = {
   title: "JWL Marketing | Marketing Digital à Aix-en-Provence",
@@ -18,6 +19,7 @@ export default function RootLayout({
   return (
     <html lang="fr" className="h-full antialiased">
       <body className="min-h-full flex flex-col bg-white text-neutral-800">
+        <ScrollRevealAll />
         <main className="flex-1">{children}</main>
         <div className="px-5 py-16">
           <NewsletterCta />
