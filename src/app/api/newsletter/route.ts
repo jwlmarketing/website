@@ -4,6 +4,8 @@ import type { RowDataPacket } from "mysql2/promise";
 import { getO2switchPool } from "@/lib/o2switch-db";
 import { sendMail } from "@/lib/mailer";
 
+export const runtime = "nodejs";
+
 export async function POST(req: Request) {
   const form = await req.formData();
   const email = String(form.get("email") || "").trim();
@@ -15,28 +17,37 @@ export async function POST(req: Request) {
   }
 
   const pool = getO2switchPool();
-
-  const [rows] = await pool.query<RowDataPacket[]>(
-    "SELECT id, status FROM newsletter_subscribers WHERE email = ? LIMIT 1",
-    [email]
-  );
-  const existing = rows[0];
-
-  if (existing && existing.status === "active") {
-    return NextResponse.json({ success: true, message: "Vous êtes déjà inscrit(e) !" });
-  }
-
+  let existing: RowDataPacket | undefined;
   const token = crypto.randomBytes(32).toString("hex");
 
-  if (existing) {
-    await pool.query(
-      "UPDATE newsletter_subscribers SET confirm_token = ?, status = 'pending' WHERE id = ?",
-      [token, existing.id]
+  try {
+    const [rows] = await pool.query<RowDataPacket[]>(
+      "SELECT id, status FROM newsletter_subscribers WHERE email = ? LIMIT 1",
+      [email]
     );
-  } else {
-    await pool.query(
-      "INSERT INTO newsletter_subscribers (email, name, status, confirm_token, source) VALUES (?, ?, 'pending', ?, ?)",
-      [email, name || null, token, source]
+    existing = rows[0];
+
+    if (existing && existing.status === "active") {
+      return NextResponse.json({ success: true, message: "Vous êtes déjà inscrit(e) !" });
+    }
+
+    if (existing) {
+      await pool.query(
+        "UPDATE newsletter_subscribers SET confirm_token = ?, status = 'pending' WHERE id = ?",
+        [token, existing.id]
+      );
+    } else {
+      await pool.query(
+        "INSERT INTO newsletter_subscribers (email, name, status, confirm_token, source) VALUES (?, ?, 'pending', ?, ?)",
+        [email, name || null, token, source]
+      );
+    }
+  } catch (e) {
+    const err = e as { code?: string; message?: string };
+    console.error("newsletter db error", e);
+    return NextResponse.json(
+      { error: "Erreur base de données.", debug: `${err.code || ""} ${err.message || ""}`.trim() },
+      { status: 500 }
     );
   }
 
