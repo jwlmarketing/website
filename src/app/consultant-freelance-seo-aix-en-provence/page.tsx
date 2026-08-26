@@ -160,14 +160,14 @@ export default function QuiSuisJe() {
           </div>
           <div className="text-center">
             <Image
-              src="/images/jodie-seo-aix-en-provence.webp"
-              alt="Jodie Lapaillerie — SEO Summit Paris 2026"
-              width={800}
-              height={1000}
+              src="/images/jodie-creation-site-web.png"
+              alt="Jodie Lapaillerie — création de site web JWL Marketing"
+              width={360}
+              height={288}
               className="mx-auto h-auto w-full max-w-[260px] rounded-2xl object-cover"
             />
             <p className="mt-2 text-xs text-[#000]">
-              Jodie-LAPAILLERIE / SEO summit paris 2026
+              Jodie-LAPAILLERIE / JWL Marketing
             </p>
           </div>
         </div>
@@ -255,26 +255,19 @@ export default function QuiSuisJe() {
         </div>
       </section>
 
-      <GmbAuditWidget />
+      <div className="mx-6 max-w-[700px] md:mr-auto">
+        <GmbAuditWidget />
+      </div>
 
       {/* 1. J'analyse ton marché */}
       <section className="mx-auto max-w-[1200px] px-6 py-10">
         <StepNumber n={1} />
         <h3 className="mt-4 text-center font-heading text-3xl leading-tight md:text-[54px] text-black">
           <span className="italic text-[#c9846f]">J&apos;analyse ton marché</span>{" "}
-          <span className="font-medium">
-            sur Aix-en-provence, avant de créer ton site.
-          </span>
+          <span className="font-medium">avant de créer ton site.</span>
         </h3>
         <div className="mt-8 grid items-center gap-8 md:grid-cols-2">
-          <Image
-            src="/images/qui-suis-je-terrasse.png"
-            alt="Jodie Lapaillerie en terrasse — analyse de marché SEO Aix-en-Provence"
-            width={880}
-            height={632}
-            className="h-auto w-full self-center rounded-2xl border border-[#eee] object-cover"
-          />
-          <div className="border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
+          <div className="border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a] md:order-1">
             <p>
               Une vision entrepreneuriale de demain. Vous avez peut-être déjà
               vécu cette situation :
@@ -312,6 +305,13 @@ export default function QuiSuisJe() {
               Voir les audits
             </Link>
           </div>
+          <Image
+            src="/images/qui-suis-je-terrasse.png"
+            alt="Jodie Lapaillerie en terrasse — analyse de marché SEO Aix-en-Provence"
+            width={880}
+            height={632}
+            className="h-auto w-full self-center rounded-2xl border border-[#eee] object-cover md:order-2"
+          />
         </div>
       </section>
 
@@ -407,12 +407,19 @@ export default function QuiSuisJe() {
       {/* 4. Je crée un site web */}
       <section className="mx-auto max-w-[1200px] px-6 py-10">
         <StepNumber n={4} />
-        <div className="mx-auto mt-4 max-w-[600px] text-center">
-          <h3 className="font-heading text-3xl leading-tight md:text-[54px] text-black">
-            <span className="italic text-[#c9846f]">Je crée</span>{" "}
-            <span className="font-medium">un site web sur mesure pour toi.</span>
-          </h3>
-          <div className="mt-4 h-full border-2 border-gold p-8 text-left text-[17px] leading-[28px] text-[#1a1a1a]">
+        <h3 className="mt-4 text-center font-heading text-3xl leading-tight md:text-[54px] text-black">
+          <span className="italic text-[#c9846f]">Je crée</span>{" "}
+          <span className="font-medium">un site web sur mesure pour toi.</span>
+        </h3>
+        <div className="mt-8 grid items-center gap-8 md:grid-cols-2">
+          <Image
+            src="/images/jodie-creation-site-web.png"
+            alt="Jodie Lapaillerie — création de site web sur mesure JWL Marketing"
+            width={360}
+            height={288}
+            className="h-auto w-full self-center rounded-2xl border border-[#eee] object-cover"
+          />
+          <div className="border-2 border-gold p-8 text-left text-[17px] leading-[28px] text-[#1a1a1a]">
             <p>
               Chaque projet est développé selon tes besoins réels, sans
               modèle générique ni solution toute faite. Selon le contenu, les
@@ -425,13 +432,13 @@ export default function QuiSuisJe() {
               fournir un site rapide, sécurisé, évolutif et pensé dès le
               départ pour la visibilité sur Google.
             </p>
+            <Link
+              href="/site-internet-aix-en-provence"
+              className="mx-auto mt-4 block w-fit rounded-full bg-[#c9846f] px-8 py-3 font-medium text-white transition-colors hover:bg-[#b8735f]"
+            >
+              Découvrir l&apos;accompagnement
+            </Link>
           </div>
-          <Link
-            href="/site-internet-aix-en-provence"
-            className="mt-4 inline-block rounded-full bg-[#c9846f] px-8 py-3 font-medium text-white transition-colors hover:bg-[#b8735f]"
-          >
-            Découvrir l&apos;accompagnement
-          </Link>
         </div>
       </section>
 
