@@ -364,7 +364,7 @@ export default function Home() {
           className="mx-auto grid max-w-[1200px] gap-6 md:grid-cols-3"
           itemClassName="flex flex-col overflow-hidden rounded-2xl bg-black text-white"
         >
-          {METHODE_STEPS.map((step) => (
+          {METHODE_STEPS.map((step, i) => (
             <Fragment key={step.title}>
               <Image
                 src={step.image}
@@ -375,7 +375,7 @@ export default function Home() {
               />
               <div className="border-b border-white/15 px-6 py-6">
                 <h3 className="min-h-[1.6em] font-heading text-xl font-bold">
-                  <TypewriterText text={step.title} />
+                  <TypewriterText text={step.title} startDelay={i * 150 + 650} />
                 </h3>
                 <p className="mt-3 text-sm text-white/85">{step.lead}</p>
               </div>
