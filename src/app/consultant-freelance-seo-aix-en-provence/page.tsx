@@ -160,14 +160,14 @@ export default function QuiSuisJe() {
           </div>
           <div className="text-center">
             <Image
-              src="/images/jodie-creation-site-web.png"
-              alt="Jodie Lapaillerie — création de site web JWL Marketing"
-              width={360}
-              height={288}
+              src="/images/jodie-seo-aix-en-provence.webp"
+              alt="Jodie Lapaillerie — SEO Summit Paris 2026"
+              width={800}
+              height={1000}
               className="mx-auto h-auto w-full max-w-[260px] rounded-2xl object-cover"
             />
             <p className="mt-2 text-xs text-[#000]">
-              Jodie-LAPAILLERIE / JWL Marketing
+              Jodie-LAPAILLERIE / SEO summit paris 2026
             </p>
           </div>
         </div>
