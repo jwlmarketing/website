@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import HeroBadge from "@/components/HeroBadge";
@@ -359,9 +360,12 @@ export default function Home() {
       {/* La méthode */}
       <section className="px-[5%] py-16 text-center">
         <SectionHeading kicker="La méthode" title="JWL MARKETING" />
-        <div className="mx-auto grid max-w-[1200px] gap-6 md:grid-cols-3">
+        <EscalierReveal
+          className="mx-auto grid max-w-[1200px] gap-6 md:grid-cols-3"
+          itemClassName="flex flex-col overflow-hidden rounded-2xl bg-black text-white"
+        >
           {METHODE_STEPS.map((step) => (
-            <div key={step.title} className="flex flex-col overflow-hidden rounded-2xl bg-black text-white">
+            <Fragment key={step.title}>
               <Image
                 src={step.image}
                 alt={step.title}
@@ -370,7 +374,9 @@ export default function Home() {
                 className="h-[220px] w-full object-cover"
               />
               <div className="border-b border-white/15 px-6 py-6">
-                <h3 className="font-heading text-xl font-bold">{step.title}</h3>
+                <h3 className="min-h-[1.6em] font-heading text-xl font-bold">
+                  <TypewriterText text={step.title} />
+                </h3>
                 <p className="mt-3 text-sm text-white/85">{step.lead}</p>
               </div>
               <ul className="flex-1 space-y-2 px-6 py-6 text-sm text-white/85">
@@ -386,9 +392,9 @@ export default function Home() {
                   {step.cta}
                 </Link>
               </div>
-            </div>
+            </Fragment>
           ))}
-        </div>
+        </EscalierReveal>
       </section>
 
       {/* Pourquoi les entreprises choisissent JWL Marketing */}
