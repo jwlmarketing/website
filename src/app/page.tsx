@@ -11,6 +11,7 @@ import ReviewCard from "@/components/ReviewCard";
 import GuaranteesCards from "@/components/GuaranteesCards";
 import EscalierReveal from "@/components/EscalierReveal";
 import TypewriterText from "@/components/TypewriterText";
+import TrustedPartners from "@/components/TrustedPartners";
 
 const METHODE_STEPS = [
   {
@@ -323,6 +324,8 @@ export default function Home() {
           <HeroBadge />
         </div>
       </div>
+
+      <TrustedPartners />
 
       {/* Et si ton prochain client... */}
       <section className="flex flex-col items-center justify-between gap-10 px-[5%] py-20 md:flex-row">
