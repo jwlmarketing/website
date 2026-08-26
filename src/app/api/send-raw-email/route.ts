@@ -3,19 +3,23 @@ import nodemailer from "nodemailer";
 
 export const runtime = "nodejs";
 
-let transporter: ReturnType<typeof nodemailer.createTransport> | null = null;
-function getTransporter() {
-  if (transporter) return transporter;
-  transporter = nodemailer.createTransport({
+const transporters: Record<string, ReturnType<typeof nodemailer.createTransport>> = {};
+
+// "mailbox" selects which authenticated OVH account sends the email.
+// "newsletter" (default) = newsletter@jwl-marketing.fr — used by the newsletter app.
+// "noreply" = noreply@jwl-marketing.fr — used by the intranet.
+function getTransporter(mailbox: string) {
+  if (transporters[mailbox]) return transporters[mailbox];
+  const user = mailbox === "noreply" ? process.env.SMTP_USER_NOREPLY : process.env.SMTP_USER;
+  const pass = mailbox === "noreply" ? process.env.SMTP_PASS_NOREPLY : process.env.SMTP_PASS;
+  const t = nodemailer.createTransport({
     host: process.env.SMTP_HOST || "ssl0.ovh.net",
     port: Number(process.env.SMTP_PORT || 465),
     secure: true,
-    auth: {
-      user: process.env.SMTP_USER,
-      pass: process.env.SMTP_PASS,
-    },
+    auth: { user, pass },
   });
-  return transporter;
+  transporters[mailbox] = t;
+  return t;
 }
 
 export async function POST(req: Request) {
@@ -32,7 +36,8 @@ export async function POST(req: Request) {
   const text = body?.text || "";
   const fromName = body?.fromName || "JWL Marketing";
   const replyTo = (body?.replyTo || "").trim();
-  const fromEmail = process.env.SMTP_USER;
+  const mailbox = body?.mailbox === "noreply" ? "noreply" : "newsletter";
+  const fromEmail = mailbox === "noreply" ? process.env.SMTP_USER_NOREPLY : process.env.SMTP_USER;
   const attachments = Array.isArray(body?.attachments) ? body.attachments : [];
 
   if (!to || !subject || (!html && !text)) {
@@ -40,7 +45,7 @@ export async function POST(req: Request) {
   }
 
   try {
-    await getTransporter().sendMail({
+    await getTransporter(mailbox).sendMail({
       from: `"${fromName}" <${fromEmail}>`,
       to: toName ? `"${toName}" <${to}>` : to,
       replyTo: replyTo || undefined,
