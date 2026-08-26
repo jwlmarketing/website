@@ -370,10 +370,10 @@ export default function QuiSuisJe() {
         <StepNumber n={3} />
         <div className="mt-4 grid items-center gap-8 md:grid-cols-2">
           <Image
-            src="/images/qui-suis-je-gmb.png"
+            src="/images/qui-suis-je-gmb-card.png"
             alt="Optimisation fiche Google Business Profile JWL Marketing"
-            width={2000}
-            height={1414}
+            width={1410}
+            height={950}
             className="h-auto w-full self-center rounded-2xl border border-[#eee] object-cover"
           />
           <div>
