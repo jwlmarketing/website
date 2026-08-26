@@ -3,8 +3,8 @@
 import Image from "next/image";
 
 const PARTNERS = [
-  { src: "/images/partenaires/dynamitz.webp", alt: "Dynamitz", width: 2866, height: 1342 },
-  { src: "/images/partenaires/inovea.webp", alt: "Inovea", width: 2866, height: 1342 },
+  { src: "/images/partenaires/dynamitz.png", alt: "Dynamitz", width: 2866, height: 1342 },
+  { src: "/images/partenaires/inovea.png", alt: "Inovea", width: 2866, height: 1342 },
   { src: "/images/partenaires/web-difference.png", alt: "Web Différence", width: 391, height: 183 },
 ];
 
@@ -28,7 +28,7 @@ export default function TrustedPartners() {
                 alt={p.alt}
                 width={p.width}
                 height={p.height}
-                className="h-full w-full object-contain grayscale transition-all duration-300 ease-out hover:grayscale-0"
+                className="h-full w-full object-contain"
               />
             </div>
           ))}
