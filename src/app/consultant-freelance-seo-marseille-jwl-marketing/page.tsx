@@ -113,7 +113,7 @@ export default function Page() {
           />
           <div className="text-center">
             <h2 className="font-heading text-3xl leading-tight md:text-[54px] text-black">
-              Consultante SEO en stratégie digital et developpement commercial.
+              Ta meilleure consultant SEO , experte en stratégie  digitale, et développement commercial
             </h2>
             <div className="mt-2 text-4xl md:text-6xl">
               <GoogleColors />
@@ -250,7 +250,24 @@ export default function Page() {
         </div>
       </section>
 
-      <GmbAuditWidget />
+      <section className="mx-auto max-w-[1200px] px-6 py-10">
+        <div className="grid items-center gap-8 md:grid-cols-2">
+          <GmbAuditWidget />
+          <div className="border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
+            <p>
+              Ce diagnostic gratuit t&apos;aide à identifier en quelques
+              minutes les points faibles de ta fiche Google Business
+              Profile à Marseille — avant qu&apos;un client potentiel ne les
+              remarque à ta place.
+            </p>
+            <p className="mt-4">
+              Réponds aux questions en regardant ta fiche pendant qu&apos;elle
+              est ouverte dans l&apos;autre onglet, et découvre ton score de
+              visibilité locale en temps réel.
+            </p>
+          </div>
+        </div>
+      </section>
 
       {/* 1. J'optimise ton marché */}
       <section className="mx-auto max-w-[1200px] px-6 py-10">

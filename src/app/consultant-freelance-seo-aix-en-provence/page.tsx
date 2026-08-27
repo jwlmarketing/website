@@ -255,7 +255,24 @@ export default function QuiSuisJe() {
         </div>
       </section>
 
-      <GmbAuditWidget />
+      <section className="mx-auto max-w-[1200px] px-6 py-10">
+        <div className="grid items-center gap-8 md:grid-cols-2">
+          <GmbAuditWidget />
+          <div className="border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
+            <p>
+              Ce diagnostic gratuit t&apos;aide à identifier en quelques
+              minutes les points faibles de ta fiche Google Business
+              Profile à Aix-en-Provence — avant qu&apos;un client
+              potentiel ne les remarque à ta place.
+            </p>
+            <p className="mt-4">
+              Réponds aux questions en regardant ta fiche pendant qu&apos;elle
+              est ouverte dans l&apos;autre onglet, et découvre ton score de
+              visibilité locale en temps réel.
+            </p>
+          </div>
+        </div>
+      </section>
 
       {/* 1. J'analyse ton marché */}
       <section className="mx-auto max-w-[1200px] px-6 py-10">

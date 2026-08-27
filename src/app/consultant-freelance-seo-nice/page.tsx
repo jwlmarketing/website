@@ -96,7 +96,7 @@ export default function Page() {
           </div>
         </div>
         <Image
-          src="/images/qui-suis-je-hero.png"
+          src="/images/consultant-seo-nice.jpg"
           alt="Jodie Lapaillerie — Consultante SEO Nice"
           width={1244}
           height={1387}
@@ -109,7 +109,7 @@ export default function Page() {
       <section className="mx-auto max-w-[1100px] px-6 py-10">
         <div className="mx-auto grid items-center gap-10 md:grid-cols-[320px_1fr]">
           <Image
-            src="/images/qui-suis-je-portrait.png"
+            src="/images/expert-seo-nice.jpg"
             alt="Jodie Lapaillerie — consultante en marketing digital"
             width={1410}
             height={2000}
@@ -157,7 +157,7 @@ export default function Page() {
           </div>
           <div className="text-center">
             <Image
-              src="/images/jodie-seo-aix-en-provence.webp"
+              src="/images/consultant-referencement-naturel-nice.jpg"
               alt="Jodie Lapaillerie — SEO Summit Paris 2026"
               width={800}
               height={1000}
@@ -181,21 +181,21 @@ export default function Page() {
         </h2>
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           <Image
-            src="/images/qui-suis-je-gmb-card.png"
+            src="/images/seo-nice.jpg"
             alt="Fiche Google Business Profile JWL Marketing"
             width={1410}
             height={950}
             className="aspect-video w-full rounded-2xl border border-[#eee] object-cover"
           />
           <Image
-            src="/images/qui-suis-je-search-console.png"
+            src="/images/strategie-seo-nice.jpg"
             alt="Évolution des impressions et clics — Google Search Console"
             width={2000}
             height={1414}
             className="aspect-video w-full rounded-2xl border border-[#eee] object-cover"
           />
           <Image
-            src="/images/qui-suis-je-serp.png"
+            src="/images/geo-nice.jpg"
             alt="Résultat Google pour seo aix-en-provence — JWL Marketing"
             width={2000}
             height={1414}
@@ -246,7 +246,24 @@ export default function Page() {
         </div>
       </section>
 
-      <GmbAuditWidget />
+      <section className="mx-auto max-w-[1200px] px-6 py-10">
+        <div className="grid items-center gap-8 md:grid-cols-2">
+          <GmbAuditWidget />
+          <div className="border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
+            <p>
+              Ce diagnostic gratuit t&apos;aide à identifier en quelques
+              minutes les points faibles de ta fiche Google Business
+              Profile à Nice — avant qu&apos;un client potentiel ne les
+              remarque à ta place.
+            </p>
+            <p className="mt-4">
+              Réponds aux questions en regardant ta fiche pendant qu&apos;elle
+              est ouverte dans l&apos;autre onglet, et découvre ton score de
+              visibilité locale en temps réel.
+            </p>
+          </div>
+        </div>
+      </section>
 
       {/* 1. J'assimile les recherches Google */}
       <section className="mx-auto max-w-[1200px] px-6 py-10">
@@ -259,7 +276,7 @@ export default function Page() {
         </h3>
         <div className="mt-8 grid items-stretch gap-8 md:grid-cols-2">
           <Image
-            src="/images/qui-suis-je-keyword-tool.png"
+            src="/images/consultant-seo-cote-azur.jpg"
             alt="Outil de planification des mots-clés Google, sur Nice"
             width={2000}
             height={1414}
@@ -319,7 +336,7 @@ export default function Page() {
             </p>
           </div>
           <Image
-            src="/images/qui-suis-je-terrasse.png"
+            src="/images/consultant-seo-local-nice.jpg"
             alt="Jodie Lapaillerie en terrasse — analyse de marché SEO Nice"
             width={880}
             height={632}
@@ -411,7 +428,7 @@ export default function Page() {
         </h3>
         <div className="mt-8 grid items-stretch gap-8 md:grid-cols-2">
           <Image
-            src="/images/qui-suis-je-duo.png"
+            src="/images/specialiste-seo-nice.jpg"
             alt="Jodie Lapaillerie et son assistante IA JWL Marketing"
             width={1410}
             height={2000}
