@@ -236,7 +236,9 @@ export default function Page() {
           <span className="font-medium">Marseillais</span>
         </h2>
         <div className="mt-8 grid items-center gap-8 md:grid-cols-2">
-          <GmbAuditWidget />
+          <div className="h-full overflow-hidden rounded-md border-2 border-gold">
+            <GmbAuditWidget />
+          </div>
           <div className="space-y-5 h-full border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
             <p>
               À Marseille, le réseau reste important. Mais il ne suffit plus

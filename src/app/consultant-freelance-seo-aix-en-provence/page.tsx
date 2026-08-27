@@ -233,7 +233,9 @@ export default function QuiSuisJe() {
           <span className="font-medium">sur Aix-en-Provence.</span>
         </h2>
         <div className="mt-8 grid items-center gap-8 md:grid-cols-2">
-          <GmbAuditWidget />
+          <div className="h-full overflow-hidden rounded-md border-2 border-gold">
+            <GmbAuditWidget />
+          </div>
           <div className="space-y-5 h-full border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
             <p>
               Ville d&apos;art, de droit et d&apos;université au cœur de la
