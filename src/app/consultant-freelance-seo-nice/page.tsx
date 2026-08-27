@@ -375,31 +375,41 @@ export default function Page() {
       {/* 4. Je bâtis un site web */}
       <section className="mx-auto max-w-[1200px] px-6 py-10">
         <StepNumber n={4} />
-        <div className="mx-auto mt-4 max-w-[600px] text-center">
-          <h3 className="font-heading text-3xl leading-tight md:text-[54px] text-black">
-            <span className="italic text-[#c9846f]">Je bâtis</span>{" "}
-            <span className="font-medium">un site web sur mesure pour toi.</span>
-          </h3>
-          <div className="mt-4 h-full border-2 border-gold p-8 text-left text-[17px] leading-[28px] text-[#1a1a1a]">
-            <p>
-              Ton site internet est souvent la première impression que se fait
-              un futur client de ton entreprise. C&apos;est pourquoi je ne me
-              contente pas de créer un site esthétique. Je conçois un outil
-              pensé pour rassurer, informer et faciliter la prise de contact.
-            </p>
-            <p className="mt-4">
-              Chaque projet est adapté à ton activité, à tes objectifs et aux
-              attentes de tes futurs clients. Selon les besoins, le
-              développement peut être réalisé en HTML ou avec des technologies
-              modernes comme Next.js pour garantir rapidité, sécurité et
-              confort de navigation.
-            </p>
-            <p className="mt-4">
-              Mon objectif est de créer un site capable de représenter ton
-              entreprise aujourd&apos;hui, tout en accompagnant son
-              développement dans les années à venir.
-            </p>
+        <div className="mt-4 grid items-center gap-8 md:grid-cols-2">
+          <div>
+            <h3 className="font-heading text-3xl leading-tight md:text-[54px] text-black">
+              <span className="italic text-[#c9846f]">Je bâtis</span>{" "}
+              <span className="font-medium">un site web sur mesure pour toi.</span>
+            </h3>
+            <div className="mt-4 h-full border-2 border-gold p-8 text-left text-[17px] leading-[28px] text-[#1a1a1a]">
+              <p>
+                Ton site internet est souvent la première impression que se
+                fait un futur client de ton entreprise. C&apos;est pourquoi
+                je ne me contente pas de créer un site esthétique. Je conçois
+                un outil pensé pour rassurer, informer et faciliter la prise
+                de contact.
+              </p>
+              <p className="mt-4">
+                Chaque projet est adapté à ton activité, à tes objectifs et
+                aux attentes de tes futurs clients. Selon les besoins, le
+                développement peut être réalisé en HTML ou avec des
+                technologies modernes comme Next.js pour garantir rapidité,
+                sécurité et confort de navigation.
+              </p>
+              <p className="mt-4">
+                Mon objectif est de créer un site capable de représenter ton
+                entreprise aujourd&apos;hui, tout en accompagnant son
+                développement dans les années à venir.
+              </p>
+            </div>
           </div>
+          <Image
+            src="/images/creation-site-web-sur-mesure-nice.png"
+            alt="Jodie Lapaillerie — création de site web sur mesure, SEO Nice"
+            width={360}
+            height={288}
+            className="h-auto w-full self-center rounded-2xl border border-[#eee] object-cover"
+          />
         </div>
       </section>
 
