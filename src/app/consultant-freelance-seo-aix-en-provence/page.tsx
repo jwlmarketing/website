@@ -569,7 +569,7 @@ export default function QuiSuisJe() {
       <section className="bg-white px-6 py-16 text-center">
         <h3 className="font-heading text-3xl leading-tight md:text-[54px] text-black">
           <span className="mt-3 font-heading text-3xl leading-tight md:text-[54px] text-black">
-          Je m&apos;engage auprès de partenaire dynamique sur
+          Je m&apos;engage auprès de partenaires dynamiques sur
           Aix-en-Provence</span>
         </h3>
 
