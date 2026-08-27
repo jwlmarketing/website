@@ -230,10 +230,10 @@ export default function Page() {
           <span className="font-medium">Niçois.</span>
         </h2>
         <div className="mt-8 grid items-center gap-8 md:grid-cols-2">
-          <div className="h-full overflow-hidden rounded-md border-2 border-gold">
+          <div className="h-full overflow-hidden rounded-md border-2 border-black">
             <GmbAuditWidget />
           </div>
-          <div className="space-y-5 h-full border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
+          <div className="space-y-5 self-center border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
             <p>
               Nice est une ville où l&apos;activité économique ne repose pas sur
               un seul secteur. Commerce, santé, immobilier, tourisme, services
