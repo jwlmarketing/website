@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server";
-import { prisma } from "@/lib/prisma";
+import { createContactSubmission } from "@/lib/cmsRelay";
+
+export const runtime = "nodejs";
 
 export async function POST(req: Request) {
   const body = await req.json();
@@ -12,9 +14,15 @@ export async function POST(req: Request) {
     );
   }
 
-  await prisma.contactSubmission.create({
-    data: { name, activity, phone, email, website, message },
-  });
+  try {
+    await createContactSubmission({ name, activity, phone, email, website, message });
+  } catch (e) {
+    console.error("contact relay error", e);
+    return NextResponse.json(
+      { error: "Erreur d'enregistrement. Réessaie dans quelques secondes." },
+      { status: 500 }
+    );
+  }
 
   return NextResponse.json({ success: true });
 }

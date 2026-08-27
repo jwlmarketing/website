@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { prisma } from "@/lib/prisma";
+import { getPostBySlug } from "@/lib/cmsRelay";
 import { auth } from "@/lib/auth";
 
 export const dynamic = "force-dynamic";
@@ -19,7 +19,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const post = await prisma.post.findUnique({ where: { slug } });
+  const { post } = await getPostBySlug(slug);
   if (!post) return {};
   return {
     title: post.metaTitle || post.title,
@@ -38,10 +38,7 @@ export default async function BlogPostPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const post = await prisma.post.findUnique({
-    where: { slug },
-    include: { category: true, tags: true },
-  });
+  const { post, related } = await getPostBySlug(slug);
 
   if (!post) notFound();
 
@@ -50,18 +47,6 @@ export default async function BlogPostPage({
     if (!session) notFound();
   }
 
-  const related = post.categoryId
-    ? await prisma.post.findMany({
-        where: {
-          categoryId: post.categoryId,
-          status: "published",
-          id: { not: post.id },
-        },
-        take: 3,
-        orderBy: { publishedAt: "desc" },
-      })
-    : [];
-
   const content = post.content as { html?: string };
 
   const jsonLd = {
@@ -69,8 +54,8 @@ export default async function BlogPostPage({
     "@type": "BlogPosting",
     headline: post.title,
     image: post.ogImage || post.coverImage || undefined,
-    datePublished: post.publishedAt?.toISOString(),
-    dateModified: post.updatedAt.toISOString(),
+    datePublished: post.publishedAt ? new Date(post.publishedAt).toISOString() : undefined,
+    dateModified: new Date(post.updatedAt).toISOString(),
     author: { "@type": "Person", name: "Jodie Lapaillerie" },
   };
 
@@ -105,8 +90,8 @@ export default async function BlogPostPage({
             </>
           )}
           {post.publishedAt && (
-            <time dateTime={post.publishedAt.toISOString()}>
-              {post.publishedAt.toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric" })}
+            <time dateTime={new Date(post.publishedAt).toISOString()}>
+              {new Date(post.publishedAt).toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric" })}
             </time>
           )}
           <span className="text-neutral-300">·</span>

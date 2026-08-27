@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
-import { prisma } from "@/lib/prisma";
+import { listPublishedPosts } from "@/lib/cmsRelay";
 
 export const dynamic = "force-dynamic";
 
@@ -27,23 +27,11 @@ export default async function BlogList({
   const { p, cat } = await searchParams;
   const page = Math.max(1, Number(p) || 1);
 
-  const where = {
-    status: "published" as const,
-    publishedAt: { lte: new Date() },
-    ...(cat ? { category: { slug: cat } } : {}),
-  };
-
-  const [posts, total, categories] = await Promise.all([
-    prisma.post.findMany({
-      where,
-      include: { category: true },
-      orderBy: { publishedAt: "desc" },
-      skip: (page - 1) * PER_PAGE,
-      take: PER_PAGE,
-    }),
-    prisma.post.count({ where }),
-    prisma.category.findMany({ where: { visible: true }, orderBy: { order: "asc" } }),
-  ]);
+  const { posts, total, categories } = await listPublishedPosts({
+    page,
+    perPage: PER_PAGE,
+    cat,
+  });
 
   const pages = total > 0 ? Math.ceil(total / PER_PAGE) : 1;
 

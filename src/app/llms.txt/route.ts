@@ -1,4 +1,4 @@
-import { prisma } from "@/lib/prisma";
+import { listPublishedPages, listPublishedPostsForLlms } from "@/lib/cmsRelay";
 
 export const dynamic = "force-dynamic";
 
@@ -93,11 +93,7 @@ export async function GET() {
   let posts: { path: string; title: string; desc?: string }[] = [];
 
   try {
-    const pages = await prisma.page.findMany({
-      where: { published: true },
-      select: { slug: true, title: true, metaDesc: true },
-      orderBy: { order: "asc" },
-    });
+    const { pages } = await listPublishedPages();
     dynamicPages = pages
       .filter((p) => !CORE_PAGES.some((c) => c.path === `/${p.slug}`))
       .map((p) => ({
@@ -110,12 +106,7 @@ export async function GET() {
   }
 
   try {
-    const publishedPosts = await prisma.post.findMany({
-      where: { status: "published" },
-      select: { slug: true, title: true, excerpt: true },
-      orderBy: { publishedAt: "desc" },
-      take: 200,
-    });
+    const { posts: publishedPosts } = await listPublishedPostsForLlms(200);
     posts = publishedPosts.map((p) => ({
       path: `/blog/${p.slug}`,
       title: p.title,

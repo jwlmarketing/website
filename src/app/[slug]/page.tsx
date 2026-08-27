@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import { prisma } from "@/lib/prisma";
+import { getPageBySlug } from "@/lib/cmsRelay";
 import { auth } from "@/lib/auth";
 import BlockRenderer from "@/components/BlockRenderer";
 import type { Block } from "@/lib/blocks/types";
@@ -13,7 +13,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const page = await prisma.page.findUnique({ where: { slug } });
+  const { page } = await getPageBySlug(slug);
   if (!page) return {};
   return {
     title: page.metaTitle || page.title,
@@ -27,7 +27,7 @@ export default async function DynamicPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const page = await prisma.page.findUnique({ where: { slug } });
+  const { page } = await getPageBySlug(slug);
 
   if (!page) notFound();
 
