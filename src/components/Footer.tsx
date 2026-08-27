@@ -12,14 +12,14 @@ const OTHER_PAGES = [
 
 const ZONES = [
   { href: "/consultant-freelance-seo-aix-en-provence", label: "Qui suis je", external: false },
-  { href: "https://www.jwl-marketing.fr/consultant-freelance-seo-marseille/", label: "Consultant SEO Marseille", external: true },
+  { href: "/consultant-freelance-seo-marseille-jwl-marketing", label: "Consultant SEO Marseille", external: false },
   { href: "/consultant-freelance-seo-nice", label: "Consultant SEO Nice", external: false },
+  { href: "/consultant-freelance-seo-paris-jwl-marketing", label: "Consultant SEO Paris", external: false },
   { href: "https://www.jwl-marketing.fr/consultant-freelance-seo-montpellier/", label: "Consultant SEO Montpellier", external: true },
   { href: "https://www.jwl-marketing.fr/consultant-freelance-seo-toulouse-jwl-marketing/", label: "Consultant SEO Toulouse", external: true },
   { href: "https://www.jwl-marketing.fr/consultant-freelance-seo-bordeaux-jwl-marketing/", label: "Consultant SEO Bordeaux", external: true },
 ];
 const ZONES_STATIC = [
-  "Consultant SEO Paris",
   "Consultant SEO Lyon",
   "Consultant SEO Nantes",
   "Consultant SEO Lille",
