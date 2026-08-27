@@ -93,10 +93,10 @@ export default function Page() {
           </div>
         </div>
         <Image
-          src="/images/qui-suis-je-hero.png"
-          alt="Jodie Lapaillerie — Consultante SEO Paris"
-          width={1244}
-          height={1387}
+          src="/images/consultant-seo-paris-tour-eiffel.jpg"
+          alt="Jodie Lapaillerie — Consultante SEO Paris, devant la Tour Eiffel"
+          width={1086}
+          height={1448}
           priority
           className="h-auto w-full max-w-[420px] rounded-2xl object-cover"
         />
