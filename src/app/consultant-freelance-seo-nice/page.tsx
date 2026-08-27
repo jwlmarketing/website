@@ -117,7 +117,7 @@ export default function Page() {
           />
           <div className="text-center">
             <h2 className="font-heading text-3xl leading-tight md:text-[54px] text-black">
-              Consultante SEO en stratégie digital et developpement commercial.
+              Ta meilleure consultant SEO , experte en stratégie  digitale, et développement commercial
             </h2>
             <div className="mt-2 text-4xl md:text-6xl">
               <GoogleColors />
