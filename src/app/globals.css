@@ -41,6 +41,18 @@ h4 {
   font-family: var(--font-heading), serif;
 }
 
+/* Les titres ne doivent jamais s'afficher en gras, meme si un span interne porte font-medium/semibold/bold. */
+h1,
+h1 *,
+h2,
+h2 *,
+h3,
+h3 *,
+h4,
+h4 * {
+  font-weight: 400 !important;
+}
+
 /* Neue Montreal Regular n'est licenciee qu'en graisse 400 : le gras reste sur Switzer. */
 strong,
 b,
