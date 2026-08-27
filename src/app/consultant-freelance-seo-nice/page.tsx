@@ -223,43 +223,27 @@ export default function Page() {
         </div>
       </section>
 
-      {/* Marché local */}
+      {/* Marché local + widget audit */}
       <section className="mx-auto max-w-[1200px] px-6 py-10">
         <h2 className="text-center font-heading text-3xl leading-tight md:text-[54px] text-black">
           <span className="italic text-[#c9846f]">Je connais ton marché</span>{" "}
           <span className="font-medium">Niçois.</span>
         </h2>
-        <div className="mt-8 space-y-5 h-full border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
-          <p>
-            Nice est une ville où l&apos;activité économique ne repose pas sur
-            un seul secteur. Commerce, santé, immobilier, tourisme, services
-            aux entreprises ou artisanat : la concurrence est présente dans
-            presque tous les domaines.
-          </p>
-          <p>
-            Dans cet environnement, la visibilité ne se joue plus uniquement
-            sur le terrain. Une grande partie du parcours client commence
-            désormais sur Google. Si ton entreprise n&apos;apparaît pas
-            lorsqu&apos;un prospect recherche une solution, il risque
-            simplement de trouver l&apos;un de tes concurrents avant toi.
-          </p>
-        </div>
-      </section>
-
-      <section className="mx-auto max-w-[1200px] px-6 py-10">
-        <div className="grid items-center gap-8 md:grid-cols-2">
+        <div className="mt-8 grid items-center gap-8 md:grid-cols-2">
           <GmbAuditWidget />
-          <div className="border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
+          <div className="space-y-5 h-full border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
             <p>
-              Ce diagnostic gratuit t&apos;aide à identifier en quelques
-              minutes les points faibles de ta fiche Google Business
-              Profile à Nice — avant qu&apos;un client potentiel ne les
-              remarque à ta place.
+              Nice est une ville où l&apos;activité économique ne repose pas sur
+              un seul secteur. Commerce, santé, immobilier, tourisme, services
+              aux entreprises ou artisanat : la concurrence est présente dans
+              presque tous les domaines.
             </p>
-            <p className="mt-4">
-              Réponds aux questions en regardant ta fiche pendant qu&apos;elle
-              est ouverte dans l&apos;autre onglet, et découvre ton score de
-              visibilité locale en temps réel.
+            <p>
+              Dans cet environnement, la visibilité ne se joue plus uniquement
+              sur le terrain. Une grande partie du parcours client commence
+              désormais sur Google. Si ton entreprise n&apos;apparaît pas
+              lorsqu&apos;un prospect recherche une solution, il risque
+              simplement de trouver l&apos;un de tes concurrents avant toi.
             </p>
           </div>
         </div>
@@ -275,13 +259,6 @@ export default function Page() {
           <span className="font-medium">des internautes.</span>
         </h3>
         <div className="mt-8 grid items-stretch gap-8 md:grid-cols-2">
-          <Image
-            src="/images/consultant-seo-cote-azur.jpg"
-            alt="Outil de planification des mots-clés Google, sur Nice"
-            width={2000}
-            height={1414}
-            className="h-auto w-full self-center rounded-2xl border border-[#eee] object-cover"
-          />
           <div className="h-full border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
             <p>
               Avant de travailler le référencement d&apos;une entreprise à
@@ -306,6 +283,13 @@ export default function Page() {
               Voir les audits
             </Link>
           </div>
+          <Image
+            src="/images/consultant-seo-cote-azur.jpg"
+            alt="Outil de planification des mots-clés Google, sur Nice"
+            width={2000}
+            height={1414}
+            className="h-auto w-full self-center rounded-2xl border border-[#eee] object-cover"
+          />
         </div>
       </section>
 
@@ -317,6 +301,13 @@ export default function Page() {
           <span className="font-medium">avant de bâtir ton site web.</span>
         </h3>
         <div className="mt-8 grid items-center gap-8 md:grid-cols-2">
+          <Image
+            src="/images/consultant-seo-local-nice.jpg"
+            alt="Jodie Lapaillerie en terrasse — analyse de marché SEO Nice"
+            width={880}
+            height={632}
+            className="h-auto w-full self-center rounded-2xl border border-[#eee] object-cover"
+          />
           <div className="h-full border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
             <p>
               Un emplacement en or sur la Promenade des Anglais, ce n&apos;est
@@ -335,13 +326,6 @@ export default function Page() {
               l&apos;année et un commerce qui ne vit que l&apos;été.
             </p>
           </div>
-          <Image
-            src="/images/consultant-seo-local-nice.jpg"
-            alt="Jodie Lapaillerie en terrasse — analyse de marché SEO Nice"
-            width={880}
-            height={632}
-            className="h-auto w-full self-center rounded-2xl border border-[#eee] object-cover"
-          />
         </div>
       </section>
 
@@ -349,13 +333,6 @@ export default function Page() {
       <section className="mx-auto max-w-[1200px] px-6 py-10">
         <StepNumber n={3} />
         <div className="mt-4 grid items-center gap-8 md:grid-cols-2">
-          <Image
-            src="/images/qui-suis-je-gmb.png"
-            alt="Optimisation fiche Google Business Profile JWL Marketing"
-            width={2000}
-            height={1414}
-            className="h-auto w-full self-center rounded-2xl border border-[#eee] object-cover"
-          />
           <div>
             <h3 className="font-heading text-3xl leading-tight md:text-[54px] text-black">
               <span className="italic text-[#c9846f]">J&apos;améliore</span>{" "}
@@ -383,6 +360,13 @@ export default function Page() {
               Voir les audits
             </Link>
           </div>
+          <Image
+            src="/images/qui-suis-je-gmb.png"
+            alt="Optimisation fiche Google Business Profile JWL Marketing"
+            width={2000}
+            height={1414}
+            className="h-auto w-full self-center rounded-2xl border border-[#eee] object-cover"
+          />
         </div>
       </section>
 
@@ -427,13 +411,6 @@ export default function Page() {
           <span className="font-medium">que tu es le meilleur sur Nice.</span>
         </h3>
         <div className="mt-8 grid items-stretch gap-8 md:grid-cols-2">
-          <Image
-            src="/images/specialiste-seo-nice.jpg"
-            alt="Jodie Lapaillerie et son assistante IA JWL Marketing"
-            width={1410}
-            height={2000}
-            className="mx-auto h-auto w-full max-w-[420px] rounded-2xl object-cover"
-          />
           <div className="h-full border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
             <p>
               Avant de parler SEO, j&apos;aime comprendre l&apos;histoire de
@@ -449,6 +426,13 @@ export default function Page() {
               permet pas, la visio fait parfaitement l&apos;affaire.
             </p>
           </div>
+          <Image
+            src="/images/specialiste-seo-nice.jpg"
+            alt="Jodie Lapaillerie et son assistante IA JWL Marketing"
+            width={1410}
+            height={2000}
+            className="mx-auto h-auto w-full max-w-[420px] rounded-2xl object-cover"
+          />
         </div>
       </section>
 

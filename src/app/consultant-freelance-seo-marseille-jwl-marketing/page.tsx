@@ -229,41 +229,25 @@ export default function Page() {
         </div>
       </section>
 
-      {/* Marché local */}
+      {/* Marché local + widget audit */}
       <section className="mx-auto max-w-[1200px] px-6 py-10">
         <h2 className="text-center font-heading text-3xl leading-tight md:text-[54px] text-black">
           <span className="italic text-[#c9846f]">Je connais ton marché</span>{" "}
           <span className="font-medium">Marseillais</span>
         </h2>
-        <div className="mt-8 space-y-5 h-full border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
-          <p>
-            À Marseille, le réseau reste important. Mais il ne suffit plus
-            toujours. Aujourd&apos;hui, une grande partie des décisions
-            commence sur Google.
-          </p>
-          <p>
-            Les consommateurs recherchent, comparent et sélectionnent
-            plusieurs entreprises avant de prendre contact. Mon objectif est
-            de positionner ton entreprise au bon endroit, au bon moment et
-            devant les bonnes personnes.
-          </p>
-        </div>
-      </section>
-
-      <section className="mx-auto max-w-[1200px] px-6 py-10">
-        <div className="grid items-center gap-8 md:grid-cols-2">
+        <div className="mt-8 grid items-center gap-8 md:grid-cols-2">
           <GmbAuditWidget />
-          <div className="border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
+          <div className="space-y-5 h-full border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
             <p>
-              Ce diagnostic gratuit t&apos;aide à identifier en quelques
-              minutes les points faibles de ta fiche Google Business
-              Profile à Marseille — avant qu&apos;un client potentiel ne les
-              remarque à ta place.
+              À Marseille, le réseau reste important. Mais il ne suffit plus
+              toujours. Aujourd&apos;hui, une grande partie des décisions
+              commence sur Google.
             </p>
-            <p className="mt-4">
-              Réponds aux questions en regardant ta fiche pendant qu&apos;elle
-              est ouverte dans l&apos;autre onglet, et découvre ton score de
-              visibilité locale en temps réel.
+            <p>
+              Les consommateurs recherchent, comparent et sélectionnent
+              plusieurs entreprises avant de prendre contact. Mon objectif est
+              de positionner ton entreprise au bon endroit, au bon moment et
+              devant les bonnes personnes.
             </p>
           </div>
         </div>
@@ -343,13 +327,6 @@ export default function Page() {
       <section className="mx-auto max-w-[1200px] px-6 py-10">
         <StepNumber n={3} />
         <div className="mt-4 grid items-center gap-8 md:grid-cols-2">
-          <Image
-            src="/images/qui-suis-je-gmb.png"
-            alt="Optimisation fiche Google Business Profile JWL Marketing"
-            width={2000}
-            height={1414}
-            className="h-auto w-full self-center rounded-2xl border border-[#eee] object-cover"
-          />
           <div>
             <h3 className="font-heading text-3xl leading-tight md:text-[54px] text-black">
               <span className="italic text-[#c9846f]">Je maximilise</span>{" "}
@@ -377,6 +354,13 @@ export default function Page() {
               Voir les audits
             </Link>
           </div>
+          <Image
+            src="/images/qui-suis-je-gmb.png"
+            alt="Optimisation fiche Google Business Profile JWL Marketing"
+            width={2000}
+            height={1414}
+            className="h-auto w-full self-center rounded-2xl border border-[#eee] object-cover"
+          />
         </div>
       </section>
 
@@ -421,13 +405,6 @@ export default function Page() {
           <span className="font-medium">que tu es le meilleur sur Marseille.</span>
         </h3>
         <div className="mt-8 grid items-stretch gap-8 md:grid-cols-2">
-          <Image
-            src="/images/qui-suis-je-duo.png"
-            alt="Jodie Lapaillerie et son assistante IA JWL Marketing"
-            width={1410}
-            height={2000}
-            className="mx-auto h-auto w-full max-w-[420px] rounded-2xl object-cover"
-          />
           <div className="h-full border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
             <p>
               À Marseille, être bon dans son métier ne suffit pas toujours à
@@ -442,6 +419,13 @@ export default function Page() {
               un véritable apporteur d&apos;affaires.
             </p>
           </div>
+          <Image
+            src="/images/qui-suis-je-duo.png"
+            alt="Jodie Lapaillerie et son assistante IA JWL Marketing"
+            width={1410}
+            height={2000}
+            className="mx-auto h-auto w-full max-w-[420px] rounded-2xl object-cover"
+          />
         </div>
       </section>
 
