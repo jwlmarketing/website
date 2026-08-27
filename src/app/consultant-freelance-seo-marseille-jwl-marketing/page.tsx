@@ -92,10 +92,10 @@ export default function Page() {
           </div>
         </div>
         <Image
-          src="/images/qui-suis-je-hero.png"
-          alt="Jodie Lapaillerie — Consultante SEO Marseille"
-          width={1244}
-          height={1387}
+          src="/images/consultant-seo-marseille-vieux-port.jpg"
+          alt="Jodie Lapaillerie — Consultante SEO Marseille, devant le Vieux-Port et Notre-Dame de la Garde"
+          width={1190}
+          height={1322}
           priority
           className="h-auto w-full max-w-[420px] rounded-2xl object-cover"
         />
@@ -328,13 +328,13 @@ export default function Page() {
       {/* 3. Je maximilise ta fiche Google */}
       <section className="mx-auto max-w-[1200px] px-6 py-10">
         <StepNumber n={3} />
-        <div className="mt-4 grid items-center gap-8 md:grid-cols-2">
+        <h3 className="mt-4 text-center font-heading text-3xl leading-tight md:text-[54px] text-black">
+          <span className="italic text-[#c9846f]">Je maximilise</span>{" "}
+          <span className="font-medium">ta fiche Google profile.</span>
+        </h3>
+        <div className="mt-8 grid items-center gap-8 md:grid-cols-2">
           <div>
-            <h3 className="font-heading text-3xl leading-tight md:text-[54px] text-black">
-              <span className="italic text-[#c9846f]">Je maximilise</span>{" "}
-              <span className="font-medium">ta fiche Google profile.</span>
-            </h3>
-            <div className="mt-4 border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
+            <div className="border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
               <p>
                 À Marseille, les internautes consultent souvent plusieurs
                 entreprises avant de faire leur choix. Ta fiche Google est
@@ -369,31 +369,41 @@ export default function Page() {
       {/* 4. Je fabrique un site web */}
       <section className="mx-auto max-w-[1200px] px-6 py-10">
         <StepNumber n={4} />
-        <div className="mx-auto mt-4 max-w-[600px] text-center">
-          <h3 className="font-heading text-3xl leading-tight md:text-[54px] text-black">
-            <span className="italic text-[#c9846f]">Je fabrique</span>{" "}
-            <span className="font-medium">un site web sur mesure pour toi.</span>
-          </h3>
-          <div className="mt-4 h-full border-2 border-gold p-8 text-left text-[17px] leading-[28px] text-[#1a1a1a]">
-            <p>
-              Ton site internet est souvent la première impression que se fait
-              un futur client de ton entreprise. C&apos;est pourquoi je ne me
-              contente pas de créer un site esthétique. Je conçois un outil
-              pensé pour rassurer, informer et faciliter la prise de contact.
-            </p>
-            <p className="mt-4">
-              Chaque projet est adapté à ton activité, à tes objectifs et aux
-              attentes de tes futurs clients. Selon les besoins, le
-              développement peut être réalisé en HTML ou avec des technologies
-              modernes comme Next.js pour garantir rapidité, sécurité et
-              confort de navigation.
-            </p>
-            <p className="mt-4">
-              Mon objectif est de créer un site capable de représenter ton
-              entreprise aujourd&apos;hui, tout en accompagnant son
-              développement dans les années à venir.
-            </p>
+        <div className="mt-4 grid items-center gap-8 md:grid-cols-2">
+          <div>
+            <h3 className="font-heading text-3xl leading-tight md:text-[54px] text-black">
+              <span className="italic text-[#c9846f]">Je fabrique</span>{" "}
+              <span className="font-medium">un site web sur mesure pour toi.</span>
+            </h3>
+            <div className="mt-4 h-full border-2 border-gold p-8 text-left text-[17px] leading-[28px] text-[#1a1a1a]">
+              <p>
+                Ton site internet est souvent la première impression que se
+                fait un futur client de ton entreprise. C&apos;est pourquoi
+                je ne me contente pas de créer un site esthétique. Je conçois
+                un outil pensé pour rassurer, informer et faciliter la prise
+                de contact.
+              </p>
+              <p className="mt-4">
+                Chaque projet est adapté à ton activité, à tes objectifs et
+                aux attentes de tes futurs clients. Selon les besoins, le
+                développement peut être réalisé en HTML ou avec des
+                technologies modernes comme Next.js pour garantir rapidité,
+                sécurité et confort de navigation.
+              </p>
+              <p className="mt-4">
+                Mon objectif est de créer un site capable de représenter ton
+                entreprise aujourd&apos;hui, tout en accompagnant son
+                développement dans les années à venir.
+              </p>
+            </div>
           </div>
+          <Image
+            src="/images/creation-site-web-sur-mesure-nice.png"
+            alt="Jodie Lapaillerie — création de site web sur mesure, SEO Marseille"
+            width={360}
+            height={288}
+            className="h-auto w-full self-center rounded-2xl border border-[#eee] object-cover"
+          />
         </div>
       </section>
 
@@ -406,8 +416,8 @@ export default function Page() {
           </span>{" "}
           <span className="font-medium">que tu es le meilleur sur Marseille.</span>
         </h3>
-        <div className="mt-8 grid items-stretch gap-8 md:grid-cols-2">
-          <div className="h-full border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
+        <div className="mt-8 grid items-center gap-8 md:grid-cols-2">
+          <div className="self-center border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
             <p>
               À Marseille, être bon dans son métier ne suffit pas toujours à
               être trouvé. Google doit comprendre ce que tu fais, à qui tu
@@ -443,7 +453,7 @@ export default function Page() {
         </h3>
         <div className="mt-8 grid items-stretch gap-8 md:grid-cols-2">
           <Image
-            src="/images/qui-suis-je-carte-france.png"
+            src="/images/qui-suis-je-carte-france-marseille.png"
             alt="Zone d'intervention JWL Marketing — PACA sur place, France entière à distance"
             width={2000}
             height={1414}
@@ -545,13 +555,6 @@ export default function Page() {
         </a>
       </section>
 
-      {/* Et toi ? */}
-      <section className="mx-auto max-w-[1100px] px-6 py-10 text-center">
-        <h2 className="font-heading text-3xl leading-tight md:text-[54px] text-black">
-          Et toi ? Quand est-ce que tu t&apos;engages pour ton Business{" "}
-          <span className="text-[#5b4bff]">sur Marseille?</span>
-        </h2>
-      </section>
     </div>
   );
 }

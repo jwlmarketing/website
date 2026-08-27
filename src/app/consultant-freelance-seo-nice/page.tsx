@@ -474,7 +474,7 @@ export default function Page() {
             </p>
           </div>
           <Image
-            src="/images/qui-suis-je-carte-france.png"
+            src="/images/qui-suis-je-carte-france-nice.png"
             alt="Zone d'intervention JWL Marketing — PACA sur place, France entière à distance"
             width={2000}
             height={1414}
