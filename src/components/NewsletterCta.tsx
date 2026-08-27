@@ -8,6 +8,7 @@ export default function NewsletterCta() {
   const pathname = usePathname();
   const isQuiSuisJe = pathname === "/consultant-freelance-seo-aix-en-provence";
   const isNice = pathname === "/consultant-freelance-seo-nice";
+  const isParis = pathname === "/consultant-freelance-seo-paris-jwl-marketing";
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "sending" | "ok" | "error">("idle");
   const [message, setMessage] = useState("");
@@ -62,7 +63,9 @@ export default function NewsletterCta() {
             ? "Et toi? Quand est ce que tu t'engages pour ton Business sur Aix?"
             : isNice
               ? "Et toi ? Quand est-ce que tu t'engages pour ton Business sur Nice?"
-              : "Hâte de voir votre carrière décollée !"}
+              : isParis
+                ? "Et toi? Quand est ce que tu t'engages pour ton Business sur Paris?"
+                : "Hâte de voir votre carrière décollée !"}
         </h2>
         <form
           onSubmit={handleSubmit}
