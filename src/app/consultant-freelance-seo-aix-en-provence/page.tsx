@@ -371,7 +371,7 @@ export default function QuiSuisJe() {
         <StepNumber n={3} />
         <h3 className="mt-4 text-center font-heading text-3xl leading-tight md:text-[54px] text-black">
           <span className="italic text-[#c9846f]">J&apos;optimise</span>{" "}
-          <span className="font-medium">ta fiche Google profile.</span>
+          <span className="font-medium">ta fiche Google Business profile.</span>
         </h3>
         <div className="mt-8 grid items-center gap-8 md:grid-cols-2">
           <div>
