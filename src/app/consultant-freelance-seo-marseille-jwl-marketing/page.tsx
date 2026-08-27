@@ -330,7 +330,7 @@ export default function Page() {
         <StepNumber n={3} />
         <h3 className="mt-4 text-center font-heading text-3xl leading-tight md:text-[54px] text-black">
           <span className="italic text-[#c9846f]">Je maximise</span>{" "}
-          <span className="font-medium">ta fiche Google profile.</span>
+          <span className="font-medium">ta fiche Google Business Profile.</span>
         </h3>
         <div className="mt-8 grid items-center gap-8 md:grid-cols-2">
           <div>
