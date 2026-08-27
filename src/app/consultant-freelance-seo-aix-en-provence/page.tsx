@@ -454,14 +454,24 @@ export default function QuiSuisJe() {
         <div className="mt-8 grid items-stretch gap-8 md:grid-cols-2">
           <div className="h-full border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
             <p>
-              Parce qu&apos;aucune entreprise ne ressemble à une autre,
-              j&apos;aime découvrir ton activité sur le terrain. Du centre
-              historique d&apos;Aix-en-Provence à Puyricard, des Milles à La
-              Duranne, en passant par le Jas-de-Bouffan, le Val Saint-André,
-              le Pont de l&apos;Arc, Corsy, Célony ou Beauregard, je me
-              déplace pour comprendre ton environnement, tes clients et tes
-              objectifs. Et si la distance nous sépare, la visio prend
-              simplement le relais.
+              Parce qu&apos;aucune entreprise ne fonctionne de la même façon,
+              je prends le temps de comprendre ton activité avant de définir
+              une stratégie de référencement. Du centre historique
+              d&apos;Aix-en-Provence à Puyricard, des Milles à La Duranne, en
+              passant par le Jas-de-Bouffan, le Val Saint-André, le Pont de
+              l&apos;Arc, Corsy, Célony ou Beauregard, je me déplace pour
+              découvrir ton environnement, analyser ton marché, identifier
+              tes cibles et comprendre les attentes de tes futurs clients.
+              Cette immersion me permet de construire une stratégie
+              marketing digitale cohérente, d&apos;améliorer ton
+              positionnement sur les moteurs de recherche et de développer
+              une visibilité durable sur Google. Chaque action s&apos;appuie
+              sur une analyse de ton secteur, de tes concurrents, de tes
+              mots-clés et de ton parcours client afin d&apos;attirer un
+              trafic qualifié et de générer de nouveaux contacts. Et lorsque
+              la distance ne permet pas une rencontre sur le terrain, la
+              visioconférence prend naturellement le relais pour élaborer
+              ensemble une stratégie adaptée à tes objectifs.
             </p>
           </div>
           <div className="text-center">
