@@ -11,7 +11,7 @@ const OTHER_PAGES = [
 ];
 
 const ZONES = [
-  { href: "/consultant-freelance-seo-aix-en-provence", label: "Consultant SEO Aix-en-Provence", external: false },
+  { href: "/consultant-freelance-seo-aix-en-provence", label: "Qui suis je", external: false },
   { href: "https://www.jwl-marketing.fr/consultant-freelance-seo-marseille/", label: "Consultant SEO Marseille", external: true },
   { href: "/consultant-freelance-seo-nice", label: "Consultant SEO Nice", external: false },
   { href: "https://www.jwl-marketing.fr/consultant-freelance-seo-montpellier/", label: "Consultant SEO Montpellier", external: true },
