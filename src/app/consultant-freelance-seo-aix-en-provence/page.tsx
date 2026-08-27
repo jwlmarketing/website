@@ -568,9 +568,11 @@ export default function QuiSuisJe() {
       {/* Je m'engage... */}
       <section className="bg-white px-6 py-16 text-center">
         <h3 className="font-heading text-3xl leading-tight md:text-[54px] text-black">
-          <span className="mt-3 font-heading text-3xl leading-tight md:text-[54px] text-black">
-          Je m&apos;engage auprès de partenaires dynamiques sur
-          Aix-en-Provence</span>
+          <span className="italic text-[#c9846f]">Je m&apos;engage</span>
+          <br />
+          <span className="font-medium">
+            auprès de partenaires dynamiques sur Aix-en-Provence
+          </span>
         </h3>
 
         <div className="mx-auto mt-8 grid max-w-[900px] items-center gap-8 text-left md:grid-cols-[1fr_280px]">
