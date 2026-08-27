@@ -113,7 +113,7 @@ export default function Page() {
           />
           <div className="text-center">
             <h2 className="font-heading text-3xl leading-tight md:text-[54px] text-black">
-              Ta meilleure consultant SEO, experte en <span className="text-[#c9846f]">stratégie digitale, et développement commercial</span>
+              <span className="text-[#c9846f]"> Ta consultante SEO préférée,</span> experte en stratégie digitale et développement commercial
             </h2>
             <div className="mt-2 text-4xl md:text-6xl">
               <GoogleColors />
@@ -329,7 +329,7 @@ export default function Page() {
       <section className="mx-auto max-w-[1200px] px-6 py-10">
         <StepNumber n={3} />
         <h3 className="mt-4 text-center font-heading text-3xl leading-tight md:text-[54px] text-black">
-          <span className="italic text-[#c9846f]">Je maximilise</span>{" "}
+          <span className="italic text-[#c9846f]">Je maximise</span>{" "}
           <span className="font-medium">ta fiche Google profile.</span>
         </h3>
         <div className="mt-8 grid items-center gap-8 md:grid-cols-2">
@@ -444,7 +444,7 @@ export default function Page() {
       {/* Je me déplace + Marché digital + zones */}
       <section className="mx-auto max-w-[1200px] px-6 py-10">
         <h3 className="text-center font-heading text-3xl leading-tight md:text-[54px] text-black">
-          <span className="italic text-[#c9b896]">Je me déplace partout en France</span>
+          <span className="italic text-[#c9846f]">Je me déplace partout en France</span>
           <br />
           <span className="font-medium">
             Rien ne remplace une discussion autour de ton activité sur
@@ -522,7 +522,7 @@ export default function Page() {
           <span className="italic text-[#c9846f]">Toujours pas convaincu?</span>
         </h3>
         <p className="mt-3 font-heading text-3xl leading-tight md:text-[54px] text-black">
-          Fait de ta présence digital une force Marseillaise
+          Fais de ta présence digitale une force Marseillaise
         </p>
         <div className="mx-auto mt-8 max-w-[900px] text-left text-[17px] leading-[28px] text-[#1a1a1a]">
           <p>
