@@ -413,6 +413,13 @@ export default function Page() {
           <span className="font-medium">que tu es le meilleur sur Nice.</span>
         </h3>
         <div className="mt-8 grid items-stretch gap-8 md:grid-cols-2">
+          <Image
+            src="/images/specialiste-seo-nice.jpg"
+            alt="Jodie Lapaillerie et son assistante IA JWL Marketing"
+            width={1410}
+            height={2000}
+            className="mx-auto h-auto w-full max-w-[420px] rounded-2xl object-cover"
+          />
           <div className="h-full border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
             <p>
               Avant de parler SEO, j&apos;aime comprendre l&apos;histoire de
@@ -428,13 +435,6 @@ export default function Page() {
               permet pas, la visio fait parfaitement l&apos;affaire.
             </p>
           </div>
-          <Image
-            src="/images/specialiste-seo-nice.jpg"
-            alt="Jodie Lapaillerie et son assistante IA JWL Marketing"
-            width={1410}
-            height={2000}
-            className="mx-auto h-auto w-full max-w-[420px] rounded-2xl object-cover"
-          />
         </div>
       </section>
 
@@ -448,13 +448,6 @@ export default function Page() {
           </span>
         </h3>
         <div className="mt-8 grid items-stretch gap-8 md:grid-cols-2">
-          <Image
-            src="/images/qui-suis-je-carte-france.png"
-            alt="Zone d'intervention JWL Marketing — PACA sur place, France entière à distance"
-            width={2000}
-            height={1414}
-            className="mx-auto h-auto w-full max-w-[420px]"
-          />
           <div className="h-full border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
             <p>
               À Nice, être bon dans son métier ne suffit plus toujours à se
@@ -470,6 +463,13 @@ export default function Page() {
               concurrent.
             </p>
           </div>
+          <Image
+            src="/images/qui-suis-je-carte-france.png"
+            alt="Zone d'intervention JWL Marketing — PACA sur place, France entière à distance"
+            width={2000}
+            height={1414}
+            className="mx-auto h-auto w-full max-w-[420px]"
+          />
         </div>
         <div className="mt-8 grid items-start gap-8 md:grid-cols-2">
           <div className="h-full border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
@@ -546,13 +546,6 @@ export default function Page() {
         </a>
       </section>
 
-      {/* Et toi ? */}
-      <section className="mx-auto max-w-[1100px] px-6 py-10 text-center">
-        <h2 className="font-heading text-3xl leading-tight md:text-[54px] text-black">
-          Et toi ? Quand est-ce que tu t&apos;engages pour ton Business{" "}
-          <span className="text-[#5b4bff]">sur Nice?</span>
-        </h2>
-      </section>
     </div>
   );
 }
