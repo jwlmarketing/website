@@ -338,7 +338,7 @@ export default function Page() {
           <div>
             <h3 className="font-heading text-3xl leading-tight md:text-[54px] text-black">
               <span className="italic text-[#c9846f]">J&apos;améliore</span>{" "}
-              <span className="font-medium">ta fiche Google profile.</span>
+              <span className="font-medium">ta fiche Google Business profile.</span>
             </h3>
             <div className="mt-4 border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
               <p>
@@ -451,7 +451,7 @@ export default function Page() {
       {/* Je me déplace + Marché digital + zones */}
       <section className="mx-auto max-w-[1200px] px-6 py-10">
         <h3 className="text-center font-heading text-3xl leading-tight md:text-[54px] text-black">
-          <span className="italic text-[#c9b896]">Je me déplace partout en France</span>
+          <span className="italic text-[#c9846f]">Je me déplace partout en France</span>
           <br />
           <span className="font-medium">
             Selon ton projet à Nice, je peux venir directement à ta rencontre.
@@ -528,7 +528,7 @@ export default function Page() {
           <span className="italic text-[#c9846f]">Toujours pas convaincu?</span>
         </h3>
         <p className="mt-3 font-heading text-3xl leading-tight md:text-[54px] text-black">
-          Fait de ta présence digital une force Niçoise
+          Fais de ta présence digitale une force Niçoise
         </p>
         <div className="mx-auto mt-8 max-w-[900px] text-left text-[17px] leading-[28px] text-[#1a1a1a]">
           <p>
