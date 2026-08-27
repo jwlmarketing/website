@@ -396,10 +396,10 @@ export default function QuiSuisJe() {
             </Link>
           </div>
           <Image
-            src="/images/qui-suis-je-gmb-card.png"
+            src="/images/qui-suis-je-gmb.png"
             alt="Optimisation fiche Google Business Profile JWL Marketing"
-            width={1410}
-            height={950}
+            width={2000}
+            height={1414}
             className="h-auto w-full self-center rounded-2xl border border-[#eee] object-cover"
           />
         </div>
