@@ -115,7 +115,7 @@ export default function QuiSuisJe() {
           />
           <div className="text-center">
             <h2 className="font-heading text-3xl leading-tight md:text-[54px] text-black">
-              Ta meilleure consultant SEO, experte en stratégie digitale, et développement commercial
+              Ta meilleure consultant SEO, experte en <span className="text-[#c9846f]">stratégie digitale, et développement commercial</span>
             </h2>
             <div className="mt-2 text-4xl md:text-6xl">
               <GoogleColors />
@@ -396,10 +396,10 @@ export default function QuiSuisJe() {
             </Link>
           </div>
           <Image
-            src="/images/qui-suis-je-gmb.png"
+            src="/images/qui-suis-je-gmb-card.png"
             alt="Optimisation fiche Google Business Profile JWL Marketing"
-            width={2000}
-            height={1414}
+            width={1410}
+            height={950}
             className="h-auto w-full self-center rounded-2xl border border-[#eee] object-cover"
           />
         </div>
