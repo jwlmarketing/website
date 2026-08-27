@@ -96,10 +96,10 @@ export default function Page() {
           </div>
         </div>
         <Image
-          src="/images/consultant-seo-nice.jpg"
-          alt="Jodie Lapaillerie — Consultante SEO Nice"
-          width={1244}
-          height={1387}
+          src="/images/consultante-seo-visibilite-web-nice.jpg"
+          alt="Jodie Lapaillerie — Consultante SEO Nice, sur la Promenade des Anglais devant le Négresco"
+          width={494}
+          height={580}
           priority
           className="h-auto w-full max-w-[420px] rounded-2xl object-cover"
         />
