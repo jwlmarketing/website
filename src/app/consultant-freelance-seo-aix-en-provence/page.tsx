@@ -226,49 +226,33 @@ export default function QuiSuisJe() {
         </div>
       </section>
 
-      {/* Marché local */}
+      {/* Marché local + widget audit */}
       <section className="mx-auto max-w-[1200px] px-6 py-10">
         <h2 className="text-center font-heading text-3xl leading-tight md:text-[54px] text-black">
           <span className="italic text-[#c9846f]">Je connais ton marché</span>{" "}
           <span className="font-medium">sur Aix-en-Provence.</span>
         </h2>
-        <div className="mt-8 space-y-5 h-full border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
-          <p>
-            Ville d&apos;art, de droit et d&apos;université au cœur de la
-            Provence, Aix-en-Provence séduit les visiteurs chaque année sans
-            jamais perdre son authenticité. À Aix-en-Provence, il fait bon
-            vivre. Nous vivons au rythme des cigales, des marchés colorés et
-            des parfums de lavande. La culture s&apos;y mêle aux spectacles,
-            à la danse musicale, inspirant chaque jour restaurateurs,
-            commerçants et artisans.
-          </p>
-          <p>
-            Mais dans une ville aussi dynamique qu&apos;exigeante, cette
-            richesse appartient au monde réel. Sur Google, les règles sont
-            différentes. Le digital n&apos;a ni parfum, ni saveur, ni
-            vitrine pour attirer les passants. Aujourd&apos;hui, savoir
-            parler le langage de Google est devenu indispensable pour 100%
-            des sites entrants. Plus de 85% des consommateurs effectuent une
-            recherche en ligne avant de pousser la porte d&apos;un
-            commerçant.
-          </p>
-        </div>
-      </section>
-
-      <section className="mx-auto max-w-[1200px] px-6 py-10">
-        <div className="grid items-center gap-8 md:grid-cols-2">
+        <div className="mt-8 grid items-center gap-8 md:grid-cols-2">
           <GmbAuditWidget />
-          <div className="border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
+          <div className="space-y-5 h-full border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
             <p>
-              Ce diagnostic gratuit t&apos;aide à identifier en quelques
-              minutes les points faibles de ta fiche Google Business
-              Profile à Aix-en-Provence — avant qu&apos;un client
-              potentiel ne les remarque à ta place.
+              Ville d&apos;art, de droit et d&apos;université au cœur de la
+              Provence, Aix-en-Provence séduit les visiteurs chaque année sans
+              jamais perdre son authenticité. À Aix-en-Provence, il fait bon
+              vivre. Nous vivons au rythme des cigales, des marchés colorés et
+              des parfums de lavande. La culture s&apos;y mêle aux spectacles,
+              à la danse musicale, inspirant chaque jour restaurateurs,
+              commerçants et artisans.
             </p>
-            <p className="mt-4">
-              Réponds aux questions en regardant ta fiche pendant qu&apos;elle
-              est ouverte dans l&apos;autre onglet, et découvre ton score de
-              visibilité locale en temps réel.
+            <p>
+              Mais dans une ville aussi dynamique qu&apos;exigeante, cette
+              richesse appartient au monde réel. Sur Google, les règles sont
+              différentes. Le digital n&apos;a ni parfum, ni saveur, ni
+              vitrine pour attirer les passants. Aujourd&apos;hui, savoir
+              parler le langage de Google est devenu indispensable pour 100%
+              des sites entrants. Plus de 85% des consommateurs effectuent une
+              recherche en ligne avant de pousser la porte d&apos;un
+              commerçant.
             </p>
           </div>
         </div>
