@@ -8,7 +8,7 @@ import TypewriterText from "@/components/TypewriterText";
 export const metadata: Metadata = {
   title: "Création de site web | JWL Marketing",
   description:
-    "Création de site web qui travaille pour toi pendant que tu travailles. Auto-entrepreneurs, micro-entreprises, TPE, PME et dirigeants.",
+    "Découvre la puissance d'un site web conçu par une experte commerciale. Structure saine, rédaction SEO-GEO et cité par l'IA. France entière.",
 };
 
 function StepNumber({ n }: { n: number }) {
