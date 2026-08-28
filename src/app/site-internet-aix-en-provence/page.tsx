@@ -208,7 +208,7 @@ export default function Page() {
       {/* En escalier : 3 etapes */}
       <section className="mx-auto max-w-[900px] px-6 py-10">
         <div className="space-y-6">
-          <ScrollReveal delay={0} className="rounded-2xl bg-[#141414] p-8 text-white">
+          <ScrollReveal delay={0} className="mx-auto w-full rounded-2xl bg-[#141414] p-8 text-white">
             <h3 className="font-heading text-2xl">
               <span className="italic text-[#c9a84c]">Je créais ou migre</span>{" "}
               ton site web
@@ -222,7 +222,7 @@ export default function Page() {
           </ScrollReveal>
           <ScrollReveal
             delay={150}
-            className="ml-0 rounded-2xl bg-[#141414] p-8 text-white md:ml-12"
+            className="mx-auto w-full max-w-[85%] rounded-2xl bg-[#141414] p-8 text-white"
           >
             <h3 className="font-heading text-2xl">
               J&apos;héberge ton site sur une infrastructure{" "}
@@ -237,7 +237,7 @@ export default function Page() {
           </ScrollReveal>
           <ScrollReveal
             delay={300}
-            className="ml-0 rounded-2xl bg-[#141414] p-8 text-white md:ml-24"
+            className="mx-auto w-full max-w-[70%] rounded-2xl bg-[#141414] p-8 text-white"
           >
             <h3 className="font-heading text-2xl">
               À la fin de la mission tu reçevras une{" "}
