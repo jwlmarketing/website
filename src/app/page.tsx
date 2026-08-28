@@ -321,7 +321,7 @@ export default function Home() {
             muted
             playsInline
             aria-label="Jodie Lapaillerie - JWL Marketing"
-            className="h-auto max-h-[70vh] max-w-full object-contain"
+            className="h-auto max-h-[70vh] w-full max-w-full object-contain"
           />
           <HeroBadge />
         </div>
