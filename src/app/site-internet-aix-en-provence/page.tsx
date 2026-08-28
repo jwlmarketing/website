@@ -74,12 +74,12 @@ export default function Page() {
           </div>
         </div>
         <Image
-          src="/images/jodie-creation-site-web.png"
+          src="/images/creation-site-web-hero.webp"
           alt="Jodie Lapaillerie — Création de site web JWL Marketing"
-          width={1244}
-          height={1387}
+          width={712}
+          height={582}
           priority
-          className="h-auto w-full max-w-[420px] rounded-2xl object-cover"
+          className="h-auto w-full max-w-[500px] object-contain"
         />
       </div>
 
@@ -92,48 +92,13 @@ export default function Page() {
           <br />
           <span className="font-medium">Ton site web doit l&apos;être aussi.</span>
         </h2>
-        <div className="mt-10 grid gap-6 md:grid-cols-3">
-          <div className="rounded-2xl border border-[#eee] p-6 text-left">
-            <p className="text-[13px] font-semibold uppercase tracking-wide text-[#c9846f]">
-              Assistance informatique
-            </p>
-            <p className="mt-4 text-4xl font-bold text-black">3 468</p>
-            <p className="text-sm text-[#666]">vues de la fiche Google en 6 mois</p>
-            <p className="text-sm font-semibold text-[#c9846f]">63 appels en 6 mois.</p>
-            <p className="mt-4 text-sm font-semibold text-black">
-              Proxiclic Provence
-              <br />
-              Informaticien à Digne-les-Bains (04)
-            </p>
-          </div>
-          <div className="rounded-2xl border border-[#eee] p-6 text-left">
-            <p className="text-[13px] font-semibold uppercase tracking-wide text-[#c9846f]">
-              Gestion de patrimoine
-            </p>
-            <p className="mt-4 text-4xl font-bold text-black">1 350</p>
-            <p className="text-sm text-[#666]">vues de la fiche Google en 4 mois</p>
-            <p className="text-sm font-semibold text-[#c9846f]">7 appels clients en 4 mois.</p>
-            <p className="mt-4 text-sm font-semibold text-black">
-              Groupe INOVEA
-              <br />
-              Gestion de patrimoine à Aix-en-Provence (13)
-            </p>
-          </div>
-          <div className="rounded-2xl border border-[#eee] p-6 text-left">
-            <p className="text-[13px] font-semibold uppercase tracking-wide text-[#c9846f]">
-              Refonte stratégie de marque
-            </p>
-            <p className="mt-4 text-4xl font-bold text-black">En cours</p>
-            <p className="text-sm text-[#666]">
-              Site récemment lancé, indicateurs pas encore assez complets
-            </p>
-            <p className="mt-4 text-sm font-semibold text-black">
-              Bout de Poils
-              <br />
-              anciennement Green Beam Craft — Sèvres (91)
-            </p>
-          </div>
-        </div>
+        <Image
+          src="/images/creation-site-web-cas-clients.png"
+          alt="Résultats clients — Proxiclic Provence, Groupe INOVEA, Bout de Poils"
+          width={990}
+          height={452}
+          className="mx-auto mt-10 h-auto w-full max-w-[990px] rounded-2xl border border-[#eee] object-cover"
+        />
         <p className="mt-8 text-lg text-black">
           Pour que tes prospects te trouvent facilement, même s&apos;ils ne
           te connaissent pas.
@@ -149,6 +114,13 @@ export default function Page() {
             Fais de ton site web une machine à clients.
           </span>
         </h2>
+        <Image
+          src="/images/creation-site-web-methode.png"
+          alt="Ma méthode — JWL Marketing"
+          width={466}
+          height={346}
+          className="mx-auto mt-8 h-auto w-full max-w-[400px] rounded-2xl object-cover"
+        />
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           <div className="border-2 border-gold p-6 text-[15px] leading-[24px] text-[#1a1a1a]">
             Je comprends comment tes clients te recherchent. Étude de ton
@@ -185,13 +157,20 @@ export default function Page() {
             petit à petit avec ton entreprise.
           </p>
           <Image
-            src="/images/site-web-referencement-seo.png"
+            src="/images/creation-site-web-sur-mesure.png"
             alt="Création de site web sur mesure — JWL Marketing"
-            width={1200}
-            height={860}
-            className="h-auto w-full rounded-2xl border border-[#eee] object-cover"
+            width={466}
+            height={344}
+            className="h-auto w-full rounded-2xl object-cover"
           />
         </div>
+        <Image
+          src="/images/creation-site-web-mockups-devices.png"
+          alt="Site web responsive sur tous les écrans — JWL Marketing"
+          width={842}
+          height={348}
+          className="mx-auto mt-8 h-auto w-full max-w-[842px] object-contain"
+        />
       </section>
 
       {/* En escalier : 3 etapes */}
@@ -251,6 +230,13 @@ export default function Page() {
             à faire évoluer ta position sur <GoogleColors />
           </span>
         </h2>
+        <Image
+          src="/images/creation-site-web-veille-google.png"
+          alt="Suivi et veille Google — JWL Marketing"
+          width={462}
+          height={346}
+          className="mx-auto mt-8 h-auto w-full max-w-[400px] rounded-2xl object-cover"
+        />
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           <div>
             <StepNumber n={1} />
@@ -287,20 +273,46 @@ export default function Page() {
             Mensuelle avec des données chiffrées et un accompagnement clair
           </span>
         </h2>
+        <div className="mt-10 grid gap-6 md:grid-cols-3">
+          <div>
+            <Image
+              src="/images/creation-site-web-strategie-graph1.png"
+              alt="Search Console — sans stratégie SEO"
+              width={640}
+              height={352}
+              className="h-auto w-full rounded-2xl border border-[#eee] object-cover"
+            />
+            <p className="mt-3 text-sm text-[#1a1a1a]">
+              Quand tu n&apos;as pas de stratégie.
+            </p>
+          </div>
+          <div>
+            <Image
+              src="/images/creation-site-web-strategie-graph2.png"
+              alt="Search Console — stratégie SEO sans stratégie commerciale"
+              width={638}
+              height={356}
+              className="h-auto w-full rounded-2xl border border-[#eee] object-cover"
+            />
+            <p className="mt-3 text-sm text-[#1a1a1a]">
+              Quand tu as une stratégie SEO et aucune stratégie commerciale
+              sur ton site web.
+            </p>
+          </div>
+          <div>
+            <Image
+              src="/images/creation-site-web-strategie-graph3.png"
+              alt="Search Console — stratégie SEO investie"
+              width={618}
+              height={314}
+              className="h-auto w-full rounded-2xl border border-[#eee] object-cover"
+            />
+            <p className="mt-3 text-sm text-[#1a1a1a]">
+              Ou quand tu as investi sur ta stratégie.
+            </p>
+          </div>
+        </div>
         <div className="mx-auto mt-10 max-w-[800px] space-y-4 text-left text-[17px] leading-[28px] text-[#1a1a1a]">
-          <p>
-            Je vois quand tu n&apos;as pas de stratégie : Google ne propose
-            pas aux internautes tes clics qui correspondent à tes clients.
-          </p>
-          <p>
-            Quand tu as une stratégie SEO et aucune stratégie commerciale sur
-            ton site web : ta courbe monte sur Google te comprend, mais tu as
-            toujours des fuites, clics ne se convertit pas.
-          </p>
-          <p>
-            Ou quand tu as investi sur ta stratégie : Google te propose sur
-            des mots-clés. Tu as des clics des internautes.
-          </p>
           <p className="font-semibold text-black">
             L&apos;objectif c&apos;est d&apos;avoir un site qui travaille
             pour toi pendant que tu fais ton métier, que tu prospectes ou que
@@ -350,13 +362,22 @@ export default function Page() {
           <br />
           <span className="font-medium">qui parlent d&apos;eux-même</span>
         </h2>
-        <Image
-          src="/images/qui-suis-je-search-console.png"
-          alt="Évolution des impressions et clics — Google Search Console, JWL Marketing"
-          width={2000}
-          height={1414}
-          className="mx-auto mt-8 h-auto w-full max-w-[800px] rounded-2xl border border-[#eee] object-cover"
-        />
+        <div className="mx-auto mt-8 grid max-w-[900px] gap-6 md:grid-cols-2">
+          <Image
+            src="/images/creation-site-web-case-study-limousine.webp"
+            alt="Star Limousine Paris — site web créé par JWL Marketing"
+            width={1123}
+            height={562}
+            className="h-auto w-full rounded-2xl border border-[#eee] object-cover"
+          />
+          <Image
+            src="/images/creation-site-web-case-study-search-console.png"
+            alt="Évolution des impressions et clics — Google Search Console, JWL Marketing"
+            width={1034}
+            height={532}
+            className="h-auto w-full rounded-2xl border border-[#eee] object-cover"
+          />
+        </div>
         <p className="mt-3 text-xs text-[#888]">
           Capture issue d&apos;un compte Google Search Console client. Les
           requêtes et données sensibles ont été masquées.
