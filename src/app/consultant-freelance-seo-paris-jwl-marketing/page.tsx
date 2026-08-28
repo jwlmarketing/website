@@ -386,6 +386,7 @@ export default function Page() {
             <span className="italic text-[#c9846f]">Je dessine</span>{" "}
             <span className="font-medium">un site web sur mesure pour toi.</span>
           </h3>
+        <div className="mt-8 grid items-center gap-8 md:grid-cols-2">
           <Image
             src="/images/jodie-creation-site-web.png"
             alt="Jodie Lapaillerie — création de site web sur mesure JWL Marketing"
