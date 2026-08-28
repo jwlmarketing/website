@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import GoogleColors from "@/components/GoogleColors";
 import ScrollReveal from "@/components/ScrollReveal";
 import TypewriterText from "@/components/TypewriterText";
+import Lightbox from "@/components/Lightbox";
 
 export const metadata: Metadata = {
   title: "Création de site web | JWL Marketing",
@@ -343,7 +344,7 @@ export default function Page() {
             <p className="text-[17px] leading-[26px] text-[#1a1a1a]">
               Je vois quand <span className="font-bold">tu n&apos;as pas de stratégie</span>
             </p>
-            <Image
+            <Lightbox
               src="/images/creation-site-web-strategie-graph1.png"
               alt="Search Console — sans stratégie SEO"
               width={640}
@@ -364,7 +365,7 @@ export default function Page() {
               Quand <span className="font-bold">tu as une stratégie SEO</span> et
               aucune stratégie commerciale sur ton site web
             </p>
-            <Image
+            <Lightbox
               src="/images/creation-site-web-strategie-graph2.png"
               alt="Search Console — stratégie SEO sans stratégie commerciale"
               width={638}
@@ -386,7 +387,7 @@ export default function Page() {
           <p className="text-[17px] leading-[26px] text-[#1a1a1a]">
             Ou quand tu as investi sur ta stratégie.
           </p>
-          <Image
+          <Lightbox
             src="/images/creation-site-web-strategie-graph3.png"
             alt="Search Console — stratégie SEO investie"
             width={618}
