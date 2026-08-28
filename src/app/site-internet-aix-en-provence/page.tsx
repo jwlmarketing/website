@@ -5,6 +5,7 @@ import GoogleColors from "@/components/GoogleColors";
 import ScrollReveal from "@/components/ScrollReveal";
 import TypewriterText from "@/components/TypewriterText";
 import Lightbox from "@/components/Lightbox";
+import ProofCards from "@/components/ProofCards";
 
 export const metadata: Metadata = {
   title: "Création de site web | JWL Marketing",
@@ -93,15 +94,9 @@ export default function Page() {
           <br />
           <span className="font-medium">Ton site web doit l&apos;être aussi.</span>
         </h2>
-        <ScrollReveal>
-          <Image
-            src="/images/creation-site-web-cas-clients.png"
-            alt="Résultats clients — Proxiclic Provence, Groupe INOVEA, Bout de Poils"
-            width={990}
-            height={452}
-            className="mx-auto mt-10 h-auto w-full max-w-[990px] rounded-2xl border border-[#eee] object-cover"
-          />
-        </ScrollReveal>
+        <div className="mt-10">
+          <ProofCards />
+        </div>
         <p className="mt-8 text-lg text-black">
           Pour que tes prospects te trouvent facilement, même s&apos;ils ne
           te connaissent pas.
