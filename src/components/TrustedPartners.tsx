@@ -15,7 +15,7 @@ export default function TrustedPartners() {
   return (
     <section className="bg-white py-14 text-center">
       <p
-        className="mb-8 px-[5%] font-heading text-2xl font-semibold italic text-[#c2c2c2] md:text-3xl"
+        className="mb-8 px-[5%] font-heading text-2xl italic text-[#c2c2c2] md:text-3xl"
         style={{ fontFamily: "var(--font-heading)" }}
       >
         Mon réseau de confiance
