@@ -125,12 +125,14 @@ export default function Page() {
               height={346}
               className="h-auto w-full rounded-t-2xl object-cover"
             />
-            <div className="bg-[#141414] p-4 text-left text-[15px] font-semibold leading-[22px] text-white">
-              Je comprends comment tes clients te recherchent
-            </div>
-            <div className="p-4 text-left text-[15px] leading-[24px] text-[#1a1a1a]">
-              Étude de ton activité, de tes concurrents et des mots-clés
-              utilisés sur Google.
+            <div className="rounded-b-2xl bg-[#141414] p-4 text-left text-white">
+              <p className="text-[15px] font-semibold leading-[22px]">
+                Je comprends comment tes clients te recherchent
+              </p>
+              <p className="mt-2 text-[14px] leading-[22px] text-white/80">
+                Étude de ton activité, de tes concurrents et des mots-clés
+                utilisés sur Google.
+              </p>
             </div>
           </ScrollReveal>
           <ScrollReveal delay={150}>
@@ -141,12 +143,14 @@ export default function Page() {
               height={344}
               className="h-auto w-full rounded-t-2xl object-cover"
             />
-            <div className="bg-[#141414] p-4 text-left text-[15px] font-semibold leading-[22px] text-white">
-              Je crée un site web pensé pour être trouvé
-            </div>
-            <div className="p-4 text-left text-[15px] leading-[24px] text-[#1a1a1a]">
-              Structure, contenus, pages de services et optimisation SEO dès
-              la création.
+            <div className="rounded-b-2xl bg-[#141414] p-4 text-left text-white">
+              <p className="text-[15px] font-semibold leading-[22px]">
+                Je crée un site web pensé pour être trouvé
+              </p>
+              <p className="mt-2 text-[14px] leading-[22px] text-white/80">
+                Structure, contenus, pages de services et optimisation SEO dès
+                la création.
+              </p>
             </div>
           </ScrollReveal>
           <ScrollReveal delay={300}>
@@ -157,13 +161,15 @@ export default function Page() {
               height={346}
               className="h-auto w-full rounded-t-2xl object-cover"
             />
-            <div className="bg-[#141414] p-4 text-left text-[15px] font-semibold leading-[22px] text-white">
-              J&apos;analyse les données et j&apos;améliore la connexion à
-              Google Search Console
-            </div>
-            <div className="p-4 text-left text-[15px] leading-[24px] text-[#1a1a1a]">
-              Pour comprendre le comportement des visiteurs et identifier les
-              opportunités d&apos;amélioration.
+            <div className="rounded-b-2xl bg-[#141414] p-4 text-left text-white">
+              <p className="text-[15px] font-semibold leading-[22px]">
+                J&apos;analyse les données et j&apos;améliore la connexion à
+                Google Search Console
+              </p>
+              <p className="mt-2 text-[14px] leading-[22px] text-white/80">
+                Pour comprendre le comportement des visiteurs et identifier
+                les opportunités d&apos;amélioration.
+              </p>
             </div>
           </ScrollReveal>
         </div>
@@ -351,7 +357,7 @@ export default function Page() {
               alt="Search Console — sans stratégie SEO"
               width={640}
               height={352}
-              className="mt-3 h-auto w-full rounded-2xl border border-[#eee] object-cover"
+              className="mt-3 h-auto w-full max-w-[380px] rounded-2xl border border-[#eee] object-cover"
             />
             <p className="mt-3 text-sm text-[#1a1a1a]">
               Quand tu n&apos;as pas de stratégie.
@@ -372,7 +378,7 @@ export default function Page() {
               alt="Search Console — stratégie SEO sans stratégie commerciale"
               width={638}
               height={356}
-              className="mt-3 h-auto w-full rounded-2xl border border-[#eee] object-cover"
+              className="mt-3 h-auto w-full max-w-[380px] rounded-2xl border border-[#eee] object-cover"
             />
             <p className="mt-3 text-sm text-[#1a1a1a]">
               Quand tu as une stratégie SEO et aucune stratégie commerciale
@@ -385,7 +391,7 @@ export default function Page() {
             </p>
           </ScrollReveal>
         </div>
-        <ScrollReveal delay={300} className="mx-auto mt-8 max-w-[640px] text-left">
+        <ScrollReveal delay={300} className="mx-auto mt-8 max-w-[380px] text-left">
           <p className="text-[17px] leading-[26px] text-[#1a1a1a]">
             Ou quand tu as investi sur ta stratégie.
           </p>
