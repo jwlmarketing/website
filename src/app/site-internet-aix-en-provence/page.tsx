@@ -2,6 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import GoogleColors from "@/components/GoogleColors";
+import ScrollReveal from "@/components/ScrollReveal";
+import TypewriterText from "@/components/TypewriterText";
 
 export const metadata: Metadata = {
   title: "Création de site web | JWL Marketing",
@@ -46,15 +48,21 @@ export default function Page() {
       <div className="flex w-full flex-col items-center justify-between gap-10 bg-white px-[5%] py-[60px] lg:flex-row">
         <div className="max-w-[600px] flex-1">
           <h1 className="font-heading text-4xl leading-[1.05] lg:text-[54px] lg:leading-[1.05] text-black">
-            <span className="font-medium">Création de site web</span>
+            <TypewriterText className="font-medium" text="Création de site web" speed={22} />
             <br />
-            <span className="italic text-[#c9846f]">
-              qui travaille pour toi
-            </span>
+            <TypewriterText
+              className="italic text-[#c9846f]"
+              text="qui travaille pour toi"
+              speed={22}
+              startDelay={550}
+            />
             <br />
-            <span className="italic text-[#c9846f]">
-              pendant que tu travailles
-            </span>
+            <TypewriterText
+              className="italic text-[#c9846f]"
+              text="pendant que tu travailles"
+              speed={22}
+              startDelay={1050}
+            />
           </h1>
           <p className="mt-6 text-base leading-[1.6] text-black">
             Auto-entrepreneurs, micro-entreprises, TPE, PME et dirigeants :
@@ -92,13 +100,15 @@ export default function Page() {
           <br />
           <span className="font-medium">Ton site web doit l&apos;être aussi.</span>
         </h2>
-        <Image
-          src="/images/creation-site-web-cas-clients.png"
-          alt="Résultats clients — Proxiclic Provence, Groupe INOVEA, Bout de Poils"
-          width={990}
-          height={452}
-          className="mx-auto mt-10 h-auto w-full max-w-[990px] rounded-2xl border border-[#eee] object-cover"
-        />
+        <ScrollReveal>
+          <Image
+            src="/images/creation-site-web-cas-clients.png"
+            alt="Résultats clients — Proxiclic Provence, Groupe INOVEA, Bout de Poils"
+            width={990}
+            height={452}
+            className="mx-auto mt-10 h-auto w-full max-w-[990px] rounded-2xl border border-[#eee] object-cover"
+          />
+        </ScrollReveal>
         <p className="mt-8 text-lg text-black">
           Pour que tes prospects te trouvent facilement, même s&apos;ils ne
           te connaissent pas.
@@ -115,7 +125,7 @@ export default function Page() {
           </span>
         </h2>
         <div className="mt-10 grid gap-6 md:grid-cols-3">
-          <div>
+          <ScrollReveal delay={0}>
             <Image
               src="/images/creation-site-web-methode.png"
               alt="Je comprends comment tes clients te recherchent — JWL Marketing"
@@ -130,8 +140,8 @@ export default function Page() {
               Étude de ton activité, de tes concurrents et des mots-clés
               utilisés sur Google.
             </div>
-          </div>
-          <div>
+          </ScrollReveal>
+          <ScrollReveal delay={150}>
             <Image
               src="/images/creation-site-web-sur-mesure.png"
               alt="Je crée un site web pensé pour être trouvé — JWL Marketing"
@@ -146,8 +156,8 @@ export default function Page() {
               Structure, contenus, pages de services et optimisation SEO dès
               la création.
             </div>
-          </div>
-          <div>
+          </ScrollReveal>
+          <ScrollReveal delay={300}>
             <Image
               src="/images/creation-site-web-methode.png"
               alt="J'analyse les données et j'améliore la connexion à Google Search Console — JWL Marketing"
@@ -163,7 +173,7 @@ export default function Page() {
               Pour comprendre le comportement des visiteurs et identifier les
               opportunités d&apos;amélioration.
             </div>
-          </div>
+          </ScrollReveal>
         </div>
       </section>
 
@@ -185,27 +195,31 @@ export default function Page() {
             renforcé et les contenus à créer. Comme ça ton site grandit
             petit à petit avec ton entreprise.
           </p>
-          <Image
-            src="/images/creation-site-web-sur-mesure.png"
-            alt="Création de site web sur mesure — JWL Marketing"
-            width={466}
-            height={344}
-            className="h-auto w-full rounded-2xl object-cover"
-          />
+          <ScrollReveal>
+            <Image
+              src="/images/creation-site-web-sur-mesure.png"
+              alt="Création de site web sur mesure — JWL Marketing"
+              width={466}
+              height={344}
+              className="h-auto w-full rounded-2xl object-cover"
+            />
+          </ScrollReveal>
         </div>
-        <Image
-          src="/images/creation-site-web-mockups-devices.png"
-          alt="Site web responsive sur tous les écrans — JWL Marketing"
-          width={842}
-          height={348}
-          className="mx-auto mt-8 h-auto w-full max-w-[842px] object-contain"
-        />
+        <ScrollReveal delay={150}>
+          <Image
+            src="/images/creation-site-web-mockups-devices.png"
+            alt="Site web responsive sur tous les écrans — JWL Marketing"
+            width={842}
+            height={348}
+            className="mx-auto mt-8 h-auto w-full max-w-[842px] object-contain"
+          />
+        </ScrollReveal>
       </section>
 
       {/* En escalier : 3 etapes */}
       <section className="mx-auto max-w-[900px] px-6 py-10">
         <div className="space-y-6">
-          <div className="rounded-2xl bg-[#141414] p-8 text-white">
+          <ScrollReveal delay={0} className="rounded-2xl bg-[#141414] p-8 text-white">
             <h3 className="font-heading text-2xl">
               <span className="italic text-[#c9a84c]">Je créais ou migre</span>{" "}
               ton site web
@@ -216,8 +230,11 @@ export default function Page() {
               déjà un site Wix, Local.fr ou WordPress ? Je peux le récupérer
               et le faire évoluer. Aucun changement compliqué.
             </p>
-          </div>
-          <div className="ml-0 rounded-2xl bg-[#141414] p-8 text-white md:ml-12">
+          </ScrollReveal>
+          <ScrollReveal
+            delay={150}
+            className="ml-0 rounded-2xl bg-[#141414] p-8 text-white md:ml-12"
+          >
             <h3 className="font-heading text-2xl">
               J&apos;héberge ton site sur une infrastructure{" "}
               <span className="italic text-[#c9a84c]">
@@ -228,8 +245,11 @@ export default function Page() {
               Une maintenance et une sécurité assurées. Je veille aux mises à
               jour, à la sécurité et au bon fonctionnement de ton site.
             </p>
-          </div>
-          <div className="ml-0 rounded-2xl bg-[#141414] p-8 text-white md:ml-24">
+          </ScrollReveal>
+          <ScrollReveal
+            delay={300}
+            className="ml-0 rounded-2xl bg-[#141414] p-8 text-white md:ml-24"
+          >
             <h3 className="font-heading text-2xl">
               À la fin de la mission tu reçevras une{" "}
               <span className="italic text-[#c9a84c]">
@@ -245,15 +265,17 @@ export default function Page() {
               site. Un document de cession de droits sera donné pour
               formaliser juridiquement cette propriété.
             </p>
-          </div>
+          </ScrollReveal>
         </div>
-        <Image
-          src="/images/creation-site-web-certificat.png"
-          alt="Preuve d'antériorité horodatée — Copyright01"
-          width={414}
-          height={600}
-          className="mx-auto mt-8 h-auto w-full max-w-[280px]"
-        />
+        <ScrollReveal delay={450}>
+          <Image
+            src="/images/creation-site-web-certificat.png"
+            alt="Preuve d'antériorité horodatée — Copyright01"
+            width={414}
+            height={600}
+            className="mx-auto mt-8 h-auto w-full max-w-[280px]"
+          />
+        </ScrollReveal>
       </section>
 
       {/* Tous les mois je veille */}
@@ -265,15 +287,17 @@ export default function Page() {
             à faire évoluer ta position sur <GoogleColors />
           </span>
         </h2>
-        <Image
-          src="/images/creation-site-web-veille-google.png"
-          alt="Suivi et veille Google — JWL Marketing"
-          width={462}
-          height={346}
-          className="mx-auto mt-8 h-auto w-full max-w-[400px] rounded-2xl object-cover"
-        />
+        <ScrollReveal>
+          <Image
+            src="/images/creation-site-web-veille-google.png"
+            alt="Suivi et veille Google — JWL Marketing"
+            width={462}
+            height={346}
+            className="mx-auto mt-8 h-auto w-full max-w-[400px] rounded-2xl object-cover"
+          />
+        </ScrollReveal>
         <div className="mt-10 grid gap-6 md:grid-cols-3">
-          <div>
+          <ScrollReveal delay={0}>
             <StepNumber n={1} />
             <div className="mt-4 rounded-2xl bg-[#141414] p-6 text-left text-white">
               <p className="text-[15px] font-semibold leading-[22px]">
@@ -284,8 +308,8 @@ export default function Page() {
                 site ressort.
               </p>
             </div>
-          </div>
-          <div>
+          </ScrollReveal>
+          <ScrollReveal delay={150}>
             <StepNumber n={2} />
             <div className="mt-4 rounded-2xl bg-[#141414] p-6 text-left text-white">
               <p className="text-[15px] font-semibold leading-[22px]">
@@ -295,8 +319,8 @@ export default function Page() {
                 En comment ton site ressort et se qu&apos;on peut améliorer.
               </p>
             </div>
-          </div>
-          <div>
+          </ScrollReveal>
+          <ScrollReveal delay={300}>
             <StepNumber n={3} />
             <div className="mt-4 rounded-2xl bg-[#141414] p-6 text-left text-white">
               <p className="text-[15px] font-semibold leading-[22px]">
@@ -306,7 +330,7 @@ export default function Page() {
                 Je fais évoluer tes pages tes contenus.
               </p>
             </div>
-          </div>
+          </ScrollReveal>
         </div>
         <p className="mx-auto mt-8 max-w-[800px] text-[17px] leading-[28px] text-[#1a1a1a]">
           Selon ton accompagnement je peux soit te guider sur les ajustements
@@ -326,7 +350,7 @@ export default function Page() {
           </span>
         </h2>
         <div className="mt-10 grid gap-6 md:grid-cols-2">
-          <div className="text-left">
+          <ScrollReveal delay={0} className="text-left">
             <p className="text-[17px] leading-[26px] text-[#1a1a1a]">
               Je vois quand <span className="font-bold">tu n&apos;as pas de stratégie</span>
             </p>
@@ -345,8 +369,8 @@ export default function Page() {
               <br />
               Tu as des clics qui correspondent à tes clients
             </p>
-          </div>
-          <div className="text-left">
+          </ScrollReveal>
+          <ScrollReveal delay={150} className="text-left">
             <p className="text-[17px] leading-[26px] text-[#1a1a1a]">
               Quand <span className="font-bold">tu as une stratégie SEO</span> et
               aucune stratégie commerciale sur ton site web
@@ -367,9 +391,9 @@ export default function Page() {
               <br />
               Tu as toujours de faibles clics, tu ne convertis pas
             </p>
-          </div>
+          </ScrollReveal>
         </div>
-        <div className="mx-auto mt-8 max-w-[640px] text-left">
+        <ScrollReveal delay={300} className="mx-auto mt-8 max-w-[640px] text-left">
           <p className="text-[17px] leading-[26px] text-[#1a1a1a]">
             Ou quand tu as investi sur ta stratégie.
           </p>
@@ -380,7 +404,7 @@ export default function Page() {
             height={314}
             className="mt-3 h-auto w-full rounded-2xl border border-[#eee] object-cover"
           />
-        </div>
+        </ScrollReveal>
         <div className="mx-auto mt-10 max-w-[800px] space-y-4 text-left text-[17px] leading-[28px] text-[#1a1a1a]">
           <p className="font-semibold text-black">
             L&apos;objectif c&apos;est d&apos;avoir un site qui travaille
@@ -420,7 +444,7 @@ export default function Page() {
           />
         </svg>
         <div className="mt-10 grid gap-6 md:grid-cols-3">
-          <div className="rounded-2xl bg-[#141414] p-6 text-left text-white">
+          <ScrollReveal delay={0} className="rounded-2xl bg-[#141414] p-6 text-left text-white">
             <p className="text-[15px] font-semibold leading-[22px]">
               Je te propose une base qui rentre dans ton budget
             </p>
@@ -428,8 +452,8 @@ export default function Page() {
               On démarre avec l&apos;essentiel puis on fait grandir avec les
               résultats.
             </p>
-          </div>
-          <div className="rounded-2xl bg-[#141414] p-6 text-left text-white">
+          </ScrollReveal>
+          <ScrollReveal delay={150} className="rounded-2xl bg-[#141414] p-6 text-left text-white">
             <p className="text-[15px] font-semibold leading-[22px]">
               Je te soumets l&apos;idée de te former en rédaction SEO
             </p>
@@ -437,8 +461,8 @@ export default function Page() {
               Qui mieux que toi peut parler de ton métier ? Tu rédiges les
               articles de ton blog. Je garde un œil sur ce qui est publié.
             </p>
-          </div>
-          <div className="rounded-2xl bg-[#141414] p-6 text-left text-white">
+          </ScrollReveal>
+          <ScrollReveal delay={300} className="rounded-2xl bg-[#141414] p-6 text-left text-white">
             <p className="text-[15px] font-semibold leading-[22px]">
               Si tu préfères déléguer, je m&apos;en occupe
             </p>
@@ -446,7 +470,7 @@ export default function Page() {
               Je passe à l&apos;action pour toi, de la rédaction à la mise en
               ligne.
             </p>
-          </div>
+          </ScrollReveal>
         </div>
         <a
           href="/tarifs"
@@ -464,20 +488,24 @@ export default function Page() {
           <span className="font-medium">qui parlent d&apos;eux-même</span>
         </h2>
         <div className="mx-auto mt-8 grid max-w-[900px] gap-6 md:grid-cols-2">
-          <Image
-            src="/images/creation-site-web-case-study-limousine.webp"
-            alt="Star Limousine Paris — site web créé par JWL Marketing"
-            width={1123}
-            height={562}
-            className="h-auto w-full rounded-2xl border border-[#eee] object-cover"
-          />
-          <Image
-            src="/images/creation-site-web-case-study-search-console.png"
-            alt="Évolution des impressions et clics — Google Search Console, JWL Marketing"
-            width={1034}
-            height={532}
-            className="h-auto w-full rounded-2xl border border-[#eee] object-cover"
-          />
+          <ScrollReveal delay={0}>
+            <Image
+              src="/images/creation-site-web-case-study-limousine.webp"
+              alt="Star Limousine Paris — site web créé par JWL Marketing"
+              width={1123}
+              height={562}
+              className="h-auto w-full rounded-2xl border border-[#eee] object-cover"
+            />
+          </ScrollReveal>
+          <ScrollReveal delay={150}>
+            <Image
+              src="/images/creation-site-web-case-study-search-console.png"
+              alt="Évolution des impressions et clics — Google Search Console, JWL Marketing"
+              width={1034}
+              height={532}
+              className="h-auto w-full rounded-2xl border border-[#eee] object-cover"
+            />
+          </ScrollReveal>
         </div>
         <p className="mt-3 text-xs text-[#888]">
           Capture issue d&apos;un compte Google Search Console client. Les
@@ -488,17 +516,22 @@ export default function Page() {
       {/* Ton projet merite plus qu'un simple site web */}
       <section className="bg-white px-6 py-16 text-center">
         <h3 className="font-heading text-3xl leading-tight md:text-[54px] text-black">
-          <span className="italic text-[#c9846f]">
-            Ton projet mérite plus qu&apos;un simple site web
-          </span>
+          <TypewriterText
+            className="italic text-[#c9846f]"
+            text="Ton projet mérite plus qu'un simple site web"
+          />
         </h3>
         <p className="mt-3 font-heading text-3xl leading-tight md:text-[54px] text-black">
           Je crée des sites pensés pour être trouvés, compris et contactés.
         </p>
-        <p className="mx-auto mt-6 max-w-[700px] text-[17px] leading-[28px] text-[#1a1a1a]">
-          Tu restes propriétaire de ton site, de ton nom de domaine et de tes
-          données personnelles. Prêt à attirer tes prochains clients ?
-        </p>
+        <ScrollReveal>
+          <p className="mx-auto mt-6 max-w-[700px] text-[17px] leading-[28px] text-[#1a1a1a]">
+            Tu restes propriétaire de ton site, de ton nom de domaine et de
+            tes données.
+            <br />
+            Prêt à attirer tes prochains clients ?
+          </p>
+        </ScrollReveal>
         <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
           <a
             href="https://calendly.com/jwlm"
