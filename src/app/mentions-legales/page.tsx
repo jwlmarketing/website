@@ -37,8 +37,14 @@ export default function MentionsLegales() {
 
       <h2>Hébergement du site</h2>
       <p>
-        Le site jwl-marketing.fr est hébergé par <strong>OVH SAS</strong>, 2
-        rue Kellermann, 59100 Roubaix — ovhcloud.com
+        Le site jwl-marketing.fr est hébergé par <strong>JWL Marketing</strong>, sur son
+        infrastructure propre (JWL Hub), opérée sur un serveur privé virtuel Oracle Cloud
+        Infrastructure (Oracle France SAS).
+      </p>
+      <p>
+        Une copie du site est également hébergée à titre secondaire par <strong>Vercel Inc.</strong>,
+        340 S Lemon Ave #4133, Walnut, CA 91789, États-Unis — vercel.com, afin d&apos;assurer
+        la continuité de service.
       </p>
 
       <h2>Propriété intellectuelle</h2>
