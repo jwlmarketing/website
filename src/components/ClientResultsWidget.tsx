@@ -76,7 +76,7 @@ export default function ClientResultsWidget() {
         <div className="stat-card">
           <div className="stat-label">Avis Google</div>
           <div className="stat-value">
-            <span className="accent">+ 90 avis</span>
+            <span className="accent">16 avis</span>
             <span className="stat-value-label">
               <span className="g-blue">G</span>
               <span className="g-red">o</span>
@@ -86,7 +86,7 @@ export default function ClientResultsWidget() {
               <span className="g-red">e</span>
             </span>
           </div>
-          <div className="stat-sub">soit une moyenne de 4,9/5</div>
+          <div className="stat-sub">soit une moyenne de 5/5</div>
           <div className="stars">
             {Array.from({ length: 5 }).map((_, i) => (
               <svg key={i} viewBox="0 0 24 24">

@@ -298,9 +298,9 @@ export default function Home() {
           </div>
 
           <div className="mt-6 flex flex-wrap items-center gap-2 text-base">
-            <span className="text-lg font-normal text-[#1a2b6b]">4,9/5</span>
+            <span className="text-lg font-normal text-[#1a2b6b]">5/5</span>
             <span className="text-gold">★★★★★</span>
-            <span className="text-[#555]">91 avis Google</span>
+            <span className="text-[#555]">16 avis Google</span>
             <span className="text-[#999]">·</span>
             <a
               href="http://api.jwl-marketing.fr/redirects/gmb/jwl.html"
