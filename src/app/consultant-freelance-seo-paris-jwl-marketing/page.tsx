@@ -381,6 +381,13 @@ export default function Page() {
       {/* 4. Je dessine un site web sur mesure */}
       <section className="mx-auto max-w-[1200px] px-6 py-10">
         <StepNumber n={4} />
+          <Image
+            src="/images/jodie-creation-site-web.png"
+            alt="Jodie Lapaillerie — création de site web sur mesure JWL Marketing"
+            width={360}
+            height={288}
+            className="h-auto w-full self-center rounded-2xl border border-[#eee] object-cover"
+          />
         <div className="mx-auto mt-4 max-w-[600px] text-center">
           <h3 className="font-heading text-3xl leading-tight md:text-[54px] text-black">
             <span className="italic text-[#c9846f]">Je dessine</span>{" "}
