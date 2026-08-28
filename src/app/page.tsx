@@ -320,7 +320,7 @@ export default function Home() {
             width={760}
             height={623}
             priority
-            className="h-auto max-h-[70vh] w-full max-w-full object-contain"
+            className="h-auto max-h-[70vh] max-w-full object-contain"
           />
           <video
             src="/videos/etoile-sparkle.mp4"
