@@ -464,7 +464,7 @@ export default function Home() {
             href="/site-internet-aix-en-provence"
             className="inline-block rounded-full bg-[#c9846f] px-9 py-[18px] text-lg font-medium text-white transition-colors hover:bg-[#b8735f]"
           >
-            JWL Master voir l&apos;accompagnement
+            JWL Master, voir l&apos;accompagnement
           </Link>
         </div>
       </section>
