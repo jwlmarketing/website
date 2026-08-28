@@ -114,26 +114,55 @@ export default function Page() {
             Fais de ton site web une machine à clients.
           </span>
         </h2>
-        <Image
-          src="/images/creation-site-web-methode.png"
-          alt="Ma méthode — JWL Marketing"
-          width={466}
-          height={346}
-          className="mx-auto mt-8 h-auto w-full max-w-[400px] rounded-2xl object-cover"
-        />
         <div className="mt-10 grid gap-6 md:grid-cols-3">
-          <div className="border-2 border-gold p-6 text-[15px] leading-[24px] text-[#1a1a1a]">
-            Je comprends comment tes clients te recherchent. Étude de ton
-            activité, des concurrents et des mots-clés utilisés sur Google.
+          <div>
+            <Image
+              src="/images/creation-site-web-methode.png"
+              alt="Je comprends comment tes clients te recherchent — JWL Marketing"
+              width={466}
+              height={346}
+              className="h-auto w-full rounded-t-2xl object-cover"
+            />
+            <div className="bg-[#141414] p-4 text-left text-[15px] font-semibold leading-[22px] text-white">
+              Je comprends comment tes clients te recherchent
+            </div>
+            <div className="p-4 text-left text-[15px] leading-[24px] text-[#1a1a1a]">
+              Étude de ton activité, de tes concurrents et des mots-clés
+              utilisés sur Google.
+            </div>
           </div>
-          <div className="border-2 border-gold p-6 text-[15px] leading-[24px] text-[#1a1a1a]">
-            Je crée ton site web pensé pour être trouvé. Structure, contenus,
-            pages des services et optimisation SEO dès la création.
+          <div>
+            <Image
+              src="/images/creation-site-web-sur-mesure.png"
+              alt="Je crée un site web pensé pour être trouvé — JWL Marketing"
+              width={466}
+              height={344}
+              className="h-auto w-full rounded-t-2xl object-cover"
+            />
+            <div className="bg-[#141414] p-4 text-left text-[15px] font-semibold leading-[22px] text-white">
+              Je crée un site web pensé pour être trouvé
+            </div>
+            <div className="p-4 text-left text-[15px] leading-[24px] text-[#1a1a1a]">
+              Structure, contenus, pages de services et optimisation SEO dès
+              la création.
+            </div>
           </div>
-          <div className="border-2 border-gold p-6 text-[15px] leading-[24px] text-[#1a1a1a]">
-            J&apos;analyse les données et j&apos;améliore la connexion à
-            Google Search Console. Pour comprendre le comportement des
-            visiteurs et identifier les opportunités d&apos;amélioration.
+          <div>
+            <Image
+              src="/images/creation-site-web-methode.png"
+              alt="J'analyse les données et j'améliore la connexion à Google Search Console — JWL Marketing"
+              width={466}
+              height={346}
+              className="h-auto w-full rounded-t-2xl object-cover"
+            />
+            <div className="bg-[#141414] p-4 text-left text-[15px] font-semibold leading-[22px] text-white">
+              J&apos;analyse les données et j&apos;améliore la connexion à
+              Google Search Console
+            </div>
+            <div className="p-4 text-left text-[15px] leading-[24px] text-[#1a1a1a]">
+              Pour comprendre le comportement des visiteurs et identifier les
+              opportunités d&apos;amélioration.
+            </div>
           </div>
         </div>
       </section>
@@ -152,8 +181,8 @@ export default function Page() {
         <div className="mt-8 grid items-center gap-8 md:grid-cols-2">
           <p className="text-[17px] leading-[28px] text-[#1a1a1a]">
             Ton site n&apos;a pas besoin d&apos;être complet dès le premier
-            jour, les données nous permettront ensuite ce qu&apos;il faut
-            renforcer et les contenus à créer. Comme ça ton site grandit
+            jour, les données nous montrent ensuite ce qu&apos;il faut
+            renforcé et les contenus à créer. Comme ça ton site grandit
             petit à petit avec ton entreprise.
           </p>
           <Image
@@ -178,15 +207,14 @@ export default function Page() {
         <div className="space-y-6">
           <div className="rounded-2xl bg-[#141414] p-8 text-white">
             <h3 className="font-heading text-2xl">
-              <span className="italic text-[#c9a84c]">Je créais</span> ton
-              site web
+              <span className="italic text-[#c9a84c]">Je créais ou migre</span>{" "}
+              ton site web
             </h3>
             <p className="mt-3 text-[15px] leading-[25.5px] text-white/90">
-              Ton site t&apos;appartient. Tu restes propriétaire du nom de
-              domaine et du site. Je m&apos;occupe de la migration. Tu as un
-              site sous Wix, LoicR ou WordPress ? Je peux le récupérer et te
-              faire évoluer sans changement compliqué. Je gère les
-              transferts, les redirections et la mise en ligne.
+              Ton site t&apos;appartient. Tu restes propriétaire de ton nom de
+              domaine et de ton site. Je m&apos;occupe de la migration. Tu as
+              déjà un site Wix, Local.fr ou WordPress ? Je peux le récupérer
+              et le faire évoluer. Aucun changement compliqué.
             </p>
           </div>
           <div className="ml-0 rounded-2xl bg-[#141414] p-8 text-white md:ml-12">
@@ -219,6 +247,13 @@ export default function Page() {
             </p>
           </div>
         </div>
+        <Image
+          src="/images/creation-site-web-certificat.png"
+          alt="Preuve d'antériorité horodatée — Copyright01"
+          width={414}
+          height={600}
+          className="mx-auto mt-8 h-auto w-full max-w-[280px]"
+        />
       </section>
 
       {/* Tous les mois je veille */}
@@ -240,27 +275,44 @@ export default function Page() {
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           <div>
             <StepNumber n={1} />
-            <div className="mt-4 rounded-2xl bg-[#141414] p-6 text-[15px] leading-[24px] text-white/90">
-              Je regarde le suivi Search Console Google
+            <div className="mt-4 rounded-2xl bg-[#141414] p-6 text-left text-white">
+              <p className="text-[15px] font-semibold leading-[22px]">
+                Je regarde le suivi Search Console Google
+              </p>
+              <p className="mt-2 text-sm leading-[21px] text-white/80">
+                En claire se que les gens tapent sur google et comment ton
+                site ressort.
+              </p>
             </div>
           </div>
           <div>
             <StepNumber n={2} />
-            <div className="mt-4 rounded-2xl bg-[#141414] p-6 text-[15px] leading-[24px] text-white/90">
-              J&apos;analyse ce que les internautes tapent sur Google
+            <div className="mt-4 rounded-2xl bg-[#141414] p-6 text-left text-white">
+              <p className="text-[15px] font-semibold leading-[22px]">
+                J&apos;analyse ce que les internautes tapent sur google
+              </p>
+              <p className="mt-2 text-sm leading-[21px] text-white/80">
+                En comment ton site ressort et se qu&apos;on peut améliorer.
+              </p>
             </div>
           </div>
           <div>
             <StepNumber n={3} />
-            <div className="mt-4 rounded-2xl bg-[#141414] p-6 text-[15px] leading-[24px] text-white/90">
-              J&apos;ajuste la stratégie en conséquence
+            <div className="mt-4 rounded-2xl bg-[#141414] p-6 text-left text-white">
+              <p className="text-[15px] font-semibold leading-[22px]">
+                J&apos;ajuste ta stratégie en concéquence
+              </p>
+              <p className="mt-2 text-sm leading-[21px] text-white/80">
+                Je fais évoluer tes pages tes contenus.
+              </p>
             </div>
           </div>
         </div>
         <p className="mx-auto mt-8 max-w-[800px] text-[17px] leading-[28px] text-[#1a1a1a]">
-          Selon ton accompagnement je peux te guider sur les ajustements à
-          faire ou te les faire pour toi. Et toi qui as une stratégie de
-          rédaction SEO, je t&apos;indique les sujets à travailler.
+          Selon ton accompagnement je peux soit te guider sur les ajustements
+          à faire soit les faire pour toi. Et si tu rédiges tes articles de
+          blog toi même après la formation en rédaction SEO, je t&apos;indique
+          les sujets et les optimisations à travailler.
         </p>
       </section>
 
@@ -273,44 +325,61 @@ export default function Page() {
             Mensuelle avec des données chiffrées et un accompagnement clair
           </span>
         </h2>
-        <div className="mt-10 grid gap-6 md:grid-cols-3">
-          <div>
+        <div className="mt-10 grid gap-6 md:grid-cols-2">
+          <div className="text-left">
+            <p className="text-[17px] leading-[26px] text-[#1a1a1a]">
+              Je vois quand <span className="font-bold">tu n&apos;as pas de stratégie</span>
+            </p>
             <Image
               src="/images/creation-site-web-strategie-graph1.png"
               alt="Search Console — sans stratégie SEO"
               width={640}
               height={352}
-              className="h-auto w-full rounded-2xl border border-[#eee] object-cover"
+              className="mt-3 h-auto w-full rounded-2xl border border-[#eee] object-cover"
             />
             <p className="mt-3 text-sm text-[#1a1a1a]">
               Quand tu n&apos;as pas de stratégie.
             </p>
+            <p className="mt-2 text-sm italic text-[#7c5fd6]">
+              Google ne te propose pas aux internautes
+              <br />
+              Tu as des clics qui correspondent à tes clients
+            </p>
           </div>
-          <div>
+          <div className="text-left">
+            <p className="text-[17px] leading-[26px] text-[#1a1a1a]">
+              Quand <span className="font-bold">tu as une stratégie SEO</span> et
+              aucune stratégie commerciale sur ton site web
+            </p>
             <Image
               src="/images/creation-site-web-strategie-graph2.png"
               alt="Search Console — stratégie SEO sans stratégie commerciale"
               width={638}
               height={356}
-              className="h-auto w-full rounded-2xl border border-[#eee] object-cover"
+              className="mt-3 h-auto w-full rounded-2xl border border-[#eee] object-cover"
             />
             <p className="mt-3 text-sm text-[#1a1a1a]">
               Quand tu as une stratégie SEO et aucune stratégie commerciale
               sur ton site web.
             </p>
-          </div>
-          <div>
-            <Image
-              src="/images/creation-site-web-strategie-graph3.png"
-              alt="Search Console — stratégie SEO investie"
-              width={618}
-              height={314}
-              className="h-auto w-full rounded-2xl border border-[#eee] object-cover"
-            />
-            <p className="mt-3 text-sm text-[#1a1a1a]">
-              Ou quand tu as investi sur ta stratégie.
+            <p className="mt-2 text-sm italic text-[#7c5fd6]">
+              Ta courbe monte car Google te comprend
+              <br />
+              Tu as toujours de faibles clics, tu ne convertis pas
             </p>
           </div>
+        </div>
+        <div className="mx-auto mt-8 max-w-[640px] text-left">
+          <p className="text-[17px] leading-[26px] text-[#1a1a1a]">
+            Ou quand tu as investi sur ta stratégie.
+          </p>
+          <Image
+            src="/images/creation-site-web-strategie-graph3.png"
+            alt="Search Console — stratégie SEO investie"
+            width={618}
+            height={314}
+            className="mt-3 h-auto w-full rounded-2xl border border-[#eee] object-cover"
+          />
         </div>
         <div className="mx-auto mt-10 max-w-[800px] space-y-4 text-left text-[17px] leading-[28px] text-[#1a1a1a]">
           <p className="font-semibold text-black">
@@ -336,15 +405,47 @@ export default function Page() {
             Je reste présente quoi qu&apos;il arrive
           </span>
         </h2>
+        <svg viewBox="0 0 120 120" className="mx-auto mt-8 h-28 w-28">
+          <circle cx="60" cy="60" r="52" fill="none" stroke="#d9d9d9" strokeWidth="14" />
+          <circle
+            cx="60"
+            cy="60"
+            r="52"
+            fill="none"
+            stroke="#c9a84c"
+            strokeWidth="14"
+            strokeDasharray={`${2 * Math.PI * 52 * 0.22} ${2 * Math.PI * 52}`}
+            strokeLinecap="round"
+            transform="rotate(-90 60 60)"
+          />
+        </svg>
         <div className="mt-10 grid gap-6 md:grid-cols-3">
-          <div className="rounded-2xl bg-[#141414] p-6 text-[15px] leading-[24px] text-white/90">
-            Je te propose une base qui rentre dans ton budget
+          <div className="rounded-2xl bg-[#141414] p-6 text-left text-white">
+            <p className="text-[15px] font-semibold leading-[22px]">
+              Je te propose une base qui rentre dans ton budget
+            </p>
+            <p className="mt-2 text-sm leading-[21px] text-white/80">
+              On démarre avec l&apos;essentiel puis on fait grandir avec les
+              résultats.
+            </p>
           </div>
-          <div className="rounded-2xl bg-[#141414] p-6 text-[15px] leading-[24px] text-white/90">
-            Je te soumets l&apos;idée de te former en rédaction SEO
+          <div className="rounded-2xl bg-[#141414] p-6 text-left text-white">
+            <p className="text-[15px] font-semibold leading-[22px]">
+              Je te soumets l&apos;idée de te former en rédaction SEO
+            </p>
+            <p className="mt-2 text-sm leading-[21px] text-white/80">
+              Qui mieux que toi peut parler de ton métier ? Tu rédiges les
+              articles de ton blog. Je garde un œil sur ce qui est publié.
+            </p>
           </div>
-          <div className="rounded-2xl bg-[#141414] p-6 text-[15px] leading-[24px] text-white/90">
-            Si tu préfères déléguer, je m&apos;en occupe
+          <div className="rounded-2xl bg-[#141414] p-6 text-left text-white">
+            <p className="text-[15px] font-semibold leading-[22px]">
+              Si tu préfères déléguer, je m&apos;en occupe
+            </p>
+            <p className="mt-2 text-sm leading-[21px] text-white/80">
+              Je passe à l&apos;action pour toi, de la rédaction à la mise en
+              ligne.
+            </p>
           </div>
         </div>
         <a
