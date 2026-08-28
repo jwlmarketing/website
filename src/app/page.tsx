@@ -314,22 +314,14 @@ export default function Home() {
         </div>
 
         <div className="relative flex min-w-0 flex-[1.4_1_0%] items-start justify-end">
-          <Image
-            src="/images/hero-jodie-cartoon.png"
-            alt="Jodie Lapaillerie - JWL Marketing"
-            width={760}
-            height={623}
-            priority
-            className="h-auto max-h-[70vh] max-w-full object-contain"
-          />
           <video
-            src="/videos/etoile-sparkle.mp4"
+            src="/videos/hero-jodie-etoile.mp4"
             autoPlay
             loop
             muted
             playsInline
-            className="pointer-events-none absolute h-[70px] w-[70px] -translate-x-1/2 -translate-y-1/2 mix-blend-multiply md:h-[90px] md:w-[90px]"
-            style={{ left: "10.5%", top: "8.2%" }}
+            aria-label="Jodie Lapaillerie - JWL Marketing"
+            className="h-auto max-h-[70vh] max-w-full object-contain"
           />
           <HeroBadge />
         </div>
