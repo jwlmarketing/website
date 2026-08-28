@@ -23,7 +23,7 @@ export default function ReviewCard({
       <div className="mb-3 flex items-center gap-3">
         <Image src={avatar} alt={`${name} — avis Google`} width={40} height={40} className="h-10 w-10 rounded-full" />
         <div>
-          <p className="text-sm font-semibold text-black">{name}</p>
+          <p className="text-sm text-black">{name}</p>
           <p className="text-xs text-[#888]">{when}</p>
         </div>
       </div>
@@ -34,7 +34,7 @@ export default function ReviewCard({
       {isLong && (
         <button
           onClick={() => setExpanded((e) => !e)}
-          className="mt-2 self-start text-xs font-semibold text-gold hover:text-[#9a5a3c]"
+          className="mt-2 self-start text-xs text-gold hover:text-[#9a5a3c]"
         >
           {expanded ? "Réduire" : "Lire la suite"}
         </button>

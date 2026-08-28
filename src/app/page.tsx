@@ -171,22 +171,22 @@ function OfferCard({
 
   return (
     <div className="relative flex flex-1 flex-col rounded-md bg-[#141414] p-8 pt-14 text-white">
-      <span className="absolute -top-6 left-6 flex h-[76px] w-[76px] -rotate-6 items-center justify-center rounded-full bg-gold text-center text-[13px] font-bold leading-tight text-white shadow-md">
+      <span className="absolute -top-6 left-6 flex h-[76px] w-[76px] -rotate-6 items-center justify-center rounded-full bg-gold text-center text-[13px] leading-tight text-white shadow-md">
         À partir
         <br />
         de {offer.price}€{perMonth && <><br />par mois</>}
       </span>
-      <h3 className="font-heading text-xl font-bold underline decoration-gold underline-offset-4">
+      <h3 className="font-heading text-xl underline decoration-gold underline-offset-4">
         {offer.title}
       </h3>
       {hasSubtitle && (
-        <p className="mt-2 min-h-[2.5em] font-semibold italic text-white/90">
+        <p className="mt-2 min-h-[2.5em] italic text-white/90">
           <TypewriterText
             text={(offer as (typeof OFFERS_STARTER)[number]).subtitle}
           />
         </p>
       )}
-      <p className="mt-4 text-sm font-semibold uppercase tracking-wide text-gold">
+      <p className="mt-4 text-sm uppercase tracking-wide text-gold">
         {offer.lead}
       </p>
       <ul className="mt-2 flex-1 space-y-1.5 text-sm text-white/85">
@@ -199,7 +199,7 @@ function OfferCard({
       </ul>
       {hasLead2 && (
         <>
-          <p className="mt-4 text-sm font-semibold uppercase tracking-wide text-gold">
+          <p className="mt-4 text-sm uppercase tracking-wide text-gold">
             {(offer as (typeof OFFERS_STARTER)[number]).lead2}
           </p>
           <ul className="mt-2 space-y-1.5 text-sm text-[#c9846f]">
@@ -219,7 +219,7 @@ function OfferCard({
       )}
       {hasObjectif && (
         <p className="mt-4 min-h-[3em] text-sm text-white/85">
-          <span className="font-semibold uppercase tracking-wide text-gold">
+          <span className="uppercase tracking-wide text-gold">
             Objectif :
           </span>{" "}
           <TypewriterText
@@ -266,7 +266,7 @@ export default function Home() {
       <div className="flex w-full flex-col items-start justify-between gap-10 bg-white px-[5%] pb-[60px] pt-20 lg:flex-row">
         <div className="max-w-[600px] flex-1">
           <h1 className="m-0 mb-1 mt-2.5 font-heading text-4xl leading-[1.15] text-black lg:text-[60px] lg:leading-[1.2]">
-            <span className="font-bold">
+            <span>
               Un site Web
               <br />
               qui attire de
@@ -352,7 +352,7 @@ export default function Home() {
         <SectionHeading title="Ce que JWL MARKETING à mis en place">
           <br />
           pour un de{" "}
-          <span className="font-semibold italic text-[#c9846f]">ces clients</span>
+          <span className="italic text-[#c9846f]">ces clients</span>
         </SectionHeading>
         <ClientResultsWidget />
       </section>
@@ -374,7 +374,7 @@ export default function Home() {
                 className="h-[220px] w-full object-cover"
               />
               <div className="border-b border-white/15 px-6 py-6">
-                <h3 className="min-h-[1.6em] font-heading text-xl font-bold">
+                <h3 className="min-h-[1.6em] font-heading text-xl">
                   <TypewriterText text={step.title} startDelay={i * 150 + 650} />
                 </h3>
                 <p className="mt-3 text-sm text-white/85">{step.lead}</p>
@@ -412,7 +412,7 @@ export default function Home() {
 
         <div className="mx-auto flex max-w-[1200px] flex-col items-center justify-center gap-10 md:flex-row">
           <VisibilityChart />
-          <span className="block max-w-[300px] shrink-0 text-left font-semibold text-black">
+          <span className="block max-w-[300px] shrink-0 text-left text-black">
             1. Être trouvée
             <br />
             2. Être comprise
