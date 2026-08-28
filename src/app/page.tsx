@@ -291,7 +291,7 @@ export default function Home() {
             </a>
             <Link
               href="/contact-jwl-marketing-aix-en-provence"
-              className="inline-block rounded-full bg-[#faf3ea] px-9 py-[18px] text-lg font-medium text-[#ffffff] transition-colors hover:bg-[#f2e6d4]"
+              className="inline-block rounded-full bg-[#faf3ea] px-9 py-[18px] text-lg font-medium text-[#000000] transition-colors hover:bg-[#f2e6d4]"
             >
               Audit Marketing GRATUIT
             </Link>
