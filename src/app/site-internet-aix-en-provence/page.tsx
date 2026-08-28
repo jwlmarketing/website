@@ -48,21 +48,13 @@ export default function Page() {
       <div className="flex w-full flex-col items-center justify-between gap-10 bg-white px-[5%] py-[60px] lg:flex-row">
         <div className="max-w-[600px] flex-1">
           <h1 className="font-heading text-4xl leading-[1.05] lg:text-[54px] lg:leading-[1.05] text-black">
-            <TypewriterText className="font-medium" text="Création de site web" speed={22} />
+            <span className="font-medium">Création de site web</span>
             <br />
-            <TypewriterText
-              className="italic text-[#c9846f]"
-              text="qui travaille pour toi"
-              speed={22}
-              startDelay={550}
-            />
+            <span className="italic text-[#c9846f]">qui travaille pour toi</span>
             <br />
-            <TypewriterText
-              className="italic text-[#c9846f]"
-              text="pendant que tu travailles"
-              speed={22}
-              startDelay={1050}
-            />
+            <span className="italic text-[#c9846f]">
+              pendant que tu travailles
+            </span>
           </h1>
           <p className="mt-6 text-base leading-[1.6] text-black">
             Auto-entrepreneurs, micro-entreprises, TPE, PME et dirigeants :
@@ -429,7 +421,7 @@ export default function Page() {
             Je reste présente quoi qu&apos;il arrive
           </span>
         </h2>
-        <svg viewBox="0 0 120 120" className="mx-auto mt-8 h-28 w-28">
+        <svg viewBox="0 0 120 120" className="mx-auto mt-8 h-28 w-28 animate-spin">
           <circle cx="60" cy="60" r="52" fill="none" stroke="#d9d9d9" strokeWidth="14" />
           <circle
             cx="60"
@@ -440,7 +432,6 @@ export default function Page() {
             strokeWidth="14"
             strokeDasharray={`${2 * Math.PI * 52 * 0.22} ${2 * Math.PI * 52}`}
             strokeLinecap="round"
-            transform="rotate(-90 60 60)"
           />
         </svg>
         <div className="mt-10 grid gap-6 md:grid-cols-3">
