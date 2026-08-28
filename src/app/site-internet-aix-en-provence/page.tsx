@@ -186,31 +186,22 @@ export default function Page() {
             Codé sur mesure et qui t&apos;appartient
           </span>
         </h2>
-        <div className="mt-8 grid items-center gap-8 md:grid-cols-2">
-          <p className="text-[17px] leading-[28px] text-[#1a1a1a]">
-            Ton site n&apos;a pas besoin d&apos;être complet dès le premier
-            jour, les données nous montrent ensuite ce qu&apos;il faut
-            renforcé et les contenus à créer. Comme ça ton site grandit
-            petit à petit avec ton entreprise.
-          </p>
-          <ScrollReveal>
-            <Image
-              src="/images/creation-site-web-sur-mesure.png"
-              alt="Création de site web sur mesure — JWL Marketing"
-              width={466}
-              height={344}
-              className="h-auto w-full rounded-2xl object-cover"
-            />
-          </ScrollReveal>
-        </div>
-        <ScrollReveal delay={150}>
+        <ScrollReveal>
           <Image
             src="/images/creation-site-web-mockups-devices.png"
             alt="Site web responsive sur tous les écrans — JWL Marketing"
             width={842}
             height={348}
-            className="mx-auto mt-8 h-auto w-full max-w-[842px] object-contain"
+            className="mx-auto mt-8 h-auto w-full max-w-[420px] object-contain"
           />
+        </ScrollReveal>
+        <ScrollReveal delay={150}>
+          <p className="mx-auto mt-6 max-w-[640px] text-center text-[17px] leading-[28px] text-[#1a1a1a]">
+            Ton site n&apos;a pas besoin d&apos;être complet dès le premier
+            jour, les données nous montrent ensuite ce qu&apos;il faut
+            renforcé et les contenus à créer. Comme ça ton site grandit
+            petit à petit avec ton entreprise.
+          </p>
         </ScrollReveal>
       </section>
 
