@@ -113,8 +113,8 @@ export default function Page() {
             className="mx-auto h-auto w-full max-w-[320px] rounded-2xl object-cover"
           />
           <div className="text-center">
-            <h2 className="font-heading text-3xl leading-tight md:text-[54px] text-black">
-              Ta meilleure consultant SEO, experte en <span className="text-[#c9846f]">stratégie digitale, et développement commercial</span>
+ <h2 className="font-heading text-3xl leading-tight md:text-[54px] text-black">
+              <span className="text-[#c9846f]"> Ta consultante SEO préférée,</span> experte en stratégie digitale et développement commercial
             </h2>
             <div className="mt-2 text-4xl md:text-6xl">
               <GoogleColors />
