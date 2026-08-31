@@ -2,9 +2,9 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import { marked } from "marked";
-import categoriesJson from "../../content/categories.json";
 
 const BLOG_DIR = path.join(process.cwd(), "content/blog");
+const CATEGORIES_FILE = path.join(process.cwd(), "content/categories.json");
 
 export type BlogCategory = {
   id: string;
@@ -38,7 +38,16 @@ export type BlogPost = Omit<BlogFrontmatter, "category"> & {
   category: BlogCategory | null;
 };
 
-export const CATEGORIES: BlogCategory[] = categoriesJson as BlogCategory[];
+export function getCategories(): BlogCategory[] {
+  if (!fs.existsSync(CATEGORIES_FILE)) return [];
+  const raw = fs.readFileSync(CATEGORIES_FILE, "utf8");
+  return JSON.parse(raw) as BlogCategory[];
+}
+
+export function saveCategories(categories: BlogCategory[]) {
+  fs.writeFileSync(CATEGORIES_FILE, JSON.stringify(categories, null, 2) + "\n", "utf8");
+}
+
 
 function ensureDir() {
   if (!fs.existsSync(BLOG_DIR)) fs.mkdirSync(BLOG_DIR, { recursive: true });
@@ -59,7 +68,7 @@ function readOne(slug: string): BlogPost | null {
   const { data, content } = matter(raw);
   const fm = data as BlogFrontmatter;
   const stat = fs.statSync(file);
-  const category = CATEGORIES.find((c) => c.slug === fm.category) || null;
+  const category = getCategories().find((c) => c.slug === fm.category) || null;
   return {
     ...fm,
     slug: fm.slug || slug,
@@ -100,7 +109,7 @@ export async function listPublishedPosts(opts: { page: number; perPage: number; 
     category: p.category,
     publishedAt: p.publishedAt || null,
   }));
-  return { posts: paged, total, categories: CATEGORIES.sort((a, b) => a.order - b.order) };
+  return { posts: paged, total, categories: getCategories().sort((a, b) => a.order - b.order) };
 }
 
 export async function getPostBySlug(slug: string) {

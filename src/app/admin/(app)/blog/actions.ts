@@ -54,7 +54,8 @@ export async function savePostAction(formData: FormData) {
   revalidatePath("/blog");
   revalidatePath(`/blog/${slug}`);
   revalidatePath("/admin/blog");
-  redirect("/admin/blog");
+  revalidatePath("/admin/blog/articles");
+  redirect("/admin/blog/articles");
 }
 
 export async function deletePostAction(formData: FormData) {
@@ -65,5 +66,6 @@ export async function deletePostAction(formData: FormData) {
   syncToGit(`Blog: supprime "${slug}"`);
   revalidatePath("/blog");
   revalidatePath("/admin/blog");
-  redirect("/admin/blog");
+  revalidatePath("/admin/blog/articles");
+  redirect("/admin/blog/articles");
 }

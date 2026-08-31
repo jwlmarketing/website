@@ -1,6 +1,6 @@
 import { redirect, notFound } from "next/navigation";
 import { requireAdminUser } from "@/lib/jwlAuth";
-import { CATEGORIES, getPost } from "@/lib/blog";
+import { getCategories, getPost } from "@/lib/blog";
 import PostForm from "../../PostForm";
 
 export default async function EditPost({
@@ -15,5 +15,5 @@ export default async function EditPost({
   const post = getPost(slug);
   if (!post) notFound();
 
-  return <PostForm post={post} categories={CATEGORIES} />;
+  return <PostForm post={post} categories={getCategories()} />;
 }
