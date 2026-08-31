@@ -31,7 +31,7 @@ export type BlogFrontmatter = {
   seoDescription?: string;
 };
 
-export type BlogPost = BlogFrontmatter & {
+export type BlogPost = Omit<BlogFrontmatter, "category"> & {
   content: string; // raw markdown
   html: string; // rendered html
   updatedAt: string;
