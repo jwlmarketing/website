@@ -1,0 +1,6 @@
+[
+  { "id": "marketing-digital", "slug": "marketing-digital", "name": "Marketing Digital", "description": "Stratégies marketing et communication digitale pour les PME et indépendants.", "color": "#A8874A", "order": 1 },
+  { "id": "seo-local", "slug": "seo-local", "name": "SEO Local", "description": "Référencement naturel local, Google Business Profile et visibilité locale.", "color": "#1a1a1a", "order": 2 },
+  { "id": "conseils-business", "slug": "conseils-business", "name": "Conseils Business", "description": "Conseils pratiques pour développer votre activité et attirer des clients.", "color": "#6b6560", "order": 3 },
+  { "id": "outils-ressources", "slug": "outils-ressources", "name": "Outils & Ressources", "description": "Outils digitaux, templates et ressources pour les entrepreneurs.", "color": "#8B7355", "order": 4 }
+]
