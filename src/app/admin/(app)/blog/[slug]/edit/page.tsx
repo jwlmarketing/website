@@ -15,10 +15,5 @@ export default async function EditPost({
   const post = getPost(slug);
   if (!post) notFound();
 
-  return (
-    <div className="mx-auto max-w-[760px] px-6 py-10">
-      <h1 className="mb-8 font-heading text-2xl font-bold text-black">Modifier l&apos;article</h1>
-      <PostForm post={post} categories={CATEGORIES} />
-    </div>
-  );
+  return <PostForm post={post} categories={CATEGORIES} />;
 }
