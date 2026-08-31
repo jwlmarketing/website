@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { getPostBySlug } from "@/lib/cmsRelay";
+import { getPostBySlug } from "@/lib/blog";
 import { auth } from "@/lib/auth";
 
 export const dynamic = "force-dynamic";
