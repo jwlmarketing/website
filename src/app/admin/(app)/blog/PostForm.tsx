@@ -4,6 +4,7 @@ import { useState } from "react";
 import { savePostAction } from "./actions";
 import type { BlogCategory, BlogPost } from "@/lib/blog";
 import RichTextEditor from "./RichTextEditor";
+import CoverImagePicker from "./CoverImagePicker";
 
 export default function PostForm({
   post,
@@ -146,19 +147,7 @@ export default function PostForm({
           <div className="editor-panel">
             <div className="panel-toggle">Image de couverture</div>
             <div className="panel-body">
-              <div className="form-group">
-                <label>Chemin de l&apos;image</label>
-                <input
-                  name="coverImage"
-                  defaultValue={post?.coverImage || ""}
-                  placeholder="/images/blog/mon-image.jpg"
-                />
-                <small>Dépose l&apos;image dans public/images/blog/ via JWL Hub, puis colle le chemin ici.</small>
-              </div>
-              <div className="form-group">
-                <label>Texte alternatif</label>
-                <input name="coverAlt" defaultValue={post?.coverAlt || ""} />
-              </div>
+              <CoverImagePicker initialPath={post?.coverImage || ""} initialAlt={post?.coverAlt || ""} />
             </div>
           </div>
         </div>
