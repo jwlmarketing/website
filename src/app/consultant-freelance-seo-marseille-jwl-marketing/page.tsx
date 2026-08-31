@@ -495,11 +495,169 @@ export default function Page() {
             {ZONES.map((z) => (
               <span
                 key={z}
-                className="rounded-full bg-[#1a1207] px-5 py-2 text-sm text-white"
+                className={`rounded-full px-5 py-2 text-sm ${
+                  z === "Marseille" || z === "La Ciotat"
+                    ? "bg-gold text-white"
+                    : "bg-[#1a1207] text-white"
+                }`}
               >
                 {z}
               </span>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Marseille */}
+      <section className="mx-auto max-w-[900px] px-6 py-16 text-left">
+        <h3 className="mb-10 text-center font-heading text-3xl leading-tight md:text-[54px] text-black">
+          <span className="italic text-[#c9846f]">FAQ</span>{" "}
+          <span className="font-medium">Marseille</span>
+        </h3>
+
+        <div className="space-y-10 text-[17px] leading-[28px] text-[#1a1a1a]">
+          <div>
+            <h4 className="font-heading text-xl font-bold text-black">
+              J&apos;ai déjà un bon emplacement à Marseille, pourquoi faire du SEO ?
+            </h4>
+            <p className="mt-3">Ton emplacement aide les personnes qui passent devant ta porte.</p>
+            <p className="mt-3">Le SEO aide les personnes qui te cherchent déjà sur Google.</p>
+            <p className="mt-3">
+              Aujourd&apos;hui, un client tape « restaurant Marseille », « avocat Prado », «
+              plombier 13008 » ou « consultant Marseille » avant de choisir. Si ton concurrent
+              apparaît avant toi, il récupère le contact avant même que le prospect découvre ton
+              adresse.
+            </p>
+            <p className="mt-3">Le SEO ne remplace pas un bon emplacement.</p>
+            <p className="mt-3">Il le transforme en machine à générer des demandes.</p>
+            <p className="mt-3">
+              Sur Marseille, beaucoup d&apos;entreprises investissent dans leur local mais
+              négligent leur visibilité Google. C&apos;est souvent là que se trouve la plus
+              grosse opportunité.
+            </p>
+          </div>
+
+          <div>
+            <h4 className="font-heading text-xl font-bold text-black">
+              Comment adapter une stratégie SEO à une entreprise implantée dans la métropole
+              marseillaise ?
+            </h4>
+            <p className="mt-3">Marseille n&apos;est pas une ville uniforme.</p>
+            <p className="mt-3">
+              Le Vieux-Port, La Joliette, Prado, Castellane, La Valentine ou Euroméditerranée
+              n&apos;ont pas les mêmes recherches ni les mêmes clients.
+            </p>
+            <p className="mt-3">Une stratégie efficace repose sur plusieurs leviers :</p>
+            <ul className="mt-2 list-disc space-y-1 pl-5">
+              <li>Une fiche Google Business Profile optimisée.</li>
+              <li>Des pages dédiées à tes services.</li>
+              <li>Des contenus adaptés à Marseille et à la métropole.</li>
+              <li>Des pages locales pour les zones stratégiques.</li>
+              <li>Une stratégie GEO pour les moteurs IA.</li>
+            </ul>
+            <p className="mt-3">L&apos;objectif n&apos;est pas d&apos;attirer plus de visiteurs.</p>
+            <p className="mt-3">L&apos;objectif est d&apos;attirer les bonnes demandes.</p>
+            <p className="mt-3">
+              C&apos;est exactement la logique que nous appliquons sur nos prestations de
+              Consultant SEO Marseille, SEO Local et GEO.
+            </p>
+          </div>
+
+          <div>
+            <h4 className="font-heading text-xl font-bold text-black">
+              Dans combien de temps le SEO m&apos;apportera-t-il des clients sur Marseille ?
+            </h4>
+            <p className="mt-3">Le SEO n&apos;est pas une publicité.</p>
+            <p className="mt-3">Tu ne paies pas pour apparaître demain.</p>
+            <p className="mt-3">En revanche, tu construis une visibilité durable.</p>
+            <p className="mt-3">Dans la majorité des cas :</p>
+            <ul className="mt-2 list-disc space-y-1 pl-5">
+              <li>Premiers signaux : 1 à 3 mois.</li>
+              <li>Premiers leads réguliers : 3 à 6 mois.</li>
+              <li>Résultats solides : 6 à 12 mois.</li>
+            </ul>
+            <p className="mt-3">Tout dépend de trois facteurs :</p>
+            <ul className="mt-2 list-disc space-y-1 pl-5">
+              <li>Ton secteur.</li>
+              <li>La concurrence.</li>
+              <li>L&apos;état actuel de ton site.</li>
+            </ul>
+            <p className="mt-3">
+              Un cabinet dentaire ou un artisan bien positionné peut obtenir des résultats plus
+              rapidement qu&apos;un secteur ultra-concurrentiel. Le plus important reste la
+              qualité de la stratégie mise en place dès le départ.
+            </p>
+          </div>
+
+          <div>
+            <h4 className="font-heading text-xl font-bold text-black">
+              Pourquoi prendre un consultant SEO à Marseille plutôt qu&apos;une agence ?
+            </h4>
+            <p className="mt-3">Parce que tu ne cherches pas forcément une équipe de 15 personnes.</p>
+            <p className="mt-3">Tu cherches surtout des résultats.</p>
+            <p className="mt-3">
+              Avec un consultant SEO, tu échanges directement avec la personne qui construit la
+              stratégie. Pas avec un commercial. Pas avec un chef de projet intermédiaire.
+            </p>
+            <p className="mt-3">Tu gagnes en réactivité.</p>
+            <p className="mt-3">Tu gagnes en transparence.</p>
+            <p className="mt-3">Tu sais exactement pourquoi chaque action est réalisée.</p>
+            <p className="mt-3">
+              Chez JWL Marketing, chaque recommandation est reliée à un objectif simple : plus de
+              visibilité, plus de demandes, plus de chiffre d&apos;affaires.
+            </p>
+            <p className="mt-3">Pas de jargon.</p>
+            <p className="mt-3">Pas de rapports de 50 pages que personne ne lit.</p>
+          </div>
+
+          <div>
+            <h4 className="font-heading text-xl font-bold text-black">
+              Comment l&apos;IA choisit-elle les entreprises qu&apos;elle recommande à Marseille ?
+            </h4>
+            <p className="mt-3">Les intelligences artificielles ne choisissent pas les entreprises au hasard.</p>
+            <p className="mt-3">Elles analysent les signaux de confiance présents sur le web.</p>
+            <p className="mt-3">Elles regardent notamment :</p>
+            <ul className="mt-2 list-disc space-y-1 pl-5">
+              <li>Ton site internet.</li>
+              <li>Ta fiche Google Business Profile.</li>
+              <li>Tes avis clients.</li>
+              <li>Tes contenus experts.</li>
+              <li>Les mentions de ton entreprise sur d&apos;autres sites.</li>
+              <li>La cohérence de tes informations locales.</li>
+            </ul>
+            <p className="mt-3">
+              Plus ton entreprise est reconnue comme experte sur son sujet, plus elle a de
+              chances d&apos;être citée dans les réponses générées par l&apos;IA. C&apos;est
+              précisément le rôle du GEO (Generative Engine Optimization) : rendre ton entreprise
+              visible dans ChatGPT, Gemini, Copilot et les futurs moteurs conversationnels.
+            </p>
+          </div>
+
+          <div>
+            <h4 className="font-heading text-xl font-bold text-black">
+              Le GEO (Generative Engine Optimization) va-t-il remplacer le SEO local sur
+              Marseille ?
+            </h4>
+            <p className="mt-3">Non.</p>
+            <p className="mt-3">Le GEO ne remplace pas le SEO. Il vient s&apos;ajouter au SEO.</p>
+            <p className="mt-3">Le SEO permet d&apos;être trouvé sur Google.</p>
+            <p className="mt-3">Le GEO permet d&apos;être recommandé par l&apos;intelligence artificielle.</p>
+            <p className="mt-3">
+              Les entreprises qui domineront demain seront celles qui travaillent les deux. Une
+              fiche Google optimisée, un site performant et des contenus experts restent
+              indispensables. Ensuite, le GEO renforce ta présence dans les réponses générées par
+              l&apos;IA.
+            </p>
+            <p className="mt-3">Le vrai sujet n&apos;est donc pas de choisir entre SEO et GEO.</p>
+            <p className="mt-3">
+              Le vrai sujet est d&apos;être visible partout où tes futurs clients cherchent une
+              réponse.
+            </p>
+            <p className="mt-3">
+              Tu veux savoir où ton entreprise perd actuellement des clients sur Google et dans
+              les moteurs IA ? Découvre notre audit SEO &amp; GEO Marseille et identifie les
+              opportunités les plus rentables pour ton activité.
+            </p>
           </div>
         </div>
       </section>
