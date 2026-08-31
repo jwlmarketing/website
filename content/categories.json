@@ -1,6 +1,50 @@
 [
-  { "id": "marketing-digital", "slug": "marketing-digital", "name": "Marketing Digital", "description": "Stratégies marketing et communication digitale pour les PME et indépendants.", "color": "#A8874A", "order": 1 },
-  { "id": "seo-local", "slug": "seo-local", "name": "SEO Local", "description": "Référencement naturel local, Google Business Profile et visibilité locale.", "color": "#1a1a1a", "order": 2 },
-  { "id": "conseils-business", "slug": "conseils-business", "name": "Conseils Business", "description": "Conseils pratiques pour développer votre activité et attirer des clients.", "color": "#6b6560", "order": 3 },
-  { "id": "outils-ressources", "slug": "outils-ressources", "name": "Outils & Ressources", "description": "Outils digitaux, templates et ressources pour les entrepreneurs.", "color": "#8B7355", "order": 4 }
+  {
+    "id": "communication-image-de-marque",
+    "slug": "communication-image-de-marque",
+    "name": "Communication & Image de Marque",
+    "description": "Ton image de marque ne se résume pas à un logo ou à des couleurs. Elle représente ce que tes clients perçoivent de ton entreprise avant même de te contacter. Découvre comment construire un positionnement cohérent, renforcer ta crédibilité et développer une communication qui donne envie de te choisir.",
+    "color": "#a8874a",
+    "order": 1
+  },
+  {
+    "id": "cas-clients-retours-terrain",
+    "slug": "cas-clients-retours-terrain",
+    "name": "Cas clients & Retours terrain",
+    "description": "Découvre des retours d'expérience, des cas concrets et des stratégies appliquées auprès d'entrepreneurs, d'artisans, de TPE et de PME. Positionnement, visibilité Google, acquisition client, développement commercial ou création de site web : chaque article s'appuie sur des problématiques réelles rencontrées sur le terrain et sur les solutions mises en place pour y répondre.",
+    "color": "#a8874a",
+    "order": 2
+  },
+  {
+    "id": "marketing-digital-strategie",
+    "slug": "marketing-digital-strategie",
+    "name": "Marketing Digital & Stratégie",
+    "description": "Positionnement, stratégie marketing, acquisition client et visibilité Google : découvre des conseils concrets pour mieux comprendre ton marché, attirer les bons clients et développer ton activité durablement.",
+    "color": "#a8874a",
+    "order": 1
+  },
+  {
+    "id": "acquisition-clients-developpement-commercial",
+    "slug": "acquisition-clients-developpement-commercial",
+    "name": "Acquisition Clients & Développement Commercial",
+    "description": "Acquisition client, développement commercial, visibilité Google, SEO-GEO et positionnement : découvre des exemples concrets, des retours d'expérience et des stratégies appliquées auprès d'entrepreneurs, d'artisans, de TPE et de PME.",
+    "color": "#1a1a1a",
+    "order": 2
+  },
+  {
+    "id": "seo-local-visibilite-google",
+    "slug": "seo-local-visibilite-google",
+    "name": "SEO Local & Visibilité Google",
+    "description": "Améliore ta visibilité sur Google, développe ton référencement local et attire davantage de clients grâce au SEO local, à Google Business Profile et aux bonnes pratiques du référencement naturel. Découvre comment gagner en visibilité et apparaître devant tes concurrents.",
+    "color": "#6b6560",
+    "order": 3
+  },
+  {
+    "id": "outils-methodes",
+    "slug": "outils-methodes",
+    "name": "Outils & Méthodes",
+    "description": "Explore les outils SEO, marketing et commerciaux qui facilitent le quotidien des entrepreneurs. Retrouve des astuces, tutoriels et méthodes concrètes pour gagner du temps et améliorer tes résultats.",
+    "color": "#8b7355",
+    "order": 4
+  }
 ]
