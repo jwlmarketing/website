@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { savePostAction } from "./actions";
 import type { BlogCategory, BlogPost } from "@/lib/blog";
+import RichTextEditor from "./RichTextEditor";
 
 export default function PostForm({
   post,
@@ -70,18 +71,9 @@ export default function PostForm({
           </div>
 
           <div className="editor-panel">
-            <div className="panel-toggle">Contenu (Markdown)</div>
+            <div className="panel-toggle">Contenu</div>
             <div className="panel-body">
-              <div className="form-group">
-                <textarea
-                  name="content"
-                  defaultValue={post?.content || ""}
-                  rows={20}
-                  required
-                  style={{ fontFamily: "'SF Mono','Fira Mono',monospace", fontSize: "0.82rem" }}
-                />
-                <small>Markdown standard : ## Titre, **gras**, *italique*, - liste, [lien](url)</small>
-              </div>
+              <RichTextEditor name="content" initialValue={post?.content || ""} />
             </div>
           </div>
 

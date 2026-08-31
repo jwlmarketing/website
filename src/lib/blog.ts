@@ -75,7 +75,11 @@ function readOne(slug: string): BlogPost | null {
     tags: fm.tags || [],
     status: fm.status || "draft",
     content,
-    html: marked.parse(content, { async: false }) as string,
+    // The rich-text editor saves real HTML directly. Older posts written
+    // as plain Markdown (no HTML tags) still get parsed for compatibility.
+    html: /<[a-z][\s\S]*>/i.test(content.trim())
+      ? content
+      : (marked.parse(content, { async: false }) as string),
     updatedAt: stat.mtime.toISOString(),
     category,
   };
