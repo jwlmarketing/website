@@ -1,11 +1,11 @@
 import { redirect } from "next/navigation";
-import { auth } from "@/lib/auth";
+import { requireAdminUser } from "@/lib/jwlAuth";
 import { CATEGORIES } from "@/lib/blog";
 import PostForm from "../PostForm";
 
 export default async function NewPost() {
-  const session = await auth();
-  if (!session) redirect("/admin/login");
+  const user = await requireAdminUser();
+  if (!user) redirect("/admin/login");
 
   return (
     <div className="mx-auto max-w-[760px] px-6 py-10">

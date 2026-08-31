@@ -1,14 +1,14 @@
 import Link from "next/link";
 import { redirect } from "next/navigation";
-import { auth, signOut } from "@/lib/auth";
+import { requireAdminUser, destroySession } from "@/lib/jwlAuth";
 import { getAllPosts } from "@/lib/blog";
 import DeleteButton from "./DeleteButton";
 
 export const dynamic = "force-dynamic";
 
 export default async function AdminBlogList() {
-  const session = await auth();
-  if (!session) redirect("/admin/login");
+  const user = await requireAdminUser();
+  if (!user) redirect("/admin/login");
 
   const posts = getAllPosts();
 
@@ -29,7 +29,8 @@ export default async function AdminBlogList() {
           <form
             action={async () => {
               "use server";
-              await signOut({ redirectTo: "/admin/login" });
+              await destroySession();
+              redirect("/admin/login");
             }}
           >
             <button type="submit" className="text-sm text-[#888] hover:text-black">

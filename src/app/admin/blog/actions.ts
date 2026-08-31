@@ -3,12 +3,12 @@
 import { execSync } from "child_process";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
-import { auth } from "@/lib/auth";
+import { requireAdminUser } from "@/lib/jwlAuth";
 import { savePost, deletePost } from "@/lib/blog";
 
 async function requireAdmin() {
-  const session = await auth();
-  if (!session) redirect("/admin/login");
+  const user = await requireAdminUser();
+  if (!user) redirect("/admin/login");
 }
 
 function syncToGit(message: string) {

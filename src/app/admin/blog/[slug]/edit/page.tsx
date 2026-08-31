@@ -1,5 +1,5 @@
 import { redirect, notFound } from "next/navigation";
-import { auth } from "@/lib/auth";
+import { requireAdminUser } from "@/lib/jwlAuth";
 import { CATEGORIES, getPost } from "@/lib/blog";
 import PostForm from "../../PostForm";
 
@@ -8,8 +8,8 @@ export default async function EditPost({
 }: {
   params: Promise<{ slug: string }>;
 }) {
-  const session = await auth();
-  if (!session) redirect("/admin/login");
+  const user = await requireAdminUser();
+  if (!user) redirect("/admin/login");
 
   const { slug } = await params;
   const post = getPost(slug);
