@@ -7,7 +7,7 @@ import UploadForm from "./UploadForm";
 
 export const dynamic = "force-dynamic";
 
-const MEDIA_DIR = path.join(process.cwd(), "public/images/blog");
+const MEDIA_DIR = path.join(process.cwd(), "content/uploads/blog");
 
 export default async function MediaPage() {
   const user = await requireAdminUser();

@@ -1,15 +1,17 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
-import { listPublishedPosts } from "@/lib/blog";
+import { listPublishedPosts, getSettings } from "@/lib/blog";
 
 export const dynamic = "force-dynamic";
 
-export const metadata: Metadata = {
-  title: "JWL Marketing Blog — SEO & Marketing Digital Aix-en-Provence",
-  description:
-    "Blog expert SEO local, marketing digital et visibilité Google pour les entrepreneurs à Aix-en-Provence et en PACA.",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const settings = getSettings();
+  return {
+    title: settings.seoTitle,
+    description: settings.seoDescription,
+  };
+}
 
 const PER_PAGE = 9;
 
@@ -32,6 +34,7 @@ export default async function BlogList({
     perPage: PER_PAGE,
     cat,
   });
+  const settings = getSettings();
 
   const pages = total > 0 ? Math.ceil(total / PER_PAGE) : 1;
 
@@ -43,11 +46,7 @@ export default async function BlogList({
             <div className="flex-1 py-10 md:py-10 md:pr-12">
               <h1 className="mb-4 font-heading text-[1.9rem] font-bold leading-[1.15] tracking-tight md:text-[3.4rem]">
                 <span className="block text-gold">Blog SEO</span>
-                <span className="mt-1 block text-[1.4rem] text-black md:text-[2.2rem]">
-                  Ton partenaire marketing
-                  <br />
-                  et commercial
-                </span>
+                <span className="mt-1 block text-[1.4rem] text-black md:text-[2.2rem]">{settings.tagline}</span>
               </h1>
               <div className="mb-5 flex items-center gap-1.5">
                 <span className="block h-0.5 w-8 rounded-full bg-gold" />
@@ -81,9 +80,7 @@ export default async function BlogList({
             <h2 className="mb-2 font-heading text-[2rem] font-bold text-black">
               Articles pour une communication qui a du sens.
             </h2>
-            <p className="mb-5 text-[0.95rem] text-[#6b6560]">
-              Ici vous trouverez des contenus pour réfléchir, comprendre et agir sur votre communication
-            </p>
+            <p className="mb-5 text-[0.95rem] text-[#6b6560]">{settings.description}</p>
 
             {categories.length > 0 && (
               <div className="flex flex-wrap justify-center gap-2">

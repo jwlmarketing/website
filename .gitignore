@@ -20,6 +20,9 @@
 # tinymce (copied from node_modules at build time by scripts/copy-tinymce.mjs)
 /public/tinymce
 
+# local dev fallback for the comments DB (production uses /opt/jwlhub-data)
+.data-comments.db*
+
 # production
 /build
 

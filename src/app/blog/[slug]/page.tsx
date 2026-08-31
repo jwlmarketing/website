@@ -3,7 +3,9 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { getPostBySlug } from "@/lib/blog";
-import { auth } from "@/lib/auth";
+import { getSession } from "@/lib/jwlAuth";
+import { getApprovedComments } from "@/lib/comments";
+import CommentForm from "./CommentForm";
 
 export const dynamic = "force-dynamic";
 
@@ -43,10 +45,11 @@ export default async function BlogPostPage({
   if (!post) notFound();
 
   if (post.status !== "published") {
-    const session = await auth();
+    const session = await getSession();
     if (!session) notFound();
   }
 
+  const comments = getApprovedComments(slug);
   const content = post.content as { html?: string };
 
   const jsonLd = {
@@ -151,6 +154,27 @@ export default async function BlogPostPage({
             </div>
           </div>
         )}
+        <div className="mt-12 border-t border-neutral-100 pt-8">
+          <h2 className="mb-4 font-heading text-xl font-semibold text-black">
+            {comments.length > 0 ? `Commentaires (${comments.length})` : "Laisser un commentaire"}
+          </h2>
+          {comments.length > 0 && (
+            <div className="mb-6 space-y-4">
+              {comments.map((c) => (
+                <div key={c.id} className="rounded-xl border border-neutral-100 p-4">
+                  <div className="mb-1 flex items-center justify-between">
+                    <strong className="text-sm text-black">{c.author_name}</strong>
+                    <span className="text-xs text-neutral-400">
+                      {new Date(c.created_at).toLocaleDateString("fr-FR")}
+                    </span>
+                  </div>
+                  <p className="text-sm text-[#444]">{c.content}</p>
+                </div>
+              ))}
+            </div>
+          )}
+          <CommentForm postSlug={post.slug} />
+        </div>
       </div>
     </div>
   );

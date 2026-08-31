@@ -2,6 +2,7 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 import { requireAdminUser } from "@/lib/jwlAuth";
 import { getAllPosts } from "@/lib/blog";
+import { countCommentsByStatus } from "@/lib/comments";
 
 export const dynamic = "force-dynamic";
 
@@ -11,6 +12,7 @@ export default async function AdminDashboard() {
 
   const posts = getAllPosts();
   const published = posts.filter((p) => p.status === "published");
+  const commentCounts = countCommentsByStatus();
   const recent = [...posts]
     .sort((a, b) => (b.publishedAt || b.updatedAt).localeCompare(a.publishedAt || a.updatedAt))
     .slice(0, 5);
@@ -30,16 +32,17 @@ export default async function AdminDashboard() {
             <div className="stat-label">Articles publiés</div>
           </div>
         </div>
-        <div className="stat-card">
-          <div className="stat-icon stat-icon--blue">
+        <div className={`stat-card ${commentCounts.pending > 0 ? "stat-card--alert" : ""}`}>
+          <div className="stat-icon stat-icon--orange">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} width={20} height={20}>
-              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
-              <circle cx="12" cy="12" r="3" />
+              <circle cx="12" cy="12" r="10" />
+              <line x1="12" y1="8" x2="12" y2="12" />
+              <line x1="12" y1="16" x2="12.01" y2="16" />
             </svg>
           </div>
           <div>
-            <div className="stat-value">—</div>
-            <div className="stat-label">Vues totales (non suivi)</div>
+            <div className="stat-value">{commentCounts.pending}</div>
+            <div className="stat-label">Commentaires en attente</div>
           </div>
         </div>
         <div className="stat-card">
@@ -49,8 +52,8 @@ export default async function AdminDashboard() {
             </svg>
           </div>
           <div>
-            <div className="stat-value">—</div>
-            <div className="stat-label">Commentaires (aucun système)</div>
+            <div className="stat-value">{commentCounts.total}</div>
+            <div className="stat-label">Commentaires au total</div>
           </div>
         </div>
         <div className="stat-card">
