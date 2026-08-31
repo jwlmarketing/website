@@ -21,7 +21,7 @@ function syncToGit(message: string) {
   }
 }
 
-export async function uploadMediaAction(formData: FormData) {
+export async function uploadMediaAction(formData: FormData): Promise<{ path: string } | void> {
   const user = await requireAdminUser();
   if (!user) redirect("/admin/login");
 
@@ -30,17 +30,27 @@ export async function uploadMediaAction(formData: FormData) {
 
   if (!fs.existsSync(MEDIA_DIR)) fs.mkdirSync(MEDIA_DIR, { recursive: true });
 
-  const safeName = file.name
+  let safeName = file.name
     .toLowerCase()
     .normalize("NFD")
     .replace(/[̀-ͯ]/g, "")
     .replace(/[^a-z0-9.]+/g, "-");
+
+  // Avoid clobbering an existing file with the same name.
+  if (fs.existsSync(path.join(MEDIA_DIR, safeName))) {
+    const ext = path.extname(safeName);
+    const base = safeName.slice(0, -ext.length || undefined);
+    safeName = `${base}-${Date.now()}${ext}`;
+  }
+
   const dest = path.join(MEDIA_DIR, safeName);
   const buf = Buffer.from(await file.arrayBuffer());
   fs.writeFileSync(dest, buf);
 
   syncToGit(`Blog: ajoute l'image ${safeName}`);
   revalidatePath("/admin/blog/media");
+
+  return { path: `/images/blog/${safeName}` };
 }
 
 export async function deleteMediaAction(formData: FormData) {
