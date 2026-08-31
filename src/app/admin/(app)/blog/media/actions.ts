@@ -7,11 +7,14 @@ import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import { requireAdminUser } from "@/lib/jwlAuth";
 
-const MEDIA_DIR = path.join(process.cwd(), "public/images/blog");
+// Not under /public: Turbopack bakes a static manifest of /public at build
+// time, so files written here by the running server (no rebuild) would
+// 404 forever. Served instead via src/app/images/blog/[filename]/route.ts.
+const MEDIA_DIR = path.join(process.cwd(), "content/uploads/blog");
 
 function syncToGit(message: string) {
   try {
-    execSync("git add public/images/blog", { cwd: process.cwd() });
+    execSync("git add content/uploads/blog", { cwd: process.cwd() });
     execSync(`git -c user.email="contact.jwlmarketing@gmail.com" -c user.name="JWL Marketing" commit -m ${JSON.stringify(message)}`, {
       cwd: process.cwd(),
     });

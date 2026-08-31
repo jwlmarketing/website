@@ -115,10 +115,12 @@ export default function AdminShell({
   user,
   logoutAction,
   children,
+  pendingComments = 0,
 }: {
   user: JwlUser | null;
   logoutAction: () => Promise<void>;
   children: React.ReactNode;
+  pendingComments?: number;
 }) {
   const pathname = usePathname();
 
@@ -168,6 +170,9 @@ export default function AdminShell({
                   >
                     <NavIcon name={item.icon} />
                     {item.label}
+                    {item.href === "/admin/blog/comments" && pendingComments > 0 && (
+                      <span className="badge-count">{pendingComments}</span>
+                    )}
                   </Link>
                 );
               })}

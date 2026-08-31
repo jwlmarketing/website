@@ -1,6 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // Native module (comments DB) — must not be bundled by the build.
+  serverExternalPackages: ["better-sqlite3"],
   async rewrites() {
     return [
       {

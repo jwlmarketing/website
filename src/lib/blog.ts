@@ -211,3 +211,47 @@ export function deletePost(slug: string) {
   const file = path.join(BLOG_DIR, `${slug}.mdx`);
   if (fs.existsSync(file)) fs.unlinkSync(file);
 }
+
+export type BlogSettings = {
+  siteName: string;
+  tagline: string;
+  description: string;
+  seoTitle: string;
+  seoDescription: string;
+  footerText: string;
+  socialFacebook: string;
+  socialInstagram: string;
+  socialLinkedin: string;
+  socialTwitter: string;
+  socialYoutube: string;
+};
+
+const SETTINGS_FILE = path.join(process.cwd(), "content/settings.json");
+
+const DEFAULT_SETTINGS: BlogSettings = {
+  siteName: "JWL Marketing Blog",
+  tagline: "Ton partenaire marketing et commercial",
+  description: "Ici vous trouverez des contenus pour réfléchir, comprendre et agir sur votre communication",
+  seoTitle: "JWL Marketing Blog — SEO & Marketing Digital Aix-en-Provence",
+  seoDescription:
+    "Blog expert SEO local, marketing digital et visibilité Google pour les entrepreneurs à Aix-en-Provence et en PACA.",
+  footerText: "© 2026 JWL Marketing — Tous droits réservés",
+  socialFacebook: "",
+  socialInstagram: "",
+  socialLinkedin: "",
+  socialTwitter: "",
+  socialYoutube: "",
+};
+
+export function getSettings(): BlogSettings {
+  if (!fs.existsSync(SETTINGS_FILE)) return DEFAULT_SETTINGS;
+  try {
+    return { ...DEFAULT_SETTINGS, ...JSON.parse(fs.readFileSync(SETTINGS_FILE, "utf8")) };
+  } catch {
+    return DEFAULT_SETTINGS;
+  }
+}
+
+export function saveSettings(settings: BlogSettings) {
+  fs.writeFileSync(SETTINGS_FILE, JSON.stringify(settings, null, 2) + "\n", "utf8");
+}
