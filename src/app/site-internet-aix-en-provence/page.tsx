@@ -405,6 +405,92 @@ export default function Page() {
         </a>
       </section>
 
+      {/* Quel budget prévoir ? */}
+      <section className="mx-auto max-w-[1000px] px-6 py-10 text-center">
+        <h2 className="font-heading text-3xl leading-tight md:text-[54px]">
+          <span className="italic text-[#c9846f]">Quel budget prévoir ?</span>
+        </h2>
+        <p className="mt-2 text-[15px] text-[#555]">Pour créer ou optimiser ton site ?</p>
+
+        <div className="mx-auto mt-10 flex flex-col gap-8 md:flex-row">
+          <div className="relative flex flex-1 flex-col rounded-md bg-[#141414] p-8 pt-14 text-left text-white">
+            <span className="absolute -top-6 left-6 flex h-[76px] w-[76px] -rotate-6 items-center justify-center rounded-full bg-gold text-center text-[13px] leading-tight text-white shadow-md">
+              À partir
+              <br />
+              de 1990€
+            </span>
+            <h3 className="font-heading text-xl underline decoration-gold underline-offset-4">
+              JWL Business
+            </h3>
+            <p className="mt-2 italic text-white/90">« Je construis un site web sur mesure. »</p>
+            <p className="mt-4 text-sm uppercase tracking-wide text-gold">Inclus :</p>
+            <ul className="mt-2 space-y-1.5 text-sm text-white/85">
+              {[
+                "Audit stratégique",
+                "Positionnement commercial",
+                "Architecture des pages",
+                "Développement sur mesure",
+                "Mise en ligne sur Vercel",
+                "Optimisation technique",
+              ].map((item) => (
+                <li key={item} className="flex gap-2">
+                  <span className="text-gold">✔</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="mt-4 text-sm uppercase tracking-wide text-gold">
+              Ce qui fait la différence :
+            </p>
+            <ul className="mt-2 space-y-1.5 text-sm text-[#c9846f]">
+              {[
+                "Site rapide",
+                "Sans abonnement",
+                "Sans paiement annuel d'un hébergeur",
+                "Évolutif",
+                "Certificat de propriété délivré au client (agréé juridiquement)",
+              ].map((item) => (
+                <li key={item} className="flex gap-2">
+                  <span className="text-gold">✔</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="relative flex flex-1 flex-col rounded-md bg-[#141414] p-8 pt-14 text-left text-white">
+            <span className="absolute -top-6 left-6 flex h-[76px] w-[76px] -rotate-6 items-center justify-center rounded-full bg-gold text-center text-[13px] leading-tight text-white shadow-md">
+              À partir
+              <br />
+              de 4500€
+            </span>
+            <h3 className="font-heading text-xl underline decoration-gold underline-offset-4">
+              JWL Visible
+            </h3>
+            <p className="mt-2 italic text-white/90">« Je développe, je veux des clients. »</p>
+            <p className="mt-4 text-sm uppercase tracking-wide text-gold">Inclus :</p>
+            <ul className="mt-2 space-y-1.5 text-sm text-white/85">
+              {[
+                "Site web sur mesure + stratégie SEO",
+                "Audit stratégique",
+                "Positionnement SEO",
+                "Développement du site",
+                "Optimisation technique SEO",
+                "Rédaction SEO",
+                "Google Business Profile",
+                "Blog",
+                "Stratégie locale, régionale ou nationale",
+              ].map((item) => (
+                <li key={item} className="flex gap-2">
+                  <span className="text-gold">✔</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
       {/* J'avance a ton rythme */}
       <section className="mx-auto max-w-[1200px] px-6 py-10 text-center">
         <h2 className="font-heading text-3xl leading-tight md:text-[54px] text-black">
