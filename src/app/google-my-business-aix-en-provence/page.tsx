@@ -203,18 +203,24 @@ export default function Page() {
         </h2>
         <div className="mt-10 grid items-center gap-8 md:grid-cols-2">
           <Image
-            src="/images/creation-site-web-veille-google.png"
-            alt="Optimisation des informations Google Business Profile"
-            width={462}
-            height={346}
+            src="/images/google-hq-velo-jwl.webp"
+            alt="Jodie et son assistante IA JWL Marketing devant le siège de Google"
+            width={456}
+            height={608}
             className="mx-auto h-auto w-full max-w-[320px] rounded-2xl border border-[#eee] object-cover"
           />
           <p className="text-[17px] leading-[28px] text-[#1a1a1a]">
-            Horaires, adresse, numéro de téléphone, site web, catégories et
-            description : chaque information renseignée sur ta fiche joue un
-            rôle dans ta visibilité locale. Je vérifie et optimise chaque
-            détail pour que ta fiche transforme un simple passage sur Google
-            en véritable prise de contact.
+            Toi, tu sais exactement ce que tu fais. Google, lui, se base
+            uniquement sur les informations qu&apos;il trouve. Si ta fiche
+            Google Business Profile est incomplète, imprécise ou peu active,
+            il aura du mal à comprendre ton activité et à la proposer aux
+            bonnes personnes. J&apos;optimise chaque information pour
+            l&apos;aider à identifier ton entreprise, ta localisation, tes
+            services et ton expertise.{" "}
+            <span className="font-bold">
+              Car avant de te recommander, Google doit d&apos;abord
+              comprendre qui tu es.
+            </span>
           </p>
         </div>
       </section>
