@@ -95,7 +95,7 @@ export default function Page() {
           width={1536}
           height={1024}
           priority
-          className="h-auto w-full max-w-[420px] rounded-2xl object-cover"
+          className="h-auto w-full max-w-[640px] rounded-2xl object-cover"
         />
       </div>
 
