@@ -191,10 +191,10 @@ export default function Page() {
             </p>
           </div>
           <Image
-            src="/images/qui-suis-je-gmb.png"
-            alt="Notre objectif : vous rendre visible au bon moment, au bon endroit, pour les bonnes personnes"
-            width={1410}
-            height={2000}
+            src="/images/gmb-google-recherche-solution.webp"
+            alt="Quelle est la meilleure solution pour moi ? — recherche Google"
+            width={613}
+            height={613}
             className="mx-auto h-auto w-full max-w-[320px] rounded-2xl object-cover"
           />
         </div>
