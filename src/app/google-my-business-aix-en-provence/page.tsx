@@ -209,19 +209,13 @@ export default function Page() {
             qui font remonter une fiche <GoogleColors />
           </span>
         </h2>
-        <div className="mt-10 rounded-2xl bg-[#141414] p-8 text-left text-white">
-          <p className="text-lg font-bold">Google est une rue commerçante</p>
-          <p className="mt-4 text-[15px] leading-[25.5px]">
-            Imagine Google comme une immense rue commerçante. Chaque jour,
-            des millions de personnes recherchent des solutions. Sois présent
-            là où elles cherchent.
-          </p>
-          <p className="mt-4 text-[15px] leading-[25.5px]">
-            Sois visible. Sois crédible. Sois choisi. C&apos;est ce qui
-            transforme l&apos;attente en argent : les clients te trouvent, te
-            choisissent et te font confiance.
-          </p>
-        </div>
+        <Image
+          src="/images/google-rue-commercante.webp"
+          alt="Google est une rue commerçante — sois visible, sois crédible, sois choisi"
+          width={886}
+          height={623}
+          className="mx-auto mt-10 h-auto w-full rounded-2xl border border-[#eee] object-cover"
+        />
       </section>
 
       {/* Optimisation des informations */}
