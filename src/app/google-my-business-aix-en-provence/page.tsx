@@ -256,17 +256,21 @@ export default function Page() {
         </h2>
         <div className="mt-10 grid items-center gap-8 md:grid-cols-2">
           <p className="text-[17px] leading-[28px] text-[#1a1a1a]">
-            Les avis Google rassurent tes futurs clients et montrent que ton
-            entreprise est active et appréciée. Je t&apos;accompagne pour
-            solliciter tes clients au bon moment, répondre à chaque avis et
-            transformer chaque retour en signal positif pour Google et pour
-            tes prospects.
+            Pour Google, exister ne suffit pas. Il faut le prouver. Les avis
+            montrent que de vrais clients font appel à toi. Les réponses
+            prouvent que ton entreprise est active. Les dates, les
+            interactions et la régularité des avis confirment que ton
+            activité est bien réelle.{" "}
+            <span className="font-bold">
+              Dans le digital, Google cherche constamment des preuves du
+              monde réel avant de recommander une entreprise.
+            </span>
           </p>
           <Image
-            src="/images/methode-avis-google.png"
+            src="/images/gestion-avis-google.png"
             alt="Gestion des avis Google — JWL Marketing"
-            width={2000}
-            height={1414}
+            width={705}
+            height={480}
             className="mx-auto h-auto w-full max-w-[420px] rounded-2xl border border-[#eee] object-cover"
           />
         </div>
