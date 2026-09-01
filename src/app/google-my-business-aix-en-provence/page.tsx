@@ -9,32 +9,6 @@ export const metadata: Metadata = {
     "Ta fiche Google my business est à l'abandon ? Reprends le contrôle de ta visibilité locale. Avec moi et partout en France.",
 };
 
-function PhotoCaption({
-  src,
-  alt,
-  title,
-  text,
-}: {
-  src: string;
-  alt: string;
-  title: string;
-  text: string;
-}) {
-  return (
-    <div className="text-center">
-      <Image
-        src={src}
-        alt={alt}
-        width={800}
-        height={800}
-        className="mx-auto aspect-square w-full max-w-[280px] rounded-2xl border border-[#eee] object-cover"
-      />
-      <p className="mt-3 font-heading text-lg font-bold text-black">{title}</p>
-      <p className="mt-1 text-sm leading-[22px] text-[#1a1a1a]">{text}</p>
-    </div>
-  );
-}
-
 export default function Page() {
   return (
     <div>
@@ -285,26 +259,13 @@ export default function Page() {
             pour renforcer la confiance de ton futur client.
           </span>
         </h2>
-        <div className="mt-10 grid gap-8 md:grid-cols-3">
-          <PhotoCaption
-            src="/images/qui-suis-je-terrasse.png"
-            alt="Où êtes-vous ?"
-            title="Où êtes-vous ?"
-            text="Quelle place voulez-vous occuper dans l'esprit de vos clients ? Quel univers souhaitez-vous incarner ?"
-          />
-          <PhotoCaption
-            src="/images/fiche-gmb-jwl.webp"
-            alt="Votre produit phare"
-            title="Votre produit phare"
-            text="Quel est votre produit ou service phare ? Celui que vous voulez mettre en avant en premier."
-          />
-          <PhotoCaption
-            src="/images/qui-suis-je-duo.png"
-            alt="Vos autres offres"
-            title="Vos autres offres"
-            text="Quels autres produits ou services complètent votre offre et répondent aux besoins de vos clients ?"
-          />
-        </div>
+        <Image
+          src="/images/mise-a-jour-photos-cards.webp"
+          alt="Où êtes-vous ? Votre produit phare. Vos autres offres."
+          width={1600}
+          height={618}
+          className="mx-auto mt-10 h-auto w-full rounded-2xl"
+        />
       </section>
 
       {/* Rédaction d'articles */}
