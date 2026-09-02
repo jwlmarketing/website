@@ -482,7 +482,7 @@ export default function Page() {
             </p>
           </div>
           <Image
-            src="/images/qui-suis-je-carte-france-paris.png"
+            src="/images/qui-suis-je-carte-france.png"
             alt="Zone d'intervention JWL Marketing — Paris sur place, France entière à distance"
             width={2000}
             height={1414}

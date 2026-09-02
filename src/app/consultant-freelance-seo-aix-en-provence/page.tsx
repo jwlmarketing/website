@@ -412,13 +412,13 @@ export default function QuiSuisJe() {
           <span className="italic text-[#c9846f]">Je crée</span>{" "}
           <span className="font-medium">un site web sur mesure pour toi.</span>
         </h3>
-        <div className="mt-8 grid items-center gap-8 md:grid-cols-2">
+        <div className="mt-8 grid items-stretch gap-8 md:grid-cols-2">
           <Image
             src="/images/jodie-creation-site-web.png"
             alt="Jodie Lapaillerie — création de site web sur mesure JWL Marketing"
-            width={360}
-            height={288}
-            className="h-auto w-full self-center rounded-2xl border border-[#eee] object-cover"
+            width={720}
+            height={860}
+            className="h-full min-h-[320px] w-full rounded-2xl border border-[#eee] object-cover"
           />
           <div className="border-2 border-gold p-8 text-left text-[17px] leading-[28px] text-[#1a1a1a]">
             <p>
