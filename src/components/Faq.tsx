@@ -113,6 +113,11 @@ const FAQ_BY_PATH: Record<string, typeof HOME_FAQ> = {
   "/consultant-freelance-seo-marseille-jwl-marketing": MARSEILLE_FAQ,
 };
 
+const NO_FAQ_PATHS = new Set([
+  "/site-internet-aix-en-provence",
+  "/google-my-business-aix-en-provence",
+]);
+
 export default function Faq() {
   const pathname = usePathname();
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -121,6 +126,10 @@ export default function Faq() {
   useEffect(() => {
     setOpenIndex(null);
   }, [pathname]);
+
+  if (NO_FAQ_PATHS.has(pathname ?? "")) {
+    return null;
+  }
 
   return (
     <div className="rounded-2xl bg-black px-6 py-14 text-center md:px-12">
