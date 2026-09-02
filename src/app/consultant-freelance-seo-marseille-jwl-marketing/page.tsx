@@ -400,9 +400,9 @@ export default function Page() {
           <Image
             src="/images/creation-site-web-sur-mesure-nice.png"
             alt="Jodie Lapaillerie — création de site web sur mesure, SEO Marseille"
-            width={720}
-            height={860}
-            className="h-full min-h-[320px] w-full rounded-2xl border border-[#eee] object-cover"
+            width={360}
+            height={288}
+            className="mx-auto h-auto w-full max-w-[420px] self-center rounded-2xl border border-[#eee] object-cover"
           />
         </div>
       </section>
