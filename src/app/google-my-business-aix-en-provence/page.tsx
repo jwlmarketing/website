@@ -11,6 +11,32 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
+    <div className="flex min-h-[70vh] w-full flex-col items-center justify-center gap-4 px-6 text-center">
+      <Image
+        src="/images/logo-jwl-marketing.png"
+        alt="JWL Marketing"
+        width={966}
+        height={187}
+        className="h-9 w-auto"
+      />
+      <h1 className="font-heading text-3xl text-black">Page en cours de construction</h1>
+      <p className="max-w-md text-black/70">
+        Cette page est en cours de préparation. Reviens bientôt pour découvrir notre offre
+        Fiche Google Business Profile.
+      </p>
+      <Link
+        href="/"
+        className="mt-2 inline-block rounded-full bg-[#c9846f] px-8 py-[15px] font-medium text-white transition-colors hover:bg-[#b8735f]"
+      >
+        Retour à l&apos;accueil
+      </Link>
+    </div>
+  );
+}
+
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+function PageContent() {
+  return (
     <div>
       {/* Logo + compte, au-dessus du hero */}
       <div className="flex w-full items-center justify-between px-[5%] pt-20">

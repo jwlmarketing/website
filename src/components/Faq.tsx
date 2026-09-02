@@ -80,9 +80,37 @@ const NICE_FAQ = [
   },
 ];
 
+const MARSEILLE_FAQ = [
+  {
+    q: "J'ai déjà un bon emplacement à Marseille, pourquoi faire du SEO ?",
+    a: "Ton emplacement aide les personnes qui passent devant ta porte. Le SEO aide les personnes qui te cherchent déjà sur Google. Aujourd'hui, un client tape « restaurant Marseille », « avocat Prado », « plombier 13008 » ou « consultant Marseille » avant de choisir. Si ton concurrent apparaît avant toi, il récupère le contact avant même que le prospect découvre ton adresse. Le SEO ne remplace pas un bon emplacement. Il le transforme en machine à générer des demandes. Sur Marseille, beaucoup d'entreprises investissent dans leur local mais négligent leur visibilité Google. C'est souvent là que se trouve la plus grosse opportunité.",
+  },
+  {
+    q: "Comment adapter une stratégie SEO à une entreprise implantée dans la métropole marseillaise ?",
+    a: "Marseille n'est pas une ville uniforme. Le Vieux-Port, La Joliette, Prado, Castellane, La Valentine ou Euroméditerranée n'ont pas les mêmes recherches ni les mêmes clients. Une stratégie efficace repose sur plusieurs leviers : une fiche Google Business Profile optimisée, des pages dédiées à tes services, des contenus adaptés à Marseille et à la métropole, des pages locales pour les zones stratégiques et une stratégie GEO pour les moteurs IA. L'objectif n'est pas d'attirer plus de visiteurs. L'objectif est d'attirer les bonnes demandes. C'est exactement la logique que nous appliquons sur nos prestations de Consultant SEO Marseille, SEO Local et GEO.",
+  },
+  {
+    q: "Dans combien de temps le SEO m'apportera-t-il des clients sur Marseille ?",
+    a: "Le SEO n'est pas une publicité. Tu ne paies pas pour apparaître demain. En revanche, tu construis une visibilité durable. Dans la majorité des cas : premiers signaux entre 1 et 3 mois, premiers leads réguliers entre 3 et 6 mois, résultats solides entre 6 et 12 mois. Tout dépend de trois facteurs : ton secteur, la concurrence et l'état actuel de ton site. Un cabinet dentaire ou un artisan bien positionné peut obtenir des résultats plus rapidement qu'un secteur ultra-concurrentiel. Le plus important reste la qualité de la stratégie mise en place dès le départ.",
+  },
+  {
+    q: "Pourquoi prendre un consultant SEO à Marseille plutôt qu'une agence ?",
+    a: "Parce que tu ne cherches pas forcément une équipe de 15 personnes. Tu cherches surtout des résultats. Avec un consultant SEO, tu échanges directement avec la personne qui construit la stratégie. Pas avec un commercial. Pas avec un chef de projet intermédiaire. Tu gagnes en réactivité. Tu gagnes en transparence. Tu sais exactement pourquoi chaque action est réalisée. Chez JWL Marketing, chaque recommandation est reliée à un objectif simple : plus de visibilité, plus de demandes, plus de chiffre d'affaires. Pas de jargon. Pas de rapports de 50 pages que personne ne lit.",
+  },
+  {
+    q: "Comment l'IA choisit-elle les entreprises qu'elle recommande à Marseille ?",
+    a: "Les intelligences artificielles ne choisissent pas les entreprises au hasard. Elles analysent les signaux de confiance présents sur le web. Elles regardent notamment ton site internet, ta fiche Google Business Profile, tes avis clients, tes contenus experts, les mentions de ton entreprise sur d'autres sites et la cohérence de tes informations locales. Plus ton entreprise est reconnue comme experte sur son sujet, plus elle a de chances d'être citée dans les réponses générées par l'IA. C'est précisément le rôle du GEO (Generative Engine Optimization) : rendre ton entreprise visible dans ChatGPT, Gemini, Copilot et les futurs moteurs conversationnels.",
+  },
+  {
+    q: "Le GEO (Generative Engine Optimization) va-t-il remplacer le SEO local sur Marseille ?",
+    a: "Non. Le GEO ne remplace pas le SEO. Il vient s'ajouter au SEO. Le SEO permet d'être trouvé sur Google. Le GEO permet d'être recommandé par l'intelligence artificielle. Les entreprises qui domineront demain seront celles qui travaillent les deux. Une fiche Google optimisée, un site performant et des contenus experts restent indispensables. Ensuite, le GEO renforce ta présence dans les réponses générées par l'IA. Le vrai sujet n'est donc pas de choisir entre SEO et GEO. Le vrai sujet est d'être visible partout où tes futurs clients cherchent une réponse. Tu veux savoir où ton entreprise perd actuellement des clients sur Google et dans les moteurs IA ? Découvre notre audit SEO & GEO Marseille et identifie les opportunités les plus rentables pour ton activité.",
+  },
+];
+
 const FAQ_BY_PATH: Record<string, typeof HOME_FAQ> = {
   "/consultant-freelance-seo-aix-en-provence": QUI_SUIS_JE_FAQ,
   "/consultant-freelance-seo-nice": NICE_FAQ,
+  "/consultant-freelance-seo-marseille-jwl-marketing": MARSEILLE_FAQ,
 };
 
 export default function Faq() {
