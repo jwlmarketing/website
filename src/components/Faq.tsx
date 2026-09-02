@@ -107,10 +107,66 @@ const MARSEILLE_FAQ = [
   },
 ];
 
+const MONTPELLIER_FAQ = [
+  {
+    q: "Pourquoi faire du SEO à Montpellier ?",
+    a: "Montpellier est une ville où la concurrence digitale s'intensifie : commerce, tourisme, services, professions libérales… Un bon emplacement dans l'Écusson ou à Port Marianne ne garantit plus de trouver de nouveaux clients. Aujourd'hui, la majorité des recherches commencent sur Google avant tout déplacement. Le SEO permet d'être visible au moment précis où tes futurs clients te cherchent.",
+  },
+  {
+    q: "Dois-je créer un site web SEO, en plus de ma boutique ?",
+    a: "Ta boutique attire les personnes qui passent devant. Le SEO attire celles qui te cherchent déjà sur Google, avant même de connaître ton adresse. Un site pensé pour le référencement ne remplace pas ton point de vente : il le prolonge et t'apporte des clients que tu n'aurais jamais croisés autrement.",
+  },
+  {
+    q: "En combien de temps voit-on des résultats SEO à Montpellier ?",
+    a: "Le SEO n'est pas une publicité qui s'active du jour au lendemain. Dans la majorité des cas, les premiers signaux apparaissent entre 1 et 3 mois, les premiers leads réguliers entre 3 et 6 mois, et des résultats solides entre 6 et 12 mois. Tout dépend de ton secteur, de la concurrence et de l'état actuel de ton site.",
+  },
+  {
+    q: "PME, PMI, dois-je investir moi aussi dans le SEO ?",
+    a: "Oui, et c'est souvent là que se trouve la plus grosse opportunité. Beaucoup de PME et PMI montpelliéraines investissent dans leur outil de production ou leur local, mais négligent leur visibilité Google. Résultat : ce sont les concurrents les plus visibles qui récupèrent les appels et les demandes de devis.",
+  },
+  {
+    q: "Le SEO est-il rentable pour une entreprise à Montpellier ?",
+    a: "Contrairement à la publicité, le SEO continue de générer des demandes longtemps après le travail réalisé. Une fois la visibilité construite, elle reste un actif durable pour ton entreprise. C'est un investissement qui se rentabilise dans le temps, pas une dépense ponctuelle.",
+  },
+  {
+    q: "Agence SEO à Montpellier ou freelance ? Comment choisir ?",
+    a: "Avec une agence, tu passes souvent par un commercial puis un chef de projet avant d'atteindre la personne qui travaille réellement sur ton dossier. Avec moi, tu échanges directement avec la personne qui construit ta stratégie. Zéro turnover, zéro intermédiaire, des décisions rapides et transparentes.",
+  },
+];
+
+const BORDEAUX_FAQ = [
+  {
+    q: "Pourquoi faire du SEO à Bordeaux ?",
+    a: "Bordeaux attire chaque année de nouvelles entreprises, de nouveaux talents et de nouveaux investisseurs, ce qui intensifie la concurrence. Un site esthétique ne suffit plus s'il n'est jamais découvert par tes futurs clients. Le SEO permet d'apparaître au moment où tes prospects recherchent réellement tes services, à Bordeaux comme dans toute la Gironde.",
+  },
+  {
+    q: "Dois-je créer un site web SEO, en plus de ma boutique ?",
+    a: "Ta boutique attire les personnes qui passent devant. Le SEO attire celles qui te cherchent déjà sur Google, avant même de connaître ton adresse. Un site pensé pour le référencement ne remplace pas ton point de vente : il le prolonge et t'apporte des clients que tu n'aurais jamais croisés autrement.",
+  },
+  {
+    q: "En combien de temps voit-on des résultats SEO à Bordeaux ?",
+    a: "Le SEO n'est pas une publicité qui s'active du jour au lendemain. Dans la majorité des cas, les premiers signaux apparaissent entre 1 et 3 mois, les premiers leads réguliers entre 3 et 6 mois, et des résultats solides entre 6 et 12 mois. Tout dépend de ton secteur, de la concurrence et de l'état actuel de ton site.",
+  },
+  {
+    q: "PME, PMI, dois-je investir moi aussi dans le SEO ?",
+    a: "Oui. De nombreuses entreprises bordelaises disposent d'un site internet performant sur le plan visuel, mais sans stratégie de référencement adaptée, il passe inaperçu. Un beau site ne suffit pas s'il n'est jamais trouvé par tes futurs clients.",
+  },
+  {
+    q: "Le SEO est-il rentable pour une entreprise à Bordeaux ?",
+    a: "Contrairement à la publicité, le SEO continue de générer des demandes longtemps après le travail réalisé. Une fois la visibilité construite, elle reste un actif durable pour ton entreprise. C'est un investissement qui se rentabilise dans le temps, pas une dépense ponctuelle.",
+  },
+  {
+    q: "Agence SEO à Bordeaux ou freelance ? Comment choisir ?",
+    a: "Avec une agence, tu passes souvent par un commercial puis un chef de projet avant d'atteindre la personne qui travaille réellement sur ton dossier. Avec moi, tu échanges directement avec la personne qui construit ta stratégie. Zéro turnover, zéro intermédiaire, des décisions rapides et transparentes.",
+  },
+];
+
 const FAQ_BY_PATH: Record<string, typeof HOME_FAQ> = {
   "/consultant-freelance-seo-aix-en-provence": QUI_SUIS_JE_FAQ,
   "/consultant-freelance-seo-nice": NICE_FAQ,
   "/consultant-freelance-seo-marseille-jwl-marketing": MARSEILLE_FAQ,
+  "/consultant-freelance-seo-montpellier-jwl-marketing": MONTPELLIER_FAQ,
+  "/consultant-seo-bordeaux-jwl-marketing": BORDEAUX_FAQ,
 };
 
 const NO_FAQ_PATHS = new Set([
