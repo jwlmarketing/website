@@ -369,7 +369,7 @@ export default function Page() {
       {/* 4. Je fabrique un site web */}
       <section className="mx-auto max-w-[1200px] px-6 py-10">
         <StepNumber n={4} />
-        <div className="mt-4 grid items-center gap-8 md:grid-cols-2">
+        <div className="mt-4 grid items-stretch gap-8 md:grid-cols-2">
           <div>
             <h3 className="font-heading text-3xl leading-tight md:text-[54px] text-black">
               <span className="italic text-[#c9846f]">Je fabrique</span>{" "}
@@ -400,9 +400,9 @@ export default function Page() {
           <Image
             src="/images/creation-site-web-sur-mesure-nice.png"
             alt="Jodie Lapaillerie — création de site web sur mesure, SEO Marseille"
-            width={360}
-            height={288}
-            className="h-auto w-full self-center rounded-2xl border border-[#eee] object-cover"
+            width={720}
+            height={860}
+            className="h-full min-h-[320px] w-full rounded-2xl border border-[#eee] object-cover"
           />
         </div>
       </section>
