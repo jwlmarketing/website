@@ -389,6 +389,11 @@ export default function Page() {
             height={314}
             className="mt-3 h-auto w-full rounded-2xl border border-[#eee] object-cover"
           />
+          <p className="mt-2 text-sm italic text-[#7c5fd6]">
+            Google te propose sur des mots-clés
+            <br />
+            Tu as des clics des internautes
+          </p>
         </ScrollReveal>
         <div className="mx-auto mt-10 max-w-[800px] space-y-4 text-left text-[17px] leading-[28px] text-[#1a1a1a]">
           <p className="font-semibold text-black">
