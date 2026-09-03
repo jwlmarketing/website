@@ -375,13 +375,20 @@ export default function Page() {
       {/* 4. Je bâtis un site web */}
       <section className="mx-auto max-w-[1200px] px-6 py-10">
         <StepNumber n={4} />
-        <div className="mt-4 grid items-stretch gap-8 md:grid-cols-2">
+        <div className="mt-4 grid items-start gap-8 md:grid-cols-2">
+          <Image
+            src="/images/creation-site-web-sur-mesure-nice.png"
+            alt="Jodie Lapaillerie — création de site web sur mesure, SEO Nice"
+            width={360}
+            height={288}
+            className="h-auto w-full rounded-2xl border border-[#eee] object-cover"
+          />
           <div>
             <h3 className="font-heading text-3xl leading-tight md:text-[54px] text-black">
               <span className="italic text-[#c9846f]">Je bâtis</span>{" "}
               <span className="font-medium">un site web sur mesure pour toi.</span>
             </h3>
-            <div className="mt-4 h-full border-2 border-gold p-8 text-left text-[17px] leading-[28px] text-[#1a1a1a]">
+            <div className="mt-4 border-2 border-gold p-8 text-left text-[17px] leading-[28px] text-[#1a1a1a]">
               <p>
                 Ton site internet est souvent la première impression que se
                 fait un futur client de ton entreprise. C&apos;est pourquoi
@@ -403,13 +410,6 @@ export default function Page() {
               </p>
             </div>
           </div>
-          <Image
-            src="/images/creation-site-web-sur-mesure-nice.png"
-            alt="Jodie Lapaillerie — création de site web sur mesure, SEO Nice"
-            width={360}
-            height={288}
-            className="mx-auto h-auto w-full max-w-[420px] self-center rounded-2xl border border-[#eee] object-cover"
-          />
         </div>
       </section>
 

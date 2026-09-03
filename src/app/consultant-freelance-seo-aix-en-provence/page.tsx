@@ -412,7 +412,14 @@ export default function QuiSuisJe() {
           <span className="italic text-[#c9846f]">Je crée</span>{" "}
           <span className="font-medium">un site web sur mesure pour toi.</span>
         </h3>
-        <div className="mt-8 grid items-stretch gap-8 md:grid-cols-2">
+        <div className="mt-8 grid items-start gap-8 md:grid-cols-2">
+          <Image
+            src="/images/jodie-creation-site-web.png"
+            alt="Jodie Lapaillerie — création de site web sur mesure JWL Marketing"
+            width={360}
+            height={288}
+            className="h-auto w-full rounded-2xl border border-[#eee] object-cover"
+          />
           <div className="border-2 border-gold p-8 text-left text-[17px] leading-[28px] text-[#1a1a1a]">
             <p>
               Chaque projet est développé selon tes besoins réels, sans
@@ -433,13 +440,6 @@ export default function QuiSuisJe() {
               Découvrir l&apos;accompagnement
             </Link>
           </div>
-          <Image
-            src="/images/jodie-creation-site-web.png"
-            alt="Jodie Lapaillerie — création de site web sur mesure JWL Marketing"
-            width={360}
-            height={288}
-            className="mx-auto h-auto w-full max-w-[420px] self-center rounded-2xl border border-[#eee] object-cover"
-          />
         </div>
       </section>
 
