@@ -112,7 +112,7 @@ export default function Page() {
           </div>
         </div>
         <Image
-          src="/images/consultante-seo-visibilite-web-bordeaux.jpg"
+          src="/images/consultant-seo-bordeaux.jpg"
           alt="Jodie Lapaillerie — Consultante Freelance SEO Bordeaux"
           width={494}
           height={580}

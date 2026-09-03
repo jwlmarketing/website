@@ -96,7 +96,7 @@ export default function Page() {
           </div>
         </div>
         <Image
-          src="/images/consultante-seo-visibilite-web-nice.jpg"
+          src="/images/consultant-seo-nice.jpg"
           alt="Jodie Lapaillerie — Consultante SEO Nice, sur la Promenade des Anglais devant le Négresco"
           width={494}
           height={580}
@@ -109,7 +109,7 @@ export default function Page() {
       <section className="mx-auto max-w-[1100px] px-6 py-10">
         <div className="mx-auto grid items-center gap-10 md:grid-cols-[320px_1fr]">
           <Image
-            src="/images/expert-seo-nice.jpg"
+            src="/images/consultant-seo-nice-2.jpg"
             alt="Jodie Lapaillerie — consultante en marketing digital"
             width={1410}
             height={2000}
@@ -157,7 +157,7 @@ export default function Page() {
           </div>
           <div className="text-center">
             <Image
-              src="/images/consultant-referencement-naturel-nice.jpg"
+              src="/images/consultant-seo-nice-3.jpg"
               alt="Jodie Lapaillerie — SEO Summit Paris 2026"
               width={800}
               height={1000}
@@ -181,21 +181,21 @@ export default function Page() {
         </h2>
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           <Image
-            src="/images/seo-nice.jpg"
+            src="/images/consultant-seo-nice-4.jpg"
             alt="Fiche Google Business Profile JWL Marketing"
             width={1410}
             height={950}
             className="aspect-video w-full rounded-2xl border border-[#eee] object-cover"
           />
           <Image
-            src="/images/strategie-seo-nice.jpg"
+            src="/images/consultant-seo-nice-5.jpg"
             alt="Évolution des impressions et clics — Google Search Console"
             width={2000}
             height={1414}
             className="aspect-video w-full rounded-2xl border border-[#eee] object-cover"
           />
           <Image
-            src="/images/geo-nice.jpg"
+            src="/images/consultant-seo-nice-6.jpg"
             alt="Résultat Google pour seo aix-en-provence — JWL Marketing"
             width={2000}
             height={1414}
@@ -286,7 +286,7 @@ export default function Page() {
             </Link>
           </div>
           <Image
-            src="/images/consultant-seo-cote-azur.jpg"
+            src="/images/consultant-seo-nice-7.jpg"
             alt="Outil de planification des mots-clés Google, sur Nice"
             width={2000}
             height={1414}
@@ -304,7 +304,7 @@ export default function Page() {
         </h3>
         <div className="mt-8 grid items-center gap-8 md:grid-cols-2">
           <Image
-            src="/images/consultant-seo-local-nice.jpg"
+            src="/images/consultant-seo-nice-8.jpg"
             alt="Jodie Lapaillerie en terrasse — analyse de marché SEO Nice"
             width={880}
             height={632}
@@ -363,7 +363,7 @@ export default function Page() {
             </Link>
           </div>
           <Image
-            src="/images/optimisation-seo-nice.png"
+            src="/images/consultant-seo-nice-9.png"
             alt="Optimisation fiche Google Business Profile JWL Marketing"
             width={1410}
             height={950}
@@ -377,7 +377,7 @@ export default function Page() {
         <StepNumber n={4} />
         <div className="mt-4 grid items-start gap-8 md:grid-cols-2">
           <Image
-            src="/images/creation-site-web-sur-mesure-nice.png"
+            src="/images/consultant-seo-nice-10.png"
             alt="Jodie Lapaillerie — création de site web sur mesure, SEO Nice"
             width={360}
             height={288}
@@ -424,7 +424,7 @@ export default function Page() {
         </h3>
         <div className="mt-8 grid items-stretch gap-8 md:grid-cols-2">
           <Image
-            src="/images/specialiste-seo-nice.jpg"
+            src="/images/consultant-seo-nice-11.jpg"
             alt="Jodie Lapaillerie et son assistante IA JWL Marketing"
             width={1410}
             height={2000}
@@ -474,7 +474,7 @@ export default function Page() {
             </p>
           </div>
           <Image
-            src="/images/carte-france-nice.png"
+            src="/images/consultant-seo-nice-12.png"
             alt="Zone d'intervention JWL Marketing — PACA sur place, France entière à distance"
             width={2000}
             height={1414}
