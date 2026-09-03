@@ -424,7 +424,7 @@ export default function Page() {
               <br />
               de 1990€
             </span>
-            <h3 className="font-heading text-xl underline decoration-gold underline-offset-4">
+            <h3 className="font-heading text-xl text-center underline decoration-gold underline-offset-4">
               JWL Business
             </h3>
             <p className="mt-2 italic text-white/90">« Je construis un site web sur mesure. »</p>
@@ -469,7 +469,7 @@ export default function Page() {
               <br />
               de 4500€
             </span>
-            <h3 className="font-heading text-xl underline decoration-gold underline-offset-4">
+            <h3 className="font-heading text-xl text-center underline decoration-gold underline-offset-4">
               JWL Visible
             </h3>
             <p className="mt-2 italic text-white/90">« Je développe, je veux des clients. »</p>
@@ -596,9 +596,6 @@ export default function Page() {
             text="Ton projet mérite plus qu'un simple site web"
           />
         </h3>
-        <p className="mt-3 font-heading text-3xl leading-tight md:text-[54px] text-black">
-          Je crée des sites pensés pour être trouvés, compris et contactés.
-        </p>
         <ScrollReveal>
           <p className="mx-auto mt-6 max-w-[700px] text-[17px] leading-[28px] text-[#1a1a1a]">
             Tu restes propriétaire de ton site, de ton nom de domaine et de
