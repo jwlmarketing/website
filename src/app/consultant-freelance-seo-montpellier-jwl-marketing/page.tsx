@@ -157,7 +157,7 @@ export default function Page() {
           </div>
         </div>
         <Image
-          src="/images/consultant-freelance-seo-montpellier.webp"
+          src="/images/consultant-seo-montpellier.webp"
           alt="Consultant Freelance SEO Montpellier — JWL Marketing"
           width={1190}
           height={1322}

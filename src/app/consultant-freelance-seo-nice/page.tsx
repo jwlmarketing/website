@@ -363,7 +363,7 @@ export default function Page() {
             </Link>
           </div>
           <Image
-            src="/images/qui-suis-je-gmb-card.png"
+            src="/images/optimisation-seo-nice.png"
             alt="Optimisation fiche Google Business Profile JWL Marketing"
             width={1410}
             height={950}
@@ -474,7 +474,7 @@ export default function Page() {
             </p>
           </div>
           <Image
-            src="/images/qui-suis-je-carte-france.png"
+            src="/images/carte-france-nice.png"
             alt="Zone d'intervention JWL Marketing — PACA sur place, France entière à distance"
             width={2000}
             height={1414}

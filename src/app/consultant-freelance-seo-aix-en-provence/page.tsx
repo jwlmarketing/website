@@ -94,7 +94,7 @@ export default function QuiSuisJe() {
           </div>
         </div>
         <Image
-          src="/images/qui-suis-je-hero.png"
+          src="/images/consultant-seo-aix-en-provence.png"
           alt="Jodie Lapaillerie — Consultante SEO Aix-en-Provence"
           width={1244}
           height={1387}
@@ -107,7 +107,7 @@ export default function QuiSuisJe() {
       <section className="mx-auto max-w-[1100px] px-6 py-10">
         <div className="mx-auto grid items-center gap-10 md:grid-cols-[320px_1fr]">
           <Image
-            src="/images/qui-suis-je-portrait.png"
+            src="/images/expert-seo-aix-en-provence.png"
             alt="Jodie Lapaillerie — consultante en marketing digital"
             width={1410}
             height={2000}
@@ -160,7 +160,7 @@ export default function QuiSuisJe() {
           </div>
           <div className="text-center">
             <Image
-              src="/images/jodie-seo-aix-en-provence.webp"
+              src="/images/seo-aix-en-provence.webp"
               alt="Jodie Lapaillerie — SEO Summit Paris 2026"
               width={800}
               height={1000}
@@ -184,21 +184,21 @@ export default function QuiSuisJe() {
         </h2>
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           <Image
-            src="/images/qui-suis-je-gmb-card.png"
+            src="/images/seo-local-aix-en-provence.png"
             alt="Fiche Google Business Profile JWL Marketing"
             width={1410}
             height={950}
             className="aspect-video w-full rounded-2xl border border-[#eee] object-cover"
           />
           <Image
-            src="/images/qui-suis-je-search-console.png"
+            src="/images/strategie-seo-aix-en-provence.png"
             alt="Évolution des impressions et clics — Google Search Console"
             width={2000}
             height={1414}
             className="aspect-video w-full rounded-2xl border border-[#eee] object-cover"
           />
           <Image
-            src="/images/qui-suis-je-serp.png"
+            src="/images/referencement-naturel-aix-en-provence.png"
             alt="Résultat Google pour seo aix-en-provence — JWL Marketing"
             width={2000}
             height={1414}
@@ -307,7 +307,7 @@ export default function QuiSuisJe() {
             </Link>
           </div>
           <Image
-            src="/images/qui-suis-je-terrasse.png"
+            src="/images/consultant-google-aix-en-provence.png"
             alt="Jodie Lapaillerie en terrasse — analyse de marché SEO Aix-en-Provence"
             width={946}
             height={652}
@@ -327,7 +327,7 @@ export default function QuiSuisJe() {
         </h3>
         <div className="mt-8 grid items-stretch gap-8 md:grid-cols-2">
           <Image
-            src="/images/qui-suis-je-keyword-tool.png"
+            src="/images/optimisation-seo-aix-en-provence.png"
             alt="Outil de planification des mots-clés Google, sur Aix-en-Provence"
             width={2000}
             height={1414}
@@ -396,7 +396,7 @@ export default function QuiSuisJe() {
             </Link>
           </div>
           <Image
-            src="/images/qui-suis-je-gmb-card.png"
+            src="/images/seo-local-aix-en-provence.png"
             alt="Optimisation fiche Google Business Profile JWL Marketing"
             width={1410}
             height={950}
@@ -414,7 +414,7 @@ export default function QuiSuisJe() {
         </h3>
         <div className="mt-8 grid items-start gap-8 md:grid-cols-2">
           <Image
-            src="/images/jodie-creation-site-web.png"
+            src="/images/ia-seo-aix-en-provence.png"
             alt="Jodie Lapaillerie — création de site web sur mesure JWL Marketing"
             width={360}
             height={288}
@@ -479,7 +479,7 @@ export default function QuiSuisJe() {
           </div>
           <div className="text-center">
             <Image
-              src="/images/qui-suis-je-duo.png"
+              src="/images/consultant-referencement-aix-en-provence.png"
               alt="Jodie Lapaillerie et son assistante IA JWL Marketing"
               width={1410}
               height={2000}
@@ -503,7 +503,7 @@ export default function QuiSuisJe() {
         </h3>
         <div className="mt-8 grid items-stretch gap-8 md:grid-cols-2">
           <Image
-            src="/images/qui-suis-je-carte-france.png"
+            src="/images/carte-france-aix-en-provence.png"
             alt="Zone d'intervention JWL Marketing — PACA sur place, France entière à distance"
             width={2000}
             height={1414}

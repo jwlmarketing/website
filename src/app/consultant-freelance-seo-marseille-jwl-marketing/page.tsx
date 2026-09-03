@@ -105,7 +105,7 @@ export default function Page() {
       <section className="mx-auto max-w-[1100px] px-6 py-10">
         <div className="mx-auto grid items-center gap-10 md:grid-cols-[320px_1fr]">
           <Image
-            src="/images/qui-suis-je-portrait.png"
+            src="/images/referencement-naturel-marseille.png"
             alt="Jodie Lapaillerie — consultante en marketing digital"
             width={1410}
             height={2000}
@@ -163,7 +163,7 @@ export default function Page() {
           </div>
           <div className="text-center">
             <Image
-              src="/images/jodie-seo-aix-en-provence.webp"
+              src="/images/expert-seo-marseille.webp"
               alt="Jodie Lapaillerie — SEO Summit Paris 2026"
               width={800}
               height={1000}
@@ -187,21 +187,21 @@ export default function Page() {
         </h2>
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           <Image
-            src="/images/qui-suis-je-gmb-card.png"
+            src="/images/seo-local-marseille.png"
             alt="Fiche Google Business Profile JWL Marketing"
             width={1410}
             height={950}
             className="aspect-video w-full rounded-2xl border border-[#eee] object-cover"
           />
           <Image
-            src="/images/qui-suis-je-search-console.png"
+            src="/images/strategie-seo-marseille.png"
             alt="Évolution des impressions et clics — Google Search Console"
             width={2000}
             height={1414}
             className="aspect-video w-full rounded-2xl border border-[#eee] object-cover"
           />
           <Image
-            src="/images/qui-suis-je-serp.png"
+            src="/images/geo-seo-marseille.png"
             alt="Résultat Google pour seo aix-en-provence — JWL Marketing"
             width={2000}
             height={1414}
@@ -278,7 +278,7 @@ export default function Page() {
             </p>
           </div>
           <Image
-            src="/images/qui-suis-je-terrasse.png"
+            src="/images/seo-marseille.png"
             alt="Jodie Lapaillerie en terrasse — analyse de marché SEO Marseille"
             width={880}
             height={632}
@@ -298,7 +298,7 @@ export default function Page() {
         </h3>
         <div className="mt-8 grid items-stretch gap-8 md:grid-cols-2">
           <Image
-            src="/images/qui-suis-je-keyword-tool.png"
+            src="/images/consultant-google-marseille.png"
             alt="Outil de planification des mots-clés Google, sur Marseille"
             width={2000}
             height={1414}
@@ -357,7 +357,7 @@ export default function Page() {
             </Link>
           </div>
           <Image
-            src="/images/qui-suis-je-gmb-card.png"
+            src="/images/seo-local-marseille.png"
             alt="Optimisation fiche Google Business Profile JWL Marketing"
             width={1410}
             height={950}
@@ -371,7 +371,7 @@ export default function Page() {
         <StepNumber n={4} />
         <div className="mt-4 grid items-start gap-8 md:grid-cols-2">
           <Image
-            src="/images/creation-site-web-sur-mesure-nice.png"
+            src="/images/optimisation-site-marseille.png"
             alt="Jodie Lapaillerie — création de site web sur mesure, SEO Marseille"
             width={360}
             height={288}
@@ -432,7 +432,7 @@ export default function Page() {
             </p>
           </div>
           <Image
-            src="/images/qui-suis-je-duo.png"
+            src="/images/ia-seo-marseille.png"
             alt="Jodie Lapaillerie et son assistante IA JWL Marketing"
             width={1410}
             height={2000}
