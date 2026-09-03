@@ -114,7 +114,7 @@ const CREATION_SITE_WEB_FAQ = [
   },
   {
     q: "Dois-je absolument créer un site web si je suis déjà présent sur les réseaux sociaux ?",
-    a: "Oui, surtout si tu travailles localement. Un artisan à Aix-en-Provence, un commerçant à Marseille ou un professionnel à Nice sera souvent recherché sur Google avant d'être contacté. Un site optimisé localement permet d'apparaître sur ces recherches et de capter des clients qui ne te connaissent pas encore.",
+    a: "Oui, surtout si tu travailles localement. Un artisan à Paris, un commerçant à Marseille ou un professionnel à Bordeaux sera souvent recherché sur Google avant d'être contacté. Un site optimisé localement permet d'apparaître sur ces recherches et de capter des clients qui ne te connaissent pas encore.",
   },
   {
     q: "Je veux créer mon site moi-même tout en ayant un bon SEO. Comment faire ?",
@@ -134,8 +134,24 @@ const CREATION_SITE_WEB_FAQ = [
   },
 ];
 
+const GMB_FAQ = [
+  {
+    q: "Ma fiche Google est créée. Pourquoi n'apparaît-elle pas dans les premiers résultats ?",
+    a: "Créer une fiche Google Business Profile ne suffit pas. Google prend aussi en compte les avis, les photos, les publications, la catégorie choisie et la cohérence de tes informations. Une fiche optimisée a plus de chances d'apparaître devant tes concurrents.",
+  },
+  {
+    q: "Puis-je être visible sur Google Maps sans avoir de site internet ?",
+    a: "Oui, mais un site web renforce considérablement la crédibilité de ta fiche et tu risques de passer à côté de recherches locales ou ciblées. Google privilégie souvent les entreprises qui disposent d'une présence web cohérente et bien optimisée.",
+  },
+  {
+    q: "Pourquoi mes concurrents apparaissent-ils avant moi sur Google Maps ?",
+    a: "Google compare la pertinence, la proximité et la notoriété des entreprises. Une fiche plus active, avec davantage d'avis et de contenu, peut obtenir un meilleur classement.",
+  },
+];
+
 const FAQ_BY_PATH: Record<string, typeof HOME_FAQ> = {
   "/site-internet-aix-en-provence": CREATION_SITE_WEB_FAQ,
+  "/google-my-business-aix-en-provence": GMB_FAQ,
   "/": HOME_FAQ,
   "/consultant-freelance-seo-aix-en-provence": QUI_SUIS_JE_FAQ,
   "/consultant-freelance-seo-nice": NICE_FAQ,
