@@ -16,7 +16,7 @@ import TrustedPartners from "@/components/TrustedPartners";
 
 const METHODE_STEPS = [
   {
-    image: "/images/strategie-digitale.png",
+    image: "/images/accompagnement-digital.png",
     title: "Je découvre",
     lead: "J'identifies pourquoi Google ne t'apporte pas assez de clients.",
     items: [
@@ -29,7 +29,7 @@ const METHODE_STEPS = [
     href: "/contact-jwl-marketing-aix-en-provence",
   },
   {
-    image: "/images/strategie-digitale-2.png",
+    image: "/images/strategie-marketing.png",
     title: "Je passe à l'action",
     lead: "Je construis un écosystème qui travaille pour ton entreprise.",
     items: [
@@ -43,7 +43,7 @@ const METHODE_STEPS = [
     href: "/site-internet-aix-en-provence",
   },
   {
-    image: "/images/strategie-digitale-3.png",
+    image: "/images/developpement-digital.png",
     title: "Google te découvre",
     lead: "Je mesures, ajustes et développes ta visibilité.",
     items: [

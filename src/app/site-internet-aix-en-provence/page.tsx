@@ -115,7 +115,7 @@ export default function Page() {
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           <ScrollReveal delay={0}>
             <Image
-              src="/images/creation-site-web-2.png"
+              src="/images/conception-site-web.png"
               alt="Je comprends comment tes clients te recherchent — JWL Marketing"
               width={466}
               height={346}
@@ -133,7 +133,7 @@ export default function Page() {
           </ScrollReveal>
           <ScrollReveal delay={150}>
             <Image
-              src="/images/creation-site-web-3.png"
+              src="/images/site-web-sur-mesure.png"
               alt="Je crée un site web pensé pour être trouvé — JWL Marketing"
               width={466}
               height={344}
@@ -151,7 +151,7 @@ export default function Page() {
           </ScrollReveal>
           <ScrollReveal delay={300}>
             <Image
-              src="/images/creation-site-web-2.png"
+              src="/images/conception-site-web.png"
               alt="J'analyse les données et j'améliore la connexion à Google Search Console — JWL Marketing"
               width={466}
               height={346}
@@ -184,7 +184,7 @@ export default function Page() {
         </h2>
         <ScrollReveal>
           <Image
-            src="/images/creation-site-web-4.png"
+            src="/images/creation-site-vitrine.png"
             alt="Site web responsive sur tous les écrans — JWL Marketing"
             width={842}
             height={348}
@@ -254,7 +254,7 @@ export default function Page() {
         </div>
         <ScrollReveal delay={450}>
           <Image
-            src="/images/creation-site-web-5.png"
+            src="/images/creation-site-personnalise.png"
             alt="Preuve d'antériorité horodatée — Copyright01"
             width={414}
             height={600}
@@ -274,7 +274,7 @@ export default function Page() {
         </h2>
         <ScrollReveal>
           <Image
-            src="/images/creation-site-web-6.png"
+            src="/images/developpement-site-web.png"
             alt="Suivi et veille Google — JWL Marketing"
             width={462}
             height={346}
@@ -340,7 +340,7 @@ export default function Page() {
               Je vois quand <span className="font-bold">tu n&apos;as pas de stratégie</span>
             </p>
             <Lightbox
-              src="/images/creation-site-web-7.png"
+              src="/images/creation-site-entreprise-graph1.png"
               alt="Search Console — sans stratégie SEO"
               width={640}
               height={352}
@@ -361,7 +361,7 @@ export default function Page() {
               aucune stratégie commerciale sur ton site web
             </p>
             <Lightbox
-              src="/images/creation-site-web-8.png"
+              src="/images/creation-site-entreprise-graph2.png"
               alt="Search Console — stratégie SEO sans stratégie commerciale"
               width={638}
               height={356}
@@ -383,7 +383,7 @@ export default function Page() {
             Ou quand tu as investi sur ta stratégie.
           </p>
           <Lightbox
-            src="/images/creation-site-web-9.png"
+            src="/images/creation-site-entreprise-graph3.png"
             alt="Search Console — stratégie SEO investie"
             width={618}
             height={314}
@@ -565,7 +565,7 @@ export default function Page() {
         <div className="mx-auto mt-8 grid max-w-[900px] gap-6 md:grid-cols-2">
           <ScrollReveal delay={0}>
             <Image
-              src="/images/creation-site-web-10.webp"
+              src="/images/refonte-site-web.webp"
               alt="Star Limousine Paris — site web créé par JWL Marketing"
               width={1123}
               height={562}
@@ -574,7 +574,7 @@ export default function Page() {
           </ScrollReveal>
           <ScrollReveal delay={150}>
             <Image
-              src="/images/creation-site-web-11.png"
+              src="/images/creation-site-professionnel.png"
               alt="Évolution des impressions et clics — Google Search Console, JWL Marketing"
               width={1034}
               height={532}

@@ -127,7 +127,7 @@ function PageContent() {
         </h2>
         <div className="mt-10 grid items-center gap-8 md:grid-cols-2">
           <Image
-            src="/images/fiche-google-business-profile-2.png"
+            src="/images/seo-local-google.png"
             alt="Fiche Google Business Profile JWL Marketing"
             width={1410}
             height={950}
@@ -191,7 +191,7 @@ function PageContent() {
             </p>
           </div>
           <Image
-            src="/images/fiche-google-business-profile-3.webp"
+            src="/images/creation-fiche-google.webp"
             alt="Quelle est la meilleure solution pour moi ? — recherche Google"
             width={613}
             height={613}
@@ -210,7 +210,7 @@ function PageContent() {
           </span>
         </h2>
         <Image
-          src="/images/fiche-google-business-profile-4.webp"
+          src="/images/referencement-google-maps.webp"
           alt="Google est une rue commerçante — sois visible, sois crédible, sois choisi"
           width={886}
           height={623}
@@ -229,7 +229,7 @@ function PageContent() {
         </h2>
         <div className="mt-10 grid items-center gap-8 md:grid-cols-2">
           <Image
-            src="/images/fiche-google-business-profile-5.webp"
+            src="/images/google-business-profile.webp"
             alt="Jodie et son assistante IA JWL Marketing devant le siège de Google"
             width={456}
             height={608}
@@ -273,7 +273,7 @@ function PageContent() {
             </span>
           </p>
           <Image
-            src="/images/fiche-google-business-profile-6.png"
+            src="/images/gestion-fiche-google.png"
             alt="Gestion des avis Google — JWL Marketing"
             width={705}
             height={480}
@@ -292,7 +292,7 @@ function PageContent() {
           </span>
         </h2>
         <Image
-          src="/images/fiche-google-business-profile-7.webp"
+          src="/images/optimisation-fiche-google.webp"
           alt="Où êtes-vous ? Votre produit phare. Vos autres offres."
           width={1600}
           height={618}

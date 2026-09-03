@@ -93,7 +93,7 @@ export default function Page() {
           </div>
         </div>
         <Image
-          src="/images/consultant-seo-paris.jpg"
+          src="/images/consultant-seo-paris-tour-eiffel.jpg"
           alt="Jodie Lapaillerie — Consultante SEO Paris, devant la Tour Eiffel"
           width={1086}
           height={1448}
@@ -106,7 +106,7 @@ export default function Page() {
       <section className="mx-auto max-w-[1100px] px-6 py-10">
         <div className="mx-auto grid items-center gap-10 md:grid-cols-[320px_1fr]">
           <Image
-            src="/images/consultant-seo-paris-2.png"
+            src="/images/expert-seo-paris.png"
             alt="Jodie Lapaillerie — consultante en marketing digital"
             width={1410}
             height={2000}
@@ -165,7 +165,7 @@ export default function Page() {
           </div>
           <div className="text-center">
             <Image
-              src="/images/consultant-seo-paris-3.webp"
+              src="/images/consultant-seo-paris.webp"
               alt="Jodie Lapaillerie — SEO Summit Paris 2026"
               width={800}
               height={1000}
@@ -189,21 +189,21 @@ export default function Page() {
         </h2>
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           <Image
-            src="/images/consultant-seo-paris-4.png"
+            src="/images/seo-local-paris.png"
             alt="Fiche Google Business Profile JWL Marketing"
             width={1410}
             height={950}
             className="aspect-video w-full rounded-2xl border border-[#eee] object-cover"
           />
           <Image
-            src="/images/consultant-seo-paris-5.png"
+            src="/images/strategie-seo-paris.png"
             alt="Évolution des impressions et clics — Google Search Console"
             width={2000}
             height={1414}
             className="aspect-video w-full rounded-2xl border border-[#eee] object-cover"
           />
           <Image
-            src="/images/consultant-seo-paris-6.png"
+            src="/images/referencement-naturel-paris.png"
             alt="Résultat Google pour seo aix-en-provence — JWL Marketing"
             width={2000}
             height={1414}
@@ -282,7 +282,7 @@ export default function Page() {
             </p>
           </div>
           <Image
-            src="/images/consultant-seo-paris-7.png"
+            src="/images/consultant-referencement-paris.png"
             alt="Jodie Lapaillerie — analyse de marché SEO Paris"
             width={880}
             height={632}
@@ -302,7 +302,7 @@ export default function Page() {
         </h3>
         <div className="mt-8 grid items-stretch gap-8 md:grid-cols-2">
           <Image
-            src="/images/consultant-seo-paris-8.png"
+            src="/images/optimisation-seo-paris.png"
             alt="Outil de planification des mots-clés Google, sur Paris"
             width={2000}
             height={1414}
@@ -369,7 +369,7 @@ export default function Page() {
             </Link>
           </div>
           <Image
-            src="/images/consultant-seo-paris-4.png"
+            src="/images/seo-local-paris.png"
             alt="Optimisation fiche Google Business Profile JWL Marketing"
             width={1410}
             height={950}
@@ -388,7 +388,7 @@ export default function Page() {
         </h3>
         <div className="mt-8 grid items-start gap-8 md:grid-cols-2">
           <Image
-            src="/images/consultant-seo-paris-9.png"
+            src="/images/ia-seo-paris.png"
             alt="Jodie Lapaillerie — création de site web sur mesure JWL Marketing"
             width={360}
             height={288}
@@ -451,7 +451,7 @@ export default function Page() {
             </p>
           </div>
           <Image
-            src="/images/consultant-seo-paris-10.png"
+            src="/images/consultant-google-paris.png"
             alt="Jodie Lapaillerie et son assistante IA JWL Marketing"
             width={1410}
             height={2000}
@@ -482,7 +482,7 @@ export default function Page() {
             </p>
           </div>
           <Image
-            src="/images/consultant-seo-paris-11.png"
+            src="/images/carte-france-paris.png"
             alt="Zone d'intervention JWL Marketing — Paris sur place, France entière à distance"
             width={2000}
             height={1414}
