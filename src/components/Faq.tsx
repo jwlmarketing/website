@@ -107,7 +107,35 @@ const MARSEILLE_FAQ = [
   },
 ];
 
+const CREATION_SITE_WEB_FAQ = [
+  {
+    q: "Pourquoi créer un site web pour mon entreprise ?",
+    a: "Les réseaux sociaux te rendent visible. Ton site web te permet de convertir cette visibilité en clients. C'est ta preuve sociale : les internautes, toi y compris, vérifient un site avant de faire confiance à une entreprise. Il rassure, présente tes services et peut générer des demandes 24h/24.",
+  },
+  {
+    q: "Dois-je absolument créer un site web si je suis déjà présent sur les réseaux sociaux ?",
+    a: "Oui, surtout si tu travailles localement. Un artisan à Aix-en-Provence, un commerçant à Marseille ou un professionnel à Nice sera souvent recherché sur Google avant d'être contacté. Un site optimisé localement permet d'apparaître sur ces recherches et de capter des clients qui ne te connaissent pas encore.",
+  },
+  {
+    q: "Je veux créer mon site moi-même tout en ayant un bon SEO. Comment faire ?",
+    a: "Créer un site est aujourd'hui accessible. Le plus difficile reste le référencement. Je te propose une formation personnalisée qui te permettra d'apprendre les bases du SEO, de structurer tes pages correctement et d'éviter les erreurs qui bloquent souvent la visibilité sur Google.",
+  },
+  {
+    q: "Je paie déjà un abonnement pour mon site internet. Est-ce problématique ?",
+    a: "Pas forcément. Tout dépend de ce que comprend cet abonnement. Certains incluent uniquement l'hébergement et la maintenance. D'autres ajoutent des services marketing ou SEO. Un audit permet de vérifier si cet investissement est réellement rentable pour ton activité. Je peux te proposer plusieurs solutions en fonction de ton niveau d'engagement et de ce que révélera l'audit concernant les prestations et les promesses de la plateforme.",
+  },
+  {
+    q: "J'ai déjà un site internet. Pourquoi investir dans le SEO ?",
+    a: "Un site sans référencement ressemble à une boutique située dans une rue où personne ne passe. Le SEO permet d'attirer des visiteurs qualifiés depuis Google et d'augmenter les demandes de devis ou de contact sans dépendre uniquement de la publicité.",
+  },
+  {
+    q: "J'ai déjà un site, mais j'ai changé de clientèle cible. Que dois-je faire ?",
+    a: "Ton référencement doit évoluer avec ton activité. Si tu changes de cible, de secteur ou de zone géographique, il est souvent nécessaire de revoir le positionnement du site, les mots-clés et certaines pages stratégiques. Un audit SEO permet d'identifier les ajustements à réaliser pour attirer les bons prospects.",
+  },
+];
+
 const FAQ_BY_PATH: Record<string, typeof HOME_FAQ> = {
+  "/site-internet-aix-en-provence": CREATION_SITE_WEB_FAQ,
   "/": HOME_FAQ,
   "/consultant-freelance-seo-aix-en-provence": QUI_SUIS_JE_FAQ,
   "/consultant-freelance-seo-nice": NICE_FAQ,
