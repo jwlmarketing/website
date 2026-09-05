@@ -6,10 +6,12 @@ import { usePathname } from "next/navigation";
 
 export default function NewsletterCta() {
   const pathname = usePathname();
-  const isQuiSuisJe = pathname === "/consultant-freelance-seo-aix-en-provence";
-  const isNice = pathname === "/consultant-freelance-seo-nice";
-  const isParis = pathname === "/consultant-freelance-seo-paris-jwl-marketing";
-  const isMarseille = pathname === "/consultant-freelance-seo-marseille-jwl-marketing";
+  const locale = pathname?.startsWith("/en") ? "en" : "fr";
+  const bare = locale === "en" ? pathname?.replace(/^\/en/, "") || "/" : pathname;
+  const isQuiSuisJe = bare === "/consultant-freelance-seo-aix-en-provence";
+  const isNice = bare === "/consultant-freelance-seo-nice";
+  const isParis = bare === "/consultant-freelance-seo-paris-jwl-marketing";
+  const isMarseille = bare === "/consultant-freelance-seo-marseille-jwl-marketing";
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "sending" | "ok" | "error">("idle");
   const [message, setMessage] = useState("");
@@ -18,7 +20,7 @@ export default function NewsletterCta() {
     e.preventDefault();
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       setStatus("error");
-      setMessage("Entre une adresse email valide.");
+      setMessage(locale === "en" ? "Enter a valid email address." : "Entre une adresse email valide.");
       return;
     }
     setStatus("sending");
@@ -31,15 +33,15 @@ export default function NewsletterCta() {
       const data = await res.json();
       if (data.success) {
         setStatus("ok");
-        setMessage(data.message || "✓ Vérifie ta boîte mail pour confirmer !");
+        setMessage(data.message || (locale === "en" ? "✓ Check your inbox to confirm!" : "✓ Vérifie ta boîte mail pour confirmer !"));
         setEmail("");
       } else {
         setStatus("error");
-        setMessage(data.error || "Une erreur est survenue.");
+        setMessage(data.error || (locale === "en" ? "Something went wrong." : "Une erreur est survenue."));
       }
     } catch {
       setStatus("error");
-      setMessage("Erreur réseau. Réessaie dans quelques secondes.");
+      setMessage(locale === "en" ? "Network error. Try again in a few seconds." : "Erreur réseau. Réessaie dans quelques secondes.");
     }
   }
 
@@ -60,15 +62,25 @@ export default function NewsletterCta() {
 
       <div className="px-6 py-[60px] text-center md:px-0 md:pr-10 md:text-left">
         <h2 className="mb-6 font-heading text-[clamp(1.8rem,4vw,2.4rem)] font-bold leading-tight text-[#0D0D0D]">
-          {isQuiSuisJe
-            ? "Et toi? Quand est ce que tu t'engages pour ton Business sur Aix?"
-            : isNice
-              ? "Et toi ? Quand est-ce que tu t'engages pour ton Business sur Nice?"
-              : isParis
-                ? "Et toi? Quand est ce que tu t'engages pour ton Business sur Paris?"
-                : isMarseille
-                  ? "Et toi? Quand est ce que tu t'engages pour ton Business sur Marseille?"
-                  : "Hâte de voir votre carrière décollée !"}
+          {locale === "en"
+            ? isQuiSuisJe
+              ? "So, when are you committing to your business in Aix?"
+              : isNice
+                ? "So, when are you committing to your business in Nice?"
+                : isParis
+                  ? "So, when are you committing to your business in Paris?"
+                  : isMarseille
+                    ? "So, when are you committing to your business in Marseille?"
+                    : "Can't wait to see your career take off!"
+            : isQuiSuisJe
+              ? "Et toi? Quand est ce que tu t'engages pour ton Business sur Aix?"
+              : isNice
+                ? "Et toi ? Quand est-ce que tu t'engages pour ton Business sur Nice?"
+                : isParis
+                  ? "Et toi? Quand est ce que tu t'engages pour ton Business sur Paris?"
+                  : isMarseille
+                    ? "Et toi? Quand est ce que tu t'engages pour ton Business sur Marseille?"
+                    : "Hâte de voir votre carrière décollée !"}
         </h2>
         <form
           onSubmit={handleSubmit}
@@ -78,7 +90,7 @@ export default function NewsletterCta() {
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            placeholder="Écris ton adresse mail"
+            placeholder={locale === "en" ? "Enter your email address" : "Écris ton adresse mail"}
             autoComplete="email"
             className="min-w-[200px] flex-1 rounded-full border-2 border-[#E5E2DC] bg-white px-[22px] py-3.5 text-[0.9rem] text-[#0D0D0D] outline-none focus:border-gold focus:ring-2 focus:ring-gold/20"
           />
@@ -87,7 +99,9 @@ export default function NewsletterCta() {
             disabled={status === "sending"}
             className="whitespace-nowrap rounded-full bg-gold px-6 py-3.5 text-[0.88rem] font-bold text-white hover:bg-[#b5903a] disabled:opacity-60"
           >
-            {status === "sending" ? "Envoi en cours..." : "Reçois mes conseils"}
+            {status === "sending"
+              ? locale === "en" ? "Sending..." : "Envoi en cours..."
+              : locale === "en" ? "Get my tips" : "Reçois mes conseils"}
           </button>
         </form>
         {message && (
