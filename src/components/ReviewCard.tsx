@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 export default function ReviewCard({
   name,
@@ -14,6 +15,8 @@ export default function ReviewCard({
   avatar: string;
   text: string;
 }) {
+  const pathname = usePathname();
+  const locale = pathname?.startsWith("/en") ? "en" : "fr";
   const [expanded, setExpanded] = useState(false);
   const isLong = text.length > 220;
   const shown = expanded || !isLong ? text : text.slice(0, 220) + "…";
@@ -36,7 +39,9 @@ export default function ReviewCard({
           onClick={() => setExpanded((e) => !e)}
           className="mt-2 self-start text-xs text-gold hover:text-[#9a5a3c]"
         >
-          {expanded ? "Réduire" : "Lire la suite"}
+          {locale === "en"
+            ? expanded ? "Show less" : "Read more"
+            : expanded ? "Réduire" : "Lire la suite"}
         </button>
       )}
     </div>

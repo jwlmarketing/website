@@ -1,8 +1,11 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { usePathname } from "next/navigation";
 
 export default function ClientResultsWidget() {
+  const pathname = usePathname();
+  const locale = pathname?.startsWith("/en") ? "en" : "fr";
   const imgWrapRef = useRef<HTMLAnchorElement>(null);
   const [inView, setInView] = useState(false);
 
@@ -26,7 +29,7 @@ export default function ClientResultsWidget() {
       <div className="stats-left">
         <div className="stat-card">
           <div className="position-main">
-            N°1 sur&nbsp;
+            {locale === "en" ? "#1 on" : "N°1 sur"}&nbsp;
             <span className="g-blue">G</span>
             <span className="g-red">o</span>
             <span className="g-yellow">o</span>
@@ -34,21 +37,27 @@ export default function ClientResultsWidget() {
             <span className="g-green">l</span>
             <span className="g-red">e</span>
           </div>
-          <div className="position-sub">« Dépannage informatique Digne-les-Bains »</div>
+          <div className="position-sub">
+            {locale === "en" ? "“IT support Digne-les-Bains”" : "« Dépannage informatique Digne-les-Bains »"}
+          </div>
         </div>
 
         <div className="stat-card">
-          <div className="stat-label">Appels qualifiés</div>
+          <div className="stat-label">{locale === "en" ? "Qualified calls" : "Appels qualifiés"}</div>
           <div className="stat-value">
-            <span className="accent">+ 63 appels</span>
-            <span className="stat-value-label">Appels qualifiés</span>
+            <span className="accent">{locale === "en" ? "+ 63 calls" : "+ 63 appels"}</span>
+            <span className="stat-value-label">{locale === "en" ? "Qualified calls" : "Appels qualifiés"}</span>
           </div>
-          <div className="stat-sub">générés en 6 mois, soit + de 10 appels/mois</div>
+          <div className="stat-sub">
+            {locale === "en" ? "generated in 6 months, i.e. + 10 calls/month" : "générés en 6 mois, soit + de 10 appels/mois"}
+          </div>
         </div>
       </div>
 
       <div className="browser-col">
-        <div className="promo-badge">Stratégie mensuelle SEO</div>
+        <div className="promo-badge" data-tooltip={locale === "en" ? "Plan selected to achieve these results" : "Plan sélectionné pour obtenir ces résultats"}>
+          {locale === "en" ? "Monthly SEO strategy" : "Stratégie mensuelle SEO"}
+        </div>
         <div className="browser">
           <div className="browser-bar">
             <span className="dot red"></span>
@@ -66,7 +75,7 @@ export default function ClientResultsWidget() {
             <img
               className={inView ? "in-view" : ""}
               src="https://api.jwl-marketing.fr/proxiclic-provence/proxiclic-site.webp"
-              alt="Site Proxiclic-Provence"
+              alt={locale === "en" ? "Proxiclic-Provence website" : "Site Proxiclic-Provence"}
             />
           </a>
         </div>
@@ -74,9 +83,9 @@ export default function ClientResultsWidget() {
 
       <div className="stats-right">
         <div className="stat-card">
-          <div className="stat-label">Avis Google</div>
+          <div className="stat-label">{locale === "en" ? "Google reviews" : "Avis Google"}</div>
           <div className="stat-value">
-            <span className="accent">16 avis</span>
+            <span className="accent">{locale === "en" ? "16 reviews" : "16 avis"}</span>
             <span className="stat-value-label">
               <span className="g-blue">G</span>
               <span className="g-red">o</span>
@@ -86,7 +95,7 @@ export default function ClientResultsWidget() {
               <span className="g-red">e</span>
             </span>
           </div>
-          <div className="stat-sub">soit une moyenne de 5/5</div>
+          <div className="stat-sub">{locale === "en" ? "i.e. an average of 5/5" : "soit une moyenne de 5/5"}</div>
           <div className="stars">
             {Array.from({ length: 5 }).map((_, i) => (
               <svg key={i} viewBox="0 0 24 24">
@@ -98,13 +107,13 @@ export default function ClientResultsWidget() {
 
         <div className="stat-card">
           <div className="stat-value">
-            <span className="accent">+ 3 500 vues</span>
+            <span className="accent">{locale === "en" ? "+ 3,500 views" : "+ 3 500 vues"}</span>
             <svg className="icon" viewBox="0 0 24 24">
               <path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z" />
               <circle cx="12" cy="12" r="3" />
             </svg>
           </div>
-          <div className="stat-sub">vues de la fiche Google en 6 mois</div>
+          <div className="stat-sub">{locale === "en" ? "Google Business profile views in 6 months" : "vues de la fiche Google en 6 mois"}</div>
           <div className="ring-row">
             <div className="gauge-ring">
               <svg viewBox="0 0 56 56" width="52" height="52">
@@ -120,7 +129,15 @@ export default function ClientResultsWidget() {
               </svg>
             </div>
             <div className="ring-trend">
-              Visibilité Google Business <b>multipliée</b> en 6 mois
+              {locale === "en" ? (
+                <>
+                  Google Business visibility <b>multiplied</b> in 6 months
+                </>
+              ) : (
+                <>
+                  Visibilité Google Business <b>multipliée</b> en 6 mois
+                </>
+              )}
             </div>
           </div>
         </div>
@@ -254,7 +271,7 @@ export default function ClientResultsWidget() {
           text-align: center;
         }
         .promo-badge::after {
-          content: "Plan sélectionné pour obtenir ces résultats";
+          content: attr(data-tooltip);
           position: absolute;
           top: 120%;
           left: 50%;

@@ -1,8 +1,9 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { usePathname } from "next/navigation";
 
-const WIDGET_HTML = `
+const STYLE = `
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
@@ -28,7 +29,7 @@ const WIDGET_HTML = `
   text-align: center;
 }
 
-/* ÉTAPE 0 — recherche */
+/* STEP 0 — search */
 .step-search {
   max-width: 580px;
   margin: 0;
@@ -99,7 +100,7 @@ const WIDGET_HTML = `
   cursor: pointer;
 }
 
-/* barre de progression */
+/* progress bar */
 .progress-wrap {
   display: flex;
   align-items: center;
@@ -154,7 +155,7 @@ const WIDGET_HTML = `
 }
 .audit-question.ok .q-pts { color: #C97B63; }
 
-/* input dans question */
+/* input inside question */
 .q-input {
   width: 100%;
   padding: 10px 14px;
@@ -171,7 +172,7 @@ const WIDGET_HTML = `
 .q-input:focus { border-color: #C97B63; }
 .q-input::placeholder { color: #ccc; font-size: 13px; }
 
-/* oui/non */
+/* yes/no */
 .oui-non {
   display: flex;
   gap: 8px;
@@ -191,7 +192,7 @@ const WIDGET_HTML = `
 .oui-non button.oui-sel { border-color: #27ae60; background: #f2faf5; color: #27ae60; font-weight: 500; }
 .oui-non button.non-sel { border-color: #c0392b; background: #fff5f5; color: #c0392b; font-weight: 500; }
 
-/* nombre */
+/* number */
 .q-nombre {
   display: flex;
   align-items: center;
@@ -212,7 +213,7 @@ const WIDGET_HTML = `
 .q-nombre input:focus { border-color: #C97B63; }
 .q-nombre span { font-size: 13px; color: #999; }
 
-/* bouton résultat */
+/* result button */
 .btn-resultat {
   display: block;
   width: 100%;
@@ -231,7 +232,7 @@ const WIDGET_HTML = `
 }
 .btn-resultat:hover { background: #b97a63; }
 
-/* résultat */
+/* result */
 .result-wrap {
   display: none;
   max-width: 680px;
@@ -341,11 +342,15 @@ const WIDGET_HTML = `
   .score-msg { font-size: 17px; }
 }
 </style>
+`;
 
+const GOOGLE_SPAN = `<span style="color:#4285F4">G</span><span style="color:#EA4335">o</span><span style="color:#FBBC05">o</span><span style="color:#4285F4">g</span><span style="color:#34A853">l</span><span style="color:#EA4335">e</span>`;
+
+const BODY_FR = `
 <div class="gmb-audit">
 
   <h2>
-    Audite ta fiche <span style="color:#4285F4">G</span><span style="color:#EA4335">o</span><span style="color:#FBBC05">o</span><span style="color:#4285F4">g</span><span style="color:#34A853">l</span><span style="color:#EA4335">e</span> en direct
+    Audite ta fiche ${GOOGLE_SPAN} en direct
   </h2>
   <p class="sous-titre">
     On ouvre ensemble ta fiche, un onglet s'ouvre, reviens ici et réponds aux questions en la regardant.
@@ -356,7 +361,7 @@ const WIDGET_HTML = `
     <input type="text" id="nom-entreprise" placeholder="nom de ton entreprise" />
     <input type="text" id="nom-ville" placeholder="ta ville (ex : Aix-en-Provence)" />
     <button class="btn-search" onclick="ouvrirFiche()">
-      ouvrir ma fiche <span style="color:#4285F4">G</span><span style="color:#EA4335">o</span><span style="color:#FBBC05">o</span><span style="color:#4285F4">g</span><span style="color:#34A853">l</span><span style="color:#EA4335">e</span> →
+      ouvrir ma fiche ${GOOGLE_SPAN} →
     </button>
     <p class="search-hint">ta fiche s'ouvre dans un nouvel onglet — <span>garde les deux ouverts</span></p>
   </div>
@@ -530,7 +535,7 @@ const WIDGET_HTML = `
 
   </div>
 
-  <!-- RÉSULTAT -->
+  <!-- RESULTAT -->
   <div class="result-wrap" id="result-wrap">
 
     <div class="result-score" id="result-score">
@@ -551,7 +556,7 @@ const WIDGET_HTML = `
     </div>
 
     <div class="email-box">
-      <p>tu veux recevoir ton diagnostic complet et un audit gratuit de ta fiche <span style="color:#4285F4">G</span><span style="color:#EA4335">o</span><span style="color:#FBBC05">o</span><span style="color:#4285F4">g</span><span style="color:#34A853">l</span><span style="color:#EA4335">e</span> ?</p>
+      <p>tu veux recevoir ton diagnostic complet et un audit gratuit de ta fiche ${GOOGLE_SPAN} ?</p>
       <input type="email" id="email-input" placeholder="ton adresse mail" />
       <button class="btn-send" onclick="envoyerMail()">je veux mon audit gratuit →</button>
     </div>
@@ -567,24 +572,300 @@ const WIDGET_HTML = `
 </div>
 `;
 
-const WIDGET_SCRIPT = `
+const BODY_EN = `
+<div class="gmb-audit">
+
+  <h2>
+    Audit your ${GOOGLE_SPAN} profile live
+  </h2>
+  <p class="sous-titre">
+    We open your profile together, a tab opens, come back here and answer the questions while looking at it.
+  </p>
+
+  <!-- SEARCH -->
+  <div class="step-search" id="step-search">
+    <input type="text" id="nom-entreprise" placeholder="your business name" />
+    <input type="text" id="nom-ville" placeholder="your city (e.g.: Aix-en-Provence)" />
+    <button class="btn-search" onclick="ouvrirFiche()">
+      open my ${GOOGLE_SPAN} profile →
+    </button>
+    <p class="search-hint">your profile opens in a new tab — <span>keep both open</span></p>
+  </div>
+
+  <!-- AUDIT -->
+  <div class="audit-wrap" id="audit-wrap">
+
+    <div class="fiche-ouverte-banner">
+      📋 your profile is open in another tab — answer the questions while looking at it.
+      <a onclick="rouvrir()">reopen my profile</a>
+    </div>
+
+    <div class="progress-wrap">
+      <span class="progress-label">current score</span>
+      <div class="progress-bar"><div class="progress-fill" id="prog-fill"></div></div>
+      <span class="progress-num" id="prog-num">0 / 100</span>
+    </div>
+
+    <!-- SECTION 1 -->
+    <div class="section-title">🔐 the basics</div>
+
+    <div class="audit-question" id="q1" data-max="10">
+      <div class="q-top">
+        <span class="q-label">is your profile verified by Google? (green check on your profile)</span>
+        <span class="q-pts">10 pts</span>
+      </div>
+      <div class="oui-non">
+        <button onclick="repondreOuiNon('q1', true, 10)">yes ✓</button>
+        <button onclick="repondreOuiNon('q1', false, 0)">no ✗</button>
+      </div>
+    </div>
+
+    <div class="audit-question" id="q2" data-max="5">
+      <div class="q-top">
+        <span class="q-label">is your business name accurate? (no artificially added keyword)</span>
+        <span class="q-pts">5 pts</span>
+      </div>
+      <div class="oui-non">
+        <button onclick="repondreOuiNon('q2', true, 5)">yes ✓</button>
+        <button onclick="repondreOuiNon('q2', false, 0)">no ✗</button>
+      </div>
+    </div>
+
+    <div class="audit-question" id="q3" data-max="10">
+      <div class="q-top">
+        <span class="q-label">what is your main category on your profile? (copy it here)</span>
+        <span class="q-pts">10 pts</span>
+      </div>
+      <input class="q-input" id="q3-val" type="text" placeholder="e.g.: wellness coach, plumber, bakery..." oninput="repondreTexte('q3', 'q3-val', 10)" />
+    </div>
+
+    <div class="audit-question" id="q4" data-max="5">
+      <div class="q-top">
+        <span class="q-label">is your address or service area filled in?</span>
+        <span class="q-pts">5 pts</span>
+      </div>
+      <div class="oui-non">
+        <button onclick="repondreOuiNon('q4', true, 5)">yes ✓</button>
+        <button onclick="repondreOuiNon('q4', false, 0)">no ✗</button>
+      </div>
+    </div>
+
+    <div class="audit-question" id="q5" data-max="5">
+      <div class="q-top">
+        <span class="q-label">are your phone number and website filled in?</span>
+        <span class="q-pts">5 pts</span>
+      </div>
+      <div class="oui-non">
+        <button onclick="repondreOuiNon('q5', true, 5)">yes ✓</button>
+        <button onclick="repondreOuiNon('q5', false, 0)">no ✗</button>
+      </div>
+    </div>
+
+    <!-- SECTION 2 -->
+    <div class="section-title">✍️ the content</div>
+
+    <div class="audit-question" id="q6" data-max="10">
+      <div class="q-top">
+        <span class="q-label">copy your Google description here — we check whether it contains the right words</span>
+        <span class="q-pts">10 pts</span>
+      </div>
+      <input class="q-input" id="q6-val" type="text" placeholder="copy your GMB description here..." oninput="repondreTexte('q6', 'q6-val', 10)" />
+    </div>
+
+    <div class="audit-question" id="q7" data-max="8">
+      <div class="q-top">
+        <span class="q-label">do you have photos on your profile? (interior, team, work examples...)</span>
+        <span class="q-pts">8 pts</span>
+      </div>
+      <div class="oui-non">
+        <button onclick="repondreOuiNon('q7', true, 8)">yes ✓</button>
+        <button onclick="repondreOuiNon('q7', false, 0)">no ✗</button>
+      </div>
+    </div>
+
+    <div class="audit-question" id="q8" data-max="5">
+      <div class="q-top">
+        <span class="q-label">are your opening hours complete and up to date?</span>
+        <span class="q-pts">5 pts</span>
+      </div>
+      <div class="oui-non">
+        <button onclick="repondreOuiNon('q8', true, 5)">yes ✓</button>
+        <button onclick="repondreOuiNon('q8', false, 0)">no ✗</button>
+      </div>
+    </div>
+
+    <div class="audit-question" id="q9" data-max="7">
+      <div class="q-top">
+        <span class="q-label">do you publish posts on your profile at least once a month?</span>
+        <span class="q-pts">7 pts</span>
+      </div>
+      <div class="oui-non">
+        <button onclick="repondreOuiNon('q9', true, 7)">yes ✓</button>
+        <button onclick="repondreOuiNon('q9', false, 0)">no ✗</button>
+      </div>
+    </div>
+
+    <!-- SECTION 3 -->
+    <div class="section-title">⭐ reputation</div>
+
+    <div class="audit-question" id="q10" data-max="10">
+      <div class="q-top">
+        <span class="q-label">how many customer reviews do you have on your profile?</span>
+        <span class="q-pts">10 pts</span>
+      </div>
+      <div class="q-nombre">
+        <input type="number" id="q10-val" min="0" placeholder="0" oninput="repondreNombre('q10', 'q10-val', [[0,0],[1,3],[4,6],[7,9],[10,10]])" />
+        <span>reviews — 10 pts if ≥ 10 reviews</span>
+      </div>
+    </div>
+
+    <div class="audit-question" id="q11" data-max="8">
+      <div class="q-top">
+        <span class="q-label">do you reply to all your reviews — good and bad?</span>
+        <span class="q-pts">8 pts</span>
+      </div>
+      <div class="oui-non">
+        <button onclick="repondreOuiNon('q11', true, 8)">yes ✓</button>
+        <button onclick="repondreOuiNon('q11', false, 0)">no ✗</button>
+      </div>
+    </div>
+
+    <!-- SECTION 4 -->
+    <div class="section-title">📝 SEO</div>
+
+    <div class="audit-question" id="q12" data-max="15">
+      <div class="q-top">
+        <span class="q-label">do you publish at least 1 blog post per month on your website?</span>
+        <span class="q-pts">15 pts</span>
+      </div>
+      <div class="oui-non">
+        <button onclick="repondreOuiNon('q12', true, 15)">yes ✓</button>
+        <button onclick="repondreOuiNon('q12', false, 0)">no ✗</button>
+      </div>
+    </div>
+
+    <div class="audit-question" id="q13" data-max="2">
+      <div class="q-top">
+        <span class="q-label">are the Q&amp;A section on your profile filled in?</span>
+        <span class="q-pts">2 pts</span>
+      </div>
+      <div class="oui-non">
+        <button onclick="repondreOuiNon('q13', true, 2)">yes ✓</button>
+        <button onclick="repondreOuiNon('q13', false, 0)">no ✗</button>
+      </div>
+    </div>
+
+    <button class="btn-resultat" onclick="afficherResultat()">
+      see my diagnosis →
+    </button>
+
+  </div>
+
+  <!-- RESULT -->
+  <div class="result-wrap" id="result-wrap">
+
+    <div class="result-score" id="result-score">
+      <div class="score-big" id="score-big">0</div>
+      <div class="score-sur">points out of 100</div>
+      <div class="score-msg" id="score-msg"></div>
+      <div class="score-detail" id="score-detail"></div>
+    </div>
+
+    <div class="points-faibles" id="points-faibles" style="display:none">
+      <p class="pf-title">what's costing you the most points:</p>
+      <div id="pf-list"></div>
+    </div>
+
+    <div class="points-forts" id="points-forts" style="display:none">
+      <p class="pf-title">your strengths:</p>
+      <div id="pts-list"></div>
+    </div>
+
+    <div class="email-box">
+      <p>want to receive your full diagnosis and a free audit of your ${GOOGLE_SPAN} profile?</p>
+      <input type="email" id="email-input" placeholder="your email address" />
+      <button class="btn-send" onclick="envoyerMail()">I want my free audit →</button>
+    </div>
+
+    <div class="success-msg" id="success-msg">
+      ✓ received! I'll get back to you very soon with your audit.
+    </div>
+
+    <button class="btn-restart" onclick="restart()">restart the audit</button>
+
+  </div>
+
+</div>
+`;
+
+const TEXTS = {
+  fr: {
+    labels: {
+      q1: "fiche vérifiée par Google",
+      q2: "nom d'entreprise exact",
+      q3: "catégorie principale renseignée",
+      q4: "adresse/zone de service",
+      q5: "téléphone et site web",
+      q6: "description avec mots-clés",
+      q7: "photos sur la fiche",
+      q8: "horaires à jour",
+      q9: "posts réguliers sur la fiche",
+      q10: "avis clients (≥10)",
+      q11: "réponses aux avis",
+      q12: "articles de blog mensuels",
+      q13: "questions/réponses remplies",
+    },
+    alertFillNameCity: "indique le nom de ton entreprise et ta ville.",
+    alertInvalidEmail: "entre une adresse mail valide.",
+    alertError: "une erreur est survenue, réessaie.",
+    scoreMsgs: [
+      { max: 30, msg: "ta fiche est quasi invisible sur Google.", det: "tes clients te cherchent — et ne te trouvent pas. chaque jour sans action, c'est des opportunités perdues." },
+      { max: 55, msg: "ta fiche existe, mais elle ne travaille pas vraiment pour toi.", det: "il y a du potentiel — mais des points clés manquent. quelques ajustements bien ciblés changent tout." },
+      { max: 80, msg: "pas mal — mais tes concurrents peuvent encore te dépasser.", det: "tu es sur la bonne voie. les points manquants sont souvent ceux qui font la vraie différence." },
+      { max: 101, msg: "ta fiche est bien optimisée, bravo !", det: "tu es sur la bonne voie. un audit complet peut révéler des opportunités encore inexploitées." },
+    ],
+  },
+  en: {
+    labels: {
+      q1: "profile verified by Google",
+      q2: "accurate business name",
+      q3: "main category filled in",
+      q4: "address/service area",
+      q5: "phone and website",
+      q6: "description with keywords",
+      q7: "photos on the profile",
+      q8: "up-to-date opening hours",
+      q9: "regular posts on the profile",
+      q10: "customer reviews (≥10)",
+      q11: "replies to reviews",
+      q12: "monthly blog posts",
+      q13: "Q&A filled in",
+    },
+    alertFillNameCity: "enter your business name and your city.",
+    alertInvalidEmail: "enter a valid email address.",
+    alertError: "something went wrong, try again.",
+    scoreMsgs: [
+      { max: 30, msg: "your profile is nearly invisible on Google.", det: "your customers are looking for you — and can't find you. every day without action is lost opportunities." },
+      { max: 55, msg: "your profile exists, but it isn't really working for you.", det: "there's potential — but key points are missing. a few targeted adjustments change everything." },
+      { max: 80, msg: "not bad — but your competitors can still overtake you.", det: "you're on the right track. the missing points are often the ones that make the real difference." },
+      { max: 101, msg: "your profile is well optimized, well done!", det: "you're on the right track. a full audit can reveal opportunities that are still untapped." },
+    ],
+  },
+} as const;
+
+function getScript(locale: "fr" | "en") {
+  const t = TEXTS[locale];
+  return `
 var scores = {};
-var labels = {
-  q1: 'fiche vérifiée par Google', q2: 'nom d\\'entreprise exact',
-  q3: 'catégorie principale renseignée', q4: 'adresse/zone de service',
-  q5: 'téléphone et site web', q6: 'description avec mots-clés',
-  q7: 'photos sur la fiche', q8: 'horaires à jour',
-  q9: 'posts réguliers sur la fiche', q10: 'avis clients (≥10)',
-  q11: 'réponses aux avis', q12: 'articles de blog mensuels',
-  q13: 'questions/réponses remplies'
-};
+var labels = ${JSON.stringify(t.labels)};
 var maxPts = { q1:10,q2:5,q3:10,q4:5,q5:5,q6:10,q7:8,q8:5,q9:7,q10:10,q11:8,q12:15,q13:2 };
+var TXT = ${JSON.stringify({ alertFillNameCity: t.alertFillNameCity, alertInvalidEmail: t.alertInvalidEmail, alertError: t.alertError, scoreMsgs: t.scoreMsgs })};
 var ficheUrl = '';
 
 function ouvrirFiche() {
   var nom = document.getElementById('nom-entreprise').value.trim();
   var ville = document.getElementById('nom-ville').value.trim();
-  if (!nom || !ville) { alert('indique le nom de ton entreprise et ta ville.'); return; }
+  if (!nom || !ville) { alert(TXT.alertFillNameCity); return; }
   ficheUrl = 'https://www.google.com/maps/search/' + encodeURIComponent(nom + ' ' + ville);
   window.open(ficheUrl, '_blank');
   document.getElementById('step-search').style.display = 'none';
@@ -648,23 +929,15 @@ function afficherResultat() {
 
   var msg = document.getElementById('score-msg');
   var det = document.getElementById('score-detail');
+  var colors = ['rouge','orange','jaune','vert'];
 
-  if (total <= 30) {
-    box.classList.add('rouge');
-    msg.textContent = 'ta fiche est quasi invisible sur Google.';
-    det.textContent = 'tes clients te cherchent — et ne te trouvent pas. chaque jour sans action, c\\'est des opportunités perdues.';
-  } else if (total <= 55) {
-    box.classList.add('orange');
-    msg.textContent = 'ta fiche existe, mais elle ne travaille pas vraiment pour toi.';
-    det.textContent = 'il y a du potentiel — mais des points clés manquent. quelques ajustements bien ciblés changent tout.';
-  } else if (total <= 80) {
-    box.classList.add('jaune');
-    msg.textContent = 'pas mal — mais tes concurrents peuvent encore te dépasser.';
-    det.textContent = 'tu es sur la bonne voie. les points manquants sont souvent ceux qui font la vraie différence.';
-  } else {
-    box.classList.add('vert');
-    msg.textContent = 'ta fiche est bien optimisée, bravo !';
-    det.textContent = 'tu es sur la bonne voie. un audit complet peut révéler des opportunités encore inexploitées.';
+  for (var i = 0; i < TXT.scoreMsgs.length; i++) {
+    if (total <= TXT.scoreMsgs[i].max) {
+      box.classList.add(colors[i]);
+      msg.textContent = TXT.scoreMsgs[i].msg;
+      det.textContent = TXT.scoreMsgs[i].det;
+      break;
+    }
   }
 
   var faibles = [], forts = [];
@@ -702,7 +975,7 @@ function afficherResultat() {
 
 function envoyerMail() {
   var email = document.getElementById('email-input').value.trim();
-  if (!email || !email.includes('@')) { alert('entre une adresse mail valide.'); return; }
+  if (!email || !email.includes('@')) { alert(TXT.alertInvalidEmail); return; }
 
   var total = 0;
   Object.values(scores).forEach(function(v){ total += v; });
@@ -731,8 +1004,8 @@ function envoyerMail() {
     if (r.ok) {
       document.querySelector('.email-box').style.display = 'none';
       document.getElementById('success-msg').style.display = 'block';
-    } else { alert('une erreur est survenue, réessaie.'); }
-  }).catch(function() { alert('une erreur est survenue, réessaie.'); });
+    } else { alert(TXT.alertError); }
+  }).catch(function() { alert(TXT.alertError); });
 }
 
 function restart() {
@@ -768,8 +1041,11 @@ window.afficherResultat = afficherResultat;
 window.envoyerMail = envoyerMail;
 window.restart = restart;
 `;
+}
 
 export default function GmbAuditWidget() {
+  const pathname = usePathname();
+  const locale = pathname?.startsWith("/en") ? "en" : "fr";
   const containerRef = useRef<HTMLDivElement>(null);
   const scriptInjected = useRef(false);
 
@@ -777,14 +1053,18 @@ export default function GmbAuditWidget() {
     if (scriptInjected.current) return;
     scriptInjected.current = true;
     const script = document.createElement("script");
-    script.textContent = WIDGET_SCRIPT;
+    script.textContent = getScript(locale);
     document.body.appendChild(script);
     return () => {
       document.body.removeChild(script);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
-    <div ref={containerRef} dangerouslySetInnerHTML={{ __html: WIDGET_HTML }} />
+    <div
+      ref={containerRef}
+      dangerouslySetInnerHTML={{ __html: STYLE + (locale === "en" ? BODY_EN : BODY_FR) }}
+    />
   );
 }

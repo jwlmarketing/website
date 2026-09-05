@@ -149,6 +149,152 @@ const GMB_FAQ = [
   },
 ];
 
+const HOME_FAQ_EN = [
+  {
+    q: "Should I redo my website or get a JWL Marketing audit?",
+    a: "Because a new website doesn't always solve the problem. Before investing several hundred or thousand euros in a redesign, you need to understand what's really holding you back. Does the problem come from your offer? Your SEO? Your positioning? Your customer experience? I've already met businesses ready to rebuild their site when the real problem was simply the message shown to visitors. Before changing the tool, I prefer to understand why it isn't working.",
+  },
+  {
+    q: "Why talk about digital strategy when I just want a website?",
+    a: "Because a website without a strategy is a bit like opening a shop without knowing what to sell or to whom. Before creating a site, you need to understand who your customers are, what they're looking for and what pushes them to take action. The website comes after. My role isn't just to create a site. My role is to create a site that serves a business goal.",
+  },
+  {
+    q: "What's the link between digital strategy and building a website?",
+    a: "Strategy defines the path. The website lets you follow it. Strategy tells you which service to highlight, which customers to target, which words to use and which actions to get visitors to take. The site is only the visible part of the work. Without strategy, a site can look nice. With a strategy, it can become a real growth tool.",
+  },
+  {
+    q: "What's the difference between a web developer and JWL Marketing?",
+    a: "A web developer builds a site. I first help you understand why it needs to be built. I work on your positioning, your offer, your sales development, your SEO and the experience your future customer will go through. Only then comes the technical part. I regularly advise clients not to redo their site when it isn't the priority. I don't sell a website. I work on the strategy that will let your business find its future customers more easily.",
+  },
+  {
+    q: "Why pay a monthly SEO retainer when my site is already built?",
+    a: "That's probably the most legitimate question. Building a website and setting up the basics of SEO is a bit like opening a shop and putting up a sign. But that doesn't guarantee customers will walk in. Google evolves. Searches evolve. Your competitors evolve too. Effective organic search requires regular follow-up, adjustments, content, analysis and sometimes technical fixes. The setup gets you started. The follow-up lets you progress. That's exactly why some businesses have had a site for years without generating results. The site exists. The visibility work stopped. SEO isn't a monthly expense. It's the upkeep of your visibility.",
+  },
+  {
+    q: "How does JWL Marketing use AI in its strategies?",
+    a: "Artificial intelligence is a tool. Not a strategy. I use it to save time on certain analyses, spot opportunities, explore search intent or speed up certain tasks. But an AI knows neither your business, nor your market, nor your customers. It doesn't replace business experience, positioning, or an understanding of an industry. That's why I combine AI with my experience in sales development, SEO and digital strategy. AI can suggest ideas. Strategy remains a human decision.",
+  },
+];
+
+const QUI_SUIS_JE_FAQ_EN = [
+  {
+    q: "Why hire an SEO consultant in Aix-en-Provence rather than an agency?",
+    a: "Because you probably don't need someone who only talks about keywords. You need someone who understands your business, your customers and the challenges you face day to day. When an entrepreneur contacts me, they almost never say: \"I need SEO.\" They say: \"I'm short on customers.\" Or: \"My site isn't bringing me anything.\" At JWL Marketing, I start from your problem before talking about search rankings. Because good SEO often starts with a good understanding of your business.",
+  },
+  {
+    q: "How long before SEO brings me customers?",
+    a: "That's probably the question I get asked the most. And the honest answer is: it depends. SEO isn't an ad you switch on today to get results tomorrow. Google needs to understand your business, analyze your site and see that you provide relevant answers to your future customers' searches. Some businesses see first results within a few weeks. Others need several months. It all depends on your industry, the competition, your site's current state and the work already done on the ground with your customers. One thing is certain though: the longer you wait to start, the more your competitors get ahead. SEO takes time. But it can keep attracting customers long after the work is done.",
+  },
+  {
+    q: "I have a shop on the Cours Mirabeau, why bother with SEO?",
+    a: "Because not all your future customers walk past your shop window. Today, an estimated 85% of people search for a product, service or business on Google before travelling. Even with a great location, you're still limited to people who walk past your door, missing those who search for you online. With SEO, you can also be found by people already looking for you without knowing you yet. Think of it this way: the Cours Mirabeau makes you visible on the street, while SEO makes you visible everywhere else.",
+  },
+  {
+    q: "How do you adapt an SEO strategy to a business park like the Pôle d'activité de la Duranne?",
+    a: "SEO isn't worked the same way in a business park as in a city centre. La Duranne hosts hundreds of businesses, mainly in services, tertiary industries, technology and B2B. So the goal isn't just to be visible in Aix-en-Provence. You need to understand how your future customers search for your services: by trade, by industry, by problem or by location. A business based in La Duranne won't necessarily have the same searches as one located downtown or in a retail area. That's why I work on positioning before SEO. I try to understand who your customers are, how they search for a solution and which words they actually use. The goal isn't simply to be visible in La Duranne. The goal is to be visible to the businesses that need you.",
+  },
+  {
+    q: "How can I be recommended by AI when a client searches for a professional in Aix-en-Provence?",
+    a: "AI doesn't invent its answers. It relies on information found online: your website, your Google profile, your customer reviews, your content and the sources that talk about your business. So to be recommended, you first need a solid SEO foundation, to be visible, active and to have a Google Business Profile. To do that, you need to reply to your customer reviews and publish content that answers the questions your future customers actually ask. If Google understands who you are, what you do and where you operate, AI tools will find it much easier to recommend you to their users.",
+  },
+  {
+    q: "Will GEO (Generative Engine Optimization) replace local SEO?",
+    a: "No. GEO and local SEO don't compete. They complement each other. Local SEO helps Google understand who you are, what you offer and in which geographic area you operate. GEO optimizes your presence for AI tools like ChatGPT, Gemini or Google's enriched results. But AI needs reliable sources to build its answers. And those sources often come from local SEO work: an optimized website, a Google Business Profile, customer reviews, quality content and consistent information about the business. Without local SEO, it becomes harder for Google and AI to understand your business. So GEO doesn't replace local SEO. It builds on it.",
+  },
+];
+
+const NICE_FAQ_EN = [
+  {
+    q: "Why hire an SEO consultant in Nice rather than an agency?",
+    a: "Because I don't work with prefabricated templates. An independent shop in the Libération district doesn't have the same customers or goals as a firm in Cimiez or a business based in Saint-Isidore. Each strategy is built around your business, not around a standard package. I analyze your business, your local market and the searches of your future customers in Nice. Each strategy is built around your business, not around a package.",
+  },
+  {
+    q: "How long before SEO brings me customers in Nice?",
+    a: "It all depends on your market, the competition and your starting point. A tradesperson in Nice Nord, a real estate agent or a self-employed professional won't face the same challenges. Generally, first results appear between 3 and 6 months, but SEO is long-term groundwork. My goal isn't to bring you traffic quickly. My goal is to build lasting visibility capable of generating contact requests over the long run.",
+  },
+  {
+    q: "I already have a good location in Nice, why bother with SEO?",
+    a: "Because a good location in Nice is an advantage. But Google can make you visible to people who don't yet know your business. The goal isn't to replace your shop window. It's to bring it more customers.",
+  },
+  {
+    q: "How do you adapt an SEO strategy to a business established in the Nice metro area?",
+    a: "An effective SEO strategy starts with understanding your market. The expectations of a tradesperson in Carros, a self-employed professional in Nice or a service business in Saint-Laurent-du-Var are different. I analyze your business, your competitors and the searches of your future customers to build a strategy tailored to your goals. The goal isn't to attract everyone. The goal is to attract the right people at the right time.",
+  },
+  {
+    q: "Will GEO (Generative Engine Optimization) replace local SEO in Nice?",
+    a: "No. GEO and local SEO work together. SEO helps your business be visible on Google. GEO helps AI tools like ChatGPT, Gemini or Perplexity understand and recommend your business. In Nice, a restaurant, a lawyer, a tradesperson or a real estate agency still needs an optimized Google profile, customer reviews and a well-ranked website. The difference is that today, internet users no longer search only on Google. They also ask an AI directly: \"What's the best tradesperson in Nice?\" or \"Which SEO consultant should I choose in Nice?\" My goal is to make your business visible both on Google and in AI answers. Because in 2026, ranking first on Google is an advantage. Being recommended by AI on top of that becomes a real visibility accelerator.",
+  },
+];
+
+const MARSEILLE_FAQ_EN = [
+  {
+    q: "I already have a good location in Marseille, why bother with SEO?",
+    a: "A well-placed shop near the Vieux-Port or Castellane is an asset. But today, your future customers search on Google first. SEO lets you appear ahead of your competitors when someone searches for your services in Marseille. Result: more calls, more quote requests and more visits.",
+  },
+  {
+    q: "How do you adapt an SEO strategy to a business established in the Marseille metro area?",
+    a: "A good SEO strategy in Marseille has to account for your service area. Searches differ between La Valentine, Euroméditerranée or Aubagne. The goal is to target the neighbourhoods and towns where your future customers are, to generate qualified leads.",
+  },
+  {
+    q: "How long before SEO brings me customers in Marseille?",
+    a: "First results often appear between 3 and 6 months. In some less competitive industries, it can be faster or slower. SEO is a lasting investment: once well positioned, you keep receiving leads without paying for every click.",
+  },
+  {
+    q: "Why hire an SEO consultant in Marseille rather than an agency?",
+    a: "With a consultant, you talk directly with the person working on your SEO. No middlemen, no file passed from hand to hand. You get more personalized support and a strategy tailored to the reality of the Marseille market.",
+  },
+  {
+    q: "How does AI choose which businesses to recommend in Marseille?",
+    a: "AI tools analyze the same signals as Google: site quality, customer reviews, local presence, expertise and consistency of information online. A well-ranked business that's active on its Google Business Profile has a better chance of being recommended.",
+  },
+  {
+    q: "Will GEO (Generative Engine Optimization) replace local SEO in Marseille?",
+    a: "No. GEO complements local SEO. To be cited by ChatGPT, Gemini or future AI engines, you first need to be visible on Google. Solid local SEO remains the foundation for appearing in AI-generated answers.",
+  },
+];
+
+const CREATION_SITE_WEB_FAQ_EN = [
+  {
+    q: "Why create a website for my business?",
+    a: "Social media makes you visible. Your website lets you turn that visibility into customers. It's your social proof: internet users, yourself included, check a website before trusting a business. It reassures, presents your services and can generate requests around the clock.",
+  },
+  {
+    q: "Do I absolutely need a website if I'm already active on social media?",
+    a: "Yes, especially if you work locally. A tradesperson in Paris, a shop owner in Marseille or a professional in Bordeaux will often be searched for on Google before being contacted. A locally optimized website lets you appear in those searches and reach customers who don't know you yet.",
+  },
+  {
+    q: "I want to build my own site while still getting good SEO. How do I do that?",
+    a: "Building a site is accessible today. The hardest part remains SEO. I offer personalized training that will teach you the basics of SEO, help you structure your pages correctly and avoid the mistakes that often hold back Google visibility.",
+  },
+  {
+    q: "I already pay a subscription for my website. Is that a problem?",
+    a: "Not necessarily. It all depends on what that subscription includes. Some only cover hosting and maintenance. Others add marketing or SEO services. An audit checks whether that spend is actually worthwhile for your business. I can suggest several options depending on your level of commitment and what the audit reveals about the platform's services and promises.",
+  },
+  {
+    q: "I already have a website. Why invest in SEO?",
+    a: "A site without SEO is like a shop on a street nobody walks down. SEO attracts qualified visitors from Google and increases quote or contact requests without relying solely on advertising.",
+  },
+  {
+    q: "I already have a site, but my target customers have changed. What should I do?",
+    a: "Your SEO needs to evolve with your business. If you change your target audience, industry or geographic area, it's often necessary to revisit the site's positioning, keywords and certain key pages. An SEO audit identifies the adjustments needed to attract the right prospects.",
+  },
+];
+
+const GMB_FAQ_EN = [
+  {
+    q: "My Google profile is created. Why doesn't it appear in the top results?",
+    a: "Creating a Google Business Profile isn't enough. Google also factors in reviews, photos, posts, the chosen category and the consistency of your information. An optimized profile has a better chance of appearing ahead of your competitors.",
+  },
+  {
+    q: "Can I be visible on Google Maps without a website?",
+    a: "Yes, but a website considerably strengthens your profile's credibility, and you risk missing out on local or targeted searches. Google tends to favour businesses with a consistent, well-optimized web presence.",
+  },
+  {
+    q: "Why do my competitors appear before me on Google Maps?",
+    a: "Google compares relevance, proximity and reputation between businesses. A more active profile, with more reviews and content, can achieve a better ranking.",
+  },
+];
+
 const FAQ_BY_PATH: Record<string, typeof HOME_FAQ> = {
   "/site-internet-aix-en-provence": CREATION_SITE_WEB_FAQ,
   "/google-my-business-aix-en-provence": GMB_FAQ,
@@ -156,6 +302,12 @@ const FAQ_BY_PATH: Record<string, typeof HOME_FAQ> = {
   "/consultant-freelance-seo-aix-en-provence": QUI_SUIS_JE_FAQ,
   "/consultant-freelance-seo-nice": NICE_FAQ,
   "/consultant-freelance-seo-marseille-jwl-marketing": MARSEILLE_FAQ,
+  "/en": HOME_FAQ_EN,
+  "/en/site-internet-aix-en-provence": CREATION_SITE_WEB_FAQ_EN,
+  "/en/google-my-business-aix-en-provence": GMB_FAQ_EN,
+  "/en/consultant-freelance-seo-aix-en-provence": QUI_SUIS_JE_FAQ_EN,
+  "/en/consultant-freelance-seo-nice": NICE_FAQ_EN,
+  "/en/consultant-freelance-seo-marseille-jwl-marketing": MARSEILLE_FAQ_EN,
 };
 
 export default function Faq() {

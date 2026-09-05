@@ -29,6 +29,7 @@ export default function NewsletterCta() {
       const fd = new FormData();
       fd.append("email", email);
       fd.append("source", "site");
+      fd.append("locale", locale);
       const res = await fetch("/api/newsletter", { method: "POST", body: fd });
       const data = await res.json();
       if (data.success) {
