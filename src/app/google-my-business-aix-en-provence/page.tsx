@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import GoogleColors from "@/components/GoogleColors";
+import LanguageToggle from "@/components/LanguageToggle";
 
 export const metadata: Metadata = {
   title: "Optimisation Fiche Google Business Profile | JWL MARKETING",
@@ -49,15 +50,18 @@ function PageContent() {
             className="h-[36px] w-auto"
           />
         </Link>
-        <a href="https://intranet.jwlmarketing.fr/" aria-label="Connexion espace client">
-          <Image
-            src="/images/seco.png"
-            alt="Connexion espace client"
-            width={28}
-            height={28}
-            className="h-7 w-7"
-          />
-        </a>
+        <div className="flex items-center gap-3">
+          <a href="https://intranet.jwlmarketing.fr/" aria-label="Connexion espace client">
+            <Image
+              src="/images/seco.png"
+              alt="Connexion espace client"
+              width={28}
+              height={28}
+              className="h-7 w-7"
+            />
+          </a>
+          <LanguageToggle locale="fr" href="/en/google-my-business-aix-en-provence" />
+        </div>
       </div>
 
       {/* Hero */}

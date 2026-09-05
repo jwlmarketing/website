@@ -4,10 +4,16 @@ import PlaceholderPage from "@/components/PlaceholderPage";
 export const metadata: Metadata = {
   title: "Contact | JWL Marketing",
   description:
-    "Contacte JWL Marketing pour ton projet SEO et visibilité digitale à Aix-en-Provence et partout en France.",
+    "Contact JWL Marketing for your SEO and digital visibility project in Aix-en-Provence and throughout France.",
   robots: { index: false, follow: true },
 };
 
 export default function Page() {
-  return <PlaceholderPage title="Contact" altHref="/en/contact-jwl-marketing-aix-en-provence" />;
+  return (
+    <PlaceholderPage
+      title="Contact"
+      locale="en"
+      altHref="/contact-jwl-marketing-aix-en-provence"
+    />
+  );
 }

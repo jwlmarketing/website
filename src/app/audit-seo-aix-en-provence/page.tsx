@@ -9,5 +9,5 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <PlaceholderPage title="Audit SEO & Stratégie" />;
+  return <PlaceholderPage title="Audit SEO & Stratégie" altHref="/en/audit-seo-aix-en-provence" />;
 }

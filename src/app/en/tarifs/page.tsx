@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import PlaceholderPage from "@/components/PlaceholderPage";
 
 export const metadata: Metadata = {
-  title: "Tarifs | JWL Marketing",
+  title: "Pricing | JWL Marketing",
   description:
-    "Grille tarifaire des prestations JWL Marketing : audit SEO, fiche Google Business Profile, site web et accompagnement.",
+    "JWL Marketing pricing: SEO audit, Google Business Profile listing, website and support packages.",
   robots: { index: false, follow: true },
 };
 
 export default function Page() {
-  return <PlaceholderPage title="Tarifs" altHref="/en/tarifs" />;
+  return <PlaceholderPage title="Pricing" locale="en" altHref="/tarifs" />;
 }

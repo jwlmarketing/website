@@ -9,9 +9,9 @@ import TypewriterText from "@/components/TypewriterText";
 import LanguageToggle from "@/components/LanguageToggle";
 
 export const metadata: Metadata = {
-  title: "Consultante Freelance SEO Paris | JWL Marketing",
+  title: "Freelance SEO Consultant Paris | JWL Marketing",
   description:
-    "Consultante Freelance SEO à Paris. Je transforme ta visibilité Google en acquisition client. 10 ans de commerce B2B. Audit gratuit.",
+    "Freelance SEO Consultant in Paris. I turn your Google visibility into client acquisition. 10 years of B2B sales experience. Free audit.",
 };
 
 const ZONES = [
@@ -39,9 +39,9 @@ function StepNumber({ n }: { n: number }) {
 export default function Page() {
   return (
     <div>
-      {/* Logo + compte, au-dessus du hero */}
+      {/* Logo + account, above the hero */}
       <div className="flex w-full items-center justify-between px-[5%] pt-20">
-        <Link href="/">
+        <Link href="/en">
           <Image
             src="/images/logo-jwl-marketing.png"
             alt="JWL Marketing Paris"
@@ -51,16 +51,16 @@ export default function Page() {
           />
         </Link>
         <div className="flex items-center gap-3">
-          <a href="https://intranet.jwlmarketing.fr/" aria-label="Connexion espace client">
+          <a href="https://intranet.jwlmarketing.fr/" aria-label="Client area login">
             <Image
               src="/images/seco.png"
-              alt="Connexion espace client"
+              alt="Client area login"
               width={28}
               height={28}
               className="h-7 w-7"
             />
           </a>
-          <LanguageToggle locale="fr" href="/en/consultant-freelance-seo-paris-jwl-marketing" />
+          <LanguageToggle locale="en" href="/consultant-freelance-seo-paris-jwl-marketing" />
         </div>
       </div>
 
@@ -69,17 +69,16 @@ export default function Page() {
         <div className="max-w-[600px] flex-1">
           <h1 className="font-heading text-4xl leading-[1.05] lg:text-[60px] lg:leading-[0.95] text-black">
             <span className="font-medium">
-              Consultante SEO
+              SEO Consultant
               <br />
-              &amp; Visibilité Web
+              &amp; Web Visibility
             </span>
             <br />
             <span className="italic text-[#c9846f]">Paris</span>
           </h1>
           <p className="mt-6 text-base leading-[1.6] text-black">
-            Une stratégie freelance, portée par la qualité d&apos;une agence à
-            taille humaine. Votre réussite commence sous les lumières de
-            Paris.
+            A freelance strategy, backed by the quality of a boutique
+            agency. Your success starts under the lights of Paris.
           </p>
           <div className="mt-6 flex flex-wrap items-center gap-4">
             <a
@@ -89,16 +88,16 @@ export default function Page() {
               07 83 79 28 14
             </a>
             <span className="rounded-full bg-[#faf3ea] px-5 py-[15px] text-sm font-semibold text-black">
-              + de 20 projets depuis 2025
+              20+ projects since 2025
             </span>
             <p className="min-h-[1.2em] font-heading text-4xl italic text-[#c9846f]">
-              <TypewriterText text="Bonjour, je m'appelle Jodie." speed={113} />
+              <TypewriterText text="Hi, I'm Jodie." speed={113} />
             </p>
           </div>
         </div>
         <Image
           src="/images/consultant-seo-paris-tour-eiffel.jpg"
-          alt="Jodie Lapaillerie — Consultante SEO Paris, devant la Tour Eiffel"
+          alt="Jodie Lapaillerie — SEO Consultant Paris, in front of the Eiffel Tower"
           width={1086}
           height={1448}
           priority
@@ -111,14 +110,14 @@ export default function Page() {
         <div className="mx-auto grid items-center gap-10 md:grid-cols-[320px_1fr]">
           <Image
             src="/images/expert-seo-paris.png"
-            alt="Jodie Lapaillerie — consultante en marketing digital"
+            alt="Jodie Lapaillerie — digital marketing consultant"
             width={1410}
             height={2000}
             className="mx-auto h-auto w-full max-w-[320px] rounded-2xl object-cover"
           />
           <div className="text-center">
- <h2 className="font-heading text-3xl leading-tight md:text-[54px] text-black">
-              <span className="text-[#c9846f]"> Ta consultante SEO préférée,</span> experte en stratégie digitale et développement commercial
+            <h2 className="font-heading text-3xl leading-tight md:text-[54px] text-black">
+              <span className="text-[#c9846f]"> Your favourite SEO consultant,</span> expert in digital strategy and business development
             </h2>
             <div className="mt-2 text-4xl md:text-6xl">
               <GoogleColors />
@@ -128,7 +127,7 @@ export default function Page() {
                 href="mailto:service@jwl-marketing.fr"
                 className="inline-block rounded-full border-2 border-[#c9846f] bg-[#c9846f] px-8 py-[15px] font-medium text-white transition-colors hover:border-[#b8735f] hover:bg-[#b8735f]"
               >
-                Parle moi de tes besoins SEO sur Paris
+                Tell me about your SEO needs in Paris
               </a>
             </div>
           </div>
@@ -140,31 +139,29 @@ export default function Page() {
         <div className="grid items-center gap-8 md:grid-cols-[1fr_260px]">
           <div className="rounded-2xl bg-[#141414] p-8 text-white">
             <p className="text-[15px] leading-[25.5px]">
-              <span className="font-bold">Ma mission : </span>
-              Paris concentre des milliers d&apos;entreprises, de commerces,
-              de professions libérales et de sociétés de services. Dans un
-              environnement aussi concurrentiel, être compétent ne suffit
-              plus toujours à être choisi.
+              <span className="font-bold">My mission: </span>
+              Paris is home to thousands of businesses, shops, self-employed
+              professionals and service companies. In such a competitive
+              environment, being good at what you do isn't always enough to
+              get chosen.
             </p>
             <p className="mt-4 text-[15px] leading-[25.5px]">
-              J&apos;aide les entrepreneurs, indépendants et dirigeants à
-              construire une présence digitale capable d&apos;attirer des
-              prospects qualifiés et de soutenir leur développement
-              commercial sur le long terme.
+              I help entrepreneurs, independent professionals and business
+              owners build a digital presence capable of attracting
+              qualified prospects and supporting their growth over the long
+              term.
             </p>
             <p className="mt-4 text-[15px] leading-[25.5px]">
-              Forte de plus de 10 ans d&apos;expérience dans la vente et le
-              développement commercial, dont 4 années au sein du groupe
-              américain IAC, j&apos;associe aujourd&apos;hui stratégie
-              commerciale, référencement naturel et visibilité digitale.
+              With over 10 years of experience in sales and business
+              development, including 4 years at the American group IAC, I
+              now combine sales strategy, SEO and digital visibility.
             </p>
             <p className="mt-4 text-[15px] leading-[25.5px]">
-              Site internet, SEO local, contenus, Google Business Profile,
-              stratégie d&apos;acquisition ou optimisation de l&apos;expérience
-              client : chaque action est pensée pour répondre à un objectif
-              simple. Permettre à ton entreprise de gagner en visibilité
-              auprès des personnes qui recherchent réellement tes services à
-              Paris.
+              Website, local SEO, content, Google Business Profile,
+              acquisition strategy or client experience optimisation: every
+              action is designed to serve one simple goal. Helping your
+              business gain visibility among people genuinely searching for
+              your services in Paris.
             </p>
           </div>
           <div className="text-center">
@@ -185,30 +182,30 @@ export default function Page() {
       {/* Ambition */}
       <section className="mx-auto max-w-[1100px] px-6 py-10 text-center">
         <h2 className="font-heading text-3xl leading-tight md:text-[54px] text-black">
-          <span className="italic text-[#c9846f]">Je suis ambitieuse</span>
+          <span className="italic text-[#c9846f]">I'm ambitious</span>
           <br />
           <span className="font-medium">
-            Et je vise la 1ère place sur Paris.
+            And I'm aiming for 1st place in Paris.
           </span>
         </h2>
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           <Image
             src="/images/seo-local-paris.png"
-            alt="Fiche Google Business Profile JWL Marketing"
+            alt="Google Business Profile listing JWL Marketing"
             width={1410}
             height={950}
             className="aspect-video w-full rounded-2xl border border-[#eee] object-cover"
           />
           <Image
             src="/images/strategie-seo-paris.png"
-            alt="Évolution des impressions et clics — Google Search Console"
+            alt="Impressions and clicks over time — Google Search Console"
             width={2000}
             height={1414}
             className="aspect-video w-full rounded-2xl border border-[#eee] object-cover"
           />
           <Image
             src="/images/referencement-naturel-paris.png"
-            alt="Résultat Google pour seo aix-en-provence — JWL Marketing"
+            alt="Google result for seo aix-en-provence — JWL Marketing"
             width={2000}
             height={1414}
             className="aspect-video w-full rounded-2xl border border-[#eee] object-cover"
@@ -216,17 +213,17 @@ export default function Page() {
         </div>
       </section>
 
-      {/* Je m'investis */}
+      {/* I'm invested */}
       <section className="mx-auto max-w-[800px] px-6 py-6 text-center">
         <h2 className="font-heading text-3xl leading-tight md:text-[54px] text-black">
-          <span className="italic text-[#c9846f]">Je m&apos;investis</span>{" "}
+          <span className="italic text-[#c9846f]">I'm invested</span>{" "}
           <span className="font-medium">
-            dans ton projet et mes clients en parlent.
+            in your project, and my clients talk about it.
           </span>
         </h2>
       </section>
 
-      {/* Avis clients */}
+      {/* Client reviews */}
       <section className="py-6">
         <div className="mx-auto flex max-w-[1200px] gap-6 overflow-x-auto px-6 pb-4">
           {REVIEWS.map((r) => (
@@ -235,11 +232,11 @@ export default function Page() {
         </div>
       </section>
 
-      {/* Marché local + widget audit */}
+      {/* Local market + audit widget */}
       <section className="mx-auto max-w-[1200px] px-6 py-10">
         <h2 className="text-center font-heading text-3xl leading-tight md:text-[54px] text-black">
-          <span className="italic text-[#c9846f]">Je connais ton marché</span>{" "}
-          <span className="font-medium">Parisien</span>
+          <span className="italic text-[#c9846f]">I know your</span>{" "}
+          <span className="font-medium">Paris market</span>
         </h2>
         <div className="mt-8 grid items-center gap-8 md:grid-cols-2">
           <div className="h-full overflow-hidden rounded-md border-2 border-black">
@@ -247,47 +244,43 @@ export default function Page() {
           </div>
           <div className="space-y-5 self-center border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
             <p>
-              Paris offre un potentiel immense. La concurrence aussi. Dans la
-              plupart des secteurs, tes futurs clients ont l&apos;embarras du
-              choix.
+              Paris offers immense potential. So does the competition. In
+              most sectors, your future clients are spoilt for choice.
             </p>
             <p>
-              Avant de contacter une entreprise, ils effectuent souvent
-              plusieurs recherches sur Google. Mon rôle consiste à faire en
-              sorte que ton entreprise fasse partie des solutions
-              qu&apos;ils découvrent au bon moment.
+              Before contacting a business, they often run several Google
+              searches. My role is to make sure your business is one of
+              the solutions they discover at the right time.
             </p>
           </div>
         </div>
       </section>
 
-      {/* 1. J'optimise ton marché avant de bâtir ton site web */}
+      {/* 1. I optimise your market before building your website */}
       <section className="mx-auto max-w-[1200px] px-6 py-10">
         <StepNumber n={1} />
         <h3 className="mt-4 text-center font-heading text-3xl leading-tight md:text-[54px] text-black">
-          <span className="italic text-[#c9846f]">J&apos;optimise ton marché</span>{" "}
-          <span className="font-medium">avant de bâtir ton site web.</span>
+          <span className="italic text-[#c9846f]">I optimise your market</span>{" "}
+          <span className="font-medium">before building your website.</span>
         </h3>
         <div className="mt-8 grid items-center gap-8 md:grid-cols-2">
           <div className="h-full border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
             <p>
-              Paris offre un potentiel immense. La concurrence aussi.
-              Aujourd&apos;hui, dans la plupart des secteurs, tes futurs
-              clients ont l&apos;embarras du choix.
+              Paris offers immense potential. So does the competition.
+              Today, in most sectors, your future clients are spoilt for
+              choice.
             </p>
             <p className="mt-4">
-              Avant de prendre une décision, ils effectuent souvent plusieurs
-              recherches sur Google afin de comparer les entreprises et les
-              solutions disponibles. Dans ce contexte, mon rôle consiste à
-              faire en sorte que ton entreprise fasse partie des solutions
-              qu&apos;ils découvrent au bon moment. L&apos;objectif est
-              simple : être présent lorsqu&apos;un prospect est prêt à passer
-              à l&apos;action.
+              Before making a decision, they often run several Google
+              searches to compare businesses and available solutions. In
+              this context, my role is to make sure your business is one
+              of the solutions they discover at the right time. The goal
+              is simple: to be there when a prospect is ready to act.
             </p>
           </div>
           <Image
             src="/images/consultant-referencement-paris.png"
-            alt="Jodie Lapaillerie — analyse de marché SEO Paris"
+            alt="Jodie Lapaillerie — SEO market analysis Paris"
             width={880}
             height={632}
             className="h-auto w-full self-center rounded-2xl border border-[#eee] object-cover"
@@ -295,86 +288,83 @@ export default function Page() {
         </div>
       </section>
 
-      {/* 2. J'analyse les recherches Google */}
+      {/* 2. I analyse Google searches */}
       <section className="mx-auto max-w-[1200px] px-6 py-10">
         <StepNumber n={2} />
         <h3 className="mt-4 text-center font-heading text-3xl leading-tight md:text-[54px] text-black">
           <span className="italic text-[#c9846f]">
-            J&apos;analyse les recherches <GoogleColors />
+            I analyse <GoogleColors /> searches
           </span>{" "}
-          <span className="font-medium">des internautes.</span>
+          <span className="font-medium">made by real users.</span>
         </h3>
         <div className="mt-8 grid items-stretch gap-8 md:grid-cols-2">
           <Image
             src="/images/optimisation-seo-paris.png"
-            alt="Outil de planification des mots-clés Google, sur Paris"
+            alt="Google keyword planning tool, for Paris"
             width={2000}
             height={1414}
             className="h-auto w-full self-center rounded-2xl border border-[#eee] object-cover"
           />
           <div className="h-full border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
             <p>
-              J&apos;analyse les comportements de recherche de tes futurs
-              clients, les questions qu&apos;ils se posent et les solutions
-              qu&apos;ils cherchent réellement.
+              I analyse the search behaviour of your future clients, the
+              questions they ask and the solutions they're really looking
+              for.
             </p>
             <p className="mt-4">
-              Car certaines recherches traduisent une simple curiosité. À
-              l&apos;inverse, d&apos;autres révèlent une intention
-              d&apos;achat ou de prise de contact. C&apos;est précisément
-              pour cette raison que j&apos;identifie les opportunités les
-              plus pertinentes pour ton activité afin de construire une
-              stratégie SEO capable d&apos;attirer des prospects qualifiés.
+              Some searches reflect simple curiosity. Others reveal an
+              intent to buy or get in touch. That's precisely why I
+              identify the most relevant opportunities for your business
+              in order to build an SEO strategy capable of attracting
+              qualified prospects.
             </p>
             <p className="mt-4">
-              À Paris, attirer du trafic est relativement simple. En
-              revanche, attirer les bons clients est une autre histoire. Au
-              fond, le but n&apos;est pas d&apos;être visible partout. Le
-              véritable enjeu est d&apos;apparaître lorsque tes futurs
-              clients recherchent activement une solution.
+              In Paris, attracting traffic is relatively easy. Attracting
+              the right clients is another story entirely. At its core,
+              the goal isn't to be visible everywhere. The real challenge
+              is to show up when your future clients are actively looking
+              for a solution.
             </p>
           </div>
         </div>
       </section>
 
-      {/* 3. Je maximilise ta fiche Google */}
+      {/* 3. I maximise your Google listing */}
       <section className="mx-auto max-w-[1200px] px-6 py-10">
         <StepNumber n={3} />
         <div className="mt-4 grid items-center gap-8 md:grid-cols-2">
           <div>
             <h3 className="font-heading text-3xl leading-tight md:text-[54px] text-black">
-              <span className="italic text-[#c9846f]">Je maximilise</span>{" "}
-              <span className="font-medium">ta fiche Google profile.</span>
+              <span className="italic text-[#c9846f]">I maximise</span>{" "}
+              <span className="font-medium">your Google Business profile.</span>
             </h3>
             <div className="mt-4 border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
               <p>
-                À Paris, la concurrence est souvent à quelques clics. Avant
-                de prendre une décision, les internautes consultent plusieurs
-                profils, comparent les avis et évaluent les informations
-                disponibles. Dans ce contexte, ta fiche Google Business
-                Profile représente souvent le premier contact avec ton futur
-                client.
+                In Paris, competition is often just a few clicks away.
+                Before making a decision, people check several profiles,
+                compare reviews and weigh up the information available. In
+                this context, your Google Business Profile is often the
+                first contact with your future client.
               </p>
               <p className="mt-4">
-                C&apos;est pourquoi j&apos;optimise les éléments qui
-                influencent réellement la décision : catégories, services,
-                photos, avis clients, informations pratiques et cohérence de
-                la présence sur Google. L&apos;objectif n&apos;est pas
-                seulement d&apos;apparaître sur Google. L&apos;objectif est
-                également de rassurer sur ta crédibilité et de leur donner
-                envie de te choisir plutôt qu&apos;une autre entreprise.
+                That's why I optimise the elements that really influence
+                the decision: categories, services, photos, reviews,
+                practical information and consistency of your presence on
+                Google. The goal isn't just to appear on Google. It's also
+                to reassure people about your credibility and make them
+                want to choose you over another business.
               </p>
             </div>
             <Link
-              href="/audit-seo-aix-en-provence"
+              href="/en/audit-seo-aix-en-provence"
               className="mx-auto mt-4 block w-fit rounded-full bg-[#c9846f] px-8 py-3 font-medium text-white transition-colors hover:bg-[#b8735f]"
             >
-              Voir les audits
+              See the audits
             </Link>
           </div>
           <Image
             src="/images/seo-local-paris.png"
-            alt="Optimisation fiche Google Business Profile JWL Marketing"
+            alt="Google Business Profile optimisation JWL Marketing"
             width={1410}
             height={950}
             className="h-auto w-full self-center rounded-2xl border border-[#eee] object-cover"
@@ -382,81 +372,79 @@ export default function Page() {
         </div>
       </section>
 
-      {/* 4. Je dessine un site web sur mesure */}
+      {/* 4. I design a custom website */}
       <section className="mx-auto max-w-[1200px] px-6 py-10">
         <StepNumber n={4} />
         <div className="mx-auto mt-4 max-w-[600px] text-center">
           <h3 className="font-heading text-3xl leading-tight md:text-[54px] text-black">
-            <span className="italic text-[#c9846f]">Je dessine</span>{" "}
-            <span className="font-medium">un site web sur mesure pour toi.</span>
+            <span className="italic text-[#c9846f]">I design</span>{" "}
+            <span className="font-medium">a custom website for you.</span>
         </h3>
         <div className="mt-8 grid items-start gap-8 md:grid-cols-2">
           <Image
             src="/images/ia-seo-paris.png"
-            alt="Jodie Lapaillerie — création de site web sur mesure JWL Marketing"
+            alt="Jodie Lapaillerie — custom website creation JWL Marketing"
             width={360}
             height={288}
             className="h-auto w-full rounded-2xl border border-[#eee] object-cover"
           />
           <div className="border-2 border-gold p-8 text-left text-[17px] leading-[28px] text-[#1a1a1a]">
             <p>
-              Ton site internet est souvent la première impression que se
-              fait ton futur client de ton entreprise. C&apos;est pourquoi je
-              ne me contente pas de créer un site esthétique. Je conçois un
-              outil pensé pour rassurer, informer et faciliter la prise de
-              contact.
+              Your website is often the first impression a future client
+              gets of your business. That's why I don't just create a
+              nice-looking site. I design a tool built to reassure, inform
+              and make it easy to get in touch.
             </p>
             <p className="mt-4">
-              Chaque projet est ainsi adapté à ton activité, à tes objectifs
-              et aux attentes de tes futurs clients. Selon les besoins, le
-              développement peut être réalisé en HTML ou avec des
-              technologies modernes comme Next.js afin de garantir rapidité,
-              sécurité et confort de navigation.
+              Every project is tailored to your activity, your goals and
+              the expectations of your future clients. Depending on the
+              needs, development can be done in HTML or with modern
+              technologies like Next.js to ensure speed, security and a
+              smooth browsing experience.
             </p>
             <p className="mt-4">
-              Au-delà de l&apos;aspect technique, l&apos;objectif reste le
-              même : créer un site capable de représenter ton entreprise
-              aujourd&apos;hui tout en accompagnant son développement dans
-              les années à venir. Car à Paris, un site internet ne doit pas
-              seulement être beau. Il doit aussi t&apos;aider à te démarquer
-              dans un environnement particulièrement concurrentiel.
+              Beyond the technical side, the goal remains the same: create
+              a site capable of representing your business today while
+              supporting its growth in the years to come. Because in
+              Paris, a website shouldn't just look good. It should also
+              help you stand out in a particularly competitive
+              environment.
             </p>
           </div>
         </div>
         </div>
       </section>
 
-      {/* 5. Je convaincs Google */}
+      {/* 5. I convince Google */}
       <section className="mx-auto max-w-[1200px] px-6 py-10">
         <StepNumber n={5} />
         <h3 className="mt-4 text-center font-heading text-3xl leading-tight md:text-[54px] text-black">
           <span className="italic text-[#c9846f]">
-            Je convaincs <GoogleColors />
+            I convince <GoogleColors />
           </span>{" "}
-          <span className="font-medium">que tu es le meilleur sur Paris.</span>
+          <span className="font-medium">that you're the best in Paris.</span>
         </h3>
         <div className="mt-8 grid items-stretch gap-8 md:grid-cols-2">
           <div className="h-full border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
             <p>
-              À Paris, être excellent dans son métier ne garantit pas
-              d&apos;être trouvé. En effet, Google doit comprendre ce que tu
-              fais, à qui tu t&apos;adresses et pourquoi un prospect devrait
-              te choisir plutôt qu&apos;une autre entreprise.
+              In Paris, being excellent at your craft doesn't guarantee
+              you'll be found. Google needs to understand what you do, who
+              you serve and why a prospect should choose you over another
+              business.
             </p>
             <p className="mt-4">
-              C&apos;est pourquoi j&apos;analyse ton marché, tes concurrents
-              et les recherches effectuées par tes futurs clients afin de
-              construire une stratégie capable d&apos;attirer des prospects
-              qualifiés. Dans un environnement aussi concurrentiel, il ne
-              suffit pas d&apos;être présent en ligne. Il faut également être
-              compris par Google. Car un site invisible ne vend rien. À
-              l&apos;inverse, un site bien positionné peut devenir un
-              véritable apporteur d&apos;affaires.
+              That's why I analyse your market, your competitors and the
+              searches made by your future clients to build a strategy
+              capable of attracting qualified prospects. In such a
+              competitive environment, being present online isn't enough.
+              You also need to be understood by Google. Because an
+              invisible website sells nothing. A well-positioned website,
+              on the other hand, can become a genuine business driver.
             </p>
           </div>
           <Image
             src="/images/consultant-google-paris.png"
-            alt="Jodie Lapaillerie et son assistante IA JWL Marketing"
+            alt="Jodie Lapaillerie and her AI assistant JWL Marketing"
             width={1410}
             height={2000}
             className="mx-auto h-auto w-full max-w-[420px] rounded-2xl object-cover"
@@ -464,30 +452,30 @@ export default function Page() {
         </div>
       </section>
 
-      {/* Je me déplace + Marché digital + zones */}
+      {/* I travel anywhere in France + zones */}
       <section className="mx-auto max-w-[1200px] px-6 py-10">
         <h3 className="text-center font-heading text-3xl leading-tight md:text-[54px] text-black">
-          <span className="italic text-[#c9b896]">Je me déplace partout en France</span>
+          <span className="italic text-[#c9b896]">I travel anywhere in France</span>
           <br />
-          <span className="font-medium">Y compris sur Paris.</span>
+          <span className="font-medium">Including in Paris.</span>
         </h3>
         <div className="mt-8 grid items-stretch gap-8 md:grid-cols-2">
           <div className="h-full border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
             <p>
-              Aujourd&apos;hui, avant un appel, une visite ou une demande de
-              devis, de nombreux prospects effectuent plusieurs recherches
-              sur Google afin de comparer les solutions disponibles.
+              Today, before a call, a visit or a quote request, many
+              prospects run several Google searches to compare available
+              solutions.
             </p>
             <p className="mt-4">
-              Dans ce contexte, être visible au bon moment devient un
-              véritable avantage concurrentiel. Car, si ton entreprise ne
-              répond pas à cette demande, ce sont souvent les acteurs du
-              marché qui captent son attention et ses opportunités.
+              In this context, being visible at the right time becomes a
+              real competitive advantage. Because if your business doesn't
+              meet that demand, it's often other market players who
+              capture the attention and the opportunity.
             </p>
           </div>
           <Image
             src="/images/carte-france-paris.png"
-            alt="Zone d'intervention JWL Marketing — Paris sur place, France entière à distance"
+            alt="JWL Marketing coverage area — on-site in Paris, remote across France"
             width={2000}
             height={1414}
             className="mx-auto h-auto w-full max-w-[420px]"
@@ -496,18 +484,17 @@ export default function Page() {
         <div className="mt-8 grid items-start gap-8 md:grid-cols-2">
           <div className="h-full border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
             <p>
-              Avant tout, je cherche à comprendre ton activité, ton marché et
-              les attentes de tes futurs clients. Car le SEO n&apos;est pas
-              une recette universelle. Une entreprise implantée à Paris
-              n&apos;a pas les mêmes enjeux qu&apos;une entreprise située à
-              Boulogne-Billancourt, Saint-Denis, Vincennes ou
-              Levallois-Perret. C&apos;est pourquoi chaque stratégie est
-              construite sur mesure, en fonction de tes objectifs et de ton
-              environnement concurrentiel.
+              Above all, I try to understand your business, your market
+              and what your future clients expect. Because SEO isn't a
+              one-size-fits-all recipe. A business based in Paris doesn't
+              face the same challenges as one in Boulogne-Billancourt,
+              Saint-Denis, Vincennes or Levallois-Perret. That's why every
+              strategy is built from scratch, based on your goals and your
+              competitive environment.
             </p>
             <p className="mt-4">
-              En tant que consultante indépendante, je reste ton
-              interlocutrice unique du début à la fin du projet.
+              As an independent consultant, I remain your single point of
+              contact from start to finish.
             </p>
           </div>
           <div className="flex flex-wrap gap-3">
@@ -523,7 +510,7 @@ export default function Page() {
         </div>
       </section>
 
-      {/* CTA de clôture */}
+      {/* Closing CTA */}
       <section className="bg-white px-6 py-16 text-center">
         <a
           href="https://calendly.com/jwlm"
@@ -531,45 +518,41 @@ export default function Page() {
           rel="noopener"
           className="inline-block rounded-full bg-[#c9846f] px-10 py-[15px] font-medium text-white transition-colors hover:bg-[#b8735f]"
         >
-          Parce que tu mérites le meilleur
+          Because you deserve the best
         </a>
       </section>
 
-      {/* Toujours pas convaincu */}
+      {/* Still not convinced */}
       <section className="bg-white px-6 py-16 text-center">
         <h3 className="font-heading text-3xl leading-tight md:text-[54px] text-black">
-          <span className="italic text-[#c9846f]">Toujours pas convaincu?</span>
+          <span className="italic text-[#c9846f]">Still not convinced?</span>
         </h3>
         <p className="mt-3 font-heading text-3xl leading-tight md:text-[54px] text-black">
-          Fait de ta présence digital une force Parisienne
+          Make your digital presence a Paris strength
         </p>
         <div className="mx-auto mt-8 max-w-[900px] text-left text-[17px] leading-[28px] text-[#1a1a1a]">
           <p>
-            Du quartier de La Défense au Marais, de Saint-Lazare à Bercy, les
-            entreprises évoluent dans un environnement particulièrement
-            concurrentiel où la visibilité en ligne devient un véritable
-            levier de développement.
+            From La Défense to Le Marais, from Saint-Lazare to Bercy,
+            businesses operate in a particularly competitive environment
+            where online visibility has become a real growth lever.
           </p>
           <p className="mt-3">
-            Entre les commerçants, les professions libérales, les startups,
-            les cabinets de conseil, les entreprises de services, les acteurs
-            de l&apos;immobilier ou encore les sociétés implantées dans les
-            principaux quartiers d&apos;affaires, chaque acteur doit trouver
-            sa place face à une concurrence importante sur Google.
+            Between shopkeepers, self-employed professionals, startups,
+            consulting firms, service businesses, real estate players and
+            companies based in the main business districts, every player
+            has to find its place amid heavy competition on Google.
           </p>
           <p className="mt-3">
-            Les habitudes des consommateurs ont également évolué. Avant de
-            prendre rendez-vous, de demander un devis ou de contacter une
-            entreprise, les Parisiens prennent le temps de comparer plusieurs
-            solutions, de consulter les avis clients et de rechercher des
-            informations sur l&apos;activité.
+            Consumer habits have also changed. Before booking an
+            appointment, requesting a quote or contacting a business,
+            Parisians take the time to compare several solutions, check
+            client reviews and research the business.
           </p>
           <p className="mt-3">
-            Aujourd&apos;hui, un futur client peut comparer plusieurs
-            entreprises parisiennes en quelques minutes seulement. Dans ce
-            contexte, être visible au bon moment peut faire toute la
-            différence entre une opportunité gagnée et un prospect qui
-            choisit un concurrent.
+            Today, a future client can compare several Paris businesses in
+            just a few minutes. In this context, being visible at the
+            right time can make all the difference between a won
+            opportunity and a prospect choosing a competitor.
           </p>
         </div>
         <a
@@ -578,7 +561,7 @@ export default function Page() {
           rel="noopener"
           className="mt-6 inline-block bg-[#c9846f] px-10 py-[15px] font-medium text-white transition-colors hover:bg-[#b8735f]"
         >
-          En savoir plus
+          Learn more
         </a>
       </section>
     </div>

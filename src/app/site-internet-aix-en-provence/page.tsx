@@ -6,6 +6,7 @@ import ScrollReveal from "@/components/ScrollReveal";
 import TypewriterText from "@/components/TypewriterText";
 import Lightbox from "@/components/Lightbox";
 import ProofCards from "@/components/ProofCards";
+import LanguageToggle from "@/components/LanguageToggle";
 
 export const metadata: Metadata = {
   title: "Création de site web | JWL Marketing",
@@ -35,15 +36,18 @@ export default function Page() {
             className="h-[36px] w-auto"
           />
         </Link>
-        <a href="https://intranet.jwlmarketing.fr/" aria-label="Connexion espace client">
-          <Image
-            src="/images/seco.png"
-            alt="Connexion espace client"
-            width={28}
-            height={28}
-            className="h-7 w-7"
-          />
-        </a>
+        <div className="flex items-center gap-3">
+          <a href="https://intranet.jwlmarketing.fr/" aria-label="Connexion espace client">
+            <Image
+              src="/images/seco.png"
+              alt="Connexion espace client"
+              width={28}
+              height={28}
+              className="h-7 w-7"
+            />
+          </a>
+          <LanguageToggle locale="fr" href="/en/site-internet-aix-en-provence" />
+        </div>
       </div>
 
       {/* Hero */}

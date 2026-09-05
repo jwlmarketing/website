@@ -10,5 +10,5 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <PlaceholderPage title="Futur entrepreneur" />;
+  return <PlaceholderPage title="Futur entrepreneur" altHref="/en/entrepreneur-aix-en-provence" />;
 }

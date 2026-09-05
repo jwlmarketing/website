@@ -6,6 +6,7 @@ import GmbAuditWidget from "@/components/GmbAuditWidget";
 import ProofCards from "@/components/ProofCards";
 import { REVIEWS } from "@/data/reviews";
 import TypewriterText from "@/components/TypewriterText";
+import LanguageToggle from "@/components/LanguageToggle";
 
 export const metadata: Metadata = {
   title: "Consultante Freelance SEO Bordeaux | JWL Marketing",
@@ -67,15 +68,18 @@ export default function Page() {
             className="h-[36px] w-auto"
           />
         </Link>
-        <a href="https://intranet.jwlmarketing.fr/" aria-label="Connexion espace client">
-          <Image
-            src="/images/seco.png"
-            alt="Connexion espace client"
-            width={28}
-            height={28}
-            className="h-7 w-7"
-          />
-        </a>
+        <div className="flex items-center gap-3">
+          <a href="https://intranet.jwlmarketing.fr/" aria-label="Connexion espace client">
+            <Image
+              src="/images/seco.png"
+              alt="Connexion espace client"
+              width={28}
+              height={28}
+              className="h-7 w-7"
+            />
+          </a>
+          <LanguageToggle locale="fr" href="/en/consultant-seo-bordeaux-jwl-marketing" />
+        </div>
       </div>
 
       {/* Hero */}

@@ -9,5 +9,5 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <PlaceholderPage title="Consultante Freelance SEO Toulouse" />;
+  return <PlaceholderPage title="Consultante Freelance SEO Toulouse" altHref="/en/consultant-freelance-seo-toulouse-jwl-marketing" />;
 }

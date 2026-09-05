@@ -9,5 +9,5 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return <PlaceholderPage title="Développement Commercial" />;
+  return <PlaceholderPage title="Développement Commercial" altHref="/en/developpement-commercial-aix-en-provence" />;
 }

@@ -9,9 +9,9 @@ import TypewriterText from "@/components/TypewriterText";
 import LanguageToggle from "@/components/LanguageToggle";
 
 export const metadata: Metadata = {
-  title: "Consultant Freelance SEO Aix-en-Provence | JWL Marketing",
+  title: "Freelance SEO Consultant Aix-en-Provence | JWL Marketing",
   description:
-    "Consultant SEO à Aix-en-Provence. 10 ans d'expertise commerciale et des méthodes américaines pour propulser ton acquisition client.",
+    "SEO Consultant in Aix-en-Provence. 10 years of sales expertise and American methods to power your client acquisition.",
 };
 
 const ZONES = [
@@ -40,9 +40,9 @@ function StepNumber({ n }: { n: number }) {
 export default function QuiSuisJe() {
   return (
     <div>
-      {/* Logo + compte, au-dessus du hero */}
+      {/* Logo + account, above the hero */}
       <div className="flex w-full items-center justify-between px-[5%] pt-20">
-        <Link href="/">
+        <Link href="/en">
           <Image
             src="/images/logo-jwl-marketing.png"
             alt="JWL Marketing Aix-en-Provence"
@@ -52,16 +52,16 @@ export default function QuiSuisJe() {
           />
         </Link>
         <div className="flex items-center gap-3">
-          <a href="https://intranet.jwlmarketing.fr/" aria-label="Connexion espace client">
+          <a href="https://intranet.jwlmarketing.fr/" aria-label="Client area login">
             <Image
               src="/images/seco.png"
-              alt="Connexion espace client"
+              alt="Client area login"
               width={28}
               height={28}
               className="h-7 w-7"
             />
           </a>
-          <LanguageToggle locale="fr" href="/en/consultant-freelance-seo-aix-en-provence" />
+          <LanguageToggle locale="en" href="/consultant-freelance-seo-aix-en-provence" />
         </div>
       </div>
 
@@ -70,17 +70,17 @@ export default function QuiSuisJe() {
         <div className="max-w-[600px] flex-1">
           <h1 className="font-heading text-4xl leading-[1.05] lg:text-[60px] lg:leading-[0.95] text-black">
             <span className="font-medium">
-              Consultante SEO
+              SEO Consultant
               <br />
-              &amp; Visibilité Web
+              &amp; Web Visibility
             </span>
             <br />
             <span className="italic text-[#c9846f]">Aix-en-Provence</span>
           </h1>
           <p className="mt-6 text-base leading-[1.6] text-black">
-            Une stratégie freelance, portée par la qualité d&apos;une agence à
-            taille humaine. À Aix-en-Provence, Paul Cézanne a marqué
-            l&apos;histoire. Et si ton entreprise marquait à son tour Google ?
+            A freelance strategy, backed by the quality of a boutique
+            agency. In Aix-en-Provence, Paul Cézanne left his mark on
+            history. What if your business left its mark on Google?
           </p>
           <div className="mt-6 flex flex-wrap items-center gap-4">
             <a
@@ -90,16 +90,16 @@ export default function QuiSuisJe() {
               07 83 79 28 14
             </a>
             <span className="rounded-full bg-[#faf3ea] px-5 py-[15px] text-sm font-semibold text-black">
-              + de 20 projets depuis 2025
+              20+ projects since 2025
             </span>
             <p className="min-h-[1.2em] font-heading text-4xl italic text-[#c9846f]">
-              <TypewriterText text="Bonjour, je m'appelle Jodie." speed={113} />
+              <TypewriterText text="Hi, I'm Jodie." speed={113} />
             </p>
           </div>
         </div>
         <Image
           src="/images/consultant-seo-aix-en-provence.png"
-          alt="Jodie Lapaillerie — Consultante SEO Aix-en-Provence"
+          alt="Jodie Lapaillerie — SEO Consultant Aix-en-Provence"
           width={1244}
           height={1387}
           priority
@@ -112,14 +112,14 @@ export default function QuiSuisJe() {
         <div className="mx-auto grid items-center gap-10 md:grid-cols-[320px_1fr]">
           <Image
             src="/images/expert-seo-aix-en-provence.png"
-            alt="Jodie Lapaillerie — consultante en marketing digital"
+            alt="Jodie Lapaillerie — digital marketing consultant"
             width={1410}
             height={2000}
             className="mx-auto h-auto w-full max-w-[320px] rounded-2xl object-cover"
           />
           <div className="text-center">
             <h2 className="font-heading text-3xl leading-tight md:text-[54px] text-black">
-              <span className="text-[#c9846f]"> Ta consultante SEO préférée,</span> experte en stratégie digitale et développement commercial
+              <span className="text-[#c9846f]"> Your favourite SEO consultant,</span> expert in digital strategy and business development
             </h2>
             <div className="mt-2 text-4xl md:text-6xl">
               <GoogleColors />
@@ -129,7 +129,7 @@ export default function QuiSuisJe() {
                 href="mailto:service@jwl-marketing.fr"
                 className="inline-block rounded-full border-2 border-[#c9846f] bg-[#c9846f] px-8 py-[15px] font-medium text-white transition-colors hover:border-[#b8735f] hover:bg-[#b8735f]"
               >
-                Parle moi de tes besoins SEO
+                Tell me about your SEO needs
               </a>
             </div>
           </div>
@@ -141,25 +141,24 @@ export default function QuiSuisJe() {
         <div className="grid items-center gap-8 md:grid-cols-[1fr_260px]">
           <div className="rounded-2xl bg-[#141414] p-8 text-white">
             <p className="text-[15px] leading-[25.5px]">
-              <span className="font-bold">Ma mission : </span>
-              Créer ou piloter des sites internet pensés pour générer du
-              trafic, convertir les visiteurs en clients et accompagner le
-              développement d&apos;une entreprise sur le long terme.
+              <span className="font-bold">My mission: </span>
+              Build or manage websites designed to generate traffic, convert
+              visitors into clients and support a business's growth over the
+              long term.
             </p>
             <p className="mt-4 text-[15px] leading-[25.5px]">
-              Forte de plus de 10 ans d&apos;expérience dans le développement
-              commercial, dont 4 ans auprès du groupe américain IAC, je
-              comprends les enjeux d&apos;une entreprise : attirer des clients,
-              les convaincre et les fidéliser. Formée par une ancienne salariée
-              de Google, Sylvie Grézaud, j&apos;interviens sur l&apos;ensemble
-              d&apos;un projet digital : sites vitrines, sites e-commerce,
-              landing pages, stratégies de contenu, articles de blog, fiches
-              produits, optimisation SEO et pilotage de la visibilité.
-              J&apos;accompagne des professionnels de tous horizons : artisans,
-              commerçants, professions libérales, thérapeutes, médecins,
-              dentistes, avocats et bien d&apos;autres. Et parce qu&apos;être
-              visible ne suffit pas, je te propose de découvrir ma passion tout
-              le long de cette page.
+              With over 10 years of experience in business development,
+              including 4 years at the American group IAC, I understand what
+              a business needs: attracting clients, convincing them and
+              keeping them. Trained by a former Google employee, Sylvie
+              Grézaud, I work across an entire digital project: showcase
+              sites, e-commerce sites, landing pages, content strategy, blog
+              articles, product sheets, SEO optimisation and visibility
+              management. I support professionals from all backgrounds:
+              craftsmen, shopkeepers, self-employed professionals,
+              therapists, doctors, dentists, lawyers and many more. And
+              because being visible isn't enough, I invite you to discover
+              my passion throughout this page.
             </p>
           </div>
           <div className="text-center">
@@ -180,30 +179,30 @@ export default function QuiSuisJe() {
       {/* Ambition */}
       <section className="mx-auto max-w-[1100px] px-6 py-10 text-center">
         <h2 className="font-heading text-3xl leading-tight md:text-[54px] text-black">
-          <span className="italic text-[#c9846f]">Je suis ambitieuse</span>
+          <span className="italic text-[#c9846f]">I'm ambitious</span>
           <br />
           <span className="font-medium">
-            Et je vise la 1ère place sur <GoogleColors />.
+            And I'm aiming for 1st place on <GoogleColors />.
           </span>
         </h2>
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           <Image
             src="/images/seo-local-aix-en-provence.png"
-            alt="Fiche Google Business Profile JWL Marketing"
+            alt="Google Business Profile listing JWL Marketing"
             width={1410}
             height={950}
             className="aspect-video w-full rounded-2xl border border-[#eee] object-cover"
           />
           <Image
             src="/images/strategie-seo-aix-en-provence.png"
-            alt="Évolution des impressions et clics — Google Search Console"
+            alt="Impressions and clicks over time — Google Search Console"
             width={2000}
             height={1414}
             className="aspect-video w-full rounded-2xl border border-[#eee] object-cover"
           />
           <Image
             src="/images/referencement-naturel-aix-en-provence.png"
-            alt="Résultat Google pour seo aix-en-provence — JWL Marketing"
+            alt="Google result for seo aix-en-provence — JWL Marketing"
             width={2000}
             height={1414}
             className="aspect-video w-full rounded-2xl border border-[#eee] object-cover"
@@ -211,17 +210,17 @@ export default function QuiSuisJe() {
         </div>
       </section>
 
-      {/* Je m'investis */}
+      {/* I'm invested */}
       <section className="mx-auto max-w-[800px] px-6 py-6 text-center">
         <h2 className="font-heading text-3xl leading-tight md:text-[54px] text-black">
-          <span className="italic text-[#c9846f]">Je m&apos;investis</span>{" "}
+          <span className="italic text-[#c9846f]">I'm invested</span>{" "}
           <span className="font-medium">
-            dans ton projet et mes clients en parlent.
+            in your project, and my clients talk about it.
           </span>
         </h2>
       </section>
 
-      {/* Avis clients */}
+      {/* Client reviews */}
       <section className="py-6">
         <div className="mx-auto flex max-w-[1200px] gap-6 overflow-x-auto px-6 pb-4">
           {REVIEWS.map((r) => (
@@ -230,11 +229,11 @@ export default function QuiSuisJe() {
         </div>
       </section>
 
-      {/* Marché local + widget audit */}
+      {/* Local market + audit widget */}
       <section className="mx-auto max-w-[1200px] px-6 py-10">
         <h2 className="text-center font-heading text-3xl leading-tight md:text-[54px] text-black">
-          <span className="italic text-[#c9846f]">Je connais ton marché</span>{" "}
-          <span className="font-medium">sur Aix-en-Provence.</span>
+          <span className="italic text-[#c9846f]">I know your market</span>{" "}
+          <span className="font-medium">in Aix-en-Provence.</span>
         </h2>
         <div className="mt-8 grid items-center gap-8 md:grid-cols-2">
           <div className="h-full overflow-hidden rounded-md border-2 border-black">
@@ -242,77 +241,72 @@ export default function QuiSuisJe() {
           </div>
           <div className="space-y-5 self-center border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
             <p>
-              Ville d&apos;art, de droit et d&apos;université au cœur de la
-              Provence, Aix-en-Provence séduit les visiteurs chaque année sans
-              jamais perdre son authenticité. À Aix-en-Provence, il fait bon
-              vivre. Nous vivons au rythme des cigales, des marchés colorés et
-              des parfums de lavande. La culture s&apos;y mêle aux spectacles,
-              à la danse musicale, inspirant chaque jour restaurateurs,
-              commerçants et artisans.
+              A city of art, law and university life at the heart of
+              Provence, Aix-en-Provence charms its visitors year after year
+              without ever losing its authenticity. Life is good in
+              Aix-en-Provence. We live to the rhythm of cicadas, colourful
+              markets and the scent of lavender. Culture blends with shows
+              and music and dance, inspiring restaurateurs, shopkeepers and
+              craftsmen every day.
             </p>
             <p>
-              Mais dans une ville aussi dynamique qu&apos;exigeante, cette
-              richesse appartient au monde réel. Sur Google, les règles sont
-              différentes. Le digital n&apos;a ni parfum, ni saveur, ni
-              vitrine pour attirer les passants. Aujourd&apos;hui, savoir
-              parler le langage de Google est devenu indispensable pour 100%
-              des sites entrants. Plus de 85% des consommateurs effectuent une
-              recherche en ligne avant de pousser la porte d&apos;un
-              commerçant.
+              But in a city as dynamic as it is demanding, this richness
+              belongs to the real world. On Google, the rules are different.
+              The digital world has no scent, no flavour, no shopfront to
+              draw people in. Today, speaking Google's language has become
+              essential for 100% of inbound sites. More than 85% of
+              consumers search online before walking into a shop.
             </p>
           </div>
         </div>
       </section>
 
-      {/* 1. J'analyse ton marché */}
+      {/* 1. I analyse your market */}
       <section className="mx-auto max-w-[1200px] px-6 py-10">
         <StepNumber n={1} />
         <h3 className="mt-4 text-center font-heading text-3xl leading-tight md:text-[54px] text-black">
-          <span className="italic text-[#c9846f]">J&apos;analyse ton marché</span>{" "}
-          <span className="font-medium">avant de créer ton site.</span>
+          <span className="italic text-[#c9846f]">I analyse your market</span>{" "}
+          <span className="font-medium">before building your site.</span>
         </h3>
         <div className="mt-8 grid items-center gap-8 md:grid-cols-2">
           <div className="border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a] md:order-1">
             <p>
-              Une vision entrepreneuriale de demain. Vous avez peut-être déjà
-              vécu cette situation :
+              An entrepreneurial vision of tomorrow. You may already have
+              experienced this situation:
             </p>
             <ul className="mt-3 list-disc space-y-2 pl-5">
               <li>
-                Votre prestataire vous parle de trafic, mais jamais de
-                prospects, ni de chiffre d&apos;affaires.
+                Your provider talks about traffic, but never about leads or
+                revenue.
               </li>
               <li>
-                Vous recevez des rapports remplis de données sans savoir
-                quelles actions mettre en place en priorité.
+                You receive reports full of data without knowing which
+                actions to prioritise.
               </li>
               <li>
-                Votre site attire quelques visiteurs, mais les demandes de
-                devis ne suivent pas.
+                Your site attracts a few visitors, but the quote requests
+                don't follow.
               </li>
             </ul>
             <p className="mt-4">
-              Le problème n&apos;est pas toujours votre visibilité. Souvent,
-              c&apos;est l&apos;absence de stratégie. Pour moi, le
-              référencement naturel n&apos;a qu&apos;un seul objectif :
-              développer votre activité et générer des opportunités
-              commerciales. Avant de travailler les mots-clés, j&apos;analyse
-              votre marché, vos concurrents, votre offre et les recherches
-              effectuées par vos futurs clients à Aix-en-Provence.
-              L&apos;objectif est d&apos;identifier les opportunités qui
-              peuvent réellement avoir un impact sur votre chiffre
-              d&apos;affaires.
+              The problem isn't always your visibility. Often, it's the
+              absence of a strategy. For me, SEO has only one goal: to grow
+              your business and generate sales opportunities. Before working
+              on keywords, I analyse your market, your competitors, your
+              offer and the searches made by your future clients in
+              Aix-en-Provence. The goal is to identify the opportunities
+              that can genuinely impact your revenue.
             </p>
             <Link
-              href="/audit-seo-aix-en-provence"
+              href="/en/audit-seo-aix-en-provence"
               className="mx-auto mt-4 block w-fit rounded-full bg-[#c9846f] px-8 py-3 font-medium text-white transition-colors hover:bg-[#b8735f]"
             >
-              Voir les audits
+              See the audits
             </Link>
           </div>
           <Image
             src="/images/consultant-google-aix-en-provence.png"
-            alt="Jodie Lapaillerie en terrasse — analyse de marché SEO Aix-en-Provence"
+            alt="Jodie Lapaillerie on a terrace — SEO market analysis Aix-en-Provence"
             width={946}
             height={652}
             className="h-auto w-full self-center rounded-2xl border border-[#eee] object-cover md:order-2"
@@ -320,88 +314,85 @@ export default function QuiSuisJe() {
         </div>
       </section>
 
-      {/* 2. J'étudie les recherches Google */}
+      {/* 2. I study Google searches */}
       <section className="mx-auto max-w-[1200px] px-6 py-10">
         <StepNumber n={2} />
         <h3 className="mt-4 text-center font-heading text-3xl leading-tight md:text-[54px] text-black">
           <span className="italic text-[#c9846f]">
-            J&apos;étudie les recherches <GoogleColors />
+            I study <GoogleColors /> searches
           </span>{" "}
-          <span className="font-medium">des internautes.</span>
+          <span className="font-medium">made by real users.</span>
         </h3>
         <div className="mt-8 grid items-stretch gap-8 md:grid-cols-2">
           <Image
             src="/images/optimisation-seo-aix-en-provence.png"
-            alt="Outil de planification des mots-clés Google, sur Aix-en-Provence"
+            alt="Google keyword planning tool, for Aix-en-Provence"
             width={2000}
             height={1414}
             className="h-auto w-full self-center rounded-2xl border border-[#eee] object-cover"
           />
           <div className="h-full border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
             <p>
-              Faire appel à une consultante SEO à Aix-en-Provence, ce
-              n&apos;est pas chercher à être premier sur Google à tout prix.
-              C&apos;est bâtir une machine de guerre capable d&apos;attirer
-              les bons prospects au bon moment. Forte de 10 ans
-              d&apos;expérience commerciale, dont 4 ans chez IAC
-              (Travaux.com), leader mondial incontesté de l&apos;acquisition
-              de leads et de la capture de projets en ligne, je maîtrise les
-              mécaniques exactes pour générer des demandes qualifiées. Mon but
-              unique : transformer ton site internet en un véritable
-              apporteur d&apos;affaires.
+              Hiring an SEO consultant in Aix-en-Provence isn't about
+              chasing the top spot on Google at any cost. It's about
+              building a machine capable of attracting the right prospects
+              at the right time. With 10 years of sales experience,
+              including 4 years at IAC (Travaux.com), the undisputed global
+              leader in lead acquisition and online project capture, I
+              master the exact mechanics for generating qualified leads. My
+              one and only goal: turn your website into a real business
+              driver.
             </p>
             <p className="mt-4">
-              À Aix-en-Provence, le marché ne fait pas de cadeaux et le
-              référencement local demande une analyse chirurgicale. En
-              combinant les stratégies de vente américaines les plus
-              agressives à un SEO local affûté, nous ciblons uniquement les
-              intentions de recherche et les requêtes les plus rentables pour
-              ton activité.
+              In Aix-en-Provence, the market shows no mercy and local SEO
+              requires surgical analysis. By combining the most aggressive
+              American sales strategies with sharp local SEO, we only
+              target the search intents and queries that are most
+              profitable for your business.
             </p>
             <p className="mt-4">
-              J&apos;optimise l&apos;intégralité de ton écosystème digital :
-              ton site web, ton contenu sémantique et ta Fiche Google
-              Business Profile pour déclencher un maximum d&apos;appels et de
-              demandes de devis. J&apos;accompagne les indépendants, artisans
-              et PME à Aix-en-Provence qui refusent de faire de la figuration
-              et veulent faire de Google leur meilleur commercial en ligne.
+              I optimise your entire digital ecosystem: your website, your
+              semantic content and your Google Business Profile to trigger
+              as many calls and quote requests as possible. I support
+              independent professionals, craftsmen and SMEs in
+              Aix-en-Provence who refuse to just make up the numbers and
+              want to turn Google into their best online salesperson.
             </p>
           </div>
         </div>
       </section>
 
-      {/* 3. J'optimise ta fiche Google */}
+      {/* 3. I optimise your Google listing */}
       <section className="mx-auto max-w-[1200px] px-6 py-10">
         <StepNumber n={3} />
         <h3 className="mt-4 text-center font-heading text-3xl leading-tight md:text-[54px] text-black">
-          <span className="italic text-[#c9846f]">J&apos;optimise</span>{" "}
-          <span className="font-medium">ta fiche Google Business profile.</span>
+          <span className="italic text-[#c9846f]">I optimise</span>{" "}
+          <span className="font-medium">your Google Business profile.</span>
         </h3>
         <div className="mt-8 grid items-center gap-8 md:grid-cols-2">
           <div>
             <div className="border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
               <p>
-                Ta fiche Google est souvent le premier contact avec un futur
-                client. Je l&apos;optimise pour qu&apos;elle inspire
-                confiance, remonte dans les recherches locales et génère
-                davantage d&apos;appels, de visites et de demandes de devis.
-                Je travaille chaque détail : informations, catégories,
-                services, photos et mots-clés stratégiques. Tu bénéficies
-                d&apos;une présence locale plus forte pour attirer des
-                prospects qualifiés au moment où ils recherchent tes
-                prestations.
+                Your Google listing is often the first point of contact
+                with a future client. I optimise it so it inspires trust,
+                ranks higher in local searches and generates more calls,
+                visits and quote requests. I work on every detail:
+                information, categories, services, photos and strategic
+                keywords. You benefit from a stronger local presence to
+                attract qualified prospects right when they're looking for
+                your services.
               </p>
             </div>
             <Link
-              href="/google-my-business-aix-en-provence"
+              href="/en/google-my-business-aix-en-provence"
               className="mx-auto mt-4 block w-fit rounded-full bg-[#c9846f] px-8 py-3 font-medium text-white transition-colors hover:bg-[#b8735f]"
             >
-              Améliorer ma visibilité locale
+              Improve my local visibility
             </Link>
           </div>
           <Image
             src="/images/seo-local-aix-en-provence.png"
-            alt="Optimisation fiche Google Business Profile JWL Marketing"
+            alt="Google Business Profile optimisation JWL Marketing"
             width={1410}
             height={950}
             className="h-auto w-full self-center rounded-2xl border border-[#eee] object-cover"
@@ -409,124 +400,121 @@ export default function QuiSuisJe() {
         </div>
       </section>
 
-      {/* 4. Je crée un site web */}
+      {/* 4. I build a website */}
       <section className="mx-auto max-w-[1200px] px-6 py-10">
         <StepNumber n={4} />
         <h3 className="mt-4 text-center font-heading text-3xl leading-tight md:text-[54px] text-black">
-          <span className="italic text-[#c9846f]">Je crée</span>{" "}
-          <span className="font-medium">un site web sur mesure pour toi.</span>
+          <span className="italic text-[#c9846f]">I build</span>{" "}
+          <span className="font-medium">a custom website for you.</span>
         </h3>
         <div className="mt-8 grid items-start gap-8 md:grid-cols-2">
           <Image
             src="/images/ia-seo-aix-en-provence.png"
-            alt="Jodie Lapaillerie — création de site web sur mesure JWL Marketing"
+            alt="Jodie Lapaillerie — custom website creation JWL Marketing"
             width={360}
             height={288}
             className="h-auto w-full rounded-2xl border border-[#eee] object-cover"
           />
           <div className="border-2 border-gold p-8 text-left text-[17px] leading-[28px] text-[#1a1a1a]">
             <p>
-              Chaque projet est développé selon tes besoins réels, sans
-              modèle générique ni solution toute faite. Selon le contenu, les
-              fonctionnalités et la densité du site, le développement peut
-              être réalisé en HTML ou avec des technologies plus avancées
-              comme Next.js afin d&apos;offrir les meilleures performances
-              possibles. À la livraison, tu reçois une certification PDF
-              détaillant les optimisations techniques réalisées ainsi que les
-              bonnes pratiques mises en place. L&apos;objectif est de te
-              fournir un site rapide, sécurisé, évolutif et pensé dès le
-              départ pour la visibilité sur Google.
+              Every project is built around your real needs, with no
+              generic template or off-the-shelf solution. Depending on the
+              content, features and complexity of the site, development can
+              be done in HTML or with more advanced technologies such as
+              Next.js to deliver the best possible performance. On
+              delivery, you receive a PDF certification detailing the
+              technical optimisations carried out and the best practices
+              applied. The goal is to provide you with a site that's fast,
+              secure, scalable and built from the start with Google
+              visibility in mind.
             </p>
             <Link
-              href="/site-internet-aix-en-provence"
+              href="/en/site-internet-aix-en-provence"
               className="mx-auto mt-4 block w-fit rounded-full bg-[#c9846f] px-8 py-3 font-medium text-white transition-colors hover:bg-[#b8735f]"
             >
-              Découvrir l&apos;accompagnement
+              Discover the service
             </Link>
           </div>
         </div>
       </section>
 
-      {/* 5. Je convaincs Google */}
+      {/* 5. I convince Google */}
       <section className="mx-auto max-w-[1200px] px-6 py-10">
         <StepNumber n={5} />
         <h3 className="mt-4 text-center font-heading text-3xl leading-tight md:text-[54px] text-black">
           <span className="italic text-[#c9846f]">
-            Je convaincs <GoogleColors />
+            I convince <GoogleColors />
           </span>{" "}
           <span className="font-medium">
-            que tu es le meilleur sur Aix-en-Provence.
+            that you're the best in Aix-en-Provence.
           </span>
         </h3>
         <div className="mt-8 grid items-stretch gap-8 md:grid-cols-2">
           <div className="h-full border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
             <p>
-              Parce qu&apos;aucune entreprise ne fonctionne de la même façon,
-              je prends le temps de comprendre ton activité avant de définir
-              une stratégie de référencement. Du centre historique
-              d&apos;Aix-en-Provence à Puyricard, des Milles à La Duranne, en
-              passant par le Jas-de-Bouffan, le Val Saint-André, le Pont de
-              l&apos;Arc, Corsy, Célony ou Beauregard, je me déplace pour
-              découvrir ton environnement, analyser ton marché, identifier
-              tes cibles et comprendre les attentes de tes futurs clients.
-              Cette immersion me permet de construire une stratégie
-              marketing digitale cohérente, d&apos;améliorer ton
-              positionnement sur les moteurs de recherche et de développer
-              une visibilité durable sur Google. Chaque action s&apos;appuie
-              sur une analyse de ton secteur, de tes concurrents, de tes
-              mots-clés et de ton parcours client afin d&apos;attirer un
-              trafic qualifié et de générer de nouveaux contacts. Et lorsque
-              la distance ne permet pas une rencontre sur le terrain, la
-              visioconférence prend naturellement le relais pour élaborer
-              ensemble une stratégie adaptée à tes objectifs.
+              Because no two businesses work the same way, I take the time
+              to understand your activity before defining an SEO strategy.
+              From the historic centre of Aix-en-Provence to Puyricard, Les
+              Milles to La Duranne, through Jas-de-Bouffan, Val Saint-André,
+              Pont de l'Arc, Corsy, Célony or Beauregard, I travel to
+              discover your environment, analyse your market, identify your
+              targets and understand what your future clients expect. This
+              immersion lets me build a coherent digital marketing
+              strategy, improve your search engine positioning and develop
+              lasting visibility on Google. Every action is based on an
+              analysis of your industry, your competitors, your keywords
+              and your client journey to attract qualified traffic and
+              generate new contacts. And when distance doesn't allow for an
+              in-person meeting, video calls naturally take over to build a
+              strategy tailored to your goals together.
             </p>
           </div>
           <div className="text-center">
             <Image
               src="/images/consultant-referencement-aix-en-provence.png"
-              alt="Jodie Lapaillerie et son assistante IA JWL Marketing"
+              alt="Jodie Lapaillerie and her AI assistant JWL Marketing"
               width={1410}
               height={2000}
               className="mx-auto h-auto w-full max-w-[420px] rounded-2xl object-cover"
             />
             <p className="mt-2 text-xs text-black">
-              Jodie-LAPAILLERIE / IA 2026
+              Jodie-LAPAILLERIE / AI 2026
             </p>
           </div>
         </div>
       </section>
 
-      {/* Je me déplace + Marché digital + zones */}
+      {/* I travel anywhere in France + zones */}
       <section className="mx-auto max-w-[1200px] px-6 py-10">
         <h3 className="text-center font-heading text-3xl leading-tight md:text-[54px] text-black">
-          <span className="italic text-[#c9846f]">Je me déplace partout en France</span>
+          <span className="italic text-[#c9846f]">I travel anywhere in France</span>
           <br />
           <span className="font-medium">
-            Et à Aix-en-Provence, je viens te voir sans frais de déplacement.
+            And in Aix-en-Provence, I come to you at no extra travel cost.
           </span>
         </h3>
         <div className="mt-8 grid items-stretch gap-8 md:grid-cols-2">
           <Image
             src="/images/carte-france-aix-en-provence.png"
-            alt="Zone d'intervention JWL Marketing — PACA sur place, France entière à distance"
+            alt="JWL Marketing coverage area — on-site in PACA, remote across France"
             width={2000}
             height={1414}
             className="mx-auto h-auto w-full max-w-[420px]"
           />
           <div className="h-full border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
             <p>
-              À Aix-en-Provence, le marché digital s&apos;accélère. Les
-              indépendants, les commerçants et les PME se multiplient… et la
-              visibilité Google devient un vrai enjeu de survie. Pas
-              seulement face aux concurrents locaux. Face aussi : aux
-              agences qui proposent des prestations standardisées, aux
-              freelances qui livrent un audit PDF sans suite, aux
-              entreprises qui investissent enfin en SEO et prennent de
-              l&apos;avance. Aix-en-Provence concentre un tissu économique
-              dense et varié : savonneries traditionnelles, entreprises
-              high-tech, calissons, restaurateurs, boulangeries
-              artisanales, professions libérales... Autant de secteurs où
-              Google est le premier point de contact.
+              In Aix-en-Provence, the digital market is accelerating.
+              Independent professionals, shopkeepers and SMEs keep growing
+              in number… and Google visibility has become a real matter of
+              survival. Not just against local competitors, but also
+              against agencies offering standardised services, freelancers
+              who deliver a one-off PDF audit with no follow-up, and
+              businesses that finally invest in SEO and gain the edge.
+              Aix-en-Provence has a dense and varied economic fabric:
+              traditional soap makers, high-tech companies, calisson
+              makers, restaurateurs, artisan bakeries, self-employed
+              professionals... So many sectors where Google is the first
+              point of contact.
             </p>
           </div>
         </div>
@@ -534,14 +522,13 @@ export default function QuiSuisJe() {
           <div className="h-full border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
             <p>
               <span className="font-bold">
-                Mon approche est différente. Je commence par comprendre ton
-                activité, tes marges, tes clients idéaux.
+                My approach is different. I start by understanding your
+                business, your margins, your ideal clients.
               </span>{" "}
-              On construit ensemble une stratégie qui cible les mots-clés à
-              forte intention, ceux qui attirent des prospects prêts à
-              acheter. Freelance, je suis ton interlocutrice unique.
-              Décisions rapides, exécution rigoureuse, zéro turnover sur ton
-              dossier.
+              Together we build a strategy that targets high-intent
+              keywords — the ones that attract prospects ready to buy.
+              Freelance, I'm your single point of contact. Fast decisions,
+              rigorous execution, zero turnover on your account.
             </p>
           </div>
           <div className="flex flex-wrap gap-3">
@@ -557,7 +544,7 @@ export default function QuiSuisJe() {
         </div>
       </section>
 
-      {/* CTA de clôture */}
+      {/* Closing CTA */}
       <section className="bg-white px-6 py-16 text-center">
         <a
           href="https://calendly.com/jwlm"
@@ -565,44 +552,43 @@ export default function QuiSuisJe() {
           rel="noopener"
           className="inline-block rounded-full bg-[#c9846f] px-10 py-[15px] font-medium text-white transition-colors hover:bg-[#b8735f]"
         >
-          Parce que tu mérites le meilleur
+          Because you deserve the best
         </a>
       </section>
 
-      {/* Je m'engage... */}
+      {/* I support... */}
       <section className="bg-white px-6 py-16 text-center">
         <h3 className="font-heading text-3xl leading-tight md:text-[54px] text-black">
-          <span className="italic text-[#c9846f]">Je m&apos;engage</span>
+          <span className="italic text-[#c9846f]">I support</span>
           <br />
           <span className="font-medium">
-            auprès de partenaires dynamiques sur Aix-en-Provence
+            dynamic partners in Aix-en-Provence
           </span>
         </h3>
 
         <div className="mx-auto mt-8 grid max-w-[900px] items-center gap-8 text-left md:grid-cols-[1fr_280px]">
           <div className="rounded-2xl bg-[#141414] p-6 text-sm leading-relaxed text-white/90">
             <p>
-              J&apos;aime m&apos;entourer d&apos;entrepreneurs qui partagent
-              les mêmes valeurs : engagement, proximité et volonté
-              d&apos;aider les autres à avancer. C&apos;est le cas de Nathan,
-              fondateur de Dynamitz, qui accompagne les porteurs de projet
-              dans la structuration de leur entreprise et la définition de
-              leur positionnement.
+              I like to surround myself with entrepreneurs who share the
+              same values: commitment, closeness and a will to help others
+              move forward. That's the case with Nathan, founder of
+              Dynamitz, who helps project owners structure their business
+              and define their positioning.
             </p>
             <p className="mt-3">
-              Nous intervenons sur des sujets complémentaires avec un objectif
-              commun : aider les entrepreneurs à construire des bases solides
-              avant de développer leur visibilité et leur acquisition client.
+              We work on complementary topics with a shared goal: helping
+              entrepreneurs build solid foundations before growing their
+              visibility and client acquisition.
             </p>
             <p className="mt-3">
-              Parce qu&apos;une stratégie performante commence toujours par
-              des fondations solides.
+              Because a high-performing strategy always starts with solid
+              foundations.
             </p>
           </div>
           <div className="mx-auto">
             <Image
               src="/images/logo-partenaire-dynamitz.png"
-              alt="Dynamitz — automatisez votre projet"
+              alt="Dynamitz — automate your project"
               width={2000}
               height={1414}
               className="mx-auto h-auto w-full max-w-[280px]"
@@ -610,7 +596,7 @@ export default function QuiSuisJe() {
           </div>
         </div>
         <span className="mt-6 inline-block bg-[#c9846f] px-10 py-[15px] font-medium text-white">
-          En savoir plus
+          Learn more
         </span>
       </section>
     </div>

@@ -1,6 +1,7 @@
 import { Fragment } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import type { Metadata } from "next";
 import HeroBadge from "@/components/HeroBadge";
 import YoutubeLite from "@/components/YoutubeLite";
 import VisibilityChart from "@/components/VisibilityChart";
@@ -15,46 +16,52 @@ import TypewriterText from "@/components/TypewriterText";
 import TrustedPartners from "@/components/TrustedPartners";
 import LanguageToggle from "@/components/LanguageToggle";
 
+export const metadata: Metadata = {
+  title: "JWL Marketing | Digital Marketing in Aix-en-Provence",
+  description:
+    "Tired of an invisible website? Discover my world built around client acquisition, SEO and AI. Based in Aix-en-Provence, working across France.",
+};
+
 const METHODE_STEPS = [
   {
     image: "/images/accompagnement-digital.png",
-    title: "Je découvre",
-    lead: "J'identifies pourquoi Google ne t'apporte pas assez de clients.",
+    title: "I find out",
+    lead: "I identify why Google isn't bringing you enough clients.",
     items: [
-      "Audit SEO",
-      "Audit commercial",
-      "Analyse de la concurrence",
-      "Analyse de Google Business Profile",
+      "SEO audit",
+      "Sales audit",
+      "Competitor analysis",
+      "Google Business Profile analysis",
     ],
-    cta: "Prenez rendez-vous",
-    href: "/contact-jwl-marketing-aix-en-provence",
+    cta: "Book a call",
+    href: "/en/contact-jwl-marketing-aix-en-provence",
   },
   {
     image: "/images/strategie-marketing.png",
-    title: "Je passe à l'action",
-    lead: "Je construis un écosystème qui travaille pour ton entreprise.",
+    title: "I take action",
+    lead: "I build an ecosystem that works for your business.",
     items: [
       "Google Business Profile",
-      "Site internet",
-      "Pages SEO",
-      "Articles de blog",
-      "Optimisations IA et GEO",
+      "Website",
+      "SEO pages",
+      "Blog articles",
+      "AI and GEO optimisation",
     ],
-    cta: "En savoir plus",
-    href: "/site-internet-aix-en-provence",
+    cta: "Learn more",
+    href: "/en/site-internet-aix-en-provence",
   },
   {
     image: "/images/developpement-digital.png",
-    title: "Google te découvre",
-    lead: "Je mesures, ajustes et développes ta visibilité.",
+    title: "Google finds you",
+    lead: "I measure, adjust and grow your visibility.",
     items: [
-      "Suivi du positionnement",
-      "Analyse des statistiques",
-      "Nouvelles opportunités SEO",
-      "Accompagnement mensuel",
+      "Ranking tracking",
+      "Performance analysis",
+      "New SEO opportunities",
+      "Monthly support",
     ],
-    cta: "En savoir plus",
-    href: "/audit-seo-aix-en-provence",
+    cta: "Learn more",
+    href: "/en/audit-seo-aix-en-provence",
   },
 ];
 
@@ -62,64 +69,64 @@ const OFFERS_STARTER = [
   {
     price: "690",
     title: "JWL Diagnostic",
-    subtitle: "« Je veux savoir où j'en suis avant d'investir. »",
-    lead: "Je réalise :",
+    subtitle: "« I want to know where I stand before investing. »",
+    lead: "I deliver:",
     items: [
-      "audit commercial",
-      "audit marketing",
-      "audit SEO",
-      "analyse concurrentielle",
-      "analyse de visibilité",
-      "opportunités de développement",
-      "feuille de route",
+      "sales audit",
+      "marketing audit",
+      "SEO audit",
+      "competitive analysis",
+      "visibility analysis",
+      "growth opportunities",
+      "roadmap",
     ],
     footer:
-      "Peu importe que tu sois dentiste, plombier, thérapeute, créateur ou avocat.",
-    cta: "Prenez rendez-vous",
-    href: "/contact-jwl-marketing-aix-en-provence",
+      "Whether you're a dentist, plumber, therapist, creator or lawyer.",
+    cta: "Book a call",
+    href: "/en/contact-jwl-marketing-aix-en-provence",
   },
   {
     price: "1990",
     title: "JWL Business",
-    subtitle: "« Je construis un site web sur mesure. »",
-    lead: "Inclus :",
+    subtitle: "« I build a custom website. »",
+    lead: "Included:",
     items: [
-      "Audit stratégique",
-      "Positionnement commercial",
-      "Architecture des pages",
-      "Développement sur mesure",
-      "Mise en ligne sur Vercel",
-      "Optimisation technique",
+      "Strategic audit",
+      "Sales positioning",
+      "Page architecture",
+      "Custom development",
+      "Deployed on Vercel",
+      "Technical optimisation",
     ],
-    lead2: "Ce qui fait la différence :",
+    lead2: "What makes the difference:",
     items2: [
-      "Site rapide",
-      "Sans abonnement",
-      "Sans paiement annuel d'un hébergeur",
-      "Évolutif",
-      "Certificat de propriété délivré au client (agréé juridiquement)",
+      "Fast site",
+      "No subscription",
+      "No yearly hosting fee",
+      "Scalable",
+      "Ownership certificate delivered to the client (legally binding)",
     ],
-    cta: "En savoir plus",
-    href: "/site-internet-aix-en-provence",
+    cta: "Learn more",
+    href: "/en/site-internet-aix-en-provence",
   },
   {
     price: "4500",
     title: "JWL Visible",
-    subtitle: "« Je développe, je veux des clients. »",
-    lead: "Inclus :",
+    subtitle: "« I'm growing, I want clients. »",
+    lead: "Included:",
     items: [
-      "Site web sur mesure + stratégie SEO",
-      "Audit stratégique",
-      "Positionnement SEO",
-      "Développement du site",
-      "Optimisation technique SEO",
-      "Rédaction SEO",
+      "Custom website + SEO strategy",
+      "Strategic audit",
+      "SEO positioning",
+      "Website development",
+      "Technical SEO optimisation",
+      "SEO copywriting",
       "Google Business Profile",
       "Blog",
-      "Stratégie locale, régionale ou nationale",
+      "Local, regional or national strategy",
     ],
-    cta: "En savoir plus",
-    href: "/audit-seo-aix-en-provence",
+    cta: "Learn more",
+    href: "/en/audit-seo-aix-en-provence",
   },
 ];
 
@@ -127,35 +134,35 @@ const OFFERS_NEXT = [
   {
     price: "645",
     perMonth: true,
-    title: "JWL Croissance",
-    lead: "Comprend :",
+    title: "JWL Growth",
+    lead: "Includes:",
     items: [
-      "Accompagnement mensuel (one to one)",
-      "Accès aux outils Google performance",
-      "Suivi du positionnement",
-      "Analyse des performances",
-      "Ajustements stratégiques SEO",
+      "Monthly support (one to one)",
+      "Access to Google performance tools",
+      "Ranking tracking",
+      "Performance analysis",
+      "SEO strategy adjustments",
     ],
-    objectif: "Devenir la référence locale ou régionale sur son marché.",
-    cta: "voir les formules",
-    href: "/site-internet-aix-en-provence",
+    objectif: "Become the local or regional reference in your market.",
+    cta: "see the packages",
+    href: "/en/site-internet-aix-en-provence",
   },
   {
     price: "950",
-    title: "JWL Master rédaction SEO",
-    lead: "Comprend :",
+    title: "JWL Master SEO Copywriting",
+    lead: "Includes:",
     items: [
-      "Comprendre les opportunités SEO identifiées",
-      "Utiliser les mots-clés stratégiques",
-      "Construire un calendrier éditorial",
-      "Rédiger des articles optimisés",
-      "Utiliser TextOptimizer ou ton outil d'optimisation",
-      "Comprendre l'intention de recherche",
-      "Structurer un contenu qui plaît à Google",
+      "Understand the identified SEO opportunities",
+      "Use strategic keywords",
+      "Build an editorial calendar",
+      "Write optimised articles",
+      "Use TextOptimizer or your own optimisation tool",
+      "Understand search intent",
+      "Structure content that Google likes",
     ],
-    objectif: "Devenir la référence locale ou régionale sur son marché.",
-    cta: "voir les formules",
-    href: "/site-internet-aix-en-provence",
+    objectif: "Become the local or regional reference in your market.",
+    cta: "see the packages",
+    href: "/en/site-internet-aix-en-provence",
   },
 ];
 
@@ -173,9 +180,9 @@ function OfferCard({
   return (
     <div className="relative flex flex-1 flex-col rounded-md bg-[#141414] p-8 pt-14 text-white">
       <span className="absolute -top-6 left-6 flex h-[76px] w-[76px] -rotate-6 items-center justify-center rounded-full bg-gold text-center text-[13px] leading-tight text-white shadow-md">
-        À partir
+        From
         <br />
-        de {offer.price}€{perMonth && <><br />par mois</>}
+        {offer.price}€{perMonth && <><br />per month</>}
       </span>
       <h3 className="font-heading text-xl underline decoration-gold underline-offset-4">
         {offer.title}
@@ -221,7 +228,7 @@ function OfferCard({
       {hasObjectif && (
         <p className="mt-4 min-h-[3em] text-sm text-white/85">
           <span className="uppercase tracking-wide text-gold">
-            Objectif :
+            Goal:
           </span>{" "}
           <TypewriterText
             text={(offer as (typeof OFFERS_NEXT)[number]).objectif}
@@ -241,9 +248,9 @@ function OfferCard({
 export default function Home() {
   return (
     <div>
-      {/* Logo + compte, au-dessus du hero */}
+      {/* Logo + account, above the hero */}
       <div className="flex w-full items-center justify-between px-[5%] pt-20">
-        <Link href="/">
+        <Link href="/en">
           <Image
             src="/images/logo-jwl-marketing.png"
             alt="JWL Marketing Aix-en-Provence"
@@ -253,16 +260,16 @@ export default function Home() {
           />
         </Link>
         <div className="flex items-center gap-3">
-          <a href="https://intranet.jwlmarketing.fr/" aria-label="Connexion espace client">
+          <a href="https://intranet.jwlmarketing.fr/" aria-label="Client area login">
             <Image
               src="/images/seco.png"
-              alt="Connexion espace client"
+              alt="Client area login"
               width={28}
               height={28}
               className="h-7 w-7"
             />
           </a>
-          <LanguageToggle locale="fr" href="/en" />
+          <LanguageToggle locale="en" href="/" />
         </div>
       </div>
 
@@ -271,19 +278,19 @@ export default function Home() {
         <div className="max-w-[600px] flex-1">
           <h1 className="m-0 mb-1 mt-2.5 font-heading text-4xl leading-[1.15] text-black lg:text-[60px] lg:leading-[1.2]">
             <span>
-              Un site Web
+              A website
               <br />
-              qui attire de
+              that attracts
             </span>
             <br />
             <span className="font-heading italic text-[#c9846f]">
-              nouveaux clients
+              new clients
             </span>
           </h1>
 
           <p className="mt-4 text-lg leading-[1.6] text-[#333]">
-            Google doit te trouver. L&apos;IA doit te comprendre. Tes futurs
-            clients doivent te choisir.
+            Google has to find you. AI has to understand you. Your future
+            clients have to choose you.
           </p>
 
           <div className="mt-6 flex flex-wrap gap-[15px]">
@@ -294,17 +301,17 @@ export default function Home() {
               07 83 79 28 14
             </a>
             <Link
-              href="/contact-jwl-marketing-aix-en-provence"
+              href="/en/contact-jwl-marketing-aix-en-provence"
               className="inline-block rounded-full bg-[#faf3ea] px-9 py-[18px] text-lg font-medium text-[#000000] transition-colors hover:bg-[#f2e6d4]"
             >
-              Audit Marketing GRATUIT
+              FREE Marketing Audit
             </Link>
           </div>
 
           <div className="mt-6 flex flex-wrap items-center gap-2 text-base">
             <span className="text-lg font-normal text-[#1a2b6b]">5/5</span>
             <span className="text-gold">★★★★★</span>
-            <span className="text-[#555]">16 avis Google</span>
+            <span className="text-[#555]">16 Google reviews</span>
             <span className="text-[#999]">·</span>
             <a
               href="http://api.jwl-marketing.fr/redirects/gmb/jwl.html"
@@ -312,7 +319,7 @@ export default function Home() {
               rel="noopener"
               className="font-normal text-[#1a2b6b] underline"
             >
-              Ajouter un avis
+              Add a review
             </a>
           </div>
         </div>
@@ -333,7 +340,7 @@ export default function Home() {
 
       <TrustedPartners />
 
-      {/* Et si ton prochain client... */}
+      {/* What if your next client... */}
       <section className="flex flex-col items-center justify-between gap-10 px-[5%] py-20 md:flex-row">
         <div className="flex-[1.4_1_0%] overflow-hidden rounded-[40px] bg-black p-10">
           <div className="mx-auto aspect-video w-full max-w-[650px] overflow-hidden rounded-xl">
@@ -342,29 +349,29 @@ export default function Home() {
         </div>
         <div className="flex flex-1 items-center justify-center text-center">
           <h2 className="mx-auto max-w-[560px] font-heading text-3xl font-normal leading-[1.2] text-black md:text-[54px] md:leading-[1.1]">
-            Et si <span className="italic text-[#c9846f]">ton prochain</span>
+            What if <span className="italic text-[#c9846f]">your next</span>
             <br />
-            <span className="italic text-[#c9846f]">client</span> te trouvait
+            <span className="italic text-[#c9846f]">client</span> found you
             <br />
-            grâce à <GoogleColors />
+            thanks to <GoogleColors />
             <span className="text-black">?</span>
           </h2>
         </div>
       </section>
 
-      {/* Cas client */}
+      {/* Client case */}
       <section className="px-[5%] py-16 text-center">
-        <SectionHeading title="Ce que JWL MARKETING à mis en place">
+        <SectionHeading title="What JWL MARKETING put in place">
           <br />
-          pour un de{" "}
-          <span className="italic text-[#c9846f]">ces clients</span>
+          for one of{" "}
+          <span className="italic text-[#c9846f]">these clients</span>
         </SectionHeading>
         <ClientResultsWidget />
       </section>
 
-      {/* La méthode */}
+      {/* The method */}
       <section className="px-[5%] py-16 text-center">
-        <SectionHeading kicker="La méthode" title="JWL MARKETING" />
+        <SectionHeading kicker="The method" title="JWL MARKETING" />
         <EscalierReveal
           className="mx-auto grid max-w-[1200px] gap-6 md:grid-cols-3"
           itemClassName="flex flex-col overflow-hidden rounded-2xl bg-black text-white"
@@ -402,34 +409,34 @@ export default function Home() {
         </EscalierReveal>
       </section>
 
-      {/* Pourquoi les entreprises choisissent JWL Marketing */}
+      {/* Why businesses choose JWL Marketing */}
       <section className="px-[5%] py-16 text-center">
-        <SectionHeading kicker="Pourquoi les entreprises choisissent" title="JWL MARKETING" />
+        <SectionHeading kicker="Why businesses choose" title="JWL MARKETING" />
         <GuaranteesCards />
       </section>
 
-      {/* Ta visibilité n'est pas une question de hasard */}
+      {/* Your visibility isn't a matter of luck */}
       <section className="px-[5%] py-16 text-center">
         <SectionHeading
-          kicker="Ta visibilité"
-          title="n'est pas une question de hasard"
+          kicker="Your visibility"
+          title="isn't a matter of luck"
         />
 
         <div className="mx-auto flex max-w-[1200px] flex-col items-center justify-center gap-10 md:flex-row">
           <VisibilityChart />
           <span className="block max-w-[300px] shrink-0 text-left text-black">
-            1. Être trouvée
+            1. Be found
             <br />
-            2. Être comprise
+            2. Be understood
             <br />
-            3. Être choisie
+            3. Be chosen
           </span>
         </div>
 
         <div className="mx-auto my-10 w-full max-w-[1400px] px-5 text-center md:my-[60px]">
           <h2 className="font-heading text-3xl leading-[1.2] md:text-[54px] md:leading-[1.35]">
-            <span className="italic text-[#c9846f]">Choisis l&apos;accompagnement</span>{" "}
-            <span className="text-black">adapté a tes objectifs</span>
+            <span className="italic text-[#c9846f]">Choose the support</span>{" "}
+            <span className="text-black">that fits your goals</span>
           </h2>
         </div>
         <EscalierReveal
@@ -443,16 +450,16 @@ export default function Home() {
 
         <div className="mx-auto mt-10 flex max-w-[1200px] justify-center">
           <Link
-            href="/contact-jwl-marketing-aix-en-provence"
+            href="/en/contact-jwl-marketing-aix-en-provence"
             className="inline-block rounded-full bg-[#c9846f] px-9 py-[18px] text-lg font-medium text-white transition-colors hover:bg-[#b8735f]"
           >
-            Un doute sur ton choix ? Demande un conseil gratuit
+            Not sure which to choose? Ask for free advice
           </Link>
         </div>
 
         <SectionHeading
-          kicker="Et après ?"
-          title="on poursuit l'aventure ensemble ou en autonomie"
+          kicker="What's next?"
+          title="continue the journey together or on your own"
         />
         <EscalierReveal
           className="mx-auto flex max-w-[820px] flex-col gap-8 md:flex-row"
@@ -465,20 +472,20 @@ export default function Home() {
 
         <div className="mx-auto mt-10 flex max-w-[820px] justify-center">
           <Link
-            href="/site-internet-aix-en-provence"
+            href="/en/site-internet-aix-en-provence"
             className="inline-block rounded-full bg-[#c9846f] px-9 py-[18px] text-lg font-medium text-white transition-colors hover:bg-[#b8735f]"
           >
-            JWL Master, voir l&apos;accompagnement
+            JWL Master, see the programme
           </Link>
         </div>
       </section>
 
-      {/* Témoignages */}
+      {/* Testimonials */}
       <section className="bg-neutral-50 px-6 py-16">
         <div className="mx-auto my-10 max-w-[700px] px-5 text-center md:my-[60px]">
           <h2 className="font-heading text-3xl leading-[1.2] md:text-[54px] md:leading-[1.35]">
-            <span className="italic text-[#c9846f]">Ils encaissent du cash,</span>{" "}
-            <span className="text-black">avec JWL MARKETING</span>
+            <span className="italic text-[#c9846f]">They're cashing in,</span>{" "}
+            <span className="text-black">with JWL MARKETING</span>
           </h2>
         </div>
         <div className="mx-auto flex max-w-[1200px] gap-6 overflow-x-auto px-2 pb-4">
