@@ -4,6 +4,8 @@ import Footer from "@/components/Footer";
 import NewsletterCta from "@/components/NewsletterCta";
 import Faq from "@/components/Faq";
 import ScrollRevealAll from "@/components/ScrollRevealAll";
+import CookieConsent from "@/components/CookieConsent";
+import PromoCarouselPopup from "@/components/PromoCarouselPopup";
 
 export const metadata: Metadata = {
   title: "JWL Marketing | Marketing Digital à Aix-en-Provence",
@@ -28,6 +30,8 @@ export default function RootLayout({
           <Faq />
         </div>
         <Footer />
+        <PromoCarouselPopup />
+        <CookieConsent />
       </body>
     </html>
   );
