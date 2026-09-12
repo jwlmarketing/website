@@ -189,87 +189,89 @@ export default function Home() {
           <span className="italic text-[#c9846f]">apparais-tu</span> ?
         </h2>
 
-        <div className="mx-auto mt-10 flex max-w-[700px] flex-col items-center gap-2">
-          <GoogleColors />
-          <div className="flex w-full items-center gap-2 rounded-full border border-[#e0e0e0] bg-white px-6 py-4 shadow-sm">
-            <p className="flex min-w-0 flex-1 items-center gap-1.5 text-left text-sm text-[#333] md:text-base">
-              <RotatingKeyword
-                className="font-semibold text-[#c9846f]"
-                interval={1900}
-                words={[
-                  "électricien",
-                  "plombier",
-                  "robe rouge",
-                  "costume enfant",
-                  "consultant SEO",
-                  "avocat",
-                  "coach sportif",
-                  "boulangerie",
-                  "agence immobilière",
-                  "dentiste",
-                  "restaurant",
-                  "fleuriste",
-                  "garagiste",
-                  "coiffeur",
-                  "kinésithérapeute",
-                  "expert-comptable",
-                  "photographe",
-                  "traiteur",
-                ]}
-              />
-              <span className="shrink-0">à</span>
-              <RotatingKeyword
-                className="truncate"
-                showIcon={false}
-                interval={1900}
-                startDelay={950}
-                words={[
-                  "Aix-en-Provence",
-                  "Marseille",
-                  "Nice",
-                  "Paris",
-                  "Montpellier",
-                  "Bordeaux",
-                  "Toulouse",
-                  "Lyon",
-                  "Nantes",
-                  "Lille",
-                  "Strasbourg",
-                  "Grenoble",
-                ]}
-              />
+        <div className="mx-auto mt-10 max-w-[900px] rounded-2xl bg-black p-8 md:p-12">
+          <div className="mx-auto flex max-w-[700px] flex-col items-center gap-2">
+            <GoogleColors />
+            <div className="flex w-full items-center gap-2 rounded-full border border-white/15 bg-white/5 px-6 py-4">
+              <p className="flex min-w-0 flex-1 items-center gap-1.5 text-left text-sm text-white md:text-base">
+                <RotatingKeyword
+                  className="font-semibold text-[#c9846f]"
+                  interval={1900}
+                  words={[
+                    "électricien",
+                    "plombier",
+                    "robe rouge",
+                    "costume enfant",
+                    "consultant SEO",
+                    "avocat",
+                    "coach sportif",
+                    "boulangerie",
+                    "agence immobilière",
+                    "dentiste",
+                    "restaurant",
+                    "fleuriste",
+                    "garagiste",
+                    "coiffeur",
+                    "kinésithérapeute",
+                    "expert-comptable",
+                    "photographe",
+                    "traiteur",
+                  ]}
+                />
+                <span className="shrink-0">à</span>
+                <RotatingKeyword
+                  className="truncate"
+                  showIcon={false}
+                  interval={1900}
+                  startDelay={950}
+                  words={[
+                    "Aix-en-Provence",
+                    "Marseille",
+                    "Nice",
+                    "Paris",
+                    "Montpellier",
+                    "Bordeaux",
+                    "Toulouse",
+                    "Lyon",
+                    "Nantes",
+                    "Lille",
+                    "Strasbourg",
+                    "Grenoble",
+                  ]}
+                />
+              </p>
+            </div>
+          </div>
+
+          <div className="mx-auto mt-10 max-w-[820px] space-y-5 text-left text-[15px] leading-relaxed text-white/85 md:text-base">
+            <p>
+              <strong className="text-white">
+                Aujourd&apos;hui, près de 85 % des consommateurs effectuent une
+                recherche en ligne avant de contacter une entreprise.
+              </strong>{" "}
+              Ils ne connaissent ni ton nom, ni l&apos;existence de ton
+              entreprise. Ils recherchent simplement un produit ou un service.
+              Si ton entreprise n&apos;apparaît pas dans les résultats, Google
+              proposera tes concurrents.
+            </p>
+            <p>
+              Les habitudes de recherche évoluent également avec l&apos;arrivée
+              de l&apos;intelligence artificielle.{" "}
+              <strong className="text-white">
+                Google intègre désormais l&apos;IA dans ses résultats pour
+                répondre plus rapidement aux internautes et mettre en avant les
+                entreprises jugées les plus pertinentes.
+              </strong>
+            </p>
+            <p>
+              Être visible ne consiste plus seulement à avoir un site web.{" "}
+              <strong className="text-white">
+                Il faut aussi proposer un contenu clair, fiable et pertinent
+                pour apparaître dans les recherches Google d&apos;aujourd&apos;hui
+                et de demain.
+              </strong>
             </p>
           </div>
-        </div>
-
-        <div className="mx-auto mt-10 max-w-[900px] space-y-5 text-left text-[15px] leading-relaxed text-[#333] md:text-base">
-          <p>
-            <strong>
-              Aujourd&apos;hui, près de 85 % des consommateurs effectuent une
-              recherche en ligne avant de contacter une entreprise.
-            </strong>{" "}
-            Ils ne connaissent ni ton nom, ni l&apos;existence de ton
-            entreprise. Ils recherchent simplement un produit ou un service.
-            Si ton entreprise n&apos;apparaît pas dans les résultats, Google
-            proposera tes concurrents.
-          </p>
-          <p>
-            Les habitudes de recherche évoluent également avec l&apos;arrivée
-            de l&apos;intelligence artificielle.{" "}
-            <strong>
-              Google intègre désormais l&apos;IA dans ses résultats pour
-              répondre plus rapidement aux internautes et mettre en avant les
-              entreprises jugées les plus pertinentes.
-            </strong>
-          </p>
-          <p>
-            Être visible ne consiste plus seulement à avoir un site web.{" "}
-            <strong>
-              Il faut aussi proposer un contenu clair, fiable et pertinent
-              pour apparaître dans les recherches Google d&apos;aujourd&apos;hui
-              et de demain.
-            </strong>
-          </p>
         </div>
       </section>
 
@@ -376,14 +378,14 @@ export default function Home() {
         </div>
 
         {/* Mais de résultat */}
-        <div className="mx-auto mt-16 flex max-w-[1300px] flex-col items-center gap-8 md:flex-row">
+        <div className="mx-auto mt-16 flex max-w-[1300px] flex-col items-center gap-8 md:flex-row md:items-stretch">
           <p className="text-2xl italic text-[#c9846f] md:hidden">Mais de résultat :</p>
           <Image
             src="/images/jwl-consultante-seo-facteurs-visibilite.png"
             alt="JWL Marketing - facteurs de visibilité SEO"
             width={237}
             height={421}
-            className="h-auto w-[320px] shrink-0 object-contain md:w-[480px]"
+            className="h-[420px] w-auto max-w-none shrink-0 object-contain md:h-full md:w-auto"
           />
           <div className="w-full rounded-2xl border border-[#c9846f]/40 bg-[#141414] p-8 text-left text-white">
             <p className="mb-3 hidden text-2xl italic text-[#c9846f] md:block">
