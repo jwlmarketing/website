@@ -376,14 +376,14 @@ export default function Home() {
         </div>
 
         {/* Mais de résultat */}
-        <div className="mx-auto mt-16 flex max-w-[1000px] flex-col items-center gap-8 md:flex-row">
+        <div className="mx-auto mt-16 flex max-w-[1300px] flex-col items-center gap-8 md:flex-row">
           <p className="text-2xl italic text-[#c9846f] md:hidden">Mais de résultat :</p>
           <Image
             src="/images/jwl-consultante-seo-facteurs-visibilite.png"
             alt="JWL Marketing - facteurs de visibilité SEO"
             width={237}
             height={421}
-            className="h-auto w-[240px] shrink-0 object-contain md:w-[320px]"
+            className="h-auto w-[320px] shrink-0 object-contain md:w-[480px]"
           />
           <div className="w-full rounded-2xl border border-[#c9846f]/40 bg-[#141414] p-8 text-left text-white">
             <p className="mb-3 hidden text-2xl italic text-[#c9846f] md:block">
