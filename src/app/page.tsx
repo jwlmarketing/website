@@ -273,23 +273,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Recommandée par l'IA + Cas client */}
-      <section className="px-[5%] py-16 text-center">
-        <Image
-          src="/images/jwl-marketing-recommandee-ia-google-chatgpt-gemini-claude.png"
-          alt="JWL Marketing recommandée par Google, ChatGPT, Gemini, Perplexity et Claude"
-          width={1366}
-          height={340}
-          className="mx-auto h-auto w-full max-w-[1100px] object-contain"
-        />
-        <SectionHeading title="Ce que JWL MARKETING à mis en place">
-          <br />
-          pour un de{" "}
-          <span className="italic text-[#c9846f]">ces clients</span>
-        </SectionHeading>
-        <ClientResultsWidget />
-      </section>
-
       {/* Et si ton prochain client... */}
       <section className="flex flex-col items-center justify-between gap-10 px-[5%] py-20 md:flex-row">
         <div className="flex-[1.4_1_0%] overflow-hidden rounded-[40px] bg-black p-10">
@@ -307,6 +290,16 @@ export default function Home() {
             <span className="text-black">?</span>
           </h2>
         </div>
+      </section>
+
+      {/* Cas client */}
+      <section className="px-[5%] py-16 text-center">
+        <SectionHeading title="Ce que JWL MARKETING à mis en place">
+          <br />
+          pour un de{" "}
+          <span className="italic text-[#c9846f]">ces clients</span>
+        </SectionHeading>
+        <ClientResultsWidget />
       </section>
 
       {/* Pourquoi les entreprises choisissent JWL Marketing */}
@@ -357,7 +350,10 @@ export default function Home() {
 
       {/* Nos accompagnements */}
       <section className="px-[5%] py-16 text-center">
-        <SectionHeading title="Nos accompagnements" />
+        <SectionHeading
+          title="Comment JWL Marketing"
+          accent="peut t'aider ?"
+        />
         <AccompagnementsSection />
       </section>
 

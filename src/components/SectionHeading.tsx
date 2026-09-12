@@ -26,7 +26,7 @@ export default function SectionHeading({
       <h2 className="relative block w-full px-2 font-heading text-3xl font-medium not-italic leading-[1.25] text-black md:px-10 md:text-[54px] md:leading-[1.35]">
         {title}
         {children}
-        {accent && <span className="not-italic text-gold"> {accent}</span>}
+        {accent && <span className="not-italic text-[#c9846f]"> {accent}</span>}
       </h2>
       {subtext && (
         <p className="mx-auto mt-5 max-w-[700px] text-base leading-relaxed text-[#555]">
