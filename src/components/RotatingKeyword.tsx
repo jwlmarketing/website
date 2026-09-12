@@ -5,37 +5,59 @@ import { useEffect, useState } from "react";
 export default function RotatingKeyword({
   words,
   className = "",
-  interval = 1800,
+  interval = 2200,
 }: {
   words: string[];
   className?: string;
   interval?: number;
 }) {
   const [index, setIndex] = useState(0);
-  const [flying, setFlying] = useState(false);
+  // "idle" | "out" | "in"
+  const [phase, setPhase] = useState<"idle" | "out" | "in">("idle");
 
   useEffect(() => {
+    let outTimer: ReturnType<typeof setTimeout> | undefined;
+    let inTimer: ReturnType<typeof setTimeout> | undefined;
+
     const id = setInterval(() => {
-      setFlying(true);
-      const swap = setTimeout(() => {
+      setPhase("out");
+      outTimer = setTimeout(() => {
         setIndex((i) => (i + 1) % words.length);
-        setFlying(false);
-      }, 320);
-      return () => clearTimeout(swap);
+        setPhase("in");
+        // Force la frame suivante pour laisser le navigateur peindre l'état
+        // "in" (départ) avant de basculer vers "idle" (arrivée) — sinon la
+        // transition ne joue pas car les deux états sont posés au même tick.
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => {
+            inTimer = setTimeout(() => setPhase("idle"), 10);
+          });
+        });
+      }, 550);
     }, interval);
-    return () => clearInterval(id);
+
+    return () => {
+      clearInterval(id);
+      clearTimeout(outTimer);
+      clearTimeout(inTimer);
+    };
   }, [words.length, interval]);
 
+  const style =
+    phase === "out"
+      ? { transform: "translateY(-16px) scale(0.94)", opacity: 0, filter: "blur(3px)" }
+      : phase === "in"
+        ? { transform: "translateY(14px) scale(0.94)", opacity: 0, filter: "blur(3px)" }
+        : { transform: "translateY(0) scale(1)", opacity: 1, filter: "blur(0px)" };
+
   return (
-    <span
-      className={`inline-flex items-center gap-1.5 overflow-hidden align-middle ${className}`}
-    >
+    <span className={`inline-flex items-center gap-1.5 overflow-hidden align-middle ${className}`}>
       <span
         key={index}
-        className="inline-flex items-center gap-1.5 transition-all duration-300 ease-in"
+        className="inline-flex items-center gap-1.5 will-change-transform"
         style={{
-          transform: flying ? "translateY(-14px)" : "translateY(0)",
-          opacity: flying ? 0 : 1,
+          ...style,
+          transition:
+            "transform 0.65s cubic-bezier(.22,1,.36,1), opacity 0.55s ease, filter 0.55s ease",
         }}
       >
         <svg
