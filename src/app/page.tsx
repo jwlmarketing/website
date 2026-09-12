@@ -381,9 +381,9 @@ export default function Home() {
           <Image
             src="/images/jwl-consultante-seo-facteurs-visibilite.png"
             alt="JWL Marketing - facteurs de visibilité SEO"
-            width={280}
-            height={340}
-            className="h-auto w-[220px] shrink-0 object-contain md:w-[280px]"
+            width={237}
+            height={421}
+            className="h-auto w-[240px] shrink-0 object-contain md:w-[320px]"
           />
           <div className="w-full rounded-2xl border border-[#c9846f]/40 bg-[#141414] p-8 text-left text-white">
             <p className="mb-3 hidden text-2xl italic text-[#c9846f] md:block">
@@ -398,26 +398,6 @@ export default function Home() {
               ))}
             </ul>
           </div>
-        </div>
-
-        <div className="mx-auto my-10 w-full max-w-[1000px] px-5 text-center md:my-[60px]">
-          <h3 className="font-heading text-2xl leading-[1.3] md:text-4xl">
-            Alors, combien de temps pour atteindre la{" "}
-            <span className="italic text-[#c9846f]">première page Google</span> ?
-          </h3>
-          <p className="mx-auto mt-5 max-w-[820px] text-[15px] leading-relaxed text-[#555]">
-            Te donner une date précise sans analyser ton activité reviendrait
-            à te promettre une date pour devenir riche sans connaître ton
-            projet, ton marché ou les actions que tu es prêt à mettre en
-            place. Chaque entreprise est différente. Certaines obtiennent
-            leurs premiers résultats en quelques semaines. D&apos;autres
-            nécessitent plusieurs mois de travail pour rattraper des
-            concurrents déjà bien implantés. Je suis consultante SEO et
-            experte en acquisition client. Mon rôle est de construire une
-            stratégie adaptée à ton activité, d&apos;identifier les leviers
-            les plus rentables et de mettre en place les actions qui te
-            rapprocheront durablement de la première page Google.
-          </p>
         </div>
 
         <SectionHeading
