@@ -355,9 +355,11 @@ export default function Home() {
         </EscalierReveal>
       </section>
 
-      {/* Nos accompagnements */}
+      {/* Comment JWL Marketing peut t'aider ? */}
       <section className="px-[5%] py-16 text-center">
-        <SectionHeading title="Nos accompagnements" />
+        <SectionHeading title="Comment JWL Marketing" /> 
+</span> 
+<SectionHeading title="peut t'aider ?" />
         <AccompagnementsSection />
       </section>
 
