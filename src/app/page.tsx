@@ -6,6 +6,7 @@ import YoutubeLite from "@/components/YoutubeLite";
 import VisibilityChart from "@/components/VisibilityChart";
 import SectionHeading from "@/components/SectionHeading";
 import GoogleColors from "@/components/GoogleColors";
+import RotatingKeyword from "@/components/RotatingKeyword";
 import ClientResultsWidget from "@/components/ClientResultsWidget";
 import { REVIEWS } from "@/data/reviews";
 import ReviewCard from "@/components/ReviewCard";
@@ -365,13 +366,13 @@ export default function Home() {
 
         <div className="mx-auto mt-10 flex max-w-[700px] flex-col items-center gap-2">
           <GoogleColors />
-          <div className="flex w-full items-center gap-3 rounded-full border border-[#e0e0e0] bg-white px-6 py-4 shadow-sm">
-            <span className="text-[#999]">🔍</span>
-            <p className="truncate text-left text-sm text-[#333] md:text-base">
-              <span className="font-semibold text-[#c9846f]">
-                électricien / plombier / robe rouge
-              </span>{" "}
-              / costume enfant à Aix-en-Provence
+          <div className="flex w-full items-center gap-2 rounded-full border border-[#e0e0e0] bg-white px-6 py-4 shadow-sm">
+            <p className="flex min-w-0 flex-1 items-center gap-1.5 text-left text-sm text-[#333] md:text-base">
+              <RotatingKeyword
+                className="font-semibold text-[#c9846f]"
+                words={["électricien", "plombier", "robe rouge", "costume enfant"]}
+              />
+              <span className="truncate">à Aix-en-Provence</span>
             </p>
           </div>
         </div>
