@@ -72,7 +72,7 @@ export default function NewsletterCta() {
                   ? "So, when are you committing to your business in Paris?"
                   : isMarseille
                     ? "So, when are you committing to your business in Marseille?"
-                    : "Can't wait to see your career take off!"
+                    : "Ready to turn your website into a customer machine?"
             : isQuiSuisJe
               ? "Et toi? Quand est ce que tu t'engages pour ton Business sur Aix?"
               : isNice
@@ -81,7 +81,7 @@ export default function NewsletterCta() {
                   ? "Et toi? Quand est ce que tu t'engages pour ton Business sur Paris?"
                   : isMarseille
                     ? "Et toi? Quand est ce que tu t'engages pour ton Business sur Marseille?"
-                    : "Hâte de voir votre carrière décollée !"}
+                    : "Prêt à transformer ton site web en machine à clients ?"}
         </h2>
         <form
           onSubmit={handleSubmit}
