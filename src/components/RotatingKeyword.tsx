@@ -6,10 +6,14 @@ export default function RotatingKeyword({
   words,
   className = "",
   interval = 2200,
+  showIcon = true,
+  startDelay = 0,
 }: {
   words: string[];
   className?: string;
   interval?: number;
+  showIcon?: boolean;
+  startDelay?: number;
 }) {
   const [index, setIndex] = useState(0);
   // "idle" | "out" | "in"
@@ -18,8 +22,9 @@ export default function RotatingKeyword({
   useEffect(() => {
     let outTimer: ReturnType<typeof setTimeout> | undefined;
     let inTimer: ReturnType<typeof setTimeout> | undefined;
+    let id: ReturnType<typeof setInterval> | undefined;
 
-    const id = setInterval(() => {
+    const tick = () => {
       setPhase("out");
       outTimer = setTimeout(() => {
         setIndex((i) => (i + 1) % words.length);
@@ -33,14 +38,19 @@ export default function RotatingKeyword({
           });
         });
       }, 550);
-    }, interval);
+    };
+
+    const startTimer = setTimeout(() => {
+      id = setInterval(tick, interval);
+    }, startDelay);
 
     return () => {
-      clearInterval(id);
+      clearTimeout(startTimer);
+      if (id) clearInterval(id);
       clearTimeout(outTimer);
       clearTimeout(inTimer);
     };
-  }, [words.length, interval]);
+  }, [words.length, interval, startDelay]);
 
   const style =
     phase === "out"
@@ -60,19 +70,21 @@ export default function RotatingKeyword({
             "transform 0.65s cubic-bezier(.22,1,.36,1), opacity 0.55s ease, filter 0.55s ease",
         }}
       >
-        <svg
-          width="14"
-          height="14"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2.5"
-          className="shrink-0"
-          aria-hidden
-        >
-          <circle cx="11" cy="11" r="7" />
-          <path d="m21 21-4.35-4.35" />
-        </svg>
+        {showIcon && (
+          <svg
+            width="14"
+            height="14"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2.5"
+            className="shrink-0"
+            aria-hidden
+          >
+            <circle cx="11" cy="11" r="7" />
+            <path d="m21 21-4.35-4.35" />
+          </svg>
+        )}
         {words[index]}
       </span>
     </span>

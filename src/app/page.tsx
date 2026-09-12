@@ -15,6 +15,7 @@ import EscalierReveal from "@/components/EscalierReveal";
 import TypewriterText from "@/components/TypewriterText";
 import TrustedPartners from "@/components/TrustedPartners";
 import LanguageToggle from "@/components/LanguageToggle";
+import AccompagnementsSection from "@/components/AccompagnementsSection";
 
 const METHODE_STEPS = [
   {
@@ -56,50 +57,6 @@ const METHODE_STEPS = [
     ],
     cta: "En savoir plus",
     href: "/audit-seo-aix-en-provence",
-  },
-];
-
-const ACCOMPAGNEMENTS = [
-  {
-    image: "/images/jwl-creation-site-web-aix-en-provence.png",
-    badge: "Nouveau",
-    title: (
-      <>
-        Je crée ou refonds ton site web visible par <GoogleColors />
-      </>
-    ),
-    text: "Création ou refonte, SEO intégré, Google Business Profile et accompagnement stratégique pour développer ton activité.",
-    star: "Audit stratégique offert pour tout accompagnement annuel",
-    cta: "Obtenir mon audit offert",
-    href: "/site-internet-aix-en-provence",
-    ctaStyle: "terracotta" as const,
-  },
-  {
-    image: "/images/jwl-formation-redaction-seo-blog.png",
-    title: "Je te forme à la rédaction SEO pour ton blog",
-    text: "Rédige, publie plus vite, et sois plus visible. Apprends à optimiser ton blog grâce aux méthodes SEO, aux outils d'analyse et à l'IA (ChatGPT, Claude).",
-    star: "Forme-toi au SEO, au GEO et à la rédaction web pour attirer plus de visiteurs et gagner en autonomie.",
-    cta: "voir la formation",
-    href: "/tarifs",
-    ctaStyle: "gold" as const,
-  },
-  {
-    image: "/images/jwl-clarifier-positionnement-entreprise.png",
-    title: "Je clarifie ton positionnement",
-    text: "Pour les entreprises qui ne savent pas encore comment se positionner ou vendre.",
-    star: "Audit stratégique offert pour tout accompagnement annuel",
-    cta: "Découvrir l'accompagnement",
-    href: "/entrepreneur-aix-en-provence",
-    ctaStyle: "terracotta" as const,
-  },
-  {
-    image: "/images/jwl-developpement-prospection-commerciale.png",
-    title: "Je développe ta prospection commerciale",
-    text: "Représentation sur salons et événements.",
-    star: "Audit stratégique offert pour tout accompagnement annuel",
-    cta: "Découvrir l'accompagnement",
-    href: "/developpement-commercial-aix-en-provence",
-    ctaStyle: "terracotta" as const,
   },
 ];
 
@@ -238,9 +195,49 @@ export default function Home() {
             <p className="flex min-w-0 flex-1 items-center gap-1.5 text-left text-sm text-[#333] md:text-base">
               <RotatingKeyword
                 className="font-semibold text-[#c9846f]"
-                words={["électricien", "plombier", "robe rouge", "costume enfant"]}
+                interval={1900}
+                words={[
+                  "électricien",
+                  "plombier",
+                  "robe rouge",
+                  "costume enfant",
+                  "consultant SEO",
+                  "avocat",
+                  "coach sportif",
+                  "boulangerie",
+                  "agence immobilière",
+                  "dentiste",
+                  "restaurant",
+                  "fleuriste",
+                  "garagiste",
+                  "coiffeur",
+                  "kinésithérapeute",
+                  "expert-comptable",
+                  "photographe",
+                  "traiteur",
+                ]}
               />
-              <span className="truncate">à Aix-en-Provence</span>
+              <span className="shrink-0">à</span>
+              <RotatingKeyword
+                className="truncate"
+                showIcon={false}
+                interval={1900}
+                startDelay={950}
+                words={[
+                  "Aix-en-Provence",
+                  "Marseille",
+                  "Nice",
+                  "Paris",
+                  "Montpellier",
+                  "Bordeaux",
+                  "Toulouse",
+                  "Lyon",
+                  "Nantes",
+                  "Lille",
+                  "Strasbourg",
+                  "Grenoble",
+                ]}
+              />
             </p>
           </div>
         </div>
@@ -361,44 +358,7 @@ export default function Home() {
       {/* Nos accompagnements */}
       <section className="px-[5%] py-16 text-center">
         <SectionHeading title="Nos accompagnements" />
-        <EscalierReveal
-          className="mx-auto grid max-w-[1200px] gap-8 md:grid-cols-2"
-          itemClassName="relative flex flex-col pt-14"
-        >
-          {ACCOMPAGNEMENTS.map((item, i) => (
-            <div key={i} className="relative flex flex-col pt-14">
-              <Image
-                src={item.image}
-                alt={typeof item.title === "string" ? item.title : "JWL Marketing"}
-                width={220}
-                height={220}
-                className="absolute -top-2 right-6 h-[140px] w-[140px] rotate-3 rounded-xl object-cover shadow-lg md:h-[160px] md:w-[160px]"
-              />
-              {item.badge && (
-                <span className="absolute right-[150px] top-2 -rotate-6 rounded-full bg-gold px-4 py-2 text-xs font-bold text-white shadow-md md:right-[170px]">
-                  {item.badge}
-                </span>
-              )}
-              <div className="flex flex-1 flex-col rounded-2xl border border-[#c9846f]/40 bg-[#141414] p-8 pt-10 text-left text-white">
-                <h3 className="pr-32 font-heading text-xl leading-snug md:pr-36">
-                  {item.title}
-                </h3>
-                <p className="mt-4 text-sm text-white/85">{item.text}</p>
-                <p className="mt-4 text-sm text-gold">⭐ {item.star}</p>
-                <Link
-                  href={item.href}
-                  className={`mt-6 inline-block self-start rounded-full px-6 py-3 text-sm font-medium text-white transition-colors ${
-                    item.ctaStyle === "gold"
-                      ? "bg-gold hover:bg-[#b8952f]"
-                      : "bg-[#c9846f] hover:bg-[#b8735f]"
-                  }`}
-                >
-                  {item.cta}
-                </Link>
-              </div>
-            </div>
-          ))}
-        </EscalierReveal>
+        <AccompagnementsSection />
       </section>
 
       {/* Ta visibilité n'est pas une question de hasard */}
