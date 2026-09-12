@@ -689,6 +689,13 @@ export default function Home() {
             </li>
           </ul>
         </div>
+        <Image
+          src="/images/jwl-et-apres-jwl-marketing.png"
+          alt="JWL Marketing - on poursuit l'aventure ensemble"
+          width={900}
+          height={450}
+          className="mx-auto mt-8 h-auto w-full max-w-[500px] object-contain"
+        />
       </section>
 
       {/* Témoignages */}
