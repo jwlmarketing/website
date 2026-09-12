@@ -190,10 +190,12 @@ export default function Home() {
         </h2>
 
         <div className="mx-auto mt-10 max-w-[900px] rounded-2xl bg-black p-8 md:p-12">
-          <div className="mx-auto flex max-w-[700px] flex-col items-center gap-2">
-            <GoogleColors />
-            <div className="flex w-full items-center gap-2 rounded-full border border-white/15 bg-white/5 px-6 py-4">
-              <p className="flex min-w-0 flex-1 items-center gap-1.5 text-left text-sm text-white md:text-base">
+          <div className="mx-auto flex max-w-[700px] flex-col items-center gap-3">
+            <span className="text-3xl md:text-4xl">
+              <GoogleColors />
+            </span>
+            <div className="flex w-full items-center gap-2 rounded-full border border-[#e0e0e0] bg-white px-6 py-4 shadow-sm">
+              <p className="flex min-w-0 flex-1 items-center gap-1.5 text-left text-sm text-[#333] md:text-base">
                 <RotatingKeyword
                   className="font-semibold text-[#c9846f]"
                   interval={1900}
