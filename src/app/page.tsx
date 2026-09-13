@@ -98,7 +98,7 @@ export default function Home() {
           <h1 className="m-0 mb-1 font-heading text-4xl leading-[1.15] text-black lg:text-[60px] lg:leading-[1.2]">
             <span>Créez un site web conçu pour</span>{" "}
             <span className="font-heading italic text-[#c9846f]">
-              attirer des prospects et développer votre activité
+              attirer des prospects !
             </span>
           </h1>
           <p className="mt-2.5 text-sm leading-relaxed text-[#333]">
