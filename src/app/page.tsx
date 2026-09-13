@@ -111,13 +111,6 @@ export default function Home() {
             </span>
           </h1>
 
-          <p className="mt-4 text-sm italic leading-relaxed text-[#666]">
-            Ancienne commerciale au sein du groupe IAC (Meetic, TripAdvisor,
-            Travaux.com), j&apos;applique au digital les mêmes principes qui
-            font vendre sur le terrain : comprendre son marché, se
-            différencier et convertir.
-          </p>
-
           <div className="mt-6 flex flex-wrap gap-[15px]">
             <a
               href="tel:0783792814"
@@ -176,6 +169,10 @@ export default function Home() {
           Quand un client recherche ton métier,{" "}
           <span className="italic text-[#c9846f]">apparais-tu</span> ?
         </h2>
+        <p className="mx-auto mt-3 max-w-[700px] text-base text-[#555] md:text-lg">
+          Google attire l&apos;attention. Ton site crée la confiance. Ta
+          stratégie transforme les visiteurs en clients.
+        </p>
 
         <div className="mx-auto mt-10 max-w-[900px] rounded-2xl bg-black p-8 md:p-12">
           <div className="mx-auto flex max-w-[700px] flex-col items-center gap-3">
@@ -281,6 +278,12 @@ export default function Home() {
             grâce à <GoogleColors />
             <span className="text-black">?</span>
           </h2>
+          <p className="mx-auto mt-6 max-w-[480px] text-sm leading-relaxed text-[#666]">
+            Ancienne commerciale au sein du groupe IAC (Meetic, TripAdvisor,
+            Travaux.com), j&apos;applique au digital les mêmes principes qui
+            font vendre sur le terrain : comprendre son marché, se
+            différencier et convertir.
+          </p>
         </div>
       </section>
 
@@ -358,13 +361,47 @@ export default function Home() {
 
         <div className="mx-auto flex max-w-[1200px] flex-col items-center justify-center gap-10 md:flex-row">
           <VisibilityChart />
-          <span className="block max-w-[300px] shrink-0 text-left text-black">
-            1. Être trouvée
-            <br />
-            2. Être comprise
-            <br />
-            3. Être choisie
+          <span className="block max-w-[300px] shrink-0 text-left text-lg italic text-[#c9846f]">
+            Elle grandit grâce aux clients que ton site web génère.
           </span>
+        </div>
+
+        <div className="mx-auto mt-10 max-w-[900px] rounded-2xl bg-[#141414] p-8 text-left text-white md:p-10">
+          <p className="leading-relaxed text-white/85">
+            Mon métier ne se limite pas à la création de sites web. Il
+            consiste à t&apos;aider à{" "}
+            <strong className="text-white">
+              construire un véritable écosystème digital pour développer ton
+              activité et attirer de nouveaux clients.
+            </strong>
+          </p>
+          <p className="mt-4 leading-relaxed text-white/85">
+            <strong className="text-white">
+              Mon rôle est de créer un lien entre ton quotidien
+              d&apos;entrepreneur et les outils digitaux.
+            </strong>{" "}
+            Que ce soit lors de tes actions de prospection, de ta
+            participation à des salons professionnels ou de ton activité sur
+            le terrain,{" "}
+            <strong className="text-white">
+              l&apos;objectif est de faire en sorte que ton entreprise
+              continue d&apos;être visible et de générer des opportunités,
+              même lorsque tu n&apos;es pas derrière ton écran.
+            </strong>
+          </p>
+          <p className="mt-4 leading-relaxed text-white/85">
+            <strong className="text-white">
+              Pour cela j&apos;utilise des outils digitaux les plus adaptés à
+              ton activité
+            </strong>{" "}
+            : site web optimisé, référencement naturel (SEO), fiche Google,
+            contenus, articles, blog, IA, et autres leviers de visibilité.{" "}
+            <strong className="text-white">
+              Chaque action est pensée pour renforcer ta présence en ligne,
+              développer ta crédibilité et favoriser l&apos;acquisition de
+              nouveaux clients.
+            </strong>
+          </p>
         </div>
 
         {/* Mais de résultat */}
@@ -381,7 +418,7 @@ export default function Home() {
             <p className="mb-3 hidden text-2xl italic text-[#c9846f] md:block">
               Mais de résultat :
             </p>
-            <h3 className="font-heading text-lg font-semibold">
+            <h3 className="font-heading text-lg font-semibold text-gold">
               Le SEO dépend de nombreux facteurs
             </h3>
             <ul className="mt-4 space-y-1.5 text-sm text-white/85">
