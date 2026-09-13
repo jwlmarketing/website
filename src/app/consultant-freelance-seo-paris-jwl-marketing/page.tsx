@@ -254,7 +254,7 @@ export default function Page() {
             </p>
             <p className="mt-4">
               Avant de prendre une décision, ils effectuent souvent plusieurs
-              recherches sur <GoogleColors /> afin de comparer les entreprises et les
+              recherches sur <GoogleColors />{" "}afin de comparer les entreprises et les
               solutions disponibles. Dans ce contexte, mon rôle consiste à
               faire en sorte que ton entreprise fasse partie des solutions
               qu&apos;ils découvrent au bon moment. L&apos;objectif est
@@ -416,7 +416,7 @@ export default function Page() {
           <div className="h-full border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
             <p>
               À Paris, être excellent dans son métier ne garantit pas
-              d&apos;être trouvé. En effet, <GoogleColors /> doit comprendre ce que tu
+              d&apos;être trouvé. En effet, <GoogleColors />{" "}doit comprendre ce que tu
               fais, à qui tu t&apos;adresses et pourquoi un prospect devrait
               te choisir plutôt qu&apos;une autre entreprise.
             </p>
@@ -453,7 +453,7 @@ export default function Page() {
             <p>
               Aujourd&apos;hui, avant un appel, une visite ou une demande de
               devis, de nombreux prospects effectuent plusieurs recherches
-              sur <GoogleColors /> afin de comparer les solutions disponibles.
+              sur <GoogleColors />{" "}afin de comparer les solutions disponibles.
             </p>
             <p className="mt-4">
               Dans ce contexte, être visible au bon moment devient un

@@ -220,8 +220,8 @@ export default function Page() {
           <div className="space-y-5 self-center border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
             <p>
               In Marseille, your network still matters. But it's not always
-              enough anymore. Today, a large part of decisions starts on
-              <GoogleColors />.
+              enough anymore. Today, a large part of decisions starts on{" "}
+<GoogleColors />.
             </p>
             <p>
               Consumers search, compare and shortlist several businesses
@@ -270,7 +270,7 @@ export default function Page() {
         <StepNumber n={2} />
         <h3 className="mt-4 text-center font-heading text-3xl leading-tight md:text-[54px] text-black">
           <span className="italic text-[#c9846f]">
-            I analyse <GoogleColors /> searches
+            I analyse <GoogleColors />{" "}searches
           </span>{" "}
           <span className="font-medium">made by real users.</span>
         </h3>
@@ -315,7 +315,7 @@ export default function Page() {
             <div className="border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
               <p>
                 In Marseille, people often check several businesses before
-                making a choice. Your <GoogleColors /> listing is often the first
+                making a choice. Your <GoogleColors />{" "}listing is often the first
                 contact with a future client.
               </p>
               <p className="mt-4">
@@ -396,14 +396,14 @@ export default function Page() {
           <div className="self-center border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
             <p>
               In Marseille, being good at your craft isn't always enough
-              to be found. <GoogleColors /> needs to understand what you do, who you
+              to be found. <GoogleColors />{" "}needs to understand what you do, who you
               serve and why a prospect should choose you.
             </p>
             <p className="mt-4">
               I analyse your market, your competitors and the searches
               made by your future clients to build a strategy capable of
               attracting qualified prospects. Because an invisible website
-              sells nothing. A website <GoogleColors /> understands can become a
+              sells nothing. A website <GoogleColors />{" "}understands can become a
               genuine business driver.
             </p>
           </div>
@@ -444,7 +444,7 @@ export default function Page() {
             </p>
             <p className="mt-4">
               Before a call, a visit or a quote request, many prospects run
-              a <GoogleColors /> search. If your business doesn't show up at the
+              a <GoogleColors />{" "}search. If your business doesn't show up at the
               right time, it's often your competitors who pick up those
               opportunities.
             </p>

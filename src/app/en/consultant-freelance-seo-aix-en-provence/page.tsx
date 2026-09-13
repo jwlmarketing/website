@@ -127,7 +127,7 @@ export default function QuiSuisJe() {
               With over 10 years of experience in business development,
               including 4 years at the American group IAC, I understand what
               a business needs: attracting clients, convincing them and
-              keeping them. Trained by a former <GoogleColors /> employee, Sylvie
+              keeping them. Trained by a former <GoogleColors />{" "}employee, Sylvie
               Grézaud, I work across an entire digital project: showcase
               sites, e-commerce sites, landing pages, content strategy, blog
               articles, product sheets, SEO optimisation and visibility
@@ -296,7 +296,7 @@ export default function QuiSuisJe() {
         <StepNumber n={2} />
         <h3 className="mt-4 text-center font-heading text-3xl leading-tight md:text-[54px] text-black">
           <span className="italic text-[#c9846f]">
-            I study <GoogleColors /> searches
+            I study <GoogleColors />{" "}searches
           </span>{" "}
           <span className="font-medium">made by real users.</span>
         </h3>
@@ -311,7 +311,7 @@ export default function QuiSuisJe() {
           <div className="h-full border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
             <p>
               Hiring an SEO consultant in Aix-en-Provence isn't about
-              chasing the top spot on <GoogleColors /> at any cost. It's about
+              chasing the top spot on <GoogleColors />{" "}at any cost. It's about
               building a machine capable of attracting the right prospects
               at the right time. With 10 years of sales experience,
               including 4 years at IAC (Travaux.com), the undisputed global
@@ -333,7 +333,7 @@ export default function QuiSuisJe() {
               as many calls and quote requests as possible. I support
               independent professionals, craftsmen and SMEs in
               Aix-en-Provence who refuse to just make up the numbers and
-              want to turn <GoogleColors /> into their best online salesperson.
+              want to turn <GoogleColors />{" "}into their best online salesperson.
             </p>
           </div>
         </div>
@@ -350,7 +350,7 @@ export default function QuiSuisJe() {
           <div>
             <div className="border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
               <p>
-                Your <GoogleColors /> listing is often the first point of contact
+                Your <GoogleColors />{" "}listing is often the first point of contact
                 with a future client. I optimise it so it inspires trust,
                 ranks higher in local searches and generates more calls,
                 visits and quote requests. I work on every detail:
@@ -402,8 +402,7 @@ export default function QuiSuisJe() {
               delivery, you receive a PDF certification detailing the
               technical optimisations carried out and the best practices
               applied. The goal is to provide you with a site that's fast,
-              secure, scalable and built from the start with <GoogleColors />
-              visibility in mind.
+              secure, scalable and built from the start with <GoogleColors />{" "}visibility in mind.
             </p>
             <Link
               href="/en/site-internet-aix-en-provence"
@@ -482,7 +481,7 @@ export default function QuiSuisJe() {
             <p>
               In Aix-en-Provence, the digital market is accelerating.
               Independent professionals, shopkeepers and SMEs keep growing
-              in number… and <GoogleColors /> visibility has become a real matter of
+              in number… and <GoogleColors />{" "}visibility has become a real matter of
               survival. Not just against local competitors, but also
               against agencies offering standardised services, freelancers
               who deliver a one-off PDF audit with no follow-up, and
@@ -490,7 +489,7 @@ export default function QuiSuisJe() {
               Aix-en-Provence has a dense and varied economic fabric:
               traditional soap makers, high-tech companies, calisson
               makers, restaurateurs, artisan bakeries, self-employed
-              professionals... So many sectors where <GoogleColors /> is the first
+              professionals... So many sectors where <GoogleColors />{" "}is the first
               point of contact.
             </p>
           </div>

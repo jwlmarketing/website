@@ -121,8 +121,8 @@ export default function Page() {
           <div className="rounded-2xl bg-[#141414] p-8 text-white">
             <p className="text-[15px] leading-[25.5px]">
               <span className="font-bold">Ma mission : </span>
-              aider les entreprises de Nice à attirer plus de clients grâce à
-              <GoogleColors />. Entre le Vieux-Nice, la Promenade des Anglais,
+              aider les entreprises de Nice à attirer plus de clients grâce à{" "}
+<GoogleColors />. Entre le Vieux-Nice, la Promenade des Anglais,
               l&apos;aéroport international et les nombreux quartiers
               d&apos;affaires, Nice attire chaque année des milliers de
               consommateurs, touristes et professionnels.
@@ -130,10 +130,10 @@ export default function Page() {
             <p className="mt-4 text-[15px] leading-[25.5px]">
               Encore faut-il qu&apos;ils trouvent ton entreprise. Grâce à mon
               expertise en développement commercial et en référencement
-              naturel, je t&apos;aide à construire une visibilité durable sur
-              <GoogleColors /> et à transformer cette visibilité en demandes de contact.
-              Mon objectif n&apos;est pas simplement de te faire apparaître sur
-              <GoogleColors />. Mon objectif est de t&apos;aider à être choisi.
+              naturel, je t&apos;aide à construire une visibilité durable sur{" "}
+<GoogleColors />{" "}et à transformer cette visibilité en demandes de contact.
+              Mon objectif n&apos;est pas simplement de te faire apparaître sur{" "}
+<GoogleColors />. Mon objectif est de t&apos;aider à être choisi.
             </p>
           </div>
           <div className="text-center">
@@ -295,9 +295,9 @@ export default function Page() {
             <p>
               Un emplacement en or sur la Promenade des Anglais, ce n&apos;est
               plus une garantie de clients. Aujourd&apos;hui, 83% des Français
-              se renseignent sur <GoogleColors /> avant d&apos;acheter, même pour une
+              se renseignent sur <GoogleColors />{" "}avant d&apos;acheter, même pour une
               simple sortie au restaurant. Rien que le mot-clé « restaurant
-              Nice » génère 50 000 recherches <GoogleColors /> par mois et « hôtel Nice »
+              Nice » génère 50 000 recherches <GoogleColors />{" "}par mois et « hôtel Nice »
               tout autant.
             </p>
             <p className="mt-4">
@@ -325,7 +325,7 @@ export default function Page() {
               <p>
                 Dans une ville aussi dynamique que Nice, tes futurs clients
                 comparent souvent plusieurs entreprises avant de prendre une
-                décision. Ta fiche <GoogleColors /> joue alors un rôle essentiel dans
+                décision. Ta fiche <GoogleColors />{" "}joue alors un rôle essentiel dans
                 cette première impression.
               </p>
               <p className="mt-4">

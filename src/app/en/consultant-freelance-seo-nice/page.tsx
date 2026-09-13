@@ -121,8 +121,8 @@ export default function Page() {
           <div className="rounded-2xl bg-[#141414] p-8 text-white">
             <p className="text-[15px] leading-[25.5px]">
               <span className="font-bold">My mission: </span>
-              helping businesses in Nice attract more clients through
-              <GoogleColors />. Between Vieux-Nice, the Promenade des Anglais, the
+              helping businesses in Nice attract more clients through{" "}
+<GoogleColors />. Between Vieux-Nice, the Promenade des Anglais, the
               international airport and the many business districts, Nice
               attracts thousands of consumers, tourists and professionals
               every year.
@@ -130,9 +130,9 @@ export default function Page() {
             <p className="mt-4 text-[15px] leading-[25.5px]">
               But they still need to find your business. Thanks to my
               expertise in business development and SEO, I help you build
-              lasting visibility on <GoogleColors /> and turn that visibility into
-              enquiries. My goal isn't simply to get you to appear on
-              <GoogleColors />. My goal is to help you get chosen.
+              lasting visibility on <GoogleColors />{" "}and turn that visibility into
+              enquiries. My goal isn't simply to get you to appear on{" "}
+<GoogleColors />. My goal is to help you get chosen.
             </p>
           </div>
           <div className="text-center">
@@ -236,7 +236,7 @@ export default function Page() {
         <StepNumber n={1} />
         <h3 className="mt-4 text-center font-heading text-3xl leading-tight md:text-[54px] text-black">
           <span className="italic text-[#c9846f]">
-            I understand <GoogleColors /> searches
+            I understand <GoogleColors />{" "}searches
           </span>{" "}
           <span className="font-medium">made by real users.</span>
         </h3>
@@ -292,8 +292,8 @@ export default function Page() {
           <div className="h-full border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
             <p>
               A prime location on the Promenade des Anglais is no longer a
-              guarantee of clients. Today, 83% of French people research on
-              <GoogleColors /> before buying, even for a simple night out at a
+              guarantee of clients. Today, 83% of French people research on{" "}
+<GoogleColors />{" "}before buying, even for a simple night out at a
               restaurant. The keyword "restaurant Nice" alone gets 50,000
               Google searches a month, and "hôtel Nice" just as many.
             </p>
@@ -321,8 +321,8 @@ export default function Page() {
             <div className="mt-4 border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
               <p>
                 In a city as dynamic as Nice, your future clients often
-                compare several businesses before making a decision. Your
-                <GoogleColors /> listing plays an essential role in that first
+                compare several businesses before making a decision. Your{" "}
+<GoogleColors />{" "}listing plays an essential role in that first
                 impression.
               </p>
               <p className="mt-4">
@@ -444,7 +444,7 @@ export default function Page() {
             </p>
             <p className="mt-4">
               And before walking into a business, many consumers now start
-              with a <GoogleColors /> search. Being visible at the right time can
+              with a <GoogleColors />{" "}search. Being visible at the right time can
               make all the difference between a won opportunity and a
               client lost to a competitor.
             </p>
@@ -516,7 +516,7 @@ export default function Page() {
           <p className="mt-3">
             Restaurants, local shops, real estate agencies, self-employed
             professionals, craftsmen or service businesses: most client
-            journeys now start with a <GoogleColors /> search. Being visible isn't
+            journeys now start with a <GoogleColors />{" "}search. Being visible isn't
             enough anymore. You need to be found before the others.
           </p>
         </div>

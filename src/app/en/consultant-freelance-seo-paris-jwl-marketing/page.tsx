@@ -225,8 +225,7 @@ export default function Page() {
               most sectors, your future clients are spoilt for choice.
             </p>
             <p>
-              Before contacting a business, they often run several <GoogleColors />
-              searches. My role is to make sure your business is one of
+              Before contacting a business, they often run several <GoogleColors />{" "}searches. My role is to make sure your business is one of
               the solutions they discover at the right time.
             </p>
           </div>
@@ -248,8 +247,7 @@ export default function Page() {
               choice.
             </p>
             <p className="mt-4">
-              Before making a decision, they often run several <GoogleColors />
-              searches to compare businesses and available solutions. In
+              Before making a decision, they often run several <GoogleColors />{" "}searches to compare businesses and available solutions. In
               this context, my role is to make sure your business is one
               of the solutions they discover at the right time. The goal
               is simple: to be there when a prospect is ready to act.
@@ -270,7 +268,7 @@ export default function Page() {
         <StepNumber n={2} />
         <h3 className="mt-4 text-center font-heading text-3xl leading-tight md:text-[54px] text-black">
           <span className="italic text-[#c9846f]">
-            I analyse <GoogleColors /> searches
+            I analyse <GoogleColors />{" "}searches
           </span>{" "}
           <span className="font-medium">made by real users.</span>
         </h3>
@@ -326,8 +324,8 @@ export default function Page() {
               <p className="mt-4">
                 That's why I optimise the elements that really influence
                 the decision: categories, services, photos, reviews,
-                practical information and consistency of your presence on
-                <GoogleColors />. The goal isn't just to appear on <GoogleColors />. It's also
+                practical information and consistency of your presence on{" "}
+<GoogleColors />. The goal isn't just to appear on <GoogleColors />. It's also
                 to reassure people about your credibility and make them
                 want to choose you over another business.
               </p>
@@ -405,7 +403,7 @@ export default function Page() {
           <div className="h-full border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
             <p>
               In Paris, being excellent at your craft doesn't guarantee
-              you'll be found. <GoogleColors /> needs to understand what you do, who
+              you'll be found. <GoogleColors />{" "}needs to understand what you do, who
               you serve and why a prospect should choose you over another
               business.
             </p>
@@ -440,7 +438,7 @@ export default function Page() {
           <div className="h-full border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
             <p>
               Today, before a call, a visit or a quote request, many
-              prospects run several <GoogleColors /> searches to compare available
+              prospects run several <GoogleColors />{" "}searches to compare available
               solutions.
             </p>
             <p className="mt-4">

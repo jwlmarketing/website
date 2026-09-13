@@ -102,8 +102,9 @@ export default function Home() {
             </span>
           </h1>
           <p className="mt-2.5 text-sm leading-relaxed text-[#333]">
-            Sais-tu combien de prospects découvrent ton entreprise grâce à
-            <GoogleColors /> ? Peux-tu mesurer le nombre de clics, d&apos;appels ou de
+            Sais-tu combien de prospects découvrent ton entreprise grâce à{" "}
+            <GoogleColors />
+            {" "}? Peux-tu mesurer le nombre de clics, d&apos;appels ou de
             contacts générés par ta présence en ligne ?
           </p>
 
@@ -161,7 +162,7 @@ export default function Home() {
           <span className="italic text-[#c9846f]">apparais-tu</span> ?
         </h2>
         <p className="mx-auto mt-3 max-w-[700px] text-base text-[#555] md:text-lg">
-          <GoogleColors /> attire l&apos;attention. Ton site crée la confiance. Ta
+          <GoogleColors />{" "}attire l&apos;attention. Ton site crée la confiance. Ta
           stratégie transforme les visiteurs en clients.
         </p>
 
@@ -229,25 +230,8 @@ export default function Home() {
               </strong>{" "}
               Ils ne connaissent ni ton nom, ni l&apos;existence de ton
               entreprise. Ils recherchent simplement un produit ou un service.
-              Si ton entreprise n&apos;apparaît pas dans les résultats, <GoogleColors />
-              proposera tes concurrents.
-            </p>
-            <p>
-              Les habitudes de recherche évoluent également avec l&apos;arrivée
-              de l&apos;intelligence artificielle.{" "}
-              <strong className="text-white">
-                <GoogleColors /> intègre désormais l&apos;IA dans ses résultats pour
-                répondre plus rapidement aux internautes et mettre en avant les
-                entreprises jugées les plus pertinentes.
-              </strong>
-            </p>
-            <p>
-              Être visible ne consiste plus seulement à avoir un site web.{" "}
-              <strong className="text-white">
-                Il faut aussi proposer un contenu clair, fiable et pertinent
-                pour apparaître dans les recherches <GoogleColors /> d&apos;aujourd&apos;hui
-                et de demain.
-              </strong>
+              Si ton entreprise n&apos;apparaît pas dans les résultats,{" "}
+              <GoogleColors />{" "}proposera tes concurrents.
             </p>
           </div>
         </div>
@@ -396,7 +380,10 @@ export default function Home() {
 
         {/* Mais de résultat */}
         <h3 className="mx-auto mt-16 max-w-[900px] font-heading text-2xl leading-[1.3] text-black md:text-4xl">
-          Les piliers de ton référencement sur lesquels je peux intervenir
+          <span className="italic text-[#c9846f]">
+            Les piliers de ton référencement
+          </span>{" "}
+          sur lesquels je peux intervenir
         </h3>
         <div className="mx-auto mt-8 flex max-w-[1300px] flex-col items-center gap-8 md:flex-row md:items-stretch">
           <p className="text-2xl italic text-[#c9846f] md:hidden">Mais de résultat :</p>

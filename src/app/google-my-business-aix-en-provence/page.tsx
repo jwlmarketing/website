@@ -87,15 +87,16 @@ function PageContent() {
             Pourquoi tes concurrents apparaissent avant toi
           </span>{" "}
           <span className="font-medium">
-            sur <GoogleColors /> ?
+            sur <GoogleColors />
+            {" "}?
           </span>
         </h2>
         <p className="mx-auto mt-6 max-w-[900px] text-left text-[17px] leading-[28px] text-[#1a1a1a]">
-          Une fiche <GoogleColors /> optimisée ne suffit pas toujours pour atteindre la
-          première place. <GoogleColors /> prend aussi en compte l&apos;ancienneté de
+          Une fiche <GoogleColors />{" "}optimisée ne suffit pas toujours pour atteindre la
+          première place. <GoogleColors />{" "}prend aussi en compte l&apos;ancienneté de
           ton entreprise, la régularité de ton activité, tes avis, tes photos
           et les mises à jour de ta fiche. Plus ton profil est actif et
-          inspire confiance dans le temps, plus <GoogleColors /> aura tendance à le
+          inspire confiance dans le temps, plus <GoogleColors />{" "}aura tendance à le
           mettre en avant dans les résultats locaux.
         </p>
       </section>
@@ -123,7 +124,7 @@ function PageContent() {
               tes réalisations et les informations que tu partages.
             </p>
             <p className="mt-4">
-              Une fiche <GoogleColors /> complète et active rassure. Elle montre que
+              Une fiche <GoogleColors />{" "}complète et active rassure. Elle montre que
               ton entreprise est sérieuse, accessible et digne de confiance.
               Dans de nombreux cas, c&apos;est cette première impression qui
               fait la différence entre un prospect qui te contacte et un
@@ -153,10 +154,10 @@ function PageContent() {
         <div className="mt-10 grid items-center gap-8 md:grid-cols-2">
           <div className="text-[17px] leading-[28px] text-[#1a1a1a]">
             <p>
-              Ta fiche <GoogleColors /> est souvent le premier contact entre ton
+              Ta fiche <GoogleColors />{" "}est souvent le premier contact entre ton
               entreprise et tes futurs clients. Une fiche incomplète, mal
               renseignée ou peu active peut limiter ta visibilité locale. À
-              l&apos;inverse, une fiche optimisée aide <GoogleColors /> à mieux
+              l&apos;inverse, une fiche optimisée aide <GoogleColors />{" "}à mieux
               comprendre ton activité et renforce la confiance des personnes
               qui te découvrent.
             </p>
@@ -165,8 +166,8 @@ function PageContent() {
               catégories, services, description, photos, publications, avis
               et informations stratégiques. L&apos;objectif est simple :
               améliorer ta visibilité locale, attirer des prospects qualifiés
-              et transformer les recherches <GoogleColors /> en appels, visites ou
-              demandes de devis. Parce qu&apos;une fiche <GoogleColors /> ne doit pas
+              et transformer les recherches <GoogleColors />{" "}en appels, visites ou
+              demandes de devis. Parce qu&apos;une fiche <GoogleColors />{" "}ne doit pas
               seulement être présente. Elle doit travailler pour ton
               entreprise.
             </p>
@@ -225,7 +226,7 @@ function PageContent() {
             l&apos;aider à identifier ton entreprise, ta localisation, tes
             services et ton expertise.{" "}
             <span className="font-bold">
-              Car avant de te recommander, <GoogleColors /> doit d&apos;abord
+              Car avant de te recommander, <GoogleColors />{" "}doit d&apos;abord
               comprendre qui tu es.
             </span>
           </p>
@@ -249,7 +250,7 @@ function PageContent() {
             interactions et la régularité des avis confirment que ton
             activité est bien réelle.{" "}
             <span className="font-bold">
-              Dans le digital, <GoogleColors /> cherche constamment des preuves du
+              Dans le digital, <GoogleColors />{" "}cherche constamment des preuves du
               monde réel avant de recommander une entreprise.
             </span>
           </p>
@@ -289,7 +290,7 @@ function PageContent() {
           <span className="font-medium">pour prouver à Google que tu es actif</span>
         </h2>
         <p className="mx-auto mt-6 max-w-[900px] text-left text-[17px] leading-[28px] text-[#1a1a1a]">
-          Publier régulièrement du contenu montre à <GoogleColors /> que ton entreprise
+          Publier régulièrement du contenu montre à <GoogleColors />{" "}que ton entreprise
           est vivante. J&apos;écris pour toi des articles optimisés,
           construits autour des recherches réelles de tes futurs clients,
           pour renforcer ta visibilité locale sur la durée.
@@ -302,7 +303,7 @@ function PageContent() {
           <span className="italic text-[#c9846f]">Résultats</span>
           <br />
           <span className="font-medium">
-            <GoogleColors /> et l&apos;IA peuvent te proposer
+            <GoogleColors />{" "}et l&apos;IA peuvent te proposer
           </span>
         </h2>
       </section>

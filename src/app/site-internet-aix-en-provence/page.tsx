@@ -41,7 +41,7 @@ export default function Page() {
           </h1>
           <p className="mt-6 text-base leading-[1.6] text-black">
             Auto-entrepreneurs, micro-entreprises, TPE, PME et dirigeants :
-            développe ta visibilité sur <GoogleColors /> et attire des prospects
+            développe ta visibilité sur <GoogleColors />{" "}et attire des prospects
             qualifiés toute l&apos;année.
           </p>
           <div className="mt-6 flex flex-wrap items-center gap-4">
@@ -331,7 +331,7 @@ export default function Page() {
               Quand tu n&apos;as pas de stratégie.
             </p>
             <p className="mt-2 text-sm italic text-[#7c5fd6]">
-              <GoogleColors /> ne te propose pas aux internautes
+              <GoogleColors />{" "}ne te propose pas aux internautes
               <br />
               Tu as des clics qui correspondent à tes clients
             </p>
@@ -353,7 +353,7 @@ export default function Page() {
               sur ton site web.
             </p>
             <p className="mt-2 text-sm italic text-[#7c5fd6]">
-              Ta courbe monte car <GoogleColors /> te comprend
+              Ta courbe monte car <GoogleColors />{" "}te comprend
               <br />
               Tu as toujours de faibles clics, tu ne convertis pas
             </p>
@@ -371,7 +371,7 @@ export default function Page() {
             className="mt-3 h-auto w-full rounded-2xl border border-[#eee] object-cover"
           />
           <p className="mt-2 text-sm italic text-[#7c5fd6]">
-            <GoogleColors /> te propose sur des mots-clés
+            <GoogleColors />{" "}te propose sur des mots-clés
             <br />
             Tu as des clics des internautes
           </p>

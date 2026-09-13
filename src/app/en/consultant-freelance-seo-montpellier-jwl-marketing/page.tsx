@@ -169,7 +169,7 @@ export default function Page() {
             city's reputation — here it's Place de la Comédie and l'Écusson.
             Make your business a reference on <GoogleColors />. In a dynamic
             metropolis where businesses innovate and competition is strong,
-            being visible on <GoogleColors /> has become a genuine growth lever.
+            being visible on <GoogleColors />{" "}has become a genuine growth lever.
             Having a website isn't enough anymore: you need to show up
             when your future clients are searching for your products or
             services.
@@ -186,11 +186,11 @@ export default function Page() {
             opportunities in your industry, local competition and your
             site's performance. I then optimise the technical side, the
             content, internal linking, local SEO, user experience and
-            every criterion <GoogleColors /> takes into account to durably improve
+            every criterion <GoogleColors />{" "}takes into account to durably improve
             your visibility.
           </p>
           <p>
-            My goal is simple: turn <GoogleColors /> searches into quote requests,
+            My goal is simple: turn <GoogleColors />{" "}searches into quote requests,
             appointments and new clients in Montpellier, across Occitanie
             and anywhere you want to grow your business.
           </p>
@@ -202,14 +202,13 @@ export default function Page() {
           Montpellier attracts new businesses, new talent and new investors
           every year. This dynamic also creates stronger competition. To
           get chosen, a nice website isn't enough anymore. Your future
-          clients also need to be able to find it when they run a <GoogleColors />
-          search.
+          clients also need to be able to find it when they run a <GoogleColors />{" "}search.
         </p>
         <div className="mx-auto mt-6 max-w-[700px] space-y-2 text-left text-[15px] text-[#1a1a1a]">
           <p>
             — Every day, new businesses are trying to gain visibility.
           </p>
-          <p>— The top positions on <GoogleColors /> capture most of the clicks.</p>
+          <p>— The top positions on <GoogleColors />{" "}capture most of the clicks.</p>
           <p>
             — While some wait, their competitors are already building
             their online presence.
@@ -318,8 +317,8 @@ export default function Page() {
       <section className="mx-auto max-w-[900px] px-6 py-10 text-center">
         <p className="text-[17px] leading-[28px] text-[#1a1a1a]">
           Having a strategic location in Montpellier no longer guarantees
-          you'll find new clients. Today, most consumers research on
-          <GoogleColors /> before contacting a professional, booking a table or
+          you'll find new clients. Today, most consumers research on{" "}
+<GoogleColors />{" "}before contacting a professional, booking a table or
           buying a product.
         </p>
         <p className="mt-4 text-[17px] leading-[28px] text-[#1a1a1a]">
@@ -362,8 +361,8 @@ export default function Page() {
           Optimise your Montpellier website with <GoogleColors />, starting now.
         </p>
         <p className="mx-auto mt-6 max-w-[700px] text-[17px] leading-[28px] text-[#1a1a1a]">
-          Your future clients are already searching for your services on
-          <GoogleColors />. Don't let a competitor from l'Écusson, Port Marianne or
+          Your future clients are already searching for your services on{" "}
+<GoogleColors />. Don't let a competitor from l'Écusson, Port Marianne or
           Odysseum grab those requests instead of you.
         </p>
         <a
@@ -372,7 +371,7 @@ export default function Page() {
           rel="noopener"
           className="mt-8 inline-block rounded-full bg-[#c9846f] px-10 py-[15px] font-medium text-white transition-colors hover:bg-[#b8735f]"
         >
-          Ready to give <GoogleColors /> a good reason to recommend your business?
+          Ready to give <GoogleColors />{" "}a good reason to recommend your business?
         </a>
       </section>
     </div>
