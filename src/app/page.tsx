@@ -12,6 +12,7 @@ import { REVIEWS } from "@/data/reviews";
 import ReviewCard from "@/components/ReviewCard";
 import GuaranteesCards from "@/components/GuaranteesCards";
 import EscalierReveal from "@/components/EscalierReveal";
+import FadeUp from "@/components/FadeUp";
 import TypewriterText from "@/components/TypewriterText";
 import TrustedPartners from "@/components/TrustedPartners";
 import SiteHeader from "@/components/SiteHeader";
@@ -157,17 +158,19 @@ export default function Home() {
 
       {/* Quand un client recherche ton métier, apparais-tu ? */}
       <section className="px-[5%] py-16 text-center">
-        <h2 className="mx-auto max-w-[900px] font-heading text-3xl font-medium leading-[1.25] text-black md:text-[44px] md:leading-[1.3]">
-          Quand un client recherche ton métier,{" "}
-          <span className="italic text-[#c9846f]">apparais-tu</span>{" "}
-          <span className="text-[#c9846f]">?</span>
-        </h2>
-        <p className="mx-auto mt-3 max-w-[700px] text-base text-[#555] md:text-lg">
-          Google{" "}attire l&apos;attention. Ton site crée la confiance. Ta
-          stratégie transforme les visiteurs en clients.
-        </p>
+        <FadeUp>
+          <h2 className="mx-auto max-w-[900px] font-heading text-3xl font-medium leading-[1.25] text-black md:text-[44px] md:leading-[1.3]">
+            Quand un client recherche ton métier,{" "}
+            <span className="italic text-[#c9846f]">apparais-tu</span>{" "}
+            <span className="text-[#c9846f]">?</span>
+          </h2>
+          <p className="mx-auto mt-3 max-w-[700px] text-base text-[#555] md:text-lg">
+            Google{" "}attire l&apos;attention. Ton site crée la confiance. Ta
+            stratégie transforme les visiteurs en clients.
+          </p>
+        </FadeUp>
 
-        <div className="mx-auto mt-10 max-w-[900px] rounded-2xl bg-black p-8 md:p-12">
+        <FadeUp delay={0.15} className="mx-auto mt-10 max-w-[900px] rounded-2xl bg-black p-8 md:p-12">
           <div className="mx-auto flex max-w-[700px] flex-col items-center gap-3">
             <span className="text-3xl md:text-4xl">
               <GoogleColors />
@@ -235,17 +238,17 @@ export default function Home() {
               Google{" "}proposera tes concurrents.
             </p>
           </div>
-        </div>
+        </FadeUp>
       </section>
 
       {/* Et si ton prochain client... */}
       <section className="flex flex-col items-center justify-between gap-10 px-[5%] py-20 md:flex-row">
-        <div className="flex-[1.4_1_0%] overflow-hidden rounded-[40px] bg-black p-10">
+        <FadeUp className="flex-[1.4_1_0%] overflow-hidden rounded-[40px] bg-black p-10">
           <div className="mx-auto aspect-video w-full max-w-[650px] overflow-hidden rounded-xl">
             <YoutubeLite videoId="-btM09DQ4zg" title="JWL Marketing" />
           </div>
-        </div>
-        <div className="flex flex-1 flex-col items-center justify-center text-center">
+        </FadeUp>
+        <FadeUp delay={0.15} className="flex flex-1 flex-col items-center justify-center text-center">
           <h2 className="mx-auto max-w-[560px] font-heading text-3xl font-normal leading-[1.2] text-black md:text-[54px] md:leading-[1.1]">
             Et si <span className="italic text-[#c9846f]">ton prochain</span>
             <br />
@@ -260,22 +263,26 @@ export default function Home() {
             font vendre sur le terrain : comprendre son marché, se
             différencier et convertir.
           </p>
-        </div>
+        </FadeUp>
       </section>
 
       {/* Cas client */}
       <section className="px-[5%] py-16 text-center">
-        <SectionHeading title="Ce que JWL MARKETING à mis en place">
-          <br />
-          pour un de{" "}
-          <span className="italic text-[#c9846f]">ces clients</span>
-        </SectionHeading>
-        <ClientResultsWidget />
+        <FadeUp>
+          <SectionHeading title="Ce que JWL MARKETING à mis en place">
+            <br />
+            pour un de{" "}
+            <span className="italic text-[#c9846f]">ces clients</span>
+          </SectionHeading>
+          <ClientResultsWidget />
+        </FadeUp>
       </section>
 
       {/* Pourquoi les entreprises choisissent JWL Marketing */}
       <section className="px-[5%] py-16 text-center">
-        <SectionHeading kicker="Pourquoi les entreprises choisissent" title="JWL MARKETING" />
+        <FadeUp>
+          <SectionHeading kicker="Pourquoi les entreprises choisissent" title="JWL MARKETING" />
+        </FadeUp>
         <GuaranteesCards />
       </section>
 
@@ -335,7 +342,7 @@ export default function Home() {
           title="grandit grâce aux clients que ton site web génère."
         />
 
-        <div className="mx-auto flex max-w-[1200px] flex-col items-center gap-10 md:flex-row md:items-stretch">
+        <FadeUp className="mx-auto flex max-w-[1200px] flex-col items-center gap-10 md:flex-row md:items-stretch">
           <div className="shrink-0">
             <VisibilityChart />
           </div>
@@ -377,80 +384,84 @@ export default function Home() {
               </strong>
             </p>
           </div>
-        </div>
+        </FadeUp>
 
         {/* Mais de résultat */}
-        <h3 className="mx-auto mt-16 max-w-[900px] font-heading text-2xl leading-[1.3] text-black md:text-4xl">
-          <span className="italic text-[#c9846f]">
-            Les piliers de ton référencement
-          </span>{" "}
-          sur lesquels je peux intervenir
-        </h3>
-        <div className="mx-auto mt-8 flex max-w-[1300px] flex-col items-center gap-8 md:flex-row md:items-stretch">
-          <p className="text-2xl italic text-[#c9846f] md:hidden">Mais de résultat :</p>
-          <Image
-            src="/images/jwl-consultante-seo-facteurs-visibilite.png"
-            alt="JWL Marketing - facteurs de visibilité SEO"
-            width={237}
-            height={421}
-            className="h-[420px] w-auto max-w-none shrink-0 object-contain md:h-full md:w-auto"
-          />
-          <div className="w-full rounded-2xl border border-[#c9846f]/40 bg-[#141414] p-8 text-left text-white">
-            <p className="mb-3 hidden text-2xl italic text-[#c9846f] md:block">
-              Mais de résultat :
-            </p>
-            <h3 className="font-heading text-lg font-semibold text-gold">
-              Le SEO dépend de nombreux facteurs
-            </h3>
-            <ul className="mt-4 space-y-1.5 text-sm text-white/85">
-              {FACTEURS_SEO.map((f) => (
-                <li key={f}>{f}</li>
-              ))}
-            </ul>
+        <FadeUp>
+          <h3 className="mx-auto mt-16 max-w-[900px] font-heading text-2xl leading-[1.3] text-black md:text-4xl">
+            <span className="italic text-[#c9846f]">
+              Les piliers de ton référencement
+            </span>{" "}
+            sur lesquels je peux intervenir
+          </h3>
+          <div className="mx-auto mt-8 flex max-w-[1300px] flex-col items-center gap-8 md:flex-row md:items-stretch">
+            <p className="text-2xl italic text-[#c9846f] md:hidden">Mais de résultat :</p>
+            <Image
+              src="/images/jwl-consultante-seo-facteurs-visibilite.png"
+              alt="JWL Marketing - facteurs de visibilité SEO"
+              width={237}
+              height={421}
+              className="h-[420px] w-auto max-w-none shrink-0 object-contain md:h-full md:w-auto"
+            />
+            <div className="w-full rounded-2xl border border-[#c9846f]/40 bg-[#141414] p-8 text-left text-white">
+              <p className="mb-3 hidden text-2xl italic text-[#c9846f] md:block">
+                Mais de résultat :
+              </p>
+              <h3 className="font-heading text-lg font-semibold text-gold">
+                Le SEO dépend de nombreux facteurs
+              </h3>
+              <ul className="mt-4 space-y-1.5 text-sm text-white/85">
+                {FACTEURS_SEO.map((f) => (
+                  <li key={f}>{f}</li>
+                ))}
+              </ul>
+            </div>
           </div>
-        </div>
+        </FadeUp>
 
         <SectionHeading
           kicker="Et après ?"
           title="on poursuit l'aventure ensemble ou en autonomie"
         />
-        <div className="mx-auto max-w-[900px] rounded-2xl bg-[#141414] p-8 text-left text-white md:p-10">
-          <p className="text-sm leading-relaxed text-white/90 md:text-base">
-            Tu es libre de continuer avec JWL Marketing, de gérer ta
-            communication seul ou de travailler avec un autre prestataire.
-            Les outils, les données et le travail réalisé restent les tiens.
-            Chez JWL Marketing, tu conserves l&apos;ensemble de tes accès et
-            de tes outils.
-          </p>
-          <ul className="mt-5 space-y-2 text-sm text-white/85">
-            {ET_APRES_ITEMS.map((item) => (
-              <li key={item} className="flex gap-2">
+        <FadeUp>
+          <div className="mx-auto max-w-[900px] rounded-2xl bg-[#141414] p-8 text-left text-white md:p-10">
+            <p className="text-sm leading-relaxed text-white/90 md:text-base">
+              Tu es libre de continuer avec JWL Marketing, de gérer ta
+              communication seul ou de travailler avec un autre prestataire.
+              Les outils, les données et le travail réalisé restent les tiens.
+              Chez JWL Marketing, tu conserves l&apos;ensemble de tes accès et
+              de tes outils.
+            </p>
+            <ul className="mt-5 space-y-2 text-sm text-white/85">
+              {ET_APRES_ITEMS.map((item) => (
+                <li key={item} className="flex gap-2">
+                  <span className="text-gold">✔</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="mt-5 text-sm font-semibold text-white">
+              Après 12 mois, deux possibilités :
+            </p>
+            <ul className="mt-2 space-y-2 text-sm text-white/85">
+              <li className="flex gap-2">
                 <span className="text-gold">✔</span>
-                <span>{item}</span>
+                <span>Nous continuons à développer ta visibilité ensemble.</span>
               </li>
-            ))}
-          </ul>
-          <p className="mt-5 text-sm font-semibold text-white">
-            Après 12 mois, deux possibilités :
-          </p>
-          <ul className="mt-2 space-y-2 text-sm text-white/85">
-            <li className="flex gap-2">
-              <span className="text-gold">✔</span>
-              <span>Nous continuons à développer ta visibilité ensemble.</span>
-            </li>
-            <li className="flex gap-2">
-              <span className="text-gold">✔</span>
-              <span>Tu poursuis en totale autonomie avec toutes les clés en main.</span>
-            </li>
-          </ul>
-        </div>
-        <Image
-          src="/images/jwl-et-apres-jwl-marketing.png"
-          alt="JWL Marketing - on poursuit l'aventure ensemble"
-          width={900}
-          height={450}
-          className="mx-auto mt-8 h-auto w-full max-w-[500px] object-contain"
-        />
+              <li className="flex gap-2">
+                <span className="text-gold">✔</span>
+                <span>Tu poursuis en totale autonomie avec toutes les clés en main.</span>
+              </li>
+            </ul>
+          </div>
+          <Image
+            src="/images/jwl-et-apres-jwl-marketing.png"
+            alt="JWL Marketing - on poursuit l'aventure ensemble"
+            width={900}
+            height={450}
+            className="mx-auto mt-8 h-auto w-full max-w-[500px] object-contain"
+          />
+        </FadeUp>
       </section>
 
       {/* Témoignages */}
@@ -461,11 +472,14 @@ export default function Home() {
             <span className="text-black">avec JWL MARKETING</span>
           </h2>
         </div>
-        <div className="mx-auto flex max-w-[1200px] gap-6 overflow-x-auto px-2 pb-4">
+        <EscalierReveal
+          className="mx-auto flex max-w-[1200px] gap-6 overflow-x-auto px-2 pb-4"
+          itemClassName="shrink-0"
+        >
           {REVIEWS.map((r) => (
             <ReviewCard key={r.name} {...r} />
           ))}
-        </div>
+        </EscalierReveal>
       </section>
     </div>
   );
