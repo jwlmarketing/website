@@ -281,7 +281,7 @@ export default function Home() {
       {/* Pourquoi les entreprises choisissent JWL Marketing */}
       <section className="px-[5%] py-16 text-center">
         <FadeUp>
-          <SectionHeading kicker="Pourquoi les entreprises choisissent" title="JWL MARKETING" />
+          <SectionHeading kicker="Pourquoi les entreprises choisissent" title="JWL MARKETING ?" />
         </FadeUp>
         <GuaranteesCards />
       </section>
@@ -343,7 +343,7 @@ export default function Home() {
         />
 
         <FadeUp className="mx-auto flex max-w-[1200px] flex-col items-center gap-10 md:flex-row md:items-stretch">
-          <div className="shrink-0">
+          <div className="flex w-full shrink-0 items-center justify-center md:w-auto">
             <VisibilityChart />
           </div>
           <div className="w-full rounded-2xl bg-[#141414] p-8 text-left text-white md:p-10">
@@ -389,13 +389,12 @@ export default function Home() {
         {/* Mais de résultat */}
         <FadeUp>
           <h3 className="mx-auto mt-16 max-w-[900px] font-heading text-2xl leading-[1.3] text-black md:text-4xl">
-            <span className="italic text-[#c9846f]">
+            <span className="text-[#c9846f]">
               Les piliers de ton référencement
             </span>{" "}
             sur lesquels je peux intervenir
           </h3>
           <div className="mx-auto mt-8 flex max-w-[1300px] flex-col items-center gap-8 md:flex-row md:items-stretch">
-            <p className="text-2xl italic text-[#c9846f] md:hidden">Mais de résultat :</p>
             <Image
               src="/images/jwl-consultante-seo-facteurs-visibilite.png"
               alt="JWL Marketing - facteurs de visibilité SEO"
@@ -404,9 +403,6 @@ export default function Home() {
               className="h-[420px] w-auto max-w-none shrink-0 object-contain md:h-full md:w-auto"
             />
             <div className="w-full rounded-2xl border border-[#c9846f]/40 bg-[#141414] p-8 text-left text-white">
-              <p className="mb-3 hidden text-2xl italic text-[#c9846f] md:block">
-                Mais de résultat :
-              </p>
               <h3 className="font-heading text-lg font-semibold text-gold">
                 Le SEO dépend de nombreux facteurs
               </h3>
