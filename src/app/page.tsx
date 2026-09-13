@@ -395,7 +395,10 @@ export default function Home() {
         </div>
 
         {/* Mais de résultat */}
-        <div className="mx-auto mt-16 flex max-w-[1300px] flex-col items-center gap-8 md:flex-row md:items-stretch">
+        <h3 className="mx-auto mt-16 max-w-[900px] font-heading text-2xl leading-[1.3] text-black md:text-4xl">
+          Les piliers de ton référencement sur lesquels je peux intervenir
+        </h3>
+        <div className="mx-auto mt-8 flex max-w-[1300px] flex-col items-center gap-8 md:flex-row md:items-stretch">
           <p className="text-2xl italic text-[#c9846f] md:hidden">Mais de résultat :</p>
           <Image
             src="/images/jwl-consultante-seo-facteurs-visibilite.png"
