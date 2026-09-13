@@ -96,14 +96,9 @@ export default function Home() {
       <div className="flex w-full flex-col items-start justify-between gap-10 bg-white px-[5%] pb-[60px] pt-20 lg:flex-row">
         <div className="max-w-[600px] flex-1">
           <h1 className="m-0 mb-1 font-heading text-4xl leading-[1.15] text-black lg:text-[60px] lg:leading-[1.2]">
-            <span>
-              Un site Web
-              <br />
-              qui attire de
-            </span>
-            <br />
+            <span>Créez un site web conçu pour</span>{" "}
             <span className="font-heading italic text-[#c9846f]">
-              nouveaux clients
+              attirer des prospects et développer votre activité
             </span>
           </h1>
           <p className="mt-2.5 text-sm leading-relaxed text-[#333]">
