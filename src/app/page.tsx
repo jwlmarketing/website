@@ -135,6 +135,13 @@ export default function Home() {
             clients doivent te choisir.
           </p>
 
+          <p className="mt-4 text-sm italic leading-relaxed text-[#666]">
+            Ancienne commerciale au sein du groupe IAC (Meetic, TripAdvisor,
+            Travaux.com), j&apos;applique au digital les mêmes principes qui
+            font vendre sur le terrain : comprendre son marché, se
+            différencier et convertir.
+          </p>
+
           <div className="mt-6 flex flex-wrap gap-[15px]">
             <a
               href="tel:0783792814"
