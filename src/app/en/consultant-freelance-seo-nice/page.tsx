@@ -122,7 +122,7 @@ export default function Page() {
             <p className="text-[15px] leading-[25.5px]">
               <span className="font-bold">My mission: </span>
               helping businesses in Nice attract more clients through{" "}
-<GoogleColors />. Between Vieux-Nice, the Promenade des Anglais, the
+Google. Between Vieux-Nice, the Promenade des Anglais, the
               international airport and the many business districts, Nice
               attracts thousands of consumers, tourists and professionals
               every year.
@@ -130,9 +130,9 @@ export default function Page() {
             <p className="mt-4 text-[15px] leading-[25.5px]">
               But they still need to find your business. Thanks to my
               expertise in business development and SEO, I help you build
-              lasting visibility on <GoogleColors />{" "}and turn that visibility into
+              lasting visibility on Google{" "}and turn that visibility into
               enquiries. My goal isn't simply to get you to appear on{" "}
-<GoogleColors />. My goal is to help you get chosen.
+Google. My goal is to help you get chosen.
             </p>
           </div>
           <div className="text-center">
@@ -223,7 +223,7 @@ export default function Page() {
             <p>
               In this environment, visibility is no longer decided on the
               ground alone. A large part of the client journey now starts
-              on <GoogleColors />. If your business doesn't show up when a prospect
+              on Google. If your business doesn't show up when a prospect
               is searching for a solution, it simply risks losing them to
               one of your competitors.
             </p>
@@ -293,7 +293,7 @@ export default function Page() {
             <p>
               A prime location on the Promenade des Anglais is no longer a
               guarantee of clients. Today, 83% of French people research on{" "}
-<GoogleColors />{" "}before buying, even for a simple night out at a
+Google{" "}before buying, even for a simple night out at a
               restaurant. The keyword "restaurant Nice" alone gets 50,000
               Google searches a month, and "hôtel Nice" just as many.
             </p>
@@ -322,7 +322,7 @@ export default function Page() {
               <p>
                 In a city as dynamic as Nice, your future clients often
                 compare several businesses before making a decision. Your{" "}
-<GoogleColors />{" "}listing plays an essential role in that first
+Google{" "}listing plays an essential role in that first
                 impression.
               </p>
               <p className="mt-4">
@@ -444,7 +444,7 @@ export default function Page() {
             </p>
             <p className="mt-4">
               And before walking into a business, many consumers now start
-              with a <GoogleColors />{" "}search. Being visible at the right time can
+              with a Google{" "}search. Being visible at the right time can
               make all the difference between a won opportunity and a
               client lost to a competitor.
             </p>
@@ -516,7 +516,7 @@ export default function Page() {
           <p className="mt-3">
             Restaurants, local shops, real estate agencies, self-employed
             professionals, craftsmen or service businesses: most client
-            journeys now start with a <GoogleColors />{" "}search. Being visible isn't
+            journeys now start with a Google{" "}search. Being visible isn't
             enough anymore. You need to be found before the others.
           </p>
         </div>

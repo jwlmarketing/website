@@ -67,7 +67,7 @@ export default function Page() {
             Une stratégie freelance, portée par la qualité d&apos;une agence à
             taille humaine. À Bordeaux, certains viennent pour les grands
             crus, d&apos;autres pour les cannelés. Tes futurs clients, eux,
-            viennent sur <GoogleColors />{" "}pour te trouver.
+            viennent sur Google{" "}pour te trouver.
           </p>
           <h1 className="mt-4 font-heading text-4xl leading-[1.05] lg:text-[60px] lg:leading-[0.95] text-black">
             <span className="italic text-[#c9846f]">
@@ -122,9 +122,9 @@ export default function Page() {
         <div className="space-y-5 border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
           <p>
             À Bordeaux, le vin et les cannelés font la réputation de la
-            ville. Fais de ton entreprise une référence sur <GoogleColors />. Dans une
+            ville. Fais de ton entreprise une référence sur Google. Dans une
             métropole dynamique où les entreprises innovent et où la
-            concurrence est bien présente, être visible sur <GoogleColors />{" "}est
+            concurrence est bien présente, être visible sur Google{" "}est
             devenu un véritable levier de développement. Il ne suffit plus
             d&apos;avoir un site internet : il faut apparaître au moment où
             tes futurs clients recherchent tes produits ou tes services.
@@ -142,10 +142,10 @@ export default function Page() {
             performances de ton site. J&apos;optimise ensuite la technique,
             les contenus, le maillage interne, le référencement local,
             l&apos;expérience utilisateur et tous les critères pris en compte
-            par <GoogleColors />{" "}afin d&apos;améliorer durablement ta visibilité.
+            par Google{" "}afin d&apos;améliorer durablement ta visibilité.
           </p>
           <p>
-            Mon objectif est simple : transformer les recherches <GoogleColors />{" "}en
+            Mon objectif est simple : transformer les recherches Google{" "}en
             demandes de devis, en rendez-vous et en nouveaux clients à
             Bordeaux, dans toute la Gironde et partout où tu souhaites
             développer ton activité.
@@ -160,11 +160,11 @@ export default function Page() {
           une concurrence plus forte. Pour être choisi, il ne suffit plus
           d&apos;avoir un beau site internet. Encore faut-il que tes futurs
           clients puissent le trouver lorsqu&apos;ils effectuent une
-          recherche sur <GoogleColors />.
+          recherche sur Google.
         </p>
         <div className="mx-auto mt-6 max-w-[700px] space-y-2 text-left text-[15px] text-[#1a1a1a]">
           <p>— Chaque jour, de nouvelles entreprises cherchent à gagner en visibilité.</p>
-          <p>— Les premières positions sur <GoogleColors />{" "}attirent l&apos;essentiel des clics.</p>
+          <p>— Les premières positions sur Google{" "}attirent l&apos;essentiel des clics.</p>
           <p>
             — Pendant que certains attendent, leurs concurrents développent
             déjà leur présence en ligne.
@@ -206,7 +206,7 @@ export default function Page() {
             <p>
               Tu as peut-être déjà investi dans un site internet… sans
               obtenir les résultats espérés. Ton site est esthétique, mais il
-              reste difficile à trouver sur <GoogleColors />. Tu publies du contenu,
+              reste difficile à trouver sur Google. Tu publies du contenu,
               mais il ne génère ni appels ni demandes de devis.
             </p>
             <p>
@@ -251,7 +251,7 @@ export default function Page() {
         <div className="mt-8 space-y-5 border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
           <p>
             Consultante SEO à Bordeaux, mon rôle ne consiste pas uniquement à
-            améliorer ton positionnement sur <GoogleColors />. Mon objectif est de
+            améliorer ton positionnement sur Google. Mon objectif est de
             rendre ton entreprise visible auprès des personnes qui
             recherchent déjà tes produits ou tes services.
           </p>
@@ -260,7 +260,7 @@ export default function Page() {
             visibilité : l&apos;architecture de ton site, ses performances
             techniques, tes contenus, ton maillage interne, ton
             référencement local, ta fiche Google Business Profile et
-            l&apos;ensemble des critères pris en compte par <GoogleColors />.
+            l&apos;ensemble des critères pris en compte par Google.
           </p>
           <p>
             J&apos;accompagne les entreprises, commerçants, artisans,
@@ -316,7 +316,7 @@ export default function Page() {
         <p className="mt-4 text-[17px] leading-[28px] text-[#1a1a1a]">
           Le problème, c&apos;est que si ton site internet, ton référencement
           naturel, ton SEO local ou ta fiche Google Business Profile ne sont
-          pas correctement optimisés, <GoogleColors />{" "}mettra simplement un de tes
+          pas correctement optimisés, Google{" "}mettra simplement un de tes
           concurrents en avant. Pendant que tu travailles, ce sont eux qui
           récupèrent les appels, les demandes de devis et les nouveaux
           clients.
@@ -329,10 +329,10 @@ export default function Page() {
           <span className="italic text-[#c9846f]">Optimise dès maintenant</span>
         </h3>
         <p className="mt-3 font-heading text-3xl leading-tight md:text-[54px] text-black">
-          avec <GoogleColors />{" "}ton site web.
+          avec Google{" "}ton site web.
         </p>
         <p className="mx-auto mt-6 max-w-[700px] text-[17px] leading-[28px] text-[#1a1a1a]">
-          Tes futurs clients recherchent déjà tes services sur <GoogleColors />.
+          Tes futurs clients recherchent déjà tes services sur Google.
           L&apos;objectif est simple : faire en sorte qu&apos;ils trouvent
           ton entreprise avant celle de tes concurrents à Bordeaux,
           Mérignac, Pessac, Talence ou ailleurs en Gironde.

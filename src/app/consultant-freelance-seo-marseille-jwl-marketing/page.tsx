@@ -224,7 +224,7 @@ export default function Page() {
             <p>
               À Marseille, le réseau reste important. Mais il ne suffit plus
               toujours. Aujourd&apos;hui, une grande partie des décisions
-              commence sur <GoogleColors />.
+              commence sur Google.
             </p>
             <p>
               Les consommateurs recherchent, comparent et sélectionnent
@@ -248,7 +248,7 @@ export default function Page() {
             <p>
               À Marseille, le réseau compte encore. Mais il ne suffit plus
               toujours. Avant de prendre une décision, de nombreux
-              consommateurs recherchent des informations sur <GoogleColors />,
+              consommateurs recherchent des informations sur Google,
               consultent les avis et comparent plusieurs entreprises.
             </p>
             <p className="mt-4">
@@ -318,7 +318,7 @@ export default function Page() {
             <div className="border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
               <p>
                 À Marseille, les internautes consultent souvent plusieurs
-                entreprises avant de faire leur choix. Ta fiche <GoogleColors />{" "}est
+                entreprises avant de faire leur choix. Ta fiche Google{" "}est
                 souvent le premier contact avec un futur client.
               </p>
               <p className="mt-4">
@@ -326,7 +326,7 @@ export default function Page() {
                 décision : catégories, services, photos, avis clients,
                 informations pratiques et cohérence de ta présence en ligne.
                 L&apos;objectif n&apos;est pas seulement d&apos;apparaître sur{" "}
-<GoogleColors />. L&apos;objectif est de donner confiance et
+Google. L&apos;objectif est de donner confiance et
                 d&apos;inciter à te contacter.
               </p>
             </div>
@@ -401,14 +401,14 @@ export default function Page() {
           <div className="self-center border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
             <p>
               À Marseille, être bon dans son métier ne suffit pas toujours à
-              être trouvé. <GoogleColors />{" "}doit comprendre ce que tu fais, à qui tu
+              être trouvé. Google{" "}doit comprendre ce que tu fais, à qui tu
               t&apos;adresses et pourquoi un prospect devrait te choisir.
             </p>
             <p className="mt-4">
               J&apos;analyse ton marché, tes concurrents et les recherches de
               tes futurs clients pour construire une stratégie capable
               d&apos;attirer des prospects qualifiés. Parce qu&apos;un site
-              invisible ne vend rien. Un site compris par <GoogleColors />{" "}peut devenir
+              invisible ne vend rien. Un site compris par Google{" "}peut devenir
               un véritable apporteur d&apos;affaires.
             </p>
           </div>
@@ -450,7 +450,7 @@ export default function Page() {
             </p>
             <p className="mt-4">
               Avant un appel, une visite ou une demande de devis, de nombreux
-              prospects effectuent une recherche sur <GoogleColors />. Si ton entreprise
+              prospects effectuent une recherche sur Google. Si ton entreprise
               n&apos;apparaît pas au bon moment, ce sont souvent tes
               concurrents qui récupèrent ces opportunités.
             </p>
@@ -522,7 +522,7 @@ export default function Page() {
             professions libérales, les acteurs du tourisme, les entreprises
             du transport, de la logistique ou encore les sociétés installées
             autour du Grand Port Maritime, chaque activité fait face à une
-            concurrence croissante sur <GoogleColors />.
+            concurrence croissante sur Google.
           </p>
           <p className="mt-3">
             Aujourd&apos;hui, un futur client peut comparer plusieurs

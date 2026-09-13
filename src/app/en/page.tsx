@@ -266,7 +266,7 @@ export default function Home() {
           </h1>
 
           <p className="mt-4 text-lg leading-[1.6] text-[#333]">
-            <GoogleColors />{" "}has to find you. AI has to understand you. Your future
+            Google{" "}has to find you. AI has to understand you. Your future
             clients have to choose you.
           </p>
 

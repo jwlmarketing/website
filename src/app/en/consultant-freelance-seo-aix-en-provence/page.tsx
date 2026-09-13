@@ -57,7 +57,7 @@ export default function QuiSuisJe() {
           <p className="mt-6 text-base leading-[1.6] text-black">
             A freelance strategy, backed by the quality of a boutique
             agency. In Aix-en-Provence, Paul Cézanne left his mark on
-            history. What if your business left its mark on <GoogleColors />?
+            history. What if your business left its mark on Google?
           </p>
           <div className="mt-6 flex flex-wrap items-center gap-4">
             <a
@@ -127,7 +127,7 @@ export default function QuiSuisJe() {
               With over 10 years of experience in business development,
               including 4 years at the American group IAC, I understand what
               a business needs: attracting clients, convincing them and
-              keeping them. Trained by a former <GoogleColors />{" "}employee, Sylvie
+              keeping them. Trained by a former Google{" "}employee, Sylvie
               Grézaud, I work across an entire digital project: showcase
               sites, e-commerce sites, landing pages, content strategy, blog
               articles, product sheets, SEO optimisation and visibility
@@ -228,9 +228,9 @@ export default function QuiSuisJe() {
             </p>
             <p>
               But in a city as dynamic as it is demanding, this richness
-              belongs to the real world. On <GoogleColors />, the rules are different.
+              belongs to the real world. On Google, the rules are different.
               The digital world has no scent, no flavour, no shopfront to
-              draw people in. Today, speaking <GoogleColors />'s language has become
+              draw people in. Today, speaking Google's language has become
               essential for 100% of inbound sites. More than 85% of
               consumers search online before walking into a shop.
             </p>
@@ -311,7 +311,7 @@ export default function QuiSuisJe() {
           <div className="h-full border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
             <p>
               Hiring an SEO consultant in Aix-en-Provence isn't about
-              chasing the top spot on <GoogleColors />{" "}at any cost. It's about
+              chasing the top spot on Google{" "}at any cost. It's about
               building a machine capable of attracting the right prospects
               at the right time. With 10 years of sales experience,
               including 4 years at IAC (Travaux.com), the undisputed global
@@ -333,7 +333,7 @@ export default function QuiSuisJe() {
               as many calls and quote requests as possible. I support
               independent professionals, craftsmen and SMEs in
               Aix-en-Provence who refuse to just make up the numbers and
-              want to turn <GoogleColors />{" "}into their best online salesperson.
+              want to turn Google{" "}into their best online salesperson.
             </p>
           </div>
         </div>
@@ -350,7 +350,7 @@ export default function QuiSuisJe() {
           <div>
             <div className="border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
               <p>
-                Your <GoogleColors />{" "}listing is often the first point of contact
+                Your Google{" "}listing is often the first point of contact
                 with a future client. I optimise it so it inspires trust,
                 ranks higher in local searches and generates more calls,
                 visits and quote requests. I work on every detail:
@@ -402,7 +402,7 @@ export default function QuiSuisJe() {
               delivery, you receive a PDF certification detailing the
               technical optimisations carried out and the best practices
               applied. The goal is to provide you with a site that's fast,
-              secure, scalable and built from the start with <GoogleColors />{" "}visibility in mind.
+              secure, scalable and built from the start with Google{" "}visibility in mind.
             </p>
             <Link
               href="/en/site-internet-aix-en-provence"
@@ -437,7 +437,7 @@ export default function QuiSuisJe() {
               targets and understand what your future clients expect. This
               immersion lets me build a coherent digital marketing
               strategy, improve your search engine positioning and develop
-              lasting visibility on <GoogleColors />. Every action is based on an
+              lasting visibility on Google. Every action is based on an
               analysis of your industry, your competitors, your keywords
               and your client journey to attract qualified traffic and
               generate new contacts. And when distance doesn't allow for an
@@ -481,7 +481,7 @@ export default function QuiSuisJe() {
             <p>
               In Aix-en-Provence, the digital market is accelerating.
               Independent professionals, shopkeepers and SMEs keep growing
-              in number… and <GoogleColors />{" "}visibility has become a real matter of
+              in number… and Google{" "}visibility has become a real matter of
               survival. Not just against local competitors, but also
               against agencies offering standardised services, freelancers
               who deliver a one-off PDF audit with no follow-up, and
@@ -489,7 +489,7 @@ export default function QuiSuisJe() {
               Aix-en-Provence has a dense and varied economic fabric:
               traditional soap makers, high-tech companies, calisson
               makers, restaurateurs, artisan bakeries, self-employed
-              professionals... So many sectors where <GoogleColors />{" "}is the first
+              professionals... So many sectors where Google{" "}is the first
               point of contact.
             </p>
           </div>

@@ -13,7 +13,7 @@ export default function Cgv() {
       <p>
         Ces conditions générales de vente s&apos;appliquent à toutes les
         prestations proposées par JWL Marketing : audit SEO, accompagnement
-        marketing, création de site internet, gestion de fiche <GoogleColors />{" "}Business Profile et formations. Passer commande auprès de JWL
+        marketing, création de site internet, gestion de fiche Google{" "}Business Profile et formations. Passer commande auprès de JWL
         Marketing implique l&apos;acceptation pleine et entière de ces
         conditions.
       </p>

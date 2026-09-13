@@ -96,14 +96,14 @@ export default function Home() {
       <div className="flex w-full flex-col items-start justify-between gap-10 bg-white px-[5%] pb-[60px] pt-20 lg:flex-row">
         <div className="max-w-[600px] flex-1">
           <h1 className="m-0 mb-1 font-heading text-4xl leading-[1.15] text-black lg:text-[60px] lg:leading-[1.2]">
-            <span>Créez un site web conçu pour</span>{" "}
+            <span>Crée un site web conçu pour</span>{" "}
             <span className="font-heading italic text-[#c9846f]">
               attirer des prospects !
             </span>
           </h1>
           <p className="mt-2.5 text-sm leading-relaxed text-[#333]">
             Sais-tu combien de prospects découvrent ton entreprise grâce à{" "}
-            <GoogleColors />
+            Google
             {" "}? Peux-tu mesurer le nombre de clics, d&apos;appels ou de
             contacts générés par ta présence en ligne ?
           </p>
@@ -159,10 +159,11 @@ export default function Home() {
       <section className="px-[5%] py-16 text-center">
         <h2 className="mx-auto max-w-[900px] font-heading text-3xl font-medium leading-[1.25] text-black md:text-[44px] md:leading-[1.3]">
           Quand un client recherche ton métier,{" "}
-          <span className="italic text-[#c9846f]">apparais-tu</span> ?
+          <span className="italic text-[#c9846f]">apparais-tu</span>{" "}
+          <span className="text-[#c9846f]">?</span>
         </h2>
         <p className="mx-auto mt-3 max-w-[700px] text-base text-[#555] md:text-lg">
-          <GoogleColors />{" "}attire l&apos;attention. Ton site crée la confiance. Ta
+          Google{" "}attire l&apos;attention. Ton site crée la confiance. Ta
           stratégie transforme les visiteurs en clients.
         </p>
 
@@ -231,7 +232,7 @@ export default function Home() {
               Ils ne connaissent ni ton nom, ni l&apos;existence de ton
               entreprise. Ils recherchent simplement un produit ou un service.
               Si ton entreprise n&apos;apparaît pas dans les résultats,{" "}
-              <GoogleColors />{" "}proposera tes concurrents.
+              Google{" "}proposera tes concurrents.
             </p>
           </div>
         </div>
@@ -367,7 +368,7 @@ export default function Home() {
                 ton activité
               </strong>{" "}
               : site web optimisé, référencement naturel (SEO), fiche{" "}
-              <GoogleColors />, contenus, articles, blog, IA, et autres leviers
+              Google, contenus, articles, blog, IA, et autres leviers
               de visibilité.{" "}
               <strong className="text-white">
                 Chaque action est pensée pour renforcer ta présence en ligne,

@@ -111,7 +111,7 @@ export default function Page() {
           <p className="text-base leading-[1.6] text-black">
             A freelance strategy, backed by the quality of a boutique
             agency. In Montpellier, Place de la Comédie is a landmark you
-            can't miss. On <GoogleColors />, it's your business's turn to become one.
+            can't miss. On Google, it's your business's turn to become one.
           </p>
           <h1 className="mt-4 font-heading text-4xl leading-[1.05] lg:text-[60px] lg:leading-[0.95] text-black">
             <span className="italic text-[#c9846f]">
@@ -167,9 +167,9 @@ export default function Page() {
           <p>
             In Montpellier, it's not wine and grand crus that make the
             city's reputation — here it's Place de la Comédie and l'Écusson.
-            Make your business a reference on <GoogleColors />. In a dynamic
+            Make your business a reference on Google. In a dynamic
             metropolis where businesses innovate and competition is strong,
-            being visible on <GoogleColors />{" "}has become a genuine growth lever.
+            being visible on Google{" "}has become a genuine growth lever.
             Having a website isn't enough anymore: you need to show up
             when your future clients are searching for your products or
             services.
@@ -186,11 +186,11 @@ export default function Page() {
             opportunities in your industry, local competition and your
             site's performance. I then optimise the technical side, the
             content, internal linking, local SEO, user experience and
-            every criterion <GoogleColors />{" "}takes into account to durably improve
+            every criterion Google{" "}takes into account to durably improve
             your visibility.
           </p>
           <p>
-            My goal is simple: turn <GoogleColors />{" "}searches into quote requests,
+            My goal is simple: turn Google{" "}searches into quote requests,
             appointments and new clients in Montpellier, across Occitanie
             and anywhere you want to grow your business.
           </p>
@@ -202,13 +202,13 @@ export default function Page() {
           Montpellier attracts new businesses, new talent and new investors
           every year. This dynamic also creates stronger competition. To
           get chosen, a nice website isn't enough anymore. Your future
-          clients also need to be able to find it when they run a <GoogleColors />{" "}search.
+          clients also need to be able to find it when they run a Google{" "}search.
         </p>
         <div className="mx-auto mt-6 max-w-[700px] space-y-2 text-left text-[15px] text-[#1a1a1a]">
           <p>
             — Every day, new businesses are trying to gain visibility.
           </p>
-          <p>— The top positions on <GoogleColors />{" "}capture most of the clicks.</p>
+          <p>— The top positions on Google{" "}capture most of the clicks.</p>
           <p>
             — While some wait, their competitors are already building
             their online presence.
@@ -318,7 +318,7 @@ export default function Page() {
         <p className="text-[17px] leading-[28px] text-[#1a1a1a]">
           Having a strategic location in Montpellier no longer guarantees
           you'll find new clients. Today, most consumers research on{" "}
-<GoogleColors />{" "}before contacting a professional, booking a table or
+Google{" "}before contacting a professional, booking a table or
           buying a product.
         </p>
         <p className="mt-4 text-[17px] leading-[28px] text-[#1a1a1a]">
@@ -358,11 +358,11 @@ export default function Page() {
           <span className="italic text-[#c9846f]">Get started</span>
         </h3>
         <p className="mt-3 font-heading text-3xl leading-tight md:text-[54px] text-black">
-          Optimise your Montpellier website with <GoogleColors />, starting now.
+          Optimise your Montpellier website with Google, starting now.
         </p>
         <p className="mx-auto mt-6 max-w-[700px] text-[17px] leading-[28px] text-[#1a1a1a]">
           Your future clients are already searching for your services on{" "}
-<GoogleColors />. Don't let a competitor from l'Écusson, Port Marianne or
+Google. Don't let a competitor from l'Écusson, Port Marianne or
           Odysseum grab those requests instead of you.
         </p>
         <a
