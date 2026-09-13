@@ -269,7 +269,7 @@ export default function Home() {
             <YoutubeLite videoId="-btM09DQ4zg" title="JWL Marketing" />
           </div>
         </div>
-        <div className="flex flex-1 items-center justify-center text-center">
+        <div className="flex flex-1 flex-col items-center justify-center text-center">
           <h2 className="mx-auto max-w-[560px] font-heading text-3xl font-normal leading-[1.2] text-black md:text-[54px] md:leading-[1.1]">
             Et si <span className="italic text-[#c9846f]">ton prochain</span>
             <br />
