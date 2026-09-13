@@ -57,7 +57,7 @@ export default function QuiSuisJe() {
           <p className="mt-6 text-base leading-[1.6] text-black">
             Une stratégie freelance, portée par la qualité d&apos;une agence à
             taille humaine. À Aix-en-Provence, Paul Cézanne a marqué
-            l&apos;histoire. Et si ton entreprise marquait à son tour Google ?
+            l&apos;histoire. Et si ton entreprise marquait à son tour <GoogleColors /> ?
           </p>
           <div className="mt-6 flex flex-wrap items-center gap-4">
             <a
@@ -128,7 +128,7 @@ export default function QuiSuisJe() {
               commercial, dont 4 ans auprès du groupe américain IAC, je
               comprends les enjeux d&apos;une entreprise : attirer des clients,
               les convaincre et les fidéliser. Formée par une ancienne salariée
-              de Google, Sylvie Grézaud, j&apos;interviens sur l&apos;ensemble
+              de <GoogleColors />, Sylvie Grézaud, j&apos;interviens sur l&apos;ensemble
               d&apos;un projet digital : sites vitrines, sites e-commerce,
               landing pages, stratégies de contenu, articles de blog, fiches
               produits, optimisation SEO et pilotage de la visibilité.
@@ -229,10 +229,10 @@ export default function QuiSuisJe() {
             </p>
             <p>
               Mais dans une ville aussi dynamique qu&apos;exigeante, cette
-              richesse appartient au monde réel. Sur Google, les règles sont
+              richesse appartient au monde réel. Sur <GoogleColors />, les règles sont
               différentes. Le digital n&apos;a ni parfum, ni saveur, ni
               vitrine pour attirer les passants. Aujourd&apos;hui, savoir
-              parler le langage de Google est devenu indispensable pour 100%
+              parler le langage de <GoogleColors /> est devenu indispensable pour 100%
               des sites entrants. Plus de 85% des consommateurs effectuent une
               recherche en ligne avant de pousser la porte d&apos;un
               commerçant.
@@ -317,7 +317,7 @@ export default function QuiSuisJe() {
           <div className="h-full border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
             <p>
               Faire appel à une consultante SEO à Aix-en-Provence, ce
-              n&apos;est pas chercher à être premier sur Google à tout prix.
+              n&apos;est pas chercher à être premier sur <GoogleColors /> à tout prix.
               C&apos;est bâtir une machine de guerre capable d&apos;attirer
               les bons prospects au bon moment. Forte de 10 ans
               d&apos;expérience commerciale, dont 4 ans chez IAC
@@ -337,11 +337,11 @@ export default function QuiSuisJe() {
             </p>
             <p className="mt-4">
               J&apos;optimise l&apos;intégralité de ton écosystème digital :
-              ton site web, ton contenu sémantique et ta Fiche Google
+              ton site web, ton contenu sémantique et ta Fiche <GoogleColors />
               Business Profile pour déclencher un maximum d&apos;appels et de
               demandes de devis. J&apos;accompagne les indépendants, artisans
               et PME à Aix-en-Provence qui refusent de faire de la figuration
-              et veulent faire de Google leur meilleur commercial en ligne.
+              et veulent faire de <GoogleColors /> leur meilleur commercial en ligne.
             </p>
           </div>
         </div>
@@ -358,7 +358,7 @@ export default function QuiSuisJe() {
           <div>
             <div className="border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
               <p>
-                Ta fiche Google est souvent le premier contact avec un futur
+                Ta fiche <GoogleColors /> est souvent le premier contact avec un futur
                 client. Je l&apos;optimise pour qu&apos;elle inspire
                 confiance, remonte dans les recherches locales et génère
                 davantage d&apos;appels, de visites et de demandes de devis.
@@ -412,7 +412,7 @@ export default function QuiSuisJe() {
               détaillant les optimisations techniques réalisées ainsi que les
               bonnes pratiques mises en place. L&apos;objectif est de te
               fournir un site rapide, sécurisé, évolutif et pensé dès le
-              départ pour la visibilité sur Google.
+              départ pour la visibilité sur <GoogleColors />.
             </p>
             <Link
               href="/site-internet-aix-en-provence"
@@ -449,7 +449,7 @@ export default function QuiSuisJe() {
               Cette immersion me permet de construire une stratégie
               marketing digitale cohérente, d&apos;améliorer ton
               positionnement sur les moteurs de recherche et de développer
-              une visibilité durable sur Google. Chaque action s&apos;appuie
+              une visibilité durable sur <GoogleColors />. Chaque action s&apos;appuie
               sur une analyse de ton secteur, de tes concurrents, de tes
               mots-clés et de ton parcours client afin d&apos;attirer un
               trafic qualifié et de générer de nouveaux contacts. Et lorsque
@@ -494,7 +494,7 @@ export default function QuiSuisJe() {
             <p>
               À Aix-en-Provence, le marché digital s&apos;accélère. Les
               indépendants, les commerçants et les PME se multiplient… et la
-              visibilité Google devient un vrai enjeu de survie. Pas
+              visibilité <GoogleColors /> devient un vrai enjeu de survie. Pas
               seulement face aux concurrents locaux. Face aussi : aux
               agences qui proposent des prestations standardisées, aux
               freelances qui livrent un audit PDF sans suite, aux
@@ -503,7 +503,7 @@ export default function QuiSuisJe() {
               dense et varié : savonneries traditionnelles, entreprises
               high-tech, calissons, restaurateurs, boulangeries
               artisanales, professions libérales... Autant de secteurs où
-              Google est le premier point de contact.
+              <GoogleColors /> est le premier point de contact.
             </p>
           </div>
         </div>

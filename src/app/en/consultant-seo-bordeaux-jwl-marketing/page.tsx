@@ -7,6 +7,7 @@ import ProofCards from "@/components/ProofCards";
 import { REVIEWS } from "@/data/reviews";
 import TypewriterText from "@/components/TypewriterText";
 import SiteHeader from "@/components/SiteHeader";
+import GoogleColors from "@/components/GoogleColors";
 
 export const metadata: Metadata = {
   title: "Freelance SEO Consultant Bordeaux | JWL Marketing",
@@ -65,7 +66,7 @@ export default function Page() {
           <p className="text-base leading-[1.6] text-black">
             A freelance strategy, backed by the quality of a boutique
             agency. In Bordeaux, some come for the grand crus, others for
-            the cannelés. Your future clients, meanwhile, come to Google to
+            the cannelés. Your future clients, meanwhile, come to <GoogleColors /> to
             find you.
           </p>
           <h1 className="mt-4 font-heading text-4xl leading-[1.05] lg:text-[60px] lg:leading-[0.95] text-black">
@@ -121,9 +122,9 @@ export default function Page() {
         <div className="space-y-5 border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
           <p>
             In Bordeaux, wine and cannelés make the city's reputation. Make
-            your business a reference on Google. In a dynamic metropolis
+            your business a reference on <GoogleColors />. In a dynamic metropolis
             where businesses innovate and competition is strong, being
-            visible on Google has become a genuine growth lever. Having a
+            visible on <GoogleColors /> has become a genuine growth lever. Having a
             website isn't enough anymore: you need to show up when your
             future clients are searching for your products or services.
           </p>
@@ -139,11 +140,11 @@ export default function Page() {
             opportunities in your industry, local competition and your
             site's performance. I then optimise the technical side, the
             content, internal linking, local SEO, user experience and
-            every criterion Google takes into account to durably improve
+            every criterion <GoogleColors /> takes into account to durably improve
             your visibility.
           </p>
           <p>
-            My goal is simple: turn Google searches into quote requests,
+            My goal is simple: turn <GoogleColors /> searches into quote requests,
             appointments and new clients in Bordeaux, across Gironde and
             anywhere you want to grow your business.
           </p>
@@ -155,12 +156,12 @@ export default function Page() {
           Bordeaux attracts new businesses, new talent and new investors
           every year. This dynamic also creates stronger competition. To
           get chosen, a nice website isn't enough anymore. Your future
-          clients also need to be able to find it when they run a Google
+          clients also need to be able to find it when they run a <GoogleColors />
           search.
         </p>
         <div className="mx-auto mt-6 max-w-[700px] space-y-2 text-left text-[15px] text-[#1a1a1a]">
           <p>— Every day, new businesses are trying to gain visibility.</p>
-          <p>— The top positions on Google capture most of the clicks.</p>
+          <p>— The top positions on <GoogleColors /> capture most of the clicks.</p>
           <p>
             — While some wait, their competitors are already building
             their online presence.
@@ -202,7 +203,7 @@ export default function Page() {
             <p>
               You may have already invested in a website… without getting
               the results you hoped for. Your site looks great, but it's
-              hard to find on Google. You publish content, but it doesn't
+              hard to find on <GoogleColors />. You publish content, but it doesn't
               generate calls or quote requests.
             </p>
             <p>
@@ -245,7 +246,7 @@ export default function Page() {
         <div className="mt-8 space-y-5 border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
           <p>
             As an SEO consultant in Bordeaux, my role isn't just to
-            improve your ranking on Google. My goal is to make your
+            improve your ranking on <GoogleColors />. My goal is to make your
             business visible to people who are already searching for your
             products or services.
           </p>
@@ -253,7 +254,7 @@ export default function Page() {
             I work on every lever that influences your visibility: your
             site's architecture, its technical performance, your content,
             internal linking, local SEO, your Google Business Profile and
-            every criterion Google takes into account.
+            every criterion <GoogleColors /> takes into account.
           </p>
           <p>
             I support businesses, shopkeepers, craftsmen, independent
@@ -309,7 +310,7 @@ export default function Page() {
         </h2>
         <p className="mt-4 text-[17px] leading-[28px] text-[#1a1a1a]">
           The problem is that if your website, your SEO, your local SEO or
-          your Google Business Profile aren't properly optimised, Google
+          your Google Business Profile aren't properly optimised, <GoogleColors />
           will simply put one of your competitors forward instead. While
           you're busy working, they're the ones picking up the calls, the
           quote requests and the new clients.
@@ -322,11 +323,11 @@ export default function Page() {
           <span className="italic text-[#c9846f]">Optimise your website</span>
         </h3>
         <p className="mt-3 font-heading text-3xl leading-tight md:text-[54px] text-black">
-          with Google, starting now.
+          with <GoogleColors />, starting now.
         </p>
         <p className="mx-auto mt-6 max-w-[700px] text-[17px] leading-[28px] text-[#1a1a1a]">
           Your future clients are already searching for your services on
-          Google. The goal is simple: make sure they find your business
+          <GoogleColors />. The goal is simple: make sure they find your business
           before your competitors in Bordeaux, Mérignac, Pessac, Talence
           or elsewhere in Gironde.
         </p>
@@ -336,7 +337,7 @@ export default function Page() {
           rel="noopener"
           className="mt-8 inline-block rounded-full bg-[#c9846f] px-10 py-[15px] font-medium text-white transition-colors hover:bg-[#b8735f]"
         >
-          Ready to make your business a reference on Google in Bordeaux?
+          Ready to make your business a reference on <GoogleColors /> in Bordeaux?
         </a>
       </section>
     </div>

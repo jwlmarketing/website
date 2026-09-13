@@ -230,7 +230,7 @@ export default function Page() {
             </p>
             <p>
               Avant de contacter une entreprise, ils effectuent souvent
-              plusieurs recherches sur Google. Mon rôle consiste à faire en
+              plusieurs recherches sur <GoogleColors />. Mon rôle consiste à faire en
               sorte que ton entreprise fasse partie des solutions
               qu&apos;ils découvrent au bon moment.
             </p>
@@ -254,7 +254,7 @@ export default function Page() {
             </p>
             <p className="mt-4">
               Avant de prendre une décision, ils effectuent souvent plusieurs
-              recherches sur Google afin de comparer les entreprises et les
+              recherches sur <GoogleColors /> afin de comparer les entreprises et les
               solutions disponibles. Dans ce contexte, mon rôle consiste à
               faire en sorte que ton entreprise fasse partie des solutions
               qu&apos;ils découvrent au bon moment. L&apos;objectif est
@@ -336,8 +336,8 @@ export default function Page() {
                 C&apos;est pourquoi j&apos;optimise les éléments qui
                 influencent réellement la décision : catégories, services,
                 photos, avis clients, informations pratiques et cohérence de
-                la présence sur Google. L&apos;objectif n&apos;est pas
-                seulement d&apos;apparaître sur Google. L&apos;objectif est
+                la présence sur <GoogleColors />. L&apos;objectif n&apos;est pas
+                seulement d&apos;apparaître sur <GoogleColors />. L&apos;objectif est
                 également de rassurer sur ta crédibilité et de leur donner
                 envie de te choisir plutôt qu&apos;une autre entreprise.
               </p>
@@ -416,7 +416,7 @@ export default function Page() {
           <div className="h-full border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
             <p>
               À Paris, être excellent dans son métier ne garantit pas
-              d&apos;être trouvé. En effet, Google doit comprendre ce que tu
+              d&apos;être trouvé. En effet, <GoogleColors /> doit comprendre ce que tu
               fais, à qui tu t&apos;adresses et pourquoi un prospect devrait
               te choisir plutôt qu&apos;une autre entreprise.
             </p>
@@ -426,7 +426,7 @@ export default function Page() {
               construire une stratégie capable d&apos;attirer des prospects
               qualifiés. Dans un environnement aussi concurrentiel, il ne
               suffit pas d&apos;être présent en ligne. Il faut également être
-              compris par Google. Car un site invisible ne vend rien. À
+              compris par <GoogleColors />. Car un site invisible ne vend rien. À
               l&apos;inverse, un site bien positionné peut devenir un
               véritable apporteur d&apos;affaires.
             </p>
@@ -453,7 +453,7 @@ export default function Page() {
             <p>
               Aujourd&apos;hui, avant un appel, une visite ou une demande de
               devis, de nombreux prospects effectuent plusieurs recherches
-              sur Google afin de comparer les solutions disponibles.
+              sur <GoogleColors /> afin de comparer les solutions disponibles.
             </p>
             <p className="mt-4">
               Dans ce contexte, être visible au bon moment devient un
@@ -532,7 +532,7 @@ export default function Page() {
             les cabinets de conseil, les entreprises de services, les acteurs
             de l&apos;immobilier ou encore les sociétés implantées dans les
             principaux quartiers d&apos;affaires, chaque acteur doit trouver
-            sa place face à une concurrence importante sur Google.
+            sa place face à une concurrence importante sur <GoogleColors />.
           </p>
           <p className="mt-3">
             Les habitudes des consommateurs ont également évolué. Avant de

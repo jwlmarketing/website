@@ -41,7 +41,7 @@ export default function Page() {
           </h1>
           <p className="mt-6 text-base leading-[1.6] text-black">
             Sole traders, micro-businesses, SMEs and business owners: grow
-            your Google visibility and attract qualified prospects all
+            your <GoogleColors /> visibility and attract qualified prospects all
             year round.
           </p>
           <div className="mt-6 flex flex-wrap items-center gap-4">
@@ -108,7 +108,7 @@ export default function Page() {
               </p>
               <p className="mt-2 text-[14px] leading-[22px] text-white/80">
                 Study of your business, your competitors and the keywords
-                used on Google.
+                used on <GoogleColors />.
               </p>
             </div>
           </ScrollReveal>
@@ -270,7 +270,7 @@ export default function Page() {
                 I review your Google Search Console tracking
               </p>
               <p className="mt-2 text-sm leading-[21px] text-white/80">
-                In plain terms: what people type into Google and how your
+                In plain terms: what people type into <GoogleColors /> and how your
                 site shows up.
               </p>
             </div>
@@ -279,7 +279,7 @@ export default function Page() {
             <StepNumber n={2} />
             <div className="mt-4 rounded-2xl bg-[#141414] p-6 text-left text-white">
               <p className="text-[15px] font-semibold leading-[22px]">
-                I analyse what people are typing into Google
+                I analyse what people are typing into <GoogleColors />
               </p>
               <p className="mt-2 text-sm leading-[21px] text-white/80">
                 How your site is performing and what can be improved.
@@ -331,7 +331,7 @@ export default function Page() {
               When you have no strategy.
             </p>
             <p className="mt-2 text-sm italic text-[#7c5fd6]">
-              Google doesn't surface you to users
+              <GoogleColors /> doesn't surface you to users
               <br />
               The clicks you do get match your clients
             </p>
@@ -353,7 +353,7 @@ export default function Page() {
               website.
             </p>
             <p className="mt-2 text-sm italic text-[#7c5fd6]">
-              Your curve rises because Google understands you
+              Your curve rises because <GoogleColors /> understands you
               <br />
               You still get few clicks, you're not converting
             </p>
@@ -371,7 +371,7 @@ export default function Page() {
             className="mt-3 h-auto w-full rounded-2xl border border-[#eee] object-cover"
           />
           <p className="mt-2 text-sm italic text-[#7c5fd6]">
-            Google surfaces you for the right keywords
+            <GoogleColors /> surfaces you for the right keywords
             <br />
             You get clicks from real users
           </p>

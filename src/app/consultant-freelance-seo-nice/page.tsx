@@ -122,7 +122,7 @@ export default function Page() {
             <p className="text-[15px] leading-[25.5px]">
               <span className="font-bold">Ma mission : </span>
               aider les entreprises de Nice à attirer plus de clients grâce à
-              Google. Entre le Vieux-Nice, la Promenade des Anglais,
+              <GoogleColors />. Entre le Vieux-Nice, la Promenade des Anglais,
               l&apos;aéroport international et les nombreux quartiers
               d&apos;affaires, Nice attire chaque année des milliers de
               consommateurs, touristes et professionnels.
@@ -131,9 +131,9 @@ export default function Page() {
               Encore faut-il qu&apos;ils trouvent ton entreprise. Grâce à mon
               expertise en développement commercial et en référencement
               naturel, je t&apos;aide à construire une visibilité durable sur
-              Google et à transformer cette visibilité en demandes de contact.
+              <GoogleColors /> et à transformer cette visibilité en demandes de contact.
               Mon objectif n&apos;est pas simplement de te faire apparaître sur
-              Google. Mon objectif est de t&apos;aider à être choisi.
+              <GoogleColors />. Mon objectif est de t&apos;aider à être choisi.
             </p>
           </div>
           <div className="text-center">
@@ -224,7 +224,7 @@ export default function Page() {
             <p>
               Dans cet environnement, la visibilité ne se joue plus uniquement
               sur le terrain. Une grande partie du parcours client commence
-              désormais sur Google. Si ton entreprise n&apos;apparaît pas
+              désormais sur <GoogleColors />. Si ton entreprise n&apos;apparaît pas
               lorsqu&apos;un prospect recherche une solution, il risque
               simplement de trouver l&apos;un de tes concurrents avant toi.
             </p>
@@ -295,9 +295,9 @@ export default function Page() {
             <p>
               Un emplacement en or sur la Promenade des Anglais, ce n&apos;est
               plus une garantie de clients. Aujourd&apos;hui, 83% des Français
-              se renseignent sur Google avant d&apos;acheter, même pour une
+              se renseignent sur <GoogleColors /> avant d&apos;acheter, même pour une
               simple sortie au restaurant. Rien que le mot-clé « restaurant
-              Nice » génère 50 000 recherches Google par mois et « hôtel Nice »
+              Nice » génère 50 000 recherches <GoogleColors /> par mois et « hôtel Nice »
               tout autant.
             </p>
             <p className="mt-4">
@@ -325,7 +325,7 @@ export default function Page() {
               <p>
                 Dans une ville aussi dynamique que Nice, tes futurs clients
                 comparent souvent plusieurs entreprises avant de prendre une
-                décision. Ta fiche Google joue alors un rôle essentiel dans
+                décision. Ta fiche <GoogleColors /> joue alors un rôle essentiel dans
                 cette première impression.
               </p>
               <p className="mt-4">
@@ -448,7 +448,7 @@ export default function Page() {
             </p>
             <p className="mt-4">
               Et avant de pousser la porte d&apos;une entreprise, beaucoup de
-              consommateurs commencent désormais par une recherche Google.
+              consommateurs commencent désormais par une recherche <GoogleColors />.
               Être visible au bon moment peut faire toute la différence entre
               une opportunité gagnée et un client perdu au profit d&apos;un
               concurrent.
@@ -523,7 +523,7 @@ export default function Page() {
             Restaurants, commerces de proximité, agences immobilières,
             professions libérales, artisans ou entreprises de services : la
             majorité des parcours clients commencent aujourd&apos;hui par une
-            recherche Google. Être visible ne suffit plus. Il faut être
+            recherche <GoogleColors />. Être visible ne suffit plus. Il faut être
             trouvé avant les autres.
           </p>
         </div>

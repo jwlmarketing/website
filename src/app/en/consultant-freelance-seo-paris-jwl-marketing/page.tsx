@@ -225,7 +225,7 @@ export default function Page() {
               most sectors, your future clients are spoilt for choice.
             </p>
             <p>
-              Before contacting a business, they often run several Google
+              Before contacting a business, they often run several <GoogleColors />
               searches. My role is to make sure your business is one of
               the solutions they discover at the right time.
             </p>
@@ -248,7 +248,7 @@ export default function Page() {
               choice.
             </p>
             <p className="mt-4">
-              Before making a decision, they often run several Google
+              Before making a decision, they often run several <GoogleColors />
               searches to compare businesses and available solutions. In
               this context, my role is to make sure your business is one
               of the solutions they discover at the right time. The goal
@@ -327,7 +327,7 @@ export default function Page() {
                 That's why I optimise the elements that really influence
                 the decision: categories, services, photos, reviews,
                 practical information and consistency of your presence on
-                Google. The goal isn't just to appear on Google. It's also
+                <GoogleColors />. The goal isn't just to appear on <GoogleColors />. It's also
                 to reassure people about your credibility and make them
                 want to choose you over another business.
               </p>
@@ -405,7 +405,7 @@ export default function Page() {
           <div className="h-full border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
             <p>
               In Paris, being excellent at your craft doesn't guarantee
-              you'll be found. Google needs to understand what you do, who
+              you'll be found. <GoogleColors /> needs to understand what you do, who
               you serve and why a prospect should choose you over another
               business.
             </p>
@@ -414,7 +414,7 @@ export default function Page() {
               searches made by your future clients to build a strategy
               capable of attracting qualified prospects. In such a
               competitive environment, being present online isn't enough.
-              You also need to be understood by Google. Because an
+              You also need to be understood by <GoogleColors />. Because an
               invisible website sells nothing. A well-positioned website,
               on the other hand, can become a genuine business driver.
             </p>
@@ -440,7 +440,7 @@ export default function Page() {
           <div className="h-full border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
             <p>
               Today, before a call, a visit or a quote request, many
-              prospects run several Google searches to compare available
+              prospects run several <GoogleColors /> searches to compare available
               solutions.
             </p>
             <p className="mt-4">
@@ -517,7 +517,7 @@ export default function Page() {
             Between shopkeepers, self-employed professionals, startups,
             consulting firms, service businesses, real estate players and
             companies based in the main business districts, every player
-            has to find its place amid heavy competition on Google.
+            has to find its place amid heavy competition on <GoogleColors />.
           </p>
           <p className="mt-3">
             Consumer habits have also changed. Before booking an

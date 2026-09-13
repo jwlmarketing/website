@@ -221,7 +221,7 @@ export default function Page() {
             <p>
               In Marseille, your network still matters. But it's not always
               enough anymore. Today, a large part of decisions starts on
-              Google.
+              <GoogleColors />.
             </p>
             <p>
               Consumers search, compare and shortlist several businesses
@@ -245,7 +245,7 @@ export default function Page() {
             <p>
               In Marseille, your network still counts. But it's not always
               enough anymore. Before making a decision, many consumers
-              search for information on Google, read reviews and compare
+              search for information on <GoogleColors />, read reviews and compare
               several businesses.
             </p>
             <p className="mt-4">
@@ -315,14 +315,14 @@ export default function Page() {
             <div className="border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
               <p>
                 In Marseille, people often check several businesses before
-                making a choice. Your Google listing is often the first
+                making a choice. Your <GoogleColors /> listing is often the first
                 contact with a future client.
               </p>
               <p className="mt-4">
                 I optimise the elements that really influence the decision:
                 categories, services, photos, reviews, practical
                 information and the consistency of your online presence.
-                The goal isn't just to appear on Google. The goal is to
+                The goal isn't just to appear on <GoogleColors />. The goal is to
                 build trust and prompt people to contact you.
               </p>
             </div>
@@ -396,14 +396,14 @@ export default function Page() {
           <div className="self-center border-2 border-gold p-8 text-[17px] leading-[28px] text-[#1a1a1a]">
             <p>
               In Marseille, being good at your craft isn't always enough
-              to be found. Google needs to understand what you do, who you
+              to be found. <GoogleColors /> needs to understand what you do, who you
               serve and why a prospect should choose you.
             </p>
             <p className="mt-4">
               I analyse your market, your competitors and the searches
               made by your future clients to build a strategy capable of
               attracting qualified prospects. Because an invisible website
-              sells nothing. A website Google understands can become a
+              sells nothing. A website <GoogleColors /> understands can become a
               genuine business driver.
             </p>
           </div>
@@ -444,7 +444,7 @@ export default function Page() {
             </p>
             <p className="mt-4">
               Before a call, a visit or a quote request, many prospects run
-              a Google search. If your business doesn't show up at the
+              a <GoogleColors /> search. If your business doesn't show up at the
               right time, it's often your competitors who pick up those
               opportunities.
             </p>
@@ -514,7 +514,7 @@ export default function Page() {
             Between building tradespeople, restaurateurs, self-employed
             professionals, tourism operators, transport and logistics
             companies, and businesses set up around the Grand Port
-            Maritime, every activity faces growing competition on Google.
+            Maritime, every activity faces growing competition on <GoogleColors />.
           </p>
           <p className="mt-3">
             Today, a future client can compare several Marseille businesses

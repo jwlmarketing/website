@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import LegalLayout from "@/components/LegalLayout";
+import GoogleColors from "@/components/GoogleColors";
 
 export const metadata: Metadata = { title: "Politique de cookies | JWL Marketing" };
 
@@ -41,7 +42,7 @@ export default function Cookies() {
       <table>
         <thead><tr><th>Outil</th><th>Finalité</th><th>Durée</th></tr></thead>
         <tbody>
-          <tr><td>Google Search Console</td><td>Analyse de la visibilité et des requêtes Google</td><td>Variable</td></tr>
+          <tr><td>Google Search Console</td><td>Analyse de la visibilité et des requêtes <GoogleColors /></td><td>Variable</td></tr>
         </tbody>
       </table>
 
@@ -49,7 +50,7 @@ export default function Cookies() {
       <p>Certains outils intégrés au site peuvent déposer leurs propres cookies :</p>
       <ul>
         <li>Calendly, pour la prise de rendez-vous en ligne</li>
-        <li>Google, pour l&apos;affichage de la carte, des avis ou de contenus liés à Google Business Profile</li>
+        <li><GoogleColors />, pour l&apos;affichage de la carte, des avis ou de contenus liés à Google Business Profile</li>
       </ul>
       <p>
         Ces prestataires disposent de leur propre politique de

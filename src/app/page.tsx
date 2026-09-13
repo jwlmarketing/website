@@ -103,7 +103,7 @@ export default function Home() {
           </h1>
           <p className="mt-2.5 text-sm leading-relaxed text-[#333]">
             Sais-tu combien de prospects découvrent ton entreprise grâce à
-            Google ? Peux-tu mesurer le nombre de clics, d&apos;appels ou de
+            <GoogleColors /> ? Peux-tu mesurer le nombre de clics, d&apos;appels ou de
             contacts générés par ta présence en ligne ?
           </p>
 
@@ -161,7 +161,7 @@ export default function Home() {
           <span className="italic text-[#c9846f]">apparais-tu</span> ?
         </h2>
         <p className="mx-auto mt-3 max-w-[700px] text-base text-[#555] md:text-lg">
-          Google attire l&apos;attention. Ton site crée la confiance. Ta
+          <GoogleColors /> attire l&apos;attention. Ton site crée la confiance. Ta
           stratégie transforme les visiteurs en clients.
         </p>
 
@@ -229,14 +229,14 @@ export default function Home() {
               </strong>{" "}
               Ils ne connaissent ni ton nom, ni l&apos;existence de ton
               entreprise. Ils recherchent simplement un produit ou un service.
-              Si ton entreprise n&apos;apparaît pas dans les résultats, Google
+              Si ton entreprise n&apos;apparaît pas dans les résultats, <GoogleColors />
               proposera tes concurrents.
             </p>
             <p>
               Les habitudes de recherche évoluent également avec l&apos;arrivée
               de l&apos;intelligence artificielle.{" "}
               <strong className="text-white">
-                Google intègre désormais l&apos;IA dans ses résultats pour
+                <GoogleColors /> intègre désormais l&apos;IA dans ses résultats pour
                 répondre plus rapidement aux internautes et mettre en avant les
                 entreprises jugées les plus pertinentes.
               </strong>
@@ -245,7 +245,7 @@ export default function Home() {
               Être visible ne consiste plus seulement à avoir un site web.{" "}
               <strong className="text-white">
                 Il faut aussi proposer un contenu clair, fiable et pertinent
-                pour apparaître dans les recherches Google d&apos;aujourd&apos;hui
+                pour apparaître dans les recherches <GoogleColors /> d&apos;aujourd&apos;hui
                 et de demain.
               </strong>
             </p>
@@ -347,52 +347,51 @@ export default function Home() {
       <section className="px-[5%] py-16 text-center">
         <SectionHeading
           kicker="Ta visibilité"
-          title="n'est pas une question de hasard"
+          title="grandit grâce aux clients que ton site web génère."
         />
 
-        <div className="mx-auto flex max-w-[1200px] flex-col items-center justify-center gap-10 md:flex-row">
-          <VisibilityChart />
-          <span className="block max-w-[300px] shrink-0 text-left text-lg italic text-[#c9846f]">
-            Elle grandit grâce aux clients que ton site web génère.
-          </span>
-        </div>
-
-        <div className="mx-auto mt-10 max-w-[900px] rounded-2xl bg-[#141414] p-8 text-left text-white md:p-10">
-          <p className="leading-relaxed text-white/85">
-            Mon métier ne se limite pas à la création de sites web. Il
-            consiste à t&apos;aider à{" "}
-            <strong className="text-white">
-              construire un véritable écosystème digital pour développer ton
-              activité et attirer de nouveaux clients.
-            </strong>
-          </p>
-          <p className="mt-4 leading-relaxed text-white/85">
-            <strong className="text-white">
-              Mon rôle est de créer un lien entre ton quotidien
-              d&apos;entrepreneur et les outils digitaux.
-            </strong>{" "}
-            Que ce soit lors de tes actions de prospection, de ta
-            participation à des salons professionnels ou de ton activité sur
-            le terrain,{" "}
-            <strong className="text-white">
-              l&apos;objectif est de faire en sorte que ton entreprise
-              continue d&apos;être visible et de générer des opportunités,
-              même lorsque tu n&apos;es pas derrière ton écran.
-            </strong>
-          </p>
-          <p className="mt-4 leading-relaxed text-white/85">
-            <strong className="text-white">
-              Pour cela j&apos;utilise des outils digitaux les plus adaptés à
-              ton activité
-            </strong>{" "}
-            : site web optimisé, référencement naturel (SEO), fiche Google,
-            contenus, articles, blog, IA, et autres leviers de visibilité.{" "}
-            <strong className="text-white">
-              Chaque action est pensée pour renforcer ta présence en ligne,
-              développer ta crédibilité et favoriser l&apos;acquisition de
-              nouveaux clients.
-            </strong>
-          </p>
+        <div className="mx-auto flex max-w-[1200px] flex-col items-center gap-10 md:flex-row md:items-stretch">
+          <div className="shrink-0">
+            <VisibilityChart />
+          </div>
+          <div className="w-full rounded-2xl bg-[#141414] p-8 text-left text-white md:p-10">
+            <p className="leading-relaxed text-white/85">
+              Mon métier ne se limite pas à la création de sites web. Il
+              consiste à t&apos;aider à{" "}
+              <strong className="text-white">
+                construire un véritable écosystème digital pour développer ton
+                activité et attirer de nouveaux clients.
+              </strong>
+            </p>
+            <p className="mt-4 leading-relaxed text-white/85">
+              <strong className="text-white">
+                Mon rôle est de créer un lien entre ton quotidien
+                d&apos;entrepreneur et les outils digitaux.
+              </strong>{" "}
+              Que ce soit lors de tes actions de prospection, de ta
+              participation à des salons professionnels ou de ton activité sur
+              le terrain,{" "}
+              <strong className="text-white">
+                l&apos;objectif est de faire en sorte que ton entreprise
+                continue d&apos;être visible et de générer des opportunités,
+                même lorsque tu n&apos;es pas derrière ton écran.
+              </strong>
+            </p>
+            <p className="mt-4 leading-relaxed text-white/85">
+              <strong className="text-white">
+                Pour cela j&apos;utilise des outils digitaux les plus adaptés à
+                ton activité
+              </strong>{" "}
+              : site web optimisé, référencement naturel (SEO), fiche{" "}
+              <GoogleColors />, contenus, articles, blog, IA, et autres leviers
+              de visibilité.{" "}
+              <strong className="text-white">
+                Chaque action est pensée pour renforcer ta présence en ligne,
+                développer ta crédibilité et favoriser l&apos;acquisition de
+                nouveaux clients.
+              </strong>
+            </p>
+          </div>
         </div>
 
         {/* Mais de résultat */}

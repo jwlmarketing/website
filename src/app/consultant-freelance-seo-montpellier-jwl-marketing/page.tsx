@@ -7,6 +7,7 @@ import ProofCards from "@/components/ProofCards";
 import { REVIEWS } from "@/data/reviews";
 import TypewriterText from "@/components/TypewriterText";
 import SiteHeader from "@/components/SiteHeader";
+import GoogleColors from "@/components/GoogleColors";
 
 export const metadata: Metadata = {
   title: "Consultante Freelance SEO Montpellier | JWL Marketing",
@@ -110,7 +111,7 @@ export default function Page() {
           <p className="text-base leading-[1.6] text-black">
             Une stratégie freelance, portée par la qualité d&apos;une agence à
             taille humaine. À Montpellier, la place de la Comédie est une
-            scène incontournable. Sur Google, c&apos;est à ton entreprise de
+            scène incontournable. Sur <GoogleColors />, c&apos;est à ton entreprise de
             devenir une représentation indispensable.
           </p>
           <h1 className="mt-4 font-heading text-4xl leading-[1.05] lg:text-[60px] lg:leading-[0.95] text-black">
@@ -167,9 +168,9 @@ export default function Page() {
           <p>
             À Montpellier, le vin et les cannelés font la réputation de la
             ville — non, ici c&apos;est la place de la Comédie et l&apos;Écusson.
-            Fais de ton entreprise une référence sur Google. Dans une
+            Fais de ton entreprise une référence sur <GoogleColors />. Dans une
             métropole dynamique où les entreprises innovent et où la
-            concurrence est bien présente, être visible sur Google est
+            concurrence est bien présente, être visible sur <GoogleColors /> est
             devenu un véritable levier de développement. Il ne suffit plus
             d&apos;avoir un site internet : il faut apparaître au moment où
             tes futurs clients recherchent tes produits ou tes services.
@@ -187,10 +188,10 @@ export default function Page() {
             performances de ton site. J&apos;optimise ensuite la technique,
             les contenus, le maillage interne, le référencement local,
             l&apos;expérience utilisateur et tous les critères pris en compte
-            par Google afin d&apos;améliorer durablement ta visibilité.
+            par <GoogleColors /> afin d&apos;améliorer durablement ta visibilité.
           </p>
           <p>
-            Mon objectif est simple : transformer les recherches Google en
+            Mon objectif est simple : transformer les recherches <GoogleColors /> en
             demandes de devis, en rendez-vous et en nouveaux clients à
             Montpellier, dans toute l&apos;Occitanie et partout où tu
             souhaites développer ton activité.
@@ -205,14 +206,14 @@ export default function Page() {
           aussi une concurrence plus forte. Pour être choisi, il ne suffit
           plus d&apos;avoir un beau site internet. Encore faut-il que tes
           futurs clients puissent le trouver lorsqu&apos;ils effectuent une
-          recherche sur Google.
+          recherche sur <GoogleColors />.
         </p>
         <div className="mx-auto mt-6 max-w-[700px] space-y-2 text-left text-[15px] text-[#1a1a1a]">
           <p>
             — Chaque jour, de nouvelles entreprises cherchent à gagner en
             visibilité.
           </p>
-          <p>— Les premières positions sur Google attirent l&apos;essentiel des clics.</p>
+          <p>— Les premières positions sur <GoogleColors /> attirent l&apos;essentiel des clics.</p>
           <p>
             — Pendant que certains attendent, leurs concurrents développent
             déjà leur présence en ligne.
@@ -324,7 +325,7 @@ export default function Page() {
         <p className="text-[17px] leading-[28px] text-[#1a1a1a]">
           Être installé dans un emplacement stratégique à Montpellier ne
           garantit plus de trouver de nouveaux clients. Aujourd&apos;hui, la
-          majorité des consommateurs se renseignent sur Google avant de
+          majorité des consommateurs se renseignent sur <GoogleColors /> avant de
           faire appel à un professionnel, réserver une table ou acheter un
           produit.
         </p>
@@ -364,10 +365,10 @@ export default function Page() {
           <span className="italic text-[#c9846f]">Lance-toi</span>
         </h3>
         <p className="mt-3 font-heading text-3xl leading-tight md:text-[54px] text-black">
-          Optimise dès maintenant avec Google ton site web Montpelliérain.
+          Optimise dès maintenant avec <GoogleColors /> ton site web Montpelliérain.
         </p>
         <p className="mx-auto mt-6 max-w-[700px] text-[17px] leading-[28px] text-[#1a1a1a]">
-          Tes futurs clients recherchent déjà tes services sur Google. Ne
+          Tes futurs clients recherchent déjà tes services sur <GoogleColors />. Ne
           laisse pas un concurrent de l&apos;Écusson, de Port Marianne ou
           d&apos;Odysseum récupérer les demandes à ta place.
         </p>
@@ -377,7 +378,7 @@ export default function Page() {
           rel="noopener"
           className="mt-8 inline-block rounded-full bg-[#c9846f] px-10 py-[15px] font-medium text-white transition-colors hover:bg-[#b8735f]"
         >
-          Prêt à donner à Google une bonne raison de recommander ton entreprise ?
+          Prêt à donner à <GoogleColors /> une bonne raison de recommander ton entreprise ?
         </a>
       </section>
     </div>

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import GoogleColors from "@/components/GoogleColors";
 
 export default function NotFound() {
   return (
@@ -19,7 +20,7 @@ export default function NotFound() {
         Cette page a décollé... sans nous prévenir.
       </h1>
       <p className="mt-4 max-w-md text-[#555]">
-        Même Google ne l&apos;a jamais indexée. Soit elle n&apos;existe pas,
+        Même <GoogleColors /> ne l&apos;a jamais indexée. Soit elle n&apos;existe pas,
         soit elle a été déplacée — ou alors elle fait un tour de l&apos;espace
         et redescend bientôt. En attendant, pas de panique : on va te
         remettre sur une orbite qui fonctionne.

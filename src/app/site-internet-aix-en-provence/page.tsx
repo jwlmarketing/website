@@ -41,7 +41,7 @@ export default function Page() {
           </h1>
           <p className="mt-6 text-base leading-[1.6] text-black">
             Auto-entrepreneurs, micro-entreprises, TPE, PME et dirigeants :
-            développe ta visibilité sur Google et attire des prospects
+            développe ta visibilité sur <GoogleColors /> et attire des prospects
             qualifiés toute l&apos;année.
           </p>
           <div className="mt-6 flex flex-wrap items-center gap-4">
@@ -108,7 +108,7 @@ export default function Page() {
               </p>
               <p className="mt-2 text-[14px] leading-[22px] text-white/80">
                 Étude de ton activité, de tes concurrents et des mots-clés
-                utilisés sur Google.
+                utilisés sur <GoogleColors />.
               </p>
             </div>
           </ScrollReveal>
@@ -267,7 +267,7 @@ export default function Page() {
             <StepNumber n={1} />
             <div className="mt-4 rounded-2xl bg-[#141414] p-6 text-left text-white">
               <p className="text-[15px] font-semibold leading-[22px]">
-                Je regarde le suivi Search Console Google
+                Je regarde le suivi Search Console <GoogleColors />
               </p>
               <p className="mt-2 text-sm leading-[21px] text-white/80">
                 En claire se que les gens tapent sur google et comment ton
@@ -331,7 +331,7 @@ export default function Page() {
               Quand tu n&apos;as pas de stratégie.
             </p>
             <p className="mt-2 text-sm italic text-[#7c5fd6]">
-              Google ne te propose pas aux internautes
+              <GoogleColors /> ne te propose pas aux internautes
               <br />
               Tu as des clics qui correspondent à tes clients
             </p>
@@ -353,7 +353,7 @@ export default function Page() {
               sur ton site web.
             </p>
             <p className="mt-2 text-sm italic text-[#7c5fd6]">
-              Ta courbe monte car Google te comprend
+              Ta courbe monte car <GoogleColors /> te comprend
               <br />
               Tu as toujours de faibles clics, tu ne convertis pas
             </p>
@@ -371,7 +371,7 @@ export default function Page() {
             className="mt-3 h-auto w-full rounded-2xl border border-[#eee] object-cover"
           />
           <p className="mt-2 text-sm italic text-[#7c5fd6]">
-            Google te propose sur des mots-clés
+            <GoogleColors /> te propose sur des mots-clés
             <br />
             Tu as des clics des internautes
           </p>
