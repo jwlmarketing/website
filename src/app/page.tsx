@@ -61,23 +61,6 @@ const METHODE_STEPS = [
   },
 ];
 
-const FACTEURS_SEO = [
-  "De tes produits et services",
-  "De ta zone de chalandise",
-  "De ton positionnement",
-  "De ta stratégie commerciale",
-  "De ta présence en ligne",
-  "De ta fiche Google Business Profile",
-  "De ton site web",
-  "De son optimisation technique",
-  "De ta rédaction web",
-  "De la qualité de tes contenus",
-  "De ta régularité à publier",
-  "De la concurrence sur ton secteur",
-  "De ton historique digital",
-  "De tes objectifs",
-];
-
 const ET_APRES_ITEMS = [
   "Ton site web t'appartient.",
   "Tu conserves tous tes identifiants et mots de passe.",
@@ -383,35 +366,6 @@ export default function Home() {
                 nouveaux clients.
               </strong>
             </p>
-          </div>
-        </FadeUp>
-
-        {/* Mais de résultat */}
-        <FadeUp>
-          <h3 className="mx-auto mt-16 max-w-[900px] font-heading text-2xl leading-[1.3] text-black md:text-4xl">
-            <span className="text-[#c9846f]">
-              Les piliers de ton référencement
-            </span>{" "}
-            sur lesquels je peux intervenir
-          </h3>
-          <div className="mx-auto mt-8 flex max-w-[1300px] flex-col items-center gap-8 md:flex-row md:items-stretch">
-            <Image
-              src="/images/jwl-consultante-seo-facteurs-visibilite.png"
-              alt="JWL Marketing - facteurs de visibilité SEO"
-              width={237}
-              height={421}
-              className="h-[420px] w-auto max-w-none shrink-0 object-contain md:h-full md:w-auto"
-            />
-            <div className="w-full rounded-2xl border border-[#c9846f]/40 bg-[#141414] p-8 text-left text-white">
-              <h3 className="font-heading text-lg font-semibold text-gold">
-                Le SEO dépend de nombreux facteurs
-              </h3>
-              <ul className="mt-4 space-y-1.5 text-sm text-white/85">
-                {FACTEURS_SEO.map((f) => (
-                  <li key={f}>{f}</li>
-                ))}
-              </ul>
-            </div>
           </div>
         </FadeUp>
 
