@@ -6,7 +6,7 @@ import GmbAuditWidget from "@/components/GmbAuditWidget";
 import ProofCards from "@/components/ProofCards";
 import { REVIEWS } from "@/data/reviews";
 import TypewriterText from "@/components/TypewriterText";
-import LanguageToggle from "@/components/LanguageToggle";
+import SiteHeader from "@/components/SiteHeader";
 
 export const metadata: Metadata = {
   title: "Freelance SEO Consultant Montpellier | JWL Marketing",
@@ -102,30 +102,7 @@ const FEATURES = [
 export default function Page() {
   return (
     <div>
-      {/* Logo + account, above the hero */}
-      <div className="flex w-full items-center justify-between px-[5%] pt-20">
-        <Link href="/en">
-          <Image
-            src="/images/logo-jwl-marketing.png"
-            alt="JWL Marketing Montpellier"
-            width={966}
-            height={187}
-            className="h-[36px] w-auto"
-          />
-        </Link>
-        <div className="flex items-center gap-3">
-          <a href="https://intranet.jwlmarketing.fr/" aria-label="Client area login">
-            <Image
-              src="/images/seco.png"
-              alt="Client area login"
-              width={28}
-              height={28}
-              className="h-7 w-7"
-            />
-          </a>
-          <LanguageToggle locale="en" href="/consultant-freelance-seo-montpellier-jwl-marketing" />
-        </div>
-      </div>
+      <SiteHeader locale="en" href="/consultant-freelance-seo-montpellier-jwl-marketing" />
 
       {/* Hero */}
       <div className="flex w-full flex-col items-center justify-between gap-10 bg-white px-[5%] py-[60px] lg:flex-row">

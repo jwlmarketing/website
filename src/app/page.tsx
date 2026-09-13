@@ -14,7 +14,7 @@ import GuaranteesCards from "@/components/GuaranteesCards";
 import EscalierReveal from "@/components/EscalierReveal";
 import TypewriterText from "@/components/TypewriterText";
 import TrustedPartners from "@/components/TrustedPartners";
-import LanguageToggle from "@/components/LanguageToggle";
+import SiteHeader from "@/components/SiteHeader";
 import AccompagnementsSection from "@/components/AccompagnementsSection";
 
 const METHODE_STEPS = [
@@ -90,30 +90,7 @@ const ET_APRES_ITEMS = [
 export default function Home() {
   return (
     <div>
-      {/* Logo + compte, au-dessus du hero */}
-      <div className="flex w-full items-center justify-between px-[5%] pt-20">
-        <Link href="/">
-          <Image
-            src="/images/logo-jwl-marketing.png"
-            alt="JWL Marketing Aix-en-Provence"
-            width={966}
-            height={187}
-            className="h-[36px] w-auto"
-          />
-        </Link>
-        <div className="flex items-center gap-3">
-          <a href="https://intranet.jwlmarketing.fr/" aria-label="Connexion espace client">
-            <Image
-              src="/images/seco.png"
-              alt="Connexion espace client"
-              width={28}
-              height={28}
-              className="h-7 w-7"
-            />
-          </a>
-          <LanguageToggle locale="fr" href="/en" />
-        </div>
-      </div>
+      <SiteHeader locale="fr" href="/en" />
 
       {/* Hero */}
       <div className="flex w-full flex-col items-start justify-between gap-10 bg-white px-[5%] pb-[60px] pt-20 lg:flex-row">

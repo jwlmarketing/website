@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import GoogleColors from "@/components/GoogleColors";
-import LanguageToggle from "@/components/LanguageToggle";
+import SiteHeader from "@/components/SiteHeader";
 
 export const metadata: Metadata = {
   title: "Optimisation Fiche Google Business Profile | JWL MARKETING",
@@ -39,30 +39,7 @@ export default function Page() {
 function PageContent() {
   return (
     <div>
-      {/* Logo + compte, au-dessus du hero */}
-      <div className="flex w-full items-center justify-between px-[5%] pt-20">
-        <Link href="/">
-          <Image
-            src="/images/logo-jwl-marketing.png"
-            alt="JWL Marketing"
-            width={966}
-            height={187}
-            className="h-[36px] w-auto"
-          />
-        </Link>
-        <div className="flex items-center gap-3">
-          <a href="https://intranet.jwlmarketing.fr/" aria-label="Connexion espace client">
-            <Image
-              src="/images/seco.png"
-              alt="Connexion espace client"
-              width={28}
-              height={28}
-              className="h-7 w-7"
-            />
-          </a>
-          <LanguageToggle locale="fr" href="/en/google-my-business-aix-en-provence" />
-        </div>
-      </div>
+      <SiteHeader locale="fr" href="/en/google-my-business-aix-en-provence" />
 
       {/* Hero */}
       <div className="flex w-full flex-col items-center justify-between gap-10 bg-white px-[5%] py-[60px] lg:flex-row">

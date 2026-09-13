@@ -14,7 +14,7 @@ import GuaranteesCards from "@/components/GuaranteesCards";
 import EscalierReveal from "@/components/EscalierReveal";
 import TypewriterText from "@/components/TypewriterText";
 import TrustedPartners from "@/components/TrustedPartners";
-import LanguageToggle from "@/components/LanguageToggle";
+import SiteHeader from "@/components/SiteHeader";
 
 export const metadata: Metadata = {
   title: "JWL Marketing | Digital Marketing in Aix-en-Provence",
@@ -248,30 +248,7 @@ function OfferCard({
 export default function Home() {
   return (
     <div>
-      {/* Logo + account, above the hero */}
-      <div className="flex w-full items-center justify-between px-[5%] pt-20">
-        <Link href="/en">
-          <Image
-            src="/images/logo-jwl-marketing.png"
-            alt="JWL Marketing Aix-en-Provence"
-            width={966}
-            height={187}
-            className="h-[36px] w-auto"
-          />
-        </Link>
-        <div className="flex items-center gap-3">
-          <a href="https://intranet.jwlmarketing.fr/" aria-label="Client area login">
-            <Image
-              src="/images/seco.png"
-              alt="Client area login"
-              width={28}
-              height={28}
-              className="h-7 w-7"
-            />
-          </a>
-          <LanguageToggle locale="en" href="/" />
-        </div>
-      </div>
+      <SiteHeader locale="en" href="/" />
 
       {/* Hero */}
       <div className="flex w-full flex-col items-start justify-between gap-10 bg-white px-[5%] pb-[60px] pt-20 lg:flex-row">
