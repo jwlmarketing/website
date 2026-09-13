@@ -149,8 +149,8 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="relative flex min-w-0 flex-[1.4_1_0%] items-start justify-end">
-          <p className="absolute left-1/2 top-0 z-10 w-full max-w-[420px] -translate-x-1/2 text-balance text-center text-sm leading-relaxed text-[#333]">
+        <div className="relative flex min-w-0 flex-[1.4_1_0%] flex-col items-end">
+          <p className="mb-4 w-full max-w-[420px] text-center text-sm leading-relaxed text-[#333]">
             Sais-tu combien de prospects découvrent ton entreprise grâce à
             Google&nbsp;? Peux-tu mesurer le nombre de clics, d&apos;appels ou
             de contacts générés par ta présence en ligne&nbsp;?
@@ -162,7 +162,7 @@ export default function Home() {
             muted
             playsInline
             aria-label="Jodie Lapaillerie - JWL Marketing"
-            className="-mt-10 h-auto max-h-[70vh] w-full max-w-full object-contain md:-mt-16"
+            className="h-auto max-h-[70vh] w-full max-w-full object-contain"
           />
           <HeroBadge />
         </div>
