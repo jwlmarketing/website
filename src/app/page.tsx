@@ -95,11 +95,7 @@ export default function Home() {
       {/* Hero */}
       <div className="flex w-full flex-col items-start justify-between gap-10 bg-white px-[5%] pb-[60px] pt-20 lg:flex-row">
         <div className="max-w-[600px] flex-1">
-          <p className="text-sm leading-relaxed text-[#333]">
-            Créez un site web conçu pour <strong>attirer des prospects</strong>{" "}
-            et <strong>développer votre activité</strong>
-          </p>
-          <h1 className="m-0 mb-1 mt-2.5 font-heading text-4xl leading-[1.15] text-black lg:text-[60px] lg:leading-[1.2]">
+          <h1 className="m-0 mb-1 font-heading text-4xl leading-[1.15] text-black lg:text-[60px] lg:leading-[1.2]">
             <span>
               Un site Web
               <br />
@@ -110,6 +106,11 @@ export default function Home() {
               nouveaux clients
             </span>
           </h1>
+          <p className="mt-2.5 text-sm leading-relaxed text-[#333]">
+            Sais-tu combien de prospects découvrent ton entreprise grâce à
+            Google ? Peux-tu mesurer le nombre de clics, d&apos;appels ou de
+            contacts générés par ta présence en ligne ?
+          </p>
 
           <div className="mt-6 flex flex-wrap gap-[15px]">
             <a
@@ -142,12 +143,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="relative flex min-w-0 flex-[1.4_1_0%] flex-col items-end">
-          <p className="mb-4 w-full max-w-[420px] text-center text-sm leading-relaxed text-[#333]">
-            Sais-tu combien de prospects découvrent ton entreprise grâce à
-            Google&nbsp;? Peux-tu mesurer le nombre de clics, d&apos;appels ou
-            de contacts générés par ta présence en ligne&nbsp;?
-          </p>
+        <div className="relative flex min-w-0 flex-[1.4_1_0%] items-start justify-end">
           <video
             src="/videos/hero-jodie-etoile.mp4"
             autoPlay
