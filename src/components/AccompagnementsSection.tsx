@@ -247,6 +247,15 @@ export default function AccompagnementsSection() {
             <PricingCard key={tier.title} tier={tier} />
           ))}
         </div>
+        <div className="mt-8 rounded-2xl border-2 border-gold bg-white p-6 text-sm leading-relaxed text-gold">
+          * Les tarifs indiqués correspondent aux prestations décrites dans
+          chaque formule. Ils peuvent être adaptés selon la complexité du
+          projet, le secteur d&apos;activité, la concurrence, la zone
+          géographique ciblée, les objectifs de développement, le niveau
+          d&apos;accompagnement souhaité ainsi que les besoins spécifiques de
+          l&apos;entreprise. Toute demande particulière pourra faire l&apos;objet
+          d&apos;un devis personnalisé.
+        </div>
         <div className="mt-8 flex justify-center">
           <Link
             href="/contact-jwl-marketing-aix-en-provence"
