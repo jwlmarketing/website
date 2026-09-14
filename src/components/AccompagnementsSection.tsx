@@ -151,7 +151,7 @@ function PricingCard({ tier }: { tier: (typeof PRICING_TIERS)[number] }) {
       </span>
       <span
         aria-hidden
-        className="absolute -top-2 left-[88px] text-2xl font-bold leading-none text-gold"
+        className="absolute -top-3 left-[104px] text-3xl font-bold leading-none text-gold"
       >
         *
       </span>
