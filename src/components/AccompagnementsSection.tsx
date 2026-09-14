@@ -151,7 +151,8 @@ function PricingCard({ tier }: { tier: (typeof PRICING_TIERS)[number] }) {
       </span>
       <span
         aria-hidden
-        className="absolute -top-3 left-[104px] text-3xl font-bold leading-none text-gold"
+        className="absolute -top-4 left-[64px] text-3xl font-bold leading-none text-white"
+        style={{ WebkitTextStroke: "1.5px black", textShadow: "0 0 3px rgba(0,0,0,0.5)" }}
       >
         *
       </span>
