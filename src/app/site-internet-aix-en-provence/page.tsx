@@ -133,14 +133,40 @@ export default function Page() {
             </a>
           </div>
         </div>
-        <Image
-          src="/images/creation-site-web.webp"
-          alt="Jodie Lapaillerie — Création de site web JWL Marketing"
-          width={712}
-          height={582}
-          priority
-          className="h-auto w-full max-w-[500px] object-contain"
-        />
+        <div className="jwl-hero-glow-wrap relative w-full max-w-[500px]">
+          <Image
+            src="/images/hero-creation-site-duo.png"
+            alt="Jodie Lapaillerie — Création de site web JWL Marketing"
+            width={1024}
+            height={768}
+            priority
+            className="relative z-10 h-auto w-full object-contain"
+          />
+          <div className="jwl-hero-glow-seam" />
+          <style>{`
+            .jwl-hero-glow-seam {
+              position: absolute;
+              top: 6%;
+              left: 49%;
+              width: 22px;
+              height: 88%;
+              transform: translateX(-50%);
+              background: linear-gradient(180deg, transparent 0%, rgba(255,214,120,.9) 15%, rgba(255,244,214,1) 50%, rgba(255,214,120,.9) 85%, transparent 100%);
+              filter: blur(9px);
+              mix-blend-mode: screen;
+              opacity: .55;
+              animation: jwl-hero-glow-pulse 2.6s ease-in-out infinite;
+              pointer-events: none;
+            }
+            @keyframes jwl-hero-glow-pulse {
+              0%, 100% { opacity: .4; filter: blur(9px); width: 20px; }
+              50% { opacity: .85; filter: blur(13px); width: 28px; }
+            }
+            @media (prefers-reduced-motion: reduce) {
+              .jwl-hero-glow-seam { animation: none; opacity: .6; }
+            }
+          `}</style>
+        </div>
       </div>
 
       {/* Mon réseau de confiance */}
