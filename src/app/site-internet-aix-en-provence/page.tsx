@@ -86,7 +86,7 @@ export default function Page() {
 
       {/* Hero */}
       <div className="flex w-full flex-col items-center justify-between gap-10 bg-white px-[5%] py-[60px] lg:flex-row">
-        <div className="max-w-[600px] flex-1">
+        <div className="max-w-[680px] flex-1">
           <h1 className="font-heading text-4xl font-bold leading-[1.1] lg:text-[54px] lg:leading-[1.1] text-black">
             <span className="italic text-[#c9846f]">JWL Business</span>
             <span className="font-medium"> : Un site web conçu pour ton</span>
@@ -146,7 +146,7 @@ export default function Page() {
       </div>
 
       {/* Ton prochain client est sur Google */}
-      <section className="mx-auto max-w-[1200px] px-6 py-10 text-center">
+      <section className="mx-auto max-w-[1400px] px-6 py-10 text-center">
         <h2 className="font-heading text-3xl font-bold leading-[1.15] md:text-[46px] md:leading-[1.15] text-black">
           <span className="italic text-[#c9846f]">
             Ton prochain client est sur <GoogleColors />.
@@ -164,7 +164,7 @@ export default function Page() {
       </section>
 
       {/* Ma Méthode */}
-      <section className="mx-auto max-w-[1200px] px-6 py-10 text-center">
+      <section className="mx-auto max-w-[1400px] px-6 py-10 text-center">
         <h2 className="font-heading text-3xl font-bold leading-[1.15] md:text-[46px] md:leading-[1.15] text-black">
           <span className="italic text-[#c9846f]">Ma Méthode</span>
           <br />
@@ -232,7 +232,7 @@ export default function Page() {
       </section>
 
       {/* Je construis ton site web */}
-      <section className="mx-auto max-w-[900px] px-6 py-10">
+      <section className="mx-auto max-w-[1100px] px-6 py-10">
         <h2 className="text-center font-heading text-3xl font-bold leading-[1.15] md:text-[46px] md:leading-[1.15] text-black">
           <span className="italic text-[#c9846f]">
             Je construis ton site web
@@ -252,7 +252,7 @@ export default function Page() {
           />
         </ScrollReveal>
         <ScrollReveal delay={150}>
-          <p className="mx-auto mt-6 max-w-[640px] text-center text-[17px] leading-[28px] text-[#1a1a1a]">
+          <p className="mx-auto mt-6 max-w-[720px] text-center text-[17px] leading-[28px] text-[#1a1a1a]">
             Ton site n&apos;a pas besoin d&apos;être complet dès le premier
             jour, les données nous montrent ensuite ce qu&apos;il faut
             renforcé et les contenus à créer. Comme ça ton site grandit
@@ -262,7 +262,7 @@ export default function Page() {
       </section>
 
       {/* Les 5 étapes de ton site web */}
-      <section className="mx-auto max-w-[900px] px-6 py-10 text-center">
+      <section className="mx-auto max-w-[1100px] px-6 py-10 text-center">
         <h2 className="font-heading text-3xl font-bold leading-[1.15] md:text-[46px] md:leading-[1.15] text-black">
           Les 5 <span className="italic text-[#c9846f]">étapes</span> de ton
           site web
@@ -367,7 +367,7 @@ export default function Page() {
       </section>
 
       {/* Tous les mois je veille à la maintenance */}
-      <section className="mx-auto max-w-[1100px] px-6 py-10 text-center">
+      <section className="mx-auto max-w-[1300px] px-6 py-10 text-center">
         <h2 className="font-heading text-3xl font-bold leading-[1.15] md:text-[46px] md:leading-[1.15] text-black">
           <span className="font-medium">Tous les mois je veille</span>
           <br />
@@ -375,7 +375,7 @@ export default function Page() {
             à la maintenance de ton site web
           </span>
         </h2>
-        <div className="mx-auto mt-10 grid max-w-[900px] gap-6 md:grid-cols-2 md:items-center">
+        <div className="mx-auto mt-10 grid max-w-[1050px] gap-6 md:grid-cols-2 md:items-center">
           <div className="space-y-4 text-left">
             {[
               {
@@ -412,7 +412,7 @@ export default function Page() {
       </section>
 
       {/* En escalier : 3 etapes */}
-      <section className="mx-auto max-w-[900px] px-6 py-10">
+      <section className="mx-auto max-w-[1100px] px-6 py-10">
         <div className="space-y-6">
           <ScrollReveal delay={0} className="mx-auto w-full rounded-2xl bg-[#141414] p-8 text-white">
             <h3 className="font-heading text-2xl">
@@ -474,7 +474,7 @@ export default function Page() {
       </section>
 
       {/* Tous les mois je veille */}
-      <section className="mx-auto max-w-[1200px] px-6 py-10 text-center">
+      <section className="mx-auto max-w-[1400px] px-6 py-10 text-center">
         <h2 className="font-heading text-3xl font-bold leading-[1.15] md:text-[46px] md:leading-[1.15] text-black">
           <span className="italic text-[#c9846f]">Tous les mois je veille</span>
           <br />
@@ -527,7 +527,7 @@ export default function Page() {
             </div>
           </ScrollReveal>
         </div>
-        <p className="mx-auto mt-8 max-w-[800px] text-[17px] leading-[28px] text-[#1a1a1a]">
+        <p className="mx-auto mt-8 max-w-[940px] text-[17px] leading-[28px] text-[#1a1a1a]">
           Selon ton accompagnement je peux soit te guider sur les ajustements
           à faire soit les faire pour toi. Et si tu rédiges tes articles de
           blog toi même après la formation en rédaction SEO, je t&apos;indique
@@ -536,7 +536,7 @@ export default function Page() {
       </section>
 
       {/* J'optimise ta strategie */}
-      <section className="mx-auto max-w-[1200px] px-6 py-10 text-center">
+      <section className="mx-auto max-w-[1400px] px-6 py-10 text-center">
         <h2 className="font-heading text-3xl font-bold leading-[1.15] md:text-[46px] md:leading-[1.15] text-black">
           <span className="italic text-[#c9846f]">J&apos;optimise ta stratégie</span>
           <br />
@@ -605,7 +605,7 @@ export default function Page() {
             Tu as des clics des internautes
           </p>
         </ScrollReveal>
-        <div className="mx-auto mt-10 max-w-[800px] space-y-4 text-left text-[17px] leading-[28px] text-[#1a1a1a]">
+        <div className="mx-auto mt-10 max-w-[940px] space-y-4 text-left text-[17px] leading-[28px] text-[#1a1a1a]">
           <p className="font-semibold text-black">
             L&apos;objectif c&apos;est d&apos;avoir un site qui travaille
             pour toi pendant que tu fais ton métier, que tu prospectes ou que
@@ -621,7 +621,7 @@ export default function Page() {
       </section>
 
       {/* Quel budget prévoir ? */}
-      <section className="mx-auto max-w-[1000px] px-6 py-10 text-center">
+      <section className="mx-auto max-w-[1200px] px-6 py-10 text-center">
         <h2 className="font-heading text-3xl font-bold leading-[1.15] md:text-[46px] md:leading-[1.15]">
           <span className="italic text-[#c9846f]">Quel budget prévoir ?</span>
         </h2>
@@ -670,14 +670,14 @@ export default function Page() {
       </section>
 
       {/* JWL Business est fait / pas fait pour toi */}
-      <section className="mx-auto max-w-[1200px] px-6 py-10 text-center">
+      <section className="mx-auto max-w-[1400px] px-6 py-10 text-center">
         <h2 className="font-heading text-3xl font-bold leading-[1.15] md:text-[46px] md:leading-[1.15] text-black">
           <span className="font-medium">JWL Business est</span>{" "}
           <span className="italic text-[#c9846f]">fait pour toi</span>
           <span className="font-medium"> si tu veux :</span>
         </h2>
         <ScrollReveal>
-          <div className="mx-auto mt-8 max-w-[700px] rounded-2xl bg-[#141414] p-8 text-left text-white">
+          <div className="mx-auto mt-8 max-w-[820px] rounded-2xl bg-[#141414] p-8 text-left text-white">
             <ul className="space-y-2 text-[15px] leading-[24px]">
               {[
                 "Un site web à moins de 2000 €",
@@ -711,7 +711,7 @@ export default function Page() {
           Cette offre n&apos;est <span className="italic text-[#c9846f]">pas faite pour toi</span> si
         </h2>
         <ScrollReveal>
-          <div className="mx-auto mt-8 max-w-[700px] rounded-2xl bg-black p-8 text-left text-white">
+          <div className="mx-auto mt-8 max-w-[820px] rounded-2xl bg-black p-8 text-left text-white">
             <p className="text-xs font-semibold uppercase tracking-wide text-white/60">Tu veux</p>
             <ul className="mt-4 space-y-2 text-[15px] leading-[24px]">
               {[
@@ -737,7 +737,7 @@ export default function Page() {
       </section>
 
       {/* J'avance a ton rythme */}
-      <section className="mx-auto max-w-[1200px] px-6 py-10 text-center">
+      <section className="mx-auto max-w-[1400px] px-6 py-10 text-center">
         <h2 className="font-heading text-3xl font-bold leading-[1.15] md:text-[46px] md:leading-[1.15] text-black">
           <span className="italic text-[#c9846f]">J&apos;avance à ton rythme</span>
           <br />
@@ -796,13 +796,13 @@ export default function Page() {
       </section>
 
       {/* Des projets qui parlent d'eux-meme */}
-      <section className="mx-auto max-w-[1100px] px-6 py-10 text-center">
+      <section className="mx-auto max-w-[1300px] px-6 py-10 text-center">
         <h2 className="font-heading text-3xl font-bold leading-[1.15] md:text-[46px] md:leading-[1.15] text-black">
           <span className="italic text-[#c9846f]">Des projets</span>
           <br />
           <span className="font-medium">qui parlent d&apos;eux-même</span>
         </h2>
-        <div className="mx-auto mt-8 grid max-w-[900px] gap-6 md:grid-cols-2">
+        <div className="mx-auto mt-8 grid max-w-[1050px] gap-6 md:grid-cols-2">
           <ScrollReveal delay={0}>
             <Image
               src="/images/refonte-site-web.webp"
@@ -837,7 +837,7 @@ export default function Page() {
           />
         </h3>
         <ScrollReveal>
-          <p className="mx-auto mt-6 max-w-[700px] text-[17px] leading-[28px] text-[#1a1a1a]">
+          <p className="mx-auto mt-6 max-w-[820px] text-[17px] leading-[28px] text-[#1a1a1a]">
             Tu restes propriétaire de ton site, de ton nom de domaine et de
             tes données.
             <br />
