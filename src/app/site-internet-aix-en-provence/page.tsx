@@ -87,13 +87,13 @@ export default function Page() {
       {/* Hero */}
       <div className="flex w-full flex-col items-center justify-between gap-10 bg-white px-[5%] py-[60px] lg:flex-row">
         <div className="max-w-[600px] flex-1">
-          <h1 className="font-heading text-5xl font-bold leading-[0.98] lg:text-[68px] lg:leading-[0.98] text-black">
+          <h1 className="font-heading text-4xl font-bold leading-[1.1] lg:text-[54px] lg:leading-[1.1] text-black">
             <span className="italic text-[#c9846f]">JWL Business</span>
-            <span> : Un site web conçu pour ton</span>
+            <span className="font-medium"> : Un site web conçu pour ton</span>
             <br />
-            <span>entreprise et inspirer confiance.</span>
+            <span className="font-medium">entreprise et inspirer confiance.</span>
           </h1>
-          <ul className="mt-4 flex flex-wrap gap-x-6 gap-y-2 text-base font-semibold text-black">
+          <ul className="mt-5 flex flex-wrap gap-x-6 gap-y-2 text-[15px] font-medium text-black">
             {["1 personne dédiée", "100 % sur mesure", "100 % propriétaire de ton site web"].map(
               (item) => (
                 <li key={item} className="flex items-center gap-2">
@@ -105,20 +105,20 @@ export default function Page() {
               )
             )}
           </ul>
-          <p className="mt-4 text-lg leading-[1.5] text-black">
+          <p className="mt-6 text-base leading-[1.6] text-black">
             Création ou refonte : je m&apos;occupe de tout. Résultat, tu
             obtiens un site sur-mesure pensé pour ton image, tes clients, et
             qui développe l&apos;achat.
           </p>
-          <div className="mt-5 flex flex-wrap items-center gap-4">
-            <span className="rounded-full bg-gold px-6 py-[15px] font-bold text-white">
+          <div className="mt-6 flex flex-wrap items-center gap-4">
+            <span className="rounded-full bg-gold px-6 py-[15px] font-semibold text-white">
               À partir de 1 200 €
             </span>
             <a
               href="https://calendly.com/jwlm"
               target="_blank"
               rel="noopener"
-              className="inline-block rounded-full bg-[#c9846f] px-8 py-[15px] font-bold text-white transition-colors hover:bg-[#b8735f]"
+              className="inline-block rounded-full bg-[#c9846f] px-8 py-[15px] font-semibold text-white transition-colors hover:bg-[#b8735f]"
             >
               Créer mon site
             </a>
@@ -147,12 +147,12 @@ export default function Page() {
 
       {/* Ton prochain client est sur Google */}
       <section className="mx-auto max-w-[1200px] px-6 py-10 text-center">
-        <h2 className="font-heading text-4xl font-bold leading-[0.98] md:text-[62px] md:leading-[0.98] text-black">
+        <h2 className="font-heading text-3xl font-bold leading-[1.15] md:text-[46px] md:leading-[1.15] text-black">
           <span className="italic text-[#c9846f]">
             Ton prochain client est sur <GoogleColors />.
           </span>
           <br />
-          <span className="font-bold">Ton site web doit l&apos;être aussi.</span>
+          <span className="font-medium">Ton site web doit l&apos;être aussi.</span>
         </h2>
         <div className="mt-10">
           <ProofCards />
@@ -165,10 +165,10 @@ export default function Page() {
 
       {/* Ma Méthode */}
       <section className="mx-auto max-w-[1200px] px-6 py-10 text-center">
-        <h2 className="font-heading text-4xl font-bold leading-[0.98] md:text-[62px] md:leading-[0.98] text-black">
+        <h2 className="font-heading text-3xl font-bold leading-[1.15] md:text-[46px] md:leading-[1.15] text-black">
           <span className="italic text-[#c9846f]">Ma Méthode</span>
           <br />
-          <span className="font-bold">
+          <span className="font-medium">
             Fais de ton site web une machine à clients.
           </span>
         </h2>
@@ -233,12 +233,12 @@ export default function Page() {
 
       {/* Je construis ton site web */}
       <section className="mx-auto max-w-[900px] px-6 py-10">
-        <h2 className="text-center font-heading text-4xl font-bold leading-[0.98] md:text-[62px] md:leading-[0.98] text-black">
+        <h2 className="text-center font-heading text-3xl font-bold leading-[1.15] md:text-[46px] md:leading-[1.15] text-black">
           <span className="italic text-[#c9846f]">
             Je construis ton site web
           </span>
           <br />
-          <span className="font-bold">
+          <span className="font-medium">
             Codé sur mesure et qui t&apos;appartient
           </span>
         </h2>
@@ -263,7 +263,7 @@ export default function Page() {
 
       {/* Les 5 étapes de ton site web */}
       <section className="mx-auto max-w-[900px] px-6 py-10 text-center">
-        <h2 className="font-heading text-4xl font-bold leading-[0.98] md:text-[62px] md:leading-[0.98] text-black">
+        <h2 className="font-heading text-3xl font-bold leading-[1.15] md:text-[46px] md:leading-[1.15] text-black">
           Les 5 <span className="italic text-[#c9846f]">étapes</span> de ton
           site web
         </h2>
@@ -368,8 +368,8 @@ export default function Page() {
 
       {/* Tous les mois je veille à la maintenance */}
       <section className="mx-auto max-w-[1100px] px-6 py-10 text-center">
-        <h2 className="font-heading text-4xl font-bold leading-[0.98] md:text-[62px] md:leading-[0.98] text-black">
-          <span className="font-bold">Tous les mois je veille</span>
+        <h2 className="font-heading text-3xl font-bold leading-[1.15] md:text-[46px] md:leading-[1.15] text-black">
+          <span className="font-medium">Tous les mois je veille</span>
           <br />
           <span className="italic text-[#c9846f]">
             à la maintenance de ton site web
@@ -475,10 +475,10 @@ export default function Page() {
 
       {/* Tous les mois je veille */}
       <section className="mx-auto max-w-[1200px] px-6 py-10 text-center">
-        <h2 className="font-heading text-4xl font-bold leading-[0.98] md:text-[62px] md:leading-[0.98] text-black">
+        <h2 className="font-heading text-3xl font-bold leading-[1.15] md:text-[46px] md:leading-[1.15] text-black">
           <span className="italic text-[#c9846f]">Tous les mois je veille</span>
           <br />
-          <span className="font-bold">
+          <span className="font-medium">
             à faire évoluer ta position sur <GoogleColors />
           </span>
         </h2>
@@ -537,10 +537,10 @@ export default function Page() {
 
       {/* J'optimise ta strategie */}
       <section className="mx-auto max-w-[1200px] px-6 py-10 text-center">
-        <h2 className="font-heading text-4xl font-bold leading-[0.98] md:text-[62px] md:leading-[0.98] text-black">
+        <h2 className="font-heading text-3xl font-bold leading-[1.15] md:text-[46px] md:leading-[1.15] text-black">
           <span className="italic text-[#c9846f]">J&apos;optimise ta stratégie</span>
           <br />
-          <span className="font-bold">
+          <span className="font-medium">
             Mensuelle avec des données chiffrées et un accompagnement clair
           </span>
         </h2>
@@ -622,7 +622,7 @@ export default function Page() {
 
       {/* Quel budget prévoir ? */}
       <section className="mx-auto max-w-[1000px] px-6 py-10 text-center">
-        <h2 className="font-heading text-4xl font-bold leading-[0.98] md:text-[62px] md:leading-[0.98]">
+        <h2 className="font-heading text-3xl font-bold leading-[1.15] md:text-[46px] md:leading-[1.15]">
           <span className="italic text-[#c9846f]">Quel budget prévoir ?</span>
         </h2>
         <p className="mt-2 text-[15px] text-[#555]">Pour créer ou optimiser ton site ?</p>
@@ -671,10 +671,10 @@ export default function Page() {
 
       {/* JWL Business est fait / pas fait pour toi */}
       <section className="mx-auto max-w-[1200px] px-6 py-10 text-center">
-        <h2 className="font-heading text-4xl font-bold leading-[0.98] md:text-[62px] md:leading-[0.98] text-black">
-          <span className="font-bold">JWL Business est</span>{" "}
+        <h2 className="font-heading text-3xl font-bold leading-[1.15] md:text-[46px] md:leading-[1.15] text-black">
+          <span className="font-medium">JWL Business est</span>{" "}
           <span className="italic text-[#c9846f]">fait pour toi</span>
-          <span className="font-bold"> si tu veux :</span>
+          <span className="font-medium"> si tu veux :</span>
         </h2>
         <ScrollReveal>
           <div className="mx-auto mt-8 max-w-[700px] rounded-2xl bg-[#141414] p-8 text-left text-white">
@@ -707,7 +707,7 @@ export default function Page() {
           </div>
         </ScrollReveal>
 
-        <h2 className="mt-16 font-heading text-4xl font-bold leading-[0.98] md:text-[62px] md:leading-[0.98] text-black">
+        <h2 className="mt-16 font-heading text-3xl font-bold leading-[1.15] md:text-[46px] md:leading-[1.15] text-black">
           Cette offre n&apos;est <span className="italic text-[#c9846f]">pas faite pour toi</span> si
         </h2>
         <ScrollReveal>
@@ -738,10 +738,10 @@ export default function Page() {
 
       {/* J'avance a ton rythme */}
       <section className="mx-auto max-w-[1200px] px-6 py-10 text-center">
-        <h2 className="font-heading text-4xl font-bold leading-[0.98] md:text-[62px] md:leading-[0.98] text-black">
+        <h2 className="font-heading text-3xl font-bold leading-[1.15] md:text-[46px] md:leading-[1.15] text-black">
           <span className="italic text-[#c9846f]">J&apos;avance à ton rythme</span>
           <br />
-          <span className="font-bold">
+          <span className="font-medium">
             Je reste présente quoi qu&apos;il arrive
           </span>
         </h2>
@@ -797,10 +797,10 @@ export default function Page() {
 
       {/* Des projets qui parlent d'eux-meme */}
       <section className="mx-auto max-w-[1100px] px-6 py-10 text-center">
-        <h2 className="font-heading text-4xl font-bold leading-[0.98] md:text-[62px] md:leading-[0.98] text-black">
+        <h2 className="font-heading text-3xl font-bold leading-[1.15] md:text-[46px] md:leading-[1.15] text-black">
           <span className="italic text-[#c9846f]">Des projets</span>
           <br />
-          <span className="font-bold">qui parlent d&apos;eux-même</span>
+          <span className="font-medium">qui parlent d&apos;eux-même</span>
         </h2>
         <div className="mx-auto mt-8 grid max-w-[900px] gap-6 md:grid-cols-2">
           <ScrollReveal delay={0}>
@@ -830,7 +830,7 @@ export default function Page() {
 
       {/* Ton projet merite plus qu'un simple site web */}
       <section className="bg-white px-6 py-16 text-center">
-        <h3 className="font-heading text-4xl font-bold leading-[0.98] md:text-[62px] md:leading-[0.98] text-black">
+        <h3 className="font-heading text-3xl font-bold leading-[1.15] md:text-[46px] md:leading-[1.15] text-black">
           <TypewriterText
             className="italic text-[#c9846f]"
             text="Ton projet mérite plus qu'un simple site web"
