@@ -24,7 +24,7 @@ Le référencement naturel avancé et la stratégie de visibilité Google sont p
     star: "Forme-toi au SEO, au GEO et à la rédaction web pour attirer plus de visiteurs et gagner en autonomie.",
     cta: "Explore ma méthodologie",
     action: "formation" as const,
-    ctaStyle: "gold" as const,
+    ctaStyle: "terracota" as const,
   },
   {
     image: "/images/jwl-creation-site-web-aix-en-provence.png",
@@ -45,9 +45,9 @@ Le référencement naturel avancé et la stratégie de visibilité Google sont p
     title: "Je te forme à la rédaction SEO pour ton blog",
     text: "Rédige, publie plus vite, et sois plus visible. Apprends à optimiser ton blog grâce aux méthodes SEO, aux outils d'analyse et à l'IA (ChatGPT, Claude).",
     star: "Forme-toi au SEO, au GEO et à la rédaction web pour attirer plus de visiteurs et gagner en autonomie.",
-    cta: "Consulte mes audits",
-    href: "/audit-seo-aix-en-provence",
-    ctaStyle: "terracotta" as const,
+    cta: "Explore ma méthodologie",
+    action: "formation" as const,
+    ctaStyle: "terracota" as const,
   },
   {
     image: "/images/jwl-developpement-prospection-commerciale.png",
