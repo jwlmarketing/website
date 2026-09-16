@@ -333,9 +333,9 @@ export default function Page() {
         <h2 className="font-heading text-3xl font-bold leading-[1.15] md:text-[46px] md:leading-[1.15] text-black">
           <span className="font-medium">Tous les mois je veille</span>
           <br />
-          <span className="italic text-[#c9846f]">
-            à la maintenance de ton site web
-          </span>
+          <span className="font-medium">à la </span>
+          <span className="italic text-[#c9846f]">maintenance</span>
+          <span className="font-medium"> de ton site web</span>
         </h2>
         <div className="mx-auto mt-10 grid max-w-[1050px] gap-6 md:grid-cols-2 md:items-center">
           <div className="space-y-4 text-left">
