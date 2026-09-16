@@ -314,14 +314,56 @@ export default function Page() {
             title="Remise des accès et autonomie"
             text="Je te transmets tous tes accès, tu es libre et autonome."
           />
-          <Image
-            src="/images/jwl-etapes-5-parachute.png"
-            alt="JWL Marketing"
-            width={280}
-            height={280}
-            className="mt-6 h-auto w-[220px] object-contain"
-          />
+          <div className="jwl-parachute-wrap mt-6">
+            <Image
+              src="/images/jwl-etapes-5-parachute.png"
+              alt="JWL Marketing"
+              width={280}
+              height={280}
+              className="jwl-parachute h-auto w-[220px] object-contain"
+            />
+            <div className="jwl-parachute-shadow" />
+          </div>
         </ScrollReveal>
+        <style>{`
+          .jwl-parachute-wrap {
+            position: relative;
+            animation: jwl-parachute-drop 1.4s cubic-bezier(.2,.8,.2,1) both;
+            animation-delay: .5s;
+          }
+          .jwl-parachute {
+            animation: jwl-parachute-sway 3.2s ease-in-out infinite;
+            animation-delay: 1.9s;
+            transform-origin: 50% -20%;
+          }
+          .jwl-parachute-shadow {
+            width: 90px;
+            height: 14px;
+            margin: 6px auto 0;
+            border-radius: 50%;
+            background: radial-gradient(ellipse at center, rgba(0,0,0,.25) 0%, rgba(0,0,0,0) 70%);
+            animation: jwl-parachute-shadow-pulse 3.2s ease-in-out infinite;
+            animation-delay: 1.9s;
+          }
+          @keyframes jwl-parachute-drop {
+            0% { transform: translateY(-140px) rotate(-6deg); opacity: 0; }
+            60% { opacity: 1; }
+            100% { transform: translateY(0) rotate(0deg); opacity: 1; }
+          }
+          @keyframes jwl-parachute-sway {
+            0%, 100% { transform: rotate(-3deg); }
+            50% { transform: rotate(3deg); }
+          }
+          @keyframes jwl-parachute-shadow-pulse {
+            0%, 100% { transform: scale(1); opacity: .6; }
+            50% { transform: scale(.85); opacity: .4; }
+          }
+          @media (prefers-reduced-motion: reduce) {
+            .jwl-parachute-wrap, .jwl-parachute, .jwl-parachute-shadow {
+              animation: none !important;
+            }
+          }
+        `}</style>
       </section>
 
       {/* Tous les mois je veille à la maintenance */}
