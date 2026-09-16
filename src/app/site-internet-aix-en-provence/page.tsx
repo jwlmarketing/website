@@ -84,6 +84,7 @@ function ProjectProofCard({
   detail,
   client,
   location,
+  image,
 }: {
   badge: string;
   stat: string;
@@ -91,12 +92,20 @@ function ProjectProofCard({
   detail?: string;
   client: string;
   location: string;
+  image: string;
 }) {
   return (
     <div className="overflow-hidden rounded-2xl border border-[#eee] bg-white text-left">
       <div className="bg-gold px-4 py-2 text-center text-xs font-bold uppercase tracking-wide text-white">
         {badge}
       </div>
+      <Image
+        src={image}
+        alt={`${badge} — JWL Marketing`}
+        width={596}
+        height={204}
+        className="h-auto w-full object-cover"
+      />
       <div className="p-6 text-center">
         <p className="font-heading text-4xl font-bold text-[#c9846f]">{stat}</p>
         <p className="mt-1 text-sm text-black">{statSub}</p>
@@ -190,6 +199,7 @@ export default function Page() {
               detail="63 appels en 6 mois"
               client="Proxiclic Provence"
               location="Informaticien à Digne-les-Bains (04)"
+              image="/images/projets-preuve/proxiclic.png"
             />
           </ScrollReveal>
           <ScrollReveal delay={150}>
@@ -200,6 +210,7 @@ export default function Page() {
               detail="7 appels clients en 4 mois"
               client="Groupe INOVEA"
               location="Gestion de patrimoine à Aix-en-Provence (13)"
+              image="/images/projets-preuve/inovea.png"
             />
           </ScrollReveal>
           <ScrollReveal delay={300}>
@@ -209,6 +220,7 @@ export default function Page() {
               statSub="Site récemment lancé, indicateurs pas encore assez complets"
               client="Bout de Poils"
               location="anciennement Green Beam Craft — Sèvres (91)"
+              image="/images/projets-preuve/bout-de-poils.png"
             />
           </ScrollReveal>
         </div>
@@ -447,7 +459,7 @@ export default function Page() {
               message est déjà préparé pour aller droit au but.
             </p>
             <a
-              href="https://wa.me/33783792814"
+              href="https://wa.me/33783792814?text=Bonjour%20Jodie%2C%20j%27ai%20une%20question%20avant%20de%20r%C3%A9server%20un%20appel%20pour%20la%20cr%C3%A9ation%20de%20mon%20site%20web%C2%A0%3A"
               target="_blank"
               rel="noopener"
               className="inline-block rounded-full bg-[#25D366] px-8 py-[15px] font-semibold text-white transition-colors hover:bg-[#1ebe57]"
