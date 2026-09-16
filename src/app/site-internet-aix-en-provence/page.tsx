@@ -5,6 +5,7 @@ import ScrollReveal from "@/components/ScrollReveal";
 import SiteHeader from "@/components/SiteHeader";
 import TrustedPartners from "@/components/TrustedPartners";
 import NewsletterForm from "@/components/NewsletterForm";
+import ProofCards from "@/components/ProofCards";
 
 export const metadata: Metadata = {
   title: "Création de site web | JWL Marketing",
@@ -73,46 +74,6 @@ function StepCard({
       <div className="mx-auto mt-2 h-8 w-8 text-[#c9846f]">{STEP_ICONS[icon]}</div>
       <p className="mt-2 font-heading text-lg italic text-[#c9846f]">{title}</p>
       <p className="mt-2 text-[13.5px] leading-[20px] text-white/85">{text}</p>
-    </div>
-  );
-}
-
-function ProjectProofCard({
-  badge,
-  stat,
-  statSub,
-  detail,
-  client,
-  location,
-  image,
-}: {
-  badge: string;
-  stat: string;
-  statSub: string;
-  detail?: string;
-  client: string;
-  location: string;
-  image: string;
-}) {
-  return (
-    <div className="overflow-hidden rounded-2xl border border-[#eee] bg-white text-left">
-      <div className="bg-gold px-4 py-2 text-center text-xs font-bold uppercase tracking-wide text-white">
-        {badge}
-      </div>
-      <Image
-        src={image}
-        alt={`${badge} — JWL Marketing`}
-        width={596}
-        height={204}
-        className="h-auto w-full object-cover"
-      />
-      <div className="p-6 text-center">
-        <p className="font-heading text-4xl font-bold text-[#c9846f]">{stat}</p>
-        <p className="mt-1 text-sm text-black">{statSub}</p>
-        {detail && <p className="mt-1 text-sm font-semibold text-[#c9846f]">{detail}</p>}
-        <p className="mt-4 text-[15px] font-semibold text-black">{client}</p>
-        <p className="text-sm text-[#555]">{location}</p>
-      </div>
     </div>
   );
 }
@@ -190,39 +151,8 @@ export default function Page() {
           moment vers une stratégie SEO, e-commerce ou marketing plus
           avancée.
         </p>
-        <div className="mt-10 grid gap-6 md:grid-cols-3">
-          <ScrollReveal delay={0}>
-            <ProjectProofCard
-              badge="Assistance informatique"
-              stat="3 468"
-              statSub="vues de la fiche Google en 6 mois"
-              detail="63 appels en 6 mois"
-              client="Proxiclic Provence"
-              location="Informaticien à Digne-les-Bains (04)"
-              image="/images/projets-preuve/proxiclic.png"
-            />
-          </ScrollReveal>
-          <ScrollReveal delay={150}>
-            <ProjectProofCard
-              badge="Gestion de patrimoine"
-              stat="1 350"
-              statSub="vues de la fiche Google en 4 mois"
-              detail="7 appels clients en 4 mois"
-              client="Groupe INOVEA"
-              location="Gestion de patrimoine à Aix-en-Provence (13)"
-              image="/images/projets-preuve/inovea.png"
-            />
-          </ScrollReveal>
-          <ScrollReveal delay={300}>
-            <ProjectProofCard
-              badge="Refonte stratégie de marque"
-              stat="En cours"
-              statSub="Site récemment lancé, indicateurs pas encore assez complets"
-              client="Bout de Poils"
-              location="anciennement Green Beam Craft — Sèvres (91)"
-              image="/images/projets-preuve/bout-de-poils.png"
-            />
-          </ScrollReveal>
+        <div className="mt-10">
+          <ProofCards />
         </div>
       </section>
 
