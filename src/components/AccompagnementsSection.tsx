@@ -12,8 +12,15 @@ const ACCOMPAGNEMENTS = [
 
   {
     image: "/images/jwl-formation-redaction-seo-blog.png",
-    title: "Je te forme à la rédaction SEO pour ton blog",
-    text: "Rédige, publie plus vite, et sois plus visible. Apprends à optimiser ton blog grâce aux méthodes SEO, aux outils d'analyse et à l'IA (ChatGPT, Claude).",
+    title: "Création de site web professionnel",
+    text: "Création de site web professionnel
+✔ Site moderne et responsive
+ ✔ Optimisé pour mobile
+ ✔ Balises techniques conformes (H1, titres, métadonnées)
+ ✔ Vitesse et sécurité de base
+ ✔ Formation à la prise en main
+À partir de 1 200 €
+Le référencement naturel avancé et la stratégie de visibilité Google sont proposés en option.",
     star: "Forme-toi au SEO, au GEO et à la rédaction web pour attirer plus de visiteurs et gagner en autonomie.",
     cta: "Explore ma méthodologie",
     action: "formation" as const,
