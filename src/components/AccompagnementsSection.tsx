@@ -9,20 +9,7 @@ import TypewriterText from "@/components/TypewriterText";
 import Modal from "@/components/Modal";
 
 const ACCOMPAGNEMENTS = [
-  {
-    image: "/images/jwl-creation-site-web-aix-en-provence.png",
-    badge: "Nouveau",
-    title: (
-      <>
-        Je crée ou refonds ton site web visible par <GoogleColors />
-      </>
-    ),
-    text: "Création ou refonte, SEO intégré, Google Business Profile et accompagnement stratégique pour développer ton activité.",
-    star: "Audit stratégique offert pour tout accompagnement annuel",
-    cta: "Découvre le détail de mes accompagnements",
-    action: "pricing" as const,
-    ctaStyle: "terracotta" as const,
-  },
+
   {
     image: "/images/jwl-formation-redaction-seo-blog.png",
     title: "Je te forme à la rédaction SEO pour ton blog",
@@ -39,6 +26,20 @@ const ACCOMPAGNEMENTS = [
     star: "Forme-toi au SEO, au GEO et à la rédaction web pour attirer plus de visiteurs et gagner en autonomie.",
     cta: "Consulte mes audits",
     href: "/audit-seo-aix-en-provence",
+    ctaStyle: "terracotta" as const,
+  },
+  {
+    image: "/images/jwl-creation-site-web-aix-en-provence.png",
+    badge: "Nouveau",
+    title: (
+      <>
+        Je crée ou refonds ton site web visible par <GoogleColors />
+      </>
+    ),
+    text: "Création ou refonte, SEO intégré, Google Business Profile et accompagnement stratégique pour développer ton activité.",
+    star: "Audit stratégique offert pour tout accompagnement annuel",
+    cta: "Découvre le détail de mes accompagnements",
+    action: "pricing" as const,
     ctaStyle: "terracotta" as const,
   },
   {
