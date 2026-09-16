@@ -58,8 +58,8 @@ function StepCard({
   text: string;
 }) {
   return (
-    <div className="relative w-full max-w-[340px] rounded-2xl bg-[#141414] p-6 pt-8 text-center text-white">
-      <span className="absolute -top-6 left-1/2 flex h-12 w-12 -translate-x-1/2 items-center justify-center rounded-full bg-gold text-xl font-bold text-white shadow-md">
+    <div className="jwl-step-card relative w-full max-w-[340px] rounded-2xl bg-[#141414] p-6 pt-8 text-center text-white transition-transform duration-300 hover:-translate-y-1.5 hover:scale-[1.03]">
+      <span className="jwl-step-badge absolute -top-6 left-1/2 flex h-12 w-12 -translate-x-1/2 items-center justify-center rounded-full bg-gold text-xl font-bold text-white shadow-md">
         {n}
       </span>
       <div className="mx-auto mt-2 h-8 w-8 text-[#c9846f]">{STEP_ICONS[icon]}</div>
@@ -225,6 +225,25 @@ export default function Page() {
           <br />
           de ton site web
         </h2>
+        <style>{`
+          .jwl-etape-img { animation: jwl-etape-float 4.5s ease-in-out infinite; }
+          .jwl-etape-img-1 { animation-delay: 0s; }
+          .jwl-etape-img-2 { animation-delay: .6s; }
+          .jwl-etape-img-3 { animation-delay: 1.2s; }
+          .jwl-etape-img-4 { animation-delay: 1.8s; }
+          @keyframes jwl-etape-float {
+            0%, 100% { transform: translateY(0) rotate(-6deg); }
+            50% { transform: translateY(-10px) rotate(6deg); }
+          }
+          .jwl-step-badge { animation: jwl-step-badge-pulse 2.6s ease-in-out infinite; }
+          @keyframes jwl-step-badge-pulse {
+            0%, 100% { transform: translateX(-50%) scale(1); }
+            50% { transform: translateX(-50%) scale(1.08); }
+          }
+          @media (prefers-reduced-motion: reduce) {
+            .jwl-etape-img, .jwl-step-badge { animation: none !important; }
+          }
+        `}</style>
         <div className="relative mt-10">
           <div className="absolute left-1/2 top-0 hidden h-full w-px -translate-x-1/2 bg-black/20 md:block" />
           <div className="grid gap-8 md:grid-cols-2 md:gap-x-16 md:gap-y-10">
@@ -243,7 +262,7 @@ export default function Page() {
                 alt="JWL Marketing"
                 width={220}
                 height={220}
-                className="h-auto w-[180px] -rotate-6 object-contain"
+                className="jwl-etape-img jwl-etape-img-1 h-auto w-[180px] object-contain"
               />
             </ScrollReveal>
 
@@ -254,7 +273,7 @@ export default function Page() {
                 alt="JWL Marketing"
                 width={220}
                 height={220}
-                className="h-auto w-[180px] rotate-6 object-contain"
+                className="jwl-etape-img jwl-etape-img-2 h-auto w-[180px] object-contain"
               />
             </ScrollReveal>
             <ScrollReveal delay={200} className="flex justify-center md:justify-start">
@@ -281,7 +300,7 @@ export default function Page() {
                 alt="JWL Marketing"
                 width={220}
                 height={220}
-                className="h-auto w-[180px] rotate-6 object-contain"
+                className="jwl-etape-img jwl-etape-img-3 h-auto w-[180px] object-contain"
               />
             </ScrollReveal>
 
@@ -292,7 +311,7 @@ export default function Page() {
                 alt="JWL Marketing"
                 width={220}
                 height={220}
-                className="h-auto w-[180px] -rotate-6 object-contain"
+                className="jwl-etape-img jwl-etape-img-4 h-auto w-[180px] object-contain"
               />
             </ScrollReveal>
             <ScrollReveal delay={400} className="flex justify-center md:justify-start">
