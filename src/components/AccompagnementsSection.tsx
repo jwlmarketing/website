@@ -260,13 +260,13 @@ export default function AccompagnementsSection() {
         itemClassName="relative flex flex-col pt-14"
       >
         {ACCOMPAGNEMENTS.map((item, i) => (
-          <div key={i} className="relative flex flex-col items-center pt-14">
+          <div key={i} className="relative flex flex-col items-center pt-28 md:pt-32">
             <Image
               src={item.image}
               alt={typeof item.title === "string" ? item.title : "JWL Marketing"}
               width={220}
               height={220}
-              className="absolute -top-2 left-1/2 h-[140px] w-[140px] -translate-x-1/2 rounded-xl object-cover shadow-lg md:h-[160px] md:w-[160px]"
+              className="absolute -top-4 left-1/2 h-[140px] w-[140px] -translate-x-1/2 rounded-xl object-cover shadow-lg md:h-[160px] md:w-[160px]"
             />
             {"badge" in item && item.badge && (
               <span className="absolute right-6 top-2 -rotate-6 rounded-full bg-gold px-4 py-2 text-xs font-bold text-white shadow-md">
