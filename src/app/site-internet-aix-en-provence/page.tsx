@@ -5,6 +5,7 @@ import SiteHeader from "@/components/SiteHeader";
 import TrustedPartners from "@/components/TrustedPartners";
 import ProofCards from "@/components/ProofCards";
 import ContactForm from "@/components/ContactForm";
+import ScrollFillLine from "@/components/ScrollFillLine";
 
 export const metadata: Metadata = {
   title: "Création de site web | JWL Marketing",
@@ -256,16 +257,7 @@ export default function Page() {
             50% { transform: translateY(9px) rotate(-8deg) scale(0.97); }
           }
 
-          .jwl-etape-line { position: absolute; left: 50%; top: 0; height: 100%; width: 2px; transform: translateX(-50%); overflow: hidden; background: rgba(0,0,0,.12); }
-          .jwl-etape-line::before {
-            content: ""; position: absolute; left: 0; top: -100%; width: 100%; height: 200%;
-            background: linear-gradient(180deg, transparent 0%, #C9846F 45%, #C9A84C 55%, transparent 100%);
-            animation: jwl-line-flow 2.8s linear infinite;
-          }
-          @keyframes jwl-line-flow {
-            0% { transform: translateY(0%); }
-            100% { transform: translateY(50%); }
-          }
+          .jwl-etape-line { position: absolute; left: 50%; top: 0; height: 100%; width: 2px; transform: translateX(-50%); overflow: hidden; background: rgba(0,0,0,.1); }
 
           .jwl-step-badge-ring {
             box-shadow: 0 0 0 0 rgba(201,168,76,.55);
@@ -296,13 +288,15 @@ export default function Page() {
           }
 
           @media (prefers-reduced-motion: reduce) {
-            .jwl-etape-img, .jwl-step-badge, .jwl-step-badge-ring, .jwl-step-icon, .jwl-step-title, .jwl-etape-line::before {
+            .jwl-etape-img, .jwl-step-badge, .jwl-step-badge-ring, .jwl-step-icon, .jwl-step-title {
               animation: none !important;
             }
           }
         `}</style>
         <div className="relative mt-10">
-          <div className="jwl-etape-line hidden md:block" />
+          <div className="jwl-etape-line hidden md:block">
+            <ScrollFillLine />
+          </div>
           <div className="grid gap-8 md:grid-cols-2 md:gap-x-16 md:gap-y-10">
             {/* Row 1: card 1 | image 1 */}
             <ScrollReveal delay={0} className="flex justify-center md:justify-end">
