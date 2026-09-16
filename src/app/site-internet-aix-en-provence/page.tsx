@@ -31,23 +31,47 @@ export default function Page() {
       <div className="flex w-full flex-col items-center justify-between gap-10 bg-white px-[5%] py-[60px] lg:flex-row">
         <div className="max-w-[600px] flex-1">
           <h1 className="font-heading text-4xl leading-[1.05] lg:text-[54px] lg:leading-[1.05] text-black">
-            <span className="font-medium">Création de site web</span>
+            <span className="italic text-[#c9846f]">JWL Business</span>
+            <span className="font-medium"> : Un site web conçu pour ton</span>
             <br />
-            <span className="italic text-[#c9846f]">qui travaille pour toi</span>
-            <br />
-            <span className="italic text-[#c9846f]">
-              pendant que tu travailles
+            <span className="font-medium">
+              entreprise et inspirer confiance.
             </span>
           </h1>
+          <ul className="mt-5 flex flex-wrap gap-x-6 gap-y-2 text-[15px] font-medium text-black">
+            {["1 personne dédiée", "100 % sur mesure", "100 % propriétaire de ton site web"].map(
+              (item) => (
+                <li key={item} className="flex items-center gap-2">
+                  <span className="flex h-5 w-5 items-center justify-center rounded-full bg-gold text-xs text-white">
+                    ✓
+                  </span>
+                  {item}
+                </li>
+              )
+            )}
+          </ul>
           <p className="mt-6 text-base leading-[1.6] text-black">
-            Auto-entrepreneurs, micro-entreprises, TPE, PME et dirigeants :
-            développe ta visibilité sur Google{" "}et attire des prospects
-            qualifiés toute l&apos;année.
+            Création ou refonte : je m&apos;occupe de tout. Résultat, tu
+            obtiens un site sur-mesure pensé pour ton image, tes clients, et
+            qui développe l&apos;achat.
           </p>
+          <div className="mt-6 flex flex-wrap items-center gap-4">
+            <span className="rounded-full bg-gold px-6 py-[15px] font-medium text-white">
+              À partir de 1 200 €
+            </span>
+            <a
+              href="https://calendly.com/jwlm"
+              target="_blank"
+              rel="noopener"
+              className="inline-block rounded-full bg-[#c9846f] px-8 py-[15px] font-medium text-white transition-colors hover:bg-[#b8735f]"
+            >
+              Créer mon site
+            </a>
+          </div>
           <div className="mt-6 flex flex-wrap items-center gap-4">
             <a
               href="tel:0783792814"
-              className="inline-block rounded-full bg-[#c9846f] px-8 py-[15px] font-medium text-white transition-colors hover:bg-[#b8735f]"
+              className="text-sm font-semibold text-black underline decoration-[#c9846f] underline-offset-4"
             >
               07 83 79 28 14
             </a>
@@ -203,6 +227,51 @@ export default function Page() {
               </div>
             </ScrollReveal>
           ))}
+        </div>
+      </section>
+
+      {/* Tous les mois je veille à la maintenance */}
+      <section className="mx-auto max-w-[1100px] px-6 py-10 text-center">
+        <h2 className="font-heading text-3xl leading-tight md:text-[54px] text-black">
+          <span className="font-medium">Tous les mois je veille</span>
+          <br />
+          <span className="italic text-[#c9846f]">
+            à la maintenance de ton site web
+          </span>
+        </h2>
+        <div className="mx-auto mt-10 grid max-w-[900px] gap-6 md:grid-cols-2 md:items-center">
+          <div className="space-y-4 text-left">
+            {[
+              {
+                title: "Maintenance",
+                text: "Vérification du bon fonctionnement du site.",
+              },
+              {
+                title: "Sauvegarde",
+                text: "Sauvegardes régulières de ton site.",
+              },
+              {
+                title: "Sécurité",
+                text: "Surveillance et sécurisation de ton site.",
+              },
+            ].map((item, i) => (
+              <ScrollReveal key={item.title} delay={i * 120}>
+                <div className="rounded-2xl bg-[#141414] p-6 text-white">
+                  <p className="text-[15px] font-semibold leading-[22px]">{item.title}</p>
+                  <p className="mt-1 text-sm leading-[21px] text-white/80">{item.text}</p>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+          <ScrollReveal delay={360}>
+            <Image
+              src="/images/developpement-site-web.png"
+              alt="Suivi et maintenance mensuelle — JWL Marketing"
+              width={462}
+              height={346}
+              className="mx-auto h-auto w-full max-w-[400px] rounded-2xl object-cover"
+            />
+          </ScrollReveal>
         </div>
       </section>
 
