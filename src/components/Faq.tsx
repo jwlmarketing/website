@@ -147,6 +147,22 @@ const GMB_FAQ = [
     q: "Pourquoi mes concurrents apparaissent-ils avant moi sur Google Maps ?",
     a: "Google compare la pertinence, la proximité et la notoriété des entreprises. Une fiche plus active, avec davantage d'avis et de contenu, peut obtenir un meilleur classement.",
   },
+  {
+    q: "Combien de temps faut-il pour améliorer la visibilité d'une fiche Google ?",
+    a: "Les premiers résultats peuvent apparaître en quelques semaines. Tout dépend de la concurrence locale, de l'état actuel de la fiche et des optimisations mises en place.",
+  },
+  {
+    q: "Dois-je publier régulièrement sur ma fiche Google ?",
+    a: "Oui. Les publications montrent que ton entreprise est active. Elles peuvent renforcer ta visibilité et donner davantage d'informations aux prospects.",
+  },
+  {
+    q: "J'ai plusieurs établissements. Dois-je créer plusieurs fiches Google ?",
+    a: "Oui, chaque établissement physique peut disposer de sa propre fiche. Cela permet d'améliorer la visibilité locale de chaque point de vente.",
+  },
+  {
+    q: "Est-ce qu'un audit de ma fiche Google est vraiment utile ?",
+    a: "Oui. Il permet d'identifier ce qui fonctionne, ce qui freine ta visibilité et les actions prioritaires à mettre en place pour attirer plus de clients localement.",
+  },
 ];
 
 const HOME_FAQ_EN = [
@@ -292,6 +308,22 @@ const GMB_FAQ_EN = [
   {
     q: "Why do my competitors appear before me on Google Maps?",
     a: "Google compares relevance, proximity and reputation between businesses. A more active profile, with more reviews and content, can achieve a better ranking.",
+  },
+  {
+    q: "How long does it take to improve a Google profile's visibility?",
+    a: "First results can appear within a few weeks. It all depends on local competition, the profile's current state and the optimizations put in place.",
+  },
+  {
+    q: "Should I post regularly on my Google profile?",
+    a: "Yes. Posts show that your business is active. They can strengthen your visibility and give prospects more information.",
+  },
+  {
+    q: "I have several locations. Should I create several Google profiles?",
+    a: "Yes, each physical location can have its own profile. This improves the local visibility of each point of sale.",
+  },
+  {
+    q: "Is an audit of my Google profile really useful?",
+    a: "Yes. It identifies what's working, what's holding back your visibility, and the priority actions to take to attract more customers locally.",
   },
 ];
 

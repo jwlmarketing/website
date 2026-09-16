@@ -34,7 +34,25 @@ Le référencement naturel avancé et la stratégie de visibilité Google sont p
         Je crée ou refonds ton site web visible par <GoogleColors />
       </>
     ),
-    text: "Création ou refonte, SEO intégré, Google Business Profile et accompagnement stratégique pour développer ton activité.",
+    text: (
+      <>
+        1 seule interlocutrice
+        <ul className="mt-2 space-y-1">
+          {[
+            "Ton site sur-mesure prêt en 1 mois (selon ta disponibilité)",
+            "SEO + GEO intégrés dès sa conception",
+            "Installation search console",
+            "Maintenance et suivi inclus",
+            "Sérénité totale & levier d'acquisition sur 12 mois",
+          ].map((item) => (
+            <li key={item} className="flex gap-2">
+              <span className="text-green-500">✓</span>
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+      </>
+    ),
     star: "Audit stratégique offert pour tout accompagnement annuel",
     cta: "Découvre le détail de mes accompagnements",
     action: "pricing" as const,
@@ -225,7 +243,7 @@ export default function AccompagnementsSection() {
               <h3 className="pr-32 font-heading text-xl leading-snug md:pr-36">
                 {item.title}
               </h3>
-              <p className="mt-4 whitespace-pre-line text-sm text-white/85">{item.text}</p>
+              <div className="mt-4 whitespace-pre-line text-sm text-white/85">{item.text}</div>
               <p className="mt-4 text-sm text-gold">⭐ {item.star}</p>
               {"action" in item && item.action ? (
                 <button

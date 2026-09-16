@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import type { Metadata } from "next";
 import GoogleColors from "@/components/GoogleColors";
 import SiteHeader from "@/components/SiteHeader";
@@ -11,32 +10,6 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  return (
-    <div className="flex min-h-[70vh] w-full flex-col items-center justify-center gap-4 px-6 text-center">
-      <Image
-        src="/images/logo-jwl-marketing.png"
-        alt="JWL Marketing"
-        width={966}
-        height={187}
-        className="h-9 w-auto"
-      />
-      <h1 className="font-heading text-3xl text-black">Page en cours de construction</h1>
-      <p className="max-w-md text-black/70">
-        Cette page est en cours de préparation. Reviens bientôt pour découvrir notre offre
-        Fiche Google Business Profile.
-      </p>
-      <Link
-        href="/"
-        className="mt-2 inline-block rounded-full bg-[#c9846f] px-8 py-[15px] font-medium text-white transition-colors hover:bg-[#b8735f]"
-      >
-        Retour à l&apos;accueil
-      </Link>
-    </div>
-  );
-}
-
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-function PageContent() {
   return (
     <div>
       <SiteHeader locale="fr" href="/en/google-my-business-aix-en-provence" />
@@ -290,11 +263,29 @@ function PageContent() {
           <span className="font-medium">pour prouver à Google que tu es actif</span>
         </h2>
         <p className="mx-auto mt-6 max-w-[900px] text-left text-[17px] leading-[28px] text-[#1a1a1a]">
-          Publier régulièrement du contenu montre à Google{" "}que ton entreprise
-          est vivante. J&apos;écris pour toi des articles optimisés,
-          construits autour des recherches réelles de tes futurs clients,
-          pour renforcer ta visibilité locale sur la durée.
+          Google{" "}cherche à répondre aux questions que se posent tes futurs
+          clients. Plus ton site apporte des réponses utiles sur ton métier,
+          tes services ou les problématiques de tes prospects, plus tu
+          renforces ta visibilité et ton expertise. C&apos;est justement là que
+          le blog prend tout son sens. Chaque article permet d&apos;attirer de
+          nouveaux visiteurs, de rassurer tes prospects et de montrer à
+          Google{" "}que ton entreprise est active dans son domaine. Au fil du
+          temps, tu développes ta présence en ligne, ta crédibilité et tes
+          chances d&apos;obtenir de nouvelles demandes de contact. Pour te
+          permettre d&apos;être autonome,{" "}
+          <span className="font-bold">
+            je te propose une formation en rédaction SEO
+          </span>
+          . Tu apprendras à trouver les bons sujets, rédiger des contenus
+          efficaces et valoriser ton savoir-faire sans avoir besoin de faire
+          appel à un rédacteur pour chaque article.
         </p>
+        <a
+          href="mailto:service@jwl-marketing.fr"
+          className="mt-8 inline-block rounded-full bg-[#c9846f] px-8 py-[15px] font-medium text-white transition-colors hover:bg-[#b8735f]"
+        >
+          Demande ta formation rédacteur SEO
+        </a>
       </section>
 
       {/* Résultats */}
@@ -306,6 +297,31 @@ function PageContent() {
             <GoogleColors />{" "}et l&apos;IA peuvent te proposer
           </span>
         </h2>
+        <p className="mx-auto mt-6 max-w-[900px] text-left text-[17px] leading-[28px] text-[#1a1a1a]">
+          Aujourd&apos;hui, les intelligences artificielles comme ChatGPT,
+          Gemini ou Perplexity s&apos;appuient sur les informations
+          qu&apos;elles trouvent en ligne pour comprendre et recommander une
+          entreprise. Pour être cité, il faut donc d&apos;abord construire des
+          bases solides : un site web optimisé, une fiche Google Business
+          Profile complète, des avis clients, des contenus réguliers et une
+          présence digitale cohérente.
+          <br />
+          <br />
+          Plus ton entreprise est active, plus Google{" "}et l&apos;IA
+          comprennent précisément qui tu es, ce que tu proposes et à qui tu
+          t&apos;adresses. Les articles de blog, les publications sur ta
+          fiche Google, les avis clients et même certains contenus publiés
+          sur les réseaux sociaux renforcent cette compréhension.
+          <br />
+          <br />
+          L&apos;objectif n&apos;est pas de publier tous les jours, mais de
+          maintenir une activité régulière. Plus ta stratégie SEO est
+          travaillée et plus tes contenus répondent aux questions de tes
+          futurs clients, plus tu augmentes tes chances d&apos;être visible
+          sur Google{" "}et d&apos;être cité par les outils
+          d&apos;intelligence artificielle lorsqu&apos;un internaute
+          recherche une solution liée à ton activité.
+        </p>
       </section>
 
       {/* Appels ciblés */}
