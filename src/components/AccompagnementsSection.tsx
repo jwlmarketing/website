@@ -13,18 +13,18 @@ const ACCOMPAGNEMENTS = [
   {
     image: "/images/jwl-formation-redaction-seo-blog.png",
     title: "Création de site web professionnel",
-    text: "Création de site web professionnel
+    text: `Création de site web professionnel
 ✔ Site moderne et responsive
- ✔ Optimisé pour mobile
- ✔ Balises techniques conformes (H1, titres, métadonnées)
- ✔ Vitesse et sécurité de base
- ✔ Formation à la prise en main
+✔ Optimisé pour mobile
+✔ Balises techniques conformes (H1, titres, métadonnées)
+✔ Vitesse et sécurité de base
+✔ Formation à la prise en main
 À partir de 1 200 €
-Le référencement naturel avancé et la stratégie de visibilité Google sont proposés en option.",
+Le référencement naturel avancé et la stratégie de visibilité Google sont proposés en option.`,
     star: "Forme-toi au SEO, au GEO et à la rédaction web pour attirer plus de visiteurs et gagner en autonomie.",
     cta: "Explore ma méthodologie",
     action: "formation" as const,
-    ctaStyle: "terracota" as const,
+    ctaStyle: "terracotta" as const,
   },
   {
     image: "/images/jwl-creation-site-web-aix-en-provence.png",
@@ -47,7 +47,7 @@ Le référencement naturel avancé et la stratégie de visibilité Google sont p
     star: "Forme-toi au SEO, au GEO et à la rédaction web pour attirer plus de visiteurs et gagner en autonomie.",
     cta: "Explore ma méthodologie",
     action: "formation" as const,
-    ctaStyle: "terracota" as const,
+    ctaStyle: "terracotta" as const,
   },
   {
     image: "/images/jwl-developpement-prospection-commerciale.png",
@@ -225,14 +225,14 @@ export default function AccompagnementsSection() {
               <h3 className="pr-32 font-heading text-xl leading-snug md:pr-36">
                 {item.title}
               </h3>
-              <p className="mt-4 text-sm text-white/85">{item.text}</p>
+              <p className="mt-4 whitespace-pre-line text-sm text-white/85">{item.text}</p>
               <p className="mt-4 text-sm text-gold">⭐ {item.star}</p>
               {"action" in item && item.action ? (
                 <button
                   type="button"
                   onClick={() => setModal(item.action)}
                   className={`mt-6 inline-block self-start rounded-full px-6 py-3 text-sm font-medium text-white transition-colors ${
-                    item.ctaStyle === "gold"
+                    (item.ctaStyle as string) === "gold"
                       ? "bg-gold hover:bg-[#b8952f]"
                       : "bg-[#c9846f] hover:bg-[#b8735f]"
                   }`}
