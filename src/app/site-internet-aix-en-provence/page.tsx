@@ -292,7 +292,7 @@ export default function Page() {
             </ScrollReveal>
 
             {/* Row 2: image 2 | card 2 */}
-            <ScrollReveal delay={150} className="order-2 flex justify-center md:order-1 md:justify-end">
+            <ScrollReveal delay={150} className="flex justify-center md:justify-end">
               <Image
                 src="/images/jwl-etapes-2.png"
                 alt="JWL Marketing"
@@ -301,7 +301,7 @@ export default function Page() {
                 className="h-auto w-[180px] rotate-6 object-contain"
               />
             </ScrollReveal>
-            <ScrollReveal delay={200} className="order-1 flex justify-center md:order-2 md:justify-start">
+            <ScrollReveal delay={200} className="flex justify-center md:justify-start">
               <StepCard
                 n={2}
                 icon="pencil"
@@ -330,7 +330,7 @@ export default function Page() {
             </ScrollReveal>
 
             {/* Row 4: image 4 | card 4 */}
-            <ScrollReveal delay={350} className="order-2 flex justify-center md:order-1 md:justify-end">
+            <ScrollReveal delay={350} className="flex justify-center md:justify-end">
               <Image
                 src="/images/jwl-etapes-4.png"
                 alt="JWL Marketing"
@@ -339,7 +339,7 @@ export default function Page() {
                 className="h-auto w-[180px] -rotate-6 object-contain"
               />
             </ScrollReveal>
-            <ScrollReveal delay={400} className="order-1 flex justify-center md:order-2 md:justify-start">
+            <ScrollReveal delay={400} className="flex justify-center md:justify-start">
               <StepCard
                 n={4}
                 icon="plane"
