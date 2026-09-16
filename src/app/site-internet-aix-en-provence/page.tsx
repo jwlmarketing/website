@@ -221,8 +221,9 @@ export default function Page() {
       {/* Les 5 étapes de ton site web */}
       <section className="mx-auto max-w-[1100px] px-6 py-10 text-center">
         <h2 className="font-heading text-3xl font-bold leading-[1.15] md:text-[46px] md:leading-[1.15] text-black">
-          Les 5 <span className="text-[#c9846f]">étapes</span> de ton
-          site web
+          Les 5 <span className="text-[#c9846f]">étapes</span>
+          <br />
+          de ton site web
         </h2>
         <div className="relative mt-10">
           <div className="absolute left-1/2 top-0 hidden h-full w-px -translate-x-1/2 bg-black/20 md:block" />
@@ -397,7 +398,9 @@ export default function Page() {
           <span className="text-[#c9846f]">100 % propriétaire de ton site</span>,
           <br />
           <span className="font-medium">
-            tu es libre de continuer ou non avec JWL Marketing
+            tu es libre de continuer ou non avec
+            <br />
+            JWL Marketing
           </span>
         </h2>
         <div className="mx-auto mt-10 grid max-w-[1000px] gap-8 text-left md:grid-cols-2">
