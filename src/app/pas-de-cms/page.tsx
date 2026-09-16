@@ -7,6 +7,10 @@ export const metadata: Metadata = {
 };
 
 const JOKES: Record<string, { title: string; text: string }> = {
+  "/admin": {
+    title: "Ah, presque !",
+    text: "Il y a bien un espace admin sur ce site, mais pas à cette adresse-là. Et non, je ne vais pas te dire où.",
+  },
   "/wp-admin": {
     title: "Eh non, pas de CMS ici.",
     text: "Pas de WordPress, pas de plugin à mettre à jour tous les 3 jours, pas de \"votre site a été piraté\" à 2h du matin. Juste du code, écrit à la main, avec amour.",

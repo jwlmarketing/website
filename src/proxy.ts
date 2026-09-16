@@ -1,6 +1,9 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
+// Chemins matchés exactement uniquement (pas de sous-routes réelles derrière)
+const CMS_PROBE_EXACT_PATHS = ["/admin"];
+
 const CMS_PROBE_PATHS = [
   "/wp-admin",
   "/wp-login.php",
@@ -29,9 +32,9 @@ export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
   const normalized = pathname.replace(/\/+$/, "").toLowerCase() || "/";
 
-  const isProbe = CMS_PROBE_PATHS.some(
-    (p) => normalized === p || normalized.startsWith(`${p}/`)
-  );
+  const isProbe =
+    CMS_PROBE_EXACT_PATHS.includes(normalized) ||
+    CMS_PROBE_PATHS.some((p) => normalized === p || normalized.startsWith(`${p}/`));
 
   if (isProbe) {
     const url = request.nextUrl.clone();
@@ -45,6 +48,7 @@ export function proxy(request: NextRequest) {
 
 export const config = {
   matcher: [
+    "/admin",
     "/wp-admin/:path*",
     "/wp-login.php",
     "/wp-content/:path*",
