@@ -133,7 +133,8 @@ export default function Page() {
             </a>
           </div>
         </div>
-        <div className="jwl-hero-glow-wrap relative w-full max-w-[500px]">
+        <div className="jwl-hero-glow-wrap relative w-full flex-1 max-w-[620px] min-w-[280px]">
+          <div className="jwl-hero-glow-seam" />
           <Image
             src="/images/hero-creation-site-duo.png"
             alt="Jodie Lapaillerie — Création de site web JWL Marketing"
@@ -142,28 +143,28 @@ export default function Page() {
             priority
             className="relative z-10 h-auto w-full object-contain"
           />
-          <div className="jwl-hero-glow-seam" />
           <style>{`
             .jwl-hero-glow-seam {
               position: absolute;
-              top: 6%;
+              top: 4%;
               left: 49%;
-              width: 22px;
-              height: 88%;
+              width: 16px;
+              height: 90%;
               transform: translateX(-50%);
-              background: linear-gradient(180deg, transparent 0%, rgba(255,214,120,.9) 15%, rgba(255,244,214,1) 50%, rgba(255,214,120,.9) 85%, transparent 100%);
-              filter: blur(9px);
-              mix-blend-mode: screen;
-              opacity: .55;
-              animation: jwl-hero-glow-pulse 2.6s ease-in-out infinite;
+              z-index: 5;
+              border-radius: 999px;
+              background: linear-gradient(180deg, transparent 0%, #FFD97A 12%, #FFF6DE 50%, #FFD97A 88%, transparent 100%);
+              box-shadow: 0 0 22px 8px rgba(255, 214, 100, .85), 0 0 50px 18px rgba(255, 214, 100, .4);
+              filter: blur(2px);
+              animation: jwl-hero-glow-pulse 2.4s ease-in-out infinite;
               pointer-events: none;
             }
             @keyframes jwl-hero-glow-pulse {
-              0%, 100% { opacity: .4; filter: blur(9px); width: 20px; }
-              50% { opacity: .85; filter: blur(13px); width: 28px; }
+              0%, 100% { opacity: .75; width: 14px; box-shadow: 0 0 18px 6px rgba(255,214,100,.7), 0 0 40px 14px rgba(255,214,100,.3); }
+              50% { opacity: 1; width: 22px; box-shadow: 0 0 30px 12px rgba(255,214,100,1), 0 0 65px 26px rgba(255,214,100,.55); }
             }
             @media (prefers-reduced-motion: reduce) {
-              .jwl-hero-glow-seam { animation: none; opacity: .6; }
+              .jwl-hero-glow-seam { animation: none; opacity: .9; }
             }
           `}</style>
         </div>
