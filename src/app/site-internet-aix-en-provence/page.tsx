@@ -343,20 +343,43 @@ export default function Page() {
               {
                 title: "Maintenance",
                 text: "Vérification du bon fonctionnement du site.",
+                icon: (
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                    <path d="M14.7 6.3a1 1 0 0 0 0-1.4l-1.6-1.6a1 1 0 0 0-1.4 0L10 5l3 3 1.7-1.7Z" />
+                    <path d="M9 6 2.5 12.5a2.1 2.1 0 0 0 0 3l0 0a2.1 2.1 0 0 0 3 0L12 9" />
+                    <circle cx="18.5" cy="18.5" r="3.5" />
+                    <path d="M18.5 15.5v1M18.5 20v1M21.5 18.5h-1M16 18.5h-1M20.6 16.4l-.7.7M17.1 19.9l-.7.7M20.6 20.6l-.7-.7M17.1 17.1l-.7-.7" />
+                  </svg>
+                ),
               },
               {
                 title: "Sauvegarde",
                 text: "Sauvegardes régulières de ton site.",
+                icon: (
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                    <path d="M6.5 18a4 4 0 0 1-.8-7.9 5.5 5.5 0 0 1 10.7-2A4.5 4.5 0 0 1 17.5 18h-11Z" />
+                    <path d="M9.5 12.5 12 10l2.5 2.5M12 10v8" />
+                  </svg>
+                ),
               },
               {
                 title: "Sécurité",
                 text: "Surveillance et sécurisation de ton site.",
+                icon: (
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                    <path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3Z" />
+                    <path d="M9 12.2l2 2 4-4.2" />
+                  </svg>
+                ),
               },
             ].map((item, i) => (
               <ScrollReveal key={item.title} delay={i * 120}>
-                <div className="rounded-2xl bg-[#141414] p-6 text-white">
-                  <p className="text-[15px] font-semibold leading-[22px]">{item.title}</p>
-                  <p className="mt-1 text-sm leading-[21px] text-white/80">{item.text}</p>
+                <div className="flex items-center gap-5 rounded-2xl bg-[#141414] p-6 text-white">
+                  <div className="h-10 w-10 flex-shrink-0 text-[#c9846f]">{item.icon}</div>
+                  <div>
+                    <p className="font-heading text-xl italic text-[#c9846f]">{item.title}</p>
+                    <p className="mt-1 text-sm leading-[21px] text-white/80">{item.text}</p>
+                  </div>
                 </div>
               </ScrollReveal>
             ))}
