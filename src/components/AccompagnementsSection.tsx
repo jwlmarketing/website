@@ -273,7 +273,7 @@ export default function AccompagnementsSection() {
                 {item.badge}
               </span>
             )}
-            <div className="flex flex-1 flex-col rounded-2xl border border-[#c9846f]/40 bg-[#141414] p-8 pt-10 text-left text-white">
+            <div className="flex min-h-[480px] flex-1 flex-col rounded-2xl border border-[#c9846f]/40 bg-[#141414] p-8 pt-10 text-left text-white">
               <h3 className="pr-32 font-heading text-xl leading-snug md:pr-36">
                 {item.title}
               </h3>
