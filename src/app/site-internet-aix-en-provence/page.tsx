@@ -123,17 +123,6 @@ export default function Page() {
               Créer mon site
             </a>
           </div>
-          <div className="mt-4 flex flex-wrap items-center gap-4">
-            <a
-              href="tel:0783792814"
-              className="text-sm font-semibold text-black underline decoration-[#c9846f] underline-offset-4"
-            >
-              07 83 79 28 14
-            </a>
-            <span className="rounded-full bg-[#faf3ea] px-5 py-[15px] text-sm font-semibold text-black">
-              + de 20 projets depuis 2025
-            </span>
-          </div>
         </div>
         <Image
           src="/images/creation-site-web.webp"
