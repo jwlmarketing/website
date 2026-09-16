@@ -13,13 +13,22 @@ const ACCOMPAGNEMENTS = [
   {
     image: "/images/jwl-formation-redaction-seo-blog.png",
     title: "Création de site web professionnel",
-    text: `Création de site web professionnel
-✔ Site moderne et responsive
-✔ Optimisé pour mobile
-✔ Balises techniques conformes (H1, titres, métadonnées)
-✔ Vitesse et sécurité de base
-✔ Formation à la prise en main
-`,
+    text: (
+      <ul className="space-y-1">
+        {[
+          "Site moderne et responsive",
+          "Optimisé pour mobile",
+          "Balises techniques conformes (H1, titres, métadonnées)",
+          "Vitesse et sécurité de base",
+          "Formation à la prise en main",
+        ].map((item) => (
+          <li key={item} className="flex gap-2">
+            <span className="text-green-500">✓</span>
+            <span>{item}</span>
+          </li>
+        ))}
+      </ul>
+    ),
     star: "À partir de 1 200 €",
     cta: "Explore ma méthodologie",
     action: "formation" as const,
