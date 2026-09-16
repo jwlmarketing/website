@@ -12,6 +12,7 @@ export default function NewsletterCta() {
   const isNice = bare === "/consultant-freelance-seo-nice";
   const isParis = bare === "/consultant-freelance-seo-paris-jwl-marketing";
   const isMarseille = bare === "/consultant-freelance-seo-marseille-jwl-marketing";
+  const isCreationSite = bare === "/site-internet-aix-en-provence";
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "sending" | "ok" | "error">("idle");
   const [message, setMessage] = useState("");
@@ -72,7 +73,9 @@ export default function NewsletterCta() {
                   ? "So, when are you committing to your business in Paris?"
                   : isMarseille
                     ? "So, when are you committing to your business in Marseille?"
-                    : "Ready to turn your website into a customer machine?"
+                    : isCreationSite
+                      ? "Ready to stop depending on anyone else?"
+                      : "Ready to turn your website into a customer machine?"
             : isQuiSuisJe
               ? "Et toi? Quand est ce que tu t'engages pour ton Business sur Aix?"
               : isNice
@@ -81,7 +84,9 @@ export default function NewsletterCta() {
                   ? "Et toi? Quand est ce que tu t'engages pour ton Business sur Paris?"
                   : isMarseille
                     ? "Et toi? Quand est ce que tu t'engages pour ton Business sur Marseille?"
-                    : "Prêt à transformer ton site web en machine à clients ?"}
+                    : isCreationSite
+                      ? "Prêt(e) à ne plus dépendre de personne ?"
+                      : "Prêt à transformer ton site web en machine à clients ?"}
         </h2>
         <form
           onSubmit={handleSubmit}

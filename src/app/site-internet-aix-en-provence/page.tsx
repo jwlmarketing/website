@@ -1,25 +1,16 @@
 import Image from "next/image";
 import type { Metadata } from "next";
-import GoogleColors from "@/components/GoogleColors";
 import ScrollReveal from "@/components/ScrollReveal";
 import SiteHeader from "@/components/SiteHeader";
 import TrustedPartners from "@/components/TrustedPartners";
-import NewsletterForm from "@/components/NewsletterForm";
 import ProofCards from "@/components/ProofCards";
+import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
   title: "Création de site web | JWL Marketing",
   description:
     "Découvre la puissance d'un site web conçu par une experte commerciale. Structure saine, rédaction SEO-GEO et cité par l'IA. France entière.",
 };
-
-function StepNumber({ n }: { n: number }) {
-  return (
-    <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-gold text-2xl font-bold text-white">
-      {n}
-    </div>
-  );
-}
 
 const STEP_ICONS = {
   binoculars: (
@@ -72,7 +63,7 @@ function StepCard({
         {n}
       </span>
       <div className="mx-auto mt-2 h-8 w-8 text-[#c9846f]">{STEP_ICONS[icon]}</div>
-      <p className="mt-2 font-heading text-lg italic text-[#c9846f]">{title}</p>
+      <p className="mt-2 font-heading text-lg text-[#c9846f]">{title}</p>
       <p className="mt-2 text-[13.5px] leading-[20px] text-white/85">{text}</p>
     </div>
   );
@@ -141,8 +132,9 @@ export default function Page() {
       {/* Un site web professionnel, conçu pour évoluer avec ton entreprise */}
       <section className="mx-auto max-w-[1400px] px-6 py-10 text-center">
         <h2 className="font-heading text-3xl font-bold leading-[1.15] md:text-[46px] md:leading-[1.15] text-black">
-          Un site web professionnel,{" "}
-          <span className="italic text-[#c9846f]">conçu pour évoluer</span>{" "}
+          Un site web professionnel, conçu pour
+          <br />
+          <span className="text-[#c9846f]">évoluer</span>{" "}
           <span className="font-medium">avec ton entreprise.</span>
         </h2>
         <p className="mx-auto mt-6 max-w-[720px] text-[17px] leading-[26px] text-[#1a1a1a]">
@@ -159,8 +151,9 @@ export default function Page() {
       {/* JWL Business est fait / pas fait pour toi */}
       <section className="mx-auto max-w-[1400px] px-6 py-10 text-center">
         <h2 className="font-heading text-3xl font-bold leading-[1.15] md:text-[46px] md:leading-[1.15] text-black">
-          <span className="font-medium">JWL Business est</span>{" "}
-          <span className="italic text-[#c9846f]">fait pour toi</span>
+          <span className="font-medium">JWL Business</span>
+          <br />
+          <span className="text-[#c9846f]">est fait pour toi</span>
           <span className="font-medium"> si tu veux :</span>
         </h2>
         <ScrollReveal>
@@ -195,7 +188,9 @@ export default function Page() {
         </ScrollReveal>
 
         <h2 className="mt-16 font-heading text-3xl font-bold leading-[1.15] md:text-[46px] md:leading-[1.15] text-black">
-          Cette offre n&apos;est <span className="italic text-[#c9846f]">pas faite pour toi</span> si
+          Cette offre
+          <br />
+          n&apos;est <span className="text-[#c9846f]">pas faite pour toi</span> si
           tu aimerais :
         </h2>
         <ScrollReveal>
@@ -226,7 +221,7 @@ export default function Page() {
       {/* Les 5 étapes de ton site web */}
       <section className="mx-auto max-w-[1100px] px-6 py-10 text-center">
         <h2 className="font-heading text-3xl font-bold leading-[1.15] md:text-[46px] md:leading-[1.15] text-black">
-          Les 5 <span className="italic text-[#c9846f]">étapes</span> de ton
+          Les 5 <span className="text-[#c9846f]">étapes</span> de ton
           site web
         </h2>
         <div className="relative mt-10">
@@ -334,7 +329,7 @@ export default function Page() {
           <span className="font-medium">Tous les mois je veille</span>
           <br />
           <span className="font-medium">à la </span>
-          <span className="italic text-[#c9846f]">maintenance</span>
+          <span className="text-[#c9846f]">maintenance</span>
           <span className="font-medium"> de ton site web</span>
         </h2>
         <div className="mx-auto mt-10 grid max-w-[1050px] gap-6 md:grid-cols-2 md:items-center">
@@ -377,7 +372,7 @@ export default function Page() {
                 <div className="flex items-center gap-5 rounded-2xl bg-[#141414] p-6 text-white">
                   <div className="h-10 w-10 flex-shrink-0 text-[#c9846f]">{item.icon}</div>
                   <div>
-                    <p className="font-heading text-xl italic text-[#c9846f]">{item.title}</p>
+                    <p className="font-heading text-xl text-[#c9846f]">{item.title}</p>
                     <p className="mt-1 text-sm leading-[21px] text-white/80">{item.text}</p>
                   </div>
                 </div>
@@ -399,272 +394,43 @@ export default function Page() {
       {/* 100% propriétaire */}
       <section className="mx-auto max-w-[1200px] px-6 py-10 text-center">
         <h2 className="font-heading text-3xl font-bold leading-[1.15] md:text-[46px] md:leading-[1.15] text-black">
-          <span className="italic text-[#c9846f]">100 % propriétaire de ton site</span>,
+          <span className="text-[#c9846f]">100 % propriétaire de ton site</span>,
           <br />
           <span className="font-medium">
             tu es libre de continuer ou non avec JWL Marketing
           </span>
         </h2>
-        <ScrollReveal>
-          <div className="mx-auto mt-10 flex max-w-[600px] flex-col items-center gap-4 rounded-2xl bg-[#faf3ea] p-8">
-            <p className="text-[15px] leading-[22px] text-black">
-              Une question avant de réserver ? Écris-moi sur WhatsApp, le
-              message est déjà préparé pour aller droit au but.
-            </p>
-            <a
-              href="https://wa.me/33783792814?text=Bonjour%20Jodie%2C%20j%27ai%20une%20question%20avant%20de%20r%C3%A9server%20un%20appel%20pour%20la%20cr%C3%A9ation%20de%20mon%20site%20web%C2%A0%3A"
-              target="_blank"
-              rel="noopener"
-              className="inline-block rounded-full bg-[#25D366] px-8 py-[15px] font-semibold text-white transition-colors hover:bg-[#1ebe57]"
-            >
-              Poser ma question sur WhatsApp
-            </a>
-            <a
-              href="https://calendly.com/jwlm"
-              target="_blank"
-              rel="noopener"
-              className="inline-block rounded-full bg-[#c9846f] px-8 py-[15px] font-semibold text-white transition-colors hover:bg-[#b8735f]"
-            >
-              Réserver mon appel découverte
-            </a>
-          </div>
-        </ScrollReveal>
-      </section>
-
-      {/* Prêt(e) à ne plus dépendre de personne ? */}
-      <section className="mx-auto max-w-[1200px] px-6 py-10">
-        <div className="grid items-center gap-10 rounded-2xl bg-[#141414] p-8 md:grid-cols-2 md:p-12">
-          <Image
-            src="/images/creation-site-web.webp"
-            alt="Jodie Lapaillerie — JWL Marketing"
-            width={525}
-            height={640}
-            className="mx-auto h-auto w-full max-w-[320px] rounded-2xl object-cover"
-          />
-          <div className="text-center md:text-left">
-            <h2 className="font-heading text-3xl font-bold leading-[1.15] text-white md:text-4xl">
-              Prêt(e) à ne plus dépendre de personne ?
-            </h2>
-            <div className="mt-6">
-              <NewsletterForm />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Ma Méthode */}
-      <section className="mx-auto max-w-[1400px] px-6 py-10 text-center">
-        <h2 className="font-heading text-3xl font-bold leading-[1.15] md:text-[46px] md:leading-[1.15] text-black">
-          <span className="italic text-[#c9846f]">Ma Méthode</span>
-          <br />
-          <span className="font-medium">
-            Fais de ton site web une machine à clients.
-          </span>
-        </h2>
-        <div className="mt-10 grid gap-6 md:grid-cols-3">
-          <ScrollReveal delay={0}>
-            <Image
-              src="/images/conception-site-web.png"
-              alt="Je comprends comment tes clients te recherchent — JWL Marketing"
-              width={466}
-              height={346}
-              className="h-auto w-full rounded-t-2xl object-cover"
-            />
-            <div className="rounded-b-2xl bg-[#141414] p-4 text-left text-white">
-              <p className="text-[15px] font-semibold leading-[22px]">
-                Je comprends comment tes clients te recherchent
+        <div className="mx-auto mt-10 grid max-w-[1000px] gap-8 text-left md:grid-cols-2">
+          <ScrollReveal>
+            <div className="flex h-full flex-col items-center justify-center gap-4 rounded-2xl bg-[#faf3ea] p-8 text-center">
+              <p className="text-[15px] leading-[22px] text-black">
+                Une question avant de réserver ? Écris-moi sur WhatsApp, le
+                message est déjà préparé pour aller droit au but.
               </p>
-              <p className="mt-2 text-[14px] leading-[22px] text-white/80">
-                Étude de ton activité, de tes concurrents et des mots-clés
-                utilisés sur Google.
-              </p>
-            </div>
-          </ScrollReveal>
-          <ScrollReveal delay={150}>
-            <Image
-              src="/images/site-web-sur-mesure.png"
-              alt="Je crée un site web pensé pour être trouvé — JWL Marketing"
-              width={466}
-              height={344}
-              className="h-auto w-full rounded-t-2xl object-cover"
-            />
-            <div className="rounded-b-2xl bg-[#141414] p-4 text-left text-white">
-              <p className="text-[15px] font-semibold leading-[22px]">
-                Je crée un site web pensé pour être trouvé
-              </p>
-              <p className="mt-2 text-[14px] leading-[22px] text-white/80">
-                Structure, contenus, pages de services et optimisation SEO dès
-                la création.
-              </p>
-            </div>
-          </ScrollReveal>
-          <ScrollReveal delay={300}>
-            <Image
-              src="/images/conception-site-web.png"
-              alt="J'analyse les données et j'améliore la connexion à Google Search Console — JWL Marketing"
-              width={466}
-              height={346}
-              className="h-auto w-full rounded-t-2xl object-cover"
-            />
-            <div className="rounded-b-2xl bg-[#141414] p-4 text-left text-white">
-              <p className="text-[15px] font-semibold leading-[22px]">
-                J&apos;analyse les données et j&apos;améliore la connexion à
-                Google Search Console
-              </p>
-              <p className="mt-2 text-[14px] leading-[22px] text-white/80">
-                Pour comprendre le comportement des visiteurs et identifier
-                les opportunités d&apos;amélioration.
-              </p>
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
-
-      {/* 12 mois pour construire, analyser et faire évoluer ta visibilité */}
-      <section className="mx-auto max-w-[1200px] px-6 py-10 text-center">
-        <h2 className="font-heading text-3xl font-bold leading-[1.15] md:text-[46px] md:leading-[1.15] text-black">
-          <span className="italic text-[#c9846f]">12 mois</span>{" "}
-          <span className="font-medium">pour construire,</span>
-          <br />
-          <span className="font-medium">analyser et faire évoluer ta</span>{" "}
-          <span className="italic text-[#c9846f]">visibilité sur Google.</span>
-        </h2>
-        <p className="mt-4 text-[17px] text-[#555]">
-          Un accompagnement clair et conçu pour te rendre autonome au bout
-          d&apos;un an.
-        </p>
-
-        <div className="mx-auto mt-10 grid gap-8 md:grid-cols-3">
-          {[
-            {
-              price: "697",
-              title: "JWL Start",
-              subtitle: "Le Site Web Business",
-              quote: "« L'essentiel pour être visible sur Google. »",
-              cta: "Je demande mon audit stratégique",
-            },
-            {
-              price: "1275",
-              title: "JWL Perform",
-              subtitle: "Le Site Web Premium",
-              quote: "« Je délègue ma visibilité et je me concentre sur mon métier. »",
-              cta: "Je réserve un échange découverte",
-            },
-            {
-              price: "1500",
-              title: "JWL Master",
-              subtitle: null,
-              quote: "« Pour les entreprises qui veulent une présence Google gérée de A à Z. »",
-              cta: "Parler de mon projet",
-            },
-          ].map((tier) => (
-            <div
-              key={tier.title}
-              className="relative flex flex-1 flex-col rounded-md bg-[#141414] p-8 pt-14 text-left text-white"
-            >
-              <span className="absolute -top-6 left-6 flex h-[76px] w-[76px] -rotate-6 items-center justify-center rounded-full bg-gold text-center text-[13px] leading-tight text-white shadow-md">
-                {tier.price}€
-                <br />
-                /mois
-              </span>
-              <h3 className="font-heading text-xl text-center underline decoration-gold underline-offset-4">
-                {tier.title}
-              </h3>
-              {tier.subtitle && (
-                <p className="mt-1 text-center text-sm text-white/60">{tier.subtitle}</p>
-              )}
-              <p className="mt-3 italic text-white/90">{tier.quote}</p>
+              <a
+                href="https://wa.me/33783792814?text=Bonjour%20Jodie%2C%20j%27ai%20une%20question%20avant%20de%20r%C3%A9server%20un%20appel%20pour%20la%20cr%C3%A9ation%20de%20mon%20site%20web%C2%A0%3A"
+                target="_blank"
+                rel="noopener"
+                className="inline-block rounded-full bg-[#25D366] px-8 py-[15px] font-semibold text-white transition-colors hover:bg-[#1ebe57]"
+              >
+                Poser ma question sur WhatsApp
+              </a>
               <a
                 href="https://calendly.com/jwlm"
                 target="_blank"
                 rel="noopener"
-                className="mt-6 inline-block rounded-full bg-[#c9846f] px-6 py-3 text-center text-sm font-semibold text-white transition-colors hover:bg-[#b8735f]"
+                className="inline-block rounded-full bg-[#c9846f] px-8 py-[15px] font-semibold text-white transition-colors hover:bg-[#b8735f]"
               >
-                {tier.cta}
+                Réserver mon appel découverte
               </a>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Tu sais tout ce qui est fait. Quand. Et pourquoi. */}
-      <section className="mx-auto max-w-[1000px] px-6 py-10 text-center">
-        <h2 className="font-heading text-3xl font-bold leading-[1.15] md:text-[46px] md:leading-[1.15] text-black">
-          <span className="italic text-[#c9846f]">Tu sais tout ce qui est fait.</span>
-          <br />
-          <span className="font-medium">Quand. Et pourquoi.</span>
-        </h2>
-        <ScrollReveal>
-          <Image
-            src="/images/consultant-google-aix-en-provence.png"
-            alt="Accompagnement JWL Marketing"
-            width={840}
-            height={520}
-            className="mx-auto mt-8 h-auto w-full max-w-[700px] rounded-2xl object-cover"
-          />
-        </ScrollReveal>
-      </section>
-
-      {/* Tous les mois je veille à faire évoluer ta position sur Google */}
-      <section className="mx-auto max-w-[1400px] px-6 py-10 text-center">
-        <h2 className="font-heading text-3xl font-bold leading-[1.15] md:text-[46px] md:leading-[1.15] text-black">
-          <span className="italic text-[#c9846f]">Tous les mois je veille</span>
-          <br />
-          <span className="font-medium">
-            à faire évoluer ta position sur <GoogleColors />
-          </span>
-        </h2>
-        <ScrollReveal>
-          <Image
-            src="/images/developpement-site-web.png"
-            alt="Suivi et veille Google — JWL Marketing"
-            width={462}
-            height={346}
-            className="mx-auto mt-8 h-auto w-full max-w-[400px] rounded-2xl object-cover"
-          />
-        </ScrollReveal>
-        <div className="mt-10 grid gap-6 md:grid-cols-3">
-          <ScrollReveal delay={0}>
-            <StepNumber n={1} />
-            <div className="mt-4 rounded-2xl bg-[#141414] p-6 text-left text-white">
-              <p className="text-[15px] font-semibold leading-[22px]">
-                Je regarde le suivi Search Console Google
-              </p>
-              <p className="mt-2 text-sm leading-[21px] text-white/80">
-                En claire se que les gens tapent sur google et comment ton
-                site ressort.
-              </p>
             </div>
           </ScrollReveal>
           <ScrollReveal delay={150}>
-            <StepNumber n={2} />
-            <div className="mt-4 rounded-2xl bg-[#141414] p-6 text-left text-white">
-              <p className="text-[15px] font-semibold leading-[22px]">
-                J&apos;analyse ce que les internautes tapent sur google
-              </p>
-              <p className="mt-2 text-sm leading-[21px] text-white/80">
-                En comment ton site ressort et se qu&apos;on peut améliorer.
-              </p>
-            </div>
-          </ScrollReveal>
-          <ScrollReveal delay={300}>
-            <StepNumber n={3} />
-            <div className="mt-4 rounded-2xl bg-[#141414] p-6 text-left text-white">
-              <p className="text-[15px] font-semibold leading-[22px]">
-                J&apos;ajuste ta stratégie en concéquence
-              </p>
-              <p className="mt-2 text-sm leading-[21px] text-white/80">
-                Je fais évoluer tes pages tes contenus.
-              </p>
+            <div className="rounded-2xl border border-[#eee] p-8">
+              <ContactForm />
             </div>
           </ScrollReveal>
         </div>
-        <p className="mx-auto mt-8 max-w-[940px] text-[17px] leading-[28px] text-[#1a1a1a]">
-          Selon ton accompagnement je peux soit te guider sur les ajustements
-          à faire soit les faire pour toi. Et si tu rédiges tes articles de
-          blog toi même après la formation en rédaction SEO, je t&apos;indique
-          les sujets et les optimisations à travailler.
-        </p>
       </section>
     </div>
   );
