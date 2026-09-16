@@ -34,9 +34,9 @@ const ACCOMPAGNEMENTS = [
   },
   {
     image: "/images/jwl-clarifier-positionnement-entreprise.png",
-    title: "Je clarifie ton positionnement",
-    text: "Pour les entreprises qui ne savent pas encore comment se positionner ou vendre.",
-    star: "Audit stratégique offert pour tout accompagnement annuel",
+    title: "Je te forme à la rédaction SEO pour ton blog",
+    text: "Rédige, publie plus vite, et sois plus visible. Apprends à optimiser ton blog grâce aux méthodes SEO, aux outils d'analyse et à l'IA (ChatGPT, Claude).",
+    star: "Forme-toi au SEO, au GEO et à la rédaction web pour attirer plus de visiteurs et gagner en autonomie.",
     cta: "Consulte mes audits",
     href: "/audit-seo-aix-en-provence",
     ctaStyle: "terracotta" as const,
