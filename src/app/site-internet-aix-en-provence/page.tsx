@@ -22,6 +22,63 @@ function StepNumber({ n }: { n: number }) {
   );
 }
 
+const STEP_ICONS = {
+  binoculars: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+      <circle cx="7" cy="15" r="4" />
+      <circle cx="17" cy="15" r="4" />
+      <path d="M9.5 12 8 6h2l2 5M14.5 12 16 6h-2l-2 5" />
+    </svg>
+  ),
+  pencil: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+      <path d="M4 20h4L19 9l-4-4L4 16v4Z" />
+      <path d="M14 6l4 4" />
+    </svg>
+  ),
+  eye: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+      <path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6-10-6-10-6Z" />
+      <circle cx="12" cy="12" r="3" />
+    </svg>
+  ),
+  plane: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+      <path d="M21 3 3 10.5l7 2.5 2.5 7L21 3Z" />
+      <path d="M12.5 13.5 21 3" />
+    </svg>
+  ),
+  key: (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+      <circle cx="8" cy="15" r="4" />
+      <path d="M11 12l9-9M17 6l2 2M14 9l2 2" />
+    </svg>
+  ),
+};
+
+function StepCard({
+  n,
+  icon,
+  title,
+  text,
+}: {
+  n: number;
+  icon: keyof typeof STEP_ICONS;
+  title: string;
+  text: string;
+}) {
+  return (
+    <div className="relative w-full max-w-[340px] rounded-2xl bg-[#141414] p-6 pt-8 text-center text-white">
+      <span className="absolute -top-6 left-1/2 flex h-12 w-12 -translate-x-1/2 items-center justify-center rounded-full bg-gold text-xl font-bold text-white shadow-md">
+        {n}
+      </span>
+      <div className="mx-auto mt-2 h-8 w-8 text-[#c9846f]">{STEP_ICONS[icon]}</div>
+      <p className="mt-2 font-heading text-lg italic text-[#c9846f]">{title}</p>
+      <p className="mt-2 text-[13.5px] leading-[20px] text-white/85">{text}</p>
+    </div>
+  );
+}
+
 export default function Page() {
   return (
     <div>
@@ -207,43 +264,108 @@ export default function Page() {
       </section>
 
       {/* Les 5 étapes de ton site web */}
-      <section className="mx-auto max-w-[1200px] px-6 py-10 text-center">
+      <section className="mx-auto max-w-[900px] px-6 py-10 text-center">
         <h2 className="font-heading text-3xl leading-tight md:text-[54px] text-black">
           Les 5 <span className="italic text-[#c9846f]">étapes</span> de ton
           site web
         </h2>
-        <div className="mt-10 grid gap-6 md:grid-cols-5">
-          {[
-            {
-              title: "Découverte de ton projet",
-              text: "Nous échangeons ensemble par téléphone ou visioconférence.",
-            },
-            {
-              title: "Conception de la maquette du site",
-              text: "Je conçois une maquette basée sur les bonnes pratiques de vente et d'expérience utilisateur.",
-            },
-            {
-              title: "Intégration de tes contenus et de tes visuels",
-              text: "Tu m'envoies les éléments nécessaires à la création de ton site (photos, textes, logo, etc.).",
-            },
-            {
-              title: "Mise en ligne de ton site",
-              text: "Je configure l'hébergement et la mise en ligne.",
-            },
-            {
-              title: "Remise des accès et autonomie",
-              text: "Je te transmets tous tes accès, tu es libre et autonome.",
-            },
-          ].map((step, i) => (
-            <ScrollReveal key={step.title} delay={i * 120}>
-              <StepNumber n={i + 1} />
-              <div className="mt-4 rounded-2xl bg-[#141414] p-6 text-white">
-                <p className="text-[15px] font-semibold leading-[22px]">{step.title}</p>
-                <p className="mt-2 text-sm leading-[21px] text-white/80">{step.text}</p>
-              </div>
+        <div className="relative mt-10">
+          <div className="absolute left-1/2 top-0 hidden h-full w-px -translate-x-1/2 bg-black/20 md:block" />
+          <div className="grid gap-8 md:grid-cols-2 md:gap-x-16 md:gap-y-10">
+            {/* Row 1: card 1 | image 1 */}
+            <ScrollReveal delay={0} className="flex justify-center md:justify-end">
+              <StepCard
+                n={1}
+                icon="binoculars"
+                title="Découverte de ton projet"
+                text="Nous échangeons ensemble par téléphone ou visioconférence."
+              />
             </ScrollReveal>
-          ))}
+            <ScrollReveal delay={100} className="flex justify-center md:justify-start">
+              <Image
+                src="/images/jwl-etapes-1.png"
+                alt="JWL Marketing"
+                width={220}
+                height={220}
+                className="h-auto w-[180px] -rotate-6 object-contain"
+              />
+            </ScrollReveal>
+
+            {/* Row 2: image 2 | card 2 */}
+            <ScrollReveal delay={150} className="order-2 flex justify-center md:order-1 md:justify-end">
+              <Image
+                src="/images/jwl-etapes-2.png"
+                alt="JWL Marketing"
+                width={220}
+                height={220}
+                className="h-auto w-[180px] rotate-6 object-contain"
+              />
+            </ScrollReveal>
+            <ScrollReveal delay={200} className="order-1 flex justify-center md:order-2 md:justify-start">
+              <StepCard
+                n={2}
+                icon="pencil"
+                title="Conception de la maquette du site"
+                text="Je conçois une maquette basée sur les bonnes pratiques de vente et d'expérience utilisateur."
+              />
+            </ScrollReveal>
+
+            {/* Row 3: card 3 | image 3 */}
+            <ScrollReveal delay={250} className="flex justify-center md:justify-end">
+              <StepCard
+                n={3}
+                icon="eye"
+                title="Intégration de tes contenus et de tes visuels"
+                text="Tu m'envoies les éléments nécessaires à la création de ton site (photos, textes, logo, etc.)."
+              />
+            </ScrollReveal>
+            <ScrollReveal delay={300} className="flex justify-center md:justify-start">
+              <Image
+                src="/images/jwl-etapes-3.png"
+                alt="JWL Marketing"
+                width={220}
+                height={220}
+                className="h-auto w-[180px] rotate-6 object-contain"
+              />
+            </ScrollReveal>
+
+            {/* Row 4: image 4 | card 4 */}
+            <ScrollReveal delay={350} className="order-2 flex justify-center md:order-1 md:justify-end">
+              <Image
+                src="/images/jwl-etapes-4.png"
+                alt="JWL Marketing"
+                width={220}
+                height={220}
+                className="h-auto w-[180px] -rotate-6 object-contain"
+              />
+            </ScrollReveal>
+            <ScrollReveal delay={400} className="order-1 flex justify-center md:order-2 md:justify-start">
+              <StepCard
+                n={4}
+                icon="plane"
+                title="Mise en ligne de ton site"
+                text="Je configure l'hébergement et la mise en ligne."
+              />
+            </ScrollReveal>
+          </div>
         </div>
+
+        {/* Step 5: centrée, pleine largeur */}
+        <ScrollReveal delay={450} className="mt-10 flex flex-col items-center">
+          <StepCard
+            n={5}
+            icon="key"
+            title="Remise des accès et autonomie"
+            text="Je te transmets tous tes accès, tu es libre et autonome."
+          />
+          <Image
+            src="/images/jwl-etapes-5-parachute.png"
+            alt="JWL Marketing"
+            width={280}
+            height={280}
+            className="mt-6 h-auto w-[220px] object-contain"
+          />
+        </ScrollReveal>
       </section>
 
       {/* Tous les mois je veille à la maintenance */}
