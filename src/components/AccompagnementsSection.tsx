@@ -20,15 +20,6 @@ const ACCOMPAGNEMENTS = [
     ctaStyle: "gold" as const,
   },
   {
-    image: "/images/jwl-clarifier-positionnement-entreprise.png",
-    title: "Je te forme à la rédaction SEO pour ton blog",
-    text: "Rédige, publie plus vite, et sois plus visible. Apprends à optimiser ton blog grâce aux méthodes SEO, aux outils d'analyse et à l'IA (ChatGPT, Claude).",
-    star: "Forme-toi au SEO, au GEO et à la rédaction web pour attirer plus de visiteurs et gagner en autonomie.",
-    cta: "Consulte mes audits",
-    href: "/audit-seo-aix-en-provence",
-    ctaStyle: "terracotta" as const,
-  },
-  {
     image: "/images/jwl-creation-site-web-aix-en-provence.png",
     badge: "Nouveau",
     title: (
@@ -40,6 +31,15 @@ const ACCOMPAGNEMENTS = [
     star: "Audit stratégique offert pour tout accompagnement annuel",
     cta: "Découvre le détail de mes accompagnements",
     action: "pricing" as const,
+    ctaStyle: "terracotta" as const,
+  },
+  {
+    image: "/images/jwl-clarifier-positionnement-entreprise.png",
+    title: "Je te forme à la rédaction SEO pour ton blog",
+    text: "Rédige, publie plus vite, et sois plus visible. Apprends à optimiser ton blog grâce aux méthodes SEO, aux outils d'analyse et à l'IA (ChatGPT, Claude).",
+    star: "Forme-toi au SEO, au GEO et à la rédaction web pour attirer plus de visiteurs et gagner en autonomie.",
+    cta: "Consulte mes audits",
+    href: "/audit-seo-aix-en-provence",
     ctaStyle: "terracotta" as const,
   },
   {
