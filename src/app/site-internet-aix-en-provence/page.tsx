@@ -58,12 +58,15 @@ function StepCard({
   text: string;
 }) {
   return (
-    <div className="jwl-step-card relative w-full max-w-[340px] rounded-2xl bg-[#141414] p-6 pt-8 text-center text-white transition-transform duration-300 hover:-translate-y-1.5 hover:scale-[1.03]">
+    <div className="jwl-step-card group relative w-full max-w-[340px] rounded-2xl bg-[#141414] p-6 pt-8 text-center text-white transition-transform duration-300 hover:-translate-y-1.5 hover:scale-[1.03] hover:shadow-[0_16px_40px_rgba(201,132,111,0.35)]">
+      <span className="jwl-step-badge-ring absolute -top-6 left-1/2 h-12 w-12 -translate-x-1/2 rounded-full" />
       <span className="jwl-step-badge absolute -top-6 left-1/2 flex h-12 w-12 -translate-x-1/2 items-center justify-center rounded-full bg-gold text-xl font-bold text-white shadow-md">
         {n}
       </span>
-      <div className="mx-auto mt-2 h-8 w-8 text-[#c9846f]">{STEP_ICONS[icon]}</div>
-      <p className="mt-2 font-heading text-lg text-[#c9846f]">{title}</p>
+      <div className="jwl-step-icon mx-auto mt-2 h-8 w-8 text-[#c9846f] transition-transform duration-300 group-hover:scale-125">
+        {STEP_ICONS[icon]}
+      </div>
+      <p className="jwl-step-title mt-2 font-heading text-lg text-[#c9846f]">{title}</p>
       <p className="mt-2 text-[13.5px] leading-[20px] text-white/85">{text}</p>
     </div>
   );
@@ -226,26 +229,67 @@ export default function Page() {
           de ton site web
         </h2>
         <style>{`
-          .jwl-etape-img { animation: jwl-etape-float 4.5s ease-in-out infinite; }
-          .jwl-etape-img-1 { animation-delay: 0s; }
-          .jwl-etape-img-2 { animation-delay: .6s; }
-          .jwl-etape-img-3 { animation-delay: 1.2s; }
-          .jwl-etape-img-4 { animation-delay: 1.8s; }
-          @keyframes jwl-etape-float {
-            0%, 100% { transform: translateY(0) rotate(-6deg); }
-            50% { transform: translateY(-10px) rotate(6deg); }
+          .jwl-etape-img { animation: jwl-etape-float-1 4.5s ease-in-out infinite; will-change: transform; }
+          .jwl-etape-img-1 { animation-name: jwl-etape-float-1; animation-duration: 4.2s; animation-delay: 0s; }
+          .jwl-etape-img-2 { animation-name: jwl-etape-float-2; animation-duration: 5.1s; animation-delay: .4s; }
+          .jwl-etape-img-3 { animation-name: jwl-etape-float-1; animation-duration: 4.8s; animation-delay: .9s; }
+          .jwl-etape-img-4 { animation-name: jwl-etape-float-2; animation-duration: 3.9s; animation-delay: 1.3s; }
+          @keyframes jwl-etape-float-1 {
+            0%, 100% { transform: translateY(0) rotate(-7deg) scale(1); }
+            50% { transform: translateY(-12px) rotate(6deg) scale(1.04); }
           }
-          .jwl-step-badge { animation: jwl-step-badge-pulse 2.6s ease-in-out infinite; }
+          @keyframes jwl-etape-float-2 {
+            0%, 100% { transform: translateY(-4px) rotate(6deg) scale(1.02); }
+            50% { transform: translateY(9px) rotate(-8deg) scale(0.97); }
+          }
+
+          .jwl-etape-line { position: absolute; left: 50%; top: 0; height: 100%; width: 2px; transform: translateX(-50%); overflow: hidden; background: rgba(0,0,0,.12); }
+          .jwl-etape-line::before {
+            content: ""; position: absolute; left: 0; top: -100%; width: 100%; height: 200%;
+            background: linear-gradient(180deg, transparent 0%, #C9846F 45%, #C9A84C 55%, transparent 100%);
+            animation: jwl-line-flow 2.8s linear infinite;
+          }
+          @keyframes jwl-line-flow {
+            0% { transform: translateY(0%); }
+            100% { transform: translateY(50%); }
+          }
+
+          .jwl-step-badge-ring {
+            box-shadow: 0 0 0 0 rgba(201,168,76,.55);
+            animation: jwl-badge-ring-ping 2.4s ease-out infinite;
+          }
+          @keyframes jwl-badge-ring-ping {
+            0% { box-shadow: 0 0 0 0 rgba(201,168,76,.55); }
+            70% { box-shadow: 0 0 0 14px rgba(201,168,76,0); }
+            100% { box-shadow: 0 0 0 0 rgba(201,168,76,0); }
+          }
+          .jwl-step-badge { animation: jwl-step-badge-pulse 2.4s ease-in-out infinite; }
           @keyframes jwl-step-badge-pulse {
-            0%, 100% { transform: translateX(-50%) scale(1); }
-            50% { transform: translateX(-50%) scale(1.08); }
+            0%, 100% { transform: translateX(-50%) scale(1) rotate(0deg); }
+            50% { transform: translateX(-50%) scale(1.1) rotate(-8deg); }
           }
+
+          .jwl-step-icon { animation: jwl-icon-wiggle 3.4s ease-in-out infinite; }
+          @keyframes jwl-icon-wiggle {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(-9deg); }
+            75% { transform: rotate(9deg); }
+          }
+
+          .jwl-step-title { background: linear-gradient(90deg, #C9846F, #C9A84C, #C9846F); background-size: 200% auto; -webkit-background-clip: text; background-clip: text; color: transparent; animation: jwl-title-shimmer 3.5s linear infinite; }
+          @keyframes jwl-title-shimmer {
+            0% { background-position: 0% center; }
+            100% { background-position: 200% center; }
+          }
+
           @media (prefers-reduced-motion: reduce) {
-            .jwl-etape-img, .jwl-step-badge { animation: none !important; }
+            .jwl-etape-img, .jwl-step-badge, .jwl-step-badge-ring, .jwl-step-icon, .jwl-step-title, .jwl-etape-line::before {
+              animation: none !important;
+            }
           }
         `}</style>
         <div className="relative mt-10">
-          <div className="absolute left-1/2 top-0 hidden h-full w-px -translate-x-1/2 bg-black/20 md:block" />
+          <div className="jwl-etape-line hidden md:block" />
           <div className="grid gap-8 md:grid-cols-2 md:gap-x-16 md:gap-y-10">
             {/* Row 1: card 1 | image 1 */}
             <ScrollReveal delay={0} className="flex justify-center md:justify-end">
