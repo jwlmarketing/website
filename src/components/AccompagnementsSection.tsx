@@ -260,21 +260,21 @@ export default function AccompagnementsSection() {
         itemClassName="relative flex flex-col pt-14"
       >
         {ACCOMPAGNEMENTS.map((item, i) => (
-          <div key={i} className="relative flex flex-col pt-14">
+          <div key={i} className="relative flex flex-col items-center pt-14">
             <Image
               src={item.image}
               alt={typeof item.title === "string" ? item.title : "JWL Marketing"}
               width={220}
               height={220}
-              className="absolute -top-2 right-6 h-[140px] w-[140px] rotate-3 rounded-xl object-cover shadow-lg md:h-[160px] md:w-[160px]"
+              className="absolute -top-2 left-1/2 h-[140px] w-[140px] -translate-x-1/2 rounded-xl object-cover shadow-lg md:h-[160px] md:w-[160px]"
             />
             {"badge" in item && item.badge && (
-              <span className="absolute right-[150px] top-2 -rotate-6 rounded-full bg-gold px-4 py-2 text-xs font-bold text-white shadow-md md:right-[170px]">
+              <span className="absolute right-6 top-2 -rotate-6 rounded-full bg-gold px-4 py-2 text-xs font-bold text-white shadow-md">
                 {item.badge}
               </span>
             )}
-            <div className="flex min-h-[400px] flex-1 flex-col rounded-2xl border border-[#c9846f]/40 bg-[#141414] p-8 pt-10 text-left text-white">
-              <h3 className="pr-32 font-heading text-xl leading-snug md:pr-36">
+            <div className="flex min-h-[400px] w-full flex-1 flex-col rounded-2xl border border-[#c9846f]/40 bg-[#141414] p-8 pt-10 text-left text-white">
+              <h3 className="text-center font-heading text-xl leading-snug">
                 {item.title}
               </h3>
               <div className="mt-4 flex-1 whitespace-pre-line text-sm text-white/85">
