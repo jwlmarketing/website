@@ -69,7 +69,23 @@ const ACCOMPAGNEMENTS = [
   {
     image: "/images/jwl-clarifier-positionnement-entreprise.png",
     title: "Je te forme à la rédaction SEO pour ton blog",
-    text: "Rédige, publie plus vite, et sois plus visible. Apprends à optimiser ton blog grâce aux méthodes SEO, aux outils d'analyse et à l'IA (ChatGPT, Claude).",
+    text: (
+      <ul className="space-y-1">
+        {[
+          "Comprendre les critères de pertinence de Google",
+          "Créer des plans d'articles structurés et optimisés",
+          "Maîtriser les outils d'analyse SEO et de recherche de mots-clés",
+          "Utiliser l'IA pour gagner du temps sans perdre en qualité",
+          "Rédiger des contenus utiles pour tes lecteurs et les moteurs de recherche",
+          "Développer ta visibilité et ton autonomie sur le long terme",
+        ].map((item) => (
+          <li key={item} className="flex gap-2">
+            <span className="text-green-500">✓</span>
+            <span>{item}</span>
+          </li>
+        ))}
+      </ul>
+    ),
     star: "Forme-toi au SEO, au GEO et à la rédaction web pour attirer plus de visiteurs et gagner en autonomie.",
     cta: "Explore ma méthodologie",
     action: "formation" as const,
