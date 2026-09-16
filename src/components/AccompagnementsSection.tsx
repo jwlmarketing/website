@@ -273,7 +273,7 @@ export default function AccompagnementsSection() {
                 {item.badge}
               </span>
             )}
-            <div className="flex min-h-[480px] flex-1 flex-col rounded-2xl border border-[#c9846f]/40 bg-[#141414] p-8 pt-10 text-left text-white">
+            <div className="flex min-h-[400px] flex-1 flex-col rounded-2xl border border-[#c9846f]/40 bg-[#141414] p-8 pt-10 text-left text-white">
               <h3 className="pr-32 font-heading text-xl leading-snug md:pr-36">
                 {item.title}
               </h3>
@@ -285,7 +285,7 @@ export default function AccompagnementsSection() {
                 <button
                   type="button"
                   onClick={() => setModal(item.action)}
-                  className={`mt-6 inline-block self-start rounded-full px-6 py-3 text-sm font-medium text-white transition-colors ${
+                  className={`mt-6 inline-block self-center rounded-full px-6 py-3 text-sm font-medium text-white transition-colors ${
                     (item.ctaStyle as string) === "gold"
                       ? "bg-gold hover:bg-[#b8952f]"
                       : "bg-[#c9846f] hover:bg-[#b8735f]"
@@ -296,7 +296,7 @@ export default function AccompagnementsSection() {
               ) : (
                 <Link
                   href={"href" in item ? item.href : "#"}
-                  className="mt-6 inline-block self-start rounded-full bg-[#c9846f] px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-[#b8735f]"
+                  className="mt-6 inline-block self-center rounded-full bg-[#c9846f] px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-[#b8735f]"
                 >
                   {item.cta}
                 </Link>
