@@ -88,7 +88,7 @@ export default function Page() {
       <div className="flex w-full flex-col items-center justify-between gap-10 bg-white px-[5%] py-[60px] lg:flex-row">
         <div className="max-w-[680px] flex-1">
           <h1 className="font-heading text-4xl font-bold leading-[1.1] lg:text-[54px] lg:leading-[1.1] text-black">
-            <span className="italic text-[#c9846f]">JWL Business</span>
+            <span className="text-[#c9846f]">JWL Business</span>
             <span className="font-medium"> : Un site web</span>
             <br />
             <span className="font-medium">conçu pour ton entreprise</span>
