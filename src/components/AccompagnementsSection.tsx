@@ -19,9 +19,8 @@ const ACCOMPAGNEMENTS = [
 ✔ Balises techniques conformes (H1, titres, métadonnées)
 ✔ Vitesse et sécurité de base
 ✔ Formation à la prise en main
-À partir de 1 200 €
-Le référencement naturel avancé et la stratégie de visibilité Google sont proposés en option.`,
-    star: "Forme-toi au SEO, au GEO et à la rédaction web pour attirer plus de visiteurs et gagner en autonomie.",
+`,
+    star: "À partir de 1 200 €",
     cta: "Explore ma méthodologie",
     action: "formation" as const,
     ctaStyle: "terracotta" as const,
