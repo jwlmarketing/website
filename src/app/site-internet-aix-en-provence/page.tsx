@@ -182,6 +182,30 @@ export default function Page() {
         </ScrollReveal>
       </section>
 
+      {/* Les 5 étapes de ton site web */}
+      <section className="mx-auto max-w-[1200px] px-6 py-10 text-center">
+        <h2 className="font-heading text-3xl leading-tight md:text-[54px] text-black">
+          Les 5 <span className="italic text-[#c9846f]">étapes</span> de ton
+          site web
+        </h2>
+        <div className="mt-10 grid gap-6 md:grid-cols-5">
+          {[
+            "Découverte de ton projet",
+            "Conception de la maquette du site",
+            "Intégration de tes contenus et de tes visuels",
+            "Mise en ligne de ton site",
+            "Remise des accès et autonomie",
+          ].map((step, i) => (
+            <ScrollReveal key={step} delay={i * 120}>
+              <StepNumber n={i + 1} />
+              <div className="mt-4 rounded-2xl bg-[#141414] p-6 text-white">
+                <p className="text-[15px] font-semibold leading-[22px]">{step}</p>
+              </div>
+            </ScrollReveal>
+          ))}
+        </div>
+      </section>
+
       {/* En escalier : 3 etapes */}
       <section className="mx-auto max-w-[900px] px-6 py-10">
         <div className="space-y-6">
@@ -438,6 +462,73 @@ export default function Page() {
             </div>
           ))}
         </div>
+      </section>
+
+      {/* JWL Business est fait / pas fait pour toi */}
+      <section className="mx-auto max-w-[1200px] px-6 py-10 text-center">
+        <h2 className="font-heading text-3xl leading-tight md:text-[54px] text-black">
+          <span className="font-medium">JWL Business est</span>{" "}
+          <span className="italic text-[#c9846f]">fait pour toi</span>
+          <span className="font-medium"> si tu veux :</span>
+        </h2>
+        <ScrollReveal>
+          <div className="mx-auto mt-8 max-w-[700px] rounded-2xl bg-[#141414] p-8 text-left text-white">
+            <ul className="space-y-2 text-[15px] leading-[24px]">
+              {[
+                "Un site web à moins de 2000 €",
+                "Aucune dépendance à une plateforme fermée",
+                "Être propriétaire à 100 % de ton site",
+                "Pouvoir le faire évoluer",
+                "Pouvoir investir demain sur ta visibilité",
+                "Un site rapide, responsive et optimisé selon les bonnes pratiques du web",
+                "Aucun engagement, uniquement de la maintenance",
+                "Garder la main sur chaque détail plutôt que de déléguer",
+                "Obtenir un site qui inspire confiance à tous tes clients",
+              ].map((item) => (
+                <li key={item} className="flex gap-2">
+                  <span className="text-green-500">✓</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+            <a
+              href="https://calendly.com/jwlm"
+              target="_blank"
+              rel="noopener"
+              className="mt-6 inline-block rounded-full bg-[#c9846f] px-8 py-[15px] font-medium text-white transition-colors hover:bg-[#b8735f]"
+            >
+              Je réserve mon appel
+            </a>
+          </div>
+        </ScrollReveal>
+
+        <h2 className="mt-16 font-heading text-3xl leading-tight md:text-[54px] text-black">
+          Cette offre n&apos;est <span className="italic text-[#c9846f]">pas faite pour toi</span> si
+        </h2>
+        <ScrollReveal>
+          <div className="mx-auto mt-8 max-w-[700px] rounded-2xl bg-black p-8 text-left text-white">
+            <p className="text-xs font-semibold uppercase tracking-wide text-white/60">Tu veux</p>
+            <ul className="mt-4 space-y-2 text-[15px] leading-[24px]">
+              {[
+                "Un outil qui t'apporte de nouveaux clients",
+                "Investir sur 12 mois pour construire un vrai levier d'acquisition, pas juste un site vitrine",
+                "Déléguer entièrement, sans passer ton temps à coordonner plusieurs prestataires",
+                "Orchestrer par ta réactivité ton site, tu valides vite, tu ne laisses pas traîner un projet pendant des mois",
+              ].map((item) => (
+                <li key={item} className="flex gap-2">
+                  <span className="text-red-500">✕</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+            <a
+              href="/tarifs"
+              className="mt-6 inline-block rounded-full bg-[#c9846f] px-8 py-[15px] font-medium text-white transition-colors hover:bg-[#b8735f]"
+            >
+              Je crée mon site visible
+            </a>
+          </div>
+        </ScrollReveal>
       </section>
 
       {/* J'avance a ton rythme */}
