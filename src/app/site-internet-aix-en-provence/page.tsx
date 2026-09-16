@@ -89,9 +89,11 @@ export default function Page() {
         <div className="max-w-[680px] flex-1">
           <h1 className="font-heading text-4xl font-bold leading-[1.1] lg:text-[54px] lg:leading-[1.1] text-black">
             <span className="italic text-[#c9846f]">JWL Business</span>
-            <span className="font-medium"> : Un site web conçu pour ton</span>
+            <span className="font-medium"> : Un site web</span>
             <br />
-            <span className="font-medium">entreprise et inspirer confiance.</span>
+            <span className="font-medium">conçu pour ton entreprise</span>
+            <br />
+            <span className="font-medium">et inspirer confiance.</span>
           </h1>
           <ul className="mt-5 flex flex-wrap gap-x-6 gap-y-2 text-[15px] font-medium text-black">
             {["1 personne dédiée", "100 % sur mesure", "100 % propriétaire de ton site web"].map(
