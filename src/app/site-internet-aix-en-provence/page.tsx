@@ -585,11 +585,11 @@ export default function Page() {
           </div>
           <ScrollReveal delay={360}>
             <Image
-              src="/images/developpement-site-web.png"
+              src="/images/maintenance-mensuelle-seo.png"
               alt="Suivi et maintenance mensuelle — JWL Marketing"
-              width={462}
-              height={346}
-              className="mx-auto h-auto w-full max-w-[400px] rounded-2xl object-cover"
+              width={1024}
+              height={768}
+              className="mx-auto h-auto w-full max-w-[400px] object-contain"
             />
           </ScrollReveal>
         </div>
