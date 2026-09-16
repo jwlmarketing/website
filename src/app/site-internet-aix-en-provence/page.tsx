@@ -12,6 +12,19 @@ export const metadata: Metadata = {
     "Découvre la puissance d'un site web conçu par une experte commerciale. Structure saine, rédaction SEO-GEO et cité par l'IA. France entière.",
 };
 
+const CONFETTI_COLORS = ["#C9846F", "#C9A84C", "#141414", "#E8C9A0", "#B86A4F"];
+const CONFETTI = Array.from({ length: 14 }, (_, i) => {
+  const angle = (i / 14) * Math.PI * 2 + (i % 2 === 0 ? 0.15 : -0.15);
+  const dist = 70 + ((i * 37) % 50);
+  return {
+    dx: Math.round(Math.cos(angle) * dist),
+    dy: Math.round(-Math.sin(angle) * dist + 30),
+    rot: (i * 53) % 360,
+    color: CONFETTI_COLORS[i % CONFETTI_COLORS.length],
+    delay: (i % 7) * 0.02,
+  };
+});
+
 const STEP_ICONS = {
   binoculars: (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
@@ -369,28 +382,59 @@ export default function Page() {
           </div>
         </div>
 
-        {/* Step 5: centrée, pleine largeur */}
-        <ScrollReveal delay={450} className="mt-10 flex flex-col items-center">
-          <StepCard
-            n={5}
-            icon="key"
-            title="Remise des accès et autonomie"
-            text="Je te transmets tous tes accès, tu es libre et autonome."
-          />
-          <div className="jwl-parachute-wrap mt-6">
+        {/* Step 5: centrée, pleine largeur — atterrissage en grande pompe */}
+        <ScrollReveal delay={450} className="jwl-landing-zone relative mt-10 flex flex-col items-center">
+          <div className="jwl-step5-card">
+            <StepCard
+              n={5}
+              icon="key"
+              title="Remise des accès et autonomie"
+              text="Je te transmets tous tes accès, tu es libre et autonome."
+            />
+          </div>
+
+          <div className="jwl-parachute-wrap relative mt-6">
+            <div className="jwl-flash" />
+            <div className="jwl-ring jwl-ring-1" />
+            <div className="jwl-ring jwl-ring-2" />
+            <div className="jwl-ring jwl-ring-3" />
+            {CONFETTI.map((c, i) => (
+              <span
+                key={i}
+                className="jwl-confetti"
+                style={
+                  {
+                    "--dx": `${c.dx}px`,
+                    "--dy": `${c.dy}px`,
+                    "--rot": `${c.rot}deg`,
+                    "--bg": c.color,
+                    "--delay": `${c.delay}s`,
+                  } as React.CSSProperties
+                }
+              />
+            ))}
             <Image
               src="/images/jwl-etapes-5-parachute.png"
               alt="JWL Marketing"
               width={280}
               height={280}
-              className="jwl-parachute h-auto w-[220px] object-contain"
+              className="jwl-parachute relative h-auto w-[220px] object-contain"
             />
             <div className="jwl-parachute-shadow" />
           </div>
+          <p className="jwl-landing-text mt-4 font-heading text-lg italic text-[#c9a84c]">
+            Bienvenue chez toi. 🎉
+          </p>
         </ScrollReveal>
         <style>{`
+          .jwl-step5-card { animation: jwl-card-punch .5s ease-out both; animation-delay: 1.85s; }
+          @keyframes jwl-card-punch {
+            0% { transform: scale(1); }
+            40% { transform: scale(1.06) translateY(-4px); }
+            100% { transform: scale(1); }
+          }
+
           .jwl-parachute-wrap {
-            position: relative;
             animation: jwl-parachute-drop 1.4s cubic-bezier(.2,.8,.2,1) both;
             animation-delay: .5s;
           }
@@ -421,9 +465,69 @@ export default function Page() {
             0%, 100% { transform: scale(1); opacity: .6; }
             50% { transform: scale(.85); opacity: .4; }
           }
+
+          .jwl-flash {
+            position: absolute; left: 50%; bottom: 8px; width: 180px; height: 180px;
+            transform: translate(-50%, 50%) scale(0);
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255,240,210,.9) 0%, rgba(201,168,76,.35) 45%, transparent 75%);
+            animation: jwl-flash-pop .7s ease-out both;
+            animation-delay: 1.85s;
+            pointer-events: none;
+          }
+          @keyframes jwl-flash-pop {
+            0% { transform: translate(-50%, 50%) scale(0); opacity: 0; }
+            35% { opacity: 1; }
+            100% { transform: translate(-50%, 50%) scale(1.4); opacity: 0; }
+          }
+
+          .jwl-ring {
+            position: absolute; left: 50%; bottom: 6px; width: 40px; height: 14px;
+            transform: translate(-50%, 50%) scale(0);
+            border: 2px solid #C9846F;
+            border-radius: 50%;
+            opacity: 0;
+            animation: jwl-ring-expand 1s ease-out both;
+            pointer-events: none;
+          }
+          .jwl-ring-1 { animation-delay: 1.9s; }
+          .jwl-ring-2 { animation-delay: 1.98s; border-color: #C9A84C; }
+          .jwl-ring-3 { animation-delay: 2.06s; }
+          @keyframes jwl-ring-expand {
+            0% { transform: translate(-50%, 50%) scale(0.3); opacity: .9; }
+            100% { transform: translate(-50%, 50%) scale(6); opacity: 0; }
+          }
+
+          .jwl-confetti {
+            position: absolute; left: 50%; bottom: 10px; width: 8px; height: 8px;
+            background: var(--bg); border-radius: 2px;
+            transform: translate(-50%, 0) rotate(0deg);
+            opacity: 0;
+            animation: jwl-confetti-burst 1.1s cubic-bezier(.2,.7,.3,1) both;
+            animation-delay: calc(1.88s + var(--delay));
+            pointer-events: none;
+          }
+          @keyframes jwl-confetti-burst {
+            0% { transform: translate(-50%, 0) rotate(0deg); opacity: 1; }
+            80% { opacity: 1; }
+            100% {
+              transform: translate(calc(-50% + var(--dx)), var(--dy)) rotate(var(--rot));
+              opacity: 0;
+            }
+          }
+
+          .jwl-landing-text { opacity: 0; animation: jwl-landing-text-in .6s ease-out both; animation-delay: 2.2s; }
+          @keyframes jwl-landing-text-in {
+            0% { opacity: 0; transform: translateY(8px); }
+            100% { opacity: 1; transform: translateY(0); }
+          }
+
           @media (prefers-reduced-motion: reduce) {
-            .jwl-parachute-wrap, .jwl-parachute, .jwl-parachute-shadow {
+            .jwl-step5-card, .jwl-parachute-wrap, .jwl-parachute, .jwl-parachute-shadow,
+            .jwl-flash, .jwl-ring, .jwl-confetti, .jwl-landing-text {
               animation: none !important;
+              opacity: 1 !important;
+              transform: none !important;
             }
           }
         `}</style>
