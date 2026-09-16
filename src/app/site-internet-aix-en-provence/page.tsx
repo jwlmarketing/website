@@ -214,16 +214,32 @@ export default function Page() {
         </h2>
         <div className="mt-10 grid gap-6 md:grid-cols-5">
           {[
-            "Découverte de ton projet",
-            "Conception de la maquette du site",
-            "Intégration de tes contenus et de tes visuels",
-            "Mise en ligne de ton site",
-            "Remise des accès et autonomie",
+            {
+              title: "Découverte de ton projet",
+              text: "Nous échangeons ensemble par téléphone ou visioconférence.",
+            },
+            {
+              title: "Conception de la maquette du site",
+              text: "Je conçois une maquette basée sur les bonnes pratiques de vente et d'expérience utilisateur.",
+            },
+            {
+              title: "Intégration de tes contenus et de tes visuels",
+              text: "Tu m'envoies les éléments nécessaires à la création de ton site (photos, textes, logo, etc.).",
+            },
+            {
+              title: "Mise en ligne de ton site",
+              text: "Je configure l'hébergement et la mise en ligne.",
+            },
+            {
+              title: "Remise des accès et autonomie",
+              text: "Je te transmets tous tes accès, tu es libre et autonome.",
+            },
           ].map((step, i) => (
-            <ScrollReveal key={step} delay={i * 120}>
+            <ScrollReveal key={step.title} delay={i * 120}>
               <StepNumber n={i + 1} />
               <div className="mt-4 rounded-2xl bg-[#141414] p-6 text-white">
-                <p className="text-[15px] font-semibold leading-[22px]">{step}</p>
+                <p className="text-[15px] font-semibold leading-[22px]">{step.title}</p>
+                <p className="mt-2 text-sm leading-[21px] text-white/80">{step.text}</p>
               </div>
             </ScrollReveal>
           ))}
