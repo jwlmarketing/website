@@ -78,7 +78,22 @@ const ACCOMPAGNEMENTS = [
   {
     image: "/images/jwl-developpement-prospection-commerciale.png",
     title: "Je développe ta prospection commerciale",
-    text: "Représentation sur salons et événements.",
+    text: (
+      <ul className="space-y-1">
+        {[
+          "Développe une méthode de prospection adaptée à ton marché et à tes objectifs",
+          "Gagne du temps en ciblant les bons prospects avec les bons messages",
+          "Représentation sur salons et événements professionnels",
+          "Mise en place d'actions commerciales concrètes et mesurables",
+          "Optimisation de ton discours commercial et de ta proposition de valeur",
+        ].map((item) => (
+          <li key={item} className="flex gap-2">
+            <span className="text-green-500">✓</span>
+            <span>{item}</span>
+          </li>
+        ))}
+      </ul>
+    ),
     star: "Audit stratégique offert pour tout accompagnement annuel",
     cta: "Découvre mes prestations",
     href: "/developpement-commercial-aix-en-provence",
@@ -151,17 +166,12 @@ const PRICING_TIERS = [
 const FORMATION_REDACTION = {
   title: "JWL rédaction SEO pour ton blog",
   items: [
-    "Formation personnalisée selon ton activité et tes objectifs",
-    "Comprendre les bases de la rédaction SEO",
-    "Savoir ce que Google attend d'un blog professionnel",
-    "Différencier le rôle du site web et du blog",
-    "Créer une arborescence de blog cohérente",
-    "Choisir les bons sujets selon ton activité",
-    "Trouver les mots-clés pertinents",
-    "Planifier un calendrier éditorial efficace",
-    "Rédiger des contenus optimisés pour Google et pour tes clients",
-    "Découvrir les outils indispensables pour gagner du temps et avoir un résultat de compréhension chiffré",
-    "Réaliser des exercices pratiques et des mises en situation",
+    "Comprendre les critères de pertinence de Google",
+    "Créer des plans d'articles structurés et optimisés",
+    "Maîtriser les outils d'analyse SEO et de recherche de mots-clés",
+    "Utiliser l'IA pour gagner du temps sans perdre en qualité",
+    "Rédiger des contenus utiles pour vos lecteurs et les moteurs de recherche",
+    "Développer votre visibilité et votre autonomie sur le long terme",
   ],
   resultLead: "Résultat",
   results: [
@@ -251,8 +261,10 @@ export default function AccompagnementsSection() {
               <h3 className="pr-32 font-heading text-xl leading-snug md:pr-36">
                 {item.title}
               </h3>
-              <div className="mt-4 whitespace-pre-line text-sm text-white/85">{item.text}</div>
-              <p className="mt-4 text-sm text-gold">⭐ {item.star}</p>
+              <div className="mt-4 flex-1 whitespace-pre-line text-sm text-white/85">
+                {item.text}
+                <p className="mt-4 text-sm text-gold">⭐ {item.star}</p>
+              </div>
               {"action" in item && item.action ? (
                 <button
                   type="button"
