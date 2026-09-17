@@ -301,7 +301,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="flex h-[420px] w-full flex-1 items-end justify-center sm:h-[520px] lg:h-[660px] lg:justify-end">
+        <div className="flex h-[300px] w-full flex-1 items-start justify-center sm:h-[380px] lg:h-[460px] lg:justify-end">
           <div className="relative h-full w-auto">
             <video
               src="/videos/hero-jodie-etoile.mp4"
