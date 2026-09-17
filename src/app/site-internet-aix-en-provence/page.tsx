@@ -98,10 +98,12 @@ export default function Page() {
             <span className="text-[#c9846f]">JWL Business</span>
             <span className="font-medium"> : Un site web</span>
             <br />
-            <span className="font-medium">conçu pour ton entreprise</span>
+            <span className="font-medium">un site web qui inpire confiance</span>
             <br />
-            <span className="font-medium">et inspirer confiance.</span>
           </h1>
+ <p className="mt-6 text-base leading-[1.6] text-black">
+            Création ou refonte : je m&apos;occupe de tout. Résultat ? Un site sur mesure pensé pour votre image, vos clients et votre développement commercial.
+          </p>
           <ul className="mt-5 flex flex-wrap gap-x-6 gap-y-2 text-[15px] font-medium text-black">
             {["1 personne dédiée", "100 % sur mesure", "100 % propriétaire de ton site web"].map(
               (item) => (
@@ -114,11 +116,6 @@ export default function Page() {
               )
             )}
           </ul>
-          <p className="mt-6 text-base leading-[1.6] text-black">
-            Création ou refonte : je m&apos;occupe de tout. Résultat, tu
-            obtiens un site sur-mesure pensé pour ton image, tes clients, et
-            qui développe l&apos;achat.
-          </p>
           <div className="mt-6 flex flex-wrap items-center gap-4">
             <span className="rounded-full bg-gold px-6 py-[15px] font-semibold text-white">
               À partir de 1 200 €
