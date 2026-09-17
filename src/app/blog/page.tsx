@@ -52,7 +52,7 @@ export default async function BlogList({
                 <span className="block h-0.5 w-8 rounded-full bg-gold" />
                 <span className="block h-0.5 w-2 rounded-full bg-gold" />
               </div>
-              <p className="mb-7 font-semibold text-gold text-2xl">au service de votre croissance.</p>
+              <p className="mb-7 font-semibold text-gold">au service de votre croissance.</p>
               <Link
                 href="/"
                 className="inline-block rounded-lg bg-gold px-[22px] py-3 text-[13px] font-bold uppercase tracking-wide text-white hover:bg-[#b5903a]"
@@ -80,7 +80,7 @@ export default async function BlogList({
             <h2 className="mb-2 font-heading text-[2rem] font-bold text-black">
               Articles pour une communication qui a du sens.
             </h2>
-            <p className="mb-5 text-2xl text-[#6b6560]">{settings.description}</p>
+            <p className="mb-5 text-[0.95rem] text-[#6b6560]">{settings.description}</p>
 
             {categories.length > 0 && (
               <div className="flex flex-wrap justify-center gap-2">
@@ -108,7 +108,7 @@ export default async function BlogList({
           </div>
 
           {posts.length === 0 ? (
-            <p className="text-center text-2xl text-[#888]">
+            <p className="text-center text-sm text-[#888]">
               Aucun article publié pour le moment.
             </p>
           ) : (
@@ -155,7 +155,7 @@ export default async function BlogList({
                         </Link>
                       </h3>
                       {post.excerpt && (
-                        <p className="mb-4 text-2xl text-[#6b6560]">
+                        <p className="mb-4 text-sm text-[#6b6560]">
                           {post.excerpt.length > 110 ? post.excerpt.slice(0, 110) + "…" : post.excerpt}
                         </p>
                       )}

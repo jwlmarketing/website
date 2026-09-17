@@ -25,10 +25,10 @@ export default function GmbAuditQuiz() {
 
   return (
     <div className="mx-auto max-w-[700px] rounded-2xl border border-gold bg-white p-8">
-      <p className="text-center font-heading text-2xl font-semibold text-black">
+      <p className="text-center font-heading text-lg font-semibold text-black">
         Audite ta fiche Google en quelques clics
       </p>
-      <p className="mt-1 text-center text-2xl text-[#888]">
+      <p className="mt-1 text-center text-sm text-[#888]">
         Coche ce qui est vrai pour ta fiche.
       </p>
 
@@ -57,10 +57,10 @@ export default function GmbAuditQuiz() {
       </div>
 
       <div className="mt-8 text-center">
-        <p className="font-heading text-2xl font-bold text-gold">
+        <p className="font-heading text-4xl font-bold text-gold">
           {score} <span className="text-lg text-[#888]">/ 100</span>
         </p>
-        <p className="mt-1 text-2xl text-[#555]">
+        <p className="mt-1 text-sm text-[#555]">
           {score < 40
             ? "Ta fiche a un vrai potentiel inexploité."
             : score < 75

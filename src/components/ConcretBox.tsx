@@ -12,7 +12,7 @@ export default function ConcretBox({
       <span className="inline-block rounded-full bg-[#3C6E52] px-4 py-1.5 text-[11px] font-bold uppercase tracking-[2.5px] text-white">
         Concret
       </span>
-      <p className="mt-3 font-heading text-2xl font-semibold text-black">{title}</p>
+      <p className="mt-3 font-heading text-lg font-semibold text-black">{title}</p>
       <ul className="mt-3 space-y-2">
         {items.map((item) => (
           <li key={item} className="flex gap-2 text-sm leading-relaxed text-[#333]">
@@ -22,7 +22,7 @@ export default function ConcretBox({
         ))}
       </ul>
       {note && (
-        <p className="mt-4 text-2xl leading-relaxed text-[#6b6862]">
+        <p className="mt-4 text-xs leading-relaxed text-[#6b6862]">
           <strong>★ Hors prestation :</strong> {note}
         </p>
       )}

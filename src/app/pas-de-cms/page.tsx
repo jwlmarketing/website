@@ -107,13 +107,13 @@ export default async function PasDeCmsPage({
 
   return (
     <div className="flex min-h-[70vh] flex-col items-center justify-center bg-[#141414] px-6 py-24 text-center text-white">
-      <p className="font-heading text-2xl italic text-[#c9846f]">
+      <p className="font-heading text-lg italic text-[#c9846f]">
         {from ? `Tentative détectée sur ${from}` : "Tentative détectée"}
       </p>
       <h1 className="mt-4 max-w-[700px] font-heading text-3xl font-bold leading-[1.2] md:text-5xl">
         {joke.title}
       </h1>
-      <p className="mt-6 max-w-[560px] text-2xl leading-[26px] text-white/80">
+      <p className="mt-6 max-w-[560px] text-[17px] leading-[26px] text-white/80">
         {joke.text}
       </p>
       <Link

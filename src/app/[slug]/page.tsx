@@ -51,7 +51,7 @@ export default async function DynamicPage({
           <h1 className="font-heading text-3xl font-semibold text-black">
             {page.title}
           </h1>
-          <p className="mt-4 text-2xl text-[#888]">
+          <p className="mt-4 text-sm text-[#888]">
             Cette page n&apos;a pas encore de contenu.
           </p>
         </div>

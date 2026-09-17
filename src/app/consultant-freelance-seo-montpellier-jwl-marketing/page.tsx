@@ -200,7 +200,7 @@ export default function Page() {
       </section>
 
       <section className="mx-auto max-w-[900px] px-6 py-10 text-center">
-        <p className="text-2xl leading-[28px] text-[#1a1a1a]">
+        <p className="text-[17px] leading-[28px] text-[#1a1a1a]">
           Montpellier attire chaque année de nouvelles entreprises, de
           nouveaux talents et de nouveaux investisseurs. Cette dynamique crée
           aussi une concurrence plus forte. Pour être choisi, il ne suffit
@@ -219,7 +219,7 @@ export default function Page() {
             déjà leur présence en ligne.
           </p>
         </div>
-        <p className="mx-auto mt-6 max-w-[700px] text-2xl leading-[28px] text-[#1a1a1a]">
+        <p className="mx-auto mt-6 max-w-[700px] text-[17px] leading-[28px] text-[#1a1a1a]">
           Que ton activité soit implantée à l&apos;Écusson, à Port Marianne,
           près d&apos;Odysseum ou ailleurs dans la métropole montpelliéraine,
           une stratégie SEO adaptée permet d&apos;apparaître devant les
@@ -233,7 +233,7 @@ export default function Page() {
           <span className="italic text-[#c9846f]">La preuve</span>{" "}
           <span className="font-medium">par les chiffres.</span>
         </h2>
-        <p className="mx-auto mt-3 max-w-[700px] text-2xl text-[#555]">
+        <p className="mx-auto mt-3 max-w-[700px] text-[15px] text-[#555]">
           Des sites que j&apos;ai créés ou optimisés pour des indépendants et
           entreprises en Occitanie et partout en France. Des résultats
           mesurés, pas des promesses.
@@ -284,12 +284,12 @@ export default function Page() {
               <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-gold text-2xl font-bold text-white">
                 {step.n}
               </div>
-              <p className="mt-4 text-center text-2xl font-semibold uppercase tracking-wide text-gold">
+              <p className="mt-4 text-center text-[11px] font-semibold uppercase tracking-wide text-gold">
                 {step.tag}
               </p>
               <h3 className="mt-2 text-center font-heading text-lg">{step.title}</h3>
-              <p className="mt-3 flex-1 text-2xl leading-[21px] text-white/80">{step.text}</p>
-              <p className="mt-3 text-center text-2xl italic text-[#c9a84c]">{step.note}</p>
+              <p className="mt-3 flex-1 text-sm leading-[21px] text-white/80">{step.text}</p>
+              <p className="mt-3 text-center text-xs italic text-[#c9a84c]">{step.note}</p>
             </div>
           ))}
         </div>
@@ -313,8 +313,8 @@ export default function Page() {
           {FEATURES.map((f) => (
             <div key={f.title} className="rounded-2xl bg-[#141414] p-6 text-left text-white">
               <h3 className="font-heading text-lg">{f.title}</h3>
-              <p className="mt-3 text-2xl leading-[21px] text-white/80">{f.text}</p>
-              <p className="mt-3 text-2xl italic text-[#c9a84c]">{f.note}</p>
+              <p className="mt-3 text-sm leading-[21px] text-white/80">{f.text}</p>
+              <p className="mt-3 text-xs italic text-[#c9a84c]">{f.note}</p>
             </div>
           ))}
         </div>
@@ -322,14 +322,14 @@ export default function Page() {
 
       {/* Emplacement stratégique */}
       <section className="mx-auto max-w-[900px] px-6 py-10 text-center">
-        <p className="text-2xl leading-[28px] text-[#1a1a1a]">
+        <p className="text-[17px] leading-[28px] text-[#1a1a1a]">
           Être installé dans un emplacement stratégique à Montpellier ne
           garantit plus de trouver de nouveaux clients. Aujourd&apos;hui, la
           majorité des consommateurs se renseignent sur Google{" "}avant de
           faire appel à un professionnel, réserver une table ou acheter un
           produit.
         </p>
-        <p className="mt-4 text-2xl leading-[28px] text-[#1a1a1a]">
+        <p className="mt-4 text-[17px] leading-[28px] text-[#1a1a1a]">
           Que ton activité soit située dans l&apos;Écusson, à Port Marianne,
           près d&apos;Odysseum ou ailleurs dans la métropole montpelliéraine,
           tes futurs clients commencent souvent leur recherche en ligne. Si
@@ -364,10 +364,10 @@ export default function Page() {
         <h3 className="font-heading text-3xl leading-tight md:text-[54px] text-black">
           <span className="italic text-[#c9846f]">Lance-toi</span>
         </h3>
-        <p className="mt-3 font-heading text-2xl leading-tight md:text-[54px] text-black">
+        <p className="mt-3 font-heading text-3xl leading-tight md:text-[54px] text-black">
           Optimise dès maintenant avec Google{" "}ton site web Montpelliérain.
         </p>
-        <p className="mx-auto mt-6 max-w-[700px] text-2xl leading-[28px] text-[#1a1a1a]">
+        <p className="mx-auto mt-6 max-w-[700px] text-[17px] leading-[28px] text-[#1a1a1a]">
           Tes futurs clients recherchent déjà tes services sur Google. Ne
           laisse pas un concurrent de l&apos;Écusson, de Port Marianne ou
           d&apos;Odysseum récupérer les demandes à ta place.

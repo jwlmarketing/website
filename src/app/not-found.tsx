@@ -12,14 +12,14 @@ export default function NotFound() {
         height={187}
         className="mb-8 h-10 w-auto"
       />
-      <p className="text-2xl leading-none">🚀</p>
-      <p className="mt-2 font-heading text-2xl font-bold leading-none text-gold">
+      <p className="text-[110px] leading-none">🚀</p>
+      <p className="mt-2 font-heading text-[110px] font-bold leading-none text-gold">
         404
       </p>
       <h1 className="mt-4 font-heading text-3xl font-bold text-black">
         Cette page a décollé... sans nous prévenir.
       </h1>
-      <p className="mt-4 max-w-md text-[#555] text-2xl">
+      <p className="mt-4 max-w-md text-[#555]">
         Même Google{" "}ne l&apos;a jamais indexée. Soit elle n&apos;existe pas,
         soit elle a été déplacée — ou alors elle fait un tour de l&apos;espace
         et redescend bientôt. En attendant, pas de panique : on va te

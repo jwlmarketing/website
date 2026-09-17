@@ -136,7 +136,7 @@ function Card({ card }: { card: ProofCard }) {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src={card.gmb.src} alt={card.gmb.alt} />
             </div>
-            <p className="jwl-proof-gmb-caption-static text-2xl">{card.gmb.caption}</p>
+            <p className="jwl-proof-gmb-caption-static">{card.gmb.caption}</p>
           </>
         )}
         {card.metrics.length > 0 && (
@@ -149,7 +149,7 @@ function Card({ card }: { card: ProofCard }) {
           </div>
         )}
         <div className="jwl-proof-detail-section">
-          <p className="jwl-proof-detail-title text-2xl">Mission réalisée</p>
+          <p className="jwl-proof-detail-title">Mission réalisée</p>
           <ul className="jwl-proof-sub-list">
             {card.missions.map((m) => (
               <li key={m}>{m}</li>
@@ -157,7 +157,7 @@ function Card({ card }: { card: ProofCard }) {
           </ul>
         </div>
         <div className="jwl-proof-detail-section">
-          <p className="jwl-proof-detail-title text-2xl">Abonnement en place</p>
+          <p className="jwl-proof-detail-title">Abonnement en place</p>
           <ul className="jwl-proof-sub-list">
             {card.subscription.map((s) => (
               <li key={s}>{s}</li>
@@ -222,7 +222,7 @@ export default function ProofCards() {
           <Card card={card} key={card.name} />
         ))}
       </div>
-      <p className="jwl-proof-note text-2xl">Chiffres issus de Google Search Console et Google Business Profile, données juillet 2026.</p>
+      <p className="jwl-proof-note">Chiffres issus de Google Search Console et Google Business Profile, données juillet 2026.</p>
     </div>
   );
 }

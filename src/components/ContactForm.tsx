@@ -27,10 +27,10 @@ export default function ContactForm() {
   if (status === "ok") {
     return (
       <div className="rounded-lg border border-gold bg-white p-8 text-center">
-        <p className="font-heading text-2xl font-semibold text-black">
+        <p className="font-heading text-xl font-semibold text-black">
           Message envoyé !
         </p>
-        <p className="mt-2 text-2xl text-[#555]">
+        <p className="mt-2 text-sm text-[#555]">
           Merci, je te réponds dans les plus brefs délais.
         </p>
       </div>
@@ -83,7 +83,7 @@ export default function ContactForm() {
         {status === "sending" ? "Envoi en cours..." : "Envoyer"}
       </button>
       {status === "error" && (
-        <p className="text-2xl text-red-600">
+        <p className="text-sm text-red-600">
           Une erreur est survenue, réessaie dans un instant.
         </p>
       )}

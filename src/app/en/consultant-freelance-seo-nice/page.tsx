@@ -71,7 +71,7 @@ export default function Page() {
             <span className="rounded-full bg-[#faf3ea] px-5 py-[15px] text-sm font-semibold text-black">
               20+ projects since 2025
             </span>
-            <p className="min-h-[1.2em] font-heading text-2xl italic text-[#c9846f]">
+            <p className="min-h-[1.2em] font-heading text-4xl italic text-[#c9846f]">
               <TypewriterText text="Hi, I'm Jodie." speed={113} />
             </p>
           </div>
@@ -119,7 +119,7 @@ export default function Page() {
       <section className="mx-auto max-w-[900px] px-6 py-10">
         <div className="grid items-center gap-8 md:grid-cols-[1fr_260px]">
           <div className="rounded-2xl bg-[#141414] p-8 text-white">
-            <p className="text-2xl leading-[25.5px]">
+            <p className="text-[15px] leading-[25.5px]">
               <span className="font-bold">My mission: </span>
               helping businesses in Nice attract more clients through{" "}
 Google. Between Vieux-Nice, the Promenade des Anglais, the
@@ -127,7 +127,7 @@ Google. Between Vieux-Nice, the Promenade des Anglais, the
               attracts thousands of consumers, tourists and professionals
               every year.
             </p>
-            <p className="mt-4 text-2xl leading-[25.5px]">
+            <p className="mt-4 text-[15px] leading-[25.5px]">
               But they still need to find your business. Thanks to my
               expertise in business development and SEO, I help you build
               lasting visibility on Google{" "}and turn that visibility into
@@ -143,7 +143,7 @@ Google. My goal is to help you get chosen.
               height={1000}
               className="mx-auto h-auto w-full max-w-[260px] rounded-2xl object-cover"
             />
-            <p className="mt-2 text-2xl text-[#000]">
+            <p className="mt-2 text-xs text-[#000]">
               Jodie-LAPAILLERIE / SEO summit
             </p>
           </div>
@@ -246,12 +246,12 @@ Google. My goal is to help you get chosen.
               Before working on the SEO of a business in Nice, I analyse
               the searches made by real users.
             </p>
-            <p className="mt-4 text-2xl">
+            <p className="mt-4">
               What words do they use? What questions do they have? Are
               they looking for information, a quote or an immediate
               solution?
             </p>
-            <p className="mt-4 text-2xl">
+            <p className="mt-4">
               This data lets me build an SEO strategy based on the reality
               of the market rather than assumptions. Because a site that's
               visible for the wrong searches will never bring in the right
@@ -297,7 +297,7 @@ Google{" "}before buying, even for a simple night out at a
               restaurant. The keyword "restaurant Nice" alone gets 50,000
               Google searches a month, and "hôtel Nice" just as many.
             </p>
-            <p className="mt-4 text-2xl">
+            <p className="mt-4">
               This tourist activity mainly benefits those who are visible
               online. In summer, competition is fierce between Nice's
               shops, restaurants and hotels. The rest of the year, it's
@@ -325,7 +325,7 @@ Google{" "}before buying, even for a simple night out at a
 Google{" "}listing plays an essential role in that first
                 impression.
               </p>
-              <p className="mt-4 text-2xl">
+              <p className="mt-4">
                 I optimise every important element: categories, services,
                 photos, reviews, practical information and data
                 consistency. The goal isn't just to appear in local
@@ -373,14 +373,14 @@ Google{" "}listing plays an essential role in that first
                 nice-looking site. I design a tool built to reassure,
                 inform and make it easy to get in touch.
               </p>
-              <p className="mt-4 text-2xl">
+              <p className="mt-4">
                 Every project is tailored to your activity, your goals and
                 the expectations of your future clients. Depending on the
                 needs, development can be done in HTML or with modern
                 technologies like Next.js to ensure speed, security and a
                 smooth browsing experience.
               </p>
-              <p className="mt-4 text-2xl">
+              <p className="mt-4">
                 My goal is to create a site that can represent your
                 business today while supporting its growth in the years to
                 come.
@@ -415,7 +415,7 @@ Google{" "}listing plays an essential role in that first
               person whenever possible, to discover your working
               environment and the reality of your market.
             </p>
-            <p className="mt-4 text-2xl">
+            <p className="mt-4">
               In Nice as elsewhere, the best strategies often start with a
               simple conversation. And when distance doesn't allow it, a
               video call works perfectly well.
@@ -442,7 +442,7 @@ Google{" "}listing plays an essential role in that first
               professionals, service businesses and tourism operators,
               competition is strong.
             </p>
-            <p className="mt-4 text-2xl">
+            <p className="mt-4">
               And before walking into a business, many consumers now start
               with a Google{" "}search. Being visible at the right time can
               make all the difference between a won opportunity and a
@@ -466,7 +466,7 @@ Google{" "}listing plays an essential role in that first
               capable of attracting the right people at the right time,
               based on searches genuinely made by your future clients.
             </p>
-            <p className="mt-4 text-2xl">
+            <p className="mt-4">
               As an independent consultant, I remain your single point of
               contact from start to finish. Simple exchanges, fast
               decisions and personalised support.
@@ -502,7 +502,7 @@ Google{" "}listing plays an essential role in that first
         <h3 className="font-heading text-3xl leading-tight md:text-[54px] text-black">
           <span className="italic text-[#c9846f]">Still not convinced?</span>
         </h3>
-        <p className="mt-3 font-heading text-2xl leading-tight md:text-[54px] text-black">
+        <p className="mt-3 font-heading text-3xl leading-tight md:text-[54px] text-black">
           Make your digital presence a Nice strength
         </p>
         <div className="mx-auto mt-8 max-w-[900px] text-left text-[17px] leading-[28px] text-[#1a1a1a]">
@@ -513,7 +513,7 @@ Google{" "}listing plays an essential role in that first
             the Port, businesses need to stand out in a particularly
             competitive market.
           </p>
-          <p className="mt-3 text-2xl">
+          <p className="mt-3">
             Restaurants, local shops, real estate agencies, self-employed
             professionals, craftsmen or service businesses: most client
             journeys now start with a Google{" "}search. Being visible isn't

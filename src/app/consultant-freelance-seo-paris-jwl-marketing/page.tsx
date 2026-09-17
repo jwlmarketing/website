@@ -68,7 +68,7 @@ export default function Page() {
             <span className="rounded-full bg-[#faf3ea] px-5 py-[15px] text-sm font-semibold text-black">
               + de 20 projets depuis 2025
             </span>
-            <p className="min-h-[1.2em] font-heading text-2xl italic text-[#c9846f]">
+            <p className="min-h-[1.2em] font-heading text-4xl italic text-[#c9846f]">
               <TypewriterText text="Bonjour, je m'appelle Jodie." speed={113} />
             </p>
           </div>
@@ -116,26 +116,26 @@ export default function Page() {
       <section className="mx-auto max-w-[900px] px-6 py-10">
         <div className="grid items-center gap-8 md:grid-cols-[1fr_260px]">
           <div className="rounded-2xl bg-[#141414] p-8 text-white">
-            <p className="text-2xl leading-[25.5px]">
+            <p className="text-[15px] leading-[25.5px]">
               <span className="font-bold">Ma mission : </span>
               Paris concentre des milliers d&apos;entreprises, de commerces,
               de professions libérales et de sociétés de services. Dans un
               environnement aussi concurrentiel, être compétent ne suffit
               plus toujours à être choisi.
             </p>
-            <p className="mt-4 text-2xl leading-[25.5px]">
+            <p className="mt-4 text-[15px] leading-[25.5px]">
               J&apos;aide les entrepreneurs, indépendants et dirigeants à
               construire une présence digitale capable d&apos;attirer des
               prospects qualifiés et de soutenir leur développement
               commercial sur le long terme.
             </p>
-            <p className="mt-4 text-2xl leading-[25.5px]">
+            <p className="mt-4 text-[15px] leading-[25.5px]">
               Forte de plus de 10 ans d&apos;expérience dans la vente et le
               développement commercial, dont 4 années au sein du groupe
               américain IAC, j&apos;associe aujourd&apos;hui stratégie
               commerciale, référencement naturel et visibilité digitale.
             </p>
-            <p className="mt-4 text-2xl leading-[25.5px]">
+            <p className="mt-4 text-[15px] leading-[25.5px]">
               Site internet, SEO local, contenus, Google Business Profile,
               stratégie d&apos;acquisition ou optimisation de l&apos;expérience
               client : chaque action est pensée pour répondre à un objectif
@@ -152,7 +152,7 @@ export default function Page() {
               height={1000}
               className="mx-auto h-auto w-full max-w-[260px] rounded-2xl object-cover"
             />
-            <p className="mt-2 text-2xl text-[#000]">
+            <p className="mt-2 text-xs text-[#000]">
               Jodie-LAPAILLERIE / SEO summit
             </p>
           </div>
@@ -252,7 +252,7 @@ export default function Page() {
               Aujourd&apos;hui, dans la plupart des secteurs, tes futurs
               clients ont l&apos;embarras du choix.
             </p>
-            <p className="mt-4 text-2xl">
+            <p className="mt-4">
               Avant de prendre une décision, ils effectuent souvent plusieurs
               recherches sur Google{" "}afin de comparer les entreprises et les
               solutions disponibles. Dans ce contexte, mon rôle consiste à
@@ -295,7 +295,7 @@ export default function Page() {
               clients, les questions qu&apos;ils se posent et les solutions
               qu&apos;ils cherchent réellement.
             </p>
-            <p className="mt-4 text-2xl">
+            <p className="mt-4">
               Car certaines recherches traduisent une simple curiosité. À
               l&apos;inverse, d&apos;autres révèlent une intention
               d&apos;achat ou de prise de contact. C&apos;est précisément
@@ -303,7 +303,7 @@ export default function Page() {
               plus pertinentes pour ton activité afin de construire une
               stratégie SEO capable d&apos;attirer des prospects qualifiés.
             </p>
-            <p className="mt-4 text-2xl">
+            <p className="mt-4">
               À Paris, attirer du trafic est relativement simple. En
               revanche, attirer les bons clients est une autre histoire. Au
               fond, le but n&apos;est pas d&apos;être visible partout. Le
@@ -332,7 +332,7 @@ export default function Page() {
                 Profile représente souvent le premier contact avec ton futur
                 client.
               </p>
-              <p className="mt-4 text-2xl">
+              <p className="mt-4">
                 C&apos;est pourquoi j&apos;optimise les éléments qui
                 influencent réellement la décision : catégories, services,
                 photos, avis clients, informations pratiques et cohérence de
@@ -383,14 +383,14 @@ export default function Page() {
               outil pensé pour rassurer, informer et faciliter la prise de
               contact.
             </p>
-            <p className="mt-4 text-2xl">
+            <p className="mt-4">
               Chaque projet est ainsi adapté à ton activité, à tes objectifs
               et aux attentes de tes futurs clients. Selon les besoins, le
               développement peut être réalisé en HTML ou avec des
               technologies modernes comme Next.js afin de garantir rapidité,
               sécurité et confort de navigation.
             </p>
-            <p className="mt-4 text-2xl">
+            <p className="mt-4">
               Au-delà de l&apos;aspect technique, l&apos;objectif reste le
               même : créer un site capable de représenter ton entreprise
               aujourd&apos;hui tout en accompagnant son développement dans
@@ -420,7 +420,7 @@ export default function Page() {
               fais, à qui tu t&apos;adresses et pourquoi un prospect devrait
               te choisir plutôt qu&apos;une autre entreprise.
             </p>
-            <p className="mt-4 text-2xl">
+            <p className="mt-4">
               C&apos;est pourquoi j&apos;analyse ton marché, tes concurrents
               et les recherches effectuées par tes futurs clients afin de
               construire une stratégie capable d&apos;attirer des prospects
@@ -455,7 +455,7 @@ export default function Page() {
               devis, de nombreux prospects effectuent plusieurs recherches
               sur Google{" "}afin de comparer les solutions disponibles.
             </p>
-            <p className="mt-4 text-2xl">
+            <p className="mt-4">
               Dans ce contexte, être visible au bon moment devient un
               véritable avantage concurrentiel. Car, si ton entreprise ne
               répond pas à cette demande, ce sont souvent les acteurs du
@@ -482,7 +482,7 @@ export default function Page() {
               construite sur mesure, en fonction de tes objectifs et de ton
               environnement concurrentiel.
             </p>
-            <p className="mt-4 text-2xl">
+            <p className="mt-4">
               En tant que consultante indépendante, je reste ton
               interlocutrice unique du début à la fin du projet.
             </p>
@@ -517,7 +517,7 @@ export default function Page() {
         <h3 className="font-heading text-3xl leading-tight md:text-[54px] text-black">
           <span className="italic text-[#c9846f]">Toujours pas convaincu?</span>
         </h3>
-        <p className="mt-3 font-heading text-2xl leading-tight md:text-[54px] text-black">
+        <p className="mt-3 font-heading text-3xl leading-tight md:text-[54px] text-black">
           Fait de ta présence digital une force Parisienne
         </p>
         <div className="mx-auto mt-8 max-w-[900px] text-left text-[17px] leading-[28px] text-[#1a1a1a]">
@@ -527,21 +527,21 @@ export default function Page() {
             concurrentiel où la visibilité en ligne devient un véritable
             levier de développement.
           </p>
-          <p className="mt-3 text-2xl">
+          <p className="mt-3">
             Entre les commerçants, les professions libérales, les startups,
             les cabinets de conseil, les entreprises de services, les acteurs
             de l&apos;immobilier ou encore les sociétés implantées dans les
             principaux quartiers d&apos;affaires, chaque acteur doit trouver
             sa place face à une concurrence importante sur Google.
           </p>
-          <p className="mt-3 text-2xl">
+          <p className="mt-3">
             Les habitudes des consommateurs ont également évolué. Avant de
             prendre rendez-vous, de demander un devis ou de contacter une
             entreprise, les Parisiens prennent le temps de comparer plusieurs
             solutions, de consulter les avis clients et de rechercher des
             informations sur l&apos;activité.
           </p>
-          <p className="mt-3 text-2xl">
+          <p className="mt-3">
             Aujourd&apos;hui, un futur client peut comparer plusieurs
             entreprises parisiennes en quelques minutes seulement. Dans ce
             contexte, être visible au bon moment peut faire toute la

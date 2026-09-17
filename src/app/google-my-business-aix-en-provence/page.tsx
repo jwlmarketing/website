@@ -64,7 +64,7 @@ export default function Page() {
             {" "}?
           </span>
         </h2>
-        <p className="mx-auto mt-6 max-w-[900px] text-left text-2xl leading-[28px] text-[#1a1a1a]">
+        <p className="mx-auto mt-6 max-w-[900px] text-left text-[17px] leading-[28px] text-[#1a1a1a]">
           Une fiche Google{" "}optimisée ne suffit pas toujours pour atteindre la
           première place. Google{" "}prend aussi en compte l&apos;ancienneté de
           ton entreprise, la régularité de ton activité, tes avis, tes photos
@@ -96,7 +96,7 @@ export default function Page() {
               consultent ta fiche Google. Ils regardent tes avis, tes photos,
               tes réalisations et les informations que tu partages.
             </p>
-            <p className="mt-4 text-2xl">
+            <p className="mt-4">
               Une fiche Google{" "}complète et active rassure. Elle montre que
               ton entreprise est sérieuse, accessible et digne de confiance.
               Dans de nombreux cas, c&apos;est cette première impression qui
@@ -134,7 +134,7 @@ export default function Page() {
               comprendre ton activité et renforce la confiance des personnes
               qui te découvrent.
             </p>
-            <p className="mt-4 text-2xl">
+            <p className="mt-4">
               Chez JWL Marketing, j&apos;optimise chaque élément de ta fiche :
               catégories, services, description, photos, publications, avis
               et informations stratégiques. L&apos;objectif est simple :
@@ -190,7 +190,7 @@ export default function Page() {
             height={608}
             className="mx-auto h-auto w-full max-w-[320px] rounded-2xl border border-[#eee] object-cover"
           />
-          <p className="text-2xl leading-[28px] text-[#1a1a1a]">
+          <p className="text-[17px] leading-[28px] text-[#1a1a1a]">
             Toi, tu sais exactement ce que tu fais. Google, lui, se base
             uniquement sur les informations qu&apos;il trouve. Si ta fiche
             Google Business Profile est incomplète, imprécise ou peu active,
@@ -216,7 +216,7 @@ export default function Page() {
           </span>
         </h2>
         <div className="mt-10 grid items-center gap-8 md:grid-cols-2">
-          <p className="text-2xl leading-[28px] text-[#1a1a1a]">
+          <p className="text-[17px] leading-[28px] text-[#1a1a1a]">
             Pour Google, exister ne suffit pas. Il faut le prouver. Les avis
             montrent que de vrais clients font appel à toi. Les réponses
             prouvent que ton entreprise est active. Les dates, les
@@ -262,7 +262,7 @@ export default function Page() {
           <br />
           <span className="font-medium">pour prouver à Google que tu es actif</span>
         </h2>
-        <p className="mx-auto mt-6 max-w-[900px] text-left text-2xl leading-[28px] text-[#1a1a1a]">
+        <p className="mx-auto mt-6 max-w-[900px] text-left text-[17px] leading-[28px] text-[#1a1a1a]">
           Google{" "}cherche à répondre aux questions que se posent tes futurs
           clients. Plus ton site apporte des réponses utiles sur ton métier,
           tes services ou les problématiques de tes prospects, plus tu
@@ -297,7 +297,7 @@ export default function Page() {
             <GoogleColors />{" "}et l&apos;IA peuvent te proposer
           </span>
         </h2>
-        <p className="mx-auto mt-6 max-w-[900px] text-left text-2xl leading-[28px] text-[#1a1a1a]">
+        <p className="mx-auto mt-6 max-w-[900px] text-left text-[17px] leading-[28px] text-[#1a1a1a]">
           Aujourd&apos;hui, les intelligences artificielles comme ChatGPT,
           Gemini ou Perplexity s&apos;appuient sur les informations
           qu&apos;elles trouvent en ligne pour comprendre et recommander une
@@ -335,14 +335,14 @@ export default function Page() {
         </h2>
         <div className="mt-10 grid gap-6 md:grid-cols-2">
           <div className="rounded-2xl border border-[#eee] p-8 text-left">
-            <p className="text-2xl font-bold text-black">75</p>
-            <p className="mt-1 text-2xl text-[#1a1a1a]">
+            <p className="text-4xl font-bold text-black">75</p>
+            <p className="mt-1 text-sm text-[#1a1a1a]">
               Appels effectués depuis la fiche de votre établissement
             </p>
           </div>
           <div className="rounded-2xl border border-[#eee] p-8 text-left">
-            <p className="text-2xl font-bold text-black">138</p>
-            <p className="mt-1 text-2xl text-[#1a1a1a]">
+            <p className="text-4xl font-bold text-black">138</p>
+            <p className="mt-1 text-sm text-[#1a1a1a]">
               Clics vers le site Web effectués depuis la fiche de votre
               établissement
             </p>

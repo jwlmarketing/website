@@ -23,7 +23,7 @@ export default function Page() {
         className="h-9 w-auto"
       />
       <h1 className="font-heading text-3xl text-black">Page under construction</h1>
-      <p className="max-w-md text-black/70 text-2xl">
+      <p className="max-w-md text-black/70">
         This page is currently being prepared. Come back soon to discover our
         Google Business Profile offer.
       </p>

@@ -198,7 +198,7 @@ export default function Page() {
       </section>
 
       <section className="mx-auto max-w-[900px] px-6 py-10 text-center">
-        <p className="text-2xl leading-[28px] text-[#1a1a1a]">
+        <p className="text-[17px] leading-[28px] text-[#1a1a1a]">
           Montpellier attracts new businesses, new talent and new investors
           every year. This dynamic also creates stronger competition. To
           get chosen, a nice website isn't enough anymore. Your future
@@ -214,7 +214,7 @@ export default function Page() {
             their online presence.
           </p>
         </div>
-        <p className="mx-auto mt-6 max-w-[700px] text-2xl leading-[28px] text-[#1a1a1a]">
+        <p className="mx-auto mt-6 max-w-[700px] text-[17px] leading-[28px] text-[#1a1a1a]">
           Whether your business is based in l'Écusson, Port Marianne, near
           Odysseum or elsewhere in the Montpellier metro area, a well
           adapted SEO strategy lets you show up in front of the people
@@ -228,7 +228,7 @@ export default function Page() {
           <span className="italic text-[#c9846f]">The proof</span>{" "}
           <span className="font-medium">is in the numbers.</span>
         </h2>
-        <p className="mx-auto mt-3 max-w-[700px] text-2xl text-[#555]">
+        <p className="mx-auto mt-3 max-w-[700px] text-[15px] text-[#555]">
           Sites I've built or optimised for independent professionals and
           businesses across Occitanie and throughout France. Measured
           results, not promises.
@@ -277,12 +277,12 @@ export default function Page() {
               <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-gold text-2xl font-bold text-white">
                 {step.n}
               </div>
-              <p className="mt-4 text-center text-2xl font-semibold uppercase tracking-wide text-gold">
+              <p className="mt-4 text-center text-[11px] font-semibold uppercase tracking-wide text-gold">
                 {step.tag}
               </p>
               <h3 className="mt-2 text-center font-heading text-lg">{step.title}</h3>
-              <p className="mt-3 flex-1 text-2xl leading-[21px] text-white/80">{step.text}</p>
-              <p className="mt-3 text-center text-2xl italic text-[#c9a84c]">{step.note}</p>
+              <p className="mt-3 flex-1 text-sm leading-[21px] text-white/80">{step.text}</p>
+              <p className="mt-3 text-center text-xs italic text-[#c9a84c]">{step.note}</p>
             </div>
           ))}
         </div>
@@ -306,8 +306,8 @@ export default function Page() {
           {FEATURES.map((f) => (
             <div key={f.title} className="rounded-2xl bg-[#141414] p-6 text-left text-white">
               <h3 className="font-heading text-lg">{f.title}</h3>
-              <p className="mt-3 text-2xl leading-[21px] text-white/80">{f.text}</p>
-              <p className="mt-3 text-2xl italic text-[#c9a84c]">{f.note}</p>
+              <p className="mt-3 text-sm leading-[21px] text-white/80">{f.text}</p>
+              <p className="mt-3 text-xs italic text-[#c9a84c]">{f.note}</p>
             </div>
           ))}
         </div>
@@ -315,13 +315,13 @@ export default function Page() {
 
       {/* Strategic location */}
       <section className="mx-auto max-w-[900px] px-6 py-10 text-center">
-        <p className="text-2xl leading-[28px] text-[#1a1a1a]">
+        <p className="text-[17px] leading-[28px] text-[#1a1a1a]">
           Having a strategic location in Montpellier no longer guarantees
           you'll find new clients. Today, most consumers research on{" "}
 Google{" "}before contacting a professional, booking a table or
           buying a product.
         </p>
-        <p className="mt-4 text-2xl leading-[28px] text-[#1a1a1a]">
+        <p className="mt-4 text-[17px] leading-[28px] text-[#1a1a1a]">
           Whether your business is located in l'Écusson, Port Marianne,
           near Odysseum or elsewhere in the Montpellier metro area, your
           future clients often start their search online. If your business
@@ -357,10 +357,10 @@ Google{" "}before contacting a professional, booking a table or
         <h3 className="font-heading text-3xl leading-tight md:text-[54px] text-black">
           <span className="italic text-[#c9846f]">Get started</span>
         </h3>
-        <p className="mt-3 font-heading text-2xl leading-tight md:text-[54px] text-black">
+        <p className="mt-3 font-heading text-3xl leading-tight md:text-[54px] text-black">
           Optimise your Montpellier website with Google, starting now.
         </p>
-        <p className="mx-auto mt-6 max-w-[700px] text-2xl leading-[28px] text-[#1a1a1a]">
+        <p className="mx-auto mt-6 max-w-[700px] text-[17px] leading-[28px] text-[#1a1a1a]">
           Your future clients are already searching for your services on{" "}
 Google. Don't let a competitor from l'Écusson, Port Marianne or
           Odysseum grab those requests instead of you.

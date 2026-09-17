@@ -70,7 +70,7 @@ export default function QuiSuisJe() {
             <span className="rounded-full bg-[#faf3ea] px-5 py-[15px] text-sm font-semibold text-black">
               + de 20 projets depuis 2025
             </span>
-            <p className="min-h-[1.2em] font-heading text-2xl italic text-[#c9846f]">
+            <p className="min-h-[1.2em] font-heading text-4xl italic text-[#c9846f]">
               <TypewriterText text="Bonjour, je m'appelle Jodie." speed={113} />
             </p>
           </div>
@@ -118,13 +118,13 @@ export default function QuiSuisJe() {
       <section className="mx-auto max-w-[900px] px-6 py-10">
         <div className="grid items-center gap-8 md:grid-cols-[1fr_260px]">
           <div className="rounded-2xl bg-[#141414] p-8 text-white">
-            <p className="text-2xl leading-[25.5px]">
+            <p className="text-[15px] leading-[25.5px]">
               <span className="font-bold">Ma mission : </span>
               Créer ou piloter des sites internet pensés pour générer du
               trafic, convertir les visiteurs en clients et accompagner le
               développement d&apos;une entreprise sur le long terme.
             </p>
-            <p className="mt-4 text-2xl leading-[25.5px]">
+            <p className="mt-4 text-[15px] leading-[25.5px]">
               Forte de plus de 10 ans d&apos;expérience dans le développement
               commercial, dont 4 ans auprès du groupe américain IAC, je
               comprends les enjeux d&apos;une entreprise : attirer des clients,
@@ -148,7 +148,7 @@ export default function QuiSuisJe() {
               height={1000}
               className="mx-auto h-auto w-full max-w-[260px] rounded-2xl object-cover"
             />
-            <p className="mt-2 text-2xl text-[#000]">
+            <p className="mt-2 text-xs text-[#000]">
               Jodie-LAPAILLERIE / SEO summit paris 2026
             </p>
           </div>
@@ -269,7 +269,7 @@ export default function QuiSuisJe() {
                 devis ne suivent pas.
               </li>
             </ul>
-            <p className="mt-4 text-2xl">
+            <p className="mt-4">
               Le problème n&apos;est pas toujours votre visibilité. Souvent,
               c&apos;est l&apos;absence de stratégie. Pour moi, le
               référencement naturel n&apos;a qu&apos;un seul objectif :
@@ -328,7 +328,7 @@ export default function QuiSuisJe() {
               unique : transformer ton site internet en un véritable
               apporteur d&apos;affaires.
             </p>
-            <p className="mt-4 text-2xl">
+            <p className="mt-4">
               À Aix-en-Provence, le marché ne fait pas de cadeaux et le
               référencement local demande une analyse chirurgicale. En
               combinant les stratégies de vente américaines les plus
@@ -336,7 +336,7 @@ export default function QuiSuisJe() {
               intentions de recherche et les requêtes les plus rentables pour
               ton activité.
             </p>
-            <p className="mt-4 text-2xl">
+            <p className="mt-4">
               J&apos;optimise l&apos;intégralité de ton écosystème digital :
               ton site web, ton contenu sémantique et ta Fiche Google{" "}Business Profile pour déclencher un maximum d&apos;appels et de
               demandes de devis. J&apos;accompagne les indépendants, artisans
@@ -466,7 +466,7 @@ export default function QuiSuisJe() {
               height={2000}
               className="mx-auto h-auto w-full max-w-[420px] rounded-2xl object-cover"
             />
-            <p className="mt-2 text-2xl text-black">
+            <p className="mt-2 text-xs text-black">
               Jodie-LAPAILLERIE / IA 2026
             </p>
           </div>
@@ -566,12 +566,12 @@ Google{" "}est le premier point de contact.
               dans la structuration de leur entreprise et la définition de
               leur positionnement.
             </p>
-            <p className="mt-3 text-2xl">
+            <p className="mt-3">
               Nous intervenons sur des sujets complémentaires avec un objectif
               commun : aider les entrepreneurs à construire des bases solides
               avant de développer leur visibilité et leur acquisition client.
             </p>
-            <p className="mt-3 text-2xl">
+            <p className="mt-3">
               Parce qu&apos;une stratégie performante commence toujours par
               des fondations solides.
             </p>

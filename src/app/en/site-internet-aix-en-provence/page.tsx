@@ -78,7 +78,7 @@ export default function Page() {
         <div className="mt-10">
           <ProofCards />
         </div>
-        <p className="mt-8 text-2xl text-black">
+        <p className="mt-8 text-lg text-black">
           So your prospects can find you easily, even if they don't know
           you yet.
         </p>
@@ -103,10 +103,10 @@ export default function Page() {
               className="h-auto w-full rounded-t-2xl object-cover"
             />
             <div className="rounded-b-2xl bg-[#141414] p-4 text-left text-white">
-              <p className="text-2xl font-semibold leading-[22px]">
+              <p className="text-[15px] font-semibold leading-[22px]">
                 I understand how your clients search for you
               </p>
-              <p className="mt-2 text-2xl leading-[22px] text-white/80">
+              <p className="mt-2 text-[14px] leading-[22px] text-white/80">
                 Study of your business, your competitors and the keywords
                 used on Google.
               </p>
@@ -121,10 +121,10 @@ export default function Page() {
               className="h-auto w-full rounded-t-2xl object-cover"
             />
             <div className="rounded-b-2xl bg-[#141414] p-4 text-left text-white">
-              <p className="text-2xl font-semibold leading-[22px]">
+              <p className="text-[15px] font-semibold leading-[22px]">
                 I build a website designed to be found
               </p>
-              <p className="mt-2 text-2xl leading-[22px] text-white/80">
+              <p className="mt-2 text-[14px] leading-[22px] text-white/80">
                 Structure, content, service pages and SEO optimisation
                 built in from the start.
               </p>
@@ -139,11 +139,11 @@ export default function Page() {
               className="h-auto w-full rounded-t-2xl object-cover"
             />
             <div className="rounded-b-2xl bg-[#141414] p-4 text-left text-white">
-              <p className="text-2xl font-semibold leading-[22px]">
+              <p className="text-[15px] font-semibold leading-[22px]">
                 I analyse the data and improve the Google Search Console
                 connection
               </p>
-              <p className="mt-2 text-2xl leading-[22px] text-white/80">
+              <p className="mt-2 text-[14px] leading-[22px] text-white/80">
                 To understand visitor behaviour and identify opportunities
                 for improvement.
               </p>
@@ -173,7 +173,7 @@ export default function Page() {
           />
         </ScrollReveal>
         <ScrollReveal delay={150}>
-          <p className="mx-auto mt-6 max-w-[640px] text-center text-2xl leading-[28px] text-[#1a1a1a]">
+          <p className="mx-auto mt-6 max-w-[640px] text-center text-[17px] leading-[28px] text-[#1a1a1a]">
             Your site doesn't need to be complete on day one — the data
             then shows us what needs strengthening and what content to
             create next. That way your site grows gradually alongside your
@@ -190,7 +190,7 @@ export default function Page() {
               <span className="italic text-[#c9a84c]">I build or migrate</span>{" "}
               your website
             </h3>
-            <p className="mt-3 text-2xl leading-[25.5px] text-white/90">
+            <p className="mt-3 text-[15px] leading-[25.5px] text-white/90">
               Your site belongs to you. You remain the owner of your
               domain name and your site. I handle the migration. Already
               have a Wix, Local.fr or WordPress site? I can take it over
@@ -207,7 +207,7 @@ export default function Page() {
                 high-performance, secure infrastructure
               </span>
             </h3>
-            <p className="mt-3 text-2xl leading-[25.5px] text-white/90">
+            <p className="mt-3 text-[15px] leading-[25.5px] text-white/90">
               Maintenance and security handled for you. I take care of
               updates, security and making sure your site runs smoothly.
             </p>
@@ -222,7 +222,7 @@ export default function Page() {
                 legal certificate
               </span>
             </h3>
-            <p className="mt-3 text-2xl leading-[25.5px] text-white/90">
+            <p className="mt-3 text-[15px] leading-[25.5px] text-white/90">
               The code, content and access details are handed over at the
               end of the project through your personal space. If you
               choose not to continue with another provider after your
@@ -266,10 +266,10 @@ export default function Page() {
           <ScrollReveal delay={0}>
             <StepNumber n={1} />
             <div className="mt-4 rounded-2xl bg-[#141414] p-6 text-left text-white">
-              <p className="text-2xl font-semibold leading-[22px]">
+              <p className="text-[15px] font-semibold leading-[22px]">
                 I review your Google Search Console tracking
               </p>
-              <p className="mt-2 text-2xl leading-[21px] text-white/80">
+              <p className="mt-2 text-sm leading-[21px] text-white/80">
                 In plain terms: what people type into Google{" "}and how your
                 site shows up.
               </p>
@@ -278,10 +278,10 @@ export default function Page() {
           <ScrollReveal delay={150}>
             <StepNumber n={2} />
             <div className="mt-4 rounded-2xl bg-[#141414] p-6 text-left text-white">
-              <p className="text-2xl font-semibold leading-[22px]">
+              <p className="text-[15px] font-semibold leading-[22px]">
                 I analyse what people are typing into Google
               </p>
-              <p className="mt-2 text-2xl leading-[21px] text-white/80">
+              <p className="mt-2 text-sm leading-[21px] text-white/80">
                 How your site is performing and what can be improved.
               </p>
             </div>
@@ -289,16 +289,16 @@ export default function Page() {
           <ScrollReveal delay={300}>
             <StepNumber n={3} />
             <div className="mt-4 rounded-2xl bg-[#141414] p-6 text-left text-white">
-              <p className="text-2xl font-semibold leading-[22px]">
+              <p className="text-[15px] font-semibold leading-[22px]">
                 I adjust your strategy accordingly
               </p>
-              <p className="mt-2 text-2xl leading-[21px] text-white/80">
+              <p className="mt-2 text-sm leading-[21px] text-white/80">
                 I evolve your pages and your content.
               </p>
             </div>
           </ScrollReveal>
         </div>
-        <p className="mx-auto mt-8 max-w-[800px] text-2xl leading-[28px] text-[#1a1a1a]">
+        <p className="mx-auto mt-8 max-w-[800px] text-[17px] leading-[28px] text-[#1a1a1a]">
           Depending on your package, I can either guide you through the
           adjustments to make or make them for you. And if you write your
           own blog articles after SEO copywriting training, I'll point you
@@ -317,7 +317,7 @@ export default function Page() {
         </h2>
         <div className="mt-10 grid gap-6 md:grid-cols-2">
           <ScrollReveal delay={0} className="text-left">
-            <p className="text-2xl leading-[26px] text-[#1a1a1a]">
+            <p className="text-[17px] leading-[26px] text-[#1a1a1a]">
               I can see when <span className="font-bold">you have no strategy</span>
             </p>
             <Lightbox
@@ -327,17 +327,17 @@ export default function Page() {
               height={352}
               className="mt-3 h-auto w-full max-w-[380px] rounded-2xl border border-[#eee] object-cover"
             />
-            <p className="mt-3 text-2xl text-[#1a1a1a]">
+            <p className="mt-3 text-sm text-[#1a1a1a]">
               When you have no strategy.
             </p>
-            <p className="mt-2 text-2xl italic text-[#7c5fd6]">
+            <p className="mt-2 text-sm italic text-[#7c5fd6]">
               Google{" "}doesn't surface you to users
               <br />
               The clicks you do get match your clients
             </p>
           </ScrollReveal>
           <ScrollReveal delay={150} className="text-left">
-            <p className="text-2xl leading-[26px] text-[#1a1a1a]">
+            <p className="text-[17px] leading-[26px] text-[#1a1a1a]">
               When <span className="font-bold">you have an SEO strategy</span> but
               no sales strategy on your website
             </p>
@@ -348,11 +348,11 @@ export default function Page() {
               height={356}
               className="mt-3 h-auto w-full max-w-[380px] rounded-2xl border border-[#eee] object-cover"
             />
-            <p className="mt-3 text-2xl text-[#1a1a1a]">
+            <p className="mt-3 text-sm text-[#1a1a1a]">
               When you have an SEO strategy but no sales strategy on your
               website.
             </p>
-            <p className="mt-2 text-2xl italic text-[#7c5fd6]">
+            <p className="mt-2 text-sm italic text-[#7c5fd6]">
               Your curve rises because Google{" "}understands you
               <br />
               You still get few clicks, you're not converting
@@ -360,7 +360,7 @@ export default function Page() {
           </ScrollReveal>
         </div>
         <ScrollReveal delay={300} className="mx-auto mt-8 max-w-[380px] text-left">
-          <p className="text-2xl leading-[26px] text-[#1a1a1a]">
+          <p className="text-[17px] leading-[26px] text-[#1a1a1a]">
             Or when you've invested in your strategy.
           </p>
           <Lightbox
@@ -370,14 +370,14 @@ export default function Page() {
             height={314}
             className="mt-3 h-auto w-full rounded-2xl border border-[#eee] object-cover"
           />
-          <p className="mt-2 text-2xl italic text-[#7c5fd6]">
+          <p className="mt-2 text-sm italic text-[#7c5fd6]">
             Google{" "}surfaces you for the right keywords
             <br />
             You get clicks from real users
           </p>
         </ScrollReveal>
         <div className="mx-auto mt-10 max-w-[800px] space-y-4 text-left text-[17px] leading-[28px] text-[#1a1a1a]">
-          <p className="font-semibold text-black text-2xl">
+          <p className="font-semibold text-black">
             The goal is to have a website that works for you while you do
             your job, prospect, or take a nap.
           </p>
@@ -395,7 +395,7 @@ export default function Page() {
         <h2 className="font-heading text-3xl leading-tight md:text-[54px]">
           <span className="italic text-[#c9846f]">What budget should you plan for?</span>
         </h2>
-        <p className="mt-2 text-2xl text-[#555]">To build or optimise your site?</p>
+        <p className="mt-2 text-[15px] text-[#555]">To build or optimise your site?</p>
 
         <div className="mx-auto mt-10 flex flex-col gap-8 md:flex-row">
           <div className="relative flex flex-1 flex-col rounded-md bg-[#141414] p-8 pt-14 text-left text-white">
@@ -407,8 +407,8 @@ export default function Page() {
             <h3 className="font-heading text-xl text-center underline decoration-gold underline-offset-4">
               JWL Business
             </h3>
-            <p className="mt-2 italic text-white/90 text-2xl">« I build a custom website. »</p>
-            <p className="mt-4 text-2xl uppercase tracking-wide text-gold">Included:</p>
+            <p className="mt-2 italic text-white/90">« I build a custom website. »</p>
+            <p className="mt-4 text-sm uppercase tracking-wide text-gold">Included:</p>
             <ul className="mt-2 space-y-1.5 text-sm text-white/85">
               {[
                 "Strategic audit",
@@ -424,7 +424,7 @@ export default function Page() {
                 </li>
               ))}
             </ul>
-            <p className="mt-4 text-2xl uppercase tracking-wide text-gold">
+            <p className="mt-4 text-sm uppercase tracking-wide text-gold">
               What makes the difference:
             </p>
             <ul className="mt-2 space-y-1.5 text-sm text-[#c9846f]">
@@ -452,8 +452,8 @@ export default function Page() {
             <h3 className="font-heading text-xl text-center underline decoration-gold underline-offset-4">
               JWL Visible
             </h3>
-            <p className="mt-2 italic text-white/90 text-2xl">« I'm growing, I want clients. »</p>
-            <p className="mt-4 text-2xl uppercase tracking-wide text-gold">Included:</p>
+            <p className="mt-2 italic text-white/90">« I'm growing, I want clients. »</p>
+            <p className="mt-4 text-sm uppercase tracking-wide text-gold">Included:</p>
             <ul className="mt-2 space-y-1.5 text-sm text-white/85">
               {[
                 "Custom website + SEO strategy",
@@ -500,28 +500,28 @@ export default function Page() {
         </svg>
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           <ScrollReveal delay={0} className="rounded-2xl bg-[#141414] p-6 text-left text-white">
-            <p className="text-2xl font-semibold leading-[22px]">
+            <p className="text-[15px] font-semibold leading-[22px]">
               I offer you a starting point that fits your budget
             </p>
-            <p className="mt-2 text-2xl leading-[21px] text-white/80">
+            <p className="mt-2 text-sm leading-[21px] text-white/80">
               We start with the essentials, then grow it based on the
               results.
             </p>
           </ScrollReveal>
           <ScrollReveal delay={150} className="rounded-2xl bg-[#141414] p-6 text-left text-white">
-            <p className="text-2xl font-semibold leading-[22px]">
+            <p className="text-[15px] font-semibold leading-[22px]">
               I suggest training you in SEO copywriting
             </p>
-            <p className="mt-2 text-2xl leading-[21px] text-white/80">
+            <p className="mt-2 text-sm leading-[21px] text-white/80">
               Who better than you to talk about your trade? You write your
               blog posts. I keep an eye on what gets published.
             </p>
           </ScrollReveal>
           <ScrollReveal delay={300} className="rounded-2xl bg-[#141414] p-6 text-left text-white">
-            <p className="text-2xl font-semibold leading-[22px]">
+            <p className="text-[15px] font-semibold leading-[22px]">
               If you'd rather delegate, I'll handle it
             </p>
-            <p className="mt-2 text-2xl leading-[21px] text-white/80">
+            <p className="mt-2 text-sm leading-[21px] text-white/80">
               I take action for you, from writing to publishing.
             </p>
           </ScrollReveal>
@@ -561,7 +561,7 @@ export default function Page() {
             />
           </ScrollReveal>
         </div>
-        <p className="mt-3 text-2xl text-[#888]">
+        <p className="mt-3 text-xs text-[#888]">
           Screenshot from a client's Google Search Console account.
           Sensitive queries and data have been hidden.
         </p>
@@ -576,7 +576,7 @@ export default function Page() {
           />
         </h3>
         <ScrollReveal>
-          <p className="mx-auto mt-6 max-w-[700px] text-2xl leading-[28px] text-[#1a1a1a]">
+          <p className="mx-auto mt-6 max-w-[700px] text-[17px] leading-[28px] text-[#1a1a1a]">
             You remain the owner of your site, your domain name and your
             data.
             <br />
