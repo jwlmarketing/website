@@ -96,7 +96,7 @@ const ACCOMPAGNEMENTS = [
   },
   {
     image: "/images/jwl-developpement-prospection-commerciale.png",
-    packName: "JWL Prospect",
+    packName: "JWL Prospecte",
     title: "Je développe ta prospection commerciale",
     text: (
       <ul className="space-y-1">
