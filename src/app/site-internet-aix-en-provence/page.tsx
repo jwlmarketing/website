@@ -92,8 +92,8 @@ export default function Page() {
       <SiteHeader locale="fr" href="/en/site-internet-aix-en-provence" />
 
       {/* Hero */}
-      <div className="flex w-full flex-col items-center justify-between gap-10 bg-white px-[6%] py-[90px] lg:flex-row lg:px-[9%]">
-        <div className="max-w-[720px] flex-1">
+      <div className="flex w-full flex-col items-center justify-between gap-10 overflow-hidden bg-white px-[6%] pt-[90px] lg:flex-row lg:items-end lg:px-[9%] lg:pb-0">
+        <div className="max-w-[720px] flex-1 pb-[90px]">
           <h1 className="font-heading text-5xl font-extrabold leading-[1.02] lg:text-[72px] lg:leading-[1.02] text-black">
             <span className="text-[#c9846f]">JWL Business</span>
             <span className="font-bold"> : un site web qui inpire confiance</span>
@@ -128,16 +128,17 @@ export default function Page() {
             </a>
           </div>
         </div>
-        <div className="jwl-hero-glow-wrap relative w-full flex-1 max-w-[880px] min-w-[280px] lg:-my-16">
-          <div className="jwl-hero-glow-seam" />
-          <Image
-            src="/images/hero-creation-site-duo.png"
-            alt="Jodie Lapaillerie — Création de site web JWL Marketing"
-            width={1024}
-            height={768}
-            priority
-            className="relative z-10 h-auto w-full object-contain"
-          />
+        <div className="flex h-[420px] w-full flex-1 items-end justify-center sm:h-[520px] lg:h-[640px] lg:justify-end">
+          <div className="jwl-hero-glow-wrap relative h-full w-auto">
+            <div className="jwl-hero-glow-seam" />
+            <Image
+              src="/images/hero-creation-site-duo.png"
+              alt="Jodie Lapaillerie — Création de site web JWL Marketing"
+              width={1024}
+              height={768}
+              priority
+              className="relative z-10 h-full w-auto max-w-none object-contain"
+            />
           <style>{`
             .jwl-hero-glow-seam {
               position: absolute;
@@ -162,6 +163,7 @@ export default function Page() {
               .jwl-hero-glow-seam { animation: none; opacity: .9; }
             }
           `}</style>
+          </div>
         </div>
       </div>
 
