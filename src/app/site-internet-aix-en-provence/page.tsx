@@ -92,23 +92,23 @@ export default function Page() {
       <SiteHeader locale="fr" href="/en/site-internet-aix-en-provence" />
 
       {/* Hero */}
-      <div className="flex w-full flex-col items-center justify-between gap-10 bg-white px-[5%] py-[60px] lg:flex-row">
-        <div className="max-w-[680px] flex-1">
-          <h1 className="font-heading text-4xl font-bold leading-[1.1] lg:text-[54px] lg:leading-[1.1] text-black">
+      <div className="flex w-full flex-col items-center justify-between gap-10 bg-white px-[5%] py-[90px] lg:flex-row">
+        <div className="max-w-[720px] flex-1">
+          <h1 className="font-heading text-5xl font-extrabold leading-[1.02] lg:text-[72px] lg:leading-[1.02] text-black">
             <span className="text-[#c9846f]">JWL Business</span>
-            <span className="font-medium"> : Un site web</span>
+            <span className="font-bold"> : Un site web</span>
             <br />
-            <span className="font-medium">un site web qui inpire confiance</span>
+            <span className="font-bold">un site web qui inpire confiance</span>
             <br />
           </h1>
- <p className="mt-6 text-base leading-[1.6] text-black">
+          <p className="mt-7 text-lg leading-[1.6] text-black">
             Création ou refonte : je m&apos;occupe de tout. Résultat ? Un site sur mesure pensé pour votre image, vos clients et votre développement commercial.
           </p>
-          <ul className="mt-5 flex flex-wrap gap-x-6 gap-y-2 text-[15px] font-medium text-black">
+          <ul className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-base font-semibold text-black">
             {["1 personne dédiée", "100 % sur mesure", "100 % propriétaire de ton site web"].map(
               (item) => (
                 <li key={item} className="flex items-center gap-2">
-                  <span className="flex h-5 w-5 items-center justify-center rounded-full bg-gold text-xs text-white">
+                  <span className="flex h-6 w-6 items-center justify-center rounded-full bg-gold text-sm text-white">
                     ✓
                   </span>
                   {item}
@@ -116,15 +116,15 @@ export default function Page() {
               )
             )}
           </ul>
-          <div className="mt-6 flex flex-wrap items-center gap-4">
-            <span className="rounded-full bg-gold px-6 py-[15px] font-semibold text-white">
+          <div className="mt-8 flex flex-wrap items-center gap-4">
+            <span className="rounded-full bg-gold px-8 py-[19px] text-lg font-bold text-white">
               À partir de 1 200 €
             </span>
             <a
               href="https://calendly.com/jwlm"
               target="_blank"
               rel="noopener"
-              className="inline-block rounded-full bg-[#c9846f] px-8 py-[15px] font-semibold text-white transition-colors hover:bg-[#b8735f]"
+              className="inline-block rounded-full bg-[#c9846f] px-10 py-[19px] text-lg font-bold text-white transition-colors hover:bg-[#b8735f]"
             >
               Créer mon site
             </a>
