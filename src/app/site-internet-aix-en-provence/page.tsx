@@ -92,8 +92,8 @@ export default function Page() {
       <SiteHeader locale="fr" href="/en/site-internet-aix-en-provence" />
 
       {/* Hero */}
-      <div className="flex w-full flex-col items-center justify-between gap-10 overflow-hidden bg-white px-[6%] pt-[90px] lg:flex-row lg:items-end lg:px-[9%] lg:pb-0">
-        <div className="max-w-[720px] flex-1 pb-[90px]">
+      <div className="flex w-full flex-col items-center justify-between gap-10 overflow-hidden bg-white px-[6%] pt-[60px] lg:flex-row lg:items-end lg:px-[9%] lg:pb-0">
+        <div className="max-w-[720px] flex-1 self-start pb-[90px] lg:pt-[30px]">
           <h1 className="font-heading text-5xl font-extrabold leading-[1.02] lg:text-[72px] lg:leading-[1.02] text-black">
             <span className="text-[#c9846f]">JWL Business</span>
             <span className="font-bold"> : un site web qui inpire confiance</span>
@@ -128,7 +128,7 @@ export default function Page() {
             </a>
           </div>
         </div>
-        <div className="flex h-[480px] w-full flex-1 items-end justify-center sm:h-[600px] lg:h-[760px] lg:justify-end">
+        <div className="flex h-[420px] w-full flex-1 items-end justify-center sm:h-[520px] lg:h-[660px] lg:justify-end">
           <div className="jwl-hero-glow-wrap relative h-full w-auto">
             <div className="jwl-hero-glow-seam" />
             <Image
