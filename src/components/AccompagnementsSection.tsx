@@ -32,7 +32,7 @@ const ACCOMPAGNEMENTS = [
     ),
     star: "À partir de 1 200 €",
     cta: "Explore ma méthodologie",
-    action: "formation" as const,
+    href: "/site-internet-aix-en-provence",
     ctaStyle: "terracotta" as const,
   },
   {
