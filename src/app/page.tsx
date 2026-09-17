@@ -85,7 +85,7 @@ export default function Home() {
             </span>
             <span> où tes futurs clients te cherchent. </span>
           </h1>
-          <p className="mt-2.5 text-lg leading-[1.5] text-[#333]">
+          <p className="mt-2.5 text-2xl leading-[1.5] text-[#333]">
             Mesure le nombre de clics, d’appels de demandes de devis ou de contacts et de trafic issus de ta présence en ligne
           </p>
 
