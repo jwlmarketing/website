@@ -130,7 +130,7 @@ export default function Page() {
             </a>
           </div>
         </div>
-        <div className="jwl-hero-glow-wrap relative w-full flex-1 max-w-[620px] min-w-[280px]">
+        <div className="jwl-hero-glow-wrap relative w-full flex-1 max-w-[880px] min-w-[280px] lg:-my-16">
           <div className="jwl-hero-glow-seam" />
           <Image
             src="/images/hero-creation-site-duo.png"
