@@ -120,17 +120,19 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="relative flex min-w-0 flex-[1.4_1_0%] items-start justify-end">
-          <video
-            src="/videos/hero-jodie-etoile.mp4"
-            autoPlay
-            loop
-            muted
-            playsInline
-            aria-label="Jodie Lapaillerie - JWL Marketing"
-            className="h-auto max-h-[70vh] w-full max-w-full object-contain"
-          />
-          <HeroBadge />
+        <div className="flex h-[420px] w-full flex-1 items-end justify-center sm:h-[520px] lg:h-[660px] lg:justify-end">
+          <div className="relative h-full w-auto">
+            <video
+              src="/videos/hero-jodie-etoile.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
+              aria-label="Jodie Lapaillerie - JWL Marketing"
+              className="relative z-10 h-full w-auto max-w-none object-contain"
+            />
+            <HeroBadge />
+          </div>
         </div>
       </div>
 
