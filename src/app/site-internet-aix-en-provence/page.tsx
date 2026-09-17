@@ -8,9 +8,9 @@ import ContactForm from "@/components/ContactForm";
 import ScrollFillLine from "@/components/ScrollFillLine";
 
 export const metadata: Metadata = {
-  title: "Création de site web | JWL Marketing",
+  title: "Création de site web Business | JWL Marketing",
   description:
-    "Découvre la puissance d'un site web conçu par une experte commerciale. Structure saine, rédaction SEO-GEO et cité par l'IA. France entière.",
+    "Création de site web à Aix-en-Provence et toute la France. Pour être visible, rassurer vos prospects et soutenir votre développement commercial.",
 };
 
 const CONFETTI_COLORS = ["#C9846F", "#C9A84C", "#141414", "#E8C9A0", "#B86A4F"];
@@ -95,8 +95,8 @@ export default function Page() {
       <div className="flex w-full flex-col items-center justify-between gap-10 overflow-hidden bg-white px-[6%] pt-[60px] lg:flex-row lg:items-end lg:gap-24 lg:px-[9%] lg:pb-0">
         <div className="max-w-[720px] flex-1 self-start pb-[90px] lg:pt-[30px]">
           <h1 className="font-heading text-5xl font-extrabold leading-[1.02] lg:text-[72px] lg:leading-[1.02] text-black">
-            <span className="text-[#c9846f]">JWL Business</span>
-            <span className="font-bold"> : un site web qui inpire confiance</span>
+            <span className="text-[#c9846f]">JWL Business :</span>
+            <span className="font-bold"> un site web qui inpire confiance</span>
             <br />
           </h1>
           <p className="mt-7 text-2xl leading-[1.5] text-black">
