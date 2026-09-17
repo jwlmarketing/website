@@ -279,7 +279,7 @@ export default function AccompagnementsSection() {
             )}
             <div className="relative flex min-h-[400px] w-full flex-1 flex-col rounded-2xl border border-[#c9846f]/40 bg-[#141414] p-8 pt-10 text-left text-white">
               {"packName" in item && item.packName && (
-                <span className="absolute left-4 top-4 rounded-full bg-gold px-3 py-1 text-xs font-bold uppercase tracking-wide text-white">
+                <span className="absolute left-1/2 top-4 -translate-x-1/2 rounded-full bg-gold px-3 py-1 text-xs font-bold uppercase tracking-wide text-white">
                   {item.packName}
                 </span>
               )}
