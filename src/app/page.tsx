@@ -85,7 +85,7 @@ export default function Home() {
               attirer des prospects !
             </span>
           </h1>
-          <p className="mt-2.5 text-sm leading-relaxed text-[#333]">
+          <p className="mt-2.5 text-2xl leading-[1.5] text-[#333]">
             Sais-tu combien de prospects découvrent ton entreprise grâce à{" "}
             Google
             {" "}? Peux-tu mesurer le nombre de clics, d&apos;appels ou de

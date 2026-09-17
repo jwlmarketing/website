@@ -265,7 +265,7 @@ export default function Home() {
             </span>
           </h1>
 
-          <p className="mt-4 text-lg leading-[1.6] text-[#333]">
+          <p className="mt-4 text-2xl leading-[1.5] text-[#333]">
             Google{" "}has to find you. AI has to understand you. Your future
             clients have to choose you.
           </p>

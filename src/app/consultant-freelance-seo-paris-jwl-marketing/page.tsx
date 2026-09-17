@@ -53,7 +53,7 @@ export default function Page() {
             <br />
             <span className="italic text-[#c9846f]">Paris</span>
           </h1>
-          <p className="mt-6 text-base leading-[1.6] text-black">
+          <p className="mt-6 text-2xl leading-[1.5] text-black">
             Une stratégie freelance, portée par la qualité d&apos;une agence à
             taille humaine. Votre réussite commence sous les lumières de
             Paris.

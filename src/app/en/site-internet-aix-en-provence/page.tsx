@@ -39,7 +39,7 @@ export default function Page() {
               while you're working
             </span>
           </h1>
-          <p className="mt-6 text-base leading-[1.6] text-black">
+          <p className="mt-6 text-2xl leading-[1.5] text-black">
             Sole traders, micro-businesses, SMEs and business owners: grow
             your Google{" "}visibility and attract qualified prospects all
             year round.

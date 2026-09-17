@@ -108,7 +108,7 @@ export default function Page() {
       {/* Hero */}
       <div className="flex w-full flex-col items-start justify-between gap-10 bg-white px-[6%] pt-[90px] pb-[60px] lg:flex-row lg:px-[9%]">
         <div className="max-w-[600px] flex-1">
-          <p className="text-base leading-[1.6] text-black">
+          <p className="text-2xl leading-[1.5] text-black">
             Une stratégie freelance, portée par la qualité d&apos;une agence à
             taille humaine. À Montpellier, la place de la Comédie est une
             scène incontournable. Sur Google, c&apos;est à ton entreprise de

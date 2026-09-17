@@ -99,10 +99,10 @@ export default function Page() {
             <span className="font-bold"> : un site web qui inpire confiance</span>
             <br />
           </h1>
-          <p className="mt-7 text-lg leading-[1.6] text-black">
+          <p className="mt-7 text-2xl leading-[1.5] text-black">
             Création ou refonte : je m&apos;occupe de tout. Résultat ? Un site sur mesure pensé pour votre image, vos clients et votre développement commercial.
           </p>
-          <ul className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-base font-semibold text-black">
+          <ul className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-lg font-semibold text-black">
             {["1 personne dédiée", "100 % sur mesure", "100 % propriétaire de ton site web"].map(
               (item) => (
                 <li key={item} className="flex items-center gap-2">

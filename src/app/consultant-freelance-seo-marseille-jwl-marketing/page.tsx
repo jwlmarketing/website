@@ -52,7 +52,7 @@ export default function Page() {
             <br />
             <span className="italic text-[#c9846f]">Marseille</span>
           </h1>
-          <p className="mt-6 text-base leading-[1.6] text-black">
+          <p className="mt-6 text-2xl leading-[1.5] text-black">
             Une stratégie freelance, portée par la qualité d&apos;une agence à
             taille humaine. Le Vélodrome fait vibrer les supporters. Moi, je
             fais travailler ta visibilité.

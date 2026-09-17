@@ -52,7 +52,7 @@ export default function Page() {
             <br />
             <span className="italic text-[#c9846f]">Marseille</span>
           </h1>
-          <p className="mt-6 text-base leading-[1.6] text-black">
+          <p className="mt-6 text-2xl leading-[1.5] text-black">
             A freelance strategy, backed by the quality of a boutique
             agency. The Vélodrome makes supporters roar. Me, I make your
             visibility work.
