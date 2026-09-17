@@ -12,6 +12,7 @@ const ACCOMPAGNEMENTS = [
 
   {
     image: "/images/jwl-formation-redaction-seo-blog.png",
+    packName: "JWL Business",
     title: "Création de site web professionnel",
     text: (
       <ul className="space-y-1">
@@ -36,6 +37,7 @@ const ACCOMPAGNEMENTS = [
   },
   {
     image: "/images/jwl-creation-site-web-aix-en-provence.png",
+    packName: "JWL Booster",
     badge: "Nouveau",
     title: (
       <>
@@ -68,6 +70,7 @@ const ACCOMPAGNEMENTS = [
   },
   {
     image: "/images/jwl-clarifier-positionnement-entreprise.png",
+    packName: "JWL Connect",
     title: "Je te forme à la rédaction SEO pour ton blog",
     text: (
       <ul className="space-y-1">
@@ -93,6 +96,7 @@ const ACCOMPAGNEMENTS = [
   },
   {
     image: "/images/jwl-developpement-prospection-commerciale.png",
+    packName: "JWL Prospect",
     title: "Je développe ta prospection commerciale",
     text: (
       <ul className="space-y-1">
@@ -273,7 +277,12 @@ export default function AccompagnementsSection() {
                 {item.badge}
               </span>
             )}
-            <div className="flex min-h-[400px] w-full flex-1 flex-col rounded-2xl border border-[#c9846f]/40 bg-[#141414] p-8 pt-10 text-left text-white">
+            <div className="relative flex min-h-[400px] w-full flex-1 flex-col rounded-2xl border border-[#c9846f]/40 bg-[#141414] p-8 pt-10 text-left text-white">
+              {"packName" in item && item.packName && (
+                <span className="absolute left-4 top-4 rounded-full bg-gold px-3 py-1 text-xs font-bold uppercase tracking-wide text-white">
+                  {item.packName}
+                </span>
+              )}
               <h3 className="text-center font-heading text-xl leading-snug">
                 {item.title}
               </h3>
