@@ -9,6 +9,7 @@ const OTHER_PAGES = {
     { href: "/audit-seo-aix-en-provence", label: "Audit SEO" },
     { href: "/google-my-business-aix-en-provence", label: "Fiche Google Business Profile" },
     { href: "/site-internet-aix-en-provence", label: "Création site web" },
+    { href: "/site-web-seo-aix-en-provence", label: "Site web SEO" },
     { href: "/developpement-commercial-aix-en-provence", label: "Développement commercial" },
     { href: "/entrepreneur-aix-en-provence", label: "Indépendants" },
     { href: "/blog", label: "Blog" },

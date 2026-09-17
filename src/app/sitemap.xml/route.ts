@@ -14,6 +14,7 @@ type Entry = {
 const STATIC_PATHS_FR = [
   { path: "/", priority: "1.0", changefreq: "weekly" },
   { path: "/site-internet-aix-en-provence", priority: "0.9", changefreq: "weekly" },
+  { path: "/site-web-seo-aix-en-provence", priority: "0.9", changefreq: "weekly" },
   { path: "/tarifs", priority: "0.9", changefreq: "weekly" },
   { path: "/blog", priority: "0.8", changefreq: "daily" },
   { path: "/contact-jwl-marketing-aix-en-provence", priority: "0.8", changefreq: "monthly" },
@@ -58,7 +59,7 @@ export async function GET() {
 
   // Version anglaise (miroir des mêmes routes, hors mentions légales spécifiques FR)
   for (const p of STATIC_PATHS_FR) {
-    if (p.path === "/blog") continue;
+    if (p.path === "/blog" || p.path === "/site-web-seo-aix-en-provence") continue;
     entries.push({ path: `/en${p.path}`, priority: p.priority, changefreq: p.changefreq });
   }
   entries.push({ path: "/en/blog", priority: "0.8", changefreq: "daily" });
