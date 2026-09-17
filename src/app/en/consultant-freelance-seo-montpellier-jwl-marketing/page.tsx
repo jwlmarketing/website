@@ -106,14 +106,14 @@ export default function Page() {
       <SiteHeader locale="en" href="/consultant-freelance-seo-montpellier-jwl-marketing" />
 
       {/* Hero */}
-      <div className="flex w-full flex-col items-center justify-between gap-10 bg-white px-[5%] py-[60px] lg:flex-row">
+      <div className="flex w-full flex-col items-start justify-between gap-10 bg-white px-[6%] pt-[90px] pb-[60px] lg:flex-row lg:px-[9%]">
         <div className="max-w-[600px] flex-1">
           <p className="text-base leading-[1.6] text-black">
             A freelance strategy, backed by the quality of a boutique
             agency. In Montpellier, Place de la Comédie is a landmark you
             can't miss. On Google, it's your business's turn to become one.
           </p>
-          <h1 className="mt-4 font-heading text-4xl leading-[1.05] lg:text-[60px] lg:leading-[0.95] text-black">
+          <h1 className="mt-4 font-heading text-5xl font-extrabold leading-[1.02] lg:text-[76px] lg:leading-[1.02] text-black">
             <span className="italic text-[#c9846f]">
               Freelance SEO Consultant
             </span>

@@ -61,7 +61,7 @@ export default function Page() {
       <SiteHeader locale="fr" href="/en/consultant-seo-bordeaux-jwl-marketing" />
 
       {/* Hero */}
-      <div className="flex w-full flex-col items-center justify-between gap-10 bg-white px-[5%] py-[60px] lg:flex-row">
+      <div className="flex w-full flex-col items-start justify-between gap-10 bg-white px-[6%] pt-[90px] pb-[60px] lg:flex-row lg:px-[9%]">
         <div className="max-w-[600px] flex-1">
           <p className="text-base leading-[1.6] text-black">
             Une stratégie freelance, portée par la qualité d&apos;une agence à
@@ -69,7 +69,7 @@ export default function Page() {
             crus, d&apos;autres pour les cannelés. Tes futurs clients, eux,
             viennent sur Google{" "}pour te trouver.
           </p>
-          <h1 className="mt-4 font-heading text-4xl leading-[1.05] lg:text-[60px] lg:leading-[0.95] text-black">
+          <h1 className="mt-4 font-heading text-5xl font-extrabold leading-[1.02] lg:text-[76px] lg:leading-[1.02] text-black">
             <span className="italic text-[#c9846f]">
               Consultant Freelance SEO
             </span>
