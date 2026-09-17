@@ -92,7 +92,7 @@ export default function Page() {
       <SiteHeader locale="fr" href="/en/site-internet-aix-en-provence" />
 
       {/* Hero */}
-      <div className="flex w-full flex-col items-center justify-between gap-10 overflow-hidden bg-white px-[6%] pt-[60px] lg:flex-row lg:items-end lg:px-[9%] lg:pb-0">
+      <div className="flex w-full flex-col items-center justify-between gap-10 overflow-hidden bg-white px-[6%] pt-[60px] lg:flex-row lg:items-end lg:gap-24 lg:px-[9%] lg:pb-0">
         <div className="max-w-[720px] flex-1 self-start pb-[90px] lg:pt-[30px]">
           <h1 className="font-heading text-5xl font-extrabold leading-[1.02] lg:text-[72px] lg:leading-[1.02] text-black">
             <span className="text-[#c9846f]">JWL Business</span>

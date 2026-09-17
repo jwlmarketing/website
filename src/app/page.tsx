@@ -77,7 +77,7 @@ export default function Home() {
       <SiteHeader locale="fr" href="/en" />
 
       {/* Hero */}
-      <div className="flex w-full flex-col items-start justify-between gap-10 bg-white px-[6%] pb-[60px] pt-[90px] lg:flex-row lg:px-[9%]">
+      <div className="flex w-full flex-col items-start justify-between gap-10 bg-white px-[6%] pb-[60px] pt-[90px] lg:flex-row lg:gap-24 lg:px-[9%]">
         <div className="max-w-[720px] flex-1">
           <h1 className="m-0 mb-1 font-heading text-5xl font-extrabold leading-[1.02] text-black lg:text-[76px] lg:leading-[1.02]">
             <span>Crée un site web conçu pour</span>{" "}
