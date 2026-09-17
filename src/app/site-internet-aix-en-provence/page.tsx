@@ -128,14 +128,14 @@ export default function Page() {
             </a>
           </div>
         </div>
-        <div className="flex h-[420px] w-full flex-1 items-end justify-center sm:h-[520px] lg:h-[640px] lg:justify-end">
+        <div className="flex h-[480px] w-full flex-1 items-end justify-center sm:h-[600px] lg:h-[760px] lg:justify-end">
           <div className="jwl-hero-glow-wrap relative h-full w-auto">
             <div className="jwl-hero-glow-seam" />
             <Image
               src="/images/hero-creation-site-duo.png"
               alt="Jodie Lapaillerie — Création de site web JWL Marketing"
-              width={1024}
-              height={768}
+              width={353}
+              height={606}
               priority
               className="relative z-10 h-full w-auto max-w-none object-contain"
             />
