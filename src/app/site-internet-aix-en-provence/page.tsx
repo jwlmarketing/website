@@ -96,9 +96,7 @@ export default function Page() {
         <div className="max-w-[720px] flex-1">
           <h1 className="font-heading text-5xl font-extrabold leading-[1.02] lg:text-[72px] lg:leading-[1.02] text-black">
             <span className="text-[#c9846f]">JWL Business</span>
-            <span className="font-bold"> : Un site web</span>
-            <br />
-            <span className="font-bold">un site web qui inpire confiance</span>
+            <span className="font-bold"> : un site web qui inpire confiance</span>
             <br />
           </h1>
           <p className="mt-7 text-lg leading-[1.6] text-black">
