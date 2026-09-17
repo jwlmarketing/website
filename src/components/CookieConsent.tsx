@@ -32,7 +32,7 @@ export default function CookieConsent() {
   return (
     <div className="fixed inset-x-0 bottom-0 z-50 border-t border-[#eee] bg-white px-5 py-5 shadow-[0_-4px_20px_rgba(0,0,0,0.08)]">
       <div className="mx-auto flex max-w-[1200px] flex-col items-center justify-between gap-4 md:flex-row">
-        <p className="text-center text-sm text-[#1a1a1a] md:text-left">
+        <p className="text-center text-2xl text-[#1a1a1a] md:text-left">
           Ce site utilise des cookies pour améliorer ton expérience et mesurer
           son audience. Tu peux accepter ou refuser leur utilisation.{" "}
           <Link href="/cookies" className="underline hover:text-[#c9846f]">

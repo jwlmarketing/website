@@ -92,7 +92,7 @@ export default function ProofCard({ data }: { data: ProofCardData }) {
                   className="block h-auto w-full"
                 />
               </div>
-              <p className="mb-4 text-[12.5px] leading-relaxed text-[#666]">
+              <p className="mb-4 text-2xl leading-relaxed text-[#666]">
                 👉 {data.gmbShot.caption}
               </p>
             </>
@@ -113,7 +113,7 @@ export default function ProofCard({ data }: { data: ProofCardData }) {
 
           {data.detailSections.map((sec) => (
             <div key={sec.title} className="mt-4">
-              <p className="mb-2 text-[11px] font-bold uppercase tracking-wider text-gold">
+              <p className="mb-2 text-2xl font-bold uppercase tracking-wider text-gold">
                 {sec.title}
               </p>
               <ul className="space-y-1.5">

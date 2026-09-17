@@ -26,14 +26,14 @@ export default function ReviewCard({
       <div className="mb-3 flex items-center gap-3">
         <Image src={avatar} alt={`${name} — avis Google`} width={40} height={40} className="h-10 w-10 rounded-full" />
         <div>
-          <p className="text-sm text-black">{name}</p>
-          <p className="text-xs text-[#888]">{when}</p>
+          <p className="text-2xl text-black">{name}</p>
+          <p className="text-2xl text-[#888]">{when}</p>
         </div>
       </div>
       <div className="mb-2 text-gold" aria-hidden>
         ★★★★★
       </div>
-      <p className="flex-1 whitespace-pre-line text-[13px] leading-relaxed text-[#444]">{shown}</p>
+      <p className="flex-1 whitespace-pre-line text-2xl leading-relaxed text-[#444]">{shown}</p>
       {isLong && (
         <button
           onClick={() => setExpanded((e) => !e)}

@@ -168,7 +168,7 @@ export default async function BlogPostPage({
                       {new Date(c.created_at).toLocaleDateString("fr-FR")}
                     </span>
                   </div>
-                  <p className="text-sm text-[#444]">{c.content}</p>
+                  <p className="text-2xl text-[#444]">{c.content}</p>
                 </div>
               ))}
             </div>

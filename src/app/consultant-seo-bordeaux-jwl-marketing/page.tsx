@@ -154,7 +154,7 @@ export default function Page() {
       </section>
 
       <section className="mx-auto max-w-[900px] px-6 py-10 text-center">
-        <p className="text-[17px] leading-[28px] text-[#1a1a1a]">
+        <p className="text-2xl leading-[28px] text-[#1a1a1a]">
           Bordeaux attire chaque année de nouvelles entreprises, de nouveaux
           talents et de nouveaux investisseurs. Cette dynamique crée aussi
           une concurrence plus forte. Pour être choisi, il ne suffit plus
@@ -170,7 +170,7 @@ export default function Page() {
             déjà leur présence en ligne.
           </p>
         </div>
-        <p className="mx-auto mt-6 max-w-[700px] text-[17px] leading-[28px] text-[#1a1a1a]">
+        <p className="mx-auto mt-6 max-w-[700px] text-2xl leading-[28px] text-[#1a1a1a]">
           Que ton activité soit implantée à Bordeaux, Mérignac, Pessac,
           Talence, Bègles ou ailleurs en Gironde, une stratégie SEO adaptée
           permet d&apos;apparaître devant les personnes qui recherchent
@@ -184,7 +184,7 @@ export default function Page() {
           <span className="italic text-[#c9846f]">La preuve</span>{" "}
           <span className="font-medium">par les chiffres.</span>
         </h2>
-        <p className="mx-auto mt-3 max-w-[700px] text-[15px] text-[#555]">
+        <p className="mx-auto mt-3 max-w-[700px] text-2xl text-[#555]">
           Des résultats chiffrés, mesurés avec Google Analytics 4.
         </p>
         <div className="mt-10">
@@ -225,17 +225,17 @@ export default function Page() {
         <h2 className="font-heading text-3xl leading-tight md:text-[54px] text-black">
           <TypewriterText className="italic text-[#c9846f]" text="Collaboration." />
         </h2>
-        <p className="mx-auto mt-3 max-w-[700px] text-[15px] text-[#555]">
+        <p className="mx-auto mt-3 max-w-[700px] text-2xl text-[#555]">
           3 façons de travailler avec moi
         </p>
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           {COLLABORATIONS.map((c) => (
             <div key={c.title} className="rounded-2xl bg-[#141414] p-6 text-left text-white">
-              <p className="text-[11px] font-semibold uppercase tracking-wide text-gold">
+              <p className="text-2xl font-semibold uppercase tracking-wide text-gold">
                 {c.tag}
               </p>
               <h3 className="mt-2 font-heading text-xl">{c.title}</h3>
-              <p className="mt-3 text-sm leading-[21px] text-white/80">{c.text}</p>
+              <p className="mt-3 text-2xl leading-[21px] text-white/80">{c.text}</p>
             </div>
           ))}
         </div>
@@ -281,7 +281,7 @@ export default function Page() {
           {FEATURES.map((f) => (
             <div key={f.title} className="rounded-2xl bg-[#141414] p-6 text-center text-white">
               <h3 className="font-heading text-lg">{f.title}</h3>
-              <p className="mt-3 text-xs italic text-[#c9a84c]">{f.note}</p>
+              <p className="mt-3 text-2xl italic text-[#c9a84c]">{f.note}</p>
             </div>
           ))}
         </div>
@@ -313,7 +313,7 @@ export default function Page() {
         <h2 className="font-heading text-3xl leading-tight md:text-[54px] text-black">
           <span className="italic text-[#c9846f]">Génère plus de clients.</span>
         </h2>
-        <p className="mt-4 text-[17px] leading-[28px] text-[#1a1a1a]">
+        <p className="mt-4 text-2xl leading-[28px] text-[#1a1a1a]">
           Le problème, c&apos;est que si ton site internet, ton référencement
           naturel, ton SEO local ou ta fiche Google Business Profile ne sont
           pas correctement optimisés, Google{" "}mettra simplement un de tes
@@ -328,10 +328,10 @@ export default function Page() {
         <h3 className="font-heading text-3xl leading-tight md:text-[54px] text-black">
           <span className="italic text-[#c9846f]">Optimise dès maintenant</span>
         </h3>
-        <p className="mt-3 font-heading text-3xl leading-tight md:text-[54px] text-black">
+        <p className="mt-3 font-heading text-2xl leading-tight md:text-[54px] text-black">
           avec Google{" "}ton site web.
         </p>
-        <p className="mx-auto mt-6 max-w-[700px] text-[17px] leading-[28px] text-[#1a1a1a]">
+        <p className="mx-auto mt-6 max-w-[700px] text-2xl leading-[28px] text-[#1a1a1a]">
           Tes futurs clients recherchent déjà tes services sur Google.
           L&apos;objectif est simple : faire en sorte qu&apos;ils trouvent
           ton entreprise avant celle de tes concurrents à Bordeaux,

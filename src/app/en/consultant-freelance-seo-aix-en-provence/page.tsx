@@ -69,7 +69,7 @@ export default function QuiSuisJe() {
             <span className="rounded-full bg-[#faf3ea] px-5 py-[15px] text-sm font-semibold text-black">
               20+ projects since 2025
             </span>
-            <p className="min-h-[1.2em] font-heading text-4xl italic text-[#c9846f]">
+            <p className="min-h-[1.2em] font-heading text-2xl italic text-[#c9846f]">
               <TypewriterText text="Hi, I'm Jodie." speed={113} />
             </p>
           </div>
@@ -117,13 +117,13 @@ export default function QuiSuisJe() {
       <section className="mx-auto max-w-[900px] px-6 py-10">
         <div className="grid items-center gap-8 md:grid-cols-[1fr_260px]">
           <div className="rounded-2xl bg-[#141414] p-8 text-white">
-            <p className="text-[15px] leading-[25.5px]">
+            <p className="text-2xl leading-[25.5px]">
               <span className="font-bold">My mission: </span>
               Build or manage websites designed to generate traffic, convert
               visitors into clients and support a business's growth over the
               long term.
             </p>
-            <p className="mt-4 text-[15px] leading-[25.5px]">
+            <p className="mt-4 text-2xl leading-[25.5px]">
               With over 10 years of experience in business development,
               including 4 years at the American group IAC, I understand what
               a business needs: attracting clients, convincing them and
@@ -146,7 +146,7 @@ export default function QuiSuisJe() {
               height={1000}
               className="mx-auto h-auto w-full max-w-[260px] rounded-2xl object-cover"
             />
-            <p className="mt-2 text-xs text-[#000]">
+            <p className="mt-2 text-2xl text-[#000]">
               Jodie-LAPAILLERIE / SEO summit paris 2026
             </p>
           </div>
@@ -265,7 +265,7 @@ export default function QuiSuisJe() {
                 don't follow.
               </li>
             </ul>
-            <p className="mt-4">
+            <p className="mt-4 text-2xl">
               The problem isn't always your visibility. Often, it's the
               absence of a strategy. For me, SEO has only one goal: to grow
               your business and generate sales opportunities. Before working
@@ -320,14 +320,14 @@ export default function QuiSuisJe() {
               one and only goal: turn your website into a real business
               driver.
             </p>
-            <p className="mt-4">
+            <p className="mt-4 text-2xl">
               In Aix-en-Provence, the market shows no mercy and local SEO
               requires surgical analysis. By combining the most aggressive
               American sales strategies with sharp local SEO, we only
               target the search intents and queries that are most
               profitable for your business.
             </p>
-            <p className="mt-4">
+            <p className="mt-4 text-2xl">
               I optimise your entire digital ecosystem: your website, your
               semantic content and your Google Business Profile to trigger
               as many calls and quote requests as possible. I support
@@ -453,7 +453,7 @@ export default function QuiSuisJe() {
               height={2000}
               className="mx-auto h-auto w-full max-w-[420px] rounded-2xl object-cover"
             />
-            <p className="mt-2 text-xs text-black">
+            <p className="mt-2 text-2xl text-black">
               Jodie-LAPAILLERIE / AI 2026
             </p>
           </div>
@@ -551,12 +551,12 @@ export default function QuiSuisJe() {
               Dynamitz, who helps project owners structure their business
               and define their positioning.
             </p>
-            <p className="mt-3">
+            <p className="mt-3 text-2xl">
               We work on complementary topics with a shared goal: helping
               entrepreneurs build solid foundations before growing their
               visibility and client acquisition.
             </p>
-            <p className="mt-3">
+            <p className="mt-3 text-2xl">
               Because a high-performing strategy always starts with solid
               foundations.
             </p>

@@ -106,14 +106,14 @@ export default function Footer() {
         <div className="mt-10 grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-3">
           <div>
             <div className="mb-[18px] text-[15px] font-semibold text-white">{t.headOffice}</div>
-            <p className="mb-4 text-[13px] leading-relaxed text-white">
+            <p className="mb-4 text-2xl leading-relaxed text-white">
               JWL MARKETING
               <br />
               Pôle d&apos;activité des Milles
               <br />
               13290 Aix-en-Provence
             </p>
-            <p className="mb-4 text-[13px] leading-relaxed text-white">
+            <p className="mb-4 text-2xl leading-relaxed text-white">
               <span className="font-semibold">SIRET</span> 315 087 767
               <br />
               RCS Aix-en-Provence

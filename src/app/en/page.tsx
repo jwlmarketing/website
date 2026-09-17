@@ -188,13 +188,13 @@ function OfferCard({
         {offer.title}
       </h3>
       {hasSubtitle && (
-        <p className="mt-2 min-h-[2.5em] italic text-white/90">
+        <p className="mt-2 min-h-[2.5em] italic text-white/90 text-2xl">
           <TypewriterText
             text={(offer as (typeof OFFERS_STARTER)[number]).subtitle}
           />
         </p>
       )}
-      <p className="mt-4 text-sm uppercase tracking-wide text-gold">
+      <p className="mt-4 text-2xl uppercase tracking-wide text-gold">
         {offer.lead}
       </p>
       <ul className="mt-2 flex-1 space-y-1.5 text-sm text-white/85">
@@ -207,7 +207,7 @@ function OfferCard({
       </ul>
       {hasLead2 && (
         <>
-          <p className="mt-4 text-sm uppercase tracking-wide text-gold">
+          <p className="mt-4 text-2xl uppercase tracking-wide text-gold">
             {(offer as (typeof OFFERS_STARTER)[number]).lead2}
           </p>
           <ul className="mt-2 space-y-1.5 text-sm text-[#c9846f]">
@@ -221,12 +221,12 @@ function OfferCard({
         </>
       )}
       {hasFooter && (
-        <p className="mt-4 text-sm text-white/70">
+        <p className="mt-4 text-2xl text-white/70">
           {(offer as (typeof OFFERS_STARTER)[number]).footer}
         </p>
       )}
       {hasObjectif && (
-        <p className="mt-4 min-h-[3em] text-sm text-white/85">
+        <p className="mt-4 min-h-[3em] text-2xl text-white/85">
           <span className="uppercase tracking-wide text-gold">
             Goal:
           </span>{" "}
@@ -366,7 +366,7 @@ export default function Home() {
                 <h3 className="min-h-[1.6em] font-heading text-xl">
                   <TypewriterText text={step.title} startDelay={i * 150 + 650} />
                 </h3>
-                <p className="mt-3 text-sm text-white/85">{step.lead}</p>
+                <p className="mt-3 text-2xl text-white/85">{step.lead}</p>
               </div>
               <ul className="flex-1 space-y-2 px-6 py-6 text-sm text-white/85">
                 {step.items.map((item) => (

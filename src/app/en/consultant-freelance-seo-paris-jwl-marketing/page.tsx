@@ -67,7 +67,7 @@ export default function Page() {
             <span className="rounded-full bg-[#faf3ea] px-5 py-[15px] text-sm font-semibold text-black">
               20+ projects since 2025
             </span>
-            <p className="min-h-[1.2em] font-heading text-4xl italic text-[#c9846f]">
+            <p className="min-h-[1.2em] font-heading text-2xl italic text-[#c9846f]">
               <TypewriterText text="Hi, I'm Jodie." speed={113} />
             </p>
           </div>
@@ -115,25 +115,25 @@ export default function Page() {
       <section className="mx-auto max-w-[900px] px-6 py-10">
         <div className="grid items-center gap-8 md:grid-cols-[1fr_260px]">
           <div className="rounded-2xl bg-[#141414] p-8 text-white">
-            <p className="text-[15px] leading-[25.5px]">
+            <p className="text-2xl leading-[25.5px]">
               <span className="font-bold">My mission: </span>
               Paris is home to thousands of businesses, shops, self-employed
               professionals and service companies. In such a competitive
               environment, being good at what you do isn't always enough to
               get chosen.
             </p>
-            <p className="mt-4 text-[15px] leading-[25.5px]">
+            <p className="mt-4 text-2xl leading-[25.5px]">
               I help entrepreneurs, independent professionals and business
               owners build a digital presence capable of attracting
               qualified prospects and supporting their growth over the long
               term.
             </p>
-            <p className="mt-4 text-[15px] leading-[25.5px]">
+            <p className="mt-4 text-2xl leading-[25.5px]">
               With over 10 years of experience in sales and business
               development, including 4 years at the American group IAC, I
               now combine sales strategy, SEO and digital visibility.
             </p>
-            <p className="mt-4 text-[15px] leading-[25.5px]">
+            <p className="mt-4 text-2xl leading-[25.5px]">
               Website, local SEO, content, Google Business Profile,
               acquisition strategy or client experience optimisation: every
               action is designed to serve one simple goal. Helping your
@@ -149,7 +149,7 @@ export default function Page() {
               height={1000}
               className="mx-auto h-auto w-full max-w-[260px] rounded-2xl object-cover"
             />
-            <p className="mt-2 text-xs text-[#000]">
+            <p className="mt-2 text-2xl text-[#000]">
               Jodie-LAPAILLERIE / SEO summit
             </p>
           </div>
@@ -246,7 +246,7 @@ export default function Page() {
               Today, in most sectors, your future clients are spoilt for
               choice.
             </p>
-            <p className="mt-4">
+            <p className="mt-4 text-2xl">
               Before making a decision, they often run several Google{" "}searches to compare businesses and available solutions. In
               this context, my role is to make sure your business is one
               of the solutions they discover at the right time. The goal
@@ -286,14 +286,14 @@ export default function Page() {
               questions they ask and the solutions they're really looking
               for.
             </p>
-            <p className="mt-4">
+            <p className="mt-4 text-2xl">
               Some searches reflect simple curiosity. Others reveal an
               intent to buy or get in touch. That's precisely why I
               identify the most relevant opportunities for your business
               in order to build an SEO strategy capable of attracting
               qualified prospects.
             </p>
-            <p className="mt-4">
+            <p className="mt-4 text-2xl">
               In Paris, attracting traffic is relatively easy. Attracting
               the right clients is another story entirely. At its core,
               the goal isn't to be visible everywhere. The real challenge
@@ -321,7 +321,7 @@ export default function Page() {
                 this context, your Google Business Profile is often the
                 first contact with your future client.
               </p>
-              <p className="mt-4">
+              <p className="mt-4 text-2xl">
                 That's why I optimise the elements that really influence
                 the decision: categories, services, photos, reviews,
                 practical information and consistency of your presence on{" "}
@@ -370,14 +370,14 @@ Google. The goal isn't just to appear on Google. It's also
               nice-looking site. I design a tool built to reassure, inform
               and make it easy to get in touch.
             </p>
-            <p className="mt-4">
+            <p className="mt-4 text-2xl">
               Every project is tailored to your activity, your goals and
               the expectations of your future clients. Depending on the
               needs, development can be done in HTML or with modern
               technologies like Next.js to ensure speed, security and a
               smooth browsing experience.
             </p>
-            <p className="mt-4">
+            <p className="mt-4 text-2xl">
               Beyond the technical side, the goal remains the same: create
               a site capable of representing your business today while
               supporting its growth in the years to come. Because in
@@ -407,7 +407,7 @@ Google. The goal isn't just to appear on Google. It's also
               you serve and why a prospect should choose you over another
               business.
             </p>
-            <p className="mt-4">
+            <p className="mt-4 text-2xl">
               That's why I analyse your market, your competitors and the
               searches made by your future clients to build a strategy
               capable of attracting qualified prospects. In such a
@@ -441,7 +441,7 @@ Google. The goal isn't just to appear on Google. It's also
               prospects run several Google{" "}searches to compare available
               solutions.
             </p>
-            <p className="mt-4">
+            <p className="mt-4 text-2xl">
               In this context, being visible at the right time becomes a
               real competitive advantage. Because if your business doesn't
               meet that demand, it's often other market players who
@@ -467,7 +467,7 @@ Google. The goal isn't just to appear on Google. It's also
               strategy is built from scratch, based on your goals and your
               competitive environment.
             </p>
-            <p className="mt-4">
+            <p className="mt-4 text-2xl">
               As an independent consultant, I remain your single point of
               contact from start to finish.
             </p>
@@ -502,7 +502,7 @@ Google. The goal isn't just to appear on Google. It's also
         <h3 className="font-heading text-3xl leading-tight md:text-[54px] text-black">
           <span className="italic text-[#c9846f]">Still not convinced?</span>
         </h3>
-        <p className="mt-3 font-heading text-3xl leading-tight md:text-[54px] text-black">
+        <p className="mt-3 font-heading text-2xl leading-tight md:text-[54px] text-black">
           Make your digital presence a Paris strength
         </p>
         <div className="mx-auto mt-8 max-w-[900px] text-left text-[17px] leading-[28px] text-[#1a1a1a]">
@@ -511,19 +511,19 @@ Google. The goal isn't just to appear on Google. It's also
             businesses operate in a particularly competitive environment
             where online visibility has become a real growth lever.
           </p>
-          <p className="mt-3">
+          <p className="mt-3 text-2xl">
             Between shopkeepers, self-employed professionals, startups,
             consulting firms, service businesses, real estate players and
             companies based in the main business districts, every player
             has to find its place amid heavy competition on Google.
           </p>
-          <p className="mt-3">
+          <p className="mt-3 text-2xl">
             Consumer habits have also changed. Before booking an
             appointment, requesting a quote or contacting a business,
             Parisians take the time to compare several solutions, check
             client reviews and research the business.
           </p>
-          <p className="mt-3">
+          <p className="mt-3 text-2xl">
             Today, a future client can compare several Paris businesses in
             just a few minutes. In this context, being visible at the
             right time can make all the difference between a won

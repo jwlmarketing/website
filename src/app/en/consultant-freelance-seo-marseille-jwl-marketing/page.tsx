@@ -67,7 +67,7 @@ export default function Page() {
             <span className="rounded-full bg-[#faf3ea] px-5 py-[15px] text-sm font-semibold text-black">
               20+ projects since 2025
             </span>
-            <p className="min-h-[1.2em] font-heading text-4xl italic text-[#c9846f]">
+            <p className="min-h-[1.2em] font-heading text-2xl italic text-[#c9846f]">
               <TypewriterText text="Hi, I'm Jodie." speed={113} />
             </p>
           </div>
@@ -115,24 +115,24 @@ export default function Page() {
       <section className="mx-auto max-w-[900px] px-6 py-10">
         <div className="grid items-center gap-8 md:grid-cols-[1fr_260px]">
           <div className="rounded-2xl bg-[#141414] p-8 text-white">
-            <p className="text-[15px] leading-[25.5px]">
+            <p className="text-2xl leading-[25.5px]">
               <span className="font-bold">My mission: </span>
               I support entrepreneurs, craftsmen, shopkeepers and business
               owners who want to grow their business through a digital
               strategy designed to attract real prospects in Marseille.
             </p>
-            <p className="mt-4 text-[15px] leading-[25.5px]">
+            <p className="mt-4 text-2xl leading-[25.5px]">
               For over 10 years, I've been working in business development.
               An expertise strengthened by 4 years at the American group
               IAC, specialised in online client acquisition.
             </p>
-            <p className="mt-4 text-[15px] leading-[25.5px]">
+            <p className="mt-4 text-2xl leading-[25.5px]">
               Today, I combine this sales expertise with SEO to help
               Marseille businesses gain visibility, grow their online
               presence and turn their website into a genuine prospecting
               tool.
             </p>
-            <p className="mt-4 text-[15px] leading-[25.5px]">
+            <p className="mt-4 text-2xl leading-[25.5px]">
               Showcase sites, e-commerce, SEO content, digital strategy,
               local visibility or Google Business Profile: every action
               pursues the same goal. Helping your business be found by the
@@ -147,7 +147,7 @@ export default function Page() {
               height={1000}
               className="mx-auto h-auto w-full max-w-[260px] rounded-2xl object-cover"
             />
-            <p className="mt-2 text-xs text-[#000]">
+            <p className="mt-2 text-2xl text-[#000]">
               Jodie-LAPAILLERIE / SEO summit
             </p>
           </div>
@@ -248,7 +248,7 @@ Google.
               search for information on Google, read reviews and compare
               several businesses.
             </p>
-            <p className="mt-4">
+            <p className="mt-4 text-2xl">
               A large part of the client journey now starts online. The
               fastest-growing businesses aren't necessarily the oldest or
               the best known. They're often the ones prospects find at the
@@ -288,14 +288,14 @@ Google.
               questions they ask and the solutions they're really looking
               for.
             </p>
-            <p className="mt-4">
+            <p className="mt-4 text-2xl">
               Some searches reflect simple curiosity. Others reveal an
               intent to buy or get in touch. My role is to identify the
               most relevant opportunities for your business in order to
               build an SEO strategy capable of attracting qualified
               prospects.
             </p>
-            <p className="mt-4">
+            <p className="mt-4 text-2xl">
               The goal isn't to be visible everywhere. The goal is to be
               visible when a prospect is ready to act.
             </p>
@@ -318,7 +318,7 @@ Google.
                 making a choice. Your Google{" "}listing is often the first
                 contact with a future client.
               </p>
-              <p className="mt-4">
+              <p className="mt-4 text-2xl">
                 I optimise the elements that really influence the decision:
                 categories, services, photos, reviews, practical
                 information and the consistency of your online presence.
@@ -366,14 +366,14 @@ Google.
                 nice-looking site. I design a tool built to reassure,
                 inform and make it easy to get in touch.
               </p>
-              <p className="mt-4">
+              <p className="mt-4 text-2xl">
                 Every project is tailored to your activity, your goals and
                 the expectations of your future clients. Depending on the
                 needs, development can be done in HTML or with modern
                 technologies like Next.js to ensure speed, security and a
                 smooth browsing experience.
               </p>
-              <p className="mt-4">
+              <p className="mt-4 text-2xl">
                 My goal is to create a site that can represent your
                 business today while supporting its growth in the years to
                 come.
@@ -399,7 +399,7 @@ Google.
               to be found. Google{" "}needs to understand what you do, who you
               serve and why a prospect should choose you.
             </p>
-            <p className="mt-4">
+            <p className="mt-4 text-2xl">
               I analyse your market, your competitors and the searches
               made by your future clients to build a strategy capable of
               attracting qualified prospects. Because an invisible website
@@ -442,7 +442,7 @@ Google.
               innovates and grows. But even the best businesses can't be
               chosen if they're not visible.
             </p>
-            <p className="mt-4">
+            <p className="mt-4 text-2xl">
               Before a call, a visit or a quote request, many prospects run
               a Google{" "}search. If your business doesn't show up at the
               right time, it's often your competitors who pick up those
@@ -460,7 +460,7 @@ Google.
               challenges as one in Aubagne, Cassis or La Ciotat. That's why
               every strategy is built from scratch.
             </p>
-            <p className="mt-4">
+            <p className="mt-4 text-2xl">
               As an independent consultant, I remain your single point of
               contact from start to finish.
             </p>
@@ -499,7 +499,7 @@ Google.
         <h3 className="font-heading text-3xl leading-tight md:text-[54px] text-black">
           <span className="italic text-[#c9846f]">Still not convinced?</span>
         </h3>
-        <p className="mt-3 font-heading text-3xl leading-tight md:text-[54px] text-black">
+        <p className="mt-3 font-heading text-2xl leading-tight md:text-[54px] text-black">
           Make your digital presence a Marseille strength
         </p>
         <div className="mx-auto mt-8 max-w-[900px] text-left text-[17px] leading-[28px] text-[#1a1a1a]">
@@ -510,13 +510,13 @@ Google.
             dynamic environment where visibility has become a real growth
             lever.
           </p>
-          <p className="mt-3">
+          <p className="mt-3 text-2xl">
             Between building tradespeople, restaurateurs, self-employed
             professionals, tourism operators, transport and logistics
             companies, and businesses set up around the Grand Port
             Maritime, every activity faces growing competition on Google.
           </p>
-          <p className="mt-3">
+          <p className="mt-3 text-2xl">
             Today, a future client can compare several Marseille businesses
             in just a few minutes. Being visible at the right time can make
             all the difference.

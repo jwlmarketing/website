@@ -43,7 +43,7 @@ export default function SettingsForm({ settings }: { settings: BlogSettings }) {
             <label>Texte du pied de page</label>
             <input className="form-control" name="footerText" defaultValue={settings.footerText} />
           </div>
-          <p className="form-help">
+          <p className="form-help text-2xl">
             Les catégories se gèrent depuis l&apos;écran{" "}
             <a href="/admin/blog/categories" className="row-link">
               Catégories

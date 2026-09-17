@@ -71,7 +71,7 @@ export default function Page() {
             <span className="rounded-full bg-[#faf3ea] px-5 py-[15px] text-sm font-semibold text-black">
               + de 20 projets depuis 2025
             </span>
-            <p className="min-h-[1.2em] font-heading text-4xl italic text-[#c9846f]">
+            <p className="min-h-[1.2em] font-heading text-2xl italic text-[#c9846f]">
               <TypewriterText text="Bonjour, je m'appelle Jodie." speed={113} />
             </p>
           </div>
@@ -119,7 +119,7 @@ export default function Page() {
       <section className="mx-auto max-w-[900px] px-6 py-10">
         <div className="grid items-center gap-8 md:grid-cols-[1fr_260px]">
           <div className="rounded-2xl bg-[#141414] p-8 text-white">
-            <p className="text-[15px] leading-[25.5px]">
+            <p className="text-2xl leading-[25.5px]">
               <span className="font-bold">Ma mission : </span>
               aider les entreprises de Nice à attirer plus de clients grâce à{" "}
 Google. Entre le Vieux-Nice, la Promenade des Anglais,
@@ -127,7 +127,7 @@ Google. Entre le Vieux-Nice, la Promenade des Anglais,
               d&apos;affaires, Nice attire chaque année des milliers de
               consommateurs, touristes et professionnels.
             </p>
-            <p className="mt-4 text-[15px] leading-[25.5px]">
+            <p className="mt-4 text-2xl leading-[25.5px]">
               Encore faut-il qu&apos;ils trouvent ton entreprise. Grâce à mon
               expertise en développement commercial et en référencement
               naturel, je t&apos;aide à construire une visibilité durable sur{" "}
@@ -144,7 +144,7 @@ Google. Mon objectif est de t&apos;aider à être choisi.
               height={1000}
               className="mx-auto h-auto w-full max-w-[260px] rounded-2xl object-cover"
             />
-            <p className="mt-2 text-xs text-[#000]">
+            <p className="mt-2 text-2xl text-[#000]">
               Jodie-LAPAILLERIE / SEO summit
             </p>
           </div>
@@ -248,12 +248,12 @@ Google. Mon objectif est de t&apos;aider à être choisi.
               Nice, j&apos;analyse les recherches effectuées par les
               internautes.
             </p>
-            <p className="mt-4">
+            <p className="mt-4 text-2xl">
               Quels mots utilisent-ils ? Quelles questions se posent-ils ?
               Cherchent-ils une information, un devis ou une solution
               immédiate ?
             </p>
-            <p className="mt-4">
+            <p className="mt-4 text-2xl">
               Ces données permettent de construire une stratégie SEO basée sur
               la réalité du marché plutôt que sur des suppositions. Parce
               qu&apos;un site visible sur de mauvaises recherches
@@ -300,7 +300,7 @@ Google. Mon objectif est de t&apos;aider à être choisi.
               Nice » génère 50 000 recherches Google{" "}par mois et « hôtel Nice »
               tout autant.
             </p>
-            <p className="mt-4">
+            <p className="mt-4 text-2xl">
               Cette activité touristique profite d&apos;abord à ceux qui sont
               visibles en ligne. L&apos;été, la concurrence est rude entre
               commerces, restaurants et hôtels niçois. Le reste de
@@ -328,7 +328,7 @@ Google. Mon objectif est de t&apos;aider à être choisi.
                 décision. Ta fiche Google{" "}joue alors un rôle essentiel dans
                 cette première impression.
               </p>
-              <p className="mt-4">
+              <p className="mt-4 text-2xl">
                 J&apos;optimise chaque élément important : catégories,
                 services, photos, avis, informations pratiques et cohérence
                 des données. Le but n&apos;est pas seulement d&apos;apparaître
@@ -377,14 +377,14 @@ Google. Mon objectif est de t&apos;aider à être choisi.
                 un outil pensé pour rassurer, informer et faciliter la prise
                 de contact.
               </p>
-              <p className="mt-4">
+              <p className="mt-4 text-2xl">
                 Chaque projet est adapté à ton activité, à tes objectifs et
                 aux attentes de tes futurs clients. Selon les besoins, le
                 développement peut être réalisé en HTML ou avec des
                 technologies modernes comme Next.js pour garantir rapidité,
                 sécurité et confort de navigation.
               </p>
-              <p className="mt-4">
+              <p className="mt-4 text-2xl">
                 Mon objectif est de créer un site capable de représenter ton
                 entreprise aujourd&apos;hui, tout en accompagnant son
                 développement dans les années à venir.
@@ -420,7 +420,7 @@ Google. Mon objectif est de t&apos;aider à être choisi.
               découvrir ton environnement de travail et la réalité de ton
               marché.
             </p>
-            <p className="mt-4">
+            <p className="mt-4 text-2xl">
               À Nice comme ailleurs, les meilleures stratégies commencent
               souvent par une simple discussion. Et lorsque la distance ne le
               permet pas, la visio fait parfaitement l&apos;affaire.
@@ -446,7 +446,7 @@ Google. Mon objectif est de t&apos;aider à être choisi.
               entreprises de services et les acteurs du tourisme, la
               concurrence est forte.
             </p>
-            <p className="mt-4">
+            <p className="mt-4 text-2xl">
               Et avant de pousser la porte d&apos;une entreprise, beaucoup de
               consommateurs commencent désormais par une recherche Google.
               Être visible au bon moment peut faire toute la différence entre
@@ -472,7 +472,7 @@ Google. Mon objectif est de t&apos;aider à être choisi.
               bonnes personnes au bon moment, grâce à des recherches réellement
               effectuées par tes futurs clients.
             </p>
-            <p className="mt-4">
+            <p className="mt-4 text-2xl">
               En tant que consultante indépendante, je reste ton
               interlocutrice unique du début à la fin du projet. Des échanges
               simples, des décisions rapides et un accompagnement personnalisé.
@@ -508,7 +508,7 @@ Google. Mon objectif est de t&apos;aider à être choisi.
         <h3 className="font-heading text-3xl leading-tight md:text-[54px] text-black">
           <span className="italic text-[#c9846f]">Toujours pas convaincu?</span>
         </h3>
-        <p className="mt-3 font-heading text-3xl leading-tight md:text-[54px] text-black">
+        <p className="mt-3 font-heading text-2xl leading-tight md:text-[54px] text-black">
           Fais de ta présence digitale une force Niçoise
         </p>
         <div className="mx-auto mt-8 max-w-[900px] text-left text-[17px] leading-[28px] text-[#1a1a1a]">
@@ -519,7 +519,7 @@ Google. Mon objectif est de t&apos;aider à être choisi.
             l&apos;Arénas, Saint-Isidore, Cimiez ou le Port, les entreprises
             doivent se démarquer dans un marché particulièrement concurrentiel.
           </p>
-          <p className="mt-3">
+          <p className="mt-3 text-2xl">
             Restaurants, commerces de proximité, agences immobilières,
             professions libérales, artisans ou entreprises de services : la
             majorité des parcours clients commencent aujourd&apos;hui par une

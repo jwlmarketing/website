@@ -67,7 +67,7 @@ export default function Page() {
             <span className="rounded-full bg-[#faf3ea] px-5 py-[15px] text-sm font-semibold text-black">
               + de 20 projets depuis 2025
             </span>
-            <p className="min-h-[1.2em] font-heading text-4xl italic text-[#c9846f]">
+            <p className="min-h-[1.2em] font-heading text-2xl italic text-[#c9846f]">
               <TypewriterText text="Bonjour, je m'appelle Jodie." speed={113} />
             </p>
           </div>
@@ -115,27 +115,27 @@ export default function Page() {
       <section className="mx-auto max-w-[900px] px-6 py-10">
         <div className="grid items-center gap-8 md:grid-cols-[1fr_260px]">
           <div className="rounded-2xl bg-[#141414] p-8 text-white">
-            <p className="text-[15px] leading-[25.5px]">
+            <p className="text-2xl leading-[25.5px]">
               <span className="font-bold">Ma mission : </span>
               J&apos;accompagne les entrepreneurs, artisans, commerçants et
               dirigeants qui souhaitent développer leur activité grâce à une
               stratégie digitale pensée pour attirer de vrais prospects à
               Marseille.
             </p>
-            <p className="mt-4 text-[15px] leading-[25.5px]">
+            <p className="mt-4 text-2xl leading-[25.5px]">
               Depuis plus de 10 ans, j&apos;évolue dans l&apos;univers du
               développement commercial. Une expérience renforcée par 4 années
               au sein du groupe américain IAC, spécialisé dans
               l&apos;acquisition de clients sur Internet.
             </p>
-            <p className="mt-4 text-[15px] leading-[25.5px]">
+            <p className="mt-4 text-2xl leading-[25.5px]">
               Aujourd&apos;hui, j&apos;associe cette expertise commerciale au
               référencement naturel pour aider les entreprises marseillaises à
               gagner en visibilité, développer leur présence en ligne et
               transformer leur site internet en véritable outil de
               prospection.
             </p>
-            <p className="mt-4 text-[15px] leading-[25.5px]">
+            <p className="mt-4 text-2xl leading-[25.5px]">
               Sites vitrines, e-commerce, contenus SEO, stratégie digitale,
               visibilité locale ou Google Business Profile : chaque action
               poursuit le même objectif. Aider ton entreprise à être trouvée
@@ -150,7 +150,7 @@ export default function Page() {
               height={1000}
               className="mx-auto h-auto w-full max-w-[260px] rounded-2xl object-cover"
             />
-            <p className="mt-2 text-xs text-[#000]">
+            <p className="mt-2 text-2xl text-[#000]">
               Jodie-LAPAILLERIE / SEO summit
             </p>
           </div>
@@ -251,7 +251,7 @@ export default function Page() {
               consommateurs recherchent des informations sur Google,
               consultent les avis et comparent plusieurs entreprises.
             </p>
-            <p className="mt-4">
+            <p className="mt-4 text-2xl">
               Une grande partie du parcours client commence désormais en
               ligne. Les entreprises qui se développent le plus vite ne sont
               pas forcément les plus anciennes ou les plus connues. Ce sont
@@ -291,14 +291,14 @@ export default function Page() {
               clients, les questions qu&apos;ils se posent et les solutions
               qu&apos;ils cherchent réellement.
             </p>
-            <p className="mt-4">
+            <p className="mt-4 text-2xl">
               Certaines recherches traduisent une simple curiosité.
               D&apos;autres révèlent une intention d&apos;achat ou de prise de
               contact. Mon rôle consiste à identifier les opportunités les
               plus pertinentes pour ton activité afin de construire une
               stratégie SEO capable d&apos;attirer des prospects qualifiés.
             </p>
-            <p className="mt-4">
+            <p className="mt-4 text-2xl">
               Le but n&apos;est pas d&apos;être visible partout. Le but est
               d&apos;être visible lorsqu&apos;un prospect est prêt à agir.
             </p>
@@ -321,7 +321,7 @@ export default function Page() {
                 entreprises avant de faire leur choix. Ta fiche Google{" "}est
                 souvent le premier contact avec un futur client.
               </p>
-              <p className="mt-4">
+              <p className="mt-4 text-2xl">
                 J&apos;optimise les éléments qui influencent réellement la
                 décision : catégories, services, photos, avis clients,
                 informations pratiques et cohérence de ta présence en ligne.
@@ -371,14 +371,14 @@ Google. L&apos;objectif est de donner confiance et
                 un outil pensé pour rassurer, informer et faciliter la prise
                 de contact.
               </p>
-              <p className="mt-4">
+              <p className="mt-4 text-2xl">
                 Chaque projet est adapté à ton activité, à tes objectifs et
                 aux attentes de tes futurs clients. Selon les besoins, le
                 développement peut être réalisé en HTML ou avec des
                 technologies modernes comme Next.js pour garantir rapidité,
                 sécurité et confort de navigation.
               </p>
-              <p className="mt-4">
+              <p className="mt-4 text-2xl">
                 Mon objectif est de créer un site capable de représenter ton
                 entreprise aujourd&apos;hui, tout en accompagnant son
                 développement dans les années à venir.
@@ -404,7 +404,7 @@ Google. L&apos;objectif est de donner confiance et
               être trouvé. Google{" "}doit comprendre ce que tu fais, à qui tu
               t&apos;adresses et pourquoi un prospect devrait te choisir.
             </p>
-            <p className="mt-4">
+            <p className="mt-4 text-2xl">
               J&apos;analyse ton marché, tes concurrents et les recherches de
               tes futurs clients pour construire une stratégie capable
               d&apos;attirer des prospects qualifiés. Parce qu&apos;un site
@@ -448,7 +448,7 @@ Google. L&apos;objectif est de donner confiance et
               entreprises ne peuvent être choisies si elles ne sont pas
               visibles.
             </p>
-            <p className="mt-4">
+            <p className="mt-4 text-2xl">
               Avant un appel, une visite ou une demande de devis, de nombreux
               prospects effectuent une recherche sur Google. Si ton entreprise
               n&apos;apparaît pas au bon moment, ce sont souvent tes
@@ -467,7 +467,7 @@ Google. L&apos;objectif est de donner confiance et
               Cassis ou La Ciotat. C&apos;est pour cette raison que chaque
               stratégie est construite sur mesure.
             </p>
-            <p className="mt-4">
+            <p className="mt-4 text-2xl">
               En tant que consultante indépendante, je reste ton
               interlocutrice unique du début à la fin du projet.
             </p>
@@ -506,7 +506,7 @@ Google. L&apos;objectif est de donner confiance et
         <h3 className="font-heading text-3xl leading-tight md:text-[54px] text-black">
           <span className="italic text-[#c9846f]">Toujours pas convaincu?</span>
         </h3>
-        <p className="mt-3 font-heading text-3xl leading-tight md:text-[54px] text-black">
+        <p className="mt-3 font-heading text-2xl leading-tight md:text-[54px] text-black">
           Fais de ta présence digitale une force Marseillaise
         </p>
         <div className="mx-auto mt-8 max-w-[900px] text-left text-[17px] leading-[28px] text-[#1a1a1a]">
@@ -517,14 +517,14 @@ Google. L&apos;objectif est de donner confiance et
             dans un environnement dynamique où la visibilité devient un
             véritable levier de développement.
           </p>
-          <p className="mt-3">
+          <p className="mt-3 text-2xl">
             Entre les artisans du bâtiment, les restaurateurs, les
             professions libérales, les acteurs du tourisme, les entreprises
             du transport, de la logistique ou encore les sociétés installées
             autour du Grand Port Maritime, chaque activité fait face à une
             concurrence croissante sur Google.
           </p>
-          <p className="mt-3">
+          <p className="mt-3 text-2xl">
             Aujourd&apos;hui, un futur client peut comparer plusieurs
             entreprises marseillaises en quelques minutes seulement. Être
             visible au bon moment peut faire toute la différence.

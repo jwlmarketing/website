@@ -126,7 +126,7 @@ export default async function AdminDashboard() {
                 </tbody>
               </table>
             ) : (
-              <p className="empty-msg">
+              <p className="empty-msg text-2xl">
                 Aucun article pour le moment. <Link href="/admin/blog/new">Créer le premier</Link>
               </p>
             )}

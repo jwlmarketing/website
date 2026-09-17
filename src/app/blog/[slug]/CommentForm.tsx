@@ -16,7 +16,7 @@ export default function CommentForm({ postSlug }: { postSlug: string }) {
 
   if (status === "sent") {
     return (
-      <p className="mt-6 rounded-lg bg-green-50 px-4 py-3 text-sm text-green-700">
+      <p className="mt-6 rounded-lg bg-green-50 px-4 py-3 text-2xl text-green-700">
         Merci ! Ton commentaire a bien été envoyé, il sera visible après validation.
       </p>
     );
@@ -47,7 +47,7 @@ export default function CommentForm({ postSlug }: { postSlug: string }) {
         rows={4}
         className="w-full rounded-lg border border-neutral-200 px-3 py-2 text-sm focus:border-gold focus:outline-none"
       />
-      {status === "error" && <p className="text-sm text-red-600">Merci de remplir tous les champs.</p>}
+      {status === "error" && <p className="text-2xl text-red-600">Merci de remplir tous les champs.</p>}
       <button
         type="submit"
         disabled={isPending}

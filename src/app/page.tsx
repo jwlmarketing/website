@@ -147,7 +147,7 @@ export default function Home() {
             <span className="italic text-[#c9846f]">apparais-tu</span>{" "}
             <span className="text-[#c9846f]">?</span>
           </h2>
-          <p className="mx-auto mt-3 max-w-[700px] text-base text-[#555] md:text-lg">
+          <p className="mx-auto mt-3 max-w-[700px] text-2xl text-[#555] md:text-lg">
             Google{" "}attire l&apos;attention. Ton site crée la confiance. Ta
             stratégie transforme les visiteurs en clients.
           </p>
@@ -159,7 +159,7 @@ export default function Home() {
               <GoogleColors />
             </span>
             <div className="flex w-full items-center gap-2 rounded-full border border-[#e0e0e0] bg-white px-6 py-4 shadow-sm">
-              <p className="flex min-w-0 flex-1 items-center gap-1.5 text-left text-sm text-[#333] md:text-base">
+              <p className="flex min-w-0 flex-1 items-center gap-1.5 text-left text-2xl text-[#333] md:text-base">
                 <RotatingKeyword
                   className="font-semibold text-[#c9846f]"
                   interval={1900}
@@ -240,7 +240,7 @@ export default function Home() {
             grâce à <GoogleColors />
             <span className="text-black">?</span>
           </h2>
-          <p className="mx-auto mt-6 max-w-[480px] text-sm leading-relaxed text-[#666]">
+          <p className="mx-auto mt-6 max-w-[480px] text-2xl leading-relaxed text-[#666]">
             Ancienne commerciale au sein du groupe IAC (Meetic, TripAdvisor,
             Travaux.com), j&apos;applique au digital les mêmes principes qui
             font vendre sur le terrain : comprendre son marché, se
@@ -289,7 +289,7 @@ export default function Home() {
                 <h3 className="min-h-[1.6em] font-heading text-xl">
                   <TypewriterText text={step.title} startDelay={i * 150 + 650} />
                 </h3>
-                <p className="mt-3 text-sm text-white/85">{step.lead}</p>
+                <p className="mt-3 text-2xl text-white/85">{step.lead}</p>
               </div>
               <ul className="flex-1 space-y-2 px-6 py-6 text-sm text-white/85">
                 {step.items.map((item) => (
@@ -330,7 +330,7 @@ export default function Home() {
             <VisibilityChart />
           </div>
           <div className="w-full rounded-2xl bg-[#141414] p-8 text-left text-white md:p-10">
-            <p className="leading-relaxed text-white/85">
+            <p className="leading-relaxed text-white/85 text-2xl">
               Mon métier ne se limite pas à la création de sites web. Il
               consiste à t&apos;aider à{" "}
               <strong className="text-white">
@@ -338,7 +338,7 @@ export default function Home() {
                 activité et attirer de nouveaux clients.
               </strong>
             </p>
-            <p className="mt-4 leading-relaxed text-white/85">
+            <p className="mt-4 leading-relaxed text-white/85 text-2xl">
               <strong className="text-white">
                 Mon rôle est de créer un lien entre ton quotidien
                 d&apos;entrepreneur et les outils digitaux.
@@ -352,7 +352,7 @@ export default function Home() {
                 même lorsque tu n&apos;es pas derrière ton écran.
               </strong>
             </p>
-            <p className="mt-4 leading-relaxed text-white/85">
+            <p className="mt-4 leading-relaxed text-white/85 text-2xl">
               <strong className="text-white">
                 Pour cela j&apos;utilise des outils digitaux les plus adaptés à
                 ton activité
@@ -375,7 +375,7 @@ export default function Home() {
         />
         <FadeUp>
           <div className="mx-auto max-w-[900px] rounded-2xl bg-[#141414] p-8 text-left text-white md:p-10">
-            <p className="text-sm leading-relaxed text-white/90 md:text-base">
+            <p className="text-2xl leading-relaxed text-white/90 md:text-base">
               Tu es libre de continuer avec JWL Marketing, de gérer ta
               communication seul ou de travailler avec un autre prestataire.
               Les outils, les données et le travail réalisé restent les tiens.
@@ -390,7 +390,7 @@ export default function Home() {
                 </li>
               ))}
             </ul>
-            <p className="mt-5 text-sm font-semibold text-white">
+            <p className="mt-5 text-2xl font-semibold text-white">
               Après 12 mois, deux possibilités :
             </p>
             <ul className="mt-2 space-y-2 text-sm text-white/85">

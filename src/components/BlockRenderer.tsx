@@ -24,7 +24,7 @@ function BlockItem({ block }: { block: Block }) {
               {block.title}
             </h1>
             {block.subtitle && (
-              <p className="mt-4 text-base text-[#555]">{block.subtitle}</p>
+              <p className="mt-4 text-2xl text-[#555]">{block.subtitle}</p>
             )}
             {block.buttonText && block.buttonLink && (
               <Link
@@ -88,7 +88,7 @@ function BlockItem({ block }: { block: Block }) {
       return (
         <div className="px-6 py-12 text-center">
           {block.text && (
-            <p className="mx-auto mb-5 max-w-[600px] text-[15px] text-[#555]">
+            <p className="mx-auto mb-5 max-w-[600px] text-2xl text-[#555]">
               {block.text}
             </p>
           )}
@@ -116,7 +116,7 @@ function BlockItem({ block }: { block: Block }) {
               <h3 className="font-heading text-lg font-semibold text-black">
                 {c.title}
               </h3>
-              <p className="mt-2 text-sm text-[#555]">{c.text}</p>
+              <p className="mt-2 text-2xl text-[#555]">{c.text}</p>
             </div>
           ))}
         </div>
@@ -192,11 +192,11 @@ function BlockItem({ block }: { block: Block }) {
                     <Image src={t.avatarUrl} alt={t.name} width={40} height={40} className="h-10 w-10 rounded-full" />
                   )}
                   <div>
-                    <p className="text-sm font-semibold text-black">{t.name}</p>
-                    {t.role && <p className="text-xs text-[#888]">{t.role}</p>}
+                    <p className="text-2xl font-semibold text-black">{t.name}</p>
+                    {t.role && <p className="text-2xl text-[#888]">{t.role}</p>}
                   </div>
                 </div>
-                <p className="mt-3 text-[13px] leading-relaxed text-[#444]">{t.text}</p>
+                <p className="mt-3 text-2xl leading-relaxed text-[#444]">{t.text}</p>
               </div>
             ))}
           </div>
@@ -229,8 +229,8 @@ function BlockItem({ block }: { block: Block }) {
         <div className="mx-auto grid max-w-[1000px] gap-6 px-6 py-10 sm:grid-cols-2 md:grid-cols-4">
           {block.items.map((s, i) => (
             <div key={i} className="text-center">
-              <p className="font-heading text-3xl font-bold text-gold">{s.value}</p>
-              <p className="mt-1 text-xs text-[#555]">{s.label}</p>
+              <p className="font-heading text-2xl font-bold text-gold">{s.value}</p>
+              <p className="mt-1 text-2xl text-[#555]">{s.label}</p>
             </div>
           ))}
         </div>
@@ -255,7 +255,7 @@ function BlockItem({ block }: { block: Block }) {
             <div key={i} className="rounded-2xl border border-neutral-100 bg-white p-6 text-center">
               {it.icon && <div className="mb-2 text-3xl">{it.icon}</div>}
               <h3 className="font-heading text-base font-semibold text-black">{it.title}</h3>
-              <p className="mt-1 text-sm text-[#555]">{it.text}</p>
+              <p className="mt-1 text-2xl text-[#555]">{it.text}</p>
             </div>
           ))}
         </div>
@@ -268,7 +268,7 @@ function BlockItem({ block }: { block: Block }) {
             {"★".repeat(block.value)}
             {"☆".repeat(5 - block.value)}
           </div>
-          {block.label && <p className="mt-1 text-sm text-[#555]">{block.label}</p>}
+          {block.label && <p className="mt-1 text-2xl text-[#555]">{block.label}</p>}
         </div>
       );
 
@@ -283,7 +283,7 @@ function BlockItem({ block }: { block: Block }) {
               <summary className="cursor-pointer font-heading text-base font-medium text-black">
                 {it.title}
               </summary>
-              <p className="mt-2 text-sm leading-relaxed text-[#444]">{it.content}</p>
+              <p className="mt-2 text-2xl leading-relaxed text-[#444]">{it.content}</p>
             </details>
           ))}
         </div>
@@ -292,8 +292,8 @@ function BlockItem({ block }: { block: Block }) {
     case "blockquote":
       return (
         <blockquote className="mx-auto max-w-[700px] border-l-4 border-gold px-6 py-6 text-center">
-          <p className="font-heading text-xl italic text-black">&quot;{block.quote}&quot;</p>
-          {block.author && <p className="mt-2 text-sm text-[#888]">— {block.author}</p>}
+          <p className="font-heading text-2xl italic text-black">&quot;{block.quote}&quot;</p>
+          {block.author && <p className="mt-2 text-2xl text-[#888]">— {block.author}</p>}
         </blockquote>
       );
 
@@ -344,10 +344,10 @@ function BlockItem({ block }: { block: Block }) {
             {block.items.map((it, i) => (
               <div key={i} className="flex items-center justify-between py-3">
                 <div>
-                  <p className="font-medium text-black">{it.name}</p>
-                  {it.description && <p className="text-xs text-[#888]">{it.description}</p>}
+                  <p className="font-medium text-black text-2xl">{it.name}</p>
+                  {it.description && <p className="text-2xl text-[#888]">{it.description}</p>}
                 </div>
-                <p className="font-heading font-semibold text-gold">{it.price}</p>
+                <p className="font-heading font-semibold text-gold text-2xl">{it.price}</p>
               </div>
             ))}
           </div>
@@ -404,10 +404,10 @@ function TabsRender({ items }: { items: { label: string; content: string }[] }) 
     <div className="mx-auto max-w-[800px] px-6 py-8">
       {items.map((it, i) => (
         <div key={i} className="mb-2 rounded-lg border border-neutral-100">
-          <p className="border-b border-neutral-100 px-4 py-2.5 font-heading text-sm font-semibold text-gold">
+          <p className="border-b border-neutral-100 px-4 py-2.5 font-heading text-2xl font-semibold text-gold">
             {it.label}
           </p>
-          <p className="px-4 py-3 text-sm text-[#444]">{it.content}</p>
+          <p className="px-4 py-3 text-2xl text-[#444]">{it.content}</p>
         </div>
       ))}
     </div>

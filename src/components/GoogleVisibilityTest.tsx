@@ -15,10 +15,10 @@ export default function GoogleVisibilityTest() {
 
   return (
     <div className="mx-auto max-w-[600px] rounded-2xl border border-gold bg-white p-8 text-center">
-      <p className="font-heading text-lg font-semibold text-black">
+      <p className="font-heading text-2xl font-semibold text-black">
         Teste ton positionnement Google
       </p>
-      <p className="mt-1 text-sm text-[#888]">
+      <p className="mt-1 text-2xl text-[#888]">
         Entre un mot-clé comme tes clients le feraient (ex : dépannage
         Digne-les-Bains)
       </p>
@@ -42,7 +42,7 @@ export default function GoogleVisibilityTest() {
           Voir sur Google Images
         </button>
       </div>
-      <p className="mt-4 text-xs leading-relaxed text-[#999]">
+      <p className="mt-4 text-2xl leading-relaxed text-[#999]">
         Pour un résultat réel — ouvre d&apos;abord une fenêtre en navigation
         privée (Ctrl + Maj + N sur Chrome ou Ctrl + Maj + P sur Firefox),
         puis reviens taper ton mot-clé ici. Sans ça, Google personnalise les

@@ -219,18 +219,18 @@ function PricingCard({ tier }: { tier: (typeof PRICING_TIERS)[number] }) {
         {tier.title}
       </h3>
       {tier.subtitle && (
-        <p className="mt-1 text-sm font-medium text-white/80">{tier.subtitle}</p>
+        <p className="mt-1 text-2xl font-medium text-white/80">{tier.subtitle}</p>
       )}
-      <p className="mt-2 min-h-[2.5em] italic text-white/90">
+      <p className="mt-2 min-h-[2.5em] italic text-white/90 text-2xl">
         <TypewriterText text={tier.quote} />
       </p>
       {tier.includedFrom && (
-        <p className="mt-4 text-sm uppercase tracking-wide text-gold">
+        <p className="mt-4 text-2xl uppercase tracking-wide text-gold">
           Tout ce qui est inclus dans {tier.includedFrom}
         </p>
       )}
       {tier.lead && (
-        <p className="mt-2 text-sm font-semibold text-white">{tier.lead}</p>
+        <p className="mt-2 text-2xl font-semibold text-white">{tier.lead}</p>
       )}
       <ul className="mt-2 flex-1 space-y-1.5 text-sm text-white/85">
         {tier.items.map((item) => (
@@ -279,7 +279,7 @@ export default function AccompagnementsSection() {
               </h3>
               <div className="mt-4 flex-1 whitespace-pre-line text-sm text-white/85">
                 {item.text}
-                <p className="mt-4 text-sm text-gold">⭐ {item.star}</p>
+                <p className="mt-4 text-2xl text-gold">⭐ {item.star}</p>
               </div>
               {"action" in item && item.action ? (
                 <button
@@ -346,7 +346,7 @@ export default function AccompagnementsSection() {
               </li>
             ))}
           </ul>
-          <p className="mt-6 font-semibold text-gold">{FORMATION_REDACTION.resultLead}</p>
+          <p className="mt-6 font-semibold text-gold text-2xl">{FORMATION_REDACTION.resultLead}</p>
           <ul className="mt-2 space-y-2 text-sm text-white/85">
             {FORMATION_REDACTION.results.map((item) => (
               <li key={item} className="flex gap-2">

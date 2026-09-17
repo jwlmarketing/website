@@ -25,7 +25,7 @@ export default async function TagsPage() {
       </div>
       <div className="card-body-p">
         {tags.length === 0 ? (
-          <p className="empty-msg">Aucun tag pour le moment. Ajoute des tags depuis l&apos;éditeur d&apos;article.</p>
+          <p className="empty-msg text-2xl">Aucun tag pour le moment. Ajoute des tags depuis l&apos;éditeur d&apos;article.</p>
         ) : (
           <div className="tags-cloud">
             {tags.map(([tag, count]) => (
