@@ -31,7 +31,7 @@ const ACCOMPAGNEMENTS = [
       </ul>
     ),
     star: "À partir de 1 200 €",
-    cta: "Explore ma méthodologie",
+    cta: "Créer mon Site Web",
     href: "/site-internet-aix-en-provence",
     ctaStyle: "terracotta" as const,
   },
