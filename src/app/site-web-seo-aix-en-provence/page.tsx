@@ -325,27 +325,27 @@ export default function Page() {
           </p>
         </FadeUp>
         <ScrollReveal delay={150}>
-          <div className="mx-auto mt-10 flex max-w-[700px] items-center justify-center gap-4">
+          <div className="mx-auto mt-10 flex max-w-[1800px] items-center justify-center gap-6">
             <Image
               src="/images/jwl-prospect-message-1.png"
               alt="Message d'un prospect qualifié — JWL Marketing"
               width={220}
               height={440}
-              className="h-auto w-[30%] -rotate-3 rounded-2xl border border-[#eee] object-cover shadow-lg"
+              className="h-auto w-[42%] -rotate-3 object-contain"
             />
             <Image
               src="/images/jwl-prospect-message-2.png"
               alt="Message d'un prospect qualifié — JWL Marketing"
               width={220}
               height={440}
-              className="h-auto w-[36%] rounded-2xl border border-[#eee] object-cover shadow-xl"
+              className="h-auto w-[50%] object-contain"
             />
             <Image
               src="/images/jwl-prospect-message-3.png"
               alt="Message d'un prospect qualifié — JWL Marketing"
               width={220}
               height={440}
-              className="h-auto w-[30%] rotate-3 rounded-2xl border border-[#eee] object-cover shadow-lg"
+              className="h-auto w-[42%] rotate-3 object-contain"
             />
           </div>
         </ScrollReveal>
@@ -549,7 +549,7 @@ export default function Page() {
               alt="Exemple de recommandation IA — JWL Marketing"
               width={339}
               height={317}
-              className="mx-auto h-auto w-full max-w-[340px] rounded-2xl border border-[#eee] object-cover"
+              className="mx-auto h-auto w-full max-w-[340px] object-contain"
             />
           </ScrollReveal>
         </div>
