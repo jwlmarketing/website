@@ -178,7 +178,7 @@ export default function Footer() {
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="https://www.vincenthego.com/consultants-seo/assets/badge/bandeau-consultante-clair.png"
+              src="https://www.vincenthego.com/consultants-seo/assets/badge/bandeau-consultante-sombre.png"
               alt="Consultante de qualité référencée sur la SEO Map"
               width={300}
               height={81}
