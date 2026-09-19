@@ -13,6 +13,7 @@ export default function NewsletterCta() {
   const isParis = bare === "/consultant-freelance-seo-paris-jwl-marketing";
   const isMarseille = bare === "/consultant-freelance-seo-marseille-jwl-marketing";
   const isCreationSite = bare === "/site-internet-aix-en-provence";
+  const isSiteWebSeo = bare === "/site-web-seo-aix-en-provence";
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "sending" | "ok" | "error">("idle");
   const [message, setMessage] = useState("");
@@ -86,7 +87,9 @@ export default function NewsletterCta() {
                     ? "Et toi? Quand est ce que tu t'engages pour ton Business sur Marseille?"
                     : isCreationSite
                       ? "Prêt(e) à ne plus dépendre de personne ?"
-                      : "Prêt à transformer ton site web en machine à clients ?"}
+                      : isSiteWebSeo
+                        ? "Prêt(e) à avoir plus de clients ?"
+                        : "Prêt à transformer ton site web en machine à clients ?"}
         </h2>
         <form
           onSubmit={handleSubmit}
