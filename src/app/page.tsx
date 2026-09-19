@@ -216,6 +216,7 @@ export default function Home() {
           </Link>
         </div>
 
+
       {/* La méthode */}
       <section className="px-[5%] py-16 text-center">
         <SectionHeading kicker="La méthode" title="JWL MARKETING" />
