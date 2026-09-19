@@ -95,11 +95,11 @@ const HTML_FR = `
 }
 
 .jwl-id-card .card-desc {
-  font-size:14px;
+  font-size:18px;
   color:#bbbbbb;
   line-height:1.6;
   margin:0;
-  text-align:left;
+  text-align:justify;
 }
 
 .jwl-id-card ul {
@@ -349,11 +349,11 @@ const HTML_EN = `
 }
 
 .jwl-id-card .card-desc {
-  font-size:14px;
+  font-size:18px;
   color:#bbbbbb;
   line-height:1.6;
   margin:0;
-  text-align:left;
+  text-align:justify;
 }
 
 .jwl-id-card ul {

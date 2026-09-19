@@ -180,7 +180,7 @@ export default function Home() {
             kicker="Choose the support"
             title="that fits your project"
             subtext={
-              <span className="block text-justify">
+              <span className="block text-justify text-lg text-black/85">
                 Your business evolves, and so do your needs. Start with a
                 professional website, grow your visibility on Google, attract
                 more prospects, or strengthen your sales development with
@@ -220,7 +220,7 @@ export default function Home() {
                 <h3 className="min-h-[1.6em] font-heading text-xl">
                   <TypewriterText text={step.title} startDelay={i * 150 + 650} />
                 </h3>
-                <p className="mt-3 text-sm text-white/85">{step.lead}</p>
+                <p className="mt-3 text-justify text-lg text-white/85">{step.lead}</p>
               </div>
               <ul className="flex-1 space-y-2 px-6 py-6 text-sm text-white/85">
                 {step.items.map((item) => (

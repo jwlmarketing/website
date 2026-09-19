@@ -171,7 +171,7 @@ export default function Home() {
             kicker="Choisis l'accompagnement"
             title="adapté à ton projet"
             subtext={
-              <span className="block text-justify">
+              <span className="block text-justify text-lg text-black/85">
                 Ton entreprise évolue, tes besoins aussi. Commence par un site
                 web professionnel, développe ta visibilité sur Google, attire
                 davantage de prospects ou renforce ton développement
@@ -237,7 +237,7 @@ export default function Home() {
                 <h3 className="min-h-[1.6em] font-heading text-xl">
                   <TypewriterText text={step.title} startDelay={i * 150 + 650} />
                 </h3>
-                <p className="mt-3 text-sm text-white/85">{step.lead}</p>
+                <p className="mt-3 text-justify text-lg text-white/85">{step.lead}</p>
               </div>
               <ul className="flex-1 space-y-2 px-6 py-6 text-sm text-white/85">
                 {step.items.map((item) => (
