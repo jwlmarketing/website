@@ -60,16 +60,6 @@ const METHODE_STEPS = [
   },
 ];
 
-const ET_APRES_ITEMS = [
-  "Ton site web t'appartient.",
-  "Tu conserves tous tes identifiants et mots de passe.",
-  "Ton espace client reste accessible à tout moment.",
-  "Tes devis, factures et documents restent disponibles.",
-  "Tes comptes Google et tes outils de suivi restent à ton nom.",
-  "Tu gardes l'accès à Google Search Console pour suivre ta visibilité et ton trafic.",
-  "Tu conserves l'historique et les actions mises en place pendant notre collaboration.",
-];
-
 export default function Home() {
   return (
     <div>
@@ -306,27 +296,6 @@ export default function Home() {
               Chez JWL Marketing, tu conserves l&apos;ensemble de tes accès et
               de tes outils.
             </p>
-            <ul className="mt-5 space-y-2 text-sm text-white/85">
-              {ET_APRES_ITEMS.map((item) => (
-                <li key={item} className="flex gap-2">
-                  <span className="text-gold">✔</span>
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-            <p className="mt-5 text-sm font-semibold text-white">
-              Après 12 mois, deux possibilités :
-            </p>
-            <ul className="mt-2 space-y-2 text-sm text-white/85">
-              <li className="flex gap-2">
-                <span className="text-gold">✔</span>
-                <span>Nous continuons à développer ta visibilité ensemble.</span>
-              </li>
-              <li className="flex gap-2">
-                <span className="text-gold">✔</span>
-                <span>Tu poursuis en totale autonomie avec toutes les clés en main.</span>
-              </li>
-            </ul>
           </div>
           <Image
             src="/images/jwl-et-apres-jwl-marketing.png"
