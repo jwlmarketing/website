@@ -253,56 +253,50 @@ export default function Home() {
         <SectionHeading
           kicker="Your visibility"
           title="grows thanks to the clients your website generates."
+          titleClassName="relative block w-full px-2 font-heading text-2xl font-medium not-italic leading-[1.25] text-black md:px-10 md:text-[34px] md:leading-[1.35]"
         />
 
         <FadeUp className="mx-auto flex max-w-[1200px] flex-col items-center gap-10 md:flex-row-reverse md:items-stretch">
           <div className="flex w-full shrink-0 items-center justify-center md:w-auto">
             <VisibilityChart />
           </div>
-          <div className="w-full rounded-2xl bg-[#141414] p-8 text-left text-white md:p-10">
-            <p className="leading-relaxed text-white/85">
+          <div className="w-full rounded-2xl p-8 text-left text-black md:p-10">
+            <p className="text-justify text-lg leading-relaxed text-black/85">
               My job isn&apos;t limited to building websites. It&apos;s about
-              helping you{" "}
-              <strong className="text-white">
-                build a genuine digital ecosystem to grow your business and
-                attract new clients.
-              </strong>
+              helping you build a genuine digital ecosystem to grow your
+              business and attract new clients.
             </p>
-            <p className="mt-4 leading-relaxed text-white/85">
-              <strong className="text-white">
-                My role is to create a link between your everyday life as an
-                entrepreneur and digital tools.
-              </strong>{" "}
-              Whether you&apos;re prospecting, attending trade shows, or out
-              in the field,{" "}
-              <strong className="text-white">
-                the goal is to keep your business visible and generating
-                opportunities, even when you&apos;re not behind a screen.
-              </strong>
+            <p className="mt-4 text-justify text-lg leading-relaxed text-black/85">
+              My role is to create a link between your everyday life as an
+              entrepreneur and digital tools. Whether you&apos;re
+              prospecting, attending trade shows, or out in the field, the
+              goal is to keep your business visible and generating
+              opportunities, even when you&apos;re not behind a screen.
             </p>
-            <p className="mt-4 leading-relaxed text-white/85">
-              <strong className="text-white">
-                To do this I use the digital tools best suited to your
-                business
-              </strong>
-              : optimised website, search engine optimisation (SEO), Google
-              Business Profile, content, articles, blog, AI, and other
-              visibility levers.{" "}
-              <strong className="text-white">
-                Every action is designed to strengthen your online presence,
-                build your credibility and help you win new clients.
-              </strong>
+            <p className="mt-4 text-justify text-lg leading-relaxed text-black/85">
+              To do this I use the digital tools best suited to your
+              business: optimised website, search engine optimisation (SEO),
+              Google Business Profile, content, articles, blog, AI, and other
+              visibility levers. Every action is designed to strengthen your
+              online presence, build your credibility and help you win new
+              clients.
             </p>
           </div>
         </FadeUp>
 
         <SectionHeading
           kicker="What's next?"
-          title="we keep going together, or on your own"
+          title={
+            <>
+              we keep going together,
+              <br />
+              or on your own
+            </>
+          }
         />
         <FadeUp>
-          <div className="mx-auto max-w-[900px] rounded-2xl bg-[#141414] p-8 text-left text-white md:p-10">
-            <p className="text-sm leading-relaxed text-white/90 md:text-base">
+          <div className="mx-auto max-w-[900px] rounded-2xl p-8 text-left text-black md:p-10">
+            <p className="text-justify text-sm leading-relaxed text-black/85 md:text-base">
               You&apos;re free to keep working with JWL Marketing, manage
               your communication on your own, or work with another provider.
               The tools, the data and the work delivered remain yours. At JWL

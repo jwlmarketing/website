@@ -6,12 +6,14 @@ export default function SectionHeading({
   accent,
   subtext,
   children,
+  titleClassName,
 }: {
   kicker?: string;
-  title: string;
+  title: ReactNode;
   accent?: string;
   subtext?: ReactNode;
   children?: ReactNode;
+  titleClassName?: string;
 }) {
   return (
     <div className="mx-auto my-10 w-full max-w-[1400px] px-5 text-center md:my-[60px]">
@@ -23,7 +25,12 @@ export default function SectionHeading({
           {kicker}
         </p>
       )}
-      <h2 className="relative block w-full px-2 font-heading text-3xl font-medium not-italic leading-[1.25] text-black md:px-10 md:text-[54px] md:leading-[1.35]">
+      <h2
+        className={
+          titleClassName ??
+          "relative block w-full px-2 font-heading text-3xl font-medium not-italic leading-[1.25] text-black md:px-10 md:text-[54px] md:leading-[1.35]"
+        }
+      >
         {title}
         {children}
         {accent && <span className="not-italic text-[#c9846f]"> {accent}</span>}

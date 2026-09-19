@@ -245,59 +245,54 @@ export default function Home() {
         <SectionHeading
           kicker="Ta visibilité"
           title="grandit grâce aux clients que ton site web génère."
+          titleClassName="relative block w-full px-2 font-heading text-2xl font-medium not-italic leading-[1.25] text-black md:px-10 md:text-[34px] md:leading-[1.35]"
         />
 
         <FadeUp className="mx-auto flex max-w-[1200px] flex-col items-center gap-10 md:flex-row-reverse md:items-stretch">
           <div className="flex w-full shrink-0 items-center justify-center md:w-auto">
             <VisibilityChart />
           </div>
-          <div className="w-full rounded-2xl bg-[#141414] p-8 text-left text-white md:p-10">
-            <p className="leading-relaxed text-white/85">
+          <div className="w-full rounded-2xl p-8 text-left text-black md:p-10">
+            <p className="text-justify text-lg leading-relaxed text-black/85">
               Mon métier ne se limite pas à la création de sites web. Il
-              consiste à t&apos;aider à{" "}
-              <strong className="text-white">
-                construire un véritable écosystème digital pour développer ton
-                activité et attirer de nouveaux clients.
-              </strong>
+              consiste à t&apos;aider à construire un véritable écosystème
+              digital pour développer ton activité et attirer de nouveaux
+              clients.
             </p>
-            <p className="mt-4 leading-relaxed text-white/85">
-              <strong className="text-white">
-                Mon rôle est de créer un lien entre ton quotidien
-                d&apos;entrepreneur et les outils digitaux.
-              </strong>{" "}
-              Que ce soit lors de tes actions de prospection, de ta
-              participation à des salons professionnels ou de ton activité sur
-              le terrain,{" "}
-              <strong className="text-white">
-                l&apos;objectif est de faire en sorte que ton entreprise
-                continue d&apos;être visible et de générer des opportunités,
-                même lorsque tu n&apos;es pas derrière ton écran.
-              </strong>
+            <p className="mt-4 text-justify text-lg leading-relaxed text-black/85">
+              Mon rôle est de créer un lien entre ton quotidien
+              d&apos;entrepreneur et les outils digitaux. Que ce soit lors de
+              tes actions de prospection, de ta participation à des salons
+              professionnels ou de ton activité sur le terrain,
+              l&apos;objectif est de faire en sorte que ton entreprise
+              continue d&apos;être visible et de générer des opportunités,
+              même lorsque tu n&apos;es pas derrière ton écran.
             </p>
-            <p className="mt-4 leading-relaxed text-white/85">
-              <strong className="text-white">
-                Pour cela j&apos;utilise des outils digitaux les plus adaptés à
-                ton activité
-              </strong>{" "}
-              : site web optimisé, référencement naturel (SEO), fiche{" "}
+            <p className="mt-4 text-justify text-lg leading-relaxed text-black/85">
+              Pour cela j&apos;utilise des outils digitaux les plus adaptés à
+              ton activité : site web optimisé, référencement naturel (SEO),
+              fiche{" "}
               Google, contenus, articles, blog, IA, et autres leviers
-              de visibilité.{" "}
-              <strong className="text-white">
-                Chaque action est pensée pour renforcer ta présence en ligne,
-                développer ta crédibilité et favoriser l&apos;acquisition de
-                nouveaux clients.
-              </strong>
+              de visibilité. Chaque action est pensée pour renforcer ta
+              présence en ligne, développer ta crédibilité et favoriser
+              l&apos;acquisition de nouveaux clients.
             </p>
           </div>
         </FadeUp>
 
         <SectionHeading
           kicker="Et après ?"
-          title="on poursuit l'aventure ensemble ou en autonomie"
+          title={
+            <>
+              on poursuit l&apos;aventure
+              <br />
+              ensemble ou en autonomie
+            </>
+          }
         />
         <FadeUp>
-          <div className="mx-auto max-w-[900px] rounded-2xl bg-[#141414] p-8 text-left text-white md:p-10">
-            <p className="text-sm leading-relaxed text-white/90 md:text-base">
+          <div className="mx-auto max-w-[900px] rounded-2xl p-8 text-left text-black md:p-10">
+            <p className="text-justify text-sm leading-relaxed text-black/85 md:text-base">
               Tu es libre de continuer avec JWL Marketing, de gérer ta
               communication seul ou de travailler avec un autre prestataire.
               Les outils, les données et le travail réalisé restent les tiens.
