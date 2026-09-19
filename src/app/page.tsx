@@ -15,7 +15,6 @@ import FadeUp from "@/components/FadeUp";
 import TypewriterText from "@/components/TypewriterText";
 import TrustedPartners from "@/components/TrustedPartners";
 import SiteHeader from "@/components/SiteHeader";
-import AccompagnementsSection from "@/components/AccompagnementsSection";
 
 const METHODE_STEPS = [
   {
@@ -220,15 +219,6 @@ export default function Home() {
             </Fragment>
           ))}
         </EscalierReveal>
-      </section>
-
-      {/* Nos accompagnements */}
-      <section className="px-[5%] py-16 text-center">
-        <SectionHeading
-          title="Comment JWL Marketing"
-          accent="peut t'aider ?"
-        />
-        <AccompagnementsSection />
       </section>
 
       {/* Ta visibilité n'est pas une question de hasard */}
