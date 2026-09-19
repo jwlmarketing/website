@@ -104,6 +104,21 @@ export default function MentionsLegales() {
         litige relatif à l&apos;utilisation du site relève de la compétence
         des tribunaux français.
       </p>
+
+      <div className="flex justify-end">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <a
+          href="https://copyright01.com/certificat/A6BF1B13CEC0329DD426EEB79575DEE5"
+          target="_blank"
+          rel="noopener"
+        >
+          <img
+            src="https://copyright01.com/badge/A6BF1B13CEC0329DD426EEB79575DEE5.svg?theme=black&style=minimal"
+            alt="Protected by Copyright01"
+            width={160}
+          />
+        </a>
+      </div>
     </LegalLayout>
   );
 }
