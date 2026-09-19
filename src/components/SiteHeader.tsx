@@ -34,7 +34,7 @@ const TEXT = {
     offers: "Mes offres",
     offerItems: [
       { label: "JWL Business", href: "/site-internet-aix-en-provence" },
-      { label: "JWL Booster", href: "/tarifs" },
+      { label: "JWL Booster", href: "/site-web-seo-aix-en-provence" },
       { label: "JWL Connect", href: "/tarifs" },
       { label: "JWL Prospecte", href: "/developpement-commercial-aix-en-provence" },
     ],

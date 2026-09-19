@@ -24,7 +24,7 @@ const CARDS = {
       image: "/images/croissance-digitale.webp",
       name: "JWL Booster",
       subtitle: "Refonte, pilotage de site web SEO",
-      href: "/tarifs",
+      href: "/site-web-seo-aix-en-provence",
     },
     {
       image: "/images/communication-digitale.webp",

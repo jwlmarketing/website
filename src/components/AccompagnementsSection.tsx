@@ -65,7 +65,7 @@ const ACCOMPAGNEMENTS = [
     ),
     star: "Audit stratégique offert pour tout accompagnement annuel",
     cta: "Découvre le détail de mes accompagnements",
-    action: "pricing" as const,
+    href: "/site-web-seo-aix-en-provence",
     ctaStyle: "terracotta" as const,
   },
   {
