@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 /**
  * Cartes "Choisis l'accompagnement adapté à ton projet" — teaser compact
@@ -10,38 +11,76 @@ import Link from "next/link";
  * AccompagnementsSection, réutilisée ailleurs.
  */
 
-const CARDS = [
-  {
-    image: "/images/strategie-digitale.webp",
-    name: "JWL Business",
-    subtitle: "Création de site web pro",
-    href: "/site-internet-aix-en-provence",
-  },
-  {
-    image: "/images/croissance-digitale.webp",
-    name: "JWL Booster",
-    subtitle: "Refonte, pilotage de site web SEO",
-    href: "/tarifs",
-  },
-  {
-    image: "/images/communication-digitale.webp",
-    name: "JWL Connect",
-    subtitle: "Rédige ton blog avec du SEO",
-    href: "/tarifs",
-  },
-  {
-    image: "/images/transformation-digitale.webp",
-    name: "JWL Prospecte",
-    subtitle: "Développement commercial",
-    href: "/developpement-commercial-aix-en-provence",
-  },
-];
+const CARDS = {
+  fr: [
+    {
+      image: "/images/strategie-digitale.webp",
+      name: "JWL Business",
+      subtitle: "Création de site web pro",
+      href: "/site-internet-aix-en-provence",
+    },
+    {
+      image: "/images/croissance-digitale.webp",
+      name: "JWL Booster",
+      subtitle: "Refonte, pilotage de site web SEO",
+      href: "/tarifs",
+    },
+    {
+      image: "/images/communication-digitale.webp",
+      name: "JWL Connect",
+      subtitle: "Rédige ton blog avec du SEO",
+      href: "/tarifs",
+    },
+    {
+      image: "/images/transformation-digitale.webp",
+      name: "JWL Prospecte",
+      subtitle: "Développement commercial",
+      href: "/developpement-commercial-aix-en-provence",
+    },
+  ],
+  en: [
+    {
+      image: "/images/strategie-digitale.webp",
+      name: "JWL Business",
+      subtitle: "Professional website creation",
+      href: "/en/site-internet-aix-en-provence",
+    },
+    {
+      image: "/images/croissance-digitale.webp",
+      name: "JWL Booster",
+      subtitle: "Redesign and SEO website management",
+      href: "/en/tarifs",
+    },
+    {
+      image: "/images/communication-digitale.webp",
+      name: "JWL Connect",
+      subtitle: "Write your blog with SEO",
+      href: "/en/tarifs",
+    },
+    {
+      image: "/images/transformation-digitale.webp",
+      name: "JWL Prospecte",
+      subtitle: "Business development",
+      href: "/en/developpement-commercial-aix-en-provence",
+    },
+  ],
+};
+
+const CTA = {
+  fr: { label: "Découvrir les différences", href: "/tarifs" },
+  en: { label: "Discover the differences", href: "/en/tarifs" },
+};
 
 export default function AccompagnementsTeaser() {
+  const pathname = usePathname();
+  const locale = pathname?.startsWith("/en") ? "en" : "fr";
+  const cards = CARDS[locale];
+  const cta = CTA[locale];
+
   return (
     <div className="mx-auto max-w-[1200px]">
       <div className="grid grid-cols-2 gap-5 md:grid-cols-4">
-        {CARDS.map((card) => (
+        {cards.map((card) => (
           <Link
             key={card.name}
             href={card.href}
@@ -71,10 +110,10 @@ export default function AccompagnementsTeaser() {
 
       <div className="mt-10 flex justify-center">
         <Link
-          href="/tarifs"
+          href={cta.href}
           className="inline-block rounded-full bg-[#c9846f] px-9 py-3.5 text-sm font-medium text-white transition-colors hover:bg-[#b8735f]"
         >
-          Découvrir les différences
+          {cta.label}
         </Link>
       </div>
     </div>
