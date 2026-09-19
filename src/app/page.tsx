@@ -143,7 +143,7 @@ export default function Home() {
             grâce à <GoogleColors />
             <span className="text-black">?</span>
           </h2>
-          <p className="mx-auto mt-6 max-w-[480px] text-justify text-sm leading-relaxed text-[#666]">
+          <p className="mx-auto mt-6 max-w-[480px] text-justify text-lg leading-relaxed text-black/85">
             Ancienne commerciale au sein du groupe IAC (Meetic, TripAdvisor,
             Travaux.com), j&apos;applique au digital les mêmes principes qui
             font vendre sur le terrain : comprendre son marché, se
@@ -194,7 +194,7 @@ export default function Home() {
         {/* Besoin d'aller plus loin ? */}
         <FadeUp>
           <SectionHeading title="Besoin d'aller plus loin ?" />
-          <p className="mx-auto max-w-[720px] text-[15px] leading-relaxed text-[#333]">
+          <p className="mx-auto max-w-[720px] text-justify text-lg leading-relaxed text-black/85">
             <strong className="text-black">JWL Connect</strong> : Pour les
             entreprises qui souhaitent publier régulièrement du contenu
             optimisé SEO et renforcer leur visibilité.
@@ -310,7 +310,7 @@ export default function Home() {
         />
         <FadeUp>
           <div className="mx-auto max-w-[900px] rounded-2xl p-8 text-left text-black md:p-10">
-            <p className="text-justify text-sm leading-relaxed text-black/85 md:text-base">
+            <p className="text-justify text-lg leading-relaxed text-black/85">
               Tu es libre de continuer avec JWL Marketing, de gérer ta
               communication seul ou de travailler avec un autre prestataire.
               Les outils, les données et le travail réalisé restent les tiens.

@@ -152,7 +152,7 @@ export default function Home() {
             thanks to <GoogleColors />
             <span className="text-black">?</span>
           </h2>
-          <p className="mx-auto mt-6 max-w-[480px] text-justify text-lg leading-relaxed text-[#666]">
+          <p className="mx-auto mt-6 max-w-[480px] text-justify text-lg leading-relaxed text-black/85">
             Former sales rep at the IAC group (Meetic, TripAdvisor,
             Travaux.com), I apply the same principles that drive sales on the
             ground to digital: understand your market, stand out and
@@ -286,7 +286,7 @@ export default function Home() {
         {/* Want to go further? */}
         <FadeUp>
           <SectionHeading title="Want to go further?" />
-          <p className="mx-auto max-w-[720px] text-lg leading-relaxed text-[#333]">
+          <p className="mx-auto max-w-[720px] text-justify text-lg leading-relaxed text-black/85">
             <strong className="text-black">JWL Connect</strong>: For
             businesses that want to publish SEO-optimised content regularly
             and strengthen their visibility.
