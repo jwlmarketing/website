@@ -184,7 +184,7 @@ export default function Page() {
             <br />
             <span className="font-medium">trafic et de clients</span>
           </h1>
-          <p className="mt-6 text-base leading-[1.6] text-black">
+          <p className="text-justify mt-6 text-2xl leading-[1.5] text-black">
             Pour les entreprises qui ont déjà une offre claire. En 90 jours,
             je pose la stratégie, l&apos;arborescence du site, les pages et
             le tracking google. Ensuite, je pilote mensuellement ton site
