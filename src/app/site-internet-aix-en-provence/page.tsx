@@ -81,8 +81,8 @@ function StepCard({
       <div className="jwl-step-icon mx-auto mt-2 h-8 w-8 text-[#c9846f] transition-transform duration-300 group-hover:scale-125">
         {STEP_ICONS[icon]}
       </div>
-      <p className="jwl-step-title mt-2 font-heading text-lg text-[#c9846f]">{title}</p>
-      <p className="mt-2 text-[13.5px] leading-[20px] text-white/85">{text}</p>
+      <p className="text-justify jwl-step-title mt-2 font-heading text-lg text-[#c9846f]">{title}</p>
+      <p className="text-justify mt-2 text-[13.5px] leading-[20px] text-white/85">{text}</p>
     </div>
   );
 }
@@ -100,7 +100,7 @@ export default function Page() {
             <span className="font-bold"> un site web qui inpire confiance</span>
             <br />
           </h1>
-          <p className="mt-7 text-2xl leading-[1.5] text-black">
+          <p className="text-justify mt-7 text-2xl leading-[1.5] text-black">
             Création ou refonte : je m&apos;occupe de tout. Résultat ? Un site sur mesure pensé pour votre image, vos clients et votre développement commercial.
           </p>
           <ul className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-lg font-semibold text-black">
@@ -179,7 +179,7 @@ export default function Page() {
             <br />
             quand tu peux en être <span className="text-[#c9846f]">propriétaire</span> ?
           </h2>
-          <p className="mx-auto mt-6 max-w-[820px] text-[17px] leading-[26px] text-[#1a1a1a]">
+          <p className="mx-auto mt-6 max-w-[820px] text-justify text-[17px] leading-[26px] text-[#1a1a1a]">
             De nombreux entrepreneurs paient chaque mois une plateforme ou une
             agence sans réellement être propriétaires de leur site web.
             Pourtant, un site internet peut devenir un véritable actif pour
@@ -206,7 +206,7 @@ export default function Page() {
             <br />
             <span className="font-medium">et construis ta visibilité Google demain.</span>
           </h2>
-          <p className="mx-auto mt-6 max-w-[720px] text-[17px] leading-[26px] text-[#1a1a1a]">
+          <p className="text-justify mx-auto mt-6 max-w-[720px] text-[17px] leading-[26px] text-[#1a1a1a]">
             Que tu souhaites simplement une présence en ligne ou construire une
             stratégie de visibilité sur Google, tout commence par un site
             solide.
@@ -225,7 +225,7 @@ export default function Page() {
           <span className="text-[#c9846f]">évoluer</span>{" "}
           <span className="font-medium">avec ton entreprise.</span>
         </h2>
-        <p className="mx-auto mt-6 max-w-[720px] text-[17px] leading-[26px] text-[#1a1a1a]">
+        <p className="text-justify mx-auto mt-6 max-w-[720px] text-[17px] leading-[26px] text-[#1a1a1a]">
           Une base solide, rapide et optimisée selon les bonnes pratiques du
           web. Ton site t&apos;appartient à 100 % et peut évoluer à tout
           moment vers une stratégie SEO, e-commerce ou marketing plus
@@ -487,7 +487,7 @@ export default function Page() {
             />
             <div className="jwl-parachute-shadow" />
           </div>
-          <p className="jwl-landing-text mt-4 font-heading text-lg italic text-[#c9a84c]">
+          <p className="text-justify jwl-landing-text mt-4 font-heading text-lg italic text-[#c9a84c]">
             Bienvenue chez toi. 🎉
           </p>
         </ScrollReveal>
@@ -647,8 +647,8 @@ export default function Page() {
                 <div className="flex items-center gap-5 rounded-2xl bg-[#141414] p-6 text-white">
                   <div className="h-10 w-10 flex-shrink-0 text-[#c9846f]">{item.icon}</div>
                   <div>
-                    <p className="font-heading text-xl text-[#c9846f]">{item.title}</p>
-                    <p className="mt-1 text-sm leading-[21px] text-white/80">{item.text}</p>
+                    <p className="text-justify font-heading text-xl text-[#c9846f]">{item.title}</p>
+                    <p className="text-justify mt-1 text-sm leading-[21px] text-white/80">{item.text}</p>
                   </div>
                 </div>
               </ScrollReveal>
@@ -680,7 +680,7 @@ export default function Page() {
         <div className="mx-auto mt-10 grid max-w-[1000px] gap-8 text-left md:grid-cols-2">
           <ScrollReveal>
             <div className="flex h-full flex-col items-center justify-center gap-4 rounded-2xl bg-[#faf3ea] p-8 text-center">
-              <p className="text-[15px] leading-[22px] text-black">
+              <p className="text-justify text-[15px] leading-[22px] text-black">
                 Une question avant de réserver ? Écris-moi sur WhatsApp, le
                 message est déjà préparé pour aller droit au but.
               </p>
