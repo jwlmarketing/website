@@ -42,13 +42,15 @@ export default function AccompagnementsTeaser() {
             key={card.name}
             className="group relative flex flex-col overflow-hidden rounded-2xl bg-[#15132b] text-white shadow-md transition-all duration-300 ease-out hover:-translate-y-3 hover:scale-105 hover:bg-gold hover:shadow-xl"
           >
-            <div className="relative aspect-square w-full bg-white">
-              <Image
-                src={card.image}
-                alt={card.name}
-                fill
-                className="object-cover"
-              />
+            <div className="p-3">
+              <div className="relative aspect-square w-full overflow-hidden rounded-lg bg-white">
+                <Image
+                  src={card.image}
+                  alt={card.name}
+                  fill
+                  className="object-cover"
+                />
+              </div>
             </div>
             <div className="flex flex-1 flex-col items-center justify-center gap-1 px-3 py-5 text-center">
               <p className="font-heading text-base font-bold uppercase tracking-wide">
