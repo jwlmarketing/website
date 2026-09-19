@@ -83,11 +83,11 @@ export default function AccompagnementsTeaser() {
   const dragging = useRef(false);
 
   useEffect(() => {
-    const id = setInterval(() => {
+    const id = setTimeout(() => {
       setIndex((i) => (i + 1) % cards.length);
     }, 3500);
-    return () => clearInterval(id);
-  }, [cards.length]);
+    return () => clearTimeout(id);
+  }, [index, cards.length]);
 
   function next() {
     setIndex((i) => (i + 1) % cards.length);

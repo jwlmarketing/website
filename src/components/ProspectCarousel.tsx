@@ -17,11 +17,11 @@ export default function ProspectCarousel() {
   const dragging = useRef(false);
 
   useEffect(() => {
-    const id = setInterval(() => {
+    const id = setTimeout(() => {
       setIndex((i) => (i + 1) % IMAGES.length);
     }, 3500);
-    return () => clearInterval(id);
-  }, []);
+    return () => clearTimeout(id);
+  }, [index]);
 
   function next() {
     setIndex((i) => (i + 1) % IMAGES.length);
