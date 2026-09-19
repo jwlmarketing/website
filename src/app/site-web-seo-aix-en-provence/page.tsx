@@ -5,27 +5,7 @@ import ScrollReveal from "@/components/ScrollReveal";
 import Lightbox from "@/components/Lightbox";
 import GoogleColors from "@/components/GoogleColors";
 import ContactForm from "@/components/ContactForm";
-
-const SEO_PROJECTS = [
-  {
-    image: "/images/projet-seo-1.png",
-    name: "Projet en Aix-en-Provence",
-    stat: "3 468",
-    statLabel: "vues sur 6 mois",
-  },
-  {
-    image: "/images/projet-seo-2.png",
-    name: "Projet en Marseille",
-    stat: "1 350",
-    statLabel: "clics sur 6 mois",
-  },
-  {
-    image: "/images/projet-seo-3.png",
-    name: "Projet en cours",
-    stat: "En cours",
-    statLabel: "accompagnement 12 mois",
-  },
-];
+import ProofCards from "@/components/ProofCards";
 
 const FACTEURS_SEO = [
   "De tes produits et services",
@@ -608,25 +588,8 @@ export default function Page() {
           <br />
           <span className="font-medium">qui parlent d&apos;eux-même</span>
         </h2>
-        <div className="mt-10 grid gap-6 md:grid-cols-3">
-          {SEO_PROJECTS.map((project, i) => (
-            <ScrollReveal key={project.name} delay={i * 150}>
-              <div className="relative overflow-hidden rounded-2xl border border-[#eee]">
-                <Image
-                  src={project.image}
-                  alt={project.name}
-                  width={400}
-                  height={280}
-                  className="h-auto w-full object-cover"
-                />
-                <span className="absolute left-3 top-3 rounded-full bg-gold px-3 py-1 text-xs font-bold text-white shadow-md">
-                  {project.stat}
-                </span>
-              </div>
-              <p className="mt-3 text-sm font-semibold text-black">{project.name}</p>
-              <p className="text-xs text-[#777]">{project.statLabel}</p>
-            </ScrollReveal>
-          ))}
+        <div className="mt-10">
+          <ProofCards />
         </div>
       </section>
 
