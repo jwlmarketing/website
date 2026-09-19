@@ -174,6 +174,26 @@ export default function Home() {
         </FadeUp>
       </section>
 
+      {/* Choisis l'accompagnement adapté à ton projet */}
+      <section className="px-[5%] py-16 text-center">
+        <FadeUp>
+          <SectionHeading
+            kicker="Choisis l'accompagnement"
+            title="adapté à ton projet"
+            subtext={
+              <span className="block text-justify">
+                Ton entreprise évolue, tes besoins aussi. Commence par un site
+                web professionnel, développe ta visibilité sur Google, attire
+                davantage de prospects ou renforce ton développement
+                commercial grâce à un accompagnement adapté à chaque étape de
+                ta croissance.
+              </span>
+            }
+          />
+        </FadeUp>
+        <AccompagnementsTeaser />
+      </section>
+
       {/* Pourquoi les entreprises choisissent JWL Marketing */}
       <section className="px-[5%] py-16 text-center">
         <FadeUp>
@@ -220,26 +240,6 @@ export default function Home() {
             </Fragment>
           ))}
         </EscalierReveal>
-      </section>
-
-      {/* Choisis l'accompagnement adapté à ton projet */}
-      <section className="px-[5%] py-16 text-center">
-        <FadeUp>
-          <SectionHeading
-            kicker="Choisis l'accompagnement"
-            title="adapté à ton projet"
-            subtext={
-              <span className="block text-justify">
-                Ton entreprise évolue, tes besoins aussi. Commence par un site
-                web professionnel, développe ta visibilité sur Google, attire
-                davantage de prospects ou renforce ton développement
-                commercial grâce à un accompagnement adapté à chaque étape de
-                ta croissance.
-              </span>
-            }
-          />
-        </FadeUp>
-        <AccompagnementsTeaser />
       </section>
 
       {/* Ta visibilité n'est pas une question de hasard */}
