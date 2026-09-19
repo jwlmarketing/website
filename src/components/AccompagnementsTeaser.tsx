@@ -84,7 +84,7 @@ export default function AccompagnementsTeaser() {
           <Link
             key={card.name}
             href={card.href}
-            className="group relative flex flex-col overflow-hidden rounded-2xl bg-[#15132b] text-white shadow-md transition-all duration-300 ease-out hover:-translate-y-3 hover:scale-105 hover:bg-gold hover:shadow-xl"
+            className="group relative flex flex-col overflow-hidden rounded-2xl bg-black text-white shadow-md transition-all duration-300 ease-out hover:-translate-y-3 hover:scale-105 hover:bg-gold hover:shadow-xl"
           >
             <div className="p-3">
               <div className="relative aspect-square w-full overflow-hidden rounded-lg bg-white">
