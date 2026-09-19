@@ -42,7 +42,7 @@ export default function AccompagnementsTeaser() {
             key={card.name}
             className="group relative flex flex-col overflow-hidden rounded-2xl bg-[#15132b] text-white shadow-md transition-all duration-300 ease-out hover:-translate-y-3 hover:scale-105 hover:bg-gold hover:shadow-xl"
           >
-            <div className="relative aspect-[4/5] w-full bg-white/5">
+            <div className="relative aspect-square w-full bg-white">
               <Image
                 src={card.image}
                 alt={card.name}
