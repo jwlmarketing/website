@@ -81,9 +81,11 @@ export default function SiteHeader({
     <div className="sticky top-0 z-50 flex w-full justify-center px-[5%] pt-4">
       <div
         className={`w-full transition-all duration-300 ease-out ${
-          scrolled
-            ? "max-w-[900px] rounded-full bg-white/95 px-6 py-2.5 shadow-[0_8px_24px_rgba(0,0,0,0.12)] backdrop-blur"
-            : "max-w-[1400px] rounded-full bg-white/80 px-2 py-2 shadow-[0_8px_24px_rgba(0,0,0,0.06)] backdrop-blur"
+          mobileOpen
+            ? "max-w-[480px] rounded-3xl bg-white px-4 py-3 shadow-[0_8px_24px_rgba(0,0,0,0.12)] lg:max-w-[1400px] lg:rounded-full lg:px-2 lg:py-2"
+            : scrolled
+              ? "max-w-[480px] rounded-full bg-white/95 px-6 py-2.5 shadow-[0_8px_24px_rgba(0,0,0,0.12)] backdrop-blur lg:max-w-[900px]"
+              : "max-w-[480px] rounded-full bg-transparent px-2 py-2 lg:max-w-[1400px]"
         }`}
       >
         <div className="flex items-center justify-between">
