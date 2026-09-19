@@ -14,6 +14,7 @@ import EscalierReveal from "@/components/EscalierReveal";
 import FadeUp from "@/components/FadeUp";
 import TypewriterText from "@/components/TypewriterText";
 import TrustedPartners from "@/components/TrustedPartners";
+import AccompagnementsTeaser from "@/components/AccompagnementsTeaser";
 import SiteHeader from "@/components/SiteHeader";
 
 const METHODE_STEPS = [
@@ -219,6 +220,18 @@ export default function Home() {
             </Fragment>
           ))}
         </EscalierReveal>
+      </section>
+
+      {/* Choisis l'accompagnement adapté à ton projet */}
+      <section className="px-[5%] py-16 text-center">
+        <FadeUp>
+          <SectionHeading
+            kicker="Choisis l'accompagnement"
+            title="adapté à ton projet"
+            subtext="Ton entreprise évolue, tes besoins aussi. Commence par un site web professionnel, développe ta visibilité sur Google, attire davantage de prospects ou renforce ton développement commercial grâce à un accompagnement adapté à chaque étape de ta croissance."
+          />
+        </FadeUp>
+        <AccompagnementsTeaser />
       </section>
 
       {/* Ta visibilité n'est pas une question de hasard */}
