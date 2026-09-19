@@ -152,7 +152,7 @@ export default function Home() {
             thanks to <GoogleColors />
             <span className="text-black">?</span>
           </h2>
-          <p className="mx-auto mt-6 max-w-[480px] text-sm leading-relaxed text-[#666]">
+          <p className="mx-auto mt-6 max-w-[480px] text-justify text-sm leading-relaxed text-[#666]">
             Former sales rep at the IAC group (Meetic, TripAdvisor,
             Travaux.com), I apply the same principles that drive sales on the
             ground to digital: understand your market, stand out and

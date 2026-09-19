@@ -233,7 +233,7 @@ export default function Page() {
             href="https://www.vincenthego.com/consultants-seo/#fiche-jwl-marketing-aix-en-provence"
             target="_blank"
             rel="noopener"
-            className="absolute left-1/2 top-[12%] w-[35%] max-w-[110px] -translate-x-1/2"
+            className="absolute left-1/2 top-[60%] w-[35%] max-w-[110px] -translate-x-1/2"
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
