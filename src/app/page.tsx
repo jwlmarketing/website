@@ -194,14 +194,6 @@ export default function Home() {
         <AccompagnementsTeaser />
       </section>
 
-      {/* Pourquoi les entreprises choisissent JWL Marketing */}
-      <section className="px-[5%] py-16 text-center">
-        <FadeUp>
-          <SectionHeading kicker="Pourquoi les entreprises choisissent" title="JWL MARKETING ?" />
-        </FadeUp>
-        <GuaranteesCards />
-      </section>
-
       {/* La méthode */}
       <section className="px-[5%] py-16 text-center">
         <SectionHeading kicker="La méthode" title="JWL MARKETING" />
@@ -240,6 +232,14 @@ export default function Home() {
             </Fragment>
           ))}
         </EscalierReveal>
+      </section>
+
+      {/* Pourquoi les entreprises choisissent JWL Marketing */}
+      <section className="px-[5%] py-16 text-center">
+        <FadeUp>
+          <SectionHeading kicker="Pourquoi les entreprises choisissent" title="JWL MARKETING ?" />
+        </FadeUp>
+        <GuaranteesCards />
       </section>
 
       {/* Ta visibilité n'est pas une question de hasard */}
