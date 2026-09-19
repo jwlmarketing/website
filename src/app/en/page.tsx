@@ -283,31 +283,7 @@ export default function Home() {
           </div>
         </FadeUp>
 
-        <SectionHeading
-          kicker="What's next?"
-          title="we keep going together, or on your own"
-        />
-        <FadeUp>
-          <div className="mx-auto max-w-[900px] rounded-2xl p-8 text-left text-black md:p-10">
-            <p className="text-justify text-sm leading-relaxed text-black/85 md:text-base">
-              You&apos;re free to keep working with JWL Marketing, manage
-              your communication on your own, or work with another provider.
-              The tools, the data and the work delivered remain yours. At JWL
-              Marketing, you keep all your accesses and tools.
-            </p>
-          </div>
-          <Image
-            src="/images/jwl-et-apres-jwl-marketing.png"
-            alt="JWL Marketing - we keep going together"
-            width={900}
-            height={450}
-            className="mx-auto mt-8 h-auto w-full max-w-[500px] object-contain"
-          />
-        </FadeUp>
-      </section>
-
-      {/* Want to go further? */}
-      <section className="px-[5%] py-16 text-center">
+        {/* Want to go further? */}
         <FadeUp>
           <SectionHeading title="Want to go further?" />
           <p className="mx-auto max-w-[720px] text-[15px] leading-relaxed text-[#333]">
@@ -331,6 +307,28 @@ export default function Home() {
             Start my project
           </Link>
         </div>
+
+        <SectionHeading
+          kicker="What's next?"
+          title="we keep going together, or on your own"
+        />
+        <FadeUp>
+          <div className="mx-auto max-w-[900px] rounded-2xl p-8 text-left text-black md:p-10">
+            <p className="text-justify text-sm leading-relaxed text-black/85 md:text-base">
+              You&apos;re free to keep working with JWL Marketing, manage
+              your communication on your own, or work with another provider.
+              The tools, the data and the work delivered remain yours. At JWL
+              Marketing, you keep all your accesses and tools.
+            </p>
+          </div>
+          <Image
+            src="/images/jwl-et-apres-jwl-marketing.png"
+            alt="JWL Marketing - we keep going together"
+            width={900}
+            height={450}
+            className="mx-auto mt-8 h-auto w-full max-w-[500px] object-contain"
+          />
+        </FadeUp>
       </section>
 
       {/* Testimonials */}

@@ -279,32 +279,7 @@ export default function Home() {
           </div>
         </FadeUp>
 
-        <SectionHeading
-          kicker="Et après ?"
-          title="on poursuit l'aventure ensemble ou en autonomie"
-        />
-        <FadeUp>
-          <div className="mx-auto max-w-[900px] rounded-2xl p-8 text-left text-black md:p-10">
-            <p className="text-justify text-sm leading-relaxed text-black/85 md:text-base">
-              Tu es libre de continuer avec JWL Marketing, de gérer ta
-              communication seul ou de travailler avec un autre prestataire.
-              Les outils, les données et le travail réalisé restent les tiens.
-              Chez JWL Marketing, tu conserves l&apos;ensemble de tes accès et
-              de tes outils.
-            </p>
-          </div>
-          <Image
-            src="/images/jwl-et-apres-jwl-marketing.png"
-            alt="JWL Marketing - on poursuit l'aventure ensemble"
-            width={900}
-            height={450}
-            className="mx-auto mt-8 h-auto w-full max-w-[500px] object-contain"
-          />
-        </FadeUp>
-      </section>
-
-      {/* Besoin d'aller plus loin ? */}
-      <section className="px-[5%] py-16 text-center">
+        {/* Besoin d'aller plus loin ? */}
         <FadeUp>
           <SectionHeading title="Besoin d'aller plus loin ?" />
           <p className="mx-auto max-w-[720px] text-[15px] leading-relaxed text-[#333]">
@@ -328,6 +303,29 @@ export default function Home() {
             Lancer mon projet
           </Link>
         </div>
+
+        <SectionHeading
+          kicker="Et après ?"
+          title="on poursuit l'aventure ensemble ou en autonomie"
+        />
+        <FadeUp>
+          <div className="mx-auto max-w-[900px] rounded-2xl p-8 text-left text-black md:p-10">
+            <p className="text-justify text-sm leading-relaxed text-black/85 md:text-base">
+              Tu es libre de continuer avec JWL Marketing, de gérer ta
+              communication seul ou de travailler avec un autre prestataire.
+              Les outils, les données et le travail réalisé restent les tiens.
+              Chez JWL Marketing, tu conserves l&apos;ensemble de tes accès et
+              de tes outils.
+            </p>
+          </div>
+          <Image
+            src="/images/jwl-et-apres-jwl-marketing.png"
+            alt="JWL Marketing - on poursuit l'aventure ensemble"
+            width={900}
+            height={450}
+            className="mx-auto mt-8 h-auto w-full max-w-[500px] object-contain"
+          />
+        </FadeUp>
       </section>
 
       {/* Témoignages */}
