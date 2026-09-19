@@ -109,7 +109,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="flex h-[170px] w-full flex-1 items-start justify-center sm:h-[380px] lg:h-[460px] lg:justify-end">
+        <div className="hidden w-full flex-1 items-start justify-center sm:flex sm:h-[380px] lg:h-[460px] lg:justify-end">
           <div className="relative h-full w-auto">
             <video
               src="/videos/hero-jodie-etoile.mp4"
