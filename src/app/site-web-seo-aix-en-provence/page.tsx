@@ -6,6 +6,7 @@ import Lightbox from "@/components/Lightbox";
 import GoogleColors from "@/components/GoogleColors";
 import ContactForm from "@/components/ContactForm";
 import ProofCards from "@/components/ProofCards";
+import ProspectCarousel from "@/components/ProspectCarousel";
 import FadeUp from "@/components/FadeUp";
 import RotatingKeyword from "@/components/RotatingKeyword";
 
@@ -325,29 +326,7 @@ export default function Page() {
           </p>
         </FadeUp>
         <ScrollReveal delay={150}>
-          <div className="mx-auto mt-10 flex max-w-[1800px] items-center justify-center gap-6">
-            <Image
-              src="/images/jwl-prospect-message-1.png"
-              alt="Message d'un prospect qualifié — JWL Marketing"
-              width={220}
-              height={440}
-              className="h-auto w-[42%] -rotate-3 object-contain"
-            />
-            <Image
-              src="/images/jwl-prospect-message-2.png"
-              alt="Message d'un prospect qualifié — JWL Marketing"
-              width={220}
-              height={440}
-              className="h-auto w-[50%] object-contain"
-            />
-            <Image
-              src="/images/jwl-prospect-message-3.png"
-              alt="Message d'un prospect qualifié — JWL Marketing"
-              width={220}
-              height={440}
-              className="h-auto w-[42%] rotate-3 object-contain"
-            />
-          </div>
+          <ProspectCarousel />
         </ScrollReveal>
       </section>
 
