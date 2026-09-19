@@ -363,7 +363,7 @@ export default function Page() {
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           <ScrollReveal delay={0}>
             <Image
-              src="/images/jwl-methode-comprends-clients.png"
+              src="/images/conception-site-web.png"
               alt="Je comprends comment tes clients te recherchent — JWL Marketing"
               width={466}
               height={346}
@@ -381,7 +381,7 @@ export default function Page() {
           </ScrollReveal>
           <ScrollReveal delay={150}>
             <Image
-              src="/images/jwl-methode-cree-site.png"
+              src="/images/site-web-sur-mesure.png"
               alt="Je crée un site web pensé pour être trouvé — JWL Marketing"
               width={466}
               height={344}
