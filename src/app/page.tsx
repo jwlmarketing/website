@@ -189,7 +189,7 @@ export default function Home() {
         <SectionHeading kicker="La méthode" title="JWL MARKETING" />
         <EscalierReveal
           className="mx-auto grid max-w-[1200px] gap-6 md:grid-cols-3"
-          itemClassName="flex flex-col overflow-hidden rounded-2xl bg-black text-white"
+          itemClassName="flex flex-col overflow-hidden rounded-2xl bg-black text-white transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
         >
           {METHODE_STEPS.map((step, i) => (
             <Fragment key={step.title}>
