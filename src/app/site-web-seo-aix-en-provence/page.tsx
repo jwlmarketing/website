@@ -220,14 +220,32 @@ export default function Page() {
             </a>
           </div>
         </div>
-        <Image
-          src="/images/hero-site-web-seo-duo.png"
-          alt="Jodie Lapaillerie — Site web SEO JWL Marketing"
-          width={612}
-          height={752}
-          priority
-          className="h-auto w-full max-w-[460px] object-contain"
-        />
+        <div className="relative w-full max-w-[460px]">
+          <Image
+            src="/images/hero-site-web-seo-duo.png"
+            alt="Jodie Lapaillerie — Site web SEO JWL Marketing"
+            width={612}
+            height={752}
+            priority
+            className="h-auto w-full object-contain"
+          />
+          <a
+            href="https://www.vincenthego.com/consultants-seo/#fiche-jwl-marketing-aix-en-provence"
+            target="_blank"
+            rel="noopener"
+            className="absolute left-1/2 top-[12%] w-[35%] max-w-[110px] -translate-x-1/2"
+          >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="https://www.vincenthego.com/consultants-seo/assets/badge/medaille-consultante.png"
+              alt="Consultante de qualité référencée sur la SEO Map"
+              width={160}
+              height={178}
+              loading="lazy"
+              style={{ height: "auto", maxWidth: "100%" }}
+            />
+          </a>
+        </div>
       </div>
 
       {/* Quand un client recherche ton métier, apparais-tu ? */}
