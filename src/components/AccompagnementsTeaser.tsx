@@ -8,29 +8,26 @@ import Link from "next/link";
  * affiché sur la homepage, avec effet hover (carte qui s'élève, grandit et
  * devient dorée). Le détail complet (checklist, tarifs, modales) reste dans
  * AccompagnementsSection, réutilisée ailleurs.
- *
- * TODO Wyatt : remplacer `image: null` par le vrai chemin (ex.
- * "/images/jwl-business-duo.png") dès que les 4 photos sont fournies.
  */
 
 const CARDS = [
   {
-    image: null as string | null,
+    image: "/images/strategie-digitale.webp",
     name: "JWL Business",
     subtitle: "Création de site web pro",
   },
   {
-    image: null as string | null,
+    image: "/images/croissance-digitale.webp",
     name: "JWL Booster",
     subtitle: "Refonte, pilotage de site web SEO",
   },
   {
-    image: null as string | null,
+    image: "/images/communication-digitale.webp",
     name: "JWL Connect",
     subtitle: "Rédige ton blog avec du SEO",
   },
   {
-    image: null as string | null,
+    image: "/images/transformation-digitale.webp",
     name: "JWL Prospecte",
     subtitle: "Développement commercial",
   },
@@ -46,21 +43,12 @@ export default function AccompagnementsTeaser() {
             className="group relative flex flex-col overflow-hidden rounded-2xl bg-[#15132b] text-white shadow-md transition-all duration-300 ease-out hover:-translate-y-3 hover:scale-105 hover:bg-gold hover:shadow-xl"
           >
             <div className="relative aspect-[4/5] w-full bg-white/5">
-              {card.image ? (
-                <Image
-                  src={card.image}
-                  alt={card.name}
-                  fill
-                  className="object-cover"
-                />
-              ) : (
-                <div className="flex h-full w-full items-center justify-center text-3xl font-bold text-white/20">
-                  {card.name
-                    .split(" ")
-                    .map((w) => w[0])
-                    .join("")}
-                </div>
-              )}
+              <Image
+                src={card.image}
+                alt={card.name}
+                fill
+                className="object-cover"
+              />
             </div>
             <div className="flex flex-1 flex-col items-center justify-center gap-1 px-3 py-5 text-center">
               <p className="font-heading text-base font-bold uppercase tracking-wide">
