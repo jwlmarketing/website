@@ -194,7 +194,15 @@ export default function Home() {
             }
           />
         </FadeUp>
-        <AccompagnementsTeaser />
+        <AccompagnementsTeaser pair="primary" />
+        <div className="mt-8 text-center">
+          <Link
+            href="/en/site-internet-aix-en-provence"
+            className="inline-block rounded-full bg-[#c9846f] px-8 py-[15px] font-medium text-white transition-colors hover:bg-[#b8735f]"
+          >
+            Create my website
+          </Link>
+        </div>
       </section>
 
       {/* The method */}
@@ -314,6 +322,33 @@ export default function Home() {
             className="mx-auto mt-8 h-auto w-full max-w-[500px] object-contain"
           />
         </FadeUp>
+      </section>
+
+      {/* Want to go further? */}
+      <section className="px-[5%] py-16 text-center">
+        <FadeUp>
+          <SectionHeading title="Want to go further?" />
+          <p className="mx-auto max-w-[720px] text-[15px] leading-relaxed text-[#333]">
+            <strong className="text-black">JWL Connect</strong>: For
+            businesses that want to publish SEO-optimised content regularly
+            and strengthen their visibility.
+            <br />
+            <strong className="text-black">JWL Prospecte</strong>: For
+            businesses that want to grow their sales acquisition and B2B
+            prospecting.
+          </p>
+        </FadeUp>
+        <div className="mt-10">
+          <AccompagnementsTeaser pair="secondary" />
+        </div>
+        <div className="mt-8 text-center">
+          <Link
+            href="/en/contact-jwl-marketing-aix-en-provence"
+            className="inline-block rounded-full bg-[#c9846f] px-8 py-[15px] font-medium text-white transition-colors hover:bg-[#b8735f]"
+          >
+            Start my project
+          </Link>
+        </div>
       </section>
 
       {/* Testimonials */}

@@ -181,7 +181,15 @@ export default function Home() {
             }
           />
         </FadeUp>
-        <AccompagnementsTeaser />
+        <AccompagnementsTeaser pair="primary" />
+        <div className="mt-8 text-center">
+          <Link
+            href="/site-internet-aix-en-provence"
+            className="inline-block rounded-full bg-[#c9846f] px-8 py-[15px] font-medium text-white transition-colors hover:bg-[#b8735f]"
+          >
+            Créer mon site web
+          </Link>
+        </div>
       </section>
 
       {/* La méthode */}
@@ -305,6 +313,33 @@ export default function Home() {
             className="mx-auto mt-8 h-auto w-full max-w-[500px] object-contain"
           />
         </FadeUp>
+      </section>
+
+      {/* Besoin d'aller plus loin ? */}
+      <section className="px-[5%] py-16 text-center">
+        <FadeUp>
+          <SectionHeading title="Besoin d'aller plus loin ?" />
+          <p className="mx-auto max-w-[720px] text-[15px] leading-relaxed text-[#333]">
+            <strong className="text-black">JWL Connect</strong> : Pour les
+            entreprises qui souhaitent publier régulièrement du contenu
+            optimisé SEO et renforcer leur visibilité.
+            <br />
+            <strong className="text-black">JWL Prospecte</strong> : Pour les
+            entreprises qui souhaitent développer leur acquisition commerciale
+            et leur prospection B2B.
+          </p>
+        </FadeUp>
+        <div className="mt-10">
+          <AccompagnementsTeaser pair="secondary" />
+        </div>
+        <div className="mt-8 text-center">
+          <Link
+            href="/contact-jwl-marketing-aix-en-provence"
+            className="inline-block rounded-full bg-[#c9846f] px-8 py-[15px] font-medium text-white transition-colors hover:bg-[#b8735f]"
+          >
+            Lancer mon projet
+          </Link>
+        </div>
       </section>
 
       {/* Témoignages */}
