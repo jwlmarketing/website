@@ -228,7 +228,15 @@ export default function Home() {
           <SectionHeading
             kicker="Choisis l'accompagnement"
             title="adapté à ton projet"
-            subtext="Ton entreprise évolue, tes besoins aussi. Commence par un site web professionnel, développe ta visibilité sur Google, attire davantage de prospects ou renforce ton développement commercial grâce à un accompagnement adapté à chaque étape de ta croissance."
+            subtext={
+              <span className="block text-justify">
+                Ton entreprise évolue, tes besoins aussi. Commence par un site
+                web professionnel, développe ta visibilité sur Google, attire
+                davantage de prospects ou renforce ton développement
+                commercial grâce à un accompagnement adapté à chaque étape de
+                ta croissance.
+              </span>
+            }
           />
         </FadeUp>
         <AccompagnementsTeaser />

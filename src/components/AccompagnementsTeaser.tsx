@@ -15,21 +15,25 @@ const CARDS = [
     image: "/images/strategie-digitale.webp",
     name: "JWL Business",
     subtitle: "Création de site web pro",
+    href: "/site-internet-aix-en-provence",
   },
   {
     image: "/images/croissance-digitale.webp",
     name: "JWL Booster",
     subtitle: "Refonte, pilotage de site web SEO",
+    href: "/tarifs",
   },
   {
     image: "/images/communication-digitale.webp",
     name: "JWL Connect",
     subtitle: "Rédige ton blog avec du SEO",
+    href: "/tarifs",
   },
   {
     image: "/images/transformation-digitale.webp",
     name: "JWL Prospecte",
     subtitle: "Développement commercial",
+    href: "/developpement-commercial-aix-en-provence",
   },
 ];
 
@@ -38,8 +42,9 @@ export default function AccompagnementsTeaser() {
     <div className="mx-auto max-w-[1200px]">
       <div className="grid grid-cols-2 gap-5 md:grid-cols-4">
         {CARDS.map((card) => (
-          <div
+          <Link
             key={card.name}
+            href={card.href}
             className="group relative flex flex-col overflow-hidden rounded-2xl bg-[#15132b] text-white shadow-md transition-all duration-300 ease-out hover:-translate-y-3 hover:scale-105 hover:bg-gold hover:shadow-xl"
           >
             <div className="p-3">
@@ -60,7 +65,7 @@ export default function AccompagnementsTeaser() {
                 {card.subtitle}
               </p>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
 
