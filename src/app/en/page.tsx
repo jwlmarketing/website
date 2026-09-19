@@ -255,7 +255,7 @@ export default function Home() {
           title="grows thanks to the clients your website generates."
         />
 
-        <FadeUp className="mx-auto flex max-w-[1200px] flex-col items-center gap-10 md:flex-row-reverse md:items-stretch">
+        <FadeUp className="mx-auto flex max-w-[1200px] flex-col items-center gap-10 md:flex-row md:items-stretch">
           <div className="flex w-full shrink-0 items-center justify-center md:w-auto">
             <VisibilityChart />
           </div>
