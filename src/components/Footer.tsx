@@ -12,6 +12,8 @@ const OTHER_PAGES = {
     { href: "/site-web-seo-aix-en-provence", label: "Site web SEO" },
     { href: "/developpement-commercial-aix-en-provence", label: "Développement commercial" },
     { href: "/entrepreneur-aix-en-provence", label: "Indépendants" },
+    { href: "/cas-clients", label: "Cas clients" },
+    { href: "/realisations", label: "Mes réalisations" },
     { href: "/blog", label: "Blog" },
   ],
   en: [
@@ -21,6 +23,8 @@ const OTHER_PAGES = {
     { href: "/en/site-internet-aix-en-provence", label: "Website creation" },
     { href: "/en/developpement-commercial-aix-en-provence", label: "Sales development" },
     { href: "/en/entrepreneur-aix-en-provence", label: "Independent professionals" },
+    { href: "/en/cas-clients", label: "Client case studies" },
+    { href: "/en/realisations", label: "My work" },
     { href: "/en/blog", label: "Blog" },
   ],
 };
