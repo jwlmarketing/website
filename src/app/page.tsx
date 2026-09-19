@@ -143,7 +143,7 @@ export default function Home() {
             grâce à <GoogleColors />
             <span className="text-black">?</span>
           </h2>
-          <p className="mx-auto mt-6 max-w-[480px] text-justify text-lg leading-relaxed text-[#666]">
+          <p className="mx-auto mt-6 max-w-[480px] text-justify text-sm leading-relaxed text-[#666]">
             Ancienne commerciale au sein du groupe IAC (Meetic, TripAdvisor,
             Travaux.com), j&apos;applique au digital les mêmes principes qui
             font vendre sur le terrain : comprendre son marché, se
@@ -191,6 +191,30 @@ export default function Home() {
           </Link>
         </div>
       </section>
+        {/* Besoin d'aller plus loin ? */}
+        <FadeUp>
+          <SectionHeading title="Besoin d'aller plus loin ?" />
+          <p className="mx-auto max-w-[720px] text-[15px] leading-relaxed text-[#333]">
+            <strong className="text-black">JWL Connect</strong> : Pour les
+            entreprises qui souhaitent publier régulièrement du contenu
+            optimisé SEO et renforcer leur visibilité.
+            <br />
+            <strong className="text-black">JWL Prospecte</strong> : Pour les
+            entreprises qui souhaitent développer leur acquisition commerciale
+            et leur prospection B2B.
+          </p>
+        </FadeUp>
+        <div className="mt-10">
+          <AccompagnementsTeaser pair="secondary" />
+        </div>
+        <div className="mt-8 text-center">
+          <Link
+            href="/contact-jwl-marketing-aix-en-provence"
+            className="inline-block rounded-full bg-[#c9846f] px-8 py-[15px] font-medium text-white transition-colors hover:bg-[#b8735f]"
+          >
+            Lancer mon projet
+          </Link>
+        </div>
 
       {/* La méthode */}
       <section className="px-[5%] py-16 text-center">
@@ -279,38 +303,13 @@ export default function Home() {
           </div>
         </FadeUp>
 
-        {/* Besoin d'aller plus loin ? */}
-        <FadeUp>
-          <SectionHeading title="Besoin d'aller plus loin ?" />
-          <p className="mx-auto max-w-[720px] text-lg leading-relaxed text-[#333]">
-            <strong className="text-black">JWL Connect</strong> : Pour les
-            entreprises qui souhaitent publier régulièrement du contenu
-            optimisé SEO et renforcer leur visibilité.
-            <br />
-            <strong className="text-black">JWL Prospecte</strong> : Pour les
-            entreprises qui souhaitent développer leur acquisition commerciale
-            et leur prospection B2B.
-          </p>
-        </FadeUp>
-        <div className="mt-10">
-          <AccompagnementsTeaser pair="secondary" />
-        </div>
-        <div className="mt-8 text-center">
-          <Link
-            href="/contact-jwl-marketing-aix-en-provence"
-            className="inline-block rounded-full bg-[#c9846f] px-8 py-[15px] font-medium text-white transition-colors hover:bg-[#b8735f]"
-          >
-            Lancer mon projet
-          </Link>
-        </div>
-
         <SectionHeading
           kicker="Et après ?"
           title="on poursuit l'aventure ensemble ou en autonomie"
         />
         <FadeUp>
           <div className="mx-auto max-w-[900px] rounded-2xl p-8 text-left text-black md:p-10">
-            <p className="text-justify text-lg leading-relaxed text-black/85">
+            <p className="text-justify text-sm leading-relaxed text-black/85 md:text-base">
               Tu es libre de continuer avec JWL Marketing, de gérer ta
               communication seul ou de travailler avec un autre prestataire.
               Les outils, les données et le travail réalisé restent les tiens.
