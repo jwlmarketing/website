@@ -12,7 +12,7 @@ export default function ReviewCard({
 }: {
   name: string;
   when: string;
-  avatar: string;
+  avatar?: string;
   text: string;
 }) {
   const pathname = usePathname();
@@ -24,7 +24,13 @@ export default function ReviewCard({
   return (
     <div className="flex w-[320px] shrink-0 flex-col rounded-2xl border border-[#ece7df] bg-white p-6 shadow-[0_8px_24px_rgba(0,0,0,0.05)]">
       <div className="mb-3 flex items-center gap-3">
-        <Image src={avatar} alt={`${name} — avis Google`} width={40} height={40} className="h-10 w-10 rounded-full" />
+        {avatar ? (
+          <Image src={avatar} alt={`${name} — avis Google`} width={40} height={40} className="h-10 w-10 rounded-full" />
+        ) : (
+          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#c9846f] text-sm font-semibold text-white">
+            {name.trim().charAt(0).toUpperCase()}
+          </div>
+        )}
         <div>
           <p className="text-sm text-black">{name}</p>
           <p className="text-xs text-[#888]">{when}</p>
