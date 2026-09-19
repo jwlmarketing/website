@@ -4,6 +4,28 @@ import SiteHeader from "@/components/SiteHeader";
 import ScrollReveal from "@/components/ScrollReveal";
 import Lightbox from "@/components/Lightbox";
 import GoogleColors from "@/components/GoogleColors";
+import ContactForm from "@/components/ContactForm";
+
+const SEO_PROJECTS = [
+  {
+    image: "/images/projet-seo-1.png",
+    name: "Projet en Aix-en-Provence",
+    stat: "3 468",
+    statLabel: "vues sur 6 mois",
+  },
+  {
+    image: "/images/projet-seo-2.png",
+    name: "Projet en Marseille",
+    stat: "1 350",
+    statLabel: "clics sur 6 mois",
+  },
+  {
+    image: "/images/projet-seo-3.png",
+    name: "Projet en cours",
+    stat: "En cours",
+    statLabel: "accompagnement 12 mois",
+  },
+];
 
 const FACTEURS_SEO = [
   "De tes produits et services",
@@ -586,22 +608,63 @@ export default function Page() {
           <br />
           <span className="font-medium">qui parlent d&apos;eux-même</span>
         </h2>
+        <div className="mt-10 grid gap-6 md:grid-cols-3">
+          {SEO_PROJECTS.map((project, i) => (
+            <ScrollReveal key={project.name} delay={i * 150}>
+              <div className="relative overflow-hidden rounded-2xl border border-[#eee]">
+                <Image
+                  src={project.image}
+                  alt={project.name}
+                  width={400}
+                  height={280}
+                  className="h-auto w-full object-cover"
+                />
+                <span className="absolute left-3 top-3 rounded-full bg-gold px-3 py-1 text-xs font-bold text-white shadow-md">
+                  {project.stat}
+                </span>
+              </div>
+              <p className="mt-3 text-sm font-semibold text-black">{project.name}</p>
+              <p className="text-xs text-[#777]">{project.statLabel}</p>
+            </ScrollReveal>
+          ))}
+        </div>
       </section>
 
       {/* Boost ton Bizz avec JWL MARKETING */}
-      <section className="bg-white px-6 py-16 text-center">
+      <section className="mx-auto max-w-[1200px] px-6 py-16 text-center">
         <h3 className="font-heading text-3xl font-bold leading-[1.15] md:text-[46px] md:leading-[1.15] text-black">
           Boost ton Bizz avec <span className="text-[#c9846f]">JWL MARKETING</span>
         </h3>
-        <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-          <a
-            href="https://calendly.com/jwlm"
-            target="_blank"
-            rel="noopener"
-            className="inline-block rounded-full bg-[#c9846f] px-10 py-[15px] font-medium text-white transition-colors hover:bg-[#b8735f]"
-          >
-            Réserve un appel
-          </a>
+        <div className="mt-10 grid gap-8 text-left md:grid-cols-2">
+          <ScrollReveal>
+            <div className="flex h-full flex-col items-center justify-center gap-4 rounded-2xl bg-[#faf3ea] p-8 text-center">
+              <p className="text-[15px] leading-[22px] text-black">
+                Une question avant de réserver ? Écris-moi sur WhatsApp, le
+                message est déjà préparé pour aller droit au but.
+              </p>
+              <a
+                href="https://wa.me/33783792814?text=Bonjour%20Jodie%2C%20j%27ai%20une%20question%20avant%20de%20r%C3%A9server%20un%20appel%20pour%20mon%20site%20web%20SEO%C2%A0%3A"
+                target="_blank"
+                rel="noopener"
+                className="inline-block rounded-full bg-[#25D366] px-8 py-[15px] font-semibold text-white transition-colors hover:bg-[#1ebe57]"
+              >
+                Poser ma question sur WhatsApp
+              </a>
+              <a
+                href="https://calendly.com/jwlm"
+                target="_blank"
+                rel="noopener"
+                className="inline-block rounded-full bg-[#c9846f] px-8 py-[15px] font-semibold text-white transition-colors hover:bg-[#b8735f]"
+              >
+                Réserve un appel
+              </a>
+            </div>
+          </ScrollReveal>
+          <ScrollReveal delay={150}>
+            <div className="rounded-2xl border border-[#eee] p-8">
+              <ContactForm />
+            </div>
+          </ScrollReveal>
         </div>
       </section>
     </div>
