@@ -170,6 +170,24 @@ export default function Footer() {
           </div>
         </div>
 
+        <div className="mt-10 flex justify-center">
+          <a
+            href="https://www.vincenthego.com/consultants-seo/#fiche-jwl-marketing-aix-en-provence"
+            target="_blank"
+            rel="noopener"
+          >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="https://www.vincenthego.com/consultants-seo/assets/badge/bandeau-consultante-clair.png"
+              alt="Consultante de qualité référencée sur la SEO Map"
+              width={300}
+              height={81}
+              loading="lazy"
+              style={{ height: "auto", maxWidth: "100%" }}
+            />
+          </a>
+        </div>
+
         <div className="mt-10 border-t border-[#1a1a1a] pt-5 text-center leading-relaxed">
           <div className="text-sm text-white">
             © {new Date().getFullYear()} JWL Marketing - {t.rights}
