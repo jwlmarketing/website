@@ -6,6 +6,7 @@ import TrustedPartners from "@/components/TrustedPartners";
 import ProofCards from "@/components/ProofCards";
 import ContactForm from "@/components/ContactForm";
 import ScrollFillLine from "@/components/ScrollFillLine";
+import AccompagnementsSection from "@/components/AccompagnementsSection";
 
 export const metadata: Metadata = {
   title: "Création de site web Business | JWL Marketing",
@@ -169,6 +170,52 @@ export default function Page() {
 
       {/* Mon réseau de confiance */}
       <TrustedPartners />
+
+      {/* Pourquoi louer un site web quand tu peux en être propriétaire ? */}
+      <section className="mx-auto max-w-[1200px] px-6 py-10 text-center">
+        <ScrollReveal>
+          <h2 className="font-heading text-3xl font-bold leading-[1.15] md:text-[46px] md:leading-[1.15] text-black">
+            Pourquoi louer un site web
+            <br />
+            quand tu peux en être <span className="text-[#c9846f]">propriétaire</span> ?
+          </h2>
+          <p className="mx-auto mt-6 max-w-[820px] text-[17px] leading-[26px] text-[#1a1a1a]">
+            De nombreux entrepreneurs paient chaque mois une plateforme ou une
+            agence sans réellement être propriétaires de leur site web.
+            Pourtant, un site internet peut devenir un véritable actif pour
+            ton entreprise. Selon ton statut juridique, ton activité et ta
+            localisation, tu peux également bénéficier de dispositifs d&apos;aide
+            à la digitalisation ou d&apos;un traitement comptable avantageux.
+            L&apos;objectif reste le même : investir dans un outil durable qui
+            accompagne la croissance de ton entreprise.
+          </p>
+          <a
+            href="/aides-digitalisation"
+            className="mt-8 inline-block rounded-full bg-[#c9846f] px-8 py-[15px] font-medium text-white transition-colors hover:bg-[#b8735f]"
+          >
+            En savoir plus sur les aides
+          </a>
+        </ScrollReveal>
+      </section>
+
+      {/* Commence avec un site web professionnel et construis ta visibilité Google demain */}
+      <section className="mx-auto max-w-[1400px] px-6 py-10 text-center">
+        <ScrollReveal>
+          <h2 className="font-heading text-3xl font-bold leading-[1.15] md:text-[46px] md:leading-[1.15] text-black">
+            Commence avec un <span className="text-[#c9846f]">site web professionnel</span>
+            <br />
+            <span className="font-medium">et construis ta visibilité Google demain.</span>
+          </h2>
+          <p className="mx-auto mt-6 max-w-[720px] text-[17px] leading-[26px] text-[#1a1a1a]">
+            Que tu souhaites simplement une présence en ligne ou construire une
+            stratégie de visibilité sur Google, tout commence par un site
+            solide.
+          </p>
+        </ScrollReveal>
+        <div className="mt-10">
+          <AccompagnementsSection />
+        </div>
+      </section>
 
       {/* Un site web professionnel, conçu pour évoluer avec ton entreprise */}
       <section className="mx-auto max-w-[1400px] px-6 py-10 text-center">

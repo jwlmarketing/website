@@ -20,6 +20,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr" className="h-full antialiased">
+      <head>
+        <link
+          rel="stylesheet"
+          href="https://api.fontshare.com/v2/css?f[]=switzer@400,500,600,700,701&display=swap"
+        />
+      </head>
       <body className="min-h-full flex flex-col bg-white text-neutral-800">
         <ScrollRevealAll />
         <main className="flex-1">{children}</main>
