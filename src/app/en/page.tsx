@@ -253,7 +253,6 @@ export default function Home() {
         <SectionHeading
           kicker="Your visibility"
           title="grows thanks to the clients your website generates."
-          titleClassName="relative block w-full px-2 font-heading text-2xl font-medium not-italic leading-[1.25] text-black md:px-10 md:text-[34px] md:leading-[1.35]"
         />
 
         <FadeUp className="mx-auto flex max-w-[1200px] flex-col items-center gap-10 md:flex-row-reverse md:items-stretch">
@@ -286,13 +285,7 @@ export default function Home() {
 
         <SectionHeading
           kicker="What's next?"
-          title={
-            <>
-              we keep going together,
-              <br />
-              or on your own
-            </>
-          }
+          title="we keep going together, or on your own"
         />
         <FadeUp>
           <div className="mx-auto max-w-[900px] rounded-2xl p-8 text-left text-black md:p-10">

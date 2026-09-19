@@ -245,7 +245,6 @@ export default function Home() {
         <SectionHeading
           kicker="Ta visibilité"
           title="grandit grâce aux clients que ton site web génère."
-          titleClassName="relative block w-full px-2 font-heading text-2xl font-medium not-italic leading-[1.25] text-black md:px-10 md:text-[34px] md:leading-[1.35]"
         />
 
         <FadeUp className="mx-auto flex max-w-[1200px] flex-col items-center gap-10 md:flex-row-reverse md:items-stretch">
@@ -282,13 +281,7 @@ export default function Home() {
 
         <SectionHeading
           kicker="Et après ?"
-          title={
-            <>
-              on poursuit l&apos;aventure
-              <br />
-              ensemble ou en autonomie
-            </>
-          }
+          title="on poursuit l'aventure ensemble ou en autonomie"
         />
         <FadeUp>
           <div className="mx-auto max-w-[900px] rounded-2xl p-8 text-left text-black md:p-10">

@@ -19,7 +19,7 @@ export default function SectionHeading({
     <div className="mx-auto my-10 w-full max-w-[1400px] px-5 text-center md:my-[60px]">
       {kicker && (
         <p
-          className="mb-1 text-3xl italic leading-snug text-[#c97b63] md:text-[54px]"
+          className="mb-1 text-balance text-3xl italic leading-snug text-[#c97b63] md:text-[54px]"
           style={{ fontFamily: "var(--font-heading)" }}
         >
           {kicker}
@@ -27,8 +27,9 @@ export default function SectionHeading({
       )}
       <h2
         className={
-          titleClassName ??
-          "relative block w-full px-2 font-heading text-3xl font-medium not-italic leading-[1.25] text-black md:px-10 md:text-[54px] md:leading-[1.35]"
+          (titleClassName ??
+            "relative block w-full px-2 font-heading text-3xl font-medium not-italic leading-[1.25] text-black md:px-10 md:text-[54px] md:leading-[1.35]") +
+          " text-balance"
         }
       >
         {title}
