@@ -18,11 +18,9 @@
     },
     {
       "type": "carousel",
-      "slugs": []
-    },
-    {
-      "type": "image",
-      "url": ""
+      "slugs": [
+        "dynamitz"
+      ]
     },
     {
       "type": "heading",
