@@ -3,6 +3,17 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   // Native module (comments DB) — must not be bundled by the build.
   serverExternalPackages: ["better-sqlite3"],
+  experimental: {
+    // Default Server Actions body limit is 1MB — too small for a real photo
+    // upload (blog and réalisations media pickers both post the file through
+    // a Server Action). Without this, any image over ~1MB is rejected before
+    // it even reaches our code, showing as a generic upload failure.
+    serverActions: {
+      // No practical cap (Next requires a value; this is effectively
+      // unlimited for anything a browser will realistically upload).
+      bodySizeLimit: "1gb",
+    },
+  },
   async rewrites() {
     return [
       {
