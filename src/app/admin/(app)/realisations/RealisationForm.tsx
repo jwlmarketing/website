@@ -39,6 +39,7 @@ export default function RealisationForm({
 }) {
   const [title, setTitle] = useState(page?.title || "");
   const [slug, setSlug] = useState(page?.slug || "");
+  const [slugTouched, setSlugTouched] = useState(!!page);
   const [status, setStatus] = useState<"draft" | "published">(
     page?.status || "draft"
   );
@@ -47,6 +48,20 @@ export default function RealisationForm({
     page?.metaDescription || ""
   );
   const [blocks, setBlocks] = useState<Block[]>(page?.blocks || []);
+
+  function autoSlug(v: string) {
+    setTitle(v);
+    if (!slugTouched) {
+      setSlug(
+        v
+          .toLowerCase()
+          .normalize("NFD")
+          .replace(/[̀-ͯ]/g, "")
+          .replace(/[^a-z0-9]+/g, "-")
+          .replace(/(^-|-$)/g, "")
+      );
+    }
+  }
 
   function updateBlock(i: number, next: Block) {
     setBlocks((prev) => prev.map((b, idx) => (idx === i ? next : b)));
@@ -68,163 +83,176 @@ export default function RealisationForm({
   }
 
   return (
-    <form action={saveAction} className="mx-auto max-w-[900px] px-6 py-10">
+    <form action={saveAction}>
       {page?.slug && !isIndex && (
         <input type="hidden" name="originalSlug" value={page.slug} />
       )}
       <input type="hidden" name="blocksJson" value={JSON.stringify(blocks)} />
+      {isIndex && <input type="hidden" name="status" value="published" />}
 
-      <h1 className="font-heading text-2xl font-semibold text-black">
-        {isIndex
-          ? "Page Réalisations (accueil)"
-          : page
-            ? `Modifier « ${page.title} »`
-            : "Nouveau cas client"}
-      </h1>
-
-      <div className="mt-6 grid gap-4 md:grid-cols-2">
-        <label className="block">
-          <span className="text-sm font-medium text-black">Titre</span>
-          <input
-            name="title"
-            value={title}
-            onChange={(e) => setTitle(e.target.value)}
-            required
-            className="mt-1 w-full rounded-lg border border-[#ddd] px-3 py-2 text-sm"
-          />
-        </label>
-
-        {!isIndex && (
-          <label className="block">
-            <span className="text-sm font-medium text-black">
-              Slug (URL : /realisations/…)
-            </span>
+      <div className="editor-layout">
+        <div className="editor-main">
+          <div className="title-group">
             <input
-              name="slug"
-              value={slug}
-              onChange={(e) => setSlug(e.target.value)}
-              placeholder={title || "dynamitz"}
-              className="mt-1 w-full rounded-lg border border-[#ddd] px-3 py-2 text-sm"
+              className="title-input"
+              name="title"
+              placeholder={isIndex ? "Titre de la page" : "Titre du cas client"}
+              value={title}
+              onChange={(e) => autoSlug(e.target.value)}
+              required
             />
-          </label>
-        )}
+            {!isIndex && (
+              <div className="slug-row">
+                <span className="slug-prefix">/realisations/</span>
+                <input
+                  className="slug-input"
+                  name="slug"
+                  placeholder="dynamitz"
+                  value={slug}
+                  onChange={(e) => {
+                    setSlugTouched(true);
+                    setSlug(e.target.value);
+                  }}
+                />
+              </div>
+            )}
+          </div>
 
-        {!isIndex && (
-          <label className="block">
-            <span className="text-sm font-medium text-black">Statut</span>
-            <select
-              name="status"
-              value={status}
-              onChange={(e) => setStatus(e.target.value as "draft" | "published")}
-              className="mt-1 w-full rounded-lg border border-[#ddd] px-3 py-2 text-sm"
-            >
-              <option value="draft">Brouillon</option>
-              <option value="published">Publié</option>
-            </select>
-          </label>
-        )}
+          <div className="editor-panel">
+            <div className="panel-toggle">Contenu</div>
+            <div className="panel-body">
+              <div className="table-toolbar" style={{ marginBottom: 0 }}>
+                <span className="total-count">
+                  {blocks.length} bloc{blocks.length > 1 ? "s" : ""}
+                </span>
+                <select
+                  defaultValue=""
+                  className="btn-secondary btn-sm"
+                  onChange={(e) => {
+                    if (e.target.value) addBlock(e.target.value as Block["type"]);
+                    e.target.value = "";
+                  }}
+                >
+                  <option value="" disabled>
+                    + Ajouter un bloc
+                  </option>
+                  {STRUCTURED_TYPES.map((t) => (
+                    <option key={t} value={t}>
+                      {BLOCK_LABELS[t]}
+                    </option>
+                  ))}
+                </select>
+              </div>
 
-        <label className="block">
-          <span className="text-sm font-medium text-black">
-            Titre SEO (optionnel)
-          </span>
-          <input
-            name="metaTitle"
-            value={metaTitle}
-            onChange={(e) => setMetaTitle(e.target.value)}
-            className="mt-1 w-full rounded-lg border border-[#ddd] px-3 py-2 text-sm"
-          />
-        </label>
-        <label className="block md:col-span-2">
-          <span className="text-sm font-medium text-black">
-            Description SEO (optionnel)
-          </span>
-          <textarea
-            name="metaDescription"
-            value={metaDescription}
-            onChange={(e) => setMetaDescription(e.target.value)}
-            rows={2}
-            className="mt-1 w-full rounded-lg border border-[#ddd] px-3 py-2 text-sm"
-          />
-        </label>
-      </div>
-
-      <div className="mt-10">
-        <div className="flex items-center justify-between">
-          <h2 className="font-heading text-lg font-semibold text-black">
-            Contenu de la page
-          </h2>
-          <select
-            defaultValue=""
-            onChange={(e) => {
-              if (e.target.value) addBlock(e.target.value as Block["type"]);
-              e.target.value = "";
-            }}
-            className="rounded-full border border-gold bg-white px-4 py-2 text-sm font-medium text-gold"
-          >
-            <option value="" disabled>
-              + Ajouter un bloc
-            </option>
-            {STRUCTURED_TYPES.map((t) => (
-              <option key={t} value={t}>
-                {BLOCK_LABELS[t]}
-              </option>
-            ))}
-          </select>
+              {blocks.length === 0 ? (
+                <div className="empty-state">
+                  <p>Aucun bloc pour l&apos;instant. Ajoute-en un ci-dessus.</p>
+                </div>
+              ) : (
+                blocks.map((block, i) => (
+                  <div key={i} className="block-card">
+                    <div className="block-card-header">
+                      <span>{BLOCK_LABELS[block.type] || block.type}</span>
+                      <div className="table-actions">
+                        <button
+                          type="button"
+                          className="tbl-btn"
+                          title="Monter"
+                          onClick={() => moveBlock(i, -1)}
+                          disabled={i === 0}
+                        >
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} width={14} height={14}>
+                            <line x1="12" y1="19" x2="12" y2="5" />
+                            <polyline points="5 12 12 5 19 12" />
+                          </svg>
+                        </button>
+                        <button
+                          type="button"
+                          className="tbl-btn"
+                          title="Descendre"
+                          onClick={() => moveBlock(i, 1)}
+                          disabled={i === blocks.length - 1}
+                        >
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} width={14} height={14}>
+                            <line x1="12" y1="5" x2="12" y2="19" />
+                            <polyline points="19 12 12 19 5 12" />
+                          </svg>
+                        </button>
+                        <button
+                          type="button"
+                          className="tbl-btn tbl-btn--danger"
+                          title="Supprimer ce bloc"
+                          onClick={() => removeBlock(i)}
+                        >
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} width={14} height={14}>
+                            <polyline points="3 6 5 6 21 6" />
+                            <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                    <div className="block-card-body">
+                      <BlockEditor block={block} onChange={(b) => updateBlock(i, b)} />
+                    </div>
+                  </div>
+                ))
+              )}
+            </div>
+          </div>
         </div>
 
-        <div className="mt-4 space-y-4">
-          {blocks.length === 0 && (
-            <p className="rounded-lg border border-dashed border-[#ddd] p-6 text-center text-sm text-[#888]">
-              Aucun bloc pour l&apos;instant. Ajoute-en un ci-dessus.
-            </p>
-          )}
-          {blocks.map((block, i) => (
-            <div key={i} className="rounded-2xl border border-[#eee] p-4">
-              <div className="flex items-center justify-between border-b border-[#eee] pb-2">
-                <span className="text-sm font-semibold text-black">
-                  {BLOCK_LABELS[block.type] || block.type}
-                </span>
-                <div className="flex gap-1">
-                  <button
-                    type="button"
-                    onClick={() => moveBlock(i, -1)}
-                    disabled={i === 0}
-                    className="rounded px-2 py-1 text-xs disabled:opacity-30"
+        <div className="editor-sidebar">
+          <div className="editor-panel">
+            <div className="panel-toggle">Publication</div>
+            <div className="panel-body">
+              {!isIndex && (
+                <div className="form-group">
+                  <label>Statut</label>
+                  <select
+                    name="status"
+                    value={status}
+                    onChange={(e) => setStatus(e.target.value as "draft" | "published")}
                   >
-                    ↑
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => moveBlock(i, 1)}
-                    disabled={i === blocks.length - 1}
-                    className="rounded px-2 py-1 text-xs disabled:opacity-30"
-                  >
-                    ↓
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => removeBlock(i)}
-                    className="rounded px-2 py-1 text-xs text-red-600"
-                  >
-                    Supprimer
-                  </button>
+                    <option value="draft">Brouillon</option>
+                    <option value="published">Publié</option>
+                  </select>
                 </div>
-              </div>
-              <div className="pt-3">
-                <BlockEditor block={block} onChange={(b) => updateBlock(i, b)} />
+              )}
+              <div className="pub-actions">
+                <button type="submit" className="btn-publish">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} width={16} height={16}>
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  Enregistrer
+                </button>
               </div>
             </div>
-          ))}
+          </div>
+
+          <div className="editor-panel">
+            <div className="panel-toggle">SEO (optionnel)</div>
+            <div className="panel-body">
+              <div className="form-group">
+                <label>Titre SEO</label>
+                <input
+                  name="metaTitle"
+                  value={metaTitle}
+                  onChange={(e) => setMetaTitle(e.target.value)}
+                />
+              </div>
+              <div className="form-group">
+                <label>Description SEO</label>
+                <textarea
+                  name="metaDescription"
+                  value={metaDescription}
+                  onChange={(e) => setMetaDescription(e.target.value)}
+                  rows={3}
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-
-      <button
-        type="submit"
-        className="mt-10 rounded-full bg-[#c9846f] px-8 py-3 font-semibold text-white transition-colors hover:bg-[#b8735f]"
-      >
-        Enregistrer
-      </button>
     </form>
   );
 }
@@ -241,23 +269,14 @@ function Field({
   textarea?: boolean;
 }) {
   return (
-    <label className="block">
-      <span className="text-xs font-medium text-[#555]">{label}</span>
+    <div className="form-group">
+      <label>{label}</label>
       {textarea ? (
-        <textarea
-          value={value}
-          onChange={(e) => onChange(e.target.value)}
-          rows={4}
-          className="mt-1 w-full rounded-lg border border-[#ddd] px-3 py-2 text-sm"
-        />
+        <textarea value={value} onChange={(e) => onChange(e.target.value)} rows={4} />
       ) : (
-        <input
-          value={value}
-          onChange={(e) => onChange(e.target.value)}
-          className="mt-1 w-full rounded-lg border border-[#ddd] px-3 py-2 text-sm"
-        />
+        <input value={value} onChange={(e) => onChange(e.target.value)} />
       )}
-    </label>
+    </div>
   );
 }
 
@@ -271,14 +290,14 @@ function BlockEditor({
   switch (block.type) {
     case "hero":
       return (
-        <div className="grid gap-3">
+        <div className="form-grid">
           <Field label="Titre" value={block.title} onChange={(v) => onChange({ ...block, title: v })} />
           <Field
             label="Sous-titre"
             value={block.subtitle || ""}
             onChange={(v) => onChange({ ...block, subtitle: v })}
           />
-          <div className="grid grid-cols-2 gap-3">
+          <div className="form-grid form-grid-2">
             <Field
               label="Texte du bouton"
               value={block.buttonText || ""}
@@ -300,7 +319,7 @@ function BlockEditor({
 
     case "heading":
       return (
-        <div className="grid gap-3">
+        <div className="form-grid">
           <Field
             label="Kicker (petit texte au-dessus)"
             value={block.kicker || ""}
@@ -333,7 +352,7 @@ function BlockEditor({
 
     case "image":
       return (
-        <div className="grid gap-3">
+        <div className="form-grid">
           <ImagePicker label="Image" value={block.url} onChange={(v) => onChange({ ...block, url: v })} />
           <Field
             label="Texte alternatif"
@@ -350,13 +369,13 @@ function BlockEditor({
 
     case "cta":
       return (
-        <div className="grid gap-3">
+        <div className="form-grid">
           <Field
             label="Texte au-dessus du bouton"
             value={block.text || ""}
             onChange={(v) => onChange({ ...block, text: v })}
           />
-          <div className="grid grid-cols-2 gap-3">
+          <div className="form-grid form-grid-2">
             <Field
               label="Texte du bouton"
               value={block.buttonText}
@@ -373,7 +392,7 @@ function BlockEditor({
 
     case "video":
       return (
-        <div className="grid gap-3">
+        <div className="form-grid">
           <Field
             label="ID YouTube (ex: dQw4w9WgXcQ)"
             value={block.youtubeId}
@@ -404,7 +423,7 @@ function BlockEditor({
           onChange={(images) => onChange({ ...block, images })}
           empty={{ url: "" }}
           renderItem={(img, update) => (
-            <div className="grid grid-cols-2 gap-2">
+            <div className="form-grid">
               <ImagePicker label="Image" value={img.url} onChange={(v) => update({ ...img, url: v })} />
               <Field label="Alt" value={img.alt || ""} onChange={(v) => update({ ...img, alt: v })} />
             </div>
@@ -426,7 +445,7 @@ function BlockEditor({
           onChange={(items) => onChange({ ...block, items })}
           empty={{ title: "", text: "" }}
           renderItem={(item, update) => (
-            <div className="grid gap-2">
+            <div className="form-grid">
               <Field label="Titre" value={item.title} onChange={(v) => update({ ...item, title: v })} />
               <Field
                 label="Texte"
@@ -446,8 +465,8 @@ function BlockEditor({
           onChange={(items) => onChange({ ...block, items })}
           empty={{ name: "", text: "" }}
           renderItem={(item, update) => (
-            <div className="grid gap-2">
-              <div className="grid grid-cols-2 gap-2">
+            <div className="form-grid">
+              <div className="form-grid form-grid-2">
                 <Field label="Nom" value={item.name} onChange={(v) => update({ ...item, name: v })} />
                 <Field
                   label="Rôle (optionnel)"
@@ -478,7 +497,7 @@ function BlockEditor({
           onChange={(items) => onChange({ ...block, items })}
           empty={{ value: "", label: "" }}
           renderItem={(item, update) => (
-            <div className="grid grid-cols-2 gap-2">
+            <div className="form-grid form-grid-2">
               <Field label="Valeur (ex: +63)" value={item.value} onChange={(v) => update({ ...item, value: v })} />
               <Field label="Légende" value={item.label} onChange={(v) => update({ ...item, label: v })} />
             </div>
@@ -528,17 +547,17 @@ function ListEditor<T>({
   extra?: React.ReactNode;
 }) {
   return (
-    <div className="grid gap-3">
+    <div className="form-grid">
       {extra}
       {items.map((item, i) => (
-        <div key={i} className="rounded-lg border border-[#eee] p-3">
+        <div key={i} className="list-item-card">
           {renderItem(item, (next) =>
             onChange(items.map((it, idx) => (idx === i ? next : it)))
           )}
           <button
             type="button"
+            className="small-link"
             onClick={() => onChange(items.filter((_, idx) => idx !== i))}
-            className="mt-2 text-xs text-red-600"
           >
             Retirer cet élément
           </button>
@@ -546,8 +565,9 @@ function ListEditor<T>({
       ))}
       <button
         type="button"
+        className="btn-secondary btn-sm"
+        style={{ alignSelf: "flex-start" }}
         onClick={() => onChange([...items, empty])}
-        className="self-start rounded-full border border-gold px-3 py-1 text-xs font-medium text-gold"
       >
         + Ajouter un élément
       </button>

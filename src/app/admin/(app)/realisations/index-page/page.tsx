@@ -4,8 +4,6 @@ import { getIndexPage } from "@/lib/realisations";
 import RealisationForm from "../RealisationForm";
 import { saveIndexAction } from "../actions";
 
-export const metadata = { robots: { index: false, follow: false } };
-
 export default async function EditIndexPage() {
   const user = await requireAdminUser();
   if (!user) redirect("/admin/login");

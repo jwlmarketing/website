@@ -30,6 +30,14 @@ const NAV = [
     label: "Configuration",
     items: [{ href: "/admin/blog/settings", match: "/admin/blog/settings", label: "Paramètres", icon: "settings" }],
   },
+  {
+    label: "Réalisations",
+    items: [
+      { href: "/admin/realisations", match: "/admin/realisations", label: "Vue d'ensemble", icon: "grid" },
+      { href: "/admin/realisations/new", match: "/admin/realisations/new", label: "Nouveau cas client", icon: "plus" },
+      { href: "/admin/realisations/index-page", match: "/admin/realisations/index-page", label: "Page d'accueil", icon: "doc" },
+    ],
+  },
 ];
 
 const TITLES: Record<string, string> = {
@@ -41,6 +49,9 @@ const TITLES: Record<string, string> = {
   "/admin/blog/media": "Médiathèque",
   "/admin/blog/comments": "Commentaires",
   "/admin/blog/settings": "Paramètres",
+  "/admin/realisations": "Réalisations",
+  "/admin/realisations/new": "Nouveau cas client",
+  "/admin/realisations/index-page": "Page d'accueil — Réalisations",
 };
 
 function NavIcon({ name }: { name: string }) {
@@ -129,6 +140,11 @@ export default function AdminShell({
     return <div style={{ fontFamily: "'DM Sans', sans-serif" }}>{children}</div>;
   }
 
+  const isRealisations = pathname?.startsWith("/admin/realisations");
+  const fallbackTitle = isRealisations
+    ? "Modifier le cas client"
+    : "Modifier l'article";
+
   const displayName = [user.firstname, user.lastname].filter(Boolean).join(" ") || user.email;
   const avatar =
     user.avatar ||
@@ -153,7 +169,7 @@ export default function AdminShell({
               JWL
             </text>
           </svg>
-          <span>JWL Marketing Blog</span>
+          <span>JWL Marketing Admin</span>
         </div>
 
         <nav className="sidebar-nav" aria-label="Navigation admin">
@@ -200,22 +216,30 @@ export default function AdminShell({
 
       <div className="admin-content">
         <header className="admin-topbar">
-          <h1 className="topbar-title">{TITLES[pathname] || "Modifier l'article"}</h1>
+          <h1 className="topbar-title">{TITLES[pathname] || fallbackTitle}</h1>
           <div className="topbar-actions">
-            <a href="/blog" target="_blank" className="btn-topbar" rel="noreferrer">
+            <a
+              href={isRealisations ? "/realisations" : "/blog"}
+              target="_blank"
+              className="btn-topbar"
+              rel="noreferrer"
+            >
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} width={16} height={16}>
                 <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
                 <polyline points="15 3 21 3 21 9" />
                 <line x1="10" y1="14" x2="21" y2="3" />
               </svg>
-              Voir le blog
+              {isRealisations ? "Voir les réalisations" : "Voir le blog"}
             </a>
-            <Link href="/admin/blog/new" className="btn-primary btn-sm">
+            <Link
+              href={isRealisations ? "/admin/realisations/new" : "/admin/blog/new"}
+              className="btn-primary btn-sm"
+            >
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} width={14} height={14}>
                 <line x1="12" y1="5" x2="12" y2="19" />
                 <line x1="5" y1="12" x2="19" y2="12" />
               </svg>
-              Nouvel article
+              {isRealisations ? "Nouveau cas client" : "Nouvel article"}
             </Link>
           </div>
         </header>

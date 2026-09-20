@@ -30,29 +30,28 @@ export default function ImagePicker({
   }
 
   return (
-    <div>
-      <span className="text-xs font-medium text-[#555]">{label}</span>
+    <div className="form-group">
+      <label>{label}</label>
 
       {value ? (
-        <div className="relative mt-1 inline-block">
+        <div className="thumb-preview">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={value}
-            alt=""
-            className="h-28 w-28 rounded-lg border border-[#ddd] object-cover"
-          />
+          <img src={value} alt="" />
           <button
             type="button"
+            className="thumb-remove"
             onClick={() => onChange("")}
-            className="absolute -right-2 -top-2 flex h-6 w-6 items-center justify-center rounded-full bg-black text-xs text-white"
-            aria-label="Retirer l'image"
+            title="Retirer"
           >
-            ✕
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} width={14} height={14}>
+              <line x1="18" y1="6" x2="6" y2="18" />
+              <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
           </button>
         </div>
       ) : (
-        <div
-          onClick={() => inputRef.current?.click()}
+        <label
+          className="upload-zone"
           onDragOver={(e) => {
             e.preventDefault();
             setIsDraggingOver(true);
@@ -63,25 +62,26 @@ export default function ImagePicker({
             setIsDraggingOver(false);
             handleFile(e.dataTransfer.files?.[0]);
           }}
-          className={`mt-1 flex h-28 w-full max-w-[280px] cursor-pointer flex-col items-center justify-center gap-1 rounded-lg border-2 border-dashed text-center text-xs transition-colors ${
-            isDraggingOver
-              ? "border-gold bg-gold/10 text-gold"
-              : "border-[#ddd] text-[#888] hover:border-gold hover:text-gold"
-          }`}
+          style={isDraggingOver ? { borderColor: "var(--or)", background: "var(--or-bg)" } : undefined}
         >
-          <span>{isPending ? "Envoi…" : "Glisse une image ici"}</span>
-          <span className="text-[10px]">ou clique pour parcourir</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} width={22} height={22}>
+            <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+            <circle cx="8.5" cy="8.5" r="1.5" />
+            <polyline points="21 15 16 10 5 21" />
+          </svg>
+          <span>{isPending ? "Envoi en cours…" : "Glisse une image ici ou clique"}</span>
+          <span className="upload-hint">Elle est ajoutée automatiquement</span>
           <input
             ref={inputRef}
             type="file"
             accept="image/*"
-            className="hidden"
+            style={{ display: "none" }}
             disabled={isPending}
             onChange={(e) => handleFile(e.target.files?.[0])}
           />
-        </div>
+        </label>
       )}
-      {error && <p className="mt-1 text-xs text-red-600">{error}</p>}
+      {error && <small style={{ color: "var(--red)" }}>{error}</small>}
     </div>
   );
 }

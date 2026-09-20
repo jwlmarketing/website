@@ -4,8 +4,6 @@ import { getCaseStudy } from "@/lib/realisations";
 import RealisationForm from "../../RealisationForm";
 import { saveCaseStudyAction } from "../../actions";
 
-export const metadata = { robots: { index: false, follow: false } };
-
 export default async function EditCaseStudyPage({
   params,
 }: {

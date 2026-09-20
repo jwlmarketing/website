@@ -546,7 +546,7 @@ export default function Page() {
             </p>
           </ScrollReveal>
         </div>
-        <ScrollReveal delay={300} className="mx-auto mt-8 max-w-[380px] text-left">
+        <ScrollReveal delay={300} className="mx-auto mt-8 max-w-[380px] text-center">
           <p className="text-[17px] leading-[26px] text-[#1a1a1a]">
             Ou quand tu as investi sur ta stratégie.
           </p>
@@ -555,7 +555,7 @@ export default function Page() {
             alt="Search Console — stratégie SEO investie"
             width={618}
             height={314}
-            className="mt-3 h-auto w-full rounded-2xl border border-[#eee] object-cover"
+            className="mx-auto mt-3 h-[210px] w-full rounded-2xl border border-[#eee] object-cover"
           />
           <p className="mt-2 text-sm italic text-[#7c5fd6]">
             Google{" "}te propose sur des mots-clés

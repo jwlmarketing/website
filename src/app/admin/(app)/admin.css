@@ -1025,3 +1025,21 @@ textarea.form-control{min-height:70px;resize:vertical;line-height:1.55}
   .admin-table{min-width:560px}
   .media-grid{grid-template-columns:repeat(auto-fill,minmax(110px,1fr))}
 }
+
+/* ── RÉALISATIONS — bloc-builder ─────────────────────── */
+.block-card{
+  border:1px solid var(--bd);border-radius:var(--rsm);
+  overflow:hidden;background:var(--bg);
+}
+.block-card + .block-card{margin-top:12px}
+.block-card-header{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:9px 12px;background:var(--surface);
+  border-bottom:1px solid var(--bd);
+  font-size:.79rem;font-weight:600;color:var(--ink2);
+}
+.block-card-body{padding:14px}
+.list-item-card{
+  border:1px solid var(--bd);border-radius:var(--rsm);
+  padding:12px;background:var(--surface);
+}

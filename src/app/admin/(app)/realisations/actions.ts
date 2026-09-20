@@ -56,8 +56,8 @@ export async function saveIndexAction(formData: FormData) {
   syncToGit(`Réalisations: modifie la page d'accueil`);
 
   revalidatePath("/realisations");
-  revalidatePath("/realisations/admin");
-  redirect("/realisations/admin");
+  revalidatePath("/admin/realisations");
+  redirect("/admin/realisations");
 }
 
 export async function saveCaseStudyAction(formData: FormData) {
@@ -85,8 +85,8 @@ export async function saveCaseStudyAction(formData: FormData) {
 
   revalidatePath("/realisations");
   revalidatePath(`/realisations/${slug}`);
-  revalidatePath("/realisations/admin");
-  redirect("/realisations/admin");
+  revalidatePath("/admin/realisations");
+  redirect("/admin/realisations");
 }
 
 export async function deleteCaseStudyAction(formData: FormData) {
@@ -99,6 +99,6 @@ export async function deleteCaseStudyAction(formData: FormData) {
   syncToGit(`Réalisations: supprime "${slug}"`);
 
   revalidatePath("/realisations");
-  revalidatePath("/realisations/admin");
-  redirect("/realisations/admin");
+  revalidatePath("/admin/realisations");
+  redirect("/admin/realisations");
 }
