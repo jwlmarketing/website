@@ -17,6 +17,10 @@
       "title": "Les entreprises {{récemment accompagnées}}"
     },
     {
+      "type": "carousel",
+      "slugs": []
+    },
+    {
       "type": "image",
       "url": ""
     },
