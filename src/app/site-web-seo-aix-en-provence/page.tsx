@@ -659,9 +659,9 @@ export default function Page() {
 
       {/* Boost ton Bizz avec JWL MARKETING */}
       <section className="mx-auto max-w-[1200px] px-6 py-16 text-center">
-        <h3 className="font-heading text-3xl leading-[1.15] md:text-[46px] md:leading-[1.15] text-black">
+        <h2 className="font-heading text-3xl leading-[1.15] md:text-[46px] md:leading-[1.15] text-black">
           Boost ton Bizz avec <span className="text-[#c9846f]">JWL MARKETING</span>
-        </h3>
+        </h2>
         <div className="mt-10 grid gap-8 text-left md:grid-cols-2">
           <ScrollReveal>
             <div className="flex h-full flex-col items-center justify-center gap-4 rounded-2xl bg-black p-8 text-center">
