@@ -27,9 +27,9 @@ function BlockItem({ block }: { block: Block }) {
           <div className="max-w-[600px] flex-1">
             <h1
               className="font-heading text-[38px] font-semibold leading-[1.25]"
-              style={{ color: block.titleColor || "#000" }}
+              style={{ color: "#000" }}
             >
-              {block.title}
+              {renderInlineColor(block.title, block.titleColor)}
             </h1>
             {block.subtitle && (
               <p className="mt-4 text-base text-[#555]">{block.subtitle}</p>

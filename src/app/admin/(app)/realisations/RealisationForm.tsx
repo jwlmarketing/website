@@ -341,11 +341,16 @@ function BlockEditor({
     case "hero":
       return (
         <div className="form-grid">
-          <Field label="Titre" value={block.title} onChange={(v) => onChange({ ...block, title: v })} />
+          <Field
+            label="Titre (entoure un passage de {{ }} pour le mettre en couleur, ex: {{Un site web}} qui inspire confiance)"
+            value={block.title}
+            onChange={(v) => onChange({ ...block, title: v })}
+            textarea
+          />
           <ColorField
-            label="Couleur du titre"
+            label="Couleur des passages entre {{ }}"
             value={block.titleColor}
-            defaultColor="#000000"
+            defaultColor="#c9846f"
             onChange={(v) => onChange({ ...block, titleColor: v })}
           />
           <Field
