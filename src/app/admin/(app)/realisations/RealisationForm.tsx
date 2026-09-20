@@ -16,6 +16,7 @@ import VideoPicker from "./VideoPicker";
 
 const STRUCTURED_TYPES: Block["type"][] = [
   "hero",
+  "carousel",
   "textImage",
   "heading",
   "text",
@@ -34,10 +35,12 @@ export default function RealisationForm({
   page,
   isIndex,
   saveAction,
+  allCaseStudies = [],
 }: {
   page?: RealisationPage;
   isIndex: boolean;
   saveAction: (formData: FormData) => void;
+  allCaseStudies?: { slug: string; title: string }[];
 }) {
   const [title, setTitle] = useState(page?.title || "");
   const [slug, setSlug] = useState(page?.slug || "");
@@ -46,7 +49,6 @@ export default function RealisationForm({
     page?.status || "draft"
   );
   const [coverImage, setCoverImage] = useState(page?.coverImage || "");
-  const [showInCarousel, setShowInCarousel] = useState(page?.showInCarousel ?? true);
   const [metaTitle, setMetaTitle] = useState(page?.metaTitle || "");
   const [metaDescription, setMetaDescription] = useState(
     page?.metaDescription || ""
@@ -196,7 +198,7 @@ export default function RealisationForm({
                       </div>
                     </div>
                     <div className="block-card-body">
-                      <BlockEditor block={block} onChange={(b) => updateBlock(i, b)} />
+                      <BlockEditor block={block} onChange={(b) => updateBlock(i, b)} allCaseStudies={allCaseStudies} />
                     </div>
                   </div>
                 ))
@@ -212,19 +214,10 @@ export default function RealisationForm({
               <div className="panel-body">
                 <input type="hidden" name="coverImage" value={coverImage} />
                 <ImagePicker
-                  label="Utilisée si le projet apparaît dans le carrousel"
+                  label="Utilisée si ce projet est ajouté dans un bloc carrousel"
                   value={coverImage}
                   onChange={setCoverImage}
                 />
-                <label className="toggle-row" style={{ marginTop: 10 }}>
-                  <input
-                    type="checkbox"
-                    name="showInCarousel"
-                    checked={showInCarousel}
-                    onChange={(e) => setShowInCarousel(e.target.checked)}
-                  />
-                  <span>Afficher ce projet dans le carrousel de /realisations</span>
-                </label>
               </div>
             </div>
           )}
@@ -359,11 +352,75 @@ function ImagePositionField({
 function BlockEditor({
   block,
   onChange,
+  allCaseStudies = [],
 }: {
   block: Block;
   onChange: (b: Block) => void;
+  allCaseStudies?: { slug: string; title: string }[];
 }) {
   switch (block.type) {
+    case "carousel": {
+      const cBlock = block;
+      const toggleSlug = (slug: string) => {
+        const slugs = cBlock.slugs.includes(slug)
+          ? cBlock.slugs.filter((s) => s !== slug)
+          : [...cBlock.slugs, slug];
+        onChange({ ...cBlock, slugs });
+      };
+      const moveSlug = (i: number, dir: -1 | 1) => {
+        const slugs = [...cBlock.slugs];
+        const j = i + dir;
+        if (j < 0 || j >= slugs.length) return;
+        [slugs[i], slugs[j]] = [slugs[j], slugs[i]];
+        onChange({ ...cBlock, slugs });
+      };
+      return (
+        <div className="form-grid">
+          {allCaseStudies.length === 0 ? (
+            <p style={{ color: "var(--muted)" }}>
+              Aucune réalisation publiée pour l&apos;instant.
+            </p>
+          ) : (
+            <>
+              <div className="form-group">
+                <label>Réalisations disponibles</label>
+                {allCaseStudies.map((cs) => (
+                  <label key={cs.slug} className="toggle-row">
+                    <input
+                      type="checkbox"
+                      checked={cBlock.slugs.includes(cs.slug)}
+                      onChange={() => toggleSlug(cs.slug)}
+                    />
+                    <span>{cs.title}</span>
+                  </label>
+                ))}
+              </div>
+              {cBlock.slugs.length > 0 && (
+                <div className="form-group">
+                  <label>Ordre dans le carrousel</label>
+                  {cBlock.slugs.map((slug, i) => {
+                    const cs = allCaseStudies.find((c) => c.slug === slug);
+                    return (
+                      <div key={slug} className="list-item-card">
+                        <span>{cs?.title || slug}</span>
+                        <div className="table-actions">
+                          <button type="button" className="tbl-btn" onClick={() => moveSlug(i, -1)} disabled={i === 0}>
+                            ↑
+                          </button>
+                          <button type="button" className="tbl-btn" onClick={() => moveSlug(i, 1)} disabled={i === cBlock.slugs.length - 1}>
+                            ↓
+                          </button>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              )}
+            </>
+          )}
+        </div>
+      );
+    }
     case "hero":
       return (
         <div className="form-grid">

@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import SiteHeader from "@/components/SiteHeader";
 import BlockRenderer from "@/components/BlockRenderer";
-import RealisationsCarousel from "@/components/RealisationsCarousel";
-import { getIndexPage, listCarouselCaseStudies } from "@/lib/realisations";
+import { getIndexPage } from "@/lib/realisations";
 
 export const dynamic = "force-dynamic";
 
@@ -18,7 +17,6 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default function Page() {
   const page = getIndexPage();
-  const caseStudies = listCarouselCaseStudies();
 
   return (
     <div>
@@ -32,25 +30,6 @@ export default function Page() {
             {page.title}
           </h1>
         </div>
-      )}
-
-      {caseStudies.length > 0 && (
-        <section className="px-6 py-10 text-center">
-          <h2 className="font-heading text-3xl leading-[1.15] text-black md:text-[40px]">
-            Les entreprises{" "}
-            <span className="italic text-[#c9846f]">récemment</span>{" "}
-            accompagnées
-          </h2>
-          <div className="mt-10">
-            <RealisationsCarousel
-              items={caseStudies.map((cs) => ({
-                slug: cs.slug,
-                title: cs.title,
-                coverImage: cs.coverImage,
-              }))}
-            />
-          </div>
-        </section>
       )}
     </div>
   );

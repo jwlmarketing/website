@@ -81,7 +81,6 @@ export async function saveCaseStudyAction(formData: FormData) {
     title,
     slug: String(formData.get("slug") || ""),
     coverImage: String(formData.get("coverImage") || ""),
-    showInCarousel: formData.get("showInCarousel") === "on",
     metaTitle: String(formData.get("metaTitle") || ""),
     metaDescription: String(formData.get("metaDescription") || ""),
     status: (String(formData.get("status") || "draft") as "draft" | "published"),

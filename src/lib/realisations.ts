@@ -11,7 +11,6 @@ export type RealisationPage = {
   slug: string;
   title: string;
   coverImage?: string;
-  showInCarousel: boolean;
   metaTitle?: string;
   metaDescription?: string;
   status: RealisationStatus;
@@ -45,7 +44,6 @@ function readOne(slug: string): RealisationPage | null {
     slug,
     title: raw.title || "",
     coverImage: raw.coverImage || "",
-    showInCarousel: raw.showInCarousel !== false,
     metaTitle: raw.metaTitle || "",
     metaDescription: raw.metaDescription || "",
     status: raw.status || "draft",
@@ -60,7 +58,6 @@ export function getIndexPage(): RealisationPage {
       slug: INDEX_SLUG,
       title: "Mes réalisations",
       status: "published",
-      showInCarousel: true,
       blocks: [],
       updatedAt: new Date().toISOString(),
     }
@@ -86,10 +83,6 @@ export function listPublishedCaseStudies(): RealisationPage[] {
   return getAllCaseStudies().filter((p) => p.status === "published");
 }
 
-export function listCarouselCaseStudies(): RealisationPage[] {
-  return listPublishedCaseStudies().filter((p) => p.showInCarousel);
-}
-
 export function saveIndexPage(input: {
   title: string;
   metaTitle?: string;
@@ -112,7 +105,6 @@ export function saveCaseStudy(input: {
   title: string;
   slug?: string;
   coverImage?: string;
-  showInCarousel: boolean;
   metaTitle?: string;
   metaDescription?: string;
   status: RealisationStatus;
@@ -126,7 +118,6 @@ export function saveCaseStudy(input: {
   const data = {
     title: input.title,
     coverImage: input.coverImage || "",
-    showInCarousel: input.showInCarousel,
     metaTitle: input.metaTitle || "",
     metaDescription: input.metaDescription || "",
     status: input.status,

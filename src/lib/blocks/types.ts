@@ -9,6 +9,11 @@ export type HeroBlock = {
   imagePosition?: "left" | "right";
 };
 
+export type CarouselBlock = {
+  type: "carousel";
+  slugs: string[]; // slugs of réalisations case studies to feature, in order
+};
+
 export type TextImageBlock = {
   type: "textImage";
   title?: string;
@@ -184,6 +189,7 @@ export type ButtonBlock = {
 
 export type Block =
   | HeroBlock
+  | CarouselBlock
   | TextImageBlock
   | HeadingBlock
   | TextBlock
@@ -213,6 +219,7 @@ export type Block =
 
 export const BLOCK_LABELS: Record<Block["type"], string> = {
   hero: "En-tête (Hero)",
+  carousel: "Carrousel de réalisations",
   textImage: "Texte + image (gauche/droite)",
   heading: "Titre de section",
   text: "Texte",
@@ -245,6 +252,8 @@ export function emptyBlock(type: Block["type"]): Block {
   switch (type) {
     case "hero":
       return { type: "hero", title: "", imagePosition: "right" };
+    case "carousel":
+      return { type: "carousel", slugs: [] };
     case "textImage":
       return { type: "textImage", imageUrl: "", imagePosition: "right" };
     case "heading":

@@ -3,6 +3,8 @@ import Link from "next/link";
 import type { Block } from "@/lib/blocks/types";
 import SectionHeading from "@/components/SectionHeading";
 import FaqAccordion from "@/components/FaqAccordion";
+import RealisationsCarousel from "@/components/RealisationsCarousel";
+import { getCaseStudy } from "@/lib/realisations";
 
 export default function BlockRenderer({ blocks }: { blocks: Block[] }) {
   return (
@@ -16,6 +18,18 @@ export default function BlockRenderer({ blocks }: { blocks: Block[] }) {
 
 function BlockItem({ block }: { block: Block }) {
   switch (block.type) {
+    case "carousel": {
+      const items = block.slugs
+        .map((slug) => getCaseStudy(slug))
+        .filter((p): p is NonNullable<typeof p> => p !== null && p.status === "published")
+        .map((p) => ({ slug: p.slug, title: p.title, coverImage: p.coverImage }));
+      return (
+        <div className="py-6">
+          <RealisationsCarousel items={items} />
+        </div>
+      );
+    }
+
     case "hero": {
       const imageOnLeft = block.imagePosition === "left";
       return (
