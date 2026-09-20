@@ -1,0 +1,15 @@
+{
+  "title": "Bout de poils",
+  "coverImage": "",
+  "metaTitle": "",
+  "metaDescription": "",
+  "status": "draft",
+  "blocks": [
+    {
+      "type": "hero",
+      "title": "Bout de Poil : {{créer une marque de niche}} pour conquérir un nouveau marché",
+      "imagePosition": "right",
+      "imageUrl": "/images/realisations/telechargement-3-.jpeg"
+    }
+  ]
+}
