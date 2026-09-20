@@ -25,7 +25,10 @@ function BlockItem({ block }: { block: Block }) {
           }`}
         >
           <div className="max-w-[600px] flex-1">
-            <h1 className="font-heading text-[38px] font-semibold leading-[1.25] text-black">
+            <h1
+              className="font-heading text-[38px] font-semibold leading-[1.25]"
+              style={{ color: block.titleColor || "#000" }}
+            >
               {block.title}
             </h1>
             {block.subtitle && (
@@ -63,7 +66,10 @@ function BlockItem({ block }: { block: Block }) {
         >
           <div className="flex-1">
             {block.title && (
-              <h2 className="font-heading text-2xl font-semibold leading-[1.3] text-black md:text-3xl">
+              <h2
+                className="font-heading text-2xl font-semibold leading-[1.3] md:text-3xl"
+                style={{ color: block.titleColor || "#000" }}
+              >
                 {block.title}
               </h2>
             )}
@@ -102,6 +108,7 @@ function BlockItem({ block }: { block: Block }) {
           kicker={block.kicker}
           title={block.title}
           accent={block.accent}
+          accentColor={block.accentColor}
           subtext={block.subtext}
         />
       );

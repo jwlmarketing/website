@@ -281,6 +281,37 @@ function Field({
   );
 }
 
+function ColorField({
+  label,
+  value,
+  defaultColor,
+  onChange,
+}: {
+  label: string;
+  value: string | undefined;
+  defaultColor: string;
+  onChange: (v: string | undefined) => void;
+}) {
+  return (
+    <div className="form-group">
+      <label>{label}</label>
+      <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+        <input
+          type="color"
+          value={value || defaultColor}
+          onChange={(e) => onChange(e.target.value)}
+          style={{ width: 40, height: 32, padding: 2, cursor: "pointer" }}
+        />
+        {value && (
+          <button type="button" className="small-link" onClick={() => onChange(undefined)}>
+            Réinitialiser
+          </button>
+        )}
+      </div>
+    </div>
+  );
+}
+
 function ImagePositionField({
   value,
   onChange,
@@ -311,6 +342,12 @@ function BlockEditor({
       return (
         <div className="form-grid">
           <Field label="Titre" value={block.title} onChange={(v) => onChange({ ...block, title: v })} />
+          <ColorField
+            label="Couleur du titre"
+            value={block.titleColor}
+            defaultColor="#000000"
+            onChange={(v) => onChange({ ...block, titleColor: v })}
+          />
           <Field
             label="Sous-titre"
             value={block.subtitle || ""}
@@ -347,6 +384,12 @@ function BlockEditor({
             label="Titre (optionnel)"
             value={block.title || ""}
             onChange={(v) => onChange({ ...block, title: v })}
+          />
+          <ColorField
+            label="Couleur du titre"
+            value={block.titleColor}
+            defaultColor="#000000"
+            onChange={(v) => onChange({ ...block, titleColor: v })}
           />
           <Field
             label="Texte (un paragraphe par ligne vide · **gras** · [texte](lien) · lignes commençant par «- » = liste à puces)"
@@ -391,6 +434,12 @@ function BlockEditor({
             label="Mot accentué (en couleur, optionnel)"
             value={block.accent || ""}
             onChange={(v) => onChange({ ...block, accent: v })}
+          />
+          <ColorField
+            label="Couleur du mot accentué"
+            value={block.accentColor}
+            defaultColor="#c9846f"
+            onChange={(v) => onChange({ ...block, accentColor: v })}
           />
           <Field
             label="Sous-texte"

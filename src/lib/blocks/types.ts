@@ -1,6 +1,7 @@
 export type HeroBlock = {
   type: "hero";
   title: string;
+  titleColor?: string; // hex color, default black
   subtitle?: string;
   buttonText?: string;
   buttonLink?: string;
@@ -11,6 +12,7 @@ export type HeroBlock = {
 export type TextImageBlock = {
   type: "textImage";
   title?: string;
+  titleColor?: string; // hex color, default black
   text?: string;
   buttonText?: string;
   buttonLink?: string;
@@ -23,6 +25,7 @@ export type HeadingBlock = {
   kicker?: string;
   title: string;
   accent?: string;
+  accentColor?: string; // hex color for the accent word, default terracotta
   subtext?: string;
 };
 

@@ -580,15 +580,15 @@ export default function Page() {
           </span>
         </h2>
         <ScrollReveal>
-          <div className="mx-auto mt-10 grid max-w-[900px] gap-6 rounded-2xl p-6 text-left md:grid-cols-2 md:items-center md:p-8">
+          <div className="mx-auto mt-10 flex max-w-[900px] flex-col gap-6 rounded-2xl p-6 text-left md:flex-row md:items-center md:p-8">
             <Image
               src="/images/jwl-google-siege-visibilite.png"
               alt="JWL Marketing devant le siège Google"
               width={296}
               height={213}
-              className="h-auto w-full rounded-xl object-cover"
+              className="h-auto w-full self-center rounded-xl object-cover md:w-1/2"
             />
-            <div>
+            <div className="md:w-1/2">
               <h3 className="font-heading text-lg font-semibold text-black">
                 Le SEO dépend de nombreux facteurs
               </h3>

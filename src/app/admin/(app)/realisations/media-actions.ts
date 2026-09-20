@@ -2,7 +2,7 @@
 
 import fs from "fs";
 import path from "path";
-import { execSync } from "child_process";
+import { execSync, exec } from "child_process";
 import { redirect } from "next/navigation";
 import { requireAdminUser } from "@/lib/jwlAuth";
 
@@ -13,16 +13,24 @@ import { requireAdminUser } from "@/lib/jwlAuth";
 const MEDIA_DIR = path.join(process.cwd(), "content/uploads/realisations");
 
 function syncToGit(message: string) {
+  // add+commit are local and fast; `git push` (especially for a binary image)
+  // can take a few seconds and must not block the HTTP response — the
+  // reverse proxy in front of this app times out sooner than that, which
+  // previously surfaced as a 500 to the browser even though the upload (and
+  // the push) succeeded moments later. Push runs detached in the background.
   try {
     execSync("git add content/uploads/realisations", { cwd: process.cwd() });
     execSync(
       `git -c user.email="contact.jwlmarketing@gmail.com" -c user.name="JWL Marketing" commit -m ${JSON.stringify(message)}`,
       { cwd: process.cwd() }
     );
-    execSync("git push", { cwd: process.cwd() });
   } catch (err) {
-    console.error("[realisations media] git sync failed (non-fatal):", err);
+    console.error("[realisations media] git add/commit failed (non-fatal):", err);
+    return;
   }
+  exec("git push", { cwd: process.cwd() }, (err) => {
+    if (err) console.error("[realisations media] git push failed (non-fatal):", err);
+  });
 }
 
 export async function uploadRealisationImageAction(

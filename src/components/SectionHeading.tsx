@@ -4,6 +4,7 @@ export default function SectionHeading({
   kicker,
   title,
   accent,
+  accentColor,
   subtext,
   children,
   titleClassName,
@@ -11,6 +12,7 @@ export default function SectionHeading({
   kicker?: string;
   title: ReactNode;
   accent?: string;
+  accentColor?: string;
   subtext?: ReactNode;
   children?: ReactNode;
   titleClassName?: string;
@@ -31,7 +33,12 @@ export default function SectionHeading({
         )}
         {title}
         {children}
-        {accent && <span className="not-italic text-[#c9846f]"> {accent}</span>}
+        {accent && (
+          <span className="not-italic" style={{ color: accentColor || "#c9846f" }}>
+            {" "}
+            {accent}
+          </span>
+        )}
       </h2>
       {subtext && (
         <p className="mx-auto mt-5 max-w-[700px] text-base leading-relaxed text-[#555]">
