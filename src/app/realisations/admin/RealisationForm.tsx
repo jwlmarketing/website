@@ -11,6 +11,7 @@ import {
   type StatItem,
 } from "@/lib/blocks/types";
 import type { RealisationPage } from "@/lib/realisations";
+import ImagePicker from "./ImagePicker";
 
 const STRUCTURED_TYPES: Block["type"][] = [
   "hero",
@@ -289,8 +290,8 @@ function BlockEditor({
               onChange={(v) => onChange({ ...block, buttonLink: v })}
             />
           </div>
-          <Field
-            label="Image (URL /images/...)"
+          <ImagePicker
+            label="Image"
             value={block.imageUrl || ""}
             onChange={(v) => onChange({ ...block, imageUrl: v })}
           />
@@ -333,7 +334,7 @@ function BlockEditor({
     case "image":
       return (
         <div className="grid gap-3">
-          <Field label="URL de l'image" value={block.url} onChange={(v) => onChange({ ...block, url: v })} />
+          <ImagePicker label="Image" value={block.url} onChange={(v) => onChange({ ...block, url: v })} />
           <Field
             label="Texte alternatif"
             value={block.alt || ""}
@@ -404,7 +405,7 @@ function BlockEditor({
           empty={{ url: "" }}
           renderItem={(img, update) => (
             <div className="grid grid-cols-2 gap-2">
-              <Field label="URL image" value={img.url} onChange={(v) => update({ ...img, url: v })} />
+              <ImagePicker label="Image" value={img.url} onChange={(v) => update({ ...img, url: v })} />
               <Field label="Alt" value={img.alt || ""} onChange={(v) => update({ ...img, alt: v })} />
             </div>
           )}
@@ -459,6 +460,11 @@ function BlockEditor({
                 value={item.text}
                 onChange={(v) => update({ ...item, text: v })}
                 textarea
+              />
+              <ImagePicker
+                label="Photo (optionnel)"
+                value={item.avatarUrl || ""}
+                onChange={(v) => update({ ...item, avatarUrl: v })}
               />
             </div>
           )}
