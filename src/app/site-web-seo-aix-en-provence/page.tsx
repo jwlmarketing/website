@@ -255,8 +255,9 @@ export default function Page() {
         <FadeUp>
           <h2 className="mx-auto max-w-[900px] font-heading text-3xl leading-[1.25] text-black md:text-[44px] md:leading-[1.3]">
             Quand un client recherche ton métier,{" "}
-            <span className="italic text-[#c9846f]">apparais-tu</span>{" "}
-            <span className="text-[#c9846f]">?</span>
+            <span className="whitespace-nowrap italic text-[#c9846f]">
+              apparais-tu <span className="not-italic">?</span>
+            </span>
           </h2>
           <p className="mx-auto mt-3 max-w-[700px] text-base text-[#555] md:text-lg">
             Google{" "}attire l&apos;attention. Ton site crée la confiance. Ta
