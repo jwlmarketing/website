@@ -12,6 +12,23 @@
       "buttonText": "Parlons de ton outil",
       "buttonLink": "tel:0783792814",
       "imageUrl": "/images/realisations/telechargement.jpeg"
+    },
+    {
+      "type": "image",
+      "url": "/images/realisations/image.jpg"
+    },
+    {
+      "type": "testimonials",
+      "items": [
+        {
+          "name": "Nathan MILLÉ",
+          "text": "Je recommande vivement. J'ai fait appel à JWL marketing pour mieux comprendre le SEO. Jodie m'a accompagné sur les pistes à suivre pour ma petite entreprise.\nC'est rassurant d'avoir quelqu'un qui accompagne de façon personnalisée, et réactive surtout.",
+          "role": "CEO de Dynamitz",
+          "rating": 5,
+          "readMoreUrl": "https://maps.app.goo.gl/4cPGkhVecEEhh8zz7",
+          "avatarUrl": "/images/realisations/telechargement-1-.jpeg"
+        }
+      ]
     }
   ]
 }
