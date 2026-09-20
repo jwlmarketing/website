@@ -724,8 +724,8 @@ export default function Page() {
         </h3>
         <div className="mt-10 grid gap-8 text-left md:grid-cols-2">
           <ScrollReveal>
-            <div className="flex h-full flex-col items-center justify-center gap-4 rounded-2xl bg-[#faf3ea] p-8 text-center">
-              <p className="text-[15px] leading-[22px] text-black">
+            <div className="flex h-full flex-col items-center justify-center gap-4 rounded-2xl bg-black p-8 text-center">
+              <p className="text-[15px] leading-[22px] text-white">
                 Une question avant de réserver ? Écris-moi sur WhatsApp, le
                 message est déjà préparé pour aller droit au but.
               </p>
