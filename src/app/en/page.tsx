@@ -218,7 +218,7 @@ export default function Home() {
               />
               <div className="border-b border-white/15 px-6 py-6">
                 <h3 className="min-h-[1.6em] font-heading text-xl">
-                  <TypewriterText text={step.title} startDelay={i * 150 + 650} />
+                  <TypewriterText text={step.title} speed={35} startDelay={i * 100 + 350} />
                 </h3>
                 <p className="mt-3 text-justify text-lg text-white/85">{step.lead}</p>
               </div>

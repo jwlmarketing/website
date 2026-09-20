@@ -49,8 +49,8 @@ export default function EscalierReveal({
           className={itemClassName}
           style={{
             opacity: visible[i] ? 1 : 0,
-            transform: visible[i] ? "translateY(0)" : "translateY(45px)",
-            transition: `opacity .6s ease ${i * 0.15}s, transform .6s cubic-bezier(.22,1,.36,1) ${i * 0.15}s`,
+            transform: visible[i] ? "translateY(0)" : "translateY(24px)",
+            transition: `opacity .5s ease ${i * 0.1}s, transform .5s cubic-bezier(.22,1,.36,1) ${i * 0.1}s`,
           }}
         >
           {child}
