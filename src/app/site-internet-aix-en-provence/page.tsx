@@ -97,7 +97,7 @@ export default function Page() {
         <div className="max-w-[720px] flex-1 self-start pb-[90px] lg:pt-[30px]">
           <h1 className="font-heading text-5xl font-extrabold leading-[1.02] lg:text-[72px] lg:leading-[1.02] text-black">
             <span className="text-[#c9846f]">JWL Business :</span>
-            <span className="font-bold"> un site web qui inpire confiance</span>
+            <span className="font-bold"> un site web qui inspire confiance</span>
             <br />
           </h1>
           <p className="text-justify mt-7 text-2xl leading-[1.5] text-black">
@@ -679,8 +679,8 @@ export default function Page() {
         </h2>
         <div className="mx-auto mt-10 grid max-w-[1000px] gap-8 text-left md:grid-cols-2">
           <ScrollReveal>
-            <div className="flex h-full flex-col items-center justify-center gap-4 rounded-2xl bg-[#faf3ea] p-8 text-center">
-              <p className="text-justify text-[15px] leading-[22px] text-black">
+            <div className="flex h-full flex-col items-center justify-center gap-4 rounded-2xl bg-black p-8 text-center">
+              <p className="text-justify text-[15px] leading-[22px] text-white">
                 Une question avant de réserver ? Écris-moi sur WhatsApp, le
                 message est déjà préparé pour aller droit au but.
               </p>

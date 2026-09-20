@@ -9,6 +9,7 @@ import ProofCards from "@/components/ProofCards";
 import ProspectCarousel from "@/components/ProspectCarousel";
 import FadeUp from "@/components/FadeUp";
 import RotatingKeyword from "@/components/RotatingKeyword";
+import ComparisonTableCta from "@/components/ComparisonTableCta";
 
 const FACTEURS_SEO = [
   "De tes produits et services",
@@ -207,14 +208,14 @@ export default function Page() {
             ))}
           </ul>
           <div className="mt-6 flex flex-wrap items-center gap-4">
-            <span className="rounded-full bg-[#c9846f] px-6 py-[15px] font-semibold text-white">
+            <span className="rounded-full bg-gold px-6 py-[15px] font-semibold text-white">
               À partir de 875 €
             </span>
             <a
               href="https://calendly.com/jwlm"
               target="_blank"
               rel="noopener"
-              className="inline-block rounded-full bg-gold px-8 py-[15px] text-center font-semibold text-white transition-colors hover:bg-[#b8952f]"
+              className="inline-block rounded-full bg-[#c9846f] px-8 py-[15px] text-center font-semibold text-white transition-colors hover:bg-[#b8735f]"
             >
               Faire de mon site un outil qui attire les clients
             </a>
@@ -350,7 +351,7 @@ export default function Page() {
 
       {/* Ma Méthode */}
       <section className="mx-auto max-w-[1400px] px-6 py-10 text-center">
-        <h2 className="font-heading text-3xl font-bold leading-[1.15] md:text-[46px] md:leading-[1.15] text-black">
+        <h2 className="font-heading text-3xl leading-[1.15] md:text-[46px] md:leading-[1.15] text-black">
           <span className="italic text-[#c9846f]">Ma Méthode</span>
           <br />
           <span className="font-medium">
@@ -418,7 +419,7 @@ export default function Page() {
 
       {/* 12 mois pour construire, analyser et faire évoluer ta visibilité */}
       <section className="mx-auto max-w-[1200px] px-6 py-10 text-center">
-        <h2 className="font-heading text-3xl font-bold leading-[1.15] md:text-[46px] md:leading-[1.15] text-black">
+        <h2 className="font-heading text-3xl leading-[1.15] md:text-[46px] md:leading-[1.15] text-black">
           <span className="italic text-[#c9846f]">12 mois</span>{" "}
           <span className="font-medium">pour construire,</span>
           <br />
@@ -435,11 +436,12 @@ export default function Page() {
             <PricingCard key={tier.title} tier={tier} />
           ))}
         </div>
+        <ComparisonTableCta />
       </section>
 
       {/* Tu sais tout ce qui est fait. Quand. Et pourquoi. */}
       <section className="mx-auto max-w-[1000px] px-6 py-10 text-center">
-        <h2 className="font-heading text-3xl font-bold leading-[1.15] md:text-[46px] md:leading-[1.15] text-black">
+        <h2 className="font-heading text-3xl leading-[1.15] md:text-[46px] md:leading-[1.15] text-black">
           <span className="italic text-[#c9846f]">Tu sais tout ce qui est fait.</span>
           <br />
           <span className="font-medium">Quand. Et pourquoi.</span>
@@ -457,21 +459,23 @@ export default function Page() {
 
       {/* Tous les mois je veille à faire évoluer ta position sur Google */}
       <section className="mx-auto max-w-[1400px] px-6 py-10 text-center">
-        <h2 className="font-heading text-3xl font-bold leading-[1.15] md:text-[46px] md:leading-[1.15] text-black">
+        <h2 className="font-heading text-3xl leading-[1.15] md:text-[46px] md:leading-[1.15] text-black">
           <span className="italic text-[#c9846f]">Tous les mois je veille</span>
           <br />
           <span className="font-medium">
             à faire évoluer ta position sur <GoogleColors />
           </span>
         </h2>
-        <div className="mt-10 grid gap-6 md:grid-cols-3">
+        <div className="mt-10 grid items-end gap-6 md:grid-cols-3">
           <ScrollReveal delay={0}>
-            <StepNumber n={1} />
-            <div className="mt-4 rounded-2xl bg-[#141414] p-6 text-left text-white">
-              <p className="text-[15px] font-semibold leading-[22px]">
+            <div className="mx-auto flex h-11 w-11 items-center justify-center rounded-full bg-gold text-lg font-bold text-white">
+              1
+            </div>
+            <div className="mt-4 rounded-2xl bg-[#141414] p-5 text-left text-white">
+              <p className="text-sm font-semibold leading-[20px]">
                 Je regarde le suivi Search Console Google
               </p>
-              <p className="mt-2 text-sm leading-[21px] text-white/80">
+              <p className="mt-2 text-[13px] leading-[19px] text-white/80">
                 En claire se que les gens tapent sur google et comment ton
                 site ressort.
               </p>
@@ -489,12 +493,14 @@ export default function Page() {
             </div>
           </ScrollReveal>
           <ScrollReveal delay={300}>
-            <StepNumber n={3} />
-            <div className="mt-4 rounded-2xl bg-[#141414] p-6 text-left text-white">
-              <p className="text-[15px] font-semibold leading-[22px]">
+            <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-gold text-3xl font-bold text-white">
+              3
+            </div>
+            <div className="mt-4 rounded-2xl bg-[#141414] p-7 text-left text-white">
+              <p className="text-base font-semibold leading-[24px]">
                 J&apos;ajuste ta stratégie en concéquence
               </p>
-              <p className="mt-2 text-sm leading-[21px] text-white/80">
+              <p className="mt-2 text-[15px] leading-[22px] text-white/80">
                 Je fais évoluer tes pages tes contenus.
               </p>
             </div>
@@ -510,7 +516,7 @@ export default function Page() {
 
       {/* J'améliore la compréhension de ton activité par ChatGPT et les IA */}
       <section className="mx-auto max-w-[1200px] px-6 py-10 text-center">
-        <h2 className="font-heading text-3xl font-bold leading-[1.15] md:text-[46px] md:leading-[1.15] text-black">
+        <h2 className="font-heading text-3xl leading-[1.15] md:text-[46px] md:leading-[1.15] text-black">
           <span className="italic text-[#c9846f]">
             J&apos;améliore la compréhension
           </span>
@@ -542,10 +548,10 @@ export default function Page() {
           </ScrollReveal>
           <ScrollReveal delay={150}>
             <Image
-              src="/images/jwl-ia-recommandation-dashboard.png"
-              alt="Exemple de recommandation IA — JWL Marketing"
-              width={339}
-              height={317}
+              src="/images/jwl-ia-chatgpt-comprehension.png"
+              alt="JWL Marketing — compréhension de ton activité par les IA"
+              width={530}
+              height={328}
               className="mx-auto h-auto w-full max-w-[340px] object-contain"
             />
           </ScrollReveal>
@@ -554,14 +560,14 @@ export default function Page() {
 
       {/* J'optimise ta stratégie */}
       <section className="mx-auto max-w-[1400px] px-6 py-10 text-center">
-        <h2 className="font-heading text-3xl font-bold leading-[1.15] md:text-[46px] md:leading-[1.15] text-black">
+        <h2 className="font-heading text-3xl leading-[1.15] md:text-[46px] md:leading-[1.15] text-black">
           <span className="italic text-[#c9846f]">J&apos;optimise ta stratégie</span>
           <br />
           <span className="font-medium">avec des données chiffrées</span>
         </h2>
         <div className="mt-10 grid gap-6 md:grid-cols-2">
           <ScrollReveal delay={0} className="text-left">
-            <p className="text-[17px] leading-[26px] text-[#1a1a1a]">
+            <p className="text-[17px] leading-[26px] text-[#1a1a1a] md:min-h-[64px]">
               Je vois quand <span className="font-bold">tu n&apos;as pas de stratégie</span>
             </p>
             <Lightbox
@@ -569,7 +575,7 @@ export default function Page() {
               alt="Search Console — sans stratégie SEO"
               width={640}
               height={352}
-              className="mt-3 h-auto w-full max-w-[380px] rounded-2xl border border-[#eee] object-cover"
+              className="mt-3 h-[210px] w-full max-w-[380px] rounded-2xl border border-[#eee] object-cover"
             />
             <p className="mt-3 text-sm text-[#1a1a1a]">
               Quand tu n&apos;as pas de stratégie.
@@ -581,7 +587,7 @@ export default function Page() {
             </p>
           </ScrollReveal>
           <ScrollReveal delay={150} className="text-left">
-            <p className="text-[17px] leading-[26px] text-[#1a1a1a]">
+            <p className="text-[17px] leading-[26px] text-[#1a1a1a] md:min-h-[64px]">
               Quand <span className="font-bold">tu as une stratégie SEO</span> et
               aucune stratégie commerciale sur ton site web
             </p>
@@ -590,7 +596,7 @@ export default function Page() {
               alt="Search Console — stratégie SEO sans stratégie commerciale"
               width={638}
               height={356}
-              className="mt-3 h-auto w-full max-w-[380px] rounded-2xl border border-[#eee] object-cover"
+              className="mt-3 h-[210px] w-full max-w-[380px] rounded-2xl border border-[#eee] object-cover"
             />
             <p className="mt-3 text-sm text-[#1a1a1a]">
               Quand tu as une stratégie SEO et aucune stratégie commerciale
@@ -629,7 +635,7 @@ export default function Page() {
 
       {/* Je t'accompagne à lier ta visibilité sur terrain et le web */}
       <section className="mx-auto max-w-[1200px] px-6 py-10 text-center">
-        <h2 className="font-heading text-3xl font-bold leading-[1.15] md:text-[46px] md:leading-[1.15] text-black">
+        <h2 className="font-heading text-3xl leading-[1.15] md:text-[46px] md:leading-[1.15] text-black">
           <span className="italic text-[#c9846f]">Je t&apos;accompagne</span>
           <br />
           <span className="font-medium">
@@ -661,7 +667,7 @@ export default function Page() {
 
       {/* Je te rends autonome */}
       <section className="mx-auto max-w-[900px] px-6 py-10 text-center">
-        <h2 className="font-heading text-3xl font-bold leading-[1.15] md:text-[46px] md:leading-[1.15] text-black">
+        <h2 className="font-heading text-3xl leading-[1.15] md:text-[46px] md:leading-[1.15] text-black">
           <span className="italic text-[#c9846f]">Je te rends autonome</span>
           <br />
           <span className="font-medium">
@@ -704,7 +710,7 @@ export default function Page() {
 
       {/* Des projets SEO qui parlent d'eux-même */}
       <section className="mx-auto max-w-[1200px] px-6 py-10 text-center">
-        <h2 className="font-heading text-3xl font-bold leading-[1.15] md:text-[46px] md:leading-[1.15] text-black">
+        <h2 className="font-heading text-3xl leading-[1.15] md:text-[46px] md:leading-[1.15] text-black">
           <span className="italic text-[#c9846f]">Des projets SEO</span>
           <br />
           <span className="font-medium">qui parlent d&apos;eux-même</span>
@@ -716,7 +722,7 @@ export default function Page() {
 
       {/* Boost ton Bizz avec JWL MARKETING */}
       <section className="mx-auto max-w-[1200px] px-6 py-16 text-center">
-        <h3 className="font-heading text-3xl font-bold leading-[1.15] md:text-[46px] md:leading-[1.15] text-black">
+        <h3 className="font-heading text-3xl leading-[1.15] md:text-[46px] md:leading-[1.15] text-black">
           Boost ton Bizz avec <span className="text-[#c9846f]">JWL MARKETING</span>
         </h3>
         <div className="mt-10 grid gap-8 text-left md:grid-cols-2">
