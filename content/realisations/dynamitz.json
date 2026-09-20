@@ -1,0 +1,28 @@
+{
+  "title": "Dynamitz",
+  "metaTitle": "Dynamitz — Réalisation JWL Marketing",
+  "metaDescription": "Refonte du site Dynamitz : nouvelle architecture de contenu et positionnement commercial clarifié.",
+  "status": "published",
+  "blocks": [
+    {
+      "type": "heading",
+      "title": "Cas client",
+      "accent": "Dynamitz",
+      "subtext": "Transformer un outil complexe en véritable plateforme d'accompagnement entrepreneurial."
+    },
+    {
+      "type": "image",
+      "url": "/images/logo-dynamitz.png",
+      "alt": "Logo Dynamitz"
+    },
+    {
+      "type": "text",
+      "text": "Refonte complète du site, nouvelle architecture de contenu et positionnement commercial clarifié pour aider Dynamitz à présenter clairement son offre d'accompagnement entrepreneurial."
+    },
+    {
+      "type": "cta",
+      "buttonText": "Voir le site",
+      "buttonLink": "https://dynamitz.fr"
+    }
+  ]
+}
