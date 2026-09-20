@@ -37,6 +37,18 @@ export async function uploadRealisationImageAction(
     return { error: "Seules les images sont acceptées." };
   }
 
+  // next/image ne sait optimiser que ces formats : un .heic (photo iPhone),
+  // .avif ou autre format exotique ferait planter l'affichage de la page
+  // publique au lieu d'échouer proprement ici. On le refuse tout de suite
+  // avec un message clair plutôt que de casser la page plus tard.
+  const SUPPORTED = new Set(["image/jpeg", "image/png", "image/webp", "image/gif", "image/svg+xml"]);
+  if (!SUPPORTED.has(file.type)) {
+    return {
+      error:
+        "Format d'image non supporté (ex: HEIC des photos iPhone). Utilise un JPG, PNG, WEBP ou GIF — ta galerie photo/appli photo peut convertir le fichier.",
+    };
+  }
+
   if (!fs.existsSync(MEDIA_DIR)) fs.mkdirSync(MEDIA_DIR, { recursive: true });
 
   let safeName = file.name
