@@ -112,6 +112,7 @@ export default function AccompagnementsSection() {
           dragging.current = false;
           dragStartX.current = null;
         }}
+        onDragStart={(e) => e.preventDefault()}
       >
         {ACCOMPAGNEMENTS.map((item, i) => {
           const isActive = i === active;
@@ -173,6 +174,7 @@ function AccompagnementCard({
         alt={typeof item.title === "string" ? item.title : "JWL Marketing"}
         width={220}
         height={220}
+        draggable={false}
         className="absolute -top-4 left-1/2 h-[140px] w-[140px] -translate-x-1/2 rounded-xl object-cover shadow-lg md:h-[160px] md:w-[160px]"
       />
       {item.badge && (

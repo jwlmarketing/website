@@ -79,6 +79,7 @@ export default function MethodeCarousel() {
           dragging.current = false;
           dragStartX.current = null;
         }}
+        onDragStart={(e) => e.preventDefault()}
       >
         {STEPS.map((step, i) => {
           const total = STEPS.length;
@@ -138,6 +139,7 @@ function StepCard({ step }: { step: (typeof STEPS)[number] }) {
         alt={step.alt}
         width={step.width}
         height={step.height}
+        draggable={false}
         className="h-[220px] w-full object-cover"
       />
       <div className="p-4 text-left">
