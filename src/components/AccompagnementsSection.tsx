@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import GoogleColors from "@/components/GoogleColors";
@@ -62,45 +65,106 @@ const ACCOMPAGNEMENTS = [
 ];
 
 export default function AccompagnementsSection() {
+  const [active, setActive] = useState(0);
+
   return (
-    <div className="mx-auto grid max-w-[900px] gap-8 md:grid-cols-2">
-      {ACCOMPAGNEMENTS.map((item, i) => (
-        <Link
-          key={i}
-          href={item.href}
-          className="group relative flex flex-col items-center pt-28 transition-transform duration-300 hover:-translate-y-3 md:pt-32"
-        >
-          <Image
-            src={item.image}
-            alt={typeof item.title === "string" ? item.title : "JWL Marketing"}
-            width={220}
-            height={220}
-            className="absolute -top-4 left-1/2 h-[140px] w-[140px] -translate-x-1/2 rounded-xl object-cover shadow-lg md:h-[160px] md:w-[160px]"
+    <div className="mx-auto max-w-[1200px]">
+      <div className="relative mx-auto grid max-w-[900px] gap-8 md:hidden">
+        {ACCOMPAGNEMENTS.map((item, i) => (
+          <AccompagnementCard key={i} item={item} />
+        ))}
+      </div>
+
+      <div className="relative mx-auto hidden min-h-[560px] w-[460px] select-none md:block">
+        {ACCOMPAGNEMENTS.map((item, i) => {
+          const isActive = i === active;
+          const offset = i - active;
+
+          return (
+            <button
+              key={i}
+              type="button"
+              aria-label={item.packName}
+              onClick={() => setActive(i)}
+              className="absolute left-1/2 top-0 w-[460px] text-left"
+              style={{
+                transform: `translateX(-50%) translateX(${offset * 260}px) scale(${isActive ? 1 : 0.85})`,
+                zIndex: isActive ? 20 : 10,
+                opacity: isActive ? 1 : 0.55,
+                filter: isActive ? "none" : "grayscale(0.3)",
+                transition: "transform 0.5s ease, opacity 0.5s ease, filter 0.5s ease",
+                cursor: isActive ? "default" : "pointer",
+                pointerEvents: "auto",
+              }}
+            >
+              <AccompagnementCard item={item} interactive={!isActive} />
+            </button>
+          );
+        })}
+      </div>
+
+      <div className="mt-8 hidden justify-center gap-2 md:flex">
+        {ACCOMPAGNEMENTS.map((_, i) => (
+          <button
+            key={i}
+            type="button"
+            aria-label={`Voir l'offre ${i + 1}`}
+            onClick={() => setActive(i)}
+            className={`h-2.5 w-2.5 rounded-full transition-colors ${
+              i === active ? "bg-[#c9846f]" : "bg-black/20"
+            }`}
           />
-          {item.badge && (
-            <span className="absolute right-6 top-2 -rotate-6 rounded-full bg-gold px-4 py-2 text-xs font-bold text-white shadow-md">
-              {item.badge}
-            </span>
-          )}
-          <div className="relative flex min-h-[400px] w-full flex-1 flex-col rounded-2xl border border-[#c9846f]/40 bg-[#141414] p-8 pt-10 text-left text-white shadow-md transition-all duration-300 group-hover:border-gold group-hover:bg-gold group-hover:shadow-2xl">
-            <span className="absolute left-1/2 top-4 -translate-x-1/2 rounded-full bg-gold px-3 py-1 text-xs font-bold uppercase tracking-wide text-white transition-colors duration-300 group-hover:bg-black">
-              {item.packName}
-            </span>
-            <h3 className="text-center font-heading text-xl leading-snug">
-              {item.title}
-            </h3>
-            <div className="mt-4 flex-1 whitespace-pre-line text-sm text-white/85 transition-colors duration-300 group-hover:text-[#141414]/80">
-              {item.text}
-              <p className="mt-4 text-sm text-gold transition-colors duration-300 group-hover:text-[#141414]">
-                ⭐ {item.star}
-              </p>
-            </div>
-            <span className="mt-6 inline-block self-center rounded-full bg-[#c9846f] px-6 py-3 text-sm font-medium text-white transition-colors duration-300 group-hover:bg-black">
-              {item.cta}
-            </span>
-          </div>
-        </Link>
-      ))}
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function AccompagnementCard({
+  item,
+  interactive,
+}: {
+  item: (typeof ACCOMPAGNEMENTS)[number];
+  interactive?: boolean;
+}) {
+  return (
+    <div className="relative flex flex-col items-center pt-28 md:pt-32">
+      <Image
+        src={item.image}
+        alt={typeof item.title === "string" ? item.title : "JWL Marketing"}
+        width={220}
+        height={220}
+        className="absolute -top-4 left-1/2 h-[140px] w-[140px] -translate-x-1/2 rounded-xl object-cover shadow-lg md:h-[160px] md:w-[160px]"
+      />
+      {item.badge && (
+        <span className="absolute right-6 top-2 -rotate-6 rounded-full bg-gold px-4 py-2 text-xs font-bold text-white shadow-md">
+          {item.badge}
+        </span>
+      )}
+      <div className="relative flex min-h-[400px] w-full flex-1 flex-col rounded-2xl border border-[#c9846f]/40 bg-[#141414] p-8 pt-10 text-left text-white">
+        <span className="absolute left-1/2 top-4 -translate-x-1/2 rounded-full bg-gold px-3 py-1 text-xs font-bold uppercase tracking-wide text-white">
+          {item.packName}
+        </span>
+        <h3 className="text-center font-heading text-xl leading-snug">
+          {item.title}
+        </h3>
+        <div className="mt-4 flex-1 whitespace-pre-line text-sm text-white/85">
+          {item.text}
+          <p className="mt-4 text-sm text-gold">⭐ {item.star}</p>
+        </div>
+        {interactive ? (
+          <span className="mt-6 inline-block self-center rounded-full bg-[#c9846f]/60 px-6 py-3 text-sm font-medium text-white">
+            {item.cta}
+          </span>
+        ) : (
+          <Link
+            href={item.href}
+            className="mt-6 inline-block self-center rounded-full bg-[#c9846f] px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-[#b8735f]"
+          >
+            {item.cta}
+          </Link>
+        )}
+      </div>
     </div>
   );
 }

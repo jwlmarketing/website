@@ -10,6 +10,7 @@ import ProspectCarousel from "@/components/ProspectCarousel";
 import FadeUp from "@/components/FadeUp";
 import RotatingKeyword from "@/components/RotatingKeyword";
 import ComparisonTableCta from "@/components/ComparisonTableCta";
+import MethodeCarousel from "@/components/MethodeCarousel";
 
 const FACTEURS_SEO = [
   "De tes produits et services",
@@ -358,69 +359,7 @@ export default function Page() {
             Fais de ton site web une machine à clients.
           </span>
         </h2>
-        <div className="mt-10 grid gap-6 md:grid-cols-3">
-          <ScrollReveal delay={0}>
-            <div className="group flex h-full flex-col overflow-hidden rounded-2xl bg-[#141414] text-white transition-all duration-300 hover:-translate-y-3 hover:shadow-2xl">
-              <Image
-                src="/images/conception-site-web.png"
-                alt="Je comprends comment tes clients te recherchent — JWL Marketing"
-                width={466}
-                height={346}
-                className="h-auto w-full object-cover"
-              />
-              <div className="p-4 text-left">
-                <p className="text-[15px] font-semibold leading-[22px]">
-                  Je comprends comment tes clients te recherchent
-                </p>
-                <p className="mt-2 text-[14px] leading-[22px] text-white/80">
-                  Étude de ton activité, de tes concurrents et des mots-clés
-                  utilisés sur Google.
-                </p>
-              </div>
-            </div>
-          </ScrollReveal>
-          <ScrollReveal delay={150}>
-            <div className="group flex h-full flex-col overflow-hidden rounded-2xl bg-[#141414] text-white transition-all duration-300 hover:-translate-y-3 hover:shadow-2xl">
-              <Image
-                src="/images/site-web-sur-mesure.png"
-                alt="Je crée un site web pensé pour être trouvé — JWL Marketing"
-                width={466}
-                height={344}
-                className="h-auto w-full object-cover"
-              />
-              <div className="p-4 text-left">
-                <p className="text-[15px] font-semibold leading-[22px]">
-                  Je crée un site web pensé pour être trouvé
-                </p>
-                <p className="mt-2 text-[14px] leading-[22px] text-white/80">
-                  Structure, contenus, pages de services et optimisation SEO
-                  dès la création.
-                </p>
-              </div>
-            </div>
-          </ScrollReveal>
-          <ScrollReveal delay={300}>
-            <div className="group flex h-full flex-col overflow-hidden rounded-2xl bg-[#141414] text-white transition-all duration-300 hover:-translate-y-3 hover:shadow-2xl">
-              <Image
-                src="/images/jwl-methode-analyse-search-console.png"
-                alt="J'analyse les données et j'améliore la connexion à Google Search Console — JWL Marketing"
-                width={466}
-                height={346}
-                className="h-auto w-full object-cover"
-              />
-              <div className="p-4 text-left">
-                <p className="text-[15px] font-semibold leading-[22px]">
-                  J&apos;analyse les données et j&apos;améliore la connexion à
-                  Google Search Console
-                </p>
-                <p className="mt-2 text-[14px] leading-[22px] text-white/80">
-                  Pour comprendre le comportement des visiteurs et identifier
-                  les opportunités d&apos;amélioration.
-                </p>
-              </div>
-            </div>
-          </ScrollReveal>
-        </div>
+        <MethodeCarousel />
       </section>
 
       {/* 12 mois pour construire, analyser et faire évoluer ta visibilité */}
