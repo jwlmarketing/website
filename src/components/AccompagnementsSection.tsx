@@ -141,6 +141,23 @@ export default function AccompagnementsSection() {
             </button>
           );
         })}
+
+        <button
+          type="button"
+          aria-label="Offre précédente"
+          onClick={prev}
+          className="absolute left-0 top-1/2 z-30 flex h-11 w-11 -translate-x-[64px] -translate-y-1/2 items-center justify-center rounded-full bg-white text-xl text-black shadow-lg transition-transform hover:scale-110"
+        >
+          ‹
+        </button>
+        <button
+          type="button"
+          aria-label="Offre suivante"
+          onClick={next}
+          className="absolute right-0 top-1/2 z-30 flex h-11 w-11 -translate-y-1/2 translate-x-[64px] items-center justify-center rounded-full bg-white text-xl text-black shadow-lg transition-transform hover:scale-110"
+        >
+          ›
+        </button>
       </div>
 
       <div className="mt-8 hidden justify-center gap-2 md:flex">
