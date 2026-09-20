@@ -11,7 +11,7 @@ const nextConfig: NextConfig = {
     serverActions: {
       // No practical cap (Next requires a value; this is effectively
       // unlimited for anything a browser will realistically upload).
-      bodySizeLimit: "1gb",
+      bodySizeLimit: "1to",
     },
   },
   async rewrites() {
