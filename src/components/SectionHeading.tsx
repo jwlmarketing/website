@@ -28,7 +28,7 @@ export default function SectionHeading({
       <h2
         className={
           (titleClassName ??
-            "relative block w-full px-2 font-heading text-3xl font-medium not-italic leading-[1.25] text-black md:px-10 md:text-[54px] md:leading-[1.35]") +
+            "relative block w-full px-2 font-heading text-3xl not-italic leading-[1.25] text-black md:px-10 md:text-[54px] md:leading-[1.35]") +
           " text-balance"
         }
       >

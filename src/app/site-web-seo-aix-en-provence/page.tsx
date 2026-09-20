@@ -253,7 +253,7 @@ export default function Page() {
       {/* Quand un client recherche ton métier, apparais-tu ? */}
       <section className="px-[5%] py-16 text-center">
         <FadeUp>
-          <h2 className="mx-auto max-w-[900px] font-heading text-3xl font-medium leading-[1.25] text-black md:text-[44px] md:leading-[1.3]">
+          <h2 className="mx-auto max-w-[900px] font-heading text-3xl leading-[1.25] text-black md:text-[44px] md:leading-[1.3]">
             Quand un client recherche ton métier,{" "}
             <span className="italic text-[#c9846f]">apparais-tu</span>{" "}
             <span className="text-[#c9846f]">?</span>
@@ -338,7 +338,7 @@ export default function Page() {
       {/* Des prospects qualifiés qui trouvent ton entreprise naturellement */}
       <section className="px-[5%] py-16 text-center">
         <FadeUp>
-          <h2 className="mx-auto max-w-[900px] font-heading text-3xl font-medium leading-[1.25] text-black md:text-[44px] md:leading-[1.3]">
+          <h2 className="mx-auto max-w-[900px] font-heading text-3xl leading-[1.25] text-black md:text-[44px] md:leading-[1.3]">
             <span className="italic text-[#c9846f]">Des prospects qualifiés</span>
           </h2>
           <p className="mx-auto mt-1 max-w-[700px] text-lg text-black md:text-xl">
