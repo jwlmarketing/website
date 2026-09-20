@@ -1,15 +1,5 @@
-"use client";
-
-import { useState } from "react";
 import Image from "next/image";
-import { usePathname, useRouter } from "next/navigation";
-
-/**
- * Paires de cartes "accompagnement" (Business+Booster, puis Connect+Prospecte
- * plus bas sur la page). Pas de rotation auto ici : deux cartes côte à côte,
- * un premier clic agrandit la carte, un second clic (sur la carte déjà
- * agrandie) redirige vers la page correspondante.
- */
+import Link from "next/link";
 
 const CARDS = {
   fr: [
@@ -68,62 +58,42 @@ const CARDS = {
 
 export default function AccompagnementsTeaser({
   pair = "primary",
+  locale = "fr",
 }: {
   pair?: "primary" | "secondary";
+  locale?: "fr" | "en";
 }) {
-  const pathname = usePathname();
-  const router = useRouter();
-  const locale = pathname?.startsWith("/en") ? "en" : "fr";
   const allCards = CARDS[locale];
   const cards = pair === "primary" ? allCards.slice(0, 2) : allCards.slice(2, 4);
 
-  const [expanded, setExpanded] = useState<number | null>(null);
-
   return (
     <div className="mx-auto flex max-w-[700px] items-center justify-center gap-6">
-      {cards.map((card, i) => {
-        const isExpanded = expanded === i;
-        return (
-          <button
-            key={card.name}
-            type="button"
-            onClick={() => {
-              if (isExpanded) {
-                router.push(card.href);
-              } else {
-                setExpanded(i);
-              }
-            }}
-            className={`group flex flex-col overflow-hidden rounded-2xl bg-black text-white shadow-md transition-all duration-300 ease-out hover:shadow-xl ${
-              isExpanded ? "scale-110 bg-gold" : "scale-100"
-            }`}
-            style={{ zIndex: isExpanded ? 10 : 1 }}
-          >
-            <div className="p-3">
-              <div className="relative aspect-square w-[160px] overflow-hidden rounded-lg bg-white sm:w-[200px]">
-                <Image
-                  src={card.image}
-                  alt={card.name}
-                  fill
-                  className="object-cover"
-                />
-              </div>
+      {cards.map((card) => (
+        <Link
+          key={card.name}
+          href={card.href}
+          className="group flex flex-col overflow-hidden rounded-2xl bg-black text-white shadow-md transition-all duration-300 ease-out hover:-translate-y-3 hover:bg-gold hover:shadow-2xl"
+        >
+          <div className="p-3">
+            <div className="relative aspect-square w-[160px] overflow-hidden rounded-lg bg-white sm:w-[200px]">
+              <Image
+                src={card.image}
+                alt={card.name}
+                fill
+                className="object-cover"
+              />
             </div>
-            <div className="flex flex-1 flex-col items-center justify-center gap-1 px-3 py-4 text-center">
-              <p className="font-heading text-base font-bold uppercase tracking-wide">
-                {card.name}
-              </p>
-              <p
-                className={`text-sm transition-colors duration-300 ${
-                  isExpanded ? "text-[#141414]/80" : "text-white/80"
-                }`}
-              >
-                {card.subtitle}
-              </p>
-            </div>
-          </button>
-        );
-      })}
+          </div>
+          <div className="flex flex-1 flex-col items-center justify-center gap-1 px-3 py-4 text-center">
+            <p className="font-heading text-base font-bold uppercase tracking-wide">
+              {card.name}
+            </p>
+            <p className="text-sm text-white/80 transition-colors duration-300 group-hover:text-[#141414]/80">
+              {card.subtitle}
+            </p>
+          </div>
+        </Link>
+      ))}
     </div>
   );
 }

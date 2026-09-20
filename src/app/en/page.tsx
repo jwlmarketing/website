@@ -189,7 +189,7 @@ export default function Home() {
             }
           />
         </FadeUp>
-        <AccompagnementsTeaser pair="primary" />
+        <AccompagnementsTeaser pair="primary" locale="en" />
         <div className="mt-8 text-center">
           <Link
             href="/en/site-internet-aix-en-provence"
@@ -205,7 +205,7 @@ export default function Home() {
         <SectionHeading kicker="The method" title="JWL MARKETING" />
         <EscalierReveal
           className="mx-auto grid max-w-[1200px] gap-6 md:grid-cols-3"
-          itemClassName="flex flex-col overflow-hidden rounded-2xl bg-black text-white transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
+          itemClassName="flex flex-col overflow-hidden rounded-2xl bg-black text-white transition-all duration-300 hover:-translate-y-8 hover:shadow-2xl"
         >
           {METHODE_STEPS.map((step, i) => (
             <Fragment key={step.title}>
@@ -297,7 +297,7 @@ export default function Home() {
           </p>
         </FadeUp>
         <div className="mt-10">
-          <AccompagnementsTeaser pair="secondary" />
+          <AccompagnementsTeaser pair="secondary" locale="en" />
         </div>
         <div className="mt-8 text-center">
           <Link
