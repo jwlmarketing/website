@@ -16,9 +16,14 @@ export default function BlockRenderer({ blocks }: { blocks: Block[] }) {
 
 function BlockItem({ block }: { block: Block }) {
   switch (block.type) {
-    case "hero":
+    case "hero": {
+      const imageOnLeft = block.imagePosition === "left";
       return (
-        <div className="flex w-full flex-col items-center justify-between gap-10 bg-white px-[5%] py-[60px] md:flex-row">
+        <div
+          className={`flex w-full flex-col items-center justify-between gap-10 bg-white px-[5%] py-[60px] md:flex-row ${
+            imageOnLeft ? "md:flex-row-reverse" : ""
+          }`}
+        >
           <div className="max-w-[600px] flex-1">
             <h1 className="font-heading text-[38px] font-semibold leading-[1.25] text-black">
               {block.title}
@@ -46,6 +51,50 @@ function BlockItem({ block }: { block: Block }) {
           )}
         </div>
       );
+    }
+
+    case "textImage": {
+      const imageOnLeft = block.imagePosition === "left";
+      return (
+        <div
+          className={`mx-auto flex w-full max-w-[1100px] flex-col items-center gap-10 px-6 py-12 md:flex-row ${
+            imageOnLeft ? "md:flex-row-reverse" : ""
+          }`}
+        >
+          <div className="flex-1">
+            {block.title && (
+              <h2 className="font-heading text-2xl font-semibold leading-[1.3] text-black md:text-3xl">
+                {block.title}
+              </h2>
+            )}
+            {block.text && (
+              <div className="mt-4 space-y-3 text-[15px] leading-[25.5px] text-[#1a1a1a]">
+                {block.text.split(/\n\s*\n/).map((p, i) => (
+                  <p key={i}>{renderInlineMarkdown(p)}</p>
+                ))}
+              </div>
+            )}
+            {block.buttonText && block.buttonLink && (
+              <Link
+                href={block.buttonLink}
+                className="mt-6 inline-block rounded-[5px] border-2 border-gold bg-gold px-8 py-3 font-medium text-white transition-colors hover:border-[#b8952f] hover:bg-[#b8952f]"
+              >
+                {block.buttonText}
+              </Link>
+            )}
+          </div>
+          {block.imageUrl && (
+            <Image
+              src={block.imageUrl}
+              alt={block.title || ""}
+              width={900}
+              height={700}
+              className="h-auto w-full flex-1 rounded-2xl object-cover"
+            />
+          )}
+        </div>
+      );
+    }
 
     case "heading":
       return (
@@ -60,9 +109,20 @@ function BlockItem({ block }: { block: Block }) {
     case "text":
       return (
         <div className="mx-auto max-w-[800px] space-y-4 px-6 py-8 text-[15px] leading-[25.5px] text-[#1a1a1a]">
-          {block.text.split(/\n\s*\n/).map((p, i) => (
-            <p key={i}>{p}</p>
-          ))}
+          {block.text.split(/\n\s*\n/).map((chunk, i) => {
+            const lines = chunk.split("\n").filter(Boolean);
+            const isList = lines.length > 0 && lines.every((l) => /^[-•]\s+/.test(l));
+            if (isList) {
+              return (
+                <ul key={i} className="list-disc space-y-1 pl-5">
+                  {lines.map((l, j) => (
+                    <li key={j}>{renderInlineMarkdown(l.replace(/^[-•]\s+/, ""))}</li>
+                  ))}
+                </ul>
+              );
+            }
+            return <p key={i}>{renderInlineMarkdown(chunk)}</p>;
+          })}
         </div>
       );
 
@@ -196,7 +256,23 @@ function BlockItem({ block }: { block: Block }) {
                     {t.role && <p className="text-xs text-[#888]">{t.role}</p>}
                   </div>
                 </div>
+                {!!t.rating && (
+                  <div className="mt-2 text-sm text-gold" aria-hidden>
+                    {"★".repeat(t.rating)}
+                    {"☆".repeat(5 - t.rating)}
+                  </div>
+                )}
                 <p className="mt-3 text-[13px] leading-relaxed text-[#444]">{t.text}</p>
+                {t.readMoreUrl && (
+                  <a
+                    href={t.readMoreUrl}
+                    target="_blank"
+                    rel="noopener"
+                    className="mt-2 inline-block text-[13px] font-semibold text-gold hover:underline"
+                  >
+                    Lire la suite
+                  </a>
+                )}
               </div>
             ))}
           </div>
@@ -397,6 +473,24 @@ function BlockItem({ block }: { block: Block }) {
     default:
       return null;
   }
+}
+
+// Minimal inline markdown for text blocks: **bold** and [texte](lien).
+function renderInlineMarkdown(text: string): React.ReactNode[] {
+  const parts = text.split(/(\*\*[^*]+\*\*|\[[^\]]+\]\([^)]+\))/g);
+  return parts.map((part, i) => {
+    const bold = part.match(/^\*\*([^*]+)\*\*$/);
+    if (bold) return <strong key={i}>{bold[1]}</strong>;
+    const link = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+    if (link) {
+      return (
+        <Link key={i} href={link[2]} className="font-semibold text-[#c9846f] hover:underline">
+          {link[1]}
+        </Link>
+      );
+    }
+    return part;
+  });
 }
 
 function TabsRender({ items }: { items: { label: string; content: string }[] }) {

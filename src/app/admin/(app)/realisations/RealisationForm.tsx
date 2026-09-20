@@ -15,6 +15,7 @@ import ImagePicker from "./ImagePicker";
 
 const STRUCTURED_TYPES: Block["type"][] = [
   "hero",
+  "textImage",
   "heading",
   "text",
   "image",
@@ -280,6 +281,24 @@ function Field({
   );
 }
 
+function ImagePositionField({
+  value,
+  onChange,
+}: {
+  value: "left" | "right" | undefined;
+  onChange: (v: "left" | "right") => void;
+}) {
+  return (
+    <div className="form-group">
+      <label>Position de l&apos;image</label>
+      <select value={value || "right"} onChange={(e) => onChange(e.target.value as "left" | "right")}>
+        <option value="right">Image à droite</option>
+        <option value="left">Image à gauche</option>
+      </select>
+    </div>
+  );
+}
+
 function BlockEditor({
   block,
   onChange,
@@ -314,6 +333,48 @@ function BlockEditor({
             value={block.imageUrl || ""}
             onChange={(v) => onChange({ ...block, imageUrl: v })}
           />
+          <ImagePositionField
+            value={block.imagePosition}
+            onChange={(v) => onChange({ ...block, imagePosition: v })}
+          />
+        </div>
+      );
+
+    case "textImage":
+      return (
+        <div className="form-grid">
+          <Field
+            label="Titre (optionnel)"
+            value={block.title || ""}
+            onChange={(v) => onChange({ ...block, title: v })}
+          />
+          <Field
+            label="Texte (un paragraphe par ligne vide · **gras** · [texte](lien) · lignes commençant par «- » = liste à puces)"
+            value={block.text || ""}
+            onChange={(v) => onChange({ ...block, text: v })}
+            textarea
+          />
+          <div className="form-grid form-grid-2">
+            <Field
+              label="Texte du bouton (optionnel)"
+              value={block.buttonText || ""}
+              onChange={(v) => onChange({ ...block, buttonText: v })}
+            />
+            <Field
+              label="Lien du bouton"
+              value={block.buttonLink || ""}
+              onChange={(v) => onChange({ ...block, buttonLink: v })}
+            />
+          </div>
+          <ImagePicker
+            label="Image"
+            value={block.imageUrl}
+            onChange={(v) => onChange({ ...block, imageUrl: v })}
+          />
+          <ImagePositionField
+            value={block.imagePosition}
+            onChange={(v) => onChange({ ...block, imagePosition: v })}
+          />
         </div>
       );
 
@@ -343,7 +404,7 @@ function BlockEditor({
     case "text":
       return (
         <Field
-          label="Texte (un paragraphe par ligne vide)"
+          label="Texte (un paragraphe par ligne vide · **gras** · [texte](lien) · lignes commençant par «- » = liste à puces)"
           value={block.text}
           onChange={(v) => onChange({ ...block, text: v })}
           textarea
@@ -480,6 +541,26 @@ function BlockEditor({
                 onChange={(v) => update({ ...item, text: v })}
                 textarea
               />
+              <div className="form-grid form-grid-2">
+                <div className="form-group">
+                  <label>Note (0 = aucune)</label>
+                  <select
+                    value={String(item.rating ?? 0)}
+                    onChange={(e) => update({ ...item, rating: Number(e.target.value) || undefined })}
+                  >
+                    {[0, 1, 2, 3, 4, 5].map((n) => (
+                      <option key={n} value={n}>
+                        {n === 0 ? "Aucune" : "★".repeat(n)}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+                <Field
+                  label="Lien 'Lire la suite' (optionnel)"
+                  value={item.readMoreUrl || ""}
+                  onChange={(v) => update({ ...item, readMoreUrl: v })}
+                />
+              </div>
               <ImagePicker
                 label="Photo (optionnel)"
                 value={item.avatarUrl || ""}

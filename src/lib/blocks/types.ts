@@ -5,6 +5,17 @@ export type HeroBlock = {
   buttonText?: string;
   buttonLink?: string;
   imageUrl?: string;
+  imagePosition?: "left" | "right";
+};
+
+export type TextImageBlock = {
+  type: "textImage";
+  title?: string;
+  text?: string;
+  buttonText?: string;
+  buttonLink?: string;
+  imageUrl: string;
+  imagePosition: "left" | "right";
 };
 
 export type HeadingBlock = {
@@ -65,7 +76,14 @@ export type VideoBlock = {
   title?: string;
 };
 
-export type TestimonialItem = { name: string; text: string; role?: string; avatarUrl?: string };
+export type TestimonialItem = {
+  name: string;
+  text: string;
+  role?: string;
+  avatarUrl?: string;
+  rating?: number; // 1-5, optional
+  readMoreUrl?: string;
+};
 export type TestimonialsBlock = {
   type: "testimonials";
   title?: string;
@@ -162,6 +180,7 @@ export type ButtonBlock = {
 
 export type Block =
   | HeroBlock
+  | TextImageBlock
   | HeadingBlock
   | TextBlock
   | ImageBlock
@@ -190,6 +209,7 @@ export type Block =
 
 export const BLOCK_LABELS: Record<Block["type"], string> = {
   hero: "En-tête (Hero)",
+  textImage: "Texte + image (gauche/droite)",
   heading: "Titre de section",
   text: "Texte",
   image: "Image",
@@ -220,7 +240,9 @@ export const BLOCK_LABELS: Record<Block["type"], string> = {
 export function emptyBlock(type: Block["type"]): Block {
   switch (type) {
     case "hero":
-      return { type: "hero", title: "" };
+      return { type: "hero", title: "", imagePosition: "right" };
+    case "textImage":
+      return { type: "textImage", imageUrl: "", imagePosition: "right" };
     case "heading":
       return { type: "heading", title: "" };
     case "text":
