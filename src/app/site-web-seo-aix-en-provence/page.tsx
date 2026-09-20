@@ -502,8 +502,8 @@ export default function Page() {
           <br />
           <span className="font-medium">avec des données chiffrées</span>
         </h2>
-        <div className="mt-10 grid gap-6 md:grid-cols-2">
-          <ScrollReveal delay={0} className="text-left">
+        <div className="mx-auto mt-10 grid max-w-[820px] gap-6 md:grid-cols-2 md:justify-items-center">
+          <ScrollReveal delay={0} className="max-w-[380px] text-left">
             <p className="text-[17px] leading-[26px] text-[#1a1a1a] md:min-h-[64px]">
               Je vois quand <span className="font-bold">tu n&apos;as pas de stratégie</span>
             </p>
@@ -523,7 +523,7 @@ export default function Page() {
               Tu as des clics qui correspondent à tes clients
             </p>
           </ScrollReveal>
-          <ScrollReveal delay={150} className="text-left">
+          <ScrollReveal delay={150} className="max-w-[380px] text-left">
             <p className="text-[17px] leading-[26px] text-[#1a1a1a] md:min-h-[64px]">
               Quand <span className="font-bold">tu as une stratégie SEO</span> et
               aucune stratégie commerciale sur ton site web
