@@ -75,7 +75,8 @@ export type GalleryBlock = {
 
 export type VideoBlock = {
   type: "video";
-  youtubeId: string;
+  youtubeId?: string;
+  videoUrl?: string; // uploaded video file, alternative to a YouTube ID
   title?: string;
 };
 

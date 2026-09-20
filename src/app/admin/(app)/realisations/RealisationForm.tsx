@@ -12,6 +12,7 @@ import {
 } from "@/lib/blocks/types";
 import type { RealisationPage } from "@/lib/realisations";
 import ImagePicker from "./ImagePicker";
+import VideoPicker from "./VideoPicker";
 
 const STRUCTURED_TYPES: Block["type"][] = [
   "hero",
@@ -44,6 +45,8 @@ export default function RealisationForm({
   const [status, setStatus] = useState<"draft" | "published">(
     page?.status || "draft"
   );
+  const [coverImage, setCoverImage] = useState(page?.coverImage || "");
+  const [showInCarousel, setShowInCarousel] = useState(page?.showInCarousel ?? true);
   const [metaTitle, setMetaTitle] = useState(page?.metaTitle || "");
   const [metaDescription, setMetaDescription] = useState(
     page?.metaDescription || ""
@@ -203,6 +206,29 @@ export default function RealisationForm({
         </div>
 
         <div className="editor-sidebar">
+          {!isIndex && (
+            <div className="editor-panel">
+              <div className="panel-toggle">Image de couverture</div>
+              <div className="panel-body">
+                <input type="hidden" name="coverImage" value={coverImage} />
+                <ImagePicker
+                  label="Utilisée si le projet apparaît dans le carrousel"
+                  value={coverImage}
+                  onChange={setCoverImage}
+                />
+                <label className="toggle-row" style={{ marginTop: 10 }}>
+                  <input
+                    type="checkbox"
+                    name="showInCarousel"
+                    checked={showInCarousel}
+                    onChange={(e) => setShowInCarousel(e.target.checked)}
+                  />
+                  <span>Afficher ce projet dans le carrousel de /realisations</span>
+                </label>
+              </div>
+            </div>
+          )}
+
           <div className="editor-panel">
             <div className="panel-toggle">Publication</div>
             <div className="panel-body">
@@ -513,9 +539,14 @@ function BlockEditor({
     case "video":
       return (
         <div className="form-grid">
+          <VideoPicker
+            label="Vidéo importée (MP4, WEBM, MOV)"
+            value={block.videoUrl || ""}
+            onChange={(v) => onChange({ ...block, videoUrl: v })}
+          />
           <Field
-            label="ID YouTube (ex: dQw4w9WgXcQ)"
-            value={block.youtubeId}
+            label="Ou ID YouTube (ex: dQw4w9WgXcQ) — ignoré si une vidéo est importée ci-dessus"
+            value={block.youtubeId || ""}
             onChange={(v) => onChange({ ...block, youtubeId: v })}
           />
           <Field

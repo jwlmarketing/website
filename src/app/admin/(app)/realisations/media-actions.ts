@@ -96,3 +96,54 @@ export async function uploadRealisationImageAction(
     return { error: "Échec de l'envoi de l'image. Réessaie." };
   }
 }
+
+// Same shape/guarantees as uploadRealisationImageAction above (never throws,
+// called directly from client code) but for video files (testimonial clips,
+// demo videos, etc).
+export async function uploadRealisationVideoAction(
+  formData: FormData
+): Promise<{ path: string } | { error: string }> {
+  try {
+    const user = await requireAdminUser();
+    if (!user) {
+      return { error: "Session expirée — recharge la page et reconnecte-toi." };
+    }
+
+    const file = formData.get("file") as File | null;
+    if (!file || !file.size) return { error: "Aucun fichier reçu." };
+
+    const SUPPORTED = new Set(["video/mp4", "video/webm", "video/quicktime", "video/x-m4v"]);
+    if (!SUPPORTED.has(file.type)) {
+      return {
+        error: "Format vidéo non supporté. Utilise un MP4, WEBM ou MOV.",
+      };
+    }
+
+    if (!fs.existsSync(MEDIA_DIR)) fs.mkdirSync(MEDIA_DIR, { recursive: true });
+
+    let safeName = file.name
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[̀-ͯ]/g, "")
+      .replace(/[^a-z0-9.]+/g, "-");
+
+    if (!safeName) safeName = "video.mp4";
+
+    if (fs.existsSync(path.join(MEDIA_DIR, safeName))) {
+      const ext = path.extname(safeName);
+      const base = safeName.slice(0, -ext.length || undefined);
+      safeName = `${base}-${Date.now()}${ext}`;
+    }
+
+    const dest = path.join(MEDIA_DIR, safeName);
+    const buf = Buffer.from(await file.arrayBuffer());
+    fs.writeFileSync(dest, buf);
+
+    syncToGit(`Réalisations: ajoute la vidéo ${safeName}`);
+
+    return { path: `/images/realisations/${safeName}` };
+  } catch (err) {
+    console.error("[realisations media] video upload failed:", err);
+    return { error: "Échec de l'envoi de la vidéo. Réessaie." };
+  }
+}

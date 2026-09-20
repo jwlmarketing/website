@@ -231,14 +231,22 @@ function BlockItem({ block }: { block: Block }) {
               {block.title}
             </h2>
           )}
-          <div className="relative aspect-video w-full overflow-hidden rounded-lg">
-            <iframe
-              src={`https://www.youtube.com/embed/${block.youtubeId}`}
-              title={block.title || "Vidéo"}
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className="absolute inset-0 h-full w-full"
-            />
+          <div className="relative aspect-video w-full overflow-hidden rounded-lg bg-black">
+            {block.videoUrl ? (
+              <video
+                src={block.videoUrl}
+                controls
+                className="absolute inset-0 h-full w-full object-contain"
+              />
+            ) : block.youtubeId ? (
+              <iframe
+                src={`https://www.youtube.com/embed/${block.youtubeId}`}
+                title={block.title || "Vidéo"}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="absolute inset-0 h-full w-full"
+              />
+            ) : null}
           </div>
         </div>
       );

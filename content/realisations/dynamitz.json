@@ -6,23 +6,58 @@
   "blocks": [
     {
       "type": "heading",
-      "title": "Transformer un outil complexe en véritable plateforme d'accompagnement entrepreneurial.",
-      "accent": "Dynamitz",
-      "subtext": "Projet réalisé l’été 2026\nEn phase test - publication dans les prochains jours"
-    },
-    {
-      "type": "image",
-      "url": "/images/logo-dynamitz.png",
-      "alt": "Logo Dynamitz"
-    },
-    {
-      "type": "text",
-      "text": "Refonte complète du site, nouvelle architecture de contenu et positionnement commercial clarifié pour aider Dynamitz à présenter clairement son offre d'accompagnement entrepreneurial."
+      "kicker": "Dynamitz",
+      "title": "transformer {{un outil complexe}} en véritable plateforme d'accompagnement entrepreneurial",
+      "subtext": "Projet réalisé l'été 2026\nEn phase test - publication dans les prochains jours"
     },
     {
       "type": "cta",
-      "buttonText": "Voir le site",
-      "buttonLink": "https://dynamitz.fr"
+      "buttonText": "Parlons de ton outil",
+      "buttonLink": "tel:0783792814"
+    },
+    {
+      "type": "testimonials",
+      "items": [
+        {
+          "name": "Nathan MILLÉ",
+          "role": "CEO de Dynamitz",
+          "rating": 5,
+          "text": "Je recommande vivement. J'ai fait appel à JWL marketing pour mieux comprendre le SEO. Jodie m'a accompagné sur les pistes à suivre pour ma petite entreprise. C'est rassurant d'avoir quelqu'un qui accompagne de façon personnalisée, et réactive surtout.",
+          "readMoreUrl": "https://maps.app.goo.gl/4cPGkhVecEEhh8zz7"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "text": "**Contexte du projet**\n\nLorsque j'ai rejoint le projet Dynamitz, une première version de la plateforme existait déjà. Le développement avait été confié à une agence externe avant mon intervention. L'outil fonctionnait partiellement, mais plusieurs points bloquaient son développement :\n\n- une expérience utilisateur difficile à comprendre ;\n- une proposition de valeur peu claire ;\n- une page d'accueil limitée à la présence du logo et de quelques éléments visuels ;\n- un parcours utilisateur insuffisamment structuré ;\n- une absence de stratégie marketing et commerciale cohérente ;\n- un manque de visibilité sur les bénéfices réels apportés aux porteurs de projet.\n\nL'objectif n'était donc pas de repartir de zéro, mais de transformer un outil existant en une solution capable d'accompagner concrètement les entrepreneurs dans la création et le développement de leur activité."
+    },
+    {
+      "type": "text",
+      "text": "**Les enjeux**\n\nDynamitz ambitionne d'aider les porteurs de projet à structurer leurs idées, préparer leur lancement et accéder aux ressources nécessaires pour développer leur entreprise. Pour atteindre cet objectif, plusieurs défis devaient être relevés :\n\n- rendre l'outil compréhensible dès les premières secondes ;\n- expliquer clairement les bénéfices de la plateforme ;\n- valoriser l'intelligence artificielle sans la placer au centre du discours ;\n- créer un parcours capable de guider l'utilisateur étape par étape ;\n- transformer une solution technique en véritable produit commercialisable."
+    },
+    {
+      "type": "text",
+      "text": "**Ma mission**\n\nMon intervention a porté à la fois sur la réflexion stratégique, le marketing, l'expérience utilisateur et le positionnement commercial. J'ai travaillé sur la clarification du discours afin de mettre en avant la promesse principale :\n\n« Aider les entrepreneurs à structurer leur projet, gagner du temps et accéder à un accompagnement intelligent tout au long de leur parcours. »\n\nL'objectif était de parler des besoins réels des utilisateurs plutôt que des fonctionnalités techniques."
+    },
+    {
+      "type": "text",
+      "text": "**Refonte de la page d'accueil**\n\nLa page d'accueil initiale ne permettait pas de comprendre immédiatement la valeur ajoutée de Dynamitz. J'ai participé à la création d'une nouvelle architecture de contenu comprenant :\n\n- une présentation claire de la solution ;\n- des sections dédiées aux fonctionnalités clés ;\n- une explication du fonctionnement de l'accompagnement ;\n- une mise en avant des partenaires et services associés ;\n- des appels à l'action optimisés pour la conversion."
+    },
+    {
+      "type": "text",
+      "text": "**Structuration de l'offre**\n\nJ'ai participé à la réflexion sur les différents abonnements. Le travail a consisté à rendre l'offre plus lisible tout en valorisant le système de crédits IA intégré à la plateforme."
+    },
+    {
+      "type": "text",
+      "text": "**Valorisation de l'écosystème**\n\nL'un des axes majeurs du projet consistait à montrer que Dynamitz ne se limitait pas à un simple questionnaire. J'ai contribué à mettre en avant tout l'écosystème proposé :\n\n- accompagnement entrepreneurial ;\n- formalités administratives ;\n- expertise comptable ;\n- compte professionnel ;\n- outils d'aide à la décision ;\n- génération de contenus assistée par IA."
+    },
+    {
+      "type": "text",
+      "text": "**Réflexion produit**\n\nJ'ai également participé à plusieurs réflexions concernant l'évolution de la plateforme, notamment la génération automatique d'un dossier de présentation pour les banques, la structuration du parcours entrepreneur, l'amélioration de l'expérience utilisateur, ainsi que le développement de nouvelles fonctionnalités permettant d'accompagner les créateurs d'entreprise dans leurs démarches.\n\nLes solutions mises en place :\n\n- repositionnement marketing du produit ;\n- refonte du storytelling ;\n- optimisation de l'expérience utilisateur ;\n- structuration des offres commerciales ;\n- clarification du parcours client ;\n- valorisation des fonctionnalités IA ;\n- création d'un discours orienté bénéfices utilisateurs ;\n- participation à la stratégie de croissance et de développement du projet."
+    },
+    {
+      "type": "text",
+      "text": "**Résultat**\n\nDynamitz dispose aujourd'hui d'un positionnement beaucoup plus clair et d'une communication davantage centrée sur les besoins des entrepreneurs.\n\nL'outil n'est plus présenté comme une simple plateforme technologique, mais comme un véritable compagnon de développement entrepreneurial permettant de structurer un projet, gagner du temps et prendre de meilleures décisions à chaque étape de la création d'entreprise."
     }
   ]
 }

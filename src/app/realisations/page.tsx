@@ -1,8 +1,8 @@
-import Link from "next/link";
 import type { Metadata } from "next";
 import SiteHeader from "@/components/SiteHeader";
 import BlockRenderer from "@/components/BlockRenderer";
-import { getIndexPage, listPublishedCaseStudies } from "@/lib/realisations";
+import RealisationsCarousel from "@/components/RealisationsCarousel";
+import { getIndexPage, listCarouselCaseStudies } from "@/lib/realisations";
 
 export const dynamic = "force-dynamic";
 
@@ -18,7 +18,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default function Page() {
   const page = getIndexPage();
-  const caseStudies = listPublishedCaseStudies();
+  const caseStudies = listCarouselCaseStudies();
 
   return (
     <div>
@@ -35,25 +35,20 @@ export default function Page() {
       )}
 
       {caseStudies.length > 0 && (
-        <section className="mx-auto max-w-[1100px] px-6 py-10">
-          <h2 className="text-center font-heading text-3xl leading-[1.15] text-black md:text-[40px]">
+        <section className="px-6 py-10 text-center">
+          <h2 className="font-heading text-3xl leading-[1.15] text-black md:text-[40px]">
             Les entreprises{" "}
             <span className="italic text-[#c9846f]">récemment</span>{" "}
             accompagnées
           </h2>
-          <div className="mt-8 grid gap-6 sm:grid-cols-2 md:grid-cols-3">
-            {caseStudies.map((cs) => (
-              <Link
-                key={cs.slug}
-                href={`/realisations/${cs.slug}`}
-                className="rounded-2xl border border-[#eee] p-6 transition-colors hover:border-gold"
-              >
-                <p className="font-heading text-lg text-black">{cs.title}</p>
-                <p className="mt-2 text-sm font-semibold text-[#c9846f]">
-                  Voir le projet →
-                </p>
-              </Link>
-            ))}
+          <div className="mt-10">
+            <RealisationsCarousel
+              items={caseStudies.map((cs) => ({
+                slug: cs.slug,
+                title: cs.title,
+                coverImage: cs.coverImage,
+              }))}
+            />
           </div>
         </section>
       )}

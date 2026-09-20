@@ -16,9 +16,13 @@ const MIME: Record<string, string> = {
   ".webp": "image/webp",
   ".gif": "image/gif",
   ".svg": "image/svg+xml",
+  ".mp4": "video/mp4",
+  ".webm": "video/webm",
+  ".mov": "video/quicktime",
+  ".m4v": "video/x-m4v",
 };
 
-export async function GET(_req: NextRequest, { params }: { params: Promise<{ filename: string }> }) {
+export async function GET(req: NextRequest, { params }: { params: Promise<{ filename: string }> }) {
   const { filename } = await params;
   if (!filename || filename.includes("/") || filename.includes("..")) {
     return new NextResponse("Not found", { status: 404 });
@@ -28,10 +32,35 @@ export async function GET(_req: NextRequest, { params }: { params: Promise<{ fil
     return new NextResponse("Not found", { status: 404 });
   }
   const ext = path.extname(filename).toLowerCase();
+  const contentType = MIME[ext] || "application/octet-stream";
+  const stat = fs.statSync(file);
+
+  // Videos need Range support so the browser can seek instead of downloading
+  // the whole file up front.
+  const range = req.headers.get("range");
+  if (range) {
+    const match = range.match(/bytes=(\d*)-(\d*)/);
+    const start = match && match[1] ? parseInt(match[1], 10) : 0;
+    const end = match && match[2] ? parseInt(match[2], 10) : stat.size - 1;
+    const chunk = fs.readFileSync(file, { flag: "r" }).subarray(start, end + 1);
+    return new NextResponse(new Uint8Array(chunk), {
+      status: 206,
+      headers: {
+        "Content-Type": contentType,
+        "Content-Range": `bytes ${start}-${end}/${stat.size}`,
+        "Content-Length": String(chunk.length),
+        "Accept-Ranges": "bytes",
+        "Cache-Control": "public, max-age=31536000, immutable",
+      },
+    });
+  }
+
   const buf = fs.readFileSync(file);
   return new NextResponse(new Uint8Array(buf), {
     headers: {
-      "Content-Type": MIME[ext] || "application/octet-stream",
+      "Content-Type": contentType,
+      "Content-Length": String(stat.size),
+      "Accept-Ranges": "bytes",
       "Cache-Control": "public, max-age=31536000, immutable",
     },
   });
