@@ -13,6 +13,10 @@
       "imageUrl": "/images/realisations/projet-seo.jpeg"
     },
     {
+      "type": "heading",
+      "title": "Les entreprises {{récemment accompagnées}}"
+    },
+    {
       "type": "html",
       "html": ""
     },
