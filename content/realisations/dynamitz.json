@@ -19,6 +19,10 @@
       "url": "/images/realisations/image.jpg"
     },
     {
+      "type": "heading",
+      "title": "Témoignages clients "
+    },
+    {
       "type": "testimonials",
       "items": [
         {
