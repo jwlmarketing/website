@@ -28,6 +28,12 @@
       "title": "Zoom sur {{les résultats SEO obtenus}}"
     },
     {
+      "type": "carousel",
+      "slugs": [
+        "proxiclic-provence"
+      ]
+    },
+    {
       "type": "heading",
       "title": "Quand le digital soutient le ",
       "accent": "développement commercial"
