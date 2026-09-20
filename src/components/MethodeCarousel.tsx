@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Image from "next/image";
 
 const STEPS = [
@@ -33,6 +33,34 @@ const STEPS = [
 
 export default function MethodeCarousel() {
   const [active, setActive] = useState(0);
+  const dragStartX = useRef<number | null>(null);
+  const dragging = useRef(false);
+  const dragMoved = useRef(false);
+
+  function next() {
+    setActive((i) => (i + 1) % STEPS.length);
+  }
+  function prev() {
+    setActive((i) => (i - 1 + STEPS.length) % STEPS.length);
+  }
+
+  function onPointerDown(e: React.PointerEvent) {
+    dragStartX.current = e.clientX;
+    dragging.current = true;
+    dragMoved.current = false;
+  }
+  function onPointerMove(e: React.PointerEvent) {
+    if (!dragging.current || dragStartX.current === null) return;
+    if (Math.abs(e.clientX - dragStartX.current) > 10) dragMoved.current = true;
+  }
+  function onPointerUp(e: React.PointerEvent) {
+    if (!dragging.current || dragStartX.current === null) return;
+    const delta = e.clientX - dragStartX.current;
+    if (delta > 40) prev();
+    else if (delta < -40) next();
+    dragging.current = false;
+    dragStartX.current = null;
+  }
 
   return (
     <div className="mx-auto w-full max-w-[1200px]">
@@ -42,7 +70,16 @@ export default function MethodeCarousel() {
         ))}
       </div>
 
-      <div className="relative mx-auto hidden h-[420px] w-[400px] select-none md:block">
+      <div
+        className="relative mx-auto hidden h-[420px] w-[400px] touch-pan-y select-none md:block"
+        onPointerDown={onPointerDown}
+        onPointerMove={onPointerMove}
+        onPointerUp={onPointerUp}
+        onPointerLeave={() => {
+          dragging.current = false;
+          dragStartX.current = null;
+        }}
+      >
         {STEPS.map((step, i) => {
           const total = STEPS.length;
           let offset = i - active;
@@ -55,8 +92,11 @@ export default function MethodeCarousel() {
               key={i}
               type="button"
               aria-label={step.title}
-              onClick={() => setActive(i)}
-              className="absolute left-1/2 top-0 w-[400px] text-left"
+              onClick={() => {
+                if (dragMoved.current) return;
+                setActive(i);
+              }}
+              className="absolute left-1/2 top-0 w-[400px] cursor-grab text-left active:cursor-grabbing"
               style={{
                 transform: `translateX(-50%) translateX(${offset * 280}px) scale(${isActive ? 1 : 0.85})`,
                 zIndex: isActive ? 20 : 10 - Math.abs(offset),
@@ -64,7 +104,6 @@ export default function MethodeCarousel() {
                 filter: isActive ? "none" : "grayscale(0.3)",
                 transition:
                   "transform 0.5s ease, opacity 0.5s ease, filter 0.5s ease",
-                cursor: isActive ? "default" : "pointer",
                 pointerEvents: "auto",
               }}
             >

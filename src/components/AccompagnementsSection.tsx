@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import GoogleColors from "@/components/GoogleColors";
@@ -66,6 +66,34 @@ const ACCOMPAGNEMENTS = [
 
 export default function AccompagnementsSection() {
   const [active, setActive] = useState(0);
+  const dragStartX = useRef<number | null>(null);
+  const dragging = useRef(false);
+  const dragMoved = useRef(false);
+
+  function next() {
+    setActive((i) => (i + 1) % ACCOMPAGNEMENTS.length);
+  }
+  function prev() {
+    setActive((i) => (i - 1 + ACCOMPAGNEMENTS.length) % ACCOMPAGNEMENTS.length);
+  }
+
+  function onPointerDown(e: React.PointerEvent) {
+    dragStartX.current = e.clientX;
+    dragging.current = true;
+    dragMoved.current = false;
+  }
+  function onPointerMove(e: React.PointerEvent) {
+    if (!dragging.current || dragStartX.current === null) return;
+    if (Math.abs(e.clientX - dragStartX.current) > 10) dragMoved.current = true;
+  }
+  function onPointerUp(e: React.PointerEvent) {
+    if (!dragging.current || dragStartX.current === null) return;
+    const delta = e.clientX - dragStartX.current;
+    if (delta > 40) prev();
+    else if (delta < -40) next();
+    dragging.current = false;
+    dragStartX.current = null;
+  }
 
   return (
     <div className="mx-auto max-w-[1200px]">
@@ -75,7 +103,16 @@ export default function AccompagnementsSection() {
         ))}
       </div>
 
-      <div className="relative mx-auto hidden min-h-[560px] w-[460px] select-none md:block">
+      <div
+        className="relative mx-auto hidden min-h-[560px] w-[460px] touch-pan-y select-none md:block"
+        onPointerDown={onPointerDown}
+        onPointerMove={onPointerMove}
+        onPointerUp={onPointerUp}
+        onPointerLeave={() => {
+          dragging.current = false;
+          dragStartX.current = null;
+        }}
+      >
         {ACCOMPAGNEMENTS.map((item, i) => {
           const isActive = i === active;
           const offset = i - active;
@@ -85,15 +122,17 @@ export default function AccompagnementsSection() {
               key={i}
               type="button"
               aria-label={item.packName}
-              onClick={() => setActive(i)}
-              className="absolute left-1/2 top-0 w-[460px] text-left"
+              onClick={() => {
+                if (dragMoved.current) return;
+                setActive(i);
+              }}
+              className="absolute left-1/2 top-0 w-[460px] cursor-grab text-left active:cursor-grabbing"
               style={{
                 transform: `translateX(-50%) translateX(${offset * 260}px) scale(${isActive ? 1 : 0.85})`,
                 zIndex: isActive ? 20 : 10,
                 opacity: isActive ? 1 : 0.55,
                 filter: isActive ? "none" : "grayscale(0.3)",
                 transition: "transform 0.5s ease, opacity 0.5s ease, filter 0.5s ease",
-                cursor: isActive ? "default" : "pointer",
                 pointerEvents: "auto",
               }}
             >
