@@ -13,12 +13,16 @@
       "imageUrl": "/images/realisations/projet-seo.jpeg"
     },
     {
-      "type": "html",
-      "html": ""
+      "type": "heading",
+      "title": "Les entreprises {{récemment accompagnées}}"
     },
     {
-      "type": "html",
-      "html": ""
+      "type": "image",
+      "url": ""
+    },
+    {
+      "type": "heading",
+      "title": "Zoom sur {{les résultats SEO obtenus}}"
     },
     {
       "type": "heading",
@@ -26,8 +30,16 @@
       "accent": "développement commercial"
     },
     {
+      "type": "heading",
+      "title": "Ateliers & Accompagnements "
+    },
+    {
       "type": "image",
-      "url": ""
+      "url": "/images/realisations/e7b0adc9-04d6-438d-8762-33c06ec6a545-1-.png"
+    },
+    {
+      "type": "heading",
+      "title": "SEO et GEO : Le SEO cherche des mots-clés. Le GEO cherche une identité."
     }
   ]
 }
