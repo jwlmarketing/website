@@ -429,14 +429,19 @@ function BlockEditor({
             value={block.kicker || ""}
             onChange={(v) => onChange({ ...block, kicker: v })}
           />
-          <Field label="Titre" value={block.title} onChange={(v) => onChange({ ...block, title: v })} />
           <Field
-            label="Mot accentué (en couleur, optionnel)"
+            label="Titre (entoure un passage de {{ }} pour le mettre en couleur, ex: transformer {{un outil complexe}} en plateforme)"
+            value={block.title}
+            onChange={(v) => onChange({ ...block, title: v })}
+            textarea
+          />
+          <Field
+            label="Mot accentué à la fin (en couleur, optionnel)"
             value={block.accent || ""}
             onChange={(v) => onChange({ ...block, accent: v })}
           />
           <ColorField
-            label="Couleur du mot accentué"
+            label="Couleur (mot accentué + passages entre {{ }})"
             value={block.accentColor}
             defaultColor="#c9846f"
             onChange={(v) => onChange({ ...block, accentColor: v })}

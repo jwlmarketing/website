@@ -106,7 +106,7 @@ function BlockItem({ block }: { block: Block }) {
       return (
         <SectionHeading
           kicker={block.kicker}
-          title={block.title}
+          title={renderInlineColor(block.title, block.accentColor)}
           accent={block.accent}
           accentColor={block.accentColor}
           subtext={block.subtext}
@@ -251,9 +251,12 @@ function BlockItem({ block }: { block: Block }) {
               {block.title}
             </h2>
           )}
-          <div className="grid gap-5 sm:grid-cols-2 md:grid-cols-3">
+          <div className="flex flex-wrap justify-center gap-5">
             {block.items.map((t, i) => (
-              <div key={i} className="rounded-2xl border border-[#ece7df] bg-white p-6 shadow-[0_8px_24px_rgba(0,0,0,0.05)]">
+              <div
+                key={i}
+                className="w-full max-w-[320px] flex-1 rounded-2xl border border-[#ece7df] bg-white p-6 shadow-[0_8px_24px_rgba(0,0,0,0.05)] sm:w-[320px] sm:flex-none"
+              >
                 <div className="flex items-center gap-3">
                   {t.avatarUrl && (
                     <Image src={t.avatarUrl} alt={t.name} width={40} height={40} className="h-10 w-10 rounded-full" />
@@ -480,6 +483,25 @@ function BlockItem({ block }: { block: Block }) {
     default:
       return null;
   }
+}
+
+// Lets a heading title color part of the sentence, e.g.
+// "Dynamitz : transformer {{un outil complexe}} en plateforme" — the part
+// inside {{...}} takes the accent color, everything else stays as-is.
+function renderInlineColor(text: string, color?: string): React.ReactNode {
+  const parts = text.split(/(\{\{[^}]+\}\})/g);
+  if (parts.length === 1) return text;
+  return parts.map((part, i) => {
+    const match = part.match(/^\{\{([^}]+)\}\}$/);
+    if (match) {
+      return (
+        <span key={i} style={{ color: color || "#c9846f" }}>
+          {match[1]}
+        </span>
+      );
+    }
+    return part;
+  });
 }
 
 // Minimal inline markdown for text blocks: **bold** and [texte](lien).
