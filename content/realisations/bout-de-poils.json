@@ -9,7 +9,23 @@
       "type": "hero",
       "title": "Bout de Poil : {{créer une marque de niche}} pour conquérir un nouveau marché",
       "imagePosition": "right",
-      "imageUrl": "/images/realisations/telechargement-3-.jpeg"
+      "imageUrl": "/images/realisations/telechargement-3-.jpeg",
+      "buttonText": "Parlons de ta marque",
+      "subtitle": "Début de mission : mai 2026 Collaboration en cours",
+      "buttonLink": "tel:0783792814"
+    },
+    {
+      "type": "testimonials",
+      "items": [
+        {
+          "name": "Jean-Claude Benard",
+          "text": "Je recommande Jodie à 100 %.\n\nElle a créé ma fiche Google Business. Grâce à son travail, j'ai commencé à recevoir des appels via ma fiche Google. Et ça, aujourd'hui, je peux le prouver, parce qu'elle m'a appris à gérer cet outil et m'a montré comment suivre les statistiques. ",
+          "avatarUrl": "/images/realisations/telechargement-7-.jpeg",
+          "role": "CEO de Bout de Poils et Greenbeamcraft",
+          "rating": 5,
+          "readMoreUrl": "https://maps.app.goo.gl/XkMVnNo6sH89tvxa6"
+        }
+      ]
     }
   ]
 }
