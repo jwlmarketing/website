@@ -5,24 +5,12 @@
   "status": "published",
   "blocks": [
     {
-      "type": "heading",
-      "title": "Transformer un outil complexe en véritable plateforme d'accompagnement entrepreneurial.",
-      "accent": "Dynamitz",
-      "subtext": "Projet réalisé l’été 2026\nEn phase test - publication dans les prochains jours"
-    },
-    {
-      "type": "image",
-      "url": "/images/logo-dynamitz.png",
-      "alt": "Logo Dynamitz"
-    },
-    {
-      "type": "text",
-      "text": "Refonte complète du site, nouvelle architecture de contenu et positionnement commercial clarifié pour aider Dynamitz à présenter clairement son offre d'accompagnement entrepreneurial."
-    },
-    {
-      "type": "cta",
-      "buttonText": "Voir le site",
-      "buttonLink": "https://dynamitz.fr"
+      "type": "hero",
+      "title": "Dynamitz : {{transformer un outil complexe}} en véritable plateforme d'accompagnement entrepreneurial",
+      "imagePosition": "right",
+      "subtitle": "Projet réalisé l’été 2026 En phase test - publication dans les prochains jours",
+      "buttonText": "Parlons de ton outil",
+      "buttonLink": "tel:0783792814"
     }
   ]
 }
