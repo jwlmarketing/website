@@ -23,9 +23,13 @@ export default function ImagePicker({
     const formData = new FormData();
     formData.set("file", file);
     startTransition(async () => {
-      const res = await uploadRealisationImageAction(formData);
-      if ("path" in res) onChange(res.path);
-      else setError(res.error);
+      try {
+        const res = await uploadRealisationImageAction(formData);
+        if ("path" in res) onChange(res.path);
+        else setError(res.error);
+      } catch {
+        setError("Échec de l'envoi de l'image. Réessaie.");
+      }
     });
   }
 
