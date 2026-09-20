@@ -17,14 +17,6 @@ export default function SectionHeading({
 }) {
   return (
     <div className="mx-auto my-10 w-full max-w-[1400px] px-5 text-center md:my-[60px]">
-      {kicker && (
-        <p
-          className="mb-1 text-balance text-3xl italic leading-snug text-[#c97b63] md:text-[54px]"
-          style={{ fontFamily: "var(--font-heading)" }}
-        >
-          {kicker}
-        </p>
-      )}
       <h2
         className={
           (titleClassName ??
@@ -32,6 +24,11 @@ export default function SectionHeading({
           " text-balance"
         }
       >
+        {kicker && (
+          <span className="block text-balance italic leading-snug text-[#c97b63]">
+            {kicker}
+          </span>
+        )}
         {title}
         {children}
         {accent && <span className="not-italic text-[#c9846f]"> {accent}</span>}
