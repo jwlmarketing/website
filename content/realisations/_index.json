@@ -32,6 +32,10 @@
     {
       "type": "image",
       "url": ""
+    },
+    {
+      "type": "heading",
+      "title": "Zoom sur {{les résultats SEO obtenus}}"
     }
   ]
 }
