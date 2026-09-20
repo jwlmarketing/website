@@ -5,29 +5,11 @@ import ScrollReveal from "@/components/ScrollReveal";
 import Lightbox from "@/components/Lightbox";
 import GoogleColors from "@/components/GoogleColors";
 import ContactForm from "@/components/ContactForm";
-import ProofCards from "@/components/ProofCards";
 import ProspectCarousel from "@/components/ProspectCarousel";
 import FadeUp from "@/components/FadeUp";
 import RotatingKeyword from "@/components/RotatingKeyword";
 import ComparisonTableCta from "@/components/ComparisonTableCta";
 import MethodeCarousel from "@/components/MethodeCarousel";
-
-const FACTEURS_SEO = [
-  "De tes produits et services",
-  "De ta zone de chalandise",
-  "De ton positionnement",
-  "De ta stratégie commerciale",
-  "De ta présence en ligne",
-  "De ta fiche Google Business Profile",
-  "De ton site web",
-  "De son optimisation technique",
-  "De ta rédaction web",
-  "De la qualité de tes contenus",
-  "De ta régularité à publier",
-  "De la concurrence sur ton secteur",
-  "De ton historique digital",
-  "De tes objectifs",
-];
 
 const FORMATION_ITEMS = [
   "Formation personnalisée selon ton activité et tes objectifs.",
@@ -570,38 +552,6 @@ export default function Page() {
         </p>
       </section>
 
-      {/* Je t'accompagne à lier ta visibilité sur terrain et le web */}
-      <section className="mx-auto max-w-[1200px] px-6 py-10 text-center">
-        <h2 className="font-heading text-3xl leading-[1.15] md:text-[46px] md:leading-[1.15] text-black">
-          <span className="italic text-[#c9846f]">Je t&apos;accompagne</span>
-          <br />
-          <span className="font-medium">
-            à lier ta visibilité sur terrain et le web
-          </span>
-        </h2>
-        <ScrollReveal>
-          <div className="mx-auto mt-10 flex max-w-[900px] flex-col gap-6 rounded-2xl p-6 text-left md:flex-row md:items-center md:p-8">
-            <Image
-              src="/images/jwl-google-siege-visibilite.png"
-              alt="JWL Marketing devant le siège Google"
-              width={296}
-              height={213}
-              className="h-auto w-full self-center rounded-xl object-cover md:w-1/2"
-            />
-            <div className="md:w-1/2">
-              <h3 className="font-heading text-lg font-semibold text-black">
-                Le SEO dépend de nombreux facteurs
-              </h3>
-              <ul className="mt-4 space-y-1.5 text-sm text-[#1a1a1a]">
-                {FACTEURS_SEO.map((f) => (
-                  <li key={f}>{f}</li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </ScrollReveal>
-      </section>
-
       {/* Je te rends autonome */}
       <section className="mx-auto max-w-[900px] px-6 py-10 text-center">
         <h2 className="font-heading text-3xl leading-[1.15] md:text-[46px] md:leading-[1.15] text-black">
@@ -643,18 +593,6 @@ export default function Page() {
             </div>
           </div>
         </ScrollReveal>
-      </section>
-
-      {/* Des projets SEO qui parlent d'eux-même */}
-      <section className="mx-auto max-w-[1200px] px-6 py-10 text-center">
-        <h2 className="font-heading text-3xl leading-[1.15] md:text-[46px] md:leading-[1.15] text-black">
-          <span className="italic text-[#c9846f]">Des projets SEO</span>
-          <br />
-          <span className="font-medium">qui parlent d&apos;eux-même</span>
-        </h2>
-        <div className="mt-10">
-          <ProofCards />
-        </div>
       </section>
 
       {/* Boost ton Bizz avec JWL MARKETING */}
