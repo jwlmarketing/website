@@ -1,5 +1,6 @@
 {
   "title": "Dynamitz",
+  "coverImage": "/images/realisations/telechargement-2-.jpeg",
   "metaTitle": "Dynamitz — Réalisation JWL Marketing",
   "metaDescription": "Refonte du site Dynamitz : nouvelle architecture de contenu et positionnement commercial clarifié.",
   "status": "published",
@@ -16,6 +17,10 @@
     {
       "type": "image",
       "url": "/images/realisations/image.jpg"
+    },
+    {
+      "type": "heading",
+      "title": "Témoignages clients "
     },
     {
       "type": "testimonials",

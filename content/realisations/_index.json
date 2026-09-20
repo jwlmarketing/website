@@ -17,17 +17,32 @@
       "title": "Les entreprises {{récemment accompagnées}}"
     },
     {
-      "type": "image",
-      "url": ""
+      "type": "carousel",
+      "slugs": [
+        "dynamitz",
+        "bout-de-poils"
+      ]
     },
     {
       "type": "heading",
       "title": "Zoom sur {{les résultats SEO obtenus}}"
     },
     {
+      "type": "carousel",
+      "slugs": [
+        "proxiclic-provence",
+        "star-limousine"
+      ]
+    },
+    {
       "type": "heading",
       "title": "Quand le digital soutient le ",
       "accent": "développement commercial"
+    },
+    {
+      "type": "video",
+      "youtubeId": "",
+      "videoUrl": "/images/realisations/whatsapp-video-2026-09-20-at-13.47.06.mp4"
     },
     {
       "type": "heading",
@@ -36,10 +51,6 @@
     {
       "type": "image",
       "url": "/images/realisations/e7b0adc9-04d6-438d-8762-33c06ec6a545-1-.png"
-    },
-    {
-      "type": "heading",
-      "title": "SEO et GEO : Le SEO cherche des mots-clés. Le GEO cherche une identité."
     }
   ]
 }
