@@ -111,7 +111,7 @@ export default function SiteHeader({
                 <ChevronDown className="h-4 w-4" />
               </button>
               {offersOpen && (
-                <div className="absolute left-1/2 top-full w-56 -translate-x-1/2 pt-3">
+                <div className="absolute left-1/2 top-full z-[60] w-56 -translate-x-1/2 pt-3">
                   <div className="overflow-hidden rounded-2xl bg-white py-2 shadow-[0_16px_40px_rgba(0,0,0,0.15)]">
                     {t.offerItems.map((item) => (
                       <Link
