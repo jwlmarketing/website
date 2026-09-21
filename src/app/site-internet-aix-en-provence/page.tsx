@@ -184,7 +184,7 @@ export default function Page() {
             alt="JWL Marketing — propriétaire de ton site web à Aix-en-Provence"
             width={1600}
             height={900}
-            className="mx-auto mt-8 h-auto w-full max-w-[900px] rounded-2xl object-contain"
+            className="mx-auto mt-8 h-auto w-full max-w-[700px] rounded-2xl object-contain"
           />
           <p className="mx-auto mt-6 max-w-[820px] text-justify text-[17px] leading-[26px] text-[#1a1a1a]">
             De nombreux entrepreneurs paient chaque mois une plateforme ou une

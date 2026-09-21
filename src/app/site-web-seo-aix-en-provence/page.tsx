@@ -459,7 +459,7 @@ export default function Page() {
             alt="JWL Marketing — compréhension de ton activité par les IA"
             width={530}
             height={328}
-            className="mx-auto mt-10 h-auto w-full max-w-[480px] object-contain"
+            className="mx-auto mt-10 h-auto w-full max-w-[700px] object-contain"
           />
         </ScrollReveal>
         <ScrollReveal delay={150}>
