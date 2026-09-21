@@ -76,7 +76,7 @@ export default function SiteHeader({
   }, []);
 
   return (
-    <div className="sticky top-0 z-50 flex w-full justify-center px-[5%] pt-4">
+    <div className="sticky top-0 z-[500] flex w-full justify-center px-[5%] pt-4">
       <div
         className={`w-full transition-all duration-300 ease-out ${
           mobileOpen
