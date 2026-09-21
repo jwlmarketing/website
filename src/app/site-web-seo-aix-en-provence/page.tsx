@@ -595,6 +595,15 @@ export default function Page() {
         <h2 className="font-heading text-3xl leading-[1.15] md:text-[46px] md:leading-[1.15] text-black">
           Boost ton Bizz avec <span className="text-[#c9846f]">JWL MARKETING</span>
         </h2>
+        <ScrollReveal delay={150}>
+          <Image
+            src="/images/jwl-jjj.png"
+            alt="Jodie JWL Marketing avec le livre Réussir son référencement web"
+            width={520}
+            height={347}
+            className="mx-auto mt-10 h-auto w-full max-w-[420px] rounded-2xl object-cover"
+          />
+        </ScrollReveal>
         <div className="mt-10 grid gap-8 text-left md:grid-cols-2">
           <ScrollReveal>
             <div className="flex h-full flex-col items-center justify-center gap-4 rounded-2xl bg-black p-8 text-center">
@@ -626,15 +635,6 @@ export default function Page() {
             </div>
           </ScrollReveal>
         </div>
-        <ScrollReveal delay={150}>
-          <Image
-            src="/images/jwl-jjj.png"
-            alt="Jodie JWL Marketing avec le livre Réussir son référencement web"
-            width={520}
-            height={347}
-            className="mx-auto mt-10 h-auto w-full max-w-[420px] rounded-2xl object-cover"
-          />
-        </ScrollReveal>
       </section>
     </div>
   );
