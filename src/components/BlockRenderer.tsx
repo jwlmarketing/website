@@ -63,7 +63,7 @@ function BlockItem({ block }: { block: Block }) {
               alt={block.title}
               width={1200}
               height={800}
-              className="h-auto w-full max-w-[560px] rounded-2xl object-cover"
+              className="h-auto w-full max-w-[680px] rounded-2xl object-cover"
             />
           )}
         </div>
