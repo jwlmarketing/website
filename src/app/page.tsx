@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import HeroBadge from "@/components/HeroBadge";
 import YoutubeLite from "@/components/YoutubeLite";
-import VisibilityChart from "@/components/VisibilityChart";
 import SectionHeading from "@/components/SectionHeading";
 import GoogleColors from "@/components/GoogleColors";
 import ClientResultsWidget from "@/components/ClientResultsWidget";
@@ -273,9 +272,6 @@ export default function Home() {
         />
 
         <FadeUp className="mx-auto flex max-w-[1200px] flex-col items-center gap-10 md:flex-row md:items-stretch">
-          <div className="flex w-full shrink-0 items-center justify-center md:w-auto">
-            <VisibilityChart />
-          </div>
           <div className="w-full rounded-2xl p-8 text-left text-black md:p-10">
             <p className="text-justify text-lg leading-relaxed text-black/85">
               Mon métier ne se limite pas à la création de sites web. Il
