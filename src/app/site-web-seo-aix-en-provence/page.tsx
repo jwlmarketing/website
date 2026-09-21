@@ -453,23 +453,21 @@ export default function Page() {
             et j&apos;améliore la connexion à Google Search Console
           </span>
         </h2>
-        <div className="mt-10 grid items-center gap-8 text-left md:grid-cols-2">
-          <ScrollReveal delay={0}>
-            <p className="text-[17px] leading-[28px] text-[#1a1a1a]">
-              Pour comprendre le comportement des visiteurs et identifier les
-              opportunités d&apos;amélioration.
-            </p>
-          </ScrollReveal>
-          <ScrollReveal delay={150}>
-            <Image
-              src="/images/jwl-ia-chatgpt-comprehension.png"
-              alt="JWL Marketing — compréhension de ton activité par les IA"
-              width={530}
-              height={328}
-              className="mx-auto h-auto w-full max-w-[340px] object-contain"
-            />
-          </ScrollReveal>
-        </div>
+        <ScrollReveal delay={0}>
+          <Image
+            src="/images/jwl-ia-chatgpt-comprehension.png"
+            alt="JWL Marketing — compréhension de ton activité par les IA"
+            width={530}
+            height={328}
+            className="mx-auto mt-10 h-auto w-full max-w-[480px] object-contain"
+          />
+        </ScrollReveal>
+        <ScrollReveal delay={150}>
+          <p className="mx-auto mt-8 max-w-[700px] text-[17px] leading-[28px] text-[#1a1a1a]">
+            Pour comprendre le comportement des visiteurs et identifier les
+            opportunités d&apos;amélioration.
+          </p>
+        </ScrollReveal>
       </section>
 
       {/* J'optimise ta stratégie */}
