@@ -656,7 +656,7 @@ export default function Page() {
           </div>
           <ScrollReveal delay={360}>
             <Image
-              src="/images/maintenance-mensuelle-seo.png"
+              src="/images/maintenance-mensuelle-seo.jpg"
               alt="Suivi et maintenance mensuelle — JWL Marketing"
               width={1024}
               height={768}
