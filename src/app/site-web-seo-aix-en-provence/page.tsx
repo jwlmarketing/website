@@ -376,7 +376,7 @@ export default function Page() {
         </h2>
         <ScrollReveal>
           <Image
-            src="/images/jwl-tu-sais-tout-ce-qui-est-fait.webp"
+            src="/images/jwl-tu-sais-tout-ce-qui-est-fait.png"
             alt="Accompagnement JWL Marketing — Google Livres"
             width={1200}
             height={675}
