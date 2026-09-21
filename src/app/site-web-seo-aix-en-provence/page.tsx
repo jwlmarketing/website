@@ -626,6 +626,15 @@ export default function Page() {
             </div>
           </ScrollReveal>
         </div>
+        <ScrollReveal delay={150}>
+          <Image
+            src="/images/jwl-jjj.png"
+            alt="Jodie JWL Marketing avec le livre Réussir son référencement web"
+            width={520}
+            height={347}
+            className="mx-auto mt-10 h-auto w-full max-w-[420px] rounded-2xl object-cover"
+          />
+        </ScrollReveal>
       </section>
     </div>
   );
