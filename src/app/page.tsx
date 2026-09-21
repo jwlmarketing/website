@@ -271,17 +271,17 @@ export default function Home() {
           title="grandit grâce aux clients que ton site web génère."
         />
 
-        <FadeUp className="mx-auto flex max-w-[1200px] flex-col items-center gap-10 md:flex-row md:items-stretch">
-          <div className="flex w-full shrink-0 items-center justify-center md:w-auto">
+        <FadeUp className="mx-auto flex max-w-[1200px] flex-col items-center gap-10 md:flex-row md:items-start">
+          <div className="w-full shrink-0 md:w-[300px]">
             <Image
               src="/images/seo-aix-en-provence-reporting.jpg"
               alt="Reporting SEO JWL Marketing"
               width={520}
               height={347}
-              className="h-auto w-full max-w-[420px] rounded-xl object-contain"
+              className="h-auto w-full rounded-xl object-cover"
             />
           </div>
-          <div className="w-full rounded-2xl p-8 text-left text-black md:p-10">
+          <div className="w-full text-left text-black">
             <p className="text-justify text-lg leading-relaxed text-black/85">
               Mon métier ne se limite pas à la création de sites web. Il
               consiste à t&apos;aider à construire un véritable écosystème
