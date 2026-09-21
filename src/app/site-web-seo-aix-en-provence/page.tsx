@@ -442,27 +442,22 @@ export default function Page() {
         </p>
       </section>
 
-      {/* J'améliore la compréhension de ton activité par ChatGPT et les IA */}
+      {/* J'analyse les données et j'améliore la connexion à Google Search Console */}
       <section className="mx-auto max-w-[1200px] px-6 py-10 text-center">
         <h2 className="font-heading text-3xl leading-[1.15] md:text-[46px] md:leading-[1.15] text-black">
           <span className="italic text-[#c9846f]">
-            J&apos;améliore la compréhension
+            J&apos;analyse les données
           </span>
           <br />
           <span className="font-medium">
-            de ton activité par ChatGPT et les IA
+            et j&apos;améliore la connexion à Google Search Console
           </span>
         </h2>
         <div className="mt-10 grid items-center gap-8 text-left md:grid-cols-2">
           <ScrollReveal delay={0}>
             <p className="text-[17px] leading-[28px] text-[#1a1a1a]">
-              Je passe régulièrement ton site au crible pour vérifier ce que
-              Google comprend... mais aussi ce que les intelligences
-              artificielles retiennent de ton activité.
-              <br />
-              Parce qu&apos;aujourd&apos;hui, être visible ne suffit plus. Il
-              faut aussi être compris, afin que Google comme les IA puissent
-              te proposer aux bonnes personnes, au bon moment.
+              Pour comprendre le comportement des visiteurs et identifier les
+              opportunités d&apos;amélioration.
             </p>
           </ScrollReveal>
           <ScrollReveal delay={150}>
