@@ -599,7 +599,7 @@ export default function Page() {
             alt="Jodie JWL Marketing avec le livre Réussir son référencement web"
             width={520}
             height={347}
-            className="mx-auto mt-10 h-auto w-full max-w-[420px] rounded-2xl object-cover"
+            className="mx-auto mt-10 h-auto w-full max-w-[560px] rounded-2xl object-cover"
           />
         </ScrollReveal>
         <div className="mt-10 grid gap-8 text-left md:grid-cols-2">
