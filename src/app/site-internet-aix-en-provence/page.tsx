@@ -179,6 +179,13 @@ export default function Page() {
             <br />
             quand tu peux en être <span className="text-[#c9846f]">propriétaire</span> ?
           </h2>
+          <Image
+            src="/images/site-web-proprietaire-aix-en-provence.png"
+            alt="JWL Marketing — propriétaire de ton site web à Aix-en-Provence"
+            width={1600}
+            height={900}
+            className="mx-auto mt-8 h-auto w-full max-w-[900px] rounded-2xl object-contain"
+          />
           <p className="mx-auto mt-6 max-w-[820px] text-justify text-[17px] leading-[26px] text-[#1a1a1a]">
             De nombreux entrepreneurs paient chaque mois une plateforme ou une
             agence sans réellement être propriétaires de leur site web.
