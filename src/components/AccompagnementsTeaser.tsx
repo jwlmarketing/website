@@ -22,7 +22,7 @@ const CARDS = {
       href: "/tarifs",
     },
     {
-      image: "/images/transformation-digitale.webp",
+      image: "/images/jwl-prospecte.jpg",
       name: "JWL Prospecte",
       subtitle: "Développement commercial",
       href: "/developpement-commercial-aix-en-provence",
@@ -48,7 +48,7 @@ const CARDS = {
       href: "/en/tarifs",
     },
     {
-      image: "/images/transformation-digitale.webp",
+      image: "/images/jwl-prospecte.jpg",
       name: "JWL Prospecte",
       subtitle: "Business development",
       href: "/en/developpement-commercial-aix-en-provence",
