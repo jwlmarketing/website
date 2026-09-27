@@ -4,6 +4,7 @@ import crypto from "crypto";
 
 const DATA_FILE = path.join(process.cwd(), "content/gated-content.json");
 export const GATED_UPLOAD_DIR = path.join(process.cwd(), "content/uploads/gated");
+export const GATED_CHUNK_DIR = path.join(process.cwd(), "content/uploads/.gated-chunks");
 
 export type GatedDocument = {
   id: string;

@@ -10,6 +10,7 @@ import {
   addDocument,
   deleteDocument,
   GATED_UPLOAD_DIR,
+  GATED_CHUNK_DIR,
 } from "@/lib/gatedContent";
 
 function syncToGit(message: string, paths: string[]) {
@@ -49,30 +50,70 @@ export async function saveSiteCodeAction(
   return { ok: true };
 }
 
-export async function uploadGatedDocumentAction(
+// PDFs are sent in small chunks (see UploadForm.tsx) instead of one big
+// request: the production deployment sits behind a reverse proxy whose body
+// size limit is well under our own 1GB Server Actions limit, so a normal
+// multi-megabyte upload was rejected before it ever reached this code. Each
+// chunk is written to its own temp file and stitched back together in
+// finalizeGatedDocumentAction below.
+export async function uploadGatedChunkAction(
   formData: FormData
 ): Promise<{ ok: true } | { error: string }> {
   try {
     const user = await requireAdminUser();
     if (!user) return { error: "Session expirée — recharge la page et reconnecte-toi." };
 
+    const uploadId = String(formData.get("uploadId") || "");
+    const index = String(formData.get("index") || "");
+    const chunk = formData.get("chunk") as File | null;
+    if (!uploadId || !/^[a-f0-9-]{36}$/.test(uploadId) || !/^\d+$/.test(index) || !chunk) {
+      return { error: "Requête de chunk invalide." };
+    }
+
+    const dir = path.join(GATED_CHUNK_DIR, uploadId);
+    fs.mkdirSync(dir, { recursive: true });
+    const buf = Buffer.from(await chunk.arrayBuffer());
+    fs.writeFileSync(path.join(dir, index), buf);
+
+    return { ok: true };
+  } catch (err) {
+    console.error("[site admin] chunk upload failed:", err);
+    return { error: "Échec de l'envoi d'un morceau du fichier. Réessaie." };
+  }
+}
+
+export async function finalizeGatedDocumentAction(
+  formData: FormData
+): Promise<{ ok: true } | { error: string }> {
+  try {
+    const user = await requireAdminUser();
+    if (!user) return { error: "Session expirée — recharge la page et reconnecte-toi." };
+
+    const uploadId = String(formData.get("uploadId") || "");
+    const totalChunks = Number(formData.get("totalChunks") || 0);
     const pageSlug = String(formData.get("pageSlug") || "").trim();
     const category = String(formData.get("category") || "").trim();
     const title = String(formData.get("title") || "").trim();
     const code = String(formData.get("code") || "").trim();
-    const file = formData.get("file") as File | null;
+    const originalName = String(formData.get("fileName") || "").trim();
 
+    if (!uploadId || !/^[a-f0-9-]{36}$/.test(uploadId) || !totalChunks) {
+      return { error: "Requête invalide." };
+    }
     if (!pageSlug || !category || !title || !code) {
       return { error: "Tous les champs sont requis." };
     }
-    if (!file || !file.size) return { error: "Aucun fichier reçu." };
-    if (file.type !== "application/pdf") {
-      return { error: "Seuls les fichiers PDF sont acceptés." };
+
+    const chunkDir = path.join(GATED_CHUNK_DIR, uploadId);
+    for (let i = 0; i < totalChunks; i++) {
+      if (!fs.existsSync(path.join(chunkDir, String(i)))) {
+        return { error: "Envoi incomplet — un morceau du fichier est manquant. Réessaie." };
+      }
     }
 
     fs.mkdirSync(GATED_UPLOAD_DIR, { recursive: true });
 
-    let safeName = file.name
+    let safeName = originalName
       .toLowerCase()
       .normalize("NFD")
       .replace(/[̀-ͯ]/g, "")
@@ -84,8 +125,17 @@ export async function uploadGatedDocumentAction(
       safeName = `${base}-${Date.now()}${ext}`;
     }
 
-    const buf = Buffer.from(await file.arrayBuffer());
-    fs.writeFileSync(path.join(GATED_UPLOAD_DIR, safeName), buf);
+    const dest = path.join(GATED_UPLOAD_DIR, safeName);
+    const out = fs.createWriteStream(dest);
+    for (let i = 0; i < totalChunks; i++) {
+      const chunkBuf = fs.readFileSync(path.join(chunkDir, String(i)));
+      out.write(chunkBuf);
+    }
+    await new Promise<void>((resolve, reject) => {
+      out.end((err: unknown) => (err ? reject(err) : resolve()));
+    });
+
+    fs.rmSync(chunkDir, { recursive: true, force: true });
 
     addDocument({ pageSlug, category, title, fileName: safeName, code });
 
@@ -98,8 +148,8 @@ export async function uploadGatedDocumentAction(
     revalidatePath(`/${pageSlug}`);
     return { ok: true };
   } catch (err) {
-    console.error("[site admin] upload failed:", err);
-    return { error: "Échec de l'envoi du document. Réessaie." };
+    console.error("[site admin] finalize upload failed:", err);
+    return { error: "Échec de l'assemblage du fichier. Réessaie." };
   }
 }
 
