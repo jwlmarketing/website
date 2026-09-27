@@ -5,6 +5,7 @@ import SiteHeader from "@/components/SiteHeader";
 import BlockRenderer from "@/components/BlockRenderer";
 import { getCaseStudy } from "@/lib/realisations";
 import { getSession } from "@/lib/jwlAuth";
+import { buildMetadata, getRoute } from "@/lib/seo";
 
 export async function generateMetadata({
   params,
@@ -14,10 +15,18 @@ export async function generateMetadata({
   const { slug } = await params;
   const page = getCaseStudy(slug);
   if (!page) return {};
-  return {
-    title: page.metaTitle || `${page.title} | JWL MARKETING`,
-    description: page.metaDescription || undefined,
-  };
+  const path = `/realisations/${slug}`;
+  const title = page.metaTitle || `${page.title} | JWL MARKETING`;
+  const description = page.metaDescription || undefined;
+  if (getRoute(path)) {
+    return buildMetadata({
+      path,
+      locale: "fr",
+      title,
+      description: description || "TODO: ajouter une meta description (<=155 caracteres)",
+    });
+  }
+  return { title, description };
 }
 
 export default async function CaseStudyPage({

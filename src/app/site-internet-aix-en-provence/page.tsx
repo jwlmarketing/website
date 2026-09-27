@@ -1,5 +1,5 @@
+import { buildMetadata } from "@/lib/seo";
 import Image from "next/image";
-import type { Metadata } from "next";
 import ScrollReveal from "@/components/ScrollReveal";
 import SiteHeader from "@/components/SiteHeader";
 import TrustedPartners from "@/components/TrustedPartners";
@@ -8,11 +8,12 @@ import ContactForm from "@/components/ContactForm";
 import ScrollFillLine from "@/components/ScrollFillLine";
 import AccompagnementsSection from "@/components/AccompagnementsSection";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
+  path: "/site-internet-aix-en-provence",
+  locale: "fr",
   title: "Création de site web Business | JWL Marketing",
-  description:
-    "Création de site web à Aix-en-Provence et toute la France. Pour être visible, rassurer vos prospects et soutenir votre développement commercial.",
-};
+  description: "Création de site web à Aix-en-Provence et toute la France. Pour être visible, rassurer vos prospects et soutenir votre développement commercial.",
+});
 
 const CONFETTI_COLORS = ["#C9846F", "#C9A84C", "#141414", "#E8C9A0", "#B86A4F"];
 const CONFETTI = Array.from({ length: 14 }, (_, i) => {

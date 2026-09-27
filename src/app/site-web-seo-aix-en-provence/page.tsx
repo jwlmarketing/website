@@ -1,5 +1,5 @@
+import { buildMetadata } from "@/lib/seo";
 import Image from "next/image";
-import type { Metadata } from "next";
 import SiteHeader from "@/components/SiteHeader";
 import ScrollReveal from "@/components/ScrollReveal";
 import Lightbox from "@/components/Lightbox";
@@ -41,11 +41,12 @@ function StepNumber({ n }: { n: number }) {
   );
 }
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
+  path: "/site-web-seo-aix-en-provence",
+  locale: "fr",
   title: "Site web SEO à Aix-en-Provence | JWL Marketing",
-  description:
-    "Site web SEO avec accompagnement sur 12 mois. Optimisation continue, visibilité Google et stratégie digitale pour développer votre activité.",
-};
+  description: "Site web SEO avec accompagnement sur 12 mois. Optimisation continue, visibilité Google et stratégie digitale pour développer votre activité.",
+});
 
 const PRICING_TIERS = [
   {

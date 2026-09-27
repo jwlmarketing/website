@@ -5,6 +5,7 @@ import Link from "next/link";
 import { getPostBySlug } from "@/lib/blog";
 import { getSession } from "@/lib/jwlAuth";
 import { getApprovedComments } from "@/lib/comments";
+import { absUrl, SITE_NAME } from "@/lib/seo";
 import CommentForm from "./CommentForm";
 
 export const dynamic = "force-dynamic";
@@ -23,12 +24,21 @@ export async function generateMetadata({
   const { slug } = await params;
   const { post } = await getPostBySlug(slug);
   if (!post) return {};
+  const canonical = post.canonicalUrl || absUrl(`/blog/${slug}`);
+  const title = post.metaTitle || post.title;
+  const description = post.metaDesc || post.excerpt || undefined;
   return {
-    title: post.metaTitle || post.title,
-    description: post.metaDesc || post.excerpt || undefined,
-    alternates: post.canonicalUrl ? { canonical: post.canonicalUrl } : undefined,
-    robots: post.noIndex ? { index: false } : undefined,
+    title,
+    description,
+    alternates: { canonical },
+    robots: { index: !post.noIndex, follow: true },
     openGraph: {
+      type: "article",
+      url: canonical,
+      siteName: SITE_NAME,
+      title,
+      description,
+      locale: "fr_FR",
       images: post.ogImage || post.coverImage ? [post.ogImage || post.coverImage!] : undefined,
     },
   };

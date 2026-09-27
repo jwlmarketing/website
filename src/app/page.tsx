@@ -1,6 +1,7 @@
 import { Fragment } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { buildMetadata } from "@/lib/seo";
 import HeroBadge from "@/components/HeroBadge";
 import YoutubeLite from "@/components/YoutubeLite";
 import SectionHeading from "@/components/SectionHeading";
@@ -15,6 +16,14 @@ import TypewriterText from "@/components/TypewriterText";
 import TrustedPartners from "@/components/TrustedPartners";
 import AccompagnementsTeaser from "@/components/AccompagnementsTeaser";
 import SiteHeader from "@/components/SiteHeader";
+
+export const metadata = buildMetadata({
+  path: "/",
+  locale: "fr",
+  title: "JWL Marketing | Marketing Digital à Aix-en-Provence",
+  description:
+    "Marre des sites invisibles ? Découvre mon univers axé sur l'acquisition client, le SEO et l'IA. À Aix-en-Provence et partout en France.",
+});
 
 const METHODE_STEPS = [
   {

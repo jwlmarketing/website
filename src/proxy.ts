@@ -43,32 +43,18 @@ export function proxy(request: NextRequest) {
     return NextResponse.rewrite(url);
   }
 
-  return NextResponse.next();
+  // Transmet le pathname au root layout (Server Component) via un header,
+  // pour déterminer <html lang="fr"|"en"> sans dupliquer les 55 pages
+  // FR/EN dans des route groups séparés (cf. lib/seo.ts + app/layout.tsx).
+  const requestHeaders = new Headers(request.headers);
+  requestHeaders.set("x-pathname", pathname);
+  return NextResponse.next({ request: { headers: requestHeaders } });
 }
 
 export const config = {
   matcher: [
-    "/admin",
-    "/wp-admin/:path*",
-    "/wp-login.php",
-    "/wp-content/:path*",
-    "/wp-includes/:path*",
-    "/wp-json/:path*",
-    "/wordpress/:path*",
-    "/xmlrpc.php",
-    "/phpmyadmin/:path*",
-    "/pma/:path*",
-    "/administrator/:path*",
-    "/cpanel/:path*",
-    "/webmail/:path*",
-    "/.env",
-    "/.git/:path*",
-    "/config.php",
-    "/wp-config.php",
-    "/user/login",
-    "/typo3/:path*",
-    "/joomla/:path*",
-    "/craft/:path*",
-    "/umbraco/:path*",
+    // Toutes les routes sauf assets statiques et API (pour le header x-pathname),
+    // en couvrant aussi les chemins de sondes CMS ci-dessus.
+    "/((?!api|_next/static|_next/image|favicon.ico).*)",
   ],
 };

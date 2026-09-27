@@ -1,6 +1,6 @@
+import { buildMetadata } from "@/lib/seo";
 import Image from "next/image";
 import Link from "next/link";
-import type { Metadata } from "next";
 import GoogleColors from "@/components/GoogleColors";
 import ReviewCard from "@/components/ReviewCard";
 import GmbAuditWidget from "@/components/GmbAuditWidget";
@@ -8,11 +8,12 @@ import { REVIEWS } from "@/data/reviews";
 import TypewriterText from "@/components/TypewriterText";
 import SiteHeader from "@/components/SiteHeader";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
+  path: "/consultant-freelance-seo-paris-jwl-marketing",
+  locale: "fr",
   title: "Consultante Freelance SEO Paris | JWL Marketing",
-  description:
-    "Consultante Freelance SEO à Paris. Je transforme ta visibilité Google en acquisition client. 10 ans de commerce B2B. Audit gratuit.",
-};
+  description: "Consultante Freelance SEO à Paris. Je transforme ta visibilité Google en acquisition client. 10 ans de commerce B2B. Audit gratuit.",
+});
 
 const ZONES = [
   "Paris",

@@ -1,12 +1,13 @@
-import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/seo";
 import SiteHeader from "@/components/SiteHeader";
 import ScrollReveal from "@/components/ScrollReveal";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
+  path: "/jwl-insight-tarifs",
+  locale: "fr",
   title: "Tarifs JWL Insight Pro | JWL Marketing",
-  description:
-    "JWL Insight est gratuit et illimité pour l'analyse on-page. La formule Pro (29€ HT/mois ou 228€ HT/an) débloque l'audit de site complet, Search Console et le connecteur MCP.",
-};
+  description: "JWL Insight est gratuit et illimité pour l'analyse on-page. La formule Pro (29€ HT/mois ou 228€ HT/an) débloque l'audit de site complet, Search Console et le connecteur MCP.",
+});
 
 const FREE_FEATURES = [
   "Analyses SEO on-page illimitées",

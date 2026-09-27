@@ -1,13 +1,14 @@
+import { buildMetadata } from "@/lib/seo";
 import Image from "next/image";
 import Link from "next/link";
-import type { Metadata } from "next";
 import LanguageToggle from "@/components/LanguageToggle";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
+  path: "/google-my-business-aix-en-provence",
+  locale: "en",
   title: "Google Business Profile Optimisation | JWL MARKETING",
-  description:
-    "Is your Google My Business listing neglected? Take back control of your local visibility. With me, anywhere in France.",
-};
+  description: "Is your Google My Business listing neglected? Take back control of your local visibility. With me, anywhere in France.",
+});
 
 export default function Page() {
   return (

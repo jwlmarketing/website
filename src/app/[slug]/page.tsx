@@ -4,6 +4,7 @@ import { getPageBySlug } from "@/lib/cmsRelay";
 import { auth } from "@/lib/auth";
 import BlockRenderer from "@/components/BlockRenderer";
 import type { Block } from "@/lib/blocks/types";
+import { absUrl, getRoute, isIndexable } from "@/lib/seo";
 
 export const dynamic = "force-dynamic";
 
@@ -15,9 +16,13 @@ export async function generateMetadata({
   const { slug } = await params;
   const { page } = await getPageBySlug(slug);
   if (!page) return {};
+  const path = `/${slug}`;
+  const route = getRoute(path);
   return {
     title: page.metaTitle || page.title,
     description: page.metaDesc || undefined,
+    alternates: { canonical: absUrl(path) },
+    robots: { index: route ? isIndexable(route, "fr") : false, follow: true },
   };
 }
 

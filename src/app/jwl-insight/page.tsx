@@ -1,13 +1,14 @@
-import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/seo";
 import Link from "next/link";
 import SiteHeader from "@/components/SiteHeader";
 import ScrollReveal from "@/components/ScrollReveal";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
+  path: "/jwl-insight",
+  locale: "fr",
   title: "JWL Insight — Extension Chrome d'audit SEO gratuit | JWL Marketing",
-  description:
-    "JWL Insight audite n'importe quelle page en un clic : score /100, on-page, signaux GEO/E-E-A-T, mots-clés, maillage interne. Extension Chrome gratuite par JWL Marketing.",
-};
+  description: "JWL Insight audite n'importe quelle page en un clic : score /100, on-page, signaux GEO/E-E-A-T, mots-clés, maillage interne. Extension Chrome gratuite par JWL Marketing.",
+});
 
 const STEPS = [
   {

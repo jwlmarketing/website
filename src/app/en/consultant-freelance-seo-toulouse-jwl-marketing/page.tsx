@@ -1,12 +1,12 @@
-import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/seo";
 import PlaceholderPage from "@/components/PlaceholderPage";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
+  path: "/consultant-freelance-seo-toulouse-jwl-marketing",
+  locale: "en",
   title: "Freelance SEO Consultant Toulouse | JWL Marketing",
-  description:
-    "Freelance SEO Consultant in Toulouse. I turn your Google visibility into client acquisition. 10 years of B2B sales experience. Free audit.",
-  robots: { index: false, follow: true },
-};
+  description: "Freelance SEO Consultant in Toulouse. I turn your Google visibility into client acquisition. 10 years of B2B sales experience. Free audit.",
+});
 
 export default function Page() {
   return (

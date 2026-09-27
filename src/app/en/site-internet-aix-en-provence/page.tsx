@@ -1,6 +1,6 @@
+import { buildMetadata } from "@/lib/seo";
 import Image from "next/image";
 import Link from "next/link";
-import type { Metadata } from "next";
 import GoogleColors from "@/components/GoogleColors";
 import ScrollReveal from "@/components/ScrollReveal";
 import TypewriterText from "@/components/TypewriterText";
@@ -8,11 +8,12 @@ import Lightbox from "@/components/Lightbox";
 import ProofCards from "@/components/ProofCards";
 import SiteHeader from "@/components/SiteHeader";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
+  path: "/site-internet-aix-en-provence",
+  locale: "en",
   title: "Website Creation | JWL Marketing",
-  description:
-    "Discover the power of a website designed by a sales expert. Solid structure, SEO-GEO copywriting, cited by AI. Available across France.",
-};
+  description: "Discover the power of a website designed by a sales expert. Solid structure, SEO-GEO copywriting, cited by AI. Available across France.",
+});
 
 function StepNumber({ n }: { n: number }) {
   return (

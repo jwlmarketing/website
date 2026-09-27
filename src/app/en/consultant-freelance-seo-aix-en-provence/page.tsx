@@ -1,6 +1,6 @@
+import { buildMetadata } from "@/lib/seo";
 import Image from "next/image";
 import Link from "next/link";
-import type { Metadata } from "next";
 import GoogleColors from "@/components/GoogleColors";
 import ReviewCard from "@/components/ReviewCard";
 import GmbAuditWidget from "@/components/GmbAuditWidget";
@@ -8,11 +8,12 @@ import { REVIEWS } from "@/data/reviews";
 import TypewriterText from "@/components/TypewriterText";
 import SiteHeader from "@/components/SiteHeader";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
+  path: "/consultant-freelance-seo-aix-en-provence",
+  locale: "en",
   title: "Freelance SEO Consultant Aix-en-Provence | JWL Marketing",
-  description:
-    "SEO Consultant in Aix-en-Provence. 10 years of sales expertise and American methods to power your client acquisition.",
-};
+  description: "SEO Consultant in Aix-en-Provence. 10 years of sales expertise and American methods to power your client acquisition.",
+});
 
 const ZONES = [
   "Aix-en-Provence",

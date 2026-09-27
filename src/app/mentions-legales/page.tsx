@@ -1,7 +1,12 @@
-import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/seo";
 import LegalLayout from "@/components/LegalLayout";
 
-export const metadata: Metadata = { title: "Mentions légales | JWL Marketing" };
+export const metadata = buildMetadata({
+  path: "/mentions-legales",
+  locale: "fr",
+  title: "Mentions légales | JWL Marketing",
+  description: "TODO: ajouter une meta description (<=155 caracteres)",
+});
 
 export default function MentionsLegales() {
   return (

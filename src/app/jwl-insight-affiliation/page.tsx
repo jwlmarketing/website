@@ -1,14 +1,15 @@
-import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/seo";
 import SiteHeader from "@/components/SiteHeader";
 import ScrollReveal from "@/components/ScrollReveal";
 import AffiliateSignup from "@/components/AffiliateSignup";
 import AffiliateStats from "@/components/AffiliateStats";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
+  path: "/jwl-insight-affiliation",
+  locale: "fr",
   title: "Programme d'affiliation JWL Insight | JWL Marketing",
-  description:
-    "Recommande JWL Insight et touche 25% de chaque paiement pendant 24 mois. Ton filleul profite d'un essai de 14 jours au lieu de 7.",
-};
+  description: "Recommande JWL Insight et touche 25% de chaque paiement pendant 24 mois. Ton filleul profite d'un essai de 14 jours au lieu de 7.",
+});
 
 export default function Page() {
   return (

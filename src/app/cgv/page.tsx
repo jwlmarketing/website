@@ -1,8 +1,13 @@
-import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/seo";
 import LegalLayout from "@/components/LegalLayout";
 import GoogleColors from "@/components/GoogleColors";
 
-export const metadata: Metadata = { title: "Conditions générales de vente | JWL Marketing" };
+export const metadata = buildMetadata({
+  path: "/cgv",
+  locale: "fr",
+  title: "Conditions générales de vente | JWL Marketing",
+  description: "TODO: ajouter une meta description (<=155 caracteres)",
+});
 
 export default function Cgv() {
   return (

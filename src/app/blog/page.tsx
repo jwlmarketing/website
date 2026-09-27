@@ -2,15 +2,18 @@ import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
 import { listPublishedPosts, getSettings } from "@/lib/blog";
+import { buildMetadata } from "@/lib/seo";
 
 export const dynamic = "force-dynamic";
 
 export async function generateMetadata(): Promise<Metadata> {
   const settings = getSettings();
-  return {
+  return buildMetadata({
+    path: "/blog",
+    locale: "fr",
     title: settings.seoTitle,
     description: settings.seoDescription,
-  };
+  });
 }
 
 const PER_PAGE = 9;

@@ -255,7 +255,7 @@ const HTML_FR = `
   </div>
 
   <div class="guarantees-cta">
-    <a href="/consultant-seo-aix-en-provence">Qui suis je ?</a>
+    <a href="/consultant-freelance-seo-aix-en-provence">Qui suis je ?</a>
   </div>
 
 </div>

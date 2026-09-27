@@ -1,8 +1,13 @@
-import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/seo";
 import LegalLayout from "@/components/LegalLayout";
 import GoogleColors from "@/components/GoogleColors";
 
-export const metadata: Metadata = { title: "Politique de cookies | JWL Marketing" };
+export const metadata = buildMetadata({
+  path: "/cookies",
+  locale: "fr",
+  title: "Politique de cookies | JWL Marketing",
+  description: "TODO: ajouter une meta description (<=155 caracteres)",
+});
 
 export default function Cookies() {
   return (

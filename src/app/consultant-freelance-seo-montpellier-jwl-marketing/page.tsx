@@ -1,6 +1,6 @@
+import { buildMetadata } from "@/lib/seo";
 import Image from "next/image";
 import Link from "next/link";
-import type { Metadata } from "next";
 import ReviewCard from "@/components/ReviewCard";
 import GmbAuditWidget from "@/components/GmbAuditWidget";
 import ProofCards from "@/components/ProofCards";
@@ -9,11 +9,12 @@ import TypewriterText from "@/components/TypewriterText";
 import SiteHeader from "@/components/SiteHeader";
 import GoogleColors from "@/components/GoogleColors";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
+  path: "/consultant-freelance-seo-montpellier-jwl-marketing",
+  locale: "fr",
   title: "Consultante Freelance SEO Montpellier | JWL Marketing",
-  description:
-    "Consultante Freelance SEO à Montpellier. Je transforme ta visibilité Google en acquisition client. 10 ans de commerce B2B. Audit gratuit.",
-};
+  description: "Consultante Freelance SEO à Montpellier. Je transforme ta visibilité Google en acquisition client. 10 ans de commerce B2B. Audit gratuit.",
+});
 
 const ZONES = [
   "Montpellier",

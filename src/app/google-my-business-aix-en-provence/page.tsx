@@ -1,13 +1,14 @@
+import { buildMetadata } from "@/lib/seo";
 import Image from "next/image";
-import type { Metadata } from "next";
 import GoogleColors from "@/components/GoogleColors";
 import SiteHeader from "@/components/SiteHeader";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
+  path: "/google-my-business-aix-en-provence",
+  locale: "fr",
   title: "Optimisation Fiche Google Business Profile | JWL MARKETING",
-  description:
-    "Ta fiche Google my business est à l'abandon ? Reprends le contrôle de ta visibilité locale. Avec moi et partout en France.",
-};
+  description: "Ta fiche Google my business est à l'abandon ? Reprends le contrôle de ta visibilité locale. Avec moi et partout en France.",
+});
 
 export default function Page() {
   return (

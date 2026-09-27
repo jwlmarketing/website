@@ -16,7 +16,8 @@
     },
     {
       "type": "image",
-      "url": "/images/realisations/image.jpg"
+      "url": "/images/realisations/image.jpg",
+      "alt": "Capture d'écran de la plateforme Dynamitz réalisée avec JWL Marketing"
     },
     {
       "type": "heading",

@@ -1,7 +1,12 @@
-import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/seo";
 import LegalLayout from "@/components/LegalLayout";
 
-export const metadata: Metadata = { title: "Politique de confidentialité | JWL Marketing" };
+export const metadata = buildMetadata({
+  path: "/politique-de-confidentialite",
+  locale: "fr",
+  title: "Politique de confidentialité | JWL Marketing",
+  description: "TODO: ajouter une meta description (<=155 caracteres)",
+});
 
 export default function PolitiqueConfidentialite() {
   return (

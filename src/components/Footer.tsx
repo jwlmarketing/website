@@ -119,7 +119,7 @@ export default function Footer() {
               13290 Aix-en-Provence
             </p>
             <p className="mb-4 text-[13px] leading-relaxed text-white">
-              <span className="font-semibold">SIRET</span> 315 087 767
+              <span className="font-semibold">SIRET</span> 989 154 380 00012
               <br />
               RCS Aix-en-Provence
             </p>

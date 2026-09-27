@@ -1,7 +1,7 @@
+import { buildMetadata } from "@/lib/seo";
 import { Fragment } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import type { Metadata } from "next";
 import HeroBadge from "@/components/HeroBadge";
 import YoutubeLite from "@/components/YoutubeLite";
 import VisibilityChart from "@/components/VisibilityChart";
@@ -18,11 +18,12 @@ import TrustedPartners from "@/components/TrustedPartners";
 import AccompagnementsTeaser from "@/components/AccompagnementsTeaser";
 import SiteHeader from "@/components/SiteHeader";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
+  path: "/",
+  locale: "en",
   title: "JWL Marketing | Digital Marketing in Aix-en-Provence",
-  description:
-    "Tired of an invisible website? Discover my world built around client acquisition, SEO and AI. Based in Aix-en-Provence, working across France.",
-};
+  description: "Tired of an invisible website? Discover my world built around client acquisition, SEO and AI. Based in Aix-en-Provence, working across France.",
+});
 
 const METHODE_STEPS = [
   {

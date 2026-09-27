@@ -2,17 +2,20 @@ import type { Metadata } from "next";
 import SiteHeader from "@/components/SiteHeader";
 import BlockRenderer from "@/components/BlockRenderer";
 import { getIndexPage } from "@/lib/realisations";
+import { buildMetadata } from "@/lib/seo";
 
 export const dynamic = "force-dynamic";
 
 export async function generateMetadata(): Promise<Metadata> {
   const page = getIndexPage();
-  return {
+  return buildMetadata({
+    path: "/realisations",
+    locale: "fr",
     title: page.metaTitle || `${page.title} | JWL MARKETING`,
     description:
       page.metaDescription ||
       "Découvre les sites web et projets digitaux réalisés par JWL Marketing pour ses clients à Aix-en-Provence et partout en France.",
-  };
+  });
 }
 
 export default function Page() {
