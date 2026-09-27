@@ -27,7 +27,7 @@ export const ROUTES: Route[] = [
   { path: "/consultant-freelance-seo-montpellier-jwl-marketing", index: true, en: true, priority: 0.7 },
   { path: "/consultant-freelance-seo-nice", index: true, en: true, priority: 0.7 },
   { path: "/consultant-freelance-seo-paris-jwl-marketing", index: true, en: true, priority: 0.7 },
-  { path: "/consultant-seo-bordeaux-jwl-marketing", index: true, en: true, priority: 0.7 },
+  { path: "/consultant-freelance-seo-bordeaux-jwl-marketing", index: true, en: true, priority: 0.7 },
   { path: "/realisations", index: true, en: true, priority: 0.7 },
   { path: "/realisations/dynamitz", index: true, priority: 0.6 },
   { path: "/realisations/bout-de-poils", index: true, priority: 0.6 },

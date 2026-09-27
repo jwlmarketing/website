@@ -35,7 +35,7 @@ const ZONES = {
     { href: "/consultant-freelance-seo-nice", label: "Consultant SEO Nice", external: false },
     { href: "/consultant-freelance-seo-montpellier-jwl-marketing", label: "Consultant SEO Montpellier", external: false },
     { href: "https://www.jwl-marketing.fr/consultant-freelance-seo-toulouse-jwl-marketing/", label: "Consultant SEO Toulouse", external: true },
-    { href: "/consultant-seo-bordeaux-jwl-marketing", label: "Consultant SEO Bordeaux", external: false },
+    { href: "/consultant-freelance-seo-bordeaux-jwl-marketing", label: "Consultant SEO Bordeaux", external: false },
     { href: "/consultant-freelance-seo-paris-jwl-marketing", label: "Consultant SEO Paris", external: false },
   ],
   en: [
@@ -43,7 +43,7 @@ const ZONES = {
     { href: "/en/consultant-freelance-seo-nice", label: "SEO Consultant Nice", external: false },
     { href: "/en/consultant-freelance-seo-montpellier-jwl-marketing", label: "SEO Consultant Montpellier", external: false },
     { href: "https://www.jwl-marketing.fr/consultant-freelance-seo-toulouse-jwl-marketing/", label: "SEO Consultant Toulouse", external: true },
-    { href: "/en/consultant-seo-bordeaux-jwl-marketing", label: "SEO Consultant Bordeaux", external: false },
+    { href: "/en/consultant-freelance-seo-bordeaux-jwl-marketing", label: "SEO Consultant Bordeaux", external: false },
     { href: "/en/consultant-freelance-seo-paris-jwl-marketing", label: "SEO Consultant Paris", external: false },
   ],
 };

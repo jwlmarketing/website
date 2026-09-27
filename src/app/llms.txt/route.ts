@@ -67,7 +67,7 @@ const ZONE_PAGES: { path: string; title: string }[] = [
   { path: "/consultant-freelance-seo-marseille-jwl-marketing", title: "Consultant SEO Marseille" },
   { path: "/consultant-freelance-seo-montpellier-jwl-marketing", title: "Consultant SEO Montpellier" },
   { path: "/consultant-freelance-seo-toulouse-jwl-marketing", title: "Consultant SEO Toulouse" },
-  { path: "/consultant-seo-bordeaux-jwl-marketing", title: "Consultant SEO Bordeaux" },
+  { path: "/consultant-freelance-seo-bordeaux-jwl-marketing", title: "Consultant SEO Bordeaux" },
   { path: "/consultant-freelance-seo-nice", title: "Consultant SEO Nice" },
   { path: "/consultant-freelance-seo-paris-jwl-marketing", title: "Consultant SEO Paris" },
 ];

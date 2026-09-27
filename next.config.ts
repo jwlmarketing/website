@@ -53,7 +53,19 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/consultant-freelance-seo-bordeaux-jwl-marketing-2",
-        destination: "/consultant-seo-bordeaux-jwl-marketing",
+        destination: "/consultant-freelance-seo-bordeaux-jwl-marketing",
+        permanent: true,
+      },
+      {
+        // Renamed to match the naming pattern used by every other city page
+        // (/consultant-freelance-seo-*-jwl-marketing).
+        source: "/consultant-seo-bordeaux-jwl-marketing",
+        destination: "/consultant-freelance-seo-bordeaux-jwl-marketing",
+        permanent: true,
+      },
+      {
+        source: "/en/consultant-seo-bordeaux-jwl-marketing",
+        destination: "/en/consultant-freelance-seo-bordeaux-jwl-marketing",
         permanent: true,
       },
     ];
