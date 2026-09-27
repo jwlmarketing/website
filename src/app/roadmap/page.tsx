@@ -1,6 +1,10 @@
 import { buildMetadata } from "@/lib/seo";
 import Image from "next/image";
 import SiteHeader from "@/components/SiteHeader";
+import PageGateForm from "@/components/PageGateForm";
+import LeviersGrid, { type Lever } from "@/components/LeviersGrid";
+import { hasPageAccess } from "@/lib/pageGate";
+import { listPublicDocuments, type PublicGatedDocument } from "@/lib/gatedContent";
 
 export const metadata = buildMetadata({
   path: "/roadmap",
@@ -9,75 +13,76 @@ export const metadata = buildMetadata({
   description: "Fais de Google ton meilleur commercial terrain.",
 });
 
-const LEVIERS = [
+export const dynamic = "force-dynamic";
+
+const LEVIERS: Lever[] = [
   {
     label: "Google My Business",
     color: "#5b6fd8",
     shade: "#adb8f2",
     desc: "Sois trouvé localement et transforme les recherches Google en contacts qualifiés.",
-    href: "/google-my-business-aix-en-provence",
   },
   {
     label: "Développement commercial",
     color: "#e2493f",
     shade: "#f3a49e",
     desc: "Donnez à votre public une brève description de cette ressource.",
-    href: "/developpement-commercial-aix-en-provence",
   },
   {
     label: "SEO-GEO",
     color: "#f0b429",
     shade: "#f8dd8b",
     desc: "Donnez à votre public une brève description de cette ressource.",
-    href: "/site-web-seo-aix-en-provence",
   },
   {
     label: "IA",
     color: "#2fa86a",
     shade: "#9fdcbc",
     desc: "Donnez à votre public une brève description de cette ressource.",
-    href: "/site-internet-aix-en-provence",
   },
   {
     label: "Réseaux sociaux",
     color: "#e2493f",
     shade: "#f3a49e",
     desc: "Donnez à votre public une brève description de cette ressource.",
-    href: "/tarifs",
   },
   {
     label: "Entrepreneuri'Elles",
     color: "#f0b429",
     shade: "#f8dd8b",
     desc: "Donnez à votre public une brève description de cette ressource.",
-    href: "/tarifs",
     isPartner: true,
   },
 ];
 
-function LeverBadge({ color, shade }: { color: string; shade: string }) {
-  return (
-    <svg viewBox="0 0 100 100" className="h-16 w-16" aria-hidden>
-      <polygon points="50,6 94,30 94,72 50,96 6,72 6,30" fill={shade} />
-      <polygon points="50,20 80,36 80,66 50,82 20,66 20,36" fill={color} />
-    </svg>
-  );
-}
+export default async function RoadmapPage() {
+  const unlocked = await hasPageAccess("roadmap");
+  if (!unlocked) {
+    return <PageGateForm pageSlug="roadmap" />;
+  }
 
-export default function RoadmapPage() {
+  const documents = listPublicDocuments("roadmap");
+  const documentsByCategory = documents.reduce<Record<string, PublicGatedDocument[]>>(
+    (acc, doc) => {
+      (acc[doc.category] ??= []).push(doc);
+      return acc;
+    },
+    {}
+  );
+
   return (
-    <div className="min-h-screen bg-[#fbf6f2]">
+    <div className="min-h-screen bg-white">
       <SiteHeader locale="fr" href="/roadmap" />
 
       {/* Hero */}
-      <section className="mx-auto max-w-[1200px] px-6 pt-28 pb-16 md:pt-36">
-        <div className="grid items-center gap-10 md:grid-cols-2">
+      <section className="mx-auto max-w-[1440px] px-6 pt-28 pb-20 md:px-10 md:pt-40">
+        <div className="grid items-center gap-14 md:grid-cols-2">
           <div>
-            <h1 className="font-heading text-4xl leading-tight text-black md:text-5xl">
+            <h1 className="font-heading text-5xl leading-tight text-black md:text-6xl">
               <span className="italic text-[#c9846f]">JWL Roadmap</span> : Fais
               de Google ton meilleur commercial terrain.
             </h1>
-            <p className="mt-6 max-w-[520px] text-lg leading-8 text-neutral-600">
+            <p className="mt-6 max-w-[560px] text-xl leading-8 text-neutral-600">
               Transforme ta visibilité en chiffre d&apos;affaires. Bien plus
               qu&apos;un site web&nbsp;: un écosystème marketing complet pour
               gagner en visibilité, développer ton réseau et transformer
@@ -96,20 +101,21 @@ export default function RoadmapPage() {
             </div>
           </div>
 
-          <div className="relative flex aspect-[4/3] items-center justify-center overflow-hidden rounded-3xl bg-white shadow-[0_20px_60px_rgba(40,30,20,0.08)]">
+          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl">
             <Image
               src="/images/jwl-roadmap-hero.png"
               alt="JWL Marketing"
               fill
               className="object-contain"
               priority
+              sizes="(min-width: 768px) 50vw, 100vw"
             />
           </div>
         </div>
       </section>
 
       {/* Leviers */}
-      <section id="leviers" className="mx-auto max-w-[1200px] px-6 pb-20">
+      <section id="leviers" className="mx-auto max-w-[1440px] px-6 pb-24 md:px-10">
         <div className="text-center">
           <p className="italic text-[#c9846f]">Les leviers d&apos;action</p>
           <h2 className="mt-2 font-heading text-3xl text-black md:text-4xl">
@@ -117,42 +123,12 @@ export default function RoadmapPage() {
           </h2>
         </div>
 
-        <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {LEVIERS.map((lever) => (
-            <div key={lever.label} className="flex flex-col">
-              {lever.isPartner ? (
-                <div className="flex h-16 w-28 items-center justify-start">
-                  <Image
-                    src="/images/entrepreneurielles-logo.png"
-                    alt="Entrepreneuri'Elles"
-                    width={112}
-                    height={40}
-                    className="h-auto w-full object-contain"
-                  />
-                </div>
-              ) : (
-                <LeverBadge color={lever.color} shade={lever.shade} />
-              )}
-              <p className="mt-4 text-xs font-bold uppercase tracking-wider text-black">
-                {lever.label}
-              </p>
-              <p className="mt-2 max-w-[320px] text-sm leading-relaxed text-neutral-600">
-                {lever.desc}
-              </p>
-              <a
-                href={lever.href}
-                className="mt-4 inline-flex w-fit items-center rounded-full bg-[#2fa86a] px-4 py-2 text-xs font-bold uppercase text-white transition hover:bg-[#26905a]"
-              >
-                En savoir plus
-              </a>
-            </div>
-          ))}
-        </div>
+        <LeviersGrid leviers={LEVIERS} documentsByCategory={documentsByCategory} />
       </section>
 
       {/* Ressources */}
-      <section className="mx-auto max-w-[1200px] px-6 pb-28">
-        <div className="grid gap-10 rounded-3xl border border-[#e9dfd5] bg-white p-8 shadow-[0_12px_40px_rgba(40,30,20,0.05)] md:grid-cols-2 md:p-12">
+      <section className="mx-auto max-w-[1440px] px-6 pb-32 md:px-10">
+        <div className="grid gap-10 rounded-3xl bg-[#faf8f5] p-8 md:grid-cols-2 md:p-16">
           <div>
             <p className="italic text-[#c9846f]">Les ressources :</p>
             <h2 className="mt-2 font-heading text-2xl text-black md:text-3xl">

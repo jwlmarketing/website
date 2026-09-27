@@ -38,6 +38,13 @@ const NAV = [
       { href: "/admin/realisations/index-page", match: "/admin/realisations/index-page", label: "Page d'accueil", icon: "doc" },
     ],
   },
+  {
+    label: "Site",
+    items: [
+      { href: "/admin/site/codes", match: "/admin/site/codes", label: "Code", icon: "settings" },
+      { href: "/admin/site/downloads", match: "/admin/site/downloads", label: "Téléchargement", icon: "media" },
+    ],
+  },
 ];
 
 const TITLES: Record<string, string> = {
@@ -52,6 +59,8 @@ const TITLES: Record<string, string> = {
   "/admin/realisations": "Réalisations",
   "/admin/realisations/new": "Nouveau cas client",
   "/admin/realisations/index-page": "Page d'accueil — Réalisations",
+  "/admin/site/codes": "Code d'accès des pages",
+  "/admin/site/downloads": "Téléchargements protégés",
 };
 
 function NavIcon({ name }: { name: string }) {
@@ -141,6 +150,7 @@ export default function AdminShell({
   }
 
   const isRealisations = pathname?.startsWith("/admin/realisations");
+  const isSite = pathname?.startsWith("/admin/site");
   const fallbackTitle = isRealisations
     ? "Modifier le cas client"
     : "Modifier l'article";
@@ -217,6 +227,7 @@ export default function AdminShell({
       <div className="admin-content">
         <header className="admin-topbar">
           <h1 className="topbar-title">{TITLES[pathname] || fallbackTitle}</h1>
+          {!isSite && (
           <div className="topbar-actions">
             <a
               href={isRealisations ? "/realisations" : "/blog"}
@@ -242,6 +253,7 @@ export default function AdminShell({
               {isRealisations ? "Nouveau cas client" : "Nouvel article"}
             </Link>
           </div>
+          )}
         </header>
         <div className="admin-main">{children}</div>
       </div>
