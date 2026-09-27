@@ -3,6 +3,17 @@
 import { useRef, useState, useTransition } from "react";
 import { uploadGatedDocumentAction } from "../actions";
 
+const CATEGORIES = [
+  "Google My Business",
+  "Développement commercial",
+  "SEO-GEO",
+  "IA",
+  "Réseaux sociaux",
+  "Entrepreneuri'Elles",
+  "Replays",
+  "Guides PDF",
+];
+
 export default function UploadForm({
   pages,
 }: {
@@ -41,7 +52,13 @@ export default function UploadForm({
       </div>
       <div className="form-group">
         <label>Catégorie / levier</label>
-        <input type="text" name="category" placeholder="ex: Entrepreneuri'Elles" required />
+        <select name="category" defaultValue={CATEGORIES[0]}>
+          {CATEGORIES.map((c) => (
+            <option key={c} value={c}>
+              {c}
+            </option>
+          ))}
+        </select>
       </div>
       <div className="form-group">
         <label>Titre du document</label>

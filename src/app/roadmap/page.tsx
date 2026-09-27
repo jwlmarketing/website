@@ -3,6 +3,7 @@ import Image from "next/image";
 import SiteHeader from "@/components/SiteHeader";
 import PageGateForm from "@/components/PageGateForm";
 import LeviersGrid, { type Lever } from "@/components/LeviersGrid";
+import GatedDocumentCard from "@/components/GatedDocumentCard";
 import { hasPageAccess } from "@/lib/pageGate";
 import { listPublicDocuments, type PublicGatedDocument } from "@/lib/gatedContent";
 
@@ -128,23 +129,40 @@ export default async function RoadmapPage() {
 
       {/* Ressources */}
       <section className="mx-auto max-w-[1440px] px-6 pb-32 md:px-10">
-        <div className="grid gap-10 rounded-3xl bg-[#faf8f5] p-8 md:grid-cols-2 md:p-16">
-          <div>
-            <p className="italic text-[#c9846f]">Les ressources :</p>
-            <h2 className="mt-2 font-heading text-2xl text-black md:text-3xl">
-              conçues pour accélérer ton développement
-            </h2>
-          </div>
-          <div className="space-y-6">
+        <div className="rounded-3xl bg-[#faf8f5] p-8 md:p-16">
+          <p className="italic text-[#c9846f]">Les ressources :</p>
+          <h2 className="mt-2 font-heading text-2xl text-black md:text-3xl">
+            conçues pour accélérer ton développement
+          </h2>
+
+          <div className="mt-10 grid gap-10 md:grid-cols-2">
             <div>
-              <p className="font-bold text-black">Replays :</p>
-              <p className="text-neutral-600">ateliers, webinaires</p>
+              <p className="font-bold text-black">Replays</p>
+              <p className="mt-1 text-sm text-neutral-600">ateliers, webinaires</p>
+              {(documentsByCategory["Replays"] || []).length === 0 ? (
+                <p className="mt-4 text-sm text-neutral-400">Rien pour le moment.</p>
+              ) : (
+                <div className="mt-4 grid grid-cols-2 gap-4 sm:grid-cols-3">
+                  {documentsByCategory["Replays"].map((doc) => (
+                    <GatedDocumentCard key={doc.id} doc={doc} />
+                  ))}
+                </div>
+              )}
             </div>
             <div>
-              <p className="font-bold text-black">Guides PDF :</p>
-              <p className="text-neutral-600">
+              <p className="font-bold text-black">Guides PDF</p>
+              <p className="mt-1 text-sm text-neutral-600">
                 Comment rejoindre ou travailler avec JWL
               </p>
+              {(documentsByCategory["Guides PDF"] || []).length === 0 ? (
+                <p className="mt-4 text-sm text-neutral-400">Rien pour le moment.</p>
+              ) : (
+                <div className="mt-4 grid grid-cols-2 gap-4 sm:grid-cols-3">
+                  {documentsByCategory["Guides PDF"].map((doc) => (
+                    <GatedDocumentCard key={doc.id} doc={doc} />
+                  ))}
+                </div>
+              )}
             </div>
           </div>
         </div>
