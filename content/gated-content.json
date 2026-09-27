@@ -2,14 +2,5 @@
   "pageCodes": {
     "roadmap": "jsp"
   },
-  "documents": [
-    {
-      "pageSlug": "roadmap",
-      "category": "Test",
-      "title": "Test PDF",
-      "fileName": "devis-000001-jwl-marketing-yukan-change.pdf",
-      "code": "attend",
-      "id": "b368c65c-ba7a-498b-8beb-af4b274a0452"
-    }
-  ]
+  "documents": []
 }
