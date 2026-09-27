@@ -5,14 +5,6 @@
   "documents": [
     {
       "pageSlug": "roadmap",
-      "category": "Test",
-      "title": "Test PDF",
-      "fileName": "devis-000001-jwl-marketing-yukan-change.pdf",
-      "code": "attend",
-      "id": "b368c65c-ba7a-498b-8beb-af4b274a0452"
-    },
-    {
-      "pageSlug": "roadmap",
       "category": "Guides PDF",
       "title": "test",
       "fileName": "brouillon-jwl-marketing-jeanclaude-bernardgreenbeamcraft.pdf",
