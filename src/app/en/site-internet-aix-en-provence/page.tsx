@@ -11,7 +11,7 @@ import SiteHeader from "@/components/SiteHeader";
 export const metadata = buildMetadata({
   path: "/site-internet-aix-en-provence",
   locale: "en",
-  title: "Website Creation | JWL Marketing",
+  title: "Website Creation Aix-en-Provence | JWL Marketing",
   description: "Discover the power of a website designed by a sales expert. Solid structure, SEO-GEO copywriting, cited by AI. Available across France.",
 });
 

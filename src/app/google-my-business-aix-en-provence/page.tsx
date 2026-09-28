@@ -6,7 +6,7 @@ import SiteHeader from "@/components/SiteHeader";
 export const metadata = buildMetadata({
   path: "/google-my-business-aix-en-provence",
   locale: "fr",
-  title: "Optimisation Fiche Google Business Profile | JWL MARKETING",
+  title: "Google Business Profile Aix-en-Provence | JWL Marketing",
   description: "Ta fiche Google my business est à l'abandon ? Reprends le contrôle de ta visibilité locale. Avec moi et partout en France.",
 });
 

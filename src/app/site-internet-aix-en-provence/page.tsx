@@ -11,7 +11,7 @@ import AccompagnementsSection from "@/components/AccompagnementsSection";
 export const metadata = buildMetadata({
   path: "/site-internet-aix-en-provence",
   locale: "fr",
-  title: "Création de site web Business | JWL Marketing",
+  title: "Création site internet Aix-en-Provence | JWL Marketing",
   description: "Création de site web à Aix-en-Provence et toute la France. Pour être visible, rassurer vos prospects et soutenir votre développement commercial.",
 });
 

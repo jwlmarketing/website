@@ -28,7 +28,8 @@ export const ROUTES: Route[] = [
   { path: "/consultant-freelance-seo-nice", index: true, en: true, priority: 0.7 },
   { path: "/consultant-freelance-seo-paris-jwl-marketing", index: true, en: true, priority: 0.7 },
   { path: "/consultant-freelance-seo-bordeaux-jwl-marketing", index: true, en: true, priority: 0.7 },
-  { path: "/realisations", index: true, en: true, priority: 0.7 },
+  // EN = pas de H1, 14 mots -> noindex tant que pas traduite
+  { path: "/realisations", index: true, en: true, enIndex: false, priority: 0.7 },
   { path: "/realisations/dynamitz", index: true, priority: 0.6 },
   { path: "/realisations/bout-de-poils", index: true, priority: 0.6 },
   // 9 mots -> noindex jusqu'à rédaction de l'étude de cas (cf. brief "Côté contenu")
@@ -56,9 +57,10 @@ export const ROUTES: Route[] = [
   { path: "/cookies", index: true, en: true, priority: 0.2, changeFrequency: "yearly" },
 
   // Outils / pages annexes (hors périmètre marketing FR/EN, pas de version EN)
-  { path: "/jwl-insight", index: true, priority: 0.4 },
-  { path: "/jwl-insight-tarifs", index: true, priority: 0.4 },
-  { path: "/jwl-insight-affiliation", index: true, priority: 0.3 },
+  // Contenu trop léger (109-154 mots) -> noindex en attendant l'étoffement (cf. brief)
+  { path: "/jwl-insight", index: false, priority: 0.4 },
+  { path: "/jwl-insight-tarifs", index: false, priority: 0.4 },
+  { path: "/jwl-insight-affiliation", index: false, priority: 0.3 },
 ];
 
 export type Locale = "fr" | "en";

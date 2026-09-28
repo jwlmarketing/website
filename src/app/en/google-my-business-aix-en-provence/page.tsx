@@ -6,7 +6,7 @@ import LanguageToggle from "@/components/LanguageToggle";
 export const metadata = buildMetadata({
   path: "/google-my-business-aix-en-provence",
   locale: "en",
-  title: "Google Business Profile Optimisation | JWL MARKETING",
+  title: "Google Business Profile Aix-en-Provence | JWL Marketing",
   description: "Is your Google My Business listing neglected? Take back control of your local visibility. With me, anywhere in France.",
 });
 

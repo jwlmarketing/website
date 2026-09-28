@@ -4,7 +4,7 @@ import PlaceholderPage from "@/components/PlaceholderPage";
 export const metadata = buildMetadata({
   path: "/audit-seo-aix-en-provence",
   locale: "fr",
-  title: "Audit SEO & Stratégie : Réveille ton site web | JWL MARKETING",
+  title: "Audit SEO Aix-en-Provence | JWL Marketing",
   description: "Ton site fait du surplace ? Découvre ce qui bloque ton trafic et tes ventes grâce à un audit SEO stratégique. À distance ou en région PACA.",
 });
 
