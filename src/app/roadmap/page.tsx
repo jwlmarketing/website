@@ -49,7 +49,7 @@ const LEVIERS: Lever[] = [
     label: "Entrepreneuri'Elles",
     image: "/images/levier-entrepreneurielles.jpg",
     desc: "Tes ateliers, tes outils, tes ressources : tout pour faire grandir tes projets et ton réseau.",
-    href: "/ressources/ateliers",
+    href: "/ressources-entrepreneurs",
   },
 ];
 
