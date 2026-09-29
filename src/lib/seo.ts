@@ -42,11 +42,11 @@ export const ROUTES: Route[] = [
   // Pages en noindex (hors sitemap)
   { path: "/roadmap", index: false },
   // Pages ressources (kits Canva) : PDF/vidéos gratuits ou payants, hors Google (cf. brief)
-  { path: "/ressources/kit-google", index: false },
+  { path: "/ressources/kit-google-my-business", index: false },
   { path: "/ressources/kit-commercial", index: false },
   { path: "/ressources/kit-visibilite", index: false },
   { path: "/ressources/kit-ia", index: false },
-  { path: "/ressources/kit-reseaux", index: false },
+  { path: "/ressources/kit-reseaux-sociaux", index: false },
   { path: "/ressources/ateliers", index: false },
   { path: "/tarifs", index: false, en: true },
   { path: "/contact-jwl-marketing-aix-en-provence", index: false, en: true },

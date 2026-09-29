@@ -7,7 +7,7 @@ export const metadata = buildMetadata({
   locale: "fr",
   title: "Kit développement commercial | JWL Marketing",
   description:
-    "Kit développement commercial : scripts, modèles et méthode pour prospecter, relancer et transformer tes contacts en",
+    "Kit développement commercial : scripts, modèles et méthode pour prospecter, relancer et transformer tes contacts en clients.",
 });
 
 export default function Page() {

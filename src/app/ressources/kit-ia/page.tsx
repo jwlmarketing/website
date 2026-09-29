@@ -7,7 +7,7 @@ export const metadata = buildMetadata({
   locale: "fr",
   title: "Kit IA et GEO | JWL Marketing",
   description:
-    "Kit IA et GEO : prompts prêts à l'emploi et méthode pour gagner du temps et être cité par ChatGPT, Google et les",
+    "Kit IA et GEO : prompts prêts à l'emploi et méthode pour gagner du temps et être cité par ChatGPT, Google et les assistants IA.",
 });
 
 export default function Page() {

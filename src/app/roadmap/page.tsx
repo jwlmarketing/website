@@ -19,44 +19,42 @@ const LEVIERS: Lever[] = [
     label: "Google My Business Profile",
     image: "/images/levier-google-my-business.jpg",
     desc: "Sois trouvé localement et transforme les recherches Google en contacts qualifiés.",
+    href: "/ressources/kit-google-my-business",
   },
   {
     label: "Développement commercial",
     image: "/images/levier-developpement-commercial.jpg",
     desc: "Attire, convaincs, convertis : découvre les méthodes et astuces commerciales pour passer du premier contact au client.",
+    href: "/ressources/kit-commercial",
   },
   {
     label: "Référencement naturel : SEO-GEO",
     image: "/images/levier-seo-geo.jpg",
     desc: "Sois visible sur Google. Sois cité par les IA. Maîtrise le SEO et le GEO pour faire grandir ta visibilité.",
+    href: "/ressources/kit-visibilite",
   },
   {
     label: "IA",
     image: "/images/levier-ia.jpg",
     desc: "Google te trouve. Les IA te recommandent. Apprends à optimiser ta visibilité avec le SEO, le GEO et l'IA.",
+    href: "/ressources/kit-ia",
   },
   {
     label: "Réseaux sociaux",
     image: "/images/levier-reseaux-sociaux.jpg",
     desc: "Crée. Publie. Engage. Développe ta visibilité grâce aux réseaux sociaux.",
+    href: "/ressources/kit-reseaux-sociaux",
   },
   {
     label: "Entrepreneuri'Elles",
     image: "/images/levier-entrepreneurielles.jpg",
     desc: "Tes ateliers, tes outils, tes ressources : tout pour faire grandir tes projets et ton réseau.",
-    note: "À voir après pour la prochaine page.",
+    href: "/ressources/ateliers",
   },
 ];
 
 export default async function RoadmapPage() {
-  const documents = listPublicDocuments("roadmap");
-  const documentsByCategory = documents.reduce<Record<string, PublicGatedDocument[]>>(
-    (acc, doc) => {
-      (acc[doc.category] ??= []).push(doc);
-      return acc;
-    },
-    {}
-  );
+  const documents: PublicGatedDocument[] = listPublicDocuments("roadmap");
 
   return (
     <div className="min-h-screen bg-white">
@@ -117,48 +115,60 @@ export default async function RoadmapPage() {
           </h2>
         </div>
 
-        <LeviersGrid leviers={LEVIERS} documentsByCategory={documentsByCategory} />
+        <LeviersGrid leviers={LEVIERS} />
       </section>
 
       {/* Ressources */}
-      <section className="mx-auto max-w-[1440px] px-6 pb-32 md:px-10">
-        <div className="rounded-3xl bg-[#faf8f5] p-8 md:p-16">
+      <section className="mx-auto max-w-[1440px] px-6 pb-24 md:px-10">
+        <div className="rounded-3xl bg-[#faf8f5] p-8 text-center md:p-16">
           <p className="italic text-[#c9846f]">Les ressources :</p>
           <h2 className="mt-2 font-heading text-2xl text-black md:text-3xl">
             conçues pour accélérer ton développement
           </h2>
 
-          <div className="mt-10 grid gap-10 md:grid-cols-2">
-            <div>
-              <p className="font-bold text-black">Replays</p>
-              <p className="mt-1 text-sm text-neutral-600">ateliers, webinaires</p>
-              {(documentsByCategory["Replays"] || []).length === 0 ? (
-                <p className="mt-4 text-sm text-neutral-400">Rien pour le moment.</p>
-              ) : (
-                <div className="mt-4 grid grid-cols-2 gap-4 sm:grid-cols-3">
-                  {documentsByCategory["Replays"].map((doc) => (
-                    <GatedDocumentCard key={doc.id} doc={doc} />
-                  ))}
-                </div>
-              )}
+          {documents.length === 0 ? (
+            <p className="mt-8 text-sm text-neutral-400">Rien pour le moment.</p>
+          ) : (
+            <div className="mx-auto mt-8 grid max-w-[900px] gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {documents.map((doc) => (
+                <GatedDocumentCard key={doc.id} doc={doc} />
+              ))}
             </div>
-            <div>
-              <p className="font-bold text-black">Guides PDF</p>
-              <p className="mt-1 text-sm text-neutral-600">
-                Comment rejoindre ou travailler avec JWL
-              </p>
-              {(documentsByCategory["Guides PDF"] || []).length === 0 ? (
-                <p className="mt-4 text-sm text-neutral-400">Rien pour le moment.</p>
-              ) : (
-                <div className="mt-4 grid grid-cols-2 gap-4 sm:grid-cols-3">
-                  {documentsByCategory["Guides PDF"].map((doc) => (
-                    <GatedDocumentCard key={doc.id} doc={doc} />
-                  ))}
-                </div>
-              )}
-            </div>
-          </div>
+          )}
         </div>
+      </section>
+
+      {/* Replays */}
+      <section className="mx-auto max-w-[1440px] px-6 pb-32 text-center md:px-10">
+        <p className="italic text-[#c9846f]">Replays :</p>
+        <h2 className="mt-2 font-heading text-2xl text-black md:text-3xl">
+          ateliers, webinaires
+        </h2>
+
+        <a
+          href="https://www.tiktok.com/@jwl.marketing"
+          target="_blank"
+          rel="noopener"
+          className="mt-8 inline-flex h-24 w-24 items-center justify-center rounded-full bg-black transition hover:scale-105"
+        >
+          <svg viewBox="0 0 24 24" className="h-10 w-10" aria-hidden>
+            <path
+              fill="#fff"
+              d="M16.6 5.82a4.28 4.28 0 0 1-1.7-3.42h-3.07v13.44a2.6 2.6 0 1 1-1.85-2.49V10.2a5.65 5.65 0 1 0 4.92 5.6V9.08a7.3 7.3 0 0 0 4.4 1.48V7.5a4.27 4.27 0 0 1-2.7-1.68z"
+            />
+          </svg>
+        </a>
+        <p className="mt-4 text-sm text-neutral-600">
+          lien vers le tiktok :{" "}
+          <a
+            href="https://www.tiktok.com/@jwl.marketing"
+            target="_blank"
+            rel="noopener"
+            className="text-[#2fa86a] hover:underline"
+          >
+            https://www.tiktok.com/@jwl.marketing
+          </a>
+        </p>
       </section>
     </div>
   );

@@ -3,7 +3,7 @@ import SiteHeader from "@/components/SiteHeader";
 import PlaceholderPage from "@/components/PlaceholderPage";
 
 export const metadata = buildMetadata({
-  path: "/ressources/kit-reseaux",
+  path: "/ressources/kit-reseaux-sociaux",
   locale: "fr",
   title: "Kit réseaux sociaux | JWL Marketing",
   description:
@@ -13,7 +13,7 @@ export const metadata = buildMetadata({
 export default function Page() {
   return (
     <div>
-      <SiteHeader locale="fr" href="/ressources/kit-reseaux" />
+      <SiteHeader locale="fr" href="/ressources/kit-reseaux-sociaux" />
       <PlaceholderPage title="Kit réseaux sociaux" />
     </div>
   );

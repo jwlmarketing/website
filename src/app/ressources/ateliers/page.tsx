@@ -7,7 +7,7 @@ export const metadata = buildMetadata({
   locale: "fr",
   title: "Ateliers marketing digital | JWL Marketing",
   description:
-    "Ateliers marketing digital : Google Business Profile, SEO, GEO, IA, réseaux sociaux.",
+    "Ateliers marketing digital : Google Business Profile, SEO, GEO, IA, réseaux sociaux. Découvre le programme et les ressources associées.",
 });
 
 export default function Page() {

@@ -7,7 +7,7 @@ export const metadata = buildMetadata({
   locale: "fr",
   title: "Kit visibilité | JWL Marketing",
   description:
-    "Kit visibilité : les bases du SEO et du référencement naturel pour apparaître sur Google et attirer des clients sans budget",
+    "Kit visibilité : les bases du SEO et du référencement naturel pour apparaître sur Google et attirer des clients sans budget pub.",
 });
 
 export default function Page() {
