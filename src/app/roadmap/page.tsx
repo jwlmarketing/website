@@ -18,41 +18,35 @@ export const dynamic = "force-dynamic";
 
 const LEVIERS: Lever[] = [
   {
-    label: "Google My Business",
-    color: "#5b6fd8",
-    shade: "#adb8f2",
+    label: "Google My Business Profile",
+    image: "/images/levier-google-my-business.jpg",
     desc: "Sois trouvé localement et transforme les recherches Google en contacts qualifiés.",
   },
   {
     label: "Développement commercial",
-    color: "#e2493f",
-    shade: "#f3a49e",
-    desc: "Donnez à votre public une brève description de cette ressource.",
+    image: "/images/levier-developpement-commercial.jpg",
+    desc: "Attire, convaincs, convertis : découvre les méthodes et astuces commerciales pour passer du premier contact au client.",
   },
   {
-    label: "SEO-GEO",
-    color: "#f0b429",
-    shade: "#f8dd8b",
-    desc: "Donnez à votre public une brève description de cette ressource.",
+    label: "Référencement naturel : SEO-GEO",
+    image: "/images/levier-seo-geo.jpg",
+    desc: "Sois visible sur Google. Sois cité par les IA. Maîtrise le SEO et le GEO pour faire grandir ta visibilité.",
   },
   {
     label: "IA",
-    color: "#2fa86a",
-    shade: "#9fdcbc",
-    desc: "Donnez à votre public une brève description de cette ressource.",
+    image: "/images/levier-ia.jpg",
+    desc: "Google te trouve. Les IA te recommandent. Apprends à optimiser ta visibilité avec le SEO, le GEO et l'IA.",
   },
   {
     label: "Réseaux sociaux",
-    color: "#e2493f",
-    shade: "#f3a49e",
-    desc: "Donnez à votre public une brève description de cette ressource.",
+    image: "/images/levier-reseaux-sociaux.jpg",
+    desc: "Crée. Publie. Engage. Développe ta visibilité grâce aux réseaux sociaux.",
   },
   {
     label: "Entrepreneuri'Elles",
-    color: "#f0b429",
-    shade: "#f8dd8b",
-    desc: "Donnez à votre public une brève description de cette ressource.",
-    isPartner: true,
+    image: "/images/levier-entrepreneurielles.jpg",
+    desc: "Tes ateliers, tes outils, tes ressources : tout pour faire grandir tes projets et ton réseau.",
+    note: "À voir après pour la prochaine page.",
   },
 ];
 
@@ -89,7 +83,7 @@ export default async function RoadmapPage() {
               gagner en visibilité, développer ton réseau et transformer
               Google en véritable outil de croissance.
             </p>
-            <div className="mt-8 flex flex-wrap gap-4">
+            <div className="mt-8 flex flex-wrap items-center gap-4">
               <span className="inline-flex items-center rounded-full bg-[#e7c9b7] px-6 py-3 font-semibold text-[#7a3f2a]">
                 À partir de 875€
               </span>
@@ -97,9 +91,15 @@ export default async function RoadmapPage() {
                 href="#leviers"
                 className="inline-flex items-center rounded-full bg-[#c9846f] px-6 py-3 text-center font-semibold text-white transition hover:bg-[#b56f5a]"
               >
-                Faire de mon site un outil qui attire les clients
+                Découvrir JWL
               </a>
             </div>
+            <a
+              href="/consultant-freelance-seo-aix-en-provence"
+              className="mt-3 inline-block text-sm font-semibold text-[#2fa86a] hover:underline"
+            >
+              lien sur consultant seo aix
+            </a>
           </div>
 
           <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl">

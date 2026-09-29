@@ -48,7 +48,15 @@ export function proxy(request: NextRequest) {
   // FR/EN dans des route groups séparés (cf. lib/seo.ts + app/layout.tsx).
   const requestHeaders = new Headers(request.headers);
   requestHeaders.set("x-pathname", pathname);
-  return NextResponse.next({ request: { headers: requestHeaders } });
+  const response = NextResponse.next({ request: { headers: requestHeaders } });
+
+  // /ressources/* (PDF, vidéos, pages kit) : hors Google d'un coup, sans dépendre
+  // d'une balise <head> par fichier (les PDF/vidéos n'en ont pas).
+  if (normalized === "/ressources" || normalized.startsWith("/ressources/")) {
+    response.headers.set("X-Robots-Tag", "noindex, follow");
+  }
+
+  return response;
 }
 
 export const config = {

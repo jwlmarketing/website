@@ -7,20 +7,10 @@ import GatedDocumentsModal from "@/components/GatedDocumentsModal";
 
 export type Lever = {
   label: string;
-  color: string;
-  shade: string;
+  image: string;
   desc: string;
-  isPartner?: boolean;
+  note?: string;
 };
-
-function LeverBadge({ color, shade }: { color: string; shade: string }) {
-  return (
-    <svg viewBox="0 0 100 100" className="h-16 w-16" aria-hidden>
-      <polygon points="50,6 94,30 94,72 50,96 6,72 6,30" fill={shade} />
-      <polygon points="50,20 80,36 80,66 50,82 20,66 20,36" fill={color} />
-    </svg>
-  );
-}
 
 export default function LeviersGrid({
   leviers,
@@ -41,26 +31,25 @@ export default function LeviersGrid({
             onClick={() => setActive(lever.label)}
             className="flex flex-col items-start text-left transition hover:opacity-80"
           >
-            {lever.isPartner ? (
-              <div className="flex h-16 w-28 items-center justify-start">
-                <Image
-                  src="/images/entrepreneurielles-logo.png"
-                  alt="Entrepreneuri'Elles"
-                  width={112}
-                  height={40}
-                  className="h-auto w-full object-contain"
-                />
-              </div>
-            ) : (
-              <LeverBadge color={lever.color} shade={lever.shade} />
-            )}
+            <div className="aspect-square w-full overflow-hidden rounded-2xl">
+              <Image
+                src={lever.image}
+                alt={lever.label}
+                width={500}
+                height={500}
+                className="h-full w-full object-cover"
+              />
+            </div>
             <p className="mt-4 text-xs font-bold uppercase tracking-wider text-black">
               {lever.label}
             </p>
             <p className="mt-2 max-w-[320px] text-sm leading-relaxed text-neutral-600">
               {lever.desc}
             </p>
-            <span className="mt-4 inline-flex w-fit items-center rounded-full bg-[#2fa86a] px-4 py-2 text-xs font-bold uppercase text-white transition hover:bg-[#26905a]">
+            {lever.note && (
+              <p className="mt-1 max-w-[320px] text-sm text-[#2fa86a]">{lever.note}</p>
+            )}
+            <span className="mt-4 inline-flex w-fit items-center rounded-full bg-[#c9846f] px-4 py-2 text-xs font-bold uppercase text-white transition hover:bg-[#b56f5a]">
               En savoir plus
             </span>
           </button>
