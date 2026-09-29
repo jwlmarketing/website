@@ -1,7 +1,5 @@
 import { buildMetadata } from "@/lib/seo";
 import SiteHeader from "@/components/SiteHeader";
-import GatedDocumentCard from "@/components/GatedDocumentCard";
-import { listPublicDocuments } from "@/lib/gatedContent";
 
 export const metadata = buildMetadata({
   path: "/ressources-entrepreneurs",
@@ -10,13 +8,22 @@ export const metadata = buildMetadata({
   description: "Entreprendre entre Elles : ressources et ateliers pour les entrepreneuses accompagnées par JWL Marketing.",
 });
 
-export const dynamic = "force-dynamic";
+const CARDS = [
+  {
+    title: "Le parcours des créatrices",
+    desc: "Ton site ne doit pas seulement être joli : il doit être compris par Google et pensé pour attirer tes futurs clients. Télécharge le parcours pour savoir quoi mettre en place.",
+  },
+  {
+    title: "Comment être visible localement sur Aix-en-Provence",
+    desc: "Donnez à votre public une brève description de cette ressource.",
+  },
+  {
+    title: "En cours",
+    desc: "en cours",
+  },
+];
 
 export default function Page() {
-  const parcoursDoc = listPublicDocuments("roadmap").find(
-    (doc) => doc.category === "Entrepreneuri'Elles"
-  );
-
   return (
     <div className="min-h-screen bg-white">
       <SiteHeader locale="fr" href="/ressources-entrepreneurs" />
@@ -60,40 +67,23 @@ export default function Page() {
         </div>
 
         <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {parcoursDoc ? (
-            <GatedDocumentCard doc={parcoursDoc} />
-          ) : (
-            <p className="text-sm text-neutral-400">Document à venir.</p>
-          )}
-
-          <div className="flex w-full flex-col overflow-hidden rounded-2xl border border-[#e9dfd5] bg-white text-left shadow-sm">
-            <div className="aspect-[3/4] w-full bg-[#f8dd8b]" />
-            <div className="p-4">
-              <p className="text-xs font-bold uppercase tracking-wider text-black">
-                Comment être visible localement sur Aix-en-Provence
-              </p>
-              <p className="mt-2 text-sm text-neutral-600">
-                Donnez à votre public une brève description de cette
-                ressource.
-              </p>
-              <span className="mt-3 inline-flex w-fit items-center rounded-full bg-[#c9846f] px-4 py-2 text-xs font-bold uppercase text-white opacity-60">
-                Je télécharge
-              </span>
+          {CARDS.map((card) => (
+            <div
+              key={card.title}
+              className="flex w-full flex-col overflow-hidden rounded-2xl border border-[#e9dfd5] bg-white text-left shadow-sm"
+            >
+              <div className="aspect-[3/4] w-full bg-[#f8dd8b]" />
+              <div className="p-4">
+                <p className="text-xs font-bold uppercase tracking-wider text-black">
+                  {card.title}
+                </p>
+                <p className="mt-2 text-sm text-neutral-600">{card.desc}</p>
+                <span className="mt-3 inline-flex w-fit items-center rounded-full bg-[#c9846f] px-4 py-2 text-xs font-bold uppercase text-white opacity-60">
+                  Je télécharge
+                </span>
+              </div>
             </div>
-          </div>
-
-          <div className="flex w-full flex-col overflow-hidden rounded-2xl border border-[#e9dfd5] bg-white text-left shadow-sm">
-            <div className="aspect-[3/4] w-full bg-[#f8dd8b]" />
-            <div className="p-4">
-              <p className="text-xs font-bold uppercase tracking-wider text-black">
-                En cours
-              </p>
-              <p className="mt-2 text-sm text-neutral-600">en cours</p>
-              <span className="mt-3 inline-flex w-fit items-center rounded-full bg-[#c9846f] px-4 py-2 text-xs font-bold uppercase text-white opacity-60">
-                Je télécharge
-              </span>
-            </div>
-          </div>
+          ))}
         </div>
       </section>
     </div>
