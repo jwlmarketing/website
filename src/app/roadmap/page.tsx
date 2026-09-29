@@ -158,17 +158,6 @@ export default async function RoadmapPage() {
             />
           </svg>
         </a>
-        <p className="mt-4 text-sm text-neutral-600">
-          lien vers le tiktok :{" "}
-          <a
-            href="https://www.tiktok.com/@jwl.marketing"
-            target="_blank"
-            rel="noopener"
-            className="text-[#2fa86a] hover:underline"
-          >
-            https://www.tiktok.com/@jwl.marketing
-          </a>
-        </p>
       </section>
     </div>
   );
