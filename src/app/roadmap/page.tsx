@@ -1,10 +1,8 @@
 import { buildMetadata } from "@/lib/seo";
 import Image from "next/image";
 import SiteHeader from "@/components/SiteHeader";
-import PageGateForm from "@/components/PageGateForm";
 import LeviersGrid, { type Lever } from "@/components/LeviersGrid";
 import GatedDocumentCard from "@/components/GatedDocumentCard";
-import { hasPageAccess } from "@/lib/pageGate";
 import { listPublicDocuments, type PublicGatedDocument } from "@/lib/gatedContent";
 
 export const metadata = buildMetadata({
@@ -51,11 +49,6 @@ const LEVIERS: Lever[] = [
 ];
 
 export default async function RoadmapPage() {
-  const unlocked = await hasPageAccess("roadmap");
-  if (!unlocked) {
-    return <PageGateForm pageSlug="roadmap" />;
-  }
-
   const documents = listPublicDocuments("roadmap");
   const documentsByCategory = documents.reduce<Record<string, PublicGatedDocument[]>>(
     (acc, doc) => {
