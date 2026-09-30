@@ -67,7 +67,8 @@ export default function AccompagnementsTeaser({
   const cards = pair === "primary" ? allCards.slice(0, 2) : allCards.slice(2, 4);
 
   return (
-    <div className="mx-auto flex max-w-[700px] items-center justify-center gap-6">
+    // Ajout de pl-10 md:pl-20 pour décaler l'ensemble des cartes vers la droite
+    <div className="mx-auto flex max-w-[700px] items-center justify-center gap-6 pl-10 md:pl-20">
       {cards.map((card) => (
         <Link
           key={card.name}
@@ -75,16 +76,15 @@ export default function AccompagnementsTeaser({
           className="group flex flex-col overflow-hidden rounded-2xl bg-black text-white shadow-md transition-all duration-300 ease-out hover:-translate-y-3 hover:bg-gold hover:shadow-2xl"
         >
           <div className="p-3">
-            {/* Remplacement de aspect-square par aspect-video et ajustement des largeurs */}
-            <div className="relative aspect-video w-[220px] overflow-hidden rounded-lg bg-white sm:w-[280px]">
+            <div className="relative aspect-square w-[160px] overflow-hidden rounded-lg bg-white sm:w-[200px]">
               <Image
                 src={card.image}
                 alt={card.name}
                 fill
-                className="object-contain" // object-contain pour afficher toute l'illustration sans la couper
+                // object-scale-down empêche le rognage, object-right colle les avatars à droite
+                className="object-scale-down object-right"
               />
             </div>
-          </div>
           </div>
           <div className="flex flex-1 flex-col items-center justify-center gap-1 px-3 py-4 text-center">
             <p className="font-heading text-base font-bold uppercase tracking-wide">
