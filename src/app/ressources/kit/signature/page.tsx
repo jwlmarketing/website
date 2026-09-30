@@ -99,12 +99,18 @@ export default async function RoadmapPage() {
 </section>
       {/* Ton parcours de visibilité */}
       <section className="mx-auto max-w-[1000px] px-6 pb-24 text-center md:px-10">
-        <p className="italic text-[#c9846f]">Ton parcours de visibilité</p>
-        <h2 className="mt-2 font-heading text-3xl text-black md:text-4xl">
+        {/* Modifié pour être PLUS GRAND */}
+        <p className="font-heading text-3xl font-bold italic text-[#c9846f] md:text-4xl">
+          Ton parcours de visibilité
+        </p>
+
+        {/* Modifié pour avoir EXACTEMENT la même taille et la même structure que le paragraphe P juste en dessous */}
+        <h2 className="mt-4 text-[17px] font-normal leading-[26px] text-neutral-600">
           Parce qu&apos;être visible ne suffit pas.
           <br />
           Il faut transformer cette visibilité en opportunités.
         </h2>
+
         <p className="mx-auto mt-6 max-w-[760px] text-[17px] leading-[26px] text-neutral-600">
           JWL Signature rassemble les différents leviers dont une
           entrepreneure a besoin pour développer son activité : visibilité,
