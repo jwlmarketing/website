@@ -57,16 +57,14 @@ export default function Page() {
             </a>
           </div>
 
-          <div className="relative mx-auto aspect-[2/3] w-full max-w-[420px] overflow-hidden rounded-3xl">
-            <Image
-              src="/images/entrepreneurielles-hero.jpg"
-              alt="JWL Entrepreneuri'Elles"
-              fill
-              className="object-cover"
-              priority
-              sizes="(min-width: 768px) 35vw, 80vw"
-            />
-          </div>
+          <Image
+            src="/images/entrepreneurielles-hero.jpg"
+            alt="JWL Entrepreneuri'Elles"
+            width={1400}
+            height={2099}
+            className="mx-auto h-auto w-full max-w-[420px] rounded-3xl object-contain"
+            priority
+          />
         </div>
       </section>
 
@@ -86,11 +84,11 @@ export default function Page() {
               className="flex w-full flex-col overflow-hidden rounded-2xl border border-[#e9dfd5] bg-white text-left shadow-sm"
             >
               {card.image ? (
-                <div className="relative aspect-[3/4] w-full">
-                  <Image src={card.image} alt={card.title} fill className="object-cover" />
+                <div className="relative aspect-[16/9] w-full bg-[#faf8f5]">
+                  <Image src={card.image} alt={card.title} fill className="object-contain" />
                 </div>
               ) : (
-                <div className="aspect-[3/4] w-full bg-[#f8dd8b]" />
+                <div className="aspect-[16/9] w-full bg-[#f8dd8b]" />
               )}
               <div className="p-4">
                 <p className="text-xs font-bold uppercase tracking-wider text-black">
