@@ -138,9 +138,9 @@ export default async function RoadmapPage() {
           ))}
         </ol>
 
-        {/* BLOC VIDÉO MP4 CENTRÉ */}
-        <FadeUp className="mx-auto mt-16 max-w-[760px] overflow-hidden rounded-[40px] bg-black p-4 sm:p-6">
-          <div className="mx-auto aspect-video w-full overflow-hidden rounded-xl bg-neutral-900">
+        {/* BLOC VIDÉO MP4 PORTRAIT CENTRÉ */}
+        <FadeUp className="mx-auto mt-16 max-w-[360px] overflow-hidden rounded-[40px] bg-black p-4">
+          <div className="mx-auto aspect-[9/16] w-full overflow-hidden rounded-xl bg-neutral-900">
             <video
               src="/videos/jwl_signature.mp4"
               autoPlay
