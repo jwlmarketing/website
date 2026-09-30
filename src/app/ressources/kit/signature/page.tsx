@@ -59,17 +59,14 @@ export default async function RoadmapPage() {
   return (
     <div className="min-h-screen bg-white">
       <SiteHeader locale="fr" href="/ressources/kit/signature" />
-
-      {/* Hero */}
-      <section className="mx-auto max-w-[1440px] px-6 pt-28 pb-20 md:px-10 md:pt-40">
-{/* Ligne 58 modifiée */}
-<div className="grid items-start gap-14 md:grid-cols-2">
-  <div>
-<h1 className="font-heading text-5xl leading-tight text-black md:text-6xl">
-  <span className="italic text-[#c9846f]">JWL Signature</span> :{" "}
-  Fais de Google ton meilleur commercial{"\u00a0"}terrain.
-</h1>
-    {/* ... reste du code ... */}
+{/* Hero */}
+<section className="mx-auto max-w-[1440px] px-6 pb-20 pt-[90px] md:px-[9%]">
+  <div className="grid items-start gap-14 md:grid-cols-2">
+    <div>
+      <h1 className="font-heading text-5xl leading-tight text-black md:text-6xl">
+        <span className="italic text-[#c9846f]">JWL Signature</span> :{" "}
+        Fais de Google ton meilleur commercial{"\u00a0"}terrain.
+      </h1>
             <p className="mt-6 max-w-[560px] text-xl leading-8 text-neutral-600">
               Un écosystème à 360° pour développer ta visibilité, ton
               activité et ton réseau.
