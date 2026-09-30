@@ -104,15 +104,15 @@ export default async function RoadmapPage() {
           Ton parcours de visibilité
         </p>
 
+        {/* Le h2 reste seul en noir */}
         <h2 className="mt-4 text-black text-[17px] font-normal leading-[26px] md:text-xl">
           Parce qu&apos;être visible ne suffit pas.
         </h2>
 
-        <p className="mt-8 text-[17px] font-normal leading-[26px] text-neutral-600 md:text-xl">
+        {/* Fusion des deux textes dans le même paragraphe et alignement justifié */}
+        <p className="mx-auto mt-8 max-w-[760px] text-justify text-[17px] font-normal leading-[26px] text-neutral-600 md:text-xl md:leading-8">
           Il faut transformer cette visibilité en opportunités.
-        </p>
-
-        <p className="mx-auto mt-6 max-w-[760px] text-[17px] leading-[26px] text-neutral-600 md:text-xl md:leading-8">
+          <br /><br />
           JWL Signature rassemble les différents leviers dont une
           entrepreneure a besoin pour développer son activité : visibilité,
           Google, SEO, réseaux sociaux, développement commercial, IA et
@@ -138,14 +138,12 @@ export default async function RoadmapPage() {
           ))}
         </ol>
 
-        {/* BLOC VIDÉO MP4 PORTRAIT CENTRÉ */}
+        {/* BLOC VIDÉO MP4 PORTRAIT - S'ACTIVE SUR CLIC AVEC SON */}
         <FadeUp className="mx-auto mt-16 max-w-[360px] overflow-hidden rounded-[40px] bg-black p-4">
           <div className="mx-auto aspect-[9/16] w-full overflow-hidden rounded-xl bg-neutral-900">
             <video
               src="/videos/jwl_signature.mp4"
-              autoPlay
               loop
-              muted
               playsInline
               controls
               className="h-full w-full object-cover"
