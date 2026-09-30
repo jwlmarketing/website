@@ -4,6 +4,7 @@ import SiteHeader from "@/components/SiteHeader";
 import LeviersGrid, { type Lever } from "@/components/LeviersGrid";
 import GatedDocumentCard from "@/components/GatedDocumentCard";
 import { listPublicDocuments, type PublicGatedDocument } from "@/lib/gatedContent";
+import FadeUp from "@/components/FadeUp";
 
 export const metadata = buildMetadata({
   path: "/ressources/kit/signature",
