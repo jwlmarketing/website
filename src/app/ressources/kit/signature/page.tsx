@@ -6,7 +6,7 @@ import GatedDocumentCard from "@/components/GatedDocumentCard";
 import { listPublicDocuments, type PublicGatedDocument } from "@/lib/gatedContent";
 
 export const metadata = buildMetadata({
-  path: "/roadmap",
+  path: "/ressources/kit/signature",
   locale: "fr",
   title: "JWL Signature | JWL Marketing",
   description: "Fais de Google ton meilleur commercial terrain.",
@@ -58,7 +58,7 @@ export default async function RoadmapPage() {
 
   return (
     <div className="min-h-screen bg-white">
-      <SiteHeader locale="fr" href="/roadmap" />
+      <SiteHeader locale="fr" href="/ressources/kit/signature" />
 
       {/* Hero */}
       <section className="mx-auto max-w-[1440px] px-6 pt-28 pb-20 md:px-10 md:pt-40">

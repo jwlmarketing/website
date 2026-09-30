@@ -40,7 +40,7 @@ export const ROUTES: Route[] = [
   { path: "/blog/fiche-google-my-business", index: true, priority: 0.7 },
 
   // Pages en noindex (hors sitemap)
-  { path: "/roadmap", index: false },
+  { path: "/ressources/kit/signature", index: false },
   // Pages ressources (kits Canva) : PDF/vidéos gratuits ou payants, hors Google (cf. brief)
   { path: "/ressources/kit-google-my-business", index: false },
   { path: "/ressources/kit-commercial", index: false },

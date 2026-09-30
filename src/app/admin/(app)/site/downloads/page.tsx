@@ -6,7 +6,7 @@ import DocumentsTable from "./DocumentsTable";
 
 export const dynamic = "force-dynamic";
 
-const KNOWN_PAGES = [{ slug: "roadmap", label: "/roadmap" }];
+const KNOWN_PAGES = [{ slug: "roadmap", label: "/ressources/kit/signature" }];
 
 export default async function SiteDownloadsPage() {
   const user = await requireAdminUser();

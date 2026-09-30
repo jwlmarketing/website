@@ -5,7 +5,7 @@ import CodeForm from "./CodeForm";
 
 export const dynamic = "force-dynamic";
 
-const KNOWN_PAGES = [{ slug: "roadmap", label: "/roadmap" }];
+const KNOWN_PAGES = [{ slug: "roadmap", label: "/ressources/kit/signature" }];
 
 export default async function SiteCodesPage() {
   const user = await requireAdminUser();
