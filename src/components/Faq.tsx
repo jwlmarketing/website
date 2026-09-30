@@ -165,6 +165,21 @@ const GMB_FAQ = [
   },
 ];
 
+const BOOSTER_FAQ = [
+  {
+    q: "Combien de temps faut-il pour voir les résultats du SEO ?",
+    a: "Le SEO est un travail de fond. En moyenne, il faut compter environ 6 mois pour commencer à observer des résultats significatifs. Les premiers mois sont consacrés à la mise en place des fondations : optimisation technique du site, recherche de mots-clés, création ou amélioration des pages, rédaction de contenus, amélioration de l'expérience utilisateur et structuration du maillage interne. Entre le 4ᵉ et le 6ᵉ mois, nous analysons les premières données afin d'identifier ce qui fonctionne et les axes à renforcer. À partir du 6ᵉ mois, les positions commencent généralement à progresser et le trafic à se développer progressivement. Jusqu'au 12ᵉ mois, l'objectif est d'améliorer les résultats en continu grâce à de nouveaux contenus, des optimisations régulières et l'ajout de réponses aux questions que se posent tes futurs clients. Le référencement naturel n'est pas une action ponctuelle. C'est une stratégie qui se construit dans le temps pour générer une visibilité durable.",
+  },
+  {
+    q: "Comment améliorer son référencement ?",
+    a: "Pour améliorer ton référencement, il faut d'abord comprendre comment Google perçoit ton entreprise et ton site internet. Cela passe par l'analyse de plusieurs éléments : la qualité des contenus, la structure technique du site, la vitesse de chargement, l'expérience utilisateur, les avis clients, la cohérence de ta présence en ligne, le positionnement de tes concurrents et les mots-clés recherchés par tes futurs clients. Avec JWL Booster, j'analyse les points bloquants et je mets en place des actions concrètes pour améliorer progressivement ta visibilité et attirer des visiteurs qualifiés sur ton site.",
+  },
+  {
+    q: "Qu'est-ce que le GEO ?",
+    a: "Le GEO (Generative Engine Optimization) est l'évolution naturelle du SEO. Il n'existe pas de GEO sans SEO. Les intelligences artificielles s'appuient en grande partie sur les informations disponibles sur le web et sur les moteurs de recherche pour comprendre une entreprise. Le GEO consiste donc à optimiser ta présence en ligne pour être mieux compris, cité et recommandé par les intelligences artificielles comme ChatGPT, Gemini ou Perplexity. L'objectif n'est plus seulement d'apparaître sur Google, mais aussi d'augmenter tes chances d'être recommandé lorsqu'un utilisateur recherche un professionnel ou une solution dans ton domaine.",
+  },
+];
+
 const HOME_FAQ_EN = [
   {
     q: "Should I redo my website or get a JWL Marketing audit?",
@@ -330,6 +345,7 @@ const GMB_FAQ_EN = [
 const FAQ_BY_PATH: Record<string, typeof HOME_FAQ> = {
   "/site-internet-aix-en-provence": CREATION_SITE_WEB_FAQ,
   "/google-my-business-aix-en-provence": GMB_FAQ,
+  "/site-web-seo-aix-en-provence": BOOSTER_FAQ,
   "/": HOME_FAQ,
   "/consultant-freelance-seo-aix-en-provence": QUI_SUIS_JE_FAQ,
   "/consultant-freelance-seo-nice": NICE_FAQ,
