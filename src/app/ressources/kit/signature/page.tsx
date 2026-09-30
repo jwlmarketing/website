@@ -72,9 +72,6 @@ export default async function RoadmapPage() {
               activité et ton réseau.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-4">
-              <span className="inline-flex items-center rounded-full bg-[#e7c9b7] px-6 py-3 font-semibold text-[#7a3f2a]">
-                À partir de 875€
-              </span>
               <a
                 href="/consultant-freelance-seo-aix-en-provence"
                 className="inline-flex items-center rounded-full bg-[#c9846f] px-6 py-3 text-center font-semibold text-white transition hover:bg-[#b56f5a]"
