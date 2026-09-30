@@ -143,7 +143,7 @@ export default async function RoadmapPage() {
       {/* Leviers */}
       <section id="leviers" className="mx-auto max-w-[1440px] px-6 pb-24 md:px-10">
         <div className="text-center">
-          <p className="italic text-[#c9846f]">Les leviers d&apos;action</p>
+        <p className="font-heading text-2xl font-bold italic text-[#c9846f] md:text-3xl">Les leviers d&apos;action</p>
           <h2 className="mt-2 font-heading text-3xl text-black md:text-4xl">
             qui font grandir ton entreprise
           </h2>
@@ -155,7 +155,7 @@ export default async function RoadmapPage() {
       {/* Ressources */}
       <section className="mx-auto max-w-[1440px] px-6 pb-24 md:px-10">
         <div className="rounded-3xl bg-[#faf8f5] p-8 text-center md:p-16">
-          <p className="italic text-[#c9846f]">Les ressources :</p>
+        <p className="font-heading text-2xl font-bold italic text-[#c9846f] md:text-3xl">Les ressources :</p>
           <h2 className="mt-2 font-heading text-2xl text-black md:text-3xl">
             conçues pour accélérer ton développement
           </h2>
@@ -174,7 +174,7 @@ export default async function RoadmapPage() {
 
       {/* Replays */}
       <section className="mx-auto max-w-[1440px] px-6 pb-32 text-center md:px-10">
-        <p className="italic text-[#c9846f]">Replays :</p>
+        <p className="font-heading text-2xl font-bold italic text-[#c9846f] md:text-3xl">Replays :</p>
         <h2 className="mt-2 font-heading text-2xl text-black md:text-3xl">
           ateliers, webinaires
         </h2>
