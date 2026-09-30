@@ -8,7 +8,7 @@ const CARDS = [
   {
     id: "parcours",
     title: "Le parcours des créatrice 🚀",
-    desc: "Ton site ne doit pas seulement être joli : il doit être compris par Google et pensé pour attirer tes futurs clients. Télécharge le parcours pour savoir quoi mettre en place.",
+    desc: "Ton site ne doit pas seulement être joli : il doit être compris by Google et pensé pour attirer tes futurs clients. Télécharge le parcours pour savoir quoi mettre en place.",
     image: "/images/entrepreneurielles-parcours-cover.jpg",
     requiresLock: true,
   },
@@ -27,12 +27,6 @@ const CARDS = [
     requiresLock: false,
   },
 ];
-
-// Clé secrète hachée pour "jwlparcoursdescreatrices" (Simple hash de sécurité client-side)
-const SECRET_HASH = "1214041151609115112111100115111100101115099114101097116114105099101115";
-const hashString = (str: string) => {
-  return str.split("").map(char => char.charCodeAt(0).toString().padStart(3, "0")).join("");
-};
 
 export default function Page() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -53,7 +47,8 @@ export default function Page() {
 
   const handleVerifyPassword = (e: React.FormEvent) => {
     e.preventDefault();
-    if (hashString(password.trim()) === SECRET_HASH) {
+    // Validation brute et directe sans faille
+    if (password.trim() === "jwlparcoursdescreatrices") {
       setIsUnlocked(true);
       setError(false);
     } else {
@@ -151,9 +146,9 @@ export default function Page() {
         </div>
       </section>
 
-      {/* BELLE POP-UP MODAL UNIQUE */}
+      {/* FENÊTRE POP-UP MODAL MODERNE DE SÉCURITÉ */}
       {isModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4 animate-fade-in">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4">
           <div className="w-full max-w-[440px] overflow-hidden rounded-3xl bg-white p-8 text-center shadow-2xl relative">
             <button
               onClick={closeModal}
@@ -163,7 +158,7 @@ export default function Page() {
             </button>
 
             {!isUnlocked ? (
-              /* Étape 1 : Formulaire de saisie de mot de passe */
+              /* Étape 1 : Formulaire de saisie du mot de passe */
               <form onSubmit={handleVerifyPassword} className="space-y-6">
                 <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-[#faf3ea] text-2xl">
                   🔒
@@ -203,7 +198,7 @@ export default function Page() {
               </form>
             ) : (
               /* Étape 2 : Choix d'action une fois déverrouillé */
-              <div className="space-y-6 animate-scale-up">
+              <div className="space-y-6">
                 <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-emerald-50 text-2xl">
                   ✨
                 </div>
@@ -215,7 +210,7 @@ export default function Page() {
                 </div>
 
                 <div className="flex flex-col gap-3">
-                  {/* Option prévisualiser dans un nouvel onglet */}
+                  {/* Option prévisualiser */}
                   <a
                     href="/documents/atelierparcourselle.pdf"
                     target="_blank"
@@ -226,7 +221,7 @@ export default function Page() {
                     👁️ Prévisualiser l&apos;atelier
                   </a>
                   
-                  {/* Option télécharger directement */}
+                  {/* Option télécharger */}
                   <a
                     href="/documents/atelierparcourselle.pdf"
                     download="atelierparcourselle.pdf"
