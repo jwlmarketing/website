@@ -75,12 +75,13 @@ export default function AccompagnementsTeaser({
           className="group flex flex-col overflow-hidden rounded-2xl bg-black text-white shadow-md transition-all duration-300 ease-out hover:-translate-y-3 hover:bg-gold hover:shadow-2xl"
         >
           <div className="p-3">
-            <div className="relative aspect-square w-[160px] overflow-hidden rounded-lg bg-white sm:w-[200px]">
+            {/* Remplacement de aspect-square par aspect-video et ajustement des largeurs */}
+            <div className="relative aspect-video w-[220px] overflow-hidden rounded-lg bg-white sm:w-[280px]">
               <Image
                 src={card.image}
                 alt={card.name}
                 fill
-                className="object-cover object-left" // <-- LA MODIFICATION EST ICI
+                className="object-contain" // object-contain pour afficher toute l'illustration sans la couper
               />
             </div>
           </div>
