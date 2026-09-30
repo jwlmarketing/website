@@ -157,16 +157,13 @@ export default function Page() {
   return (
     <div>
       <SiteHeader locale="fr" href="/site-web-seo-aix-en-provence" />
-
       {/* Hero */}
-      <div className="flex w-full flex-col items-center justify-between gap-10 bg-white px-[6%] py-[60px] lg:flex-row lg:px-[9%]">
-        <div className="max-w-[680px] flex-1">
+      <div className="flex w-full flex-col items-center justify-between gap-10 bg-white px-[6%] pt-[90px] pb-[60px] lg:flex-row lg:items-start lg:gap-12 lg:px-[9%]">
+        <div className="max-w-[840px] flex-[1.4] self-start">
           <h1 className="font-heading text-4xl font-bold leading-[1.1] lg:text-[54px] lg:leading-[1.1] text-black">
             <span className="text-[#c9846f]">JWL Booster</span>
-            <span className="font-medium"> : Un site</span>
-            <br />
-            <span className="font-medium">web SEO avec plus de</span>
-            <br />
+            <span className="font-medium"> : Un site.<br className="hidden md:block" /></span>
+            <span className="font-medium">web SEO avec plus de<br className="hidden md:block" /></span>
             <span className="font-medium">trafic et de clients</span>
           </h1>
           <p className="text-justify mt-6 text-2xl leading-[1.5] text-black">
