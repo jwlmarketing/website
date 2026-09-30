@@ -99,19 +99,19 @@ export default async function RoadmapPage() {
 </section>
       {/* Ton parcours de visibilité */}
       <section className="mx-auto max-w-[1000px] px-6 pb-24 text-center md:px-10">
-        {/* Modifié pour être PLUS GRAND */}
-        <p className="font-heading text-3xl font-bold italic text-[#c9846f] md:text-4xl">
+        {/* Uniquement cette phrase est en PLUS GRAND */}
+        <p className="font-heading text-2xl font-bold italic text-[#c9846f] md:text-3xl">
           Ton parcours de visibilité
         </p>
 
-        {/* Conservation du h2 avec les styles exactes du paragraphe p (taille, graisse, interligne et couleur) */}
-        <h2 className="mt-4 text-[17px] font-normal leading-[26px] text-neutral-600">
+        {/* Le h2 est conservé ICI, mais le !leading-normal force les lignes à se séparer */}
+        <h2 className="mt-4 text-[17px] font-normal !leading-normal text-neutral-600 md:text-xl">
           Parce qu&apos;être visible ne suffit pas.
           <br />
           Il faut transformer cette visibilité en opportunités.
         </h2>
 
-        <p className="mx-auto mt-6 max-w-[760px] text-[17px] leading-[26px] text-neutral-600">
+        <p className="mx-auto mt-6 max-w-[760px] text-[17px] leading-[26px] text-neutral-600 md:text-xl md:leading-8">
           JWL Signature rassemble les différents leviers dont une
           entrepreneure a besoin pour développer son activité : visibilité,
           Google, SEO, réseaux sociaux, développement commercial, IA et
@@ -129,7 +129,7 @@ export default async function RoadmapPage() {
               <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gold text-base font-bold text-white">
                 {step.n}
               </span>
-              <p className="text-[17px] text-black">
+              <p className="text-[17px] text-black md:text-xl">
                 <span className="font-semibold">{step.title}</span>
                 <span className="text-neutral-600"> — {step.desc}</span>
               </p>
