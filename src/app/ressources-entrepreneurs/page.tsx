@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { buildMetadata } from "@/lib/seo";
 import SiteHeader from "@/components/SiteHeader";
 
@@ -12,14 +13,17 @@ const CARDS = [
   {
     title: "Le parcours des créatrices",
     desc: "Ton site ne doit pas seulement être joli : il doit être compris par Google et pensé pour attirer tes futurs clients. Télécharge le parcours pour savoir quoi mettre en place.",
+    image: "/images/entrepreneurielles-parcours-cover.jpg",
   },
   {
     title: "Comment être visible localement sur Aix-en-Provence",
     desc: "Donnez à votre public une brève description de cette ressource.",
+    image: null,
   },
   {
     title: "En cours",
     desc: "en cours",
+    image: "/images/entrepreneurielles-en-cours.jpg",
   },
 ];
 
@@ -53,7 +57,16 @@ export default function Page() {
             </a>
           </div>
 
-          <div className="aspect-[4/3] w-full rounded-3xl bg-[#f8dd8b]" />
+          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl">
+            <Image
+              src="/images/entrepreneurielles-hero.jpg"
+              alt="JWL Entrepreneuri'Elles"
+              fill
+              className="object-cover"
+              priority
+              sizes="(min-width: 768px) 50vw, 100vw"
+            />
+          </div>
         </div>
       </section>
 
@@ -72,7 +85,13 @@ export default function Page() {
               key={card.title}
               className="flex w-full flex-col overflow-hidden rounded-2xl border border-[#e9dfd5] bg-white text-left shadow-sm"
             >
-              <div className="aspect-[3/4] w-full bg-[#f8dd8b]" />
+              {card.image ? (
+                <div className="relative aspect-[3/4] w-full">
+                  <Image src={card.image} alt={card.title} fill className="object-cover" />
+                </div>
+              ) : (
+                <div className="aspect-[3/4] w-full bg-[#f8dd8b]" />
+              )}
               <div className="p-4">
                 <p className="text-xs font-bold uppercase tracking-wider text-black">
                   {card.title}
