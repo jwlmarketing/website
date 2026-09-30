@@ -77,18 +77,12 @@ export default async function RoadmapPage() {
                 À partir de 875€
               </span>
               <a
-                href="#leviers"
+                href="/consultant-freelance-seo-aix-en-provence"
                 className="inline-flex items-center rounded-full bg-[#c9846f] px-6 py-3 text-center font-semibold text-white transition hover:bg-[#b56f5a]"
               >
                 Découvrir JWL
               </a>
             </div>
-            <a
-              href="/consultant-freelance-seo-aix-en-provence"
-              className="mt-3 inline-block text-sm font-semibold text-[#2fa86a] hover:underline"
-            >
-              lien sur consultant seo aix
-            </a>
           </div>
 
           <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl">
