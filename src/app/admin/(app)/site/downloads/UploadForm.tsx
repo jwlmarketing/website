@@ -115,8 +115,8 @@ export default function UploadForm({
         <input type="text" name="title" placeholder="ex: Guide PDF" required />
       </div>
       <div className="form-group">
-        <label>Code d&apos;accès</label>
-        <input type="text" name="code" placeholder="ex: 1234" required />
+        <label>Code d&apos;accès (optionnel — laisse vide pour un téléchargement libre)</label>
+        <input type="text" name="code" placeholder="laisser vide = pas de code" />
       </div>
       <div className="form-group">
         <label>Fichier PDF</label>

@@ -28,8 +28,8 @@ export default function GatedDocumentCard({ doc }: { doc: PublicGatedDocument })
   const [pending, setPending] = useState(false);
   const [fileUrl, setFileUrl] = useState<string | null>(null);
 
-  async function unlock(e: React.FormEvent) {
-    e.preventDefault();
+  async function unlock(e?: React.FormEvent) {
+    e?.preventDefault();
     setError(null);
     setPending(true);
     try {
@@ -51,6 +51,15 @@ export default function GatedDocumentCard({ doc }: { doc: PublicGatedDocument })
     }
   }
 
+  function handleClick() {
+    if (stage !== "locked") return;
+    if (doc.locked) {
+      setStage("code");
+    } else {
+      unlock();
+    }
+  }
+
   function closePreview() {
     if (fileUrl) URL.revokeObjectURL(fileUrl);
     setFileUrl(null);
@@ -64,9 +73,9 @@ export default function GatedDocumentCard({ doc }: { doc: PublicGatedDocument })
         <div
           role={stage === "locked" ? "button" : undefined}
           tabIndex={stage === "locked" ? 0 : undefined}
-          onClick={() => stage === "locked" && setStage("code")}
+          onClick={handleClick}
           onKeyDown={(e) => {
-            if (stage === "locked" && (e.key === "Enter" || e.key === " ")) setStage("code");
+            if (stage === "locked" && (e.key === "Enter" || e.key === " ")) handleClick();
           }}
           className={stage === "locked" ? "cursor-pointer" : undefined}
         >
@@ -74,10 +83,10 @@ export default function GatedDocumentCard({ doc }: { doc: PublicGatedDocument })
         </div>
         <div className="p-4">
           <p className="text-sm font-semibold text-black">{doc.title}</p>
-          {stage === "locked" && (
+          {stage === "locked" && doc.locked && (
             <button
               type="button"
-              onClick={() => setStage("code")}
+              onClick={handleClick}
               className="mt-1 flex items-center gap-1 text-xs text-neutral-500 transition hover:text-[#c9846f]"
             >
               <svg viewBox="0 0 24 24" fill="none" className="h-3.5 w-3.5" aria-hidden>
@@ -85,6 +94,16 @@ export default function GatedDocumentCard({ doc }: { doc: PublicGatedDocument })
                 <path d="M8 11V8a4 4 0 0 1 8 0v3" stroke="currentColor" strokeWidth="1.5" />
               </svg>
               Code requis
+            </button>
+          )}
+          {stage === "locked" && !doc.locked && (
+            <button
+              type="button"
+              onClick={handleClick}
+              disabled={pending}
+              className="mt-1 flex items-center gap-1 text-xs text-neutral-500 transition hover:text-[#c9846f]"
+            >
+              {pending ? "..." : "Télécharger"}
             </button>
           )}
           {stage === "code" && (

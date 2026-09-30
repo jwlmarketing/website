@@ -12,7 +12,7 @@ export type GatedDocument = {
   category: string;
   title: string;
   fileName: string;
-  code: string;
+  code?: string;
 };
 
 type GatedData = {
@@ -83,11 +83,15 @@ export function deleteDocument(id: string) {
 export function verifyDocumentCode(id: string, code: string): GatedDocument | null {
   const doc = getDocument(id);
   if (!doc) return null;
+  if (!doc.code) return doc;
   return doc.code === code.trim() ? doc : null;
 }
 
-export type PublicGatedDocument = Omit<GatedDocument, "code">;
+export type PublicGatedDocument = Omit<GatedDocument, "code"> & { locked: boolean };
 
 export function listPublicDocuments(pageSlug: string): PublicGatedDocument[] {
-  return listDocuments(pageSlug).map(({ code: _code, ...rest }) => rest);
+  return listDocuments(pageSlug).map(({ code, ...rest }) => ({
+    ...rest,
+    locked: !!code,
+  }));
 }

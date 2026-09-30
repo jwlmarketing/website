@@ -100,8 +100,8 @@ export async function finalizeGatedDocumentAction(
     if (!uploadId || !/^[a-f0-9-]{36}$/.test(uploadId) || !totalChunks) {
       return { error: "Requête invalide." };
     }
-    if (!pageSlug || !category || !title || !code) {
-      return { error: "Tous les champs sont requis." };
+    if (!pageSlug || !category || !title) {
+      return { error: "Page, catégorie et titre sont requis." };
     }
 
     const chunkDir = path.join(GATED_CHUNK_DIR, uploadId);

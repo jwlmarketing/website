@@ -7,7 +7,7 @@ export async function POST(req: NextRequest) {
   const body = await req.json().catch(() => null);
   const documentId = String(body?.documentId || "");
   const code = String(body?.code || "");
-  if (!documentId || !code) {
+  if (!documentId) {
     return NextResponse.json({ error: "Requête invalide." }, { status: 400 });
   }
 
