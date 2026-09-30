@@ -60,10 +60,8 @@ export default async function RoadmapPage() {
     <div className="min-h-screen bg-white">
       <SiteHeader locale="fr" href="/ressources/kit/signature" />
 {/* Hero */}
-<section className="mx-auto max-w-[1440px] px-6 pb-20 pt-[90px] md:px-[9%]">
-  {/* Modification ici : Changement des colonnes de la grille pour donner plus de place au texte */}
+<section className="mx-auto max-w-[1440px] px-6 pb-20 pt-[90px] md:pl-[6%] md:pr-[12%]">
   <div className="grid items-start gap-10 md:grid-cols-[1.2fr_0.8fr]">
-    {/* Ajout de z-10 pour forcer le texte au premier plan */}
     <div className="relative z-10 max-w-[720px]">
       <h1 className="font-heading text-5xl leading-tight text-black md:text-6xl">
         <span className="italic text-[#c9846f]">JWL Signature</span> :{" "}
@@ -83,7 +81,6 @@ export default async function RoadmapPage() {
       </div>
     </div>
 
-    {/* L'image est maintenant poussée plus à droite grâce à la proportion de la grille */}
     <div className="flex h-[420px] w-full flex-1 items-end justify-center sm:h-[520px] lg:h-[660px] lg:justify-end">
       <div className="relative h-full w-auto">
         <Image
