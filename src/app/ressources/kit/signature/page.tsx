@@ -99,17 +99,19 @@ export default async function RoadmapPage() {
 </section>
       {/* Ton parcours de visibilité */}
       <section className="mx-auto max-w-[1000px] px-6 pb-24 text-center md:px-10">
-        {/* Uniquement cette phrase est en PLUS GRAND */}
         <p className="font-heading text-2xl font-bold italic text-[#c9846f] md:text-3xl">
           Ton parcours de visibilité
         </p>
 
-        {/* Le h2 est conservé ICI, mais le !leading-normal force les lignes à se séparer */}
-        <h2 className="mt-4 text-[17px] font-normal !leading-normal text-neutral-600 md:text-xl">
+        {/* UNIQUEMENT cette phrase en h2 */}
+        <h2 className="mt-4 text-[17px] font-normal leading-[26px] text-neutral-600 md:text-xl">
           Parce qu&apos;être visible ne suffit pas.
-          <br />
-          Il faut transformer cette visibilité en opportunités.
         </h2>
+
+        {/* Cette phrase passe en P normal en dessous */}
+        <p className="mt-1 text-[17px] font-normal leading-[26px] text-neutral-600 md:text-xl">
+          Il faut transformer cette visibilité en opportunités.
+        </p>
 
         <p className="mx-auto mt-6 max-w-[760px] text-[17px] leading-[26px] text-neutral-600 md:text-xl md:leading-8">
           JWL Signature rassemble les différents leviers dont une
@@ -137,6 +139,7 @@ export default async function RoadmapPage() {
           ))}
         </ol>
       </section>
+
       {/* Leviers */}
       <section id="leviers" className="mx-auto max-w-[1440px] px-6 pb-24 md:px-10">
         <div className="text-center">
