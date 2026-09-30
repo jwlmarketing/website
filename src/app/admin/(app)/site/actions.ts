@@ -12,6 +12,9 @@ import {
   GATED_UPLOAD_DIR,
   GATED_CHUNK_DIR,
 } from "@/lib/gatedContent";
+import { renderPdfFirstPageThumbnail } from "@/lib/pdfThumbnail";
+
+const GATED_THUMB_DIR = path.join(process.cwd(), "public/images/gated-thumbs");
 
 function syncToGit(message: string, paths: string[]) {
   try {
@@ -137,11 +140,22 @@ export async function finalizeGatedDocumentAction(
 
     fs.rmSync(chunkDir, { recursive: true, force: true });
 
-    addDocument({ pageSlug, category, title, fileName: safeName, code });
+    let thumbnail: string | undefined;
+    try {
+      fs.mkdirSync(GATED_THUMB_DIR, { recursive: true });
+      const thumbName = `${path.basename(safeName, ".pdf")}.jpg`;
+      await renderPdfFirstPageThumbnail(dest, path.join(GATED_THUMB_DIR, thumbName));
+      thumbnail = `/images/gated-thumbs/${thumbName}`;
+    } catch (err) {
+      console.error("[site admin] thumbnail generation failed (non-fatal):", err);
+    }
+
+    addDocument({ pageSlug, category, title, fileName: safeName, code, thumbnail });
 
     syncToGit(`Site: ajoute le document "${title}" (${pageSlug})`, [
       "content/gated-content.json",
       "content/uploads/gated",
+      "public/images/gated-thumbs",
     ]);
 
     revalidatePath("/admin/site/downloads");

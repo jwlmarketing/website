@@ -13,6 +13,7 @@ export type GatedDocument = {
   title: string;
   fileName: string;
   code?: string;
+  thumbnail?: string;
 };
 
 type GatedData = {

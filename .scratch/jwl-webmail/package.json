@@ -1,0 +1,14 @@
+{
+  "name": "jwl-webmail",
+  "version": "1.0.0",
+  "private": true,
+  "type": "commonjs",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.19.2",
+    "express-session": "^1.18.0",
+    "imapflow": "^1.0.171",
+    "nodemailer": "^6.9.14",
+    "mailparser": "^3.7.1"
+  }
+}

@@ -1,11 +1,34 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import type { PublicGatedDocument } from "@/lib/gatedContent";
 
-function DocThumbnail() {
+function DocThumbnail({ doc }: { doc: PublicGatedDocument }) {
+  if (doc.thumbnail) {
+    return (
+      <div className="relative aspect-[16/9] w-full overflow-hidden bg-[#faf8f5]">
+        <Image
+          src={doc.thumbnail}
+          alt={doc.title}
+          fill
+          className={`object-cover transition-all duration-300 ${
+            doc.locked ? "scale-110 blur-lg" : ""
+          }`}
+        />
+        {doc.locked && (
+          <div className="absolute inset-0 flex items-center justify-center bg-black/20">
+            <span className="flex h-12 w-12 items-center justify-center rounded-full bg-white/90 text-xl">
+              🔒
+            </span>
+          </div>
+        )}
+      </div>
+    );
+  }
+
   return (
-    <div className="relative flex aspect-[3/4] w-full items-center justify-center overflow-hidden rounded-xl bg-gradient-to-br from-[#f3e4da] to-[#e7c9b7]">
+    <div className="relative flex aspect-[16/9] w-full items-center justify-center overflow-hidden bg-gradient-to-br from-[#f3e4da] to-[#e7c9b7]">
       <svg viewBox="0 0 64 64" className="h-14 w-14 text-white drop-shadow" fill="none" aria-hidden>
         <path
           d="M14 4h26l12 12v40a4 4 0 0 1-4 4H14a4 4 0 0 1-4-4V8a4 4 0 0 1 4-4z"
@@ -79,7 +102,7 @@ export default function GatedDocumentCard({ doc }: { doc: PublicGatedDocument })
           }}
           className={stage === "locked" ? "cursor-pointer" : undefined}
         >
-          <DocThumbnail />
+          <DocThumbnail doc={doc} />
         </div>
         <div className="p-4">
           <p className="text-sm font-semibold text-black">{doc.title}</p>
