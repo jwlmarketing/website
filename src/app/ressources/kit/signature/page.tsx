@@ -103,12 +103,10 @@ export default async function RoadmapPage() {
           Ton parcours de visibilité
         </p>
 
-        {/* Changement de la couleur en text-black */}
         <h2 className="mt-4 text-black text-[17px] font-normal leading-[26px] md:text-xl">
           Parce qu&apos;être visible ne suffit pas.
         </h2>
 
-        {/* mt-8 ajoute un grand espace au-dessus de cette phrase pour qu'elle s'éloigne du h2 */}
         <p className="mt-8 text-[17px] font-normal leading-[26px] text-neutral-600 md:text-xl">
           Il faut transformer cette visibilité en opportunités.
         </p>
@@ -138,7 +136,23 @@ export default async function RoadmapPage() {
             </li>
           ))}
         </ol>
+
+        {/* BLOC VIDÉO MP4 CENTRÉ */}
+        <FadeUp className="mx-auto mt-16 max-w-[760px] overflow-hidden rounded-[40px] bg-black p-4 sm:p-6">
+          <div className="mx-auto aspect-video w-full overflow-hidden rounded-xl bg-neutral-900">
+            <video
+              src="/videos/jwl_signature.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
+              controls
+              className="h-full w-full object-cover"
+            />
+          </div>
+        </FadeUp>
       </section>
+
 
       {/* Leviers */}
       <section id="leviers" className="mx-auto max-w-[1440px] px-6 pb-24 md:px-10">
