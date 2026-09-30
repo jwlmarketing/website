@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import SiteHeader from "@/components/SiteHeader";
 
@@ -8,16 +8,20 @@ const CARDS = [
   {
     id: "parcours",
     title: "Le parcours des créatrice 🚀",
-    desc: "Ton site ne doit pas seulement être joli : il doit être compris by Google et pensé pour attirer tes futurs clients. Télécharge le parcours pour savoir quoi mettre en place.",
+    desc: "Ton site ne doit pas seulement être joli : il doit être compris par Google et pensé pour attirer tes futurs clients. Télécharge le parcours pour savoir quoi mettre en place.",
     image: "/images/entrepreneurielles-parcours-cover.jpg",
     requiresLock: true,
+    pdf: "atelierparcourselle.pdf",
+    label: "l'Atelier du parcours des créatrices"
   },
   {
     id: "visibilite",
     title: "Comment être visible localement sur Aix-en-Provence",
     desc: "Donnez à votre public une brève description de cette ressource.",
     image: "/images/entrepreneurielles-visibilite-locale.jpg",
-    requiresLock: false,
+    requiresLock: true,
+    pdf: "jwlaap.pdf",
+    label: "le guide de Visibilité Locale"
   },
   {
     id: "encours",
@@ -25,6 +29,8 @@ const CARDS = [
     desc: "en cours",
     image: "/images/entrepreneurielles-en-cours.jpg",
     requiresLock: false,
+    pdf: null,
+    label: ""
   },
 ];
 
@@ -33,24 +39,34 @@ export default function Page() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState(false);
   const [isUnlocked, setIsUnlocked] = useState(false);
+  const [activeCard, setActiveCard] = useState<(typeof CARDS)[number] | null>(null);
 
-  const handleCardAction = (requiresLock: boolean) => {
-    if (requiresLock) {
+  // Vérifie si l'utilisateur a déjà entré le bon code auparavant
+  useEffect(() => {
+    const status = localStorage.getItem("jwl_unlocked_all");
+    if (status === "true") {
+      setIsUnlocked(true);
+    }
+  }, []);
+
+  const handleCardAction = (card: typeof CARDS[number]) => {
+    setActiveCard(card);
+    if (card.requiresLock) {
       setIsModalOpen(true);
       setError(false);
       setPassword("");
     } else {
-      // Logique par défaut pour les autres cartes non verrouillées
       alert("Ressource bientôt disponible !");
     }
   };
 
   const handleVerifyPassword = (e: React.FormEvent) => {
     e.preventDefault();
-    // Validation brute et directe sans faille
+    // Comparaison brute et directe du mot de passe
     if (password.trim() === "jwlparcoursdescreatrices") {
       setIsUnlocked(true);
       setError(false);
+      localStorage.setItem("jwl_unlocked_all", "true"); // Sauvegarde le déblocage permanent
     } else {
       setError(true);
     }
@@ -58,7 +74,6 @@ export default function Page() {
 
   const closeModal = () => {
     setIsModalOpen(false);
-    setIsUnlocked(false);
     setPassword("");
     setError(false);
   };
@@ -135,7 +150,7 @@ export default function Page() {
                   <p className="mt-2 text-sm text-neutral-600">{card.desc}</p>
                 </div>
                 <button
-                  onClick={() => handleCardAction(card.requiresLock)}
+                  onClick={() => handleCardAction(card)}
                   className="mt-4 inline-flex w-fit items-center rounded-full bg-[#c9846f] px-5 py-2.5 text-xs font-bold uppercase text-white transition hover:scale-105 hover:bg-[#b56f5a]"
                 >
                   Je télécharge
@@ -146,8 +161,8 @@ export default function Page() {
         </div>
       </section>
 
-      {/* FENÊTRE POP-UP MODAL MODERNE DE SÉCURITÉ */}
-      {isModalOpen && (
+      {/* POP-UP MODAL SÉCURISÉE */}
+      {isModalOpen && activeCard && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4">
           <div className="w-full max-w-[440px] overflow-hidden rounded-3xl bg-white p-8 text-center shadow-2xl relative">
             <button
@@ -158,7 +173,7 @@ export default function Page() {
             </button>
 
             {!isUnlocked ? (
-              /* Étape 1 : Formulaire de saisie du mot de passe */
+              /* Étape 1 : Formulaire de mot de passe */
               <form onSubmit={handleVerifyPassword} className="space-y-6">
                 <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-[#faf3ea] text-2xl">
                   🔒
@@ -166,7 +181,7 @@ export default function Page() {
                 <div>
                   <h3 className="font-heading text-xl font-bold text-black">Ressource Protégée</h3>
                   <p className="mt-2 text-sm text-neutral-500">
-                    Saisis ton code d&apos;accès privilégié pour débloquer cet atelier exclusif.
+                    Saisis ton code d&apos;accès privilégié pour débloquer {activeCard.label}.
                   </p>
                 </div>
 
@@ -197,7 +212,7 @@ export default function Page() {
                 </button>
               </form>
             ) : (
-              /* Étape 2 : Choix d'action une fois déverrouillé */
+              /* Étape 2 : Choix de téléchargement / prévisualisation */
               <div className="space-y-6">
                 <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-emerald-50 text-2xl">
                   ✨
@@ -205,26 +220,24 @@ export default function Page() {
                 <div>
                   <h3 className="font-heading text-xl font-bold text-black">Accès Accordé 🎉</h3>
                   <p className="mt-2 text-sm text-neutral-500">
-                    Tu as débloqué l&apos;Atelier du parcours des créatrices. Que souhaites-tu faire ?
+                    Tu as débloqué {activeCard.label}. Que souhaites-tu faire ?
                   </p>
                 </div>
 
                 <div className="flex flex-col gap-3">
-                  {/* Option prévisualiser */}
                   <a
-                    href="/documents/atelierparcourselle.pdf"
+                    href={`/documents/${activeCard.pdf}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={closeModal}
                     className="w-full rounded-full border border-neutral-200 py-3.5 text-center text-sm font-semibold text-black transition hover:bg-neutral-50"
                   >
-                    👁️ Prévisualiser l&apos;atelier
+                    👁️ Prévisualiser la ressource
                   </a>
                   
-                  {/* Option télécharger */}
                   <a
-                    href="/documents/atelierparcourselle.pdf"
-                    download="atelierparcourselle.pdf"
+                    href={`/documents/${activeCard.pdf}`}
+                    download={activeCard.pdf || "document.pdf"}
                     onClick={closeModal}
                     className="w-full rounded-full bg-[#c9846f] py-3.5 text-center text-sm font-bold uppercase tracking-wider text-white transition hover:bg-[#b56f5a]"
                   >
