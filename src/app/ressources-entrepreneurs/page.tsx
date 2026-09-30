@@ -1,33 +1,73 @@
-import Image from "next/image";
-import { buildMetadata } from "@/lib/seo";
-import SiteHeader from "@/components/SiteHeader";
+"use client";
 
-export const metadata = buildMetadata({
-  path: "/ressources-entrepreneurs",
-  locale: "fr",
-  title: "JWL Entrepreneuri'Elles | JWL Marketing",
-  description: "Entreprendre entre Elles : ressources et ateliers pour les entrepreneuses accompagnées par JWL Marketing.",
-});
+import { useState } from "react";
+import Image from "next/image";
+import SiteHeader from "@/components/SiteHeader";
 
 const CARDS = [
   {
+    id: "parcours",
     title: "Le parcours des créatrice 🚀",
     desc: "Ton site ne doit pas seulement être joli : il doit être compris par Google et pensé pour attirer tes futurs clients. Télécharge le parcours pour savoir quoi mettre en place.",
     image: "/images/entrepreneurielles-parcours-cover.jpg",
+    requiresLock: true,
   },
   {
+    id: "visibilite",
     title: "Comment être visible localement sur Aix-en-Provence",
     desc: "Donnez à votre public une brève description de cette ressource.",
     image: "/images/entrepreneurielles-visibilite-locale.jpg",
+    requiresLock: false,
   },
   {
+    id: "encours",
     title: "En cours",
     desc: "en cours",
     image: "/images/entrepreneurielles-en-cours.jpg",
+    requiresLock: false,
   },
 ];
 
+// Clé secrète hachée pour "jwlparcoursdescreatrices" (Simple hash de sécurité client-side)
+const SECRET_HASH = "1214041151609115112111100115111100101115099114101097116114105099101115";
+const hashString = (str: string) => {
+  return str.split("").map(char => char.charCodeAt(0).toString().padStart(3, "0")).join("");
+};
+
 export default function Page() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState(false);
+  const [isUnlocked, setIsUnlocked] = useState(false);
+
+  const handleCardAction = (requiresLock: boolean) => {
+    if (requiresLock) {
+      setIsModalOpen(true);
+      setError(false);
+      setPassword("");
+    } else {
+      // Logique par défaut pour les autres cartes non verrouillées
+      alert("Ressource bientôt disponible !");
+    }
+  };
+
+  const handleVerifyPassword = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (hashString(password.trim()) === SECRET_HASH) {
+      setIsUnlocked(true);
+      setError(false);
+    } else {
+      setError(true);
+    }
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setIsUnlocked(false);
+    setPassword("");
+    setError(false);
+  };
+
   return (
     <div className="min-h-screen bg-white">
       <SiteHeader locale="fr" href="/ressources-entrepreneurs" />
@@ -38,8 +78,7 @@ export default function Page() {
           <div>
             <h1 className="font-heading text-4xl leading-tight text-black md:text-5xl">
               <span className="text-[#c9846f]">JWL</span>{" "}
-              Entrepreneuri&apos;
-              <span className="text-gold">Elles</span> :
+              Entrepreneuri&apos;<span className="text-gold">Elles</span> :
               <br />
               Entreprendre entre Elles.
             </h1>
@@ -58,14 +97,16 @@ export default function Page() {
             </a>
           </div>
 
-          <Image
-            src="/images/entrepreneurielles-hero.jpg"
-            alt="JWL Entrepreneuri'Elles"
-            width={1400}
-            height={2099}
-            className="mx-auto h-auto w-full max-w-[420px] rounded-3xl object-contain"
-            priority
-          />
+          <div className="relative mx-auto h-auto w-full max-w-[420px]">
+            <Image
+              src="/images/entrepreneurielles-hero.jpg"
+              alt="JWL Entrepreneuri'Elles"
+              width={1400}
+              height={2099}
+              className="rounded-3xl object-contain"
+              priority
+            />
+          </div>
         </div>
       </section>
 
@@ -91,19 +132,115 @@ export default function Page() {
               ) : (
                 <div className="aspect-[16/9] w-full bg-[#f8dd8b]" />
               )}
-              <div className="p-4">
-                <p className="text-xs font-bold uppercase tracking-wider text-black">
-                  {card.title}
-                </p>
-                <p className="mt-2 text-sm text-neutral-600">{card.desc}</p>
-                <span className="mt-3 inline-flex w-fit items-center rounded-full bg-[#c9846f] px-4 py-2 text-xs font-bold uppercase text-white opacity-60">
+              <div className="p-4 flex flex-1 flex-col justify-between">
+                <div>
+                  <p className="text-xs font-bold uppercase tracking-wider text-black">
+                    {card.title}
+                  </p>
+                  <p className="mt-2 text-sm text-neutral-600">{card.desc}</p>
+                </div>
+                <button
+                  onClick={() => handleCardAction(card.requiresLock)}
+                  className="mt-4 inline-flex w-fit items-center rounded-full bg-[#c9846f] px-5 py-2.5 text-xs font-bold uppercase text-white transition hover:scale-105 hover:bg-[#b56f5a]"
+                >
                   Je télécharge
-                </span>
+                </button>
               </div>
             </div>
           ))}
         </div>
       </section>
+
+      {/* BELLE POP-UP MODAL UNIQUE */}
+      {isModalOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4 animate-fade-in">
+          <div className="w-full max-w-[440px] overflow-hidden rounded-3xl bg-white p-8 text-center shadow-2xl relative">
+            <button
+              onClick={closeModal}
+              className="absolute top-4 right-4 text-neutral-400 hover:text-black text-xl transition"
+            >
+              ✕
+            </button>
+
+            {!isUnlocked ? (
+              /* Étape 1 : Formulaire de saisie de mot de passe */
+              <form onSubmit={handleVerifyPassword} className="space-y-6">
+                <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-[#faf3ea] text-2xl">
+                  🔒
+                </div>
+                <div>
+                  <h3 className="font-heading text-xl font-bold text-black">Ressource Protégée</h3>
+                  <p className="mt-2 text-sm text-neutral-500">
+                    Saisis ton code d&apos;accès privilégié pour débloquer cet atelier exclusif.
+                  </p>
+                </div>
+
+                <div className="text-left">
+                  <input
+                    type="password"
+                    placeholder="Saisis ton code ici..."
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    className={`w-full rounded-full border px-5 py-3 text-sm text-black placeholder-neutral-400 focus:outline-none transition ${
+                      error
+                        ? "border-red-500 bg-red-50 focus:border-red-500"
+                        : "border-neutral-200 focus:border-[#c9846f] focus:ring-1 focus:ring-[#c9846f]"
+                    }`}
+                  />
+                  {error && (
+                    <p className="mt-1.5 pl-4 text-xs font-medium text-red-500">
+                      ⚠️ Code incorrect. Réessaye ou contacte JWL.
+                    </p>
+                  )}
+                </div>
+
+                <button
+                  type="submit"
+                  className="w-full rounded-full bg-[#c9846f] py-3.5 text-center text-sm font-bold uppercase tracking-wider text-white transition hover:bg-[#b56f5a]"
+                >
+                  Déverrouiller l&apos;accès
+                </button>
+              </form>
+            ) : (
+              /* Étape 2 : Choix d'action une fois déverrouillé */
+              <div className="space-y-6 animate-scale-up">
+                <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-emerald-50 text-2xl">
+                  ✨
+                </div>
+                <div>
+                  <h3 className="font-heading text-xl font-bold text-black">Accès Accordé 🎉</h3>
+                  <p className="mt-2 text-sm text-neutral-500">
+                    Tu as débloqué l&apos;Atelier du parcours des créatrices. Que souhaites-tu faire ?
+                  </p>
+                </div>
+
+                <div className="flex flex-col gap-3">
+                  {/* Option prévisualiser dans un nouvel onglet */}
+                  <a
+                    href="/documents/atelierparcourselle.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={closeModal}
+                    className="w-full rounded-full border border-neutral-200 py-3.5 text-center text-sm font-semibold text-black transition hover:bg-neutral-50"
+                  >
+                    👁️ Prévisualiser l&apos;atelier
+                  </a>
+                  
+                  {/* Option télécharger directement */}
+                  <a
+                    href="/documents/atelierparcourselle.pdf"
+                    download="atelierparcourselle.pdf"
+                    onClick={closeModal}
+                    className="w-full rounded-full bg-[#c9846f] py-3.5 text-center text-sm font-bold uppercase tracking-wider text-white transition hover:bg-[#b56f5a]"
+                  >
+                    📥 Télécharger le PDF
+                  </a>
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
     </div>
   );
 }
