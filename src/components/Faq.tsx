@@ -178,6 +178,14 @@ const BOOSTER_FAQ = [
     q: "Qu'est-ce que le GEO ?",
     a: "Le GEO (Generative Engine Optimization) est l'évolution naturelle du SEO. Il n'existe pas de GEO sans SEO. Les intelligences artificielles s'appuient en grande partie sur les informations disponibles sur le web et sur les moteurs de recherche pour comprendre une entreprise. Le GEO consiste donc à optimiser ta présence en ligne pour être mieux compris, cité et recommandé par les intelligences artificielles comme ChatGPT, Gemini ou Perplexity. L'objectif n'est plus seulement d'apparaître sur Google, mais aussi d'augmenter tes chances d'être recommandé lorsqu'un utilisateur recherche un professionnel ou une solution dans ton domaine.",
   },
+  {
+    q: "Pourquoi optimiser son site pour ChatGPT ?",
+    a: "Les habitudes de recherche évoluent. De plus en plus d'utilisateurs posent directement leurs questions à des intelligences artificielles comme ChatGPT plutôt que de taper une recherche sur Google. Si ton site n'est pas clair, mal structuré ou pauvre en contenu, les IA auront du mal à comprendre ton activité et ne te recommanderont pas. En optimisant ton site pour ChatGPT, tu augmentes tes chances d'être cité comme référence lorsqu'un client potentiel demande conseil à une IA plutôt qu'à un moteur de recherche classique.",
+  },
+  {
+    q: "À quoi sert Search Console ?",
+    a: "Google Search Console est l'outil qui montre comment ton site se comporte réellement sur Google : les mots-clés qui t'amènent des visiteurs, tes positions dans les résultats, les pages les plus performantes et les éventuelles erreurs techniques qui freinent ton référencement. C'est grâce à ces données que je peux ajuster ta stratégie SEO en continu, prioriser les bonnes actions et suivre l'évolution concrète de ta visibilité dans le temps.",
+  },
 ];
 
 const HOME_FAQ_EN = [
