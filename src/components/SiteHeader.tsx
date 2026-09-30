@@ -38,6 +38,7 @@ const TEXT = {
       { label: "JWL Connect", href: "/tarifs" },
       { label: "JWL Prospecte", href: "/developpement-commercial-aix-en-provence" },
     ],
+    signature: { label: "JWL Signature", href: "/roadmap" },
     work: { label: "Mes réalisations", href: "/realisations" },
     blog: { label: "Mon blog", href: "/blog" },
     cta: { label: "Parler de ton projet", href: "/contact-jwl-marketing-aix-en-provence" },
@@ -50,6 +51,7 @@ const TEXT = {
       { label: "JWL Connect", href: "/en/tarifs" },
       { label: "JWL Prospecte", href: "/en/developpement-commercial-aix-en-provence" },
     ],
+    signature: { label: "JWL Signature", href: "/roadmap" },
     work: { label: "My work", href: "/en/realisations" },
     blog: { label: "My blog", href: "/en/blog" },
     cta: { label: "Talk about your project", href: "/en/contact-jwl-marketing-aix-en-provence" },
@@ -126,6 +128,9 @@ export default function SiteHeader({
                 </div>
               )}
             </div>
+            <Link href={t.signature.href} className="text-[15px] font-semibold text-black hover:text-[#c9846f]">
+              {t.signature.label}
+            </Link>
             <Link href={t.work.href} className="text-[15px] font-semibold text-black hover:text-[#c9846f]">
               {t.work.label}
             </Link>
@@ -178,6 +183,13 @@ export default function SiteHeader({
               </Link>
             ))}
             <div className="my-1 border-t border-black/10" />
+            <Link
+              href={t.signature.href}
+              onClick={() => setMobileOpen(false)}
+              className="rounded-lg px-4 py-2 text-sm font-semibold text-black hover:bg-[#faf3ea] hover:text-[#c9846f]"
+            >
+              {t.signature.label}
+            </Link>
             <Link
               href={t.work.href}
               onClick={() => setMobileOpen(false)}
