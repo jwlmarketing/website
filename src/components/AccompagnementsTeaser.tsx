@@ -80,9 +80,10 @@ export default function AccompagnementsTeaser({
                 src={card.image}
                 alt={card.name}
                 fill
-                className="object-cover"
+                className="object-cover object-left" // <-- LA MODIFICATION EST ICI
               />
             </div>
+          </div>
           </div>
           <div className="flex flex-1 flex-col items-center justify-center gap-1 px-3 py-4 text-center">
             <p className="font-heading text-base font-bold uppercase tracking-wide">
