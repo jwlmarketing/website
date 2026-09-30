@@ -111,9 +111,8 @@ export default async function RoadmapPage() {
 
         {/* Fusion des deux textes dans le même paragraphe et alignement justifié */}
         <p className="mx-auto mt-8 max-w-[760px] text-justify text-[17px] font-normal leading-[26px] text-neutral-600 md:text-xl md:leading-8">
-          Il faut transformer cette visibilité en opportunités.
-          <br /><br />
-          JWL Signature rassemble les différents leviers dont une
+<br /><br />
+          Il faut transformer cette visibilité en opportunités. JWL Signature rassemble les différents leviers dont une
           entrepreneure a besoin pour développer son activité : visibilité,
           Google, SEO, réseaux sociaux, développement commercial, IA et
           réseau.
