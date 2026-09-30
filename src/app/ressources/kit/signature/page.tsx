@@ -83,7 +83,7 @@ export default async function RoadmapPage() {
 
           <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl">
             <Image
-              src="/images/jwl-roadmap-hero.png"
+              src="/images/jwl-signature-hero.png"
               alt="JWL Marketing"
               fill
               className="object-contain"
