@@ -67,8 +67,7 @@ export default function AccompagnementsTeaser({
   const cards = pair === "primary" ? allCards.slice(0, 2) : allCards.slice(2, 4);
 
   return (
-    // Ajout de pl-10 md:pl-20 pour décaler l'ensemble des cartes vers la droite
-    <div className="mx-auto flex max-w-[700px] items-center justify-center gap-6 pl-10 md:pl-20">
+    <div className="mx-auto flex max-w-[700px] items-center justify-center gap-6">
       {cards.map((card) => (
         <Link
           key={card.name}
@@ -81,8 +80,7 @@ export default function AccompagnementsTeaser({
                 src={card.image}
                 alt={card.name}
                 fill
-                // object-scale-down empêche le rognage, object-right colle les avatars à droite
-                className="object-scale-down object-right"
+                className="bg-white object-contain"
               />
             </div>
           </div>
