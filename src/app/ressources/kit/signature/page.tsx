@@ -103,13 +103,13 @@ export default async function RoadmapPage() {
           Ton parcours de visibilité
         </p>
 
-        {/* UNIQUEMENT cette phrase en h2 */}
-        <h2 className="mt-4 text-[17px] font-normal leading-[26px] text-neutral-600 md:text-xl">
+        {/* Changement de la couleur en text-black */}
+        <h2 className="mt-4 text-black text-[17px] font-normal leading-[26px] md:text-xl">
           Parce qu&apos;être visible ne suffit pas.
         </h2>
 
-        {/* Cette phrase passe en P normal en dessous */}
-        <p className="mt-1 text-[17px] font-normal leading-[26px] text-neutral-600 md:text-xl">
+        {/* mt-8 ajoute un grand espace au-dessus de cette phrase pour qu'elle s'éloigne du h2 */}
+        <p className="mt-8 text-[17px] font-normal leading-[26px] text-neutral-600 md:text-xl">
           Il faut transformer cette visibilité en opportunités.
         </p>
 
