@@ -104,12 +104,12 @@ export default async function RoadmapPage() {
           Ton parcours de visibilité
         </p>
 
-        {/* Remplacement par une balise <p> avec les classes exactes du paragraphe du dessous */}
-        <p className="mt-4 text-[17px] leading-[26px] text-neutral-600">
+        {/* Conservation du h2 avec les styles exactes du paragraphe p (taille, graisse, interligne et couleur) */}
+        <h2 className="mt-4 text-[17px] font-normal leading-[26px] text-neutral-600">
           Parce qu&apos;être visible ne suffit pas.
           <br />
           Il faut transformer cette visibilité en opportunités.
-        </p>
+        </h2>
 
         <p className="mx-auto mt-6 max-w-[760px] text-[17px] leading-[26px] text-neutral-600">
           JWL Signature rassemble les différents leviers dont une
@@ -137,7 +137,6 @@ export default async function RoadmapPage() {
           ))}
         </ol>
       </section>
-
       {/* Leviers */}
       <section id="leviers" className="mx-auto max-w-[1440px] px-6 pb-24 md:px-10">
         <div className="text-center">
