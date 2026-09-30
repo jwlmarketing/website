@@ -8,7 +8,7 @@ import { listPublicDocuments, type PublicGatedDocument } from "@/lib/gatedConten
 export const metadata = buildMetadata({
   path: "/roadmap",
   locale: "fr",
-  title: "JWL Roadmap | JWL Marketing",
+  title: "JWL Signature | JWL Marketing",
   description: "Fais de Google ton meilleur commercial terrain.",
 });
 
@@ -65,14 +65,12 @@ export default async function RoadmapPage() {
         <div className="grid items-center gap-14 md:grid-cols-2">
           <div>
             <h1 className="font-heading text-5xl leading-tight text-black md:text-6xl">
-              <span className="italic text-[#c9846f]">JWL Roadmap</span> : Fais
-              de Google ton meilleur commercial terrain.
+              <span className="italic text-[#c9846f]">JWL Signature</span> :
+              Fais de Google ton meilleur commercial terrain.
             </h1>
             <p className="mt-6 max-w-[560px] text-xl leading-8 text-neutral-600">
-              Transforme ta visibilité en chiffre d&apos;affaires. Bien plus
-              qu&apos;un site web&nbsp;: un écosystème marketing complet pour
-              gagner en visibilité, développer ton réseau et transformer
-              Google en véritable outil de croissance.
+              Un écosystème à 360° pour développer ta visibilité, ton
+              activité et ton réseau.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <span className="inline-flex items-center rounded-full bg-[#e7c9b7] px-6 py-3 font-semibold text-[#7a3f2a]">
@@ -104,6 +102,41 @@ export default async function RoadmapPage() {
             />
           </div>
         </div>
+      </section>
+
+      {/* Ton parcours de visibilité */}
+      <section className="mx-auto max-w-[1000px] px-6 pb-24 text-center md:px-10">
+        <p className="italic text-[#c9846f]">Ton parcours de visibilité</p>
+        <h2 className="mt-2 font-heading text-3xl text-black md:text-4xl">
+          Parce qu&apos;être visible ne suffit pas.
+          <br />
+          Il faut transformer cette visibilité en opportunités.
+        </h2>
+        <p className="mx-auto mt-6 max-w-[760px] text-[17px] leading-[26px] text-neutral-600">
+          JWL Signature rassemble les différents leviers dont une
+          entrepreneure a besoin pour développer son activité : visibilité,
+          Google, SEO, réseaux sociaux, développement commercial, IA et
+          réseau.
+        </p>
+
+        <ol className="mx-auto mt-10 flex max-w-[700px] flex-col gap-4 text-left">
+          {[
+            { n: 1, title: "Être trouvé", desc: "Google My Business + SEO/GEO" },
+            { n: 2, title: "Être choisi", desc: "Site web + preuve sociale + réseaux sociaux" },
+            { n: 3, title: "Être contacté", desc: "Développement commercial + parcours client" },
+            { n: 4, title: "Accélérer", desc: "IA + automatisation + outils" },
+          ].map((step) => (
+            <li key={step.n} className="flex items-center gap-4">
+              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gold text-base font-bold text-white">
+                {step.n}
+              </span>
+              <p className="text-[17px] text-black">
+                <span className="font-semibold">{step.title}</span>
+                <span className="text-neutral-600"> — {step.desc}</span>
+              </p>
+            </li>
+          ))}
+        </ol>
       </section>
 
       {/* Leviers */}
