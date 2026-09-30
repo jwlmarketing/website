@@ -61,6 +61,29 @@ h4 * {
   font-weight: 400 !important;
 }
 
+/* Tailles de titres imposées sur tout le site (mobile puis desktop >=768px) :
+   surchargent toute classe text-* posée directement sur le h1/h2/h3. */
+h1 {
+  font-size: 48px !important;
+}
+h2 {
+  font-size: 30px !important;
+}
+h3 {
+  font-size: 20px !important;
+}
+@media (min-width: 768px) {
+  h1 {
+    font-size: 76px !important;
+  }
+  h2 {
+    font-size: 54px !important;
+  }
+  h3 {
+    font-size: 20px !important;
+  }
+}
+
 /* Neue Montreal Regular n'est licenciee qu'en graisse 400 : le gras reste sur Switzer. */
 strong,
 b,
