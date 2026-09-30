@@ -50,7 +50,7 @@ export const metadata = buildMetadata({
 
 const PRICING_TIERS = [
   {
-    price: "697",
+    price: "875",
     title: "JWL Start",
     subtitle: "Le Site Web Business",
     quote: "« L'essentiel pour être visible sur Google. »",
