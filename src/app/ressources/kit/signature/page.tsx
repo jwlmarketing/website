@@ -66,8 +66,8 @@ export default async function RoadmapPage() {
   <div className="grid items-start justify-items-center gap-10 md:grid-cols-2">
     <div className="relative z-10 max-w-[620px] w-full">
       <h1 className="font-heading text-5xl leading-tight text-black md:text-6xl">
-        <span className="italic text-[#c9846f]">JWL Signature</span> :{" "}
-        Fais de Google ton meilleur commercial{"\u00a0"}terrain.
+        <span className="italic text-[#c9846f]">JWL Signature :</span>{" "}
+        Fais de Google ton meilleur commercial{"\u00a0"}terrain
       </h1>
       <p className="mt-6 max-w-[560px] text-xl leading-8 text-neutral-600">
         Un écosystème à 360° pour développer ta visibilité, ton
