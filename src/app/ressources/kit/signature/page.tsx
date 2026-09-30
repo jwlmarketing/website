@@ -104,8 +104,8 @@ export default async function RoadmapPage() {
           Ton parcours de visibilité
         </p>
 
-        {/* Modifié pour avoir EXACTEMENT la même taille et la même structure que le paragraphe P juste en dessous */}
-        <h2 className="mt-4 text-[17px] font-normal leading-[26px] text-neutral-600">
+        {/* Correction radicale de la hauteur de ligne et suppression de font-heading */}
+        <h2 className="mt-4 text-[17px] font-normal leading-[26px] text-black">
           Parce qu&apos;être visible ne suffit pas.
           <br />
           Il faut transformer cette visibilité en opportunités.
