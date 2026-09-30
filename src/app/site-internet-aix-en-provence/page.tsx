@@ -93,14 +93,14 @@ export default function Page() {
     <div>
       <SiteHeader locale="fr" href="/en/site-internet-aix-en-provence" />
 
-      {/* Hero */}
-      <div className="flex w-full flex-col items-center justify-between gap-10 overflow-hidden bg-white px-[6%] pt-[60px] lg:flex-row lg:items-end lg:gap-24 lg:px-[9%] lg:pb-0">
-        <div className="max-w-[720px] flex-1 self-start pb-[90px] lg:pt-[30px]">
-          <h1 className="font-heading text-5xl font-extrabold leading-[1.02] lg:text-[72px] lg:leading-[1.02] text-black">
-            <span className="text-[#c9846f]">JWL Business :</span>
-            <span className="font-bold"> un site web qui inspire confiance</span>
-            <br />
-          </h1>
+   {/* Hero */}
+<div className="flex w-full flex-col items-start justify-between gap-10 overflow-hidden bg-white px-[6%] pt-[60px] lg:flex-row lg:items-start lg:gap-12 lg:px-[9%] lg:pb-0">
+  <div className="max-w-[840px] flex-[1.4] self-start pb-[90px] lg:pt-[30px]">
+    <h1 className="font-heading text-5xl font-extrabold leading-[1.05] lg:text-[58px] xl:text-[68px] text-black">
+      <span className="text-[#c9846f]">JWL Booster :</span>
+      <span className="font-bold"> Un site web SEO avec plus de trafic et de clients</span>
+      <br />
+    </h1>
           <p className="text-justify mt-7 text-2xl leading-[1.5] text-black">
             Création ou refonte : je m&apos;occupe de tout. Résultat ? Un site sur mesure pensé pour votre image, vos clients et votre développement commercial.
           </p>
