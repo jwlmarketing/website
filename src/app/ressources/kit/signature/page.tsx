@@ -63,7 +63,7 @@ export default async function RoadmapPage() {
       {/* Hero */}
       <section className="mx-auto max-w-[1440px] px-6 pt-28 pb-20 md:px-10 md:pt-40">
 {/* Ligne 58 modifiée */}
-<div className="grid items-center gap-14 md:grid-cols-[1.2fr_0.8fr]">
+<div className="grid items-start gap-14 md:grid-cols-2">
   <div>
 <h1 className="font-heading text-5xl leading-tight text-black md:text-6xl">
   <span className="italic text-[#c9846f]">JWL Signature</span> :{" "}
