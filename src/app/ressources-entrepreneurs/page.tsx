@@ -37,8 +37,9 @@ export default function Page() {
         <div className="grid items-center gap-14 md:grid-cols-2">
           <div>
             <h1 className="font-heading text-4xl leading-tight text-black md:text-5xl">
-              <span className="text-[#c9846f]">JWL</span> Entrepreneuri&apos;
-              <span className="text-[#c9846f]">Elles</span> :
+              <span className="text-[#c9846f]">JWL</span>{" "}
+              Entrepreneuri&apos;
+              <span className="text-gold">Elles</span> :
               <br />
               Entreprendre entre Elles.
             </h1>
@@ -51,7 +52,7 @@ export default function Page() {
             </p>
             <a
               href="/contact-jwl-marketing-aix-en-provence"
-              className="mt-8 inline-flex items-center rounded-full bg-[#c9846f] px-6 py-3 text-center font-semibold text-white transition hover:bg-[#b56f5a]"
+              className="mt-8 inline-flex items-center rounded-full bg-gold px-8 py-4 text-center text-lg font-semibold text-white transition hover:bg-[#b8952f]"
             >
               Retrouve moi
             </a>
