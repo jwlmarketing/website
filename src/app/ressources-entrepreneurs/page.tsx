@@ -18,7 +18,7 @@ const CARDS = [
   {
     title: "Comment être visible localement sur Aix-en-Provence",
     desc: "Donnez à votre public une brève description de cette ressource.",
-    image: null,
+    image: "/images/entrepreneurielles-visibilite-locale.jpg",
   },
   {
     title: "En cours",
