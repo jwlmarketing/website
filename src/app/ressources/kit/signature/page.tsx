@@ -67,33 +67,35 @@ export default async function RoadmapPage() {
         <span className="italic text-[#c9846f]">JWL Signature</span> :{" "}
         Fais de Google ton meilleur commercial{"\u00a0"}terrain.
       </h1>
-            <p className="mt-6 max-w-[560px] text-xl leading-8 text-neutral-600">
-              Un écosystème à 360° pour développer ta visibilité, ton
-              activité et ton réseau.
-            </p>
-            <div className="mt-8 flex flex-wrap items-center gap-4">
-              <a
-                href="/consultant-freelance-seo-aix-en-provence"
-                className="inline-flex items-center rounded-full bg-[#c9846f] px-6 py-3 text-center font-semibold text-white transition hover:bg-[#b56f5a]"
-              >
-                Découvrir JWL
-              </a>
-            </div>
-          </div>
+      <p className="mt-6 max-w-[560px] text-xl leading-8 text-neutral-600">
+        Un écosystème à 360° pour développer ta visibilité, ton
+        activité et ton réseau.
+      </p>
+      <div className="mt-8 flex flex-wrap items-center gap-4">
+        <a
+          href="/consultant-freelance-seo-aix-en-provence"
+          className="inline-flex items-center rounded-full bg-[#c9846f] px-6 py-3 text-center font-semibold text-white transition hover:bg-[#b56f5a]"
+        >
+          Découvrir JWL
+        </a>
+      </div>
+    </div>
 
-          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl">
-            <Image
-              src="/images/jwl-signature-hero.png"
-              alt="JWL Marketing"
-              fill
-              className="object-contain"
-              priority
-              sizes="(min-width: 768px) 50vw, 100vw"
-            />
-          </div>
-        </div>
-      </section>
-
+    {/* Conteneur d'image aligné et dimensionné comme sur la page Business */}
+    <div className="flex h-[420px] w-full flex-1 items-end justify-center sm:h-[520px] lg:h-[660px] lg:justify-end">
+      <div className="relative h-full w-auto">
+        <Image
+          src="/images/jwl-signature-hero.png"
+          alt="JWL Marketing"
+          width={353}
+          height={606}
+          priority
+          className="relative z-10 h-full w-auto max-w-none object-contain"
+        />
+      </div>
+    </div>
+  </div>
+</section>
       {/* Ton parcours de visibilité */}
       <section className="mx-auto max-w-[1000px] px-6 pb-24 text-center md:px-10">
         <p className="italic text-[#c9846f]">Ton parcours de visibilité</p>
