@@ -161,8 +161,8 @@ export default function Page() {
       <div className="flex w-full flex-col items-center justify-between gap-10 bg-white px-[6%] pt-[90px] pb-[60px] lg:flex-row lg:items-start lg:gap-12 lg:px-[9%]">
         <div className="max-w-[840px] flex-[1.4] self-start">
           <h1 className="font-heading text-4xl font-bold leading-[1.15] lg:text-[54px] lg:leading-[1.15] text-black">
-            <span className="text-[#c9846f] whitespace-nowrap">JWL Booster</span>
-            <span className="font-medium whitespace-nowrap"> : Un site </span>
+            <span className="italic text-[#c9846f] whitespace-nowrap">JWL Booster</span>
+            <span className="font-medium whitespace-nowrap"> : Un site.</span>
             <br />
             <span className="font-medium whitespace-nowrap">web SEO avec plus de</span>
             <br />
