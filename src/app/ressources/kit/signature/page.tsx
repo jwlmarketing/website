@@ -61,8 +61,10 @@ export default async function RoadmapPage() {
       <SiteHeader locale="fr" href="/ressources/kit/signature" />
 {/* Hero */}
 <section className="mx-auto max-w-[1440px] px-6 pb-20 pt-[90px] md:px-[9%]">
-  <div className="grid items-start gap-14 md:grid-cols-2">
-    <div>
+  {/* Modification ici : Changement des colonnes de la grille pour donner plus de place au texte */}
+  <div className="grid items-start gap-10 md:grid-cols-[1.2fr_0.8fr]">
+    {/* Ajout de z-10 pour forcer le texte au premier plan */}
+    <div className="relative z-10 max-w-[720px]">
       <h1 className="font-heading text-5xl leading-tight text-black md:text-6xl">
         <span className="italic text-[#c9846f]">JWL Signature</span> :{" "}
         Fais de Google ton meilleur commercial{"\u00a0"}terrain.
@@ -81,7 +83,7 @@ export default async function RoadmapPage() {
       </div>
     </div>
 
-    {/* Conteneur d'image aligné et dimensionné comme sur la page Business */}
+    {/* L'image est maintenant poussée plus à droite grâce à la proportion de la grille */}
     <div className="flex h-[420px] w-full flex-1 items-end justify-center sm:h-[520px] lg:h-[660px] lg:justify-end">
       <div className="relative h-full w-auto">
         <Image
@@ -90,7 +92,7 @@ export default async function RoadmapPage() {
           width={353}
           height={606}
           priority
-          className="relative z-10 h-full w-auto max-w-none object-contain"
+          className="relative z-0 h-full w-auto max-w-none object-contain"
         />
       </div>
     </div>
