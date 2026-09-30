@@ -11,7 +11,7 @@ export const metadata = buildMetadata({
 
 const CARDS = [
   {
-    title: "Le parcours des créatrices",
+    title: "Le parcours des créatrice 🚀",
     desc: "Ton site ne doit pas seulement être joli : il doit être compris par Google et pensé pour attirer tes futurs clients. Télécharge le parcours pour savoir quoi mettre en place.",
     image: "/images/entrepreneurielles-parcours-cover.jpg",
   },
@@ -57,14 +57,14 @@ export default function Page() {
             </a>
           </div>
 
-          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl">
+          <div className="relative mx-auto aspect-[2/3] w-full max-w-[420px] overflow-hidden rounded-3xl">
             <Image
               src="/images/entrepreneurielles-hero.jpg"
               alt="JWL Entrepreneuri'Elles"
               fill
               className="object-cover"
               priority
-              sizes="(min-width: 768px) 50vw, 100vw"
+              sizes="(min-width: 768px) 35vw, 80vw"
             />
           </div>
         </div>
