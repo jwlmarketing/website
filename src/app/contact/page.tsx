@@ -82,7 +82,7 @@ export default function Page() {
             </p>
           </div>
 
-          <div className="rounded-2xl bg-white/95 p-6 shadow-2xl backdrop-blur-sm md:p-8">
+          <div className="rounded-2xl bg-transparent p-6 md:p-8">
             <ContactForm />
           </div>
         </div>
