@@ -62,14 +62,14 @@ export default function Page() {
                 </svg>
               </a>
               <a
-                href="https://x.com/jwlmarketing"
+                href="https://www.tiktok.com/@jwl.marketing"
                 target="_blank"
                 rel="noopener"
-                aria-label="X / Twitter"
+                aria-label="TikTok"
                 className="flex h-9 w-9 items-center justify-center rounded-full border border-white/40 text-white transition hover:border-white hover:bg-white/10"
               >
                 <svg viewBox="0 0 24 24" className="h-4 w-4" fill="currentColor" aria-hidden>
-                  <path d="M18.3 3h3l-6.6 7.5L22.5 21h-6.1l-4.8-6.3L5.9 21H2.9l7.1-8.1L2 3h6.2l4.3 5.8L18.3 3Zm-1 16.2h1.7L7.8 4.7H6l11.3 14.5Z" />
+                  <path d="M16.6 5.82a4.28 4.28 0 0 1-1.7-3.42h-3.07v13.44a2.6 2.6 0 1 1-1.85-2.49V10.2a5.65 5.65 0 1 0 4.92 5.6V9.08a7.3 7.3 0 0 0 4.4 1.48V7.5a4.27 4.27 0 0 1-2.7-1.68z" />
                 </svg>
               </a>
             </div>
