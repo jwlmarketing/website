@@ -25,7 +25,7 @@ export default function Page() {
             alt="Jodie Lapaillerie — JWL Marketing"
             fill
             priority
-            className="object-cover object-top"
+            className="object-cover object-[center_15%] scale-110"
           />
           <div className="absolute inset-0 bg-black/40" />
         </div>
