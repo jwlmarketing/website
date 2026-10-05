@@ -152,7 +152,7 @@ export default async function RoadmapPage() {
 
         <div className="mt-8 flex justify-center">
           <a
-            href="/contact-jwl-marketing-aix-en-provence"
+            href="/contact"
             className="inline-flex items-center rounded-full bg-[#c9846f] px-8 py-4 text-center font-semibold text-white transition hover:bg-[#b56f5a]"
           >
             Contactez-moi

@@ -88,7 +88,7 @@ export default function Page() {
             <p className="mt-6 max-w-[520px] text-lg leading-8 text-neutral-600">
               Des femmes qui construisent ensemble leur indépendance, pour devenir la meilleure version d&apos;elle même.
             </p>
-            <a href="/contact-jwl-marketing-aix-en-provence" className="mt-8 inline-flex items-center rounded-full bg-gold px-8 py-4 text-center text-lg font-semibold text-white transition hover:bg-[#b8952f]">
+            <a href="/contact" className="mt-8 inline-flex items-center rounded-full bg-gold px-8 py-4 text-center text-lg font-semibold text-white transition hover:bg-[#b8952f]">
               Retrouve moi
             </a>
           </div>

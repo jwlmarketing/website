@@ -150,7 +150,7 @@ export default function Page() {
                 contact@jwl-marketing.fr
               </a>
               <Link
-                href="/contact-jwl-marketing-aix-en-provence"
+                href="/contact"
                 className="inline-block rounded-full border border-neutral-300 px-8 py-3 font-medium text-[#141414] transition-colors hover:border-[#c9846f] hover:text-[#c9846f]"
               >
                 Formulaire de contact

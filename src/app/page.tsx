@@ -37,7 +37,7 @@ const METHODE_STEPS = [
       "Analyse de Google Business Profile",
     ],
     cta: "Prenez rendez-vous",
-    href: "/contact-jwl-marketing-aix-en-provence",
+    href: "/contact",
   },
   {
     image: "/images/strategie-marketing.png",
@@ -94,7 +94,7 @@ export default function Home() {
               07 83 79 28 14
             </a>
             <Link
-              href="/contact-jwl-marketing-aix-en-provence"
+              href="/contact"
               className="inline-block rounded-full bg-[#faf3ea] px-9 py-[18px] text-lg font-medium text-[#c9846f] transition-colors hover:bg-[#f2e6d4]"
             >
               Audit Marketing GRATUIT
@@ -217,7 +217,7 @@ export default function Home() {
         </div>
         <div className="mt-8 text-center">
           <Link
-            href="/contact-jwl-marketing-aix-en-provence"
+            href="/contact"
             className="inline-block rounded-full bg-[#c9846f] px-8 py-[15px] font-medium text-white transition-colors hover:bg-[#b8735f]"
           >
             Lancer mon projet

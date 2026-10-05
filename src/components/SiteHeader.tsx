@@ -41,7 +41,7 @@ const TEXT = {
     signature: { label: "JWL Signature", href: "/ressources/kit/signature" },
     work: { label: "Mes réalisations", href: "/realisations" },
     blog: { label: "Mon blog", href: "/blog" },
-    cta: { label: "Parler de ton projet", href: "/contact-jwl-marketing-aix-en-provence" },
+    cta: { label: "Parler de ton projet", href: "/contact" },
   },
   en: {
     offers: "My offers",
@@ -54,7 +54,7 @@ const TEXT = {
     signature: { label: "JWL Signature", href: "/ressources/kit/signature" },
     work: { label: "My work", href: "/en/realisations" },
     blog: { label: "My blog", href: "/en/blog" },
-    cta: { label: "Talk about your project", href: "/en/contact-jwl-marketing-aix-en-provence" },
+    cta: { label: "Talk about your project", href: "/en/contact" },
   },
 } as const;
 

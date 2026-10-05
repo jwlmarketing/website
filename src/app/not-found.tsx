@@ -33,7 +33,7 @@ export default function NotFound() {
           Retour à l&apos;accueil
         </Link>
         <Link
-          href="/contact-jwl-marketing-aix-en-provence"
+          href="/contact"
           className="inline-block rounded-[5px] border-2 border-black px-8 py-3.5 font-medium text-black transition-colors hover:bg-black hover:text-white"
         >
           Contacter JWL Marketing

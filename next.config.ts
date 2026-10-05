@@ -68,6 +68,16 @@ const nextConfig: NextConfig = {
         destination: "/en/consultant-freelance-seo-bordeaux-jwl-marketing",
         permanent: true,
       },
+      {
+        source: "/contact-jwl-marketing-aix-en-provence",
+        destination: "/contact",
+        permanent: true,
+      },
+      {
+        source: "/en/contact-jwl-marketing-aix-en-provence",
+        destination: "/en/contact",
+        permanent: true,
+      },
     ];
   },
 };

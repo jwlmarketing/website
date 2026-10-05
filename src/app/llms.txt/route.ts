@@ -51,7 +51,7 @@ const CORE_PAGES: { path: string; title: string; desc: string }[] = [
     desc: "Grille tarifaire des prestations JWL Marketing (audit, GMB, site web, accompagnement).",
   },
   {
-    path: "/contact-jwl-marketing-aix-en-provence",
+    path: "/contact",
     title: "Contact",
     desc: "Coordonnées et formulaire de contact de JWL Marketing.",
   },

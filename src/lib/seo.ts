@@ -49,7 +49,7 @@ export const ROUTES: Route[] = [
   { path: "/ressources/kit-reseaux-sociaux", index: false },
   { path: "/ressources-entrepreneurs", index: false },
   { path: "/tarifs", index: false, en: true },
-  { path: "/contact-jwl-marketing-aix-en-provence", index: false, en: true },
+  { path: "/contact", index: false, en: true },
   { path: "/consultant-freelance-seo-toulouse-jwl-marketing", index: false, en: true },
   { path: "/audit-seo-aix-en-provence", index: false, en: true },
   { path: "/developpement-commercial-aix-en-provence", index: false, en: true },

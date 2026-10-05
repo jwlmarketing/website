@@ -263,7 +263,7 @@ export function emptyBlock(type: Block["type"]): Block {
     case "image":
       return { type: "image", url: "" };
     case "cta":
-      return { type: "cta", buttonText: "En savoir plus", buttonLink: "/contact-jwl-marketing-aix-en-provence" };
+      return { type: "cta", buttonText: "En savoir plus", buttonLink: "/contact" };
     case "faq":
       return { type: "faq", items: [{ q: "", a: "" }] };
     case "cards":
@@ -305,6 +305,6 @@ export function emptyBlock(type: Block["type"]): Block {
     case "socialIcons":
       return { type: "socialIcons", items: [{ platform: "Instagram", url: "" }] };
     case "button":
-      return { type: "button", text: "En savoir plus", link: "/contact-jwl-marketing-aix-en-provence", align: "center" };
+      return { type: "button", text: "En savoir plus", link: "/contact", align: "center" };
   }
 }

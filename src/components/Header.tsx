@@ -78,7 +78,7 @@ export default function Header() {
         </Link>
         <span className="mx-0.5 text-[#ccc]">|</span>
 
-        <Link href="/contact-jwl-marketing-aix-en-provence" className="px-2.5 py-1.5 text-black hover:text-[#c9a227]">
+        <Link href="/contact" className="px-2.5 py-1.5 text-black hover:text-[#c9a227]">
           Contact
         </Link>
         <span className="mx-0.5 text-[#ccc]">|</span>
@@ -138,7 +138,7 @@ export default function Header() {
           <Link href="/tarifs" onClick={() => setOpen(false)} className="block border-b border-[#f0f0f0] px-5 py-3.5 font-heading text-[15px] text-black hover:text-[#c9a227]">
             Tarifs
           </Link>
-          <Link href="/contact-jwl-marketing-aix-en-provence" onClick={() => setOpen(false)} className="block border-b border-[#f0f0f0] px-5 py-3.5 font-heading text-[15px] text-black hover:text-[#c9a227]">
+          <Link href="/contact" onClick={() => setOpen(false)} className="block border-b border-[#f0f0f0] px-5 py-3.5 font-heading text-[15px] text-black hover:text-[#c9a227]">
             Contact
           </Link>
           <Link href="/blog" onClick={() => setOpen(false)} className="block border-b border-[#f0f0f0] px-5 py-3.5 font-heading text-[15px] text-black hover:text-[#c9a227]">
