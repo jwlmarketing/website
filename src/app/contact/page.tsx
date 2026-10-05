@@ -83,7 +83,7 @@ export default function Page() {
           </div>
 
           <div className="rounded-2xl bg-transparent p-6 md:p-8">
-            <ContactForm />
+            <ContactForm variant="dark" />
           </div>
         </div>
       </section>

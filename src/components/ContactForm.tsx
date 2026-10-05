@@ -2,8 +2,12 @@
 
 import { useState } from "react";
 
-export default function ContactForm() {
+export default function ContactForm({ variant = "light" }: { variant?: "light" | "dark" }) {
   const [status, setStatus] = useState<"idle" | "sending" | "ok" | "error">("idle");
+  const fieldClass =
+    variant === "dark"
+      ? "w-full rounded border border-white/40 bg-transparent px-4 py-3 text-sm text-white placeholder-white/70 outline-none focus:border-gold"
+      : "w-full rounded border border-[#ddd] px-4 py-3 text-sm outline-none focus:border-gold";
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -43,37 +47,37 @@ export default function ContactForm() {
         name="name"
         required
         placeholder="Nom - Prénom"
-        className="w-full rounded border border-[#ddd] px-4 py-3 text-sm outline-none focus:border-gold"
+        className={fieldClass}
       />
       <input
         name="activity"
         placeholder="Activité"
-        className="w-full rounded border border-[#ddd] px-4 py-3 text-sm outline-none focus:border-gold"
+        className={fieldClass}
       />
       <input
         name="phone"
         type="tel"
         placeholder="Tel"
-        className="w-full rounded border border-[#ddd] px-4 py-3 text-sm outline-none focus:border-gold"
+        className={fieldClass}
       />
       <input
         name="email"
         type="email"
         required
         placeholder="E-mail"
-        className="w-full rounded border border-[#ddd] px-4 py-3 text-sm outline-none focus:border-gold"
+        className={fieldClass}
       />
       <input
         name="website"
         placeholder="URL de votre site web"
-        className="w-full rounded border border-[#ddd] px-4 py-3 text-sm outline-none focus:border-gold"
+        className={fieldClass}
       />
       <textarea
         name="message"
         required
         rows={5}
         placeholder="Message"
-        className="w-full rounded border border-[#ddd] px-4 py-3 text-sm outline-none focus:border-gold"
+        className={fieldClass}
       />
       <button
         type="submit"
