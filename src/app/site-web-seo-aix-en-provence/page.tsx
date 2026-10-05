@@ -142,7 +142,7 @@ function PricingCard({ tier }: { tier: (typeof PRICING_TIERS)[number] }) {
         ))}
       </ul>
       <a
-        href="https://calendly.com/jwlm"
+        href="https://calendar.app.google/MZrdz3xprTy4kfwy9"
         target="_blank"
         rel="noopener"
         className="mt-6 inline-block self-center rounded-full bg-[#c9846f] px-6 py-3 text-center text-sm font-medium text-white transition-colors hover:bg-[#b8735f]"
@@ -195,7 +195,7 @@ export default function Page() {
               À partir de 875 €
             </span>
             <a
-              href="https://calendly.com/jwlm"
+              href="https://calendar.app.google/MZrdz3xprTy4kfwy9"
               target="_blank"
               rel="noopener"
               className="inline-block rounded-full bg-[#c9846f] px-8 py-[15px] text-center font-semibold text-white transition-colors hover:bg-[#b8735f]"
@@ -618,7 +618,7 @@ export default function Page() {
                 Poser ma question sur WhatsApp
               </a>
               <a
-                href="https://calendly.com/jwlm"
+                href="https://calendar.app.google/MZrdz3xprTy4kfwy9"
                 target="_blank"
                 rel="noopener"
                 className="inline-block rounded-full bg-[#c9846f] px-8 py-[15px] font-semibold text-white transition-colors hover:bg-[#b8735f]"

@@ -368,7 +368,7 @@ export default function Page() {
           <span className="font-medium">sans dépendre de la publicité</span>
         </h3>
         <a
-          href="https://calendly.com/jwlm"
+          href="https://calendar.app.google/MZrdz3xprTy4kfwy9"
           target="_blank"
           rel="noopener"
           className="mt-8 inline-block rounded-full bg-[#c9846f] px-10 py-[15px] font-medium text-white transition-colors hover:bg-[#b8735f]"

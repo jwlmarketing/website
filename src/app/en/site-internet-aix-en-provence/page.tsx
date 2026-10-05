@@ -586,7 +586,7 @@ export default function Page() {
         </ScrollReveal>
         <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
           <a
-            href="https://calendly.com/jwlm"
+            href="https://calendar.app.google/MZrdz3xprTy4kfwy9"
             target="_blank"
             rel="noopener"
             className="inline-block rounded-full bg-[#c9846f] px-10 py-[15px] font-medium text-white transition-colors hover:bg-[#b8735f]"

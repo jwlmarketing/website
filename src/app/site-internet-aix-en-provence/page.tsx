@@ -119,7 +119,7 @@ export default function Page() {
               À partir de 1 200 €
             </span>
             <a
-              href="https://calendly.com/jwlm"
+              href="https://calendar.app.google/MZrdz3xprTy4kfwy9"
               target="_blank"
               rel="noopener"
               className="inline-block rounded-full bg-[#c9846f] px-10 py-[19px] text-lg font-bold text-white transition-colors hover:bg-[#b8735f]"
@@ -271,7 +271,7 @@ export default function Page() {
               ))}
             </ul>
             <a
-              href="https://calendly.com/jwlm"
+              href="https://calendar.app.google/MZrdz3xprTy4kfwy9"
               target="_blank"
               rel="noopener"
               className="mt-6 inline-block rounded-full bg-[#c9846f] px-8 py-[15px] font-medium text-white transition-colors hover:bg-[#b8735f]"
@@ -699,7 +699,7 @@ export default function Page() {
                 Poser ma question sur WhatsApp
               </a>
               <a
-                href="https://calendly.com/jwlm"
+                href="https://calendar.app.google/MZrdz3xprTy4kfwy9"
                 target="_blank"
                 rel="noopener"
                 className="inline-block rounded-full bg-[#c9846f] px-8 py-[15px] font-semibold text-white transition-colors hover:bg-[#b8735f]"

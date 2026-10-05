@@ -489,7 +489,7 @@ Google{" "}listing plays an essential role in that first
       {/* Closing CTA */}
       <section className="bg-white px-6 py-16 text-center">
         <a
-          href="https://calendly.com/jwlm"
+          href="https://calendar.app.google/MZrdz3xprTy4kfwy9"
           target="_blank"
           rel="noopener"
           className="inline-block rounded-full bg-[#c9846f] px-10 py-[15px] font-medium text-white transition-colors hover:bg-[#b8735f]"
@@ -522,7 +522,7 @@ Google{" "}listing plays an essential role in that first
           </p>
         </div>
         <a
-          href="https://calendly.com/jwlm"
+          href="https://calendar.app.google/MZrdz3xprTy4kfwy9"
           target="_blank"
           rel="noopener"
           className="mt-6 inline-block bg-[#c9846f] px-10 py-[15px] font-medium text-white transition-colors hover:bg-[#b8735f]"
