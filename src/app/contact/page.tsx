@@ -2,7 +2,6 @@ import { buildMetadata } from "@/lib/seo";
 import Image from "next/image";
 import SiteHeader from "@/components/SiteHeader";
 import ContactForm from "@/components/ContactForm";
-import NewsletterCta from "@/components/NewsletterCta";
 import ScrollReveal from "@/components/ScrollReveal";
 
 export const metadata = buildMetadata({
@@ -214,12 +213,6 @@ export default function Page() {
         </ScrollReveal>
       </section>
 
-      {/* Newsletter */}
-      <section className="mx-auto max-w-[1200px] px-6 pb-20 md:px-10">
-        <ScrollReveal>
-          <NewsletterCta />
-        </ScrollReveal>
-      </section>
     </div>
   );
 }

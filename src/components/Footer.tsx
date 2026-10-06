@@ -15,6 +15,7 @@ const OTHER_PAGES = {
     { href: "/cas-clients", label: "Cas clients" },
     { href: "/realisations", label: "Mes réalisations" },
     { href: "/blog", label: "Blog" },
+    { href: "/contact", label: "Contact" },
   ],
   en: [
     { href: "/en/consultant-freelance-seo-aix-en-provence", label: "About me" },
@@ -26,6 +27,7 @@ const OTHER_PAGES = {
     { href: "/en/cas-clients", label: "Client case studies" },
     { href: "/en/realisations", label: "My work" },
     { href: "/en/blog", label: "Blog" },
+    { href: "/en/contact", label: "Contact" },
   ],
 };
 

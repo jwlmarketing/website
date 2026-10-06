@@ -375,6 +375,8 @@ export default function Faq() {
     setOpenIndex(null);
   }, [pathname]);
 
+  if (items.length === 0) return null;
+
   return (
     <div className="rounded-2xl bg-black px-6 py-14 text-center md:px-12">
       <h2 className="font-heading text-4xl font-bold text-[#c9846f] underline decoration-2 underline-offset-8">
