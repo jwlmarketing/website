@@ -6,6 +6,10 @@
   "status": "published",
   "blocks": [
     {
+      "type": "html",
+      "html": "<section class=\"hero-section\" style=\"display: flex; align-items: center; justify-content: space-between; gap: 4rem; padding: 5rem 10%; background-color: #ffffff; font-family: sans-serif;\">\n  \n  <!-- Colonne Gauche : Textes et Bouton -->\n  <div class=\"hero-content\" style=\"flex: 1.2; max-width: 650px;\">\n    \n    <!-- Titre Principal (Agrandit et sans gras) -->\n    <h1 style=\"font-size: 2.25rem; font-weight: normal; line-height: 1.3; color: #000000; margin-bottom: 1.5rem; margin-top: 0;\">\n      Dynamitz : <br>\n      <span style=\"color: #d98874;\">transformer un outil complexe</span> en véritable plateforme d'accompagnement entrepreneurial\n    </h1>\n\n    <!-- Petite ligne de contexte sous le titre -->\n    <p style=\"font-size: 0.85rem; color: #999999; margin-bottom: 2rem; margin-top: 0;\">\n      Projet réalisé l'été 2026 En phase test - publication dans les prochains jours\n    </p>\n\n    <!-- Bouton d'appel à l'action -->\n    <a href=\"#\" style=\"display: inline-block; background-color: #d98874; color: #ffffff; padding: 0.75rem 1.5rem; text-decoration: none; border-radius: 4px; font-size: 0.9rem; font-weight: 500;\">\n      Parlons de ton outil\n    </a>\n  </div>\n\n  <!-- Colonne Droite : Visuel Orange -->\n  <div class=\"hero-image-container\" style=\"flex: 1; display: flex; justify-content: flex-end; max-width: 480px;\">\n    <img src=\"https://www.jwl-marketing.fr/_next/image?url=%2Fimages%2Frealisations%2Ftelechargement.jpeg&w=3840&q=75\" \n         alt=\"Offre Dynamitz - Le passeport pour le voyage entrepreneurial\" \n         style=\"width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 25px rgba(0,0,0,0.08);\">\n  </div>\n\n</section>\n"
+    },
+    {
       "type": "hero",
       "title": "Dynamitz : {{transformer un outil complexe}} en véritable plateforme d'accompagnement entrepreneurial",
       "imagePosition": "right",
