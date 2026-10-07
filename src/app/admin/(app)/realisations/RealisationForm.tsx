@@ -436,6 +436,34 @@ function BlockEditor({
             defaultColor="#c9846f"
             onChange={(v) => onChange({ ...block, titleColor: v })}
           />
+          <div className="form-group">
+            <label>Taille du titre (px, vide = taille par défaut du site)</label>
+            <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+              <input
+                type="number"
+                min={16}
+                max={120}
+                placeholder="38"
+                value={block.titleSize ?? ""}
+                onChange={(e) =>
+                  onChange({
+                    ...block,
+                    titleSize: e.target.value ? Number(e.target.value) : undefined,
+                  })
+                }
+                style={{ width: 90 }}
+              />
+              {block.titleSize !== undefined && (
+                <button
+                  type="button"
+                  className="small-link"
+                  onClick={() => onChange({ ...block, titleSize: undefined })}
+                >
+                  Réinitialiser
+                </button>
+              )}
+            </div>
+          </div>
           <Field
             label="Sous-titre"
             value={block.subtitle || ""}

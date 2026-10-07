@@ -38,10 +38,15 @@ function BlockItem({ block }: { block: Block }) {
             imageOnLeft ? "md:flex-row-reverse" : ""
           }`}
         >
-          <div className="max-w-[600px] flex-1">
+          <div className="min-w-0 max-w-[640px] flex-[1_1_480px]">
             <h1
-              className="font-heading text-[38px] font-semibold leading-[1.25]"
-              style={{ color: "#000" }}
+              className="font-heading font-semibold leading-[1.25] break-words"
+              style={{
+                color: "#000",
+                ...(block.titleSize
+                  ? ({ fontSize: `${block.titleSize}px !important` } as React.CSSProperties)
+                  : {}),
+              }}
             >
               {renderInlineColor(block.title, block.titleColor)}
             </h1>
@@ -63,7 +68,7 @@ function BlockItem({ block }: { block: Block }) {
               alt={block.title}
               width={1200}
               height={800}
-              className="h-auto w-full max-w-[680px] rounded-2xl object-cover"
+              className="h-auto w-full min-w-0 max-w-[520px] flex-[1_1_320px] rounded-2xl object-cover"
             />
           )}
         </div>

@@ -2,6 +2,7 @@ export type HeroBlock = {
   type: "hero";
   title: string;
   titleColor?: string; // hex color, default black
+  titleSize?: number; // px, default 38
   subtitle?: string;
   buttonText?: string;
   buttonLink?: string;
