@@ -403,12 +403,6 @@ export default function Page() {
             >
               Curious, I&apos;ll check out the SEO tips
             </a>
-            <a
-              href="/ressources/kit/signature"
-              className="inline-flex items-center text-sm font-semibold text-gold underline"
-            >
-              JWL Signature
-            </a>
           </div>
         </ScrollReveal>
       </section>

@@ -35,7 +35,7 @@ const TEXT = {
     offerItems: [
       { label: "JWL Business", href: "/site-internet-aix-en-provence" },
       { label: "JWL Booster", href: "/site-web-seo-aix-en-provence" },
-      { label: "JWL Connect", href: "/tarifs" },
+      { label: "JWL Connect", href: "/redaction-seo" },
       { label: "JWL Prospecte", href: "/developpement-commercial-aix-en-provence" },
     ],
     signature: { label: "JWL Signature", href: "/ressources/kit/signature" },
@@ -48,7 +48,7 @@ const TEXT = {
     offerItems: [
       { label: "JWL Business", href: "/en/site-internet-aix-en-provence" },
       { label: "JWL Booster", href: "/en/tarifs" },
-      { label: "JWL Connect", href: "/en/tarifs" },
+      { label: "JWL Connect", href: "/en/redaction-seo" },
       { label: "JWL Prospecte", href: "/en/developpement-commercial-aix-en-provence" },
     ],
     signature: { label: "JWL Signature", href: "/ressources/kit/signature" },
