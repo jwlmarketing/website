@@ -7,11 +7,11 @@
   "blocks": [
     {
       "type": "hero",
-      "title": "Dynamitz : de {{l'outil complexe}} à une véritable plateforme d'accompagnement",
+      "title": "Dynamitz ",
       "imagePosition": "right",
       "buttonText": "Parlons de ton outil",
       "buttonLink": "tel:+33783792814",
-      "subtitle": "Projet réalisé à l'été 2026 · En phase de test – publication dans les prochains jours",
+      "subtitle": ": de {{l'outil complexe}} à une véritable plateforme d'accompagnement Projet réalisé à l'été 2026 · En phase de test – publication dans les prochains jours",
       "imageUrl": "/images/realisations/whatsapp-image-2026-10-07-at-17.35.33.jpeg"
     },
     {
