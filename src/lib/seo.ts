@@ -38,6 +38,7 @@ export const ROUTES: Route[] = [
   { path: "/blog", index: true, en: true, priority: 0.8, changeFrequency: "weekly" },
   { path: "/blog/site-web-ia", index: true, priority: 0.7 },
   { path: "/blog/fiche-google-my-business", index: true, priority: 0.7 },
+  { path: "/redaction-seo", index: true, en: true, priority: 0.7 },
 
   // Pages en noindex (hors sitemap)
   { path: "/ressources/kit/signature", index: false },
