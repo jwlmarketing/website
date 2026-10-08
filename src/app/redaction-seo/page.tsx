@@ -3,8 +3,6 @@ import Image from "next/image";
 import SiteHeader from "@/components/SiteHeader";
 import ScrollReveal from "@/components/ScrollReveal";
 import ContactForm from "@/components/ContactForm";
-import RealisationsCarousel from "@/components/RealisationsCarousel";
-import { getAllCaseStudies } from "@/lib/realisations";
 
 export const dynamic = "force-dynamic";
 
@@ -69,27 +67,17 @@ const CORRECTION_CHECKS = [
 
 function RocketIcon({ className }: { className?: string }) {
   return (
-    <svg
-      viewBox="0 0 24 24"
+    <Image
+      src="/images/redaction-seo-rocket.png"
+      alt=""
+      width={190}
+      height={230}
       className={className}
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.5"
-      aria-hidden
-    >
-      <path d="M12 2c2.5 2 4 5.5 4 9 0 2-.5 3.5-1.2 5L12 19l-2.8-3c-.7-1.5-1.2-3-1.2-5 0-3.5 1.5-7 4-9Z" />
-      <circle cx="12" cy="9" r="1.6" />
-      <path d="M9 15l-2.5 1.5L7 14M15 15l2.5 1.5L17 14M10.5 19l-.8 2.3M13.5 19l.8 2.3" />
-    </svg>
+    />
   );
 }
 
 export default function Page() {
-  const caseStudies = getAllCaseStudies()
-    .filter((p) => p.status === "published")
-    .slice(0, 3)
-    .map((p) => ({ slug: p.slug, title: p.title, coverImage: p.coverImage || "" }));
-
   return (
     <div className="min-h-screen bg-white">
       <SiteHeader locale="fr" href="/redaction-seo" />
@@ -194,8 +182,19 @@ export default function Page() {
                   </p>
                 </div>
               </ScrollReveal>
+              {i === 2 && (
+                <ScrollReveal delay={i * 100 + 50}>
+                  <Image
+                    src="/images/redaction-seo-google.png"
+                    alt="Qu'avez-vous en tête aujourd'hui ?"
+                    width={780}
+                    height={265}
+                    className="mt-5 h-auto w-full max-w-[420px] rounded-xl shadow-sm"
+                  />
+                </ScrollReveal>
+              )}
               {i < PROCESS_STEPS.length - 1 && (
-                <RocketIcon className="my-5 h-9 w-9 rotate-180 text-[#c9846f]" />
+                <RocketIcon className="my-5 h-12 w-auto" />
               )}
             </div>
           ))}
@@ -413,24 +412,26 @@ export default function Page() {
       </section>
 
       {/* Et si tes contenus travaillaient */}
-      {caseStudies.length > 0 && (
-        <section className="mx-auto max-w-[1200px] px-6 pb-20 md:px-10">
-          <ScrollReveal>
-            <h2 className="text-center font-heading text-2xl text-black md:text-3xl">
-              Et si tes <span className="text-[#c9846f]">contenus</span>{" "}
-              travaillaient vraiment pour ton entreprise&nbsp;?
-            </h2>
-            <p className="mx-auto mt-4 max-w-[760px] text-center text-[15px] leading-[24px] text-neutral-600">
-              Et si tes contenus bossaient pendant que toi, tu bossais sur ton
-              métier ? Des contenus pensés pour attirer les bons clients,
-              développer ta visibilité et servir tes objectifs commerciaux.
-            </p>
-            <div className="mt-10">
-              <RealisationsCarousel items={caseStudies} />
-            </div>
-          </ScrollReveal>
-        </section>
-      )}
+      <section className="mx-auto max-w-[1200px] px-6 pb-20 md:px-10">
+        <ScrollReveal>
+          <h2 className="text-center font-heading text-2xl text-black md:text-3xl">
+            Et si tes <span className="text-[#c9846f]">contenus</span>{" "}
+            travaillaient vraiment pour ton entreprise&nbsp;?
+          </h2>
+          <p className="mx-auto mt-4 max-w-[760px] text-center text-[15px] leading-[24px] text-neutral-600">
+            Et si tes contenus bossaient pendant que toi, tu bossais sur ton
+            métier ? Des contenus pensés pour attirer les bons clients,
+            développer ta visibilité et servir tes objectifs commerciaux.
+          </p>
+          <Image
+            src="/images/redaction-seo-contenus.png"
+            alt="Étude de cas — Consultante SEO & Visibilité Web Aix-en-Provence"
+            width={1500}
+            height={1061}
+            className="mx-auto mt-10 h-auto w-full max-w-[1100px] rounded-2xl"
+          />
+        </ScrollReveal>
+      </section>
 
       {/* Besoin d'un coup de main - WhatsApp + formulaire */}
       <section className="mx-auto max-w-[1000px] px-6 pb-24 md:px-10">
