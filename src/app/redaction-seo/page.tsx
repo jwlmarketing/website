@@ -426,14 +426,14 @@ export default function Page() {
       </section>
 
       {/* Cette formation est faite pour toi si */}
-      <section className="mx-auto max-w-[900px] px-6 pb-20 md:px-10">
+      <section className="mx-auto max-w-[1150px] px-6 pb-20 md:px-10">
         <ScrollReveal>
           <h2 className="text-center font-heading text-2xl text-black md:text-3xl">
-            Cette <span className="text-[#c9846f]">formation</span> est faite
+            Cette{" "}<span className="text-[#c9846f]">formation</span>{" "}est faite
             pour toi, si&nbsp;:
           </h2>
 
-          <div className="mt-10 grid gap-10 md:grid-cols-2">
+          <div className="mt-10 grid gap-8 md:grid-cols-3">
             <div>
               <p className="font-heading text-lg font-semibold text-gold">
                 Tu as un métier, tu n&apos;as pas le temps de devenir community
@@ -454,7 +454,7 @@ export default function Page() {
                 dire ?
               </p>
             </div>
-            <div className="md:col-start-2">
+            <div>
               <p className="font-heading text-lg font-semibold text-gold">
                 Pour ceux qui communiquent au hasard
               </p>

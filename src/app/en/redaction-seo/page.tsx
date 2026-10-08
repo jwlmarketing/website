@@ -421,14 +421,14 @@ export default function Page() {
       </section>
 
       {/* This training is for you if */}
-      <section className="mx-auto max-w-[900px] px-6 pb-20 md:px-10">
+      <section className="mx-auto max-w-[1150px] px-6 pb-20 md:px-10">
         <ScrollReveal>
           <h2 className="text-center font-heading text-2xl text-black md:text-3xl">
-            This <span className="text-[#c9846f]">training</span> is for you,
+            This{" "}<span className="text-[#c9846f]">training</span>{" "}is for you,
             if:
           </h2>
 
-          <div className="mt-10 grid gap-10 md:grid-cols-2">
+          <div className="mt-10 grid gap-8 md:grid-cols-3">
             <div>
               <p className="font-heading text-lg font-semibold text-gold">
                 You have a job and no time to become a full-time community
@@ -449,7 +449,7 @@ export default function Page() {
                 You have plenty to say... but no idea how to say it?
               </p>
             </div>
-            <div className="md:col-start-2">
+            <div>
               <p className="font-heading text-lg font-semibold text-gold">
                 For those who post at random
               </p>
