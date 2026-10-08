@@ -114,8 +114,8 @@ export default function Page() {
               <Image
                 src="/images/redaction-seo-hero.png"
                 alt="JWL Marketing"
-                width={1414}
-                height={2000}
+                width={1061}
+                height={1500}
                 priority
                 className="h-full w-full object-contain object-bottom"
               />
