@@ -2,6 +2,8 @@ import { buildMetadata } from "@/lib/seo";
 import Image from "next/image";
 import SiteHeader from "@/components/SiteHeader";
 import ScrollReveal from "@/components/ScrollReveal";
+import PopReveal from "@/components/PopReveal";
+import AutoPlayVideo from "@/components/AutoPlayVideo";
 import ContactForm from "@/components/ContactForm";
 
 export const dynamic = "force-dynamic";
@@ -86,7 +88,10 @@ export default function Page() {
       <section className="mx-auto max-w-[1200px] px-6 pb-16 pt-[110px] md:px-10">
         <div className="grid items-center gap-10 md:grid-cols-2">
           <ScrollReveal>
-            <h1 className="font-heading text-4xl leading-tight text-black md:text-5xl">
+            <h1
+              className="font-heading leading-tight text-black"
+              style={{ fontSize: "clamp(30px, 7vw, 56px) !important" } as React.CSSProperties}
+            >
               <span className="italic text-[#c9846f]">JWL Connect :</span>{" "}
               Rédaction SEO, l&apos;art de convaincre.
             </h1>
@@ -213,15 +218,15 @@ export default function Page() {
               </p>
             </div>
           </ScrollReveal>
-          <ScrollReveal delay={250}>
+          <PopReveal delay={250} className="mx-auto mt-5 w-full max-w-[420px]">
             <Image
               src="/images/redaction-seo-google.png"
               alt="Qu'avez-vous en tête aujourd'hui ?"
               width={780}
               height={265}
-              className="mt-5 h-auto w-full max-w-[420px] rounded-xl shadow-sm"
+              className="h-auto w-full rounded-xl shadow-sm"
             />
-          </ScrollReveal>
+          </PopReveal>
 
           {/* Descend vers étape 4 (centre) */}
           <RocketIcon className="my-5 h-12 w-auto" />
@@ -261,72 +266,14 @@ export default function Page() {
         </ScrollReveal>
       </section>
 
-      {/* RDV offert + vidéo */}
+      {/* Vidéo autoplay au scroll */}
       <section className="mx-auto max-w-[900px] px-6 pb-20 md:px-10">
         <ScrollReveal>
-          <div className="grid items-center gap-10 md:grid-cols-2">
-            <div className="relative mx-auto w-full max-w-[280px]">
-              <Image
-                src="/images/contact-echange-illustration.png"
-                alt=""
-                width={1024}
-                height={768}
-                className="mx-auto h-auto w-full max-w-[220px] object-contain"
-              />
-              <div className="mx-auto mt-2 max-w-[220px] rounded-md bg-black px-4 py-3 text-center text-[13px] leading-[18px] text-white">
-                <span className="font-semibold">RDV offert</span> pour faire
-                le point ensemble sur tes besoins et tes attentes
-              </div>
-            </div>
-
-            <div className="mx-auto w-full max-w-[280px] overflow-hidden rounded-2xl bg-black">
-              <video
-                src="/videos/jwl-connect-rdv.mp4"
-                controls
-                playsInline
-                className="h-full w-full"
-              />
-            </div>
-          </div>
-
-          <div className="mt-10 flex flex-col items-center gap-2">
-            <div className="flex items-center gap-3">
-              <a
-                href="https://calendar.app.google/MZrdz3xprTy4kfwy9"
-                target="_blank"
-                rel="noopener"
-                className="inline-block rounded-full bg-[#c9846f] px-8 py-4 text-center font-semibold text-white transition hover:bg-[#b56f5a]"
-              >
-                Je réserve mon rendez-vous gratuit
-              </a>
-              <a
-                href="https://calendar.app.google/MZrdz3xprTy4kfwy9"
-                target="_blank"
-                rel="noopener"
-                className="hidden -rotate-6 font-heading text-sm font-semibold italic text-gold underline sm:inline-block"
-              >
-                Rendez-vous
-              </a>
-            </div>
-
-            <div className="mt-6 flex items-start gap-3 text-left">
-              <a
-                href="https://wa.me/33783792814"
-                target="_blank"
-                rel="noopener"
-                aria-label="WhatsApp"
-                className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#25D366] text-white"
-              >
-                <svg viewBox="0 0 24 24" className="h-5 w-5" fill="currentColor" aria-hidden>
-                  <path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 20.2 12 8.2 8.2 0 0 1 12 20.2Zm4.5-6.1c-.2-.1-1.4-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-2-1.2 7.4 7.4 0 0 1-1.4-1.7c-.1-.2 0-.4.1-.5l.4-.4.2-.4a.5.5 0 0 0 0-.4c-.1-.1-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5.1 5.1 0 0 0 1.1 2.7 11.6 11.6 0 0 0 4.5 4c.6.2 1.1.4 1.5.5a3.6 3.6 0 0 0 1.6.1 2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3Z" />
-                </svg>
-              </a>
-              <p className="text-[14px] leading-[22px] text-neutral-600">
-                Suivi WhatsApp/Slack de 10h à 13h + suivi de 30 min après la
-                formation pour répondre à tes questions et t&apos;aider à
-                mettre en pratique.
-              </p>
-            </div>
+          <div className="mx-auto w-full max-w-[280px] overflow-hidden rounded-2xl">
+            <AutoPlayVideo
+              src="/videos/jwl-connect-rdv.mp4"
+              className="h-full w-full"
+            />
           </div>
         </ScrollReveal>
       </section>
