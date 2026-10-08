@@ -3,6 +3,7 @@ import Image from "next/image";
 import SiteHeader from "@/components/SiteHeader";
 import ScrollReveal from "@/components/ScrollReveal";
 import PopReveal from "@/components/PopReveal";
+import AutoPlayVideo from "@/components/AutoPlayVideo";
 import ContactForm from "@/components/ContactForm";
 
 export const dynamic = "force-dynamic";
