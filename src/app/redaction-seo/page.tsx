@@ -269,7 +269,7 @@ export default function Page() {
       {/* Vidéo autoplay au scroll */}
       <section className="mx-auto max-w-[900px] px-6 pb-20 md:px-10">
         <ScrollReveal>
-          <div className="mx-auto w-full max-w-[280px] overflow-hidden rounded-2xl">
+          <div className="mx-auto w-full max-w-[720px] overflow-hidden rounded-2xl">
             <AutoPlayVideo
               src="/videos/jwl-connect-rdv.mp4"
               className="h-full w-full"
@@ -309,7 +309,7 @@ export default function Page() {
                 Comprendre ton audit SEO et les requêtes à travailler.
                 Construire ton calendrier éditorial sur 12 mois.
               </p>
-              <ul className="mt-5 space-y-2 text-[14px] text-neutral-300">
+              <ul className="mx-auto mt-5 max-w-[460px] space-y-2 text-[14px] text-neutral-300">
                 {MODULE_1_ITEMS.map((item) => (
                   <li key={item} className="flex gap-2">
                     <span className="text-[#c9846f]">→</span>
@@ -327,7 +327,7 @@ export default function Page() {
                 Tu rédiges ton premier article devant moi. Je t&apos;accompagne
                 étape par étape&nbsp;:
               </p>
-              <ul className="mt-5 space-y-2 text-[14px] text-neutral-300">
+              <ul className="mx-auto mt-5 grid max-w-[360px] grid-cols-1 gap-x-8 gap-y-2 text-[14px] text-neutral-300 sm:grid-cols-2">
                 {MODULE_2_STEPS.map((item) => (
                   <li key={item} className="flex gap-2">
                     <span className="text-[#c9846f]">→</span>
@@ -335,25 +335,43 @@ export default function Page() {
                   </li>
                 ))}
               </ul>
-              <p className="mt-5 text-[14px] text-neutral-300">
+              <p className="mt-5 text-center text-[14px] text-neutral-300">
                 À la fin, tu sais reproduire la méthode seul.
               </p>
-              <p className="mt-4 text-[14px] font-semibold text-white">
+              <p className="mt-4 text-center text-[14px] font-semibold text-white">
                 Et ensuite ?
               </p>
-              <p className="mt-2 text-[14px] text-neutral-300">
+              <p className="mx-auto mt-2 max-w-[460px] text-center text-[14px] text-neutral-300">
                 « Je vérifie ton travail » : relecture d&apos;un article le
                 mois suivant, corrections SEO, optimisation, conseils.
               </p>
-              <p className="mt-3 text-[12px] italic text-neutral-500">
+              <p className="mx-auto mt-3 max-w-[460px] text-center text-[12px] italic text-neutral-500">
                 * Le prix dépend du nombre de participants, de tes besoins et
                 de ton accompagnement. Tarif adhérent JWL Booster 675€. Prix
                 évolutif.
               </p>
             </div>
 
-            <div className="rounded-xl bg-[#0d0d0d] p-6">
-              <p className="text-center font-heading text-lg text-white">
+            <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
+              <a
+                href="/contact"
+                className="inline-block rounded-full bg-[#c9846f] px-8 py-[15px] text-center font-semibold text-white transition hover:bg-[#b56f5a]"
+              >
+                Je demande mon offre adaptée
+              </a>
+              <a
+                href="/contact"
+                className="inline-block rounded-full border-2 border-white px-8 py-[13px] text-center font-semibold text-white transition hover:bg-white hover:text-black"
+              >
+                Contacte
+              </a>
+            </div>
+          </div>
+
+          {/* Carré séparé pour l'Option Correction & optimisation SEO */}
+          <div className="mt-8 rounded-2xl bg-black border border-white/10 p-6 md:p-10 shadow-xl">
+            <div className="rounded-xl bg-[#0d0d0d] p-6 md:p-8">
+              <p className="text-center font-heading text-xl text-white">
                 🔖 Option — Correction &amp; optimisation SEO
               </p>
               <p className="mt-3 text-center text-[14px] text-neutral-300">
@@ -394,21 +412,14 @@ export default function Page() {
                   <span className="text-white">150 €</span>
                 </p>
               </div>
-            </div>
-
-            <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
-              <a
-                href="/contact"
-                className="inline-block rounded-full bg-[#c9846f] px-8 py-[15px] text-center font-semibold text-white transition hover:bg-[#b56f5a]"
-              >
-                Je demande mon offre adaptée
-              </a>
-              <a
-                href="/contact"
-                className="inline-block rounded-full border-2 border-white px-8 py-[13px] text-center font-semibold text-white transition hover:bg-white hover:text-black"
-              >
-                Contacte
-              </a>
+              <div className="mt-6 text-center">
+                <a
+                  href="/contact"
+                  className="inline-block rounded-full bg-[#c9846f] px-8 py-[14px] text-center font-semibold text-white transition hover:bg-[#b56f5a]"
+                >
+                  Je demande une correction d&apos;article
+                </a>
+              </div>
             </div>
           </div>
         </ScrollReveal>

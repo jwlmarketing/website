@@ -5,7 +5,7 @@ export const metadata = buildMetadata({
   path: "/mentions-legales",
   locale: "fr",
   title: "Mentions légales | JWL Marketing",
-  description: "TODO: ajouter une meta description (<=155 caracteres)",
+  description: "Mentions légales de JWL Marketing, consultante SEO et marketing digital à Aix-en-Provence. Coordonnées, statut juridique, hébergeur o2switch et droits.",
 });
 
 export default function MentionsLegales() {
@@ -42,14 +42,18 @@ export default function MentionsLegales() {
 
       <h2>Hébergement du site</h2>
       <p>
-        Le site jwl-marketing.fr est hébergé par <strong>JWL Marketing</strong>, sur son
-        infrastructure propre (JWL Hub), opérée sur un serveur privé virtuel Oracle Cloud
-        Infrastructure (Oracle France SAS).
-      </p>
-      <p>
-        Une copie du site est également hébergée à titre secondaire par <strong>Vercel Inc.</strong>,
-        340 S Lemon Ave #4133, Walnut, CA 91789, États-Unis — vercel.com, afin d&apos;assurer
-        la continuité de service.
+        Le site jwl-marketing.fr est hébergé par <strong>o2switch</strong>,
+        SAS au capital de 100 000 €, dont le siège social est situé :<br />
+        Chemin des Pardiaux, 63000 Clermont-Ferrand, France.<br />
+        Téléphone : 04 44 44 60 40 — Site web :{" "}
+        <a
+          href="https://www.o2switch.fr"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline hover:text-[#c9846f]"
+        >
+          www.o2switch.fr
+        </a>
       </p>
 
       <h2>Propriété intellectuelle</h2>

@@ -264,7 +264,7 @@ export default function Page() {
       {/* Autoplay video on scroll */}
       <section className="mx-auto max-w-[900px] px-6 pb-20 md:px-10">
         <ScrollReveal>
-          <div className="mx-auto w-full max-w-[280px] overflow-hidden rounded-2xl">
+          <div className="mx-auto w-full max-w-[720px] overflow-hidden rounded-2xl">
             <AutoPlayVideo
               src="/videos/jwl-connect-rdv.mp4"
               className="h-full w-full"
@@ -304,7 +304,7 @@ export default function Page() {
                 Understand your SEO audit and the queries to target. Build
                 your editorial calendar for the next 12 months.
               </p>
-              <ul className="mt-5 space-y-2 text-[14px] text-neutral-300">
+              <ul className="mx-auto mt-5 max-w-[460px] space-y-2 text-[14px] text-neutral-300">
                 {MODULE_1_ITEMS.map((item) => (
                   <li key={item} className="flex gap-2">
                     <span className="text-[#c9846f]">→</span>
@@ -322,7 +322,7 @@ export default function Page() {
                 You write your first article in front of me. I guide you
                 step by step:
               </p>
-              <ul className="mt-5 space-y-2 text-[14px] text-neutral-300">
+              <ul className="mx-auto mt-5 grid max-w-[360px] grid-cols-1 gap-x-8 gap-y-2 text-[14px] text-neutral-300 sm:grid-cols-2">
                 {MODULE_2_STEPS.map((item) => (
                   <li key={item} className="flex gap-2">
                     <span className="text-[#c9846f]">→</span>
@@ -330,25 +330,43 @@ export default function Page() {
                   </li>
                 ))}
               </ul>
-              <p className="mt-5 text-[14px] text-neutral-300">
+              <p className="mt-5 text-center text-[14px] text-neutral-300">
                 By the end, you can reproduce the method on your own.
               </p>
-              <p className="mt-4 text-[14px] font-semibold text-white">
+              <p className="mt-4 text-center text-[14px] font-semibold text-white">
                 And then?
               </p>
-              <p className="mt-2 text-[14px] text-neutral-300">
+              <p className="mx-auto mt-2 max-w-[460px] text-center text-[14px] text-neutral-300">
                 &quot;I check your work&quot;: proofreading of an article the
                 following month, SEO corrections, optimization, advice.
               </p>
-              <p className="mt-3 text-[12px] italic text-neutral-500">
+              <p className="mx-auto mt-3 max-w-[460px] text-center text-[12px] italic text-neutral-500">
                 * The price depends on the number of participants, your
                 needs and your level of support. JWL Booster member rate
                 €675. Price subject to change.
               </p>
             </div>
 
-            <div className="rounded-xl bg-[#0d0d0d] p-6">
-              <p className="text-center font-heading text-lg text-white">
+            <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
+              <a
+                href="/en/contact"
+                className="inline-block rounded-full bg-[#c9846f] px-8 py-[15px] text-center font-semibold text-white transition hover:bg-[#b56f5a]"
+              >
+                I want my tailored offer
+              </a>
+              <a
+                href="/en/contact"
+                className="inline-block rounded-full border-2 border-white px-8 py-[13px] text-center font-semibold text-white transition hover:bg-white hover:text-black"
+              >
+                Contact
+              </a>
+            </div>
+          </div>
+
+          {/* Separate card for SEO correction option */}
+          <div className="mt-8 rounded-2xl bg-black border border-white/10 p-6 md:p-10 shadow-xl">
+            <div className="rounded-xl bg-[#0d0d0d] p-6 md:p-8">
+              <p className="text-center font-heading text-xl text-white">
                 🔖 Option — SEO correction &amp; optimization
               </p>
               <p className="mt-3 text-center text-[14px] text-neutral-300">
@@ -389,21 +407,14 @@ export default function Page() {
                   <span className="text-white">€150</span>
                 </p>
               </div>
-            </div>
-
-            <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
-              <a
-                href="/en/contact"
-                className="inline-block rounded-full bg-[#c9846f] px-8 py-[15px] text-center font-semibold text-white transition hover:bg-[#b56f5a]"
-              >
-                I want my tailored offer
-              </a>
-              <a
-                href="/en/contact"
-                className="inline-block rounded-full border-2 border-white px-8 py-[13px] text-center font-semibold text-white transition hover:bg-white hover:text-black"
-              >
-                Contact
-              </a>
+              <div className="mt-6 text-center">
+                <a
+                  href="/en/contact"
+                  className="inline-block rounded-full bg-[#c9846f] px-8 py-[14px] text-center font-semibold text-white transition hover:bg-[#b56f5a]"
+                >
+                  Request article correction
+                </a>
+              </div>
             </div>
           </div>
         </ScrollReveal>
