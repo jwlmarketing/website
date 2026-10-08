@@ -80,7 +80,7 @@ function RocketIcon({ className }: { className?: string }) {
 export default function Page() {
   return (
     <div className="min-h-screen bg-white">
-      <SiteHeader locale="fr" href="/redaction-seo" />
+      <SiteHeader locale="fr" href="/en/redaction-seo" />
 
       {/* Hero */}
       <section className="mx-auto max-w-[1200px] px-6 pb-16 pt-[110px] md:px-10">
@@ -161,43 +161,80 @@ export default function Page() {
       </section>
 
       {/* Comment Google et les IA te propose */}
-      <section className="mx-auto max-w-[760px] px-6 pb-20 text-center md:px-10">
+      <section className="mx-auto max-w-[900px] px-6 pb-20 md:px-10">
         <ScrollReveal>
-          <h2 className="font-heading text-3xl text-black md:text-4xl">
+          <h2 className="text-center font-heading text-3xl text-black md:text-4xl">
             Comment <span className="text-[#c9846f]">Google et les IA</span>{" "}
             te proposent&nbsp;?
           </h2>
         </ScrollReveal>
 
-        <div className="mt-12 flex flex-col items-center gap-3">
-          {PROCESS_STEPS.map((step, i) => (
-            <div key={step.title} className="flex w-full flex-col items-center">
-              <ScrollReveal delay={i * 100}>
-                <div className="text-center">
-                  <p className="font-heading text-lg font-semibold text-black">
-                    {step.title}
-                  </p>
-                  <p className="mt-1 text-[15px] italic text-neutral-500">
-                    {step.text}
-                  </p>
-                </div>
-              </ScrollReveal>
-              {i === 2 && (
-                <ScrollReveal delay={i * 100 + 50}>
-                  <Image
-                    src="/images/redaction-seo-google.png"
-                    alt="Qu'avez-vous en tête aujourd'hui ?"
-                    width={780}
-                    height={265}
-                    className="mt-5 h-auto w-full max-w-[420px] rounded-xl shadow-sm"
-                  />
-                </ScrollReveal>
-              )}
-              {i < PROCESS_STEPS.length - 1 && (
-                <RocketIcon className="my-5 h-12 w-auto" />
-              )}
+        {/* Étape 1 (gauche) -> fusée horizontale -> Étape 2 (droite) */}
+        <div className="mt-12 grid items-center gap-6 md:grid-cols-[1fr_auto_1fr]">
+          <ScrollReveal>
+            <div className="text-center md:text-left">
+              <p className="font-heading text-lg font-semibold text-black">
+                {PROCESS_STEPS[0].title}
+              </p>
+              <p className="mt-1 text-[15px] italic text-neutral-500">
+                {PROCESS_STEPS[0].text}
+              </p>
             </div>
-          ))}
+          </ScrollReveal>
+          <Image
+            src="/images/redaction-seo-rocket-horizontal.png"
+            alt=""
+            width={205}
+            height={110}
+            className="mx-auto hidden h-10 w-auto md:block"
+          />
+          <ScrollReveal delay={100}>
+            <div className="text-center md:text-left">
+              <p className="font-heading text-lg font-semibold text-black">
+                {PROCESS_STEPS[1].title}
+              </p>
+              <p className="mt-1 text-[15px] italic text-neutral-500">
+                {PROCESS_STEPS[1].text}
+              </p>
+            </div>
+          </ScrollReveal>
+        </div>
+
+        {/* Descend vers étape 3 (centre) + mockup Google */}
+        <div className="mt-6 flex flex-col items-center">
+          <RocketIcon className="my-5 h-12 w-auto" />
+          <ScrollReveal delay={200}>
+            <div className="text-center">
+              <p className="font-heading text-lg font-semibold text-black">
+                {PROCESS_STEPS[2].title}
+              </p>
+              <p className="mt-1 text-[15px] italic text-neutral-500">
+                {PROCESS_STEPS[2].text}
+              </p>
+            </div>
+          </ScrollReveal>
+          <ScrollReveal delay={250}>
+            <Image
+              src="/images/redaction-seo-google.png"
+              alt="Qu'avez-vous en tête aujourd'hui ?"
+              width={780}
+              height={265}
+              className="mt-5 h-auto w-full max-w-[420px] rounded-xl shadow-sm"
+            />
+          </ScrollReveal>
+
+          {/* Descend vers étape 4 (centre) */}
+          <RocketIcon className="my-5 h-12 w-auto" />
+          <ScrollReveal delay={350}>
+            <div className="text-center">
+              <p className="font-heading text-lg font-semibold text-black">
+                {PROCESS_STEPS[3].title}
+              </p>
+              <p className="mt-1 text-[15px] italic text-neutral-500">
+                {PROCESS_STEPS[3].text}
+              </p>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
@@ -221,6 +258,76 @@ export default function Page() {
             sur l&apos;expertise, la qualité humaine, et zéro blabla
             technique.
           </p>
+        </ScrollReveal>
+      </section>
+
+      {/* RDV offert + vidéo */}
+      <section className="mx-auto max-w-[900px] px-6 pb-20 md:px-10">
+        <ScrollReveal>
+          <div className="grid items-center gap-10 md:grid-cols-2">
+            <div className="relative mx-auto w-full max-w-[280px]">
+              <Image
+                src="/images/contact-echange-illustration.png"
+                alt=""
+                width={1024}
+                height={768}
+                className="mx-auto h-auto w-full max-w-[220px] object-contain"
+              />
+              <div className="mx-auto mt-2 max-w-[220px] rounded-md bg-black px-4 py-3 text-center text-[13px] leading-[18px] text-white">
+                <span className="font-semibold">RDV offert</span> pour faire
+                le point ensemble sur tes besoins et tes attentes
+              </div>
+            </div>
+
+            <div className="mx-auto w-full max-w-[280px] overflow-hidden rounded-2xl bg-black">
+              <video
+                src="/videos/jwl-connect-rdv.mp4"
+                controls
+                playsInline
+                className="h-full w-full"
+              />
+            </div>
+          </div>
+
+          <div className="mt-10 flex flex-col items-center gap-2">
+            <div className="flex items-center gap-3">
+              <a
+                href="https://calendar.app.google/MZrdz3xprTy4kfwy9"
+                target="_blank"
+                rel="noopener"
+                className="inline-block rounded-full bg-[#c9846f] px-8 py-4 text-center font-semibold text-white transition hover:bg-[#b56f5a]"
+              >
+                Je réserve mon rendez-vous gratuit
+              </a>
+              <a
+                href="https://calendar.app.google/MZrdz3xprTy4kfwy9"
+                target="_blank"
+                rel="noopener"
+                className="hidden -rotate-6 font-heading text-sm font-semibold italic text-gold underline sm:inline-block"
+              >
+                Rendez-vous
+              </a>
+            </div>
+
+            <div className="mt-6 flex items-start gap-3 text-left">
+              <a
+                href="https://wa.me/33783792814"
+                target="_blank"
+                rel="noopener"
+                aria-label="WhatsApp"
+                className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#25D366] text-white"
+              >
+                <svg viewBox="0 0 24 24" className="h-5 w-5" fill="currentColor" aria-hidden>
+                  <path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 20.2 12 8.2 8.2 0 0 1 12 20.2Zm4.5-6.1c-.2-.1-1.4-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-2-1.2 7.4 7.4 0 0 1-1.4-1.7c-.1-.2 0-.4.1-.5l.4-.4.2-.4a.5.5 0 0 0 0-.4c-.1-.1-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5.1 5.1 0 0 0 1.1 2.7 11.6 11.6 0 0 0 4.5 4c.6.2 1.1.4 1.5.5a3.6 3.6 0 0 0 1.6.1 2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3Z" />
+                </svg>
+              </a>
+              <p className="text-[14px] leading-[22px] text-neutral-600">
+                Suivi WhatsApp/Slack de 10h à 13h + suivi de 30 min après la
+                formation pour répondre à tes questions et t&apos;aider à
+                mettre en pratique.
+              </p>
+            </div>
+          </div>
         </ScrollReveal>
       </section>
 
