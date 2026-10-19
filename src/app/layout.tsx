@@ -5,11 +5,25 @@ import NewsletterCta from "@/components/NewsletterCta";
 import Faq from "@/components/Faq";
 import ScrollRevealAll from "@/components/ScrollRevealAll";
 
+import type { Metadata } from "next";
+
 export const metadata: Metadata = {
-  title: "JWL Marketing | Marketing Digital à Aix-en-Provence",
-  description:
-    "Marre des sites invisibles ? Découvre mon univers axé sur l'acquisition client, le SEO et l'IA. À Aix-en-Provence et partout en France.",
+  title: "JWL Marketing | Aix-en-Provence",
+  description: "Un site Web qui attire de nouveaux clients",
+  // AJOUTEZ EXACTEMENT CES LIGNES ICI :
+  verification: {
+    google: "yr5l2rUmiBbg_gWgrxKJi3Tb7UjdCihr5IUbL-CwwcE", 
+  },
 };
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <html lang="fr">
+      <body>{children}</body>
+    </html>
+  );
+}
+
 
 export default function RootLayout({
   children,
